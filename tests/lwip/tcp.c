@@ -39,7 +39,7 @@ static msg_t server_msg_queue[SERVER_MSG_QUEUE_SIZE];
 
 static void *_server_thread(void *args)
 {
-    sock_tcp_ep_t server_addr = SOCK_IPV6_EP_ANY;
+    sock_tcp_ep_t server_addr = SOCK_IPV4_EP_ANY;
     int res;
 
     msg_init_queue(server_msg_queue, SERVER_MSG_QUEUE_SIZE);
@@ -68,7 +68,7 @@ static void *_server_thread(void *args)
             sock_tcp_ep_t client;
 
             sock_tcp_get_remote(sock, &client);
-            ipv6_addr_to_str(client_addr, (ipv6_addr_t *)&client.addr.ipv6,
+            ipv4_addr_to_str(client_addr, (ipv4_addr_t *)&client.addr.ipv4,
                              sizeof(client_addr));
             client_port = client.port;
             printf("TCP client [%s]:%u connected\n",
@@ -96,7 +96,7 @@ static void *_server_thread(void *args)
 
 static int tcp_connect(char *addr_str, char *port_str, char *local_port_str)
 {
-    sock_tcp_ep_t dst = SOCK_IPV6_EP_ANY;
+    sock_tcp_ep_t dst = SOCK_IPV4_EP_ANY;
     uint16_t local_port = 0;
 
     if (client_running) {
@@ -104,7 +104,7 @@ static int tcp_connect(char *addr_str, char *port_str, char *local_port_str)
     }
 
     /* parse destination address */
-    if (ipv6_addr_from_str((ipv6_addr_t *)&dst.addr.ipv6, addr_str) == NULL) {
+    if (ipv4_addr_from_str((ipv4_addr_t *)&dst.addr.ipv4, addr_str) == NULL) {
         puts("Error: unable to parse destination address");
         return 1;
     }

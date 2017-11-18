@@ -38,7 +38,7 @@ static msg_t server_msg_queue[SERVER_MSG_QUEUE_SIZE];
 
 static void *_server_thread(void *args)
 {
-    sock_udp_ep_t server_addr = SOCK_IPV6_EP_ANY;
+    sock_udp_ep_t server_addr = SOCK_IPV4_EP_ANY;
     int res;
 
     msg_init_queue(server_msg_queue, SERVER_MSG_QUEUE_SIZE);
@@ -67,7 +67,7 @@ static void *_server_thread(void *args)
             char addrstr[IPV6_ADDR_MAX_STR_LEN];
 
             printf("Received UDP data from [%s]:%" PRIu16 ":\n",
-                   ipv6_addr_to_str(addrstr, (ipv6_addr_t *)&src.addr.ipv6,
+                   ipv4_addr_to_str(addrstr, (ipv4_addr_t *)&src.addr.ipv4,
                                     sizeof(addrstr)), src.port);
             od_hex_dump(sock_inbuf, res, 0);
         }
@@ -78,12 +78,12 @@ static void *_server_thread(void *args)
 static int udp_send(char *addr_str, char *port_str, char *data, unsigned int num,
                     unsigned int delay)
 {
-    sock_udp_ep_t dst = SOCK_IPV6_EP_ANY;
+    sock_udp_ep_t dst = SOCK_IPV4_EP_ANY;
     uint8_t byte_data[SHELL_DEFAULT_BUFSIZE / 2];
     size_t data_len;
 
     /* parse destination address */
-    if (ipv6_addr_from_str((ipv6_addr_t *)&dst.addr.ipv6, addr_str) == NULL) {
+    if (ipv4_addr_from_str((ipv4_addr_t *)&dst.addr.ipv4, addr_str) == NULL) {
         puts("Error: unable to parse destination address");
         return 1;
     }
