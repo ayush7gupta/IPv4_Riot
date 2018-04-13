@@ -1,0 +1,70 @@
+\hypertarget{thread__flags__xtimer_2main_8c}{}\section{/home/ayush/\+R\+I\+O\+T/tests/thread\+\_\+flags\+\_\+xtimer/main.c File Reference}
+\label{thread__flags__xtimer_2main_8c}\index{/home/ayush/\+R\+I\+O\+T/tests/thread\+\_\+flags\+\_\+xtimer/main.\+c@{/home/ayush/\+R\+I\+O\+T/tests/thread\+\_\+flags\+\_\+xtimer/main.\+c}}
+
+
+Test waking up a thread using thread flags from xtimer callback.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}xtimer.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}thread\+\_\+flags.\+h\char`\"{}}\newline
+Include dependency graph for main.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=292pt]{thread__flags__xtimer_2main_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{thread__flags__xtimer_2main_8c_a45ba202b05caf39795aeca91b0ae547e}{T\+I\+M\+E\+O\+UT}~(100\+U\+L $\ast$ U\+S\+\_\+\+P\+E\+R\+\_\+\+M\+S)
+\item 
+\#define \hyperlink{thread__flags__xtimer_2main_8c_a2c9384c67919c632913b8db2088f8341}{R\+E\+P\+E\+AT}~(5)
+\item 
+\#define \hyperlink{thread__flags__xtimer_2main_8c_acbc04bb44eef6346de6024fcc83fc638}{R\+U\+N\+T\+I\+ME}~(\hyperlink{thread__flags__xtimer_2main_8c_a45ba202b05caf39795aeca91b0ae547e}{T\+I\+M\+E\+O\+UT} $\ast$ \hyperlink{thread__flags__xtimer_2main_8c_a2c9384c67919c632913b8db2088f8341}{R\+E\+P\+E\+AT})
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{thread__flags__xtimer_2main_8c_a840291bc02cba5474a4cb46a9b9566fe}{main} (void)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Test waking up a thread using thread flags from xtimer callback. 
+
+\begin{DoxyAuthor}{Author}
+Hauke Petersen \href{mailto:hauke.petersen@fu-berlin.de}{\tt hauke.\+petersen@fu-\/berlin.\+de} 
+\end{DoxyAuthor}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{thread__flags__xtimer_2main_8c_a2c9384c67919c632913b8db2088f8341}\label{thread__flags__xtimer_2main_8c_a2c9384c67919c632913b8db2088f8341}} 
+\index{thread\+\_\+flags\+\_\+xtimer/main.\+c@{thread\+\_\+flags\+\_\+xtimer/main.\+c}!R\+E\+P\+E\+AT@{R\+E\+P\+E\+AT}}
+\index{R\+E\+P\+E\+AT@{R\+E\+P\+E\+AT}!thread\+\_\+flags\+\_\+xtimer/main.\+c@{thread\+\_\+flags\+\_\+xtimer/main.\+c}}
+\subsubsection{\texorpdfstring{R\+E\+P\+E\+AT}{REPEAT}}
+{\footnotesize\ttfamily \#define R\+E\+P\+E\+AT~(5)}
+
+\mbox{\Hypertarget{thread__flags__xtimer_2main_8c_acbc04bb44eef6346de6024fcc83fc638}\label{thread__flags__xtimer_2main_8c_acbc04bb44eef6346de6024fcc83fc638}} 
+\index{thread\+\_\+flags\+\_\+xtimer/main.\+c@{thread\+\_\+flags\+\_\+xtimer/main.\+c}!R\+U\+N\+T\+I\+ME@{R\+U\+N\+T\+I\+ME}}
+\index{R\+U\+N\+T\+I\+ME@{R\+U\+N\+T\+I\+ME}!thread\+\_\+flags\+\_\+xtimer/main.\+c@{thread\+\_\+flags\+\_\+xtimer/main.\+c}}
+\subsubsection{\texorpdfstring{R\+U\+N\+T\+I\+ME}{RUNTIME}}
+{\footnotesize\ttfamily \#define R\+U\+N\+T\+I\+ME~(\hyperlink{thread__flags__xtimer_2main_8c_a45ba202b05caf39795aeca91b0ae547e}{T\+I\+M\+E\+O\+UT} $\ast$ \hyperlink{thread__flags__xtimer_2main_8c_a2c9384c67919c632913b8db2088f8341}{R\+E\+P\+E\+AT})}
+
+\mbox{\Hypertarget{thread__flags__xtimer_2main_8c_a45ba202b05caf39795aeca91b0ae547e}\label{thread__flags__xtimer_2main_8c_a45ba202b05caf39795aeca91b0ae547e}} 
+\index{thread\+\_\+flags\+\_\+xtimer/main.\+c@{thread\+\_\+flags\+\_\+xtimer/main.\+c}!T\+I\+M\+E\+O\+UT@{T\+I\+M\+E\+O\+UT}}
+\index{T\+I\+M\+E\+O\+UT@{T\+I\+M\+E\+O\+UT}!thread\+\_\+flags\+\_\+xtimer/main.\+c@{thread\+\_\+flags\+\_\+xtimer/main.\+c}}
+\subsubsection{\texorpdfstring{T\+I\+M\+E\+O\+UT}{TIMEOUT}}
+{\footnotesize\ttfamily \#define T\+I\+M\+E\+O\+UT~(100\+U\+L $\ast$ U\+S\+\_\+\+P\+E\+R\+\_\+\+M\+S)}
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{thread__flags__xtimer_2main_8c_a840291bc02cba5474a4cb46a9b9566fe}\label{thread__flags__xtimer_2main_8c_a840291bc02cba5474a4cb46a9b9566fe}} 
+\index{thread\+\_\+flags\+\_\+xtimer/main.\+c@{thread\+\_\+flags\+\_\+xtimer/main.\+c}!main@{main}}
+\index{main@{main}!thread\+\_\+flags\+\_\+xtimer/main.\+c@{thread\+\_\+flags\+\_\+xtimer/main.\+c}}
+\subsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+

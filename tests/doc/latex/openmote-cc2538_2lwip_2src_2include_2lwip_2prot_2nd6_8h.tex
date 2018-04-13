@@ -1,0 +1,245 @@
+\hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2nd6_8h}{}\section{/home/ayush/\+R\+I\+O\+T/tests/lwip/bin/pkg/openmote-\/cc2538/lwip/src/include/lwip/prot/nd6.h File Reference}
+\label{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2nd6_8h}\index{/home/ayush/\+R\+I\+O\+T/tests/lwip/bin/pkg/openmote-\/cc2538/lwip/src/include/lwip/prot/nd6.\+h@{/home/ayush/\+R\+I\+O\+T/tests/lwip/bin/pkg/openmote-\/cc2538/lwip/src/include/lwip/prot/nd6.\+h}}
+{\ttfamily \#include \char`\"{}lwip/arch.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}lwip/ip6\+\_\+addr.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}lwip/prot/ip6.\+h\char`\"{}}\newline
+Include dependency graph for nd6.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=340pt]{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2nd6_8h__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structns__header}{ns\+\_\+header}
+\item 
+struct \hyperlink{structna__header}{na\+\_\+header}
+\item 
+struct \hyperlink{structrs__header}{rs\+\_\+header}
+\item 
+struct \hyperlink{structra__header}{ra\+\_\+header}
+\item 
+struct \hyperlink{structredirect__header}{redirect\+\_\+header}
+\item 
+struct \hyperlink{structlladdr__option}{lladdr\+\_\+option}
+\item 
+struct \hyperlink{structprefix__option}{prefix\+\_\+option}
+\item 
+struct \hyperlink{structredirected__header__option}{redirected\+\_\+header\+\_\+option}
+\item 
+struct \hyperlink{structmtu__option}{mtu\+\_\+option}
+\item 
+struct \hyperlink{structroute__option}{route\+\_\+option}
+\item 
+struct \hyperlink{structrdnss__option}{rdnss\+\_\+option}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2nd6_8h_af41135736265f32503ac2340dc2d3ad3}{N\+D6\+\_\+\+F\+L\+A\+G\+\_\+\+R\+O\+U\+T\+ER}~(0x80)
+\item 
+\#define \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2nd6_8h_ae6bf6657a8a6b004681948090dfa2d7c}{N\+D6\+\_\+\+F\+L\+A\+G\+\_\+\+S\+O\+L\+I\+C\+I\+T\+ED}~(0x40)
+\item 
+\#define \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2nd6_8h_a37fb4993bbbf3c4886291d38b1c03393}{N\+D6\+\_\+\+F\+L\+A\+G\+\_\+\+O\+V\+E\+R\+R\+I\+DE}~(0x20)
+\item 
+\#define \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2nd6_8h_a7fb1b330719d83b7525374f4beca51bc}{N\+D6\+\_\+\+R\+A\+\_\+\+F\+L\+A\+G\+\_\+\+M\+A\+N\+A\+G\+E\+D\+\_\+\+A\+D\+D\+R\+\_\+\+C\+O\+N\+F\+IG}~(0x80)
+\item 
+\#define \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2nd6_8h_a25c3846344db73334471f1a113999d82}{N\+D6\+\_\+\+R\+A\+\_\+\+F\+L\+A\+G\+\_\+\+O\+T\+H\+E\+R\+\_\+\+C\+O\+N\+F\+IG}~(0x40)
+\item 
+\#define \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2nd6_8h_a7867a2c9435975e56656c78bc3c8dcaa}{N\+D6\+\_\+\+R\+A\+\_\+\+F\+L\+A\+G\+\_\+\+H\+O\+M\+E\+\_\+\+A\+G\+E\+NT}~(0x20)
+\item 
+\#define \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2nd6_8h_a328acad71d1e71c00e413ab2df4af4de}{N\+D6\+\_\+\+R\+A\+\_\+\+P\+R\+E\+F\+E\+R\+E\+N\+C\+E\+\_\+\+M\+A\+SK}~(0x18)
+\item 
+\#define \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2nd6_8h_a63a5d0b59f2e493f04cb1df2d1495484}{N\+D6\+\_\+\+R\+A\+\_\+\+P\+R\+E\+F\+E\+R\+E\+N\+C\+E\+\_\+\+H\+I\+GH}~(0x08)
+\item 
+\#define \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2nd6_8h_aeee05b7e05eaed56fec06b1bb7e263dd}{N\+D6\+\_\+\+R\+A\+\_\+\+P\+R\+E\+F\+E\+R\+E\+N\+C\+E\+\_\+\+M\+E\+D\+I\+UM}~(0x00)
+\item 
+\#define \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2nd6_8h_ab53c89ac0b858537e224797f924aa7bf}{N\+D6\+\_\+\+R\+A\+\_\+\+P\+R\+E\+F\+E\+R\+E\+N\+C\+E\+\_\+\+L\+OW}~(0x18)
+\item 
+\#define \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2nd6_8h_aaa9aac80d5537508978ea0ed1b6dcdac}{N\+D6\+\_\+\+R\+A\+\_\+\+P\+R\+E\+F\+E\+R\+E\+N\+C\+E\+\_\+\+D\+I\+S\+A\+B\+L\+ED}~(0x10)
+\item 
+\#define \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2nd6_8h_a68ce8550a20cd30093d6e79e1ca51842}{N\+D6\+\_\+\+O\+P\+T\+I\+O\+N\+\_\+\+T\+Y\+P\+E\+\_\+\+S\+O\+U\+R\+C\+E\+\_\+\+L\+L\+A\+D\+DR}~(0x01)
+\item 
+\#define \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2nd6_8h_a787edcc6357686798581dd714d68c8c1}{N\+D6\+\_\+\+O\+P\+T\+I\+O\+N\+\_\+\+T\+Y\+P\+E\+\_\+\+T\+A\+R\+G\+E\+T\+\_\+\+L\+L\+A\+D\+DR}~(0x02)
+\item 
+\#define \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2nd6_8h_a0225d4c8911efdbdbc2b40de208906c2}{N\+D6\+\_\+\+O\+P\+T\+I\+O\+N\+\_\+\+T\+Y\+P\+E\+\_\+\+P\+R\+E\+F\+I\+X\+\_\+\+I\+N\+FO}~(0x03)
+\item 
+\#define \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2nd6_8h_a5714faec71a571f2334ed750a33c61a2}{N\+D6\+\_\+\+P\+R\+E\+F\+I\+X\+\_\+\+F\+L\+A\+G\+\_\+\+O\+N\+\_\+\+L\+I\+NK}~(0x80)
+\item 
+\#define \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2nd6_8h_acc8f3704e72b27a166b120eec5a2665b}{N\+D6\+\_\+\+P\+R\+E\+F\+I\+X\+\_\+\+F\+L\+A\+G\+\_\+\+A\+U\+T\+O\+N\+O\+M\+O\+US}~(0x40)
+\item 
+\#define \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2nd6_8h_a0c8db370ade873d6af1c2fcb5b943808}{N\+D6\+\_\+\+P\+R\+E\+F\+I\+X\+\_\+\+F\+L\+A\+G\+\_\+\+R\+O\+U\+T\+E\+R\+\_\+\+A\+D\+D\+R\+E\+SS}~(0x20)
+\item 
+\#define \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2nd6_8h_a95d286358c4dd448e1967e3a03f25d27}{N\+D6\+\_\+\+P\+R\+E\+F\+I\+X\+\_\+\+F\+L\+A\+G\+\_\+\+S\+I\+T\+E\+\_\+\+P\+R\+E\+F\+IX}~(0x10)
+\item 
+\#define \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2nd6_8h_aeaa575c1a66ccaa2dc62ff2c0bd71619}{N\+D6\+\_\+\+O\+P\+T\+I\+O\+N\+\_\+\+T\+Y\+P\+E\+\_\+\+R\+E\+D\+I\+R\+\_\+\+H\+DR}~(0x04)
+\item 
+\#define \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2nd6_8h_aab6c15c9bea51fbdcc660f718bb403a8}{N\+D6\+\_\+\+O\+P\+T\+I\+O\+N\+\_\+\+T\+Y\+P\+E\+\_\+\+M\+TU}~(0x05)
+\item 
+\#define \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2nd6_8h_aff2e03766ee1fa15263c4aeda5097d28}{N\+D6\+\_\+\+O\+P\+T\+I\+O\+N\+\_\+\+T\+Y\+P\+E\+\_\+\+R\+O\+U\+T\+E\+\_\+\+I\+N\+FO}~(24)
+\item 
+\#define \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2nd6_8h_abf05527be6e826ea4b04b6103aa08497}{L\+W\+I\+P\+\_\+\+R\+D\+N\+S\+S\+\_\+\+O\+P\+T\+I\+O\+N\+\_\+\+M\+A\+X\+\_\+\+S\+E\+R\+V\+E\+RS}~1
+\item 
+\#define \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2nd6_8h_a3188b9704a8ca598f54b87c3db73272e}{N\+D6\+\_\+\+O\+P\+T\+I\+O\+N\+\_\+\+T\+Y\+P\+E\+\_\+\+R\+D\+N\+SS}~(25)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group__compiler__abstraction_ga73199061891adf1b912d20835c7d5e96}{P\+A\+C\+K\+\_\+\+S\+T\+R\+U\+C\+T\+\_\+\+B\+E\+G\+IN} struct \hyperlink{structns__header}{ns\+\_\+header} \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2nd6_8h_ad54849dd53aacbde86da366985f094eb}{P\+A\+C\+K\+\_\+\+S\+T\+R\+U\+C\+T\+\_\+\+S\+T\+R\+U\+CT}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+N\+D6 protocol definitions 
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2nd6_8h_abf05527be6e826ea4b04b6103aa08497}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2nd6_8h_abf05527be6e826ea4b04b6103aa08497}} 
+\index{openmote-\/cc2538/lwip/src/include/lwip/prot/nd6.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/nd6.\+h}!L\+W\+I\+P\+\_\+\+R\+D\+N\+S\+S\+\_\+\+O\+P\+T\+I\+O\+N\+\_\+\+M\+A\+X\+\_\+\+S\+E\+R\+V\+E\+RS@{L\+W\+I\+P\+\_\+\+R\+D\+N\+S\+S\+\_\+\+O\+P\+T\+I\+O\+N\+\_\+\+M\+A\+X\+\_\+\+S\+E\+R\+V\+E\+RS}}
+\index{L\+W\+I\+P\+\_\+\+R\+D\+N\+S\+S\+\_\+\+O\+P\+T\+I\+O\+N\+\_\+\+M\+A\+X\+\_\+\+S\+E\+R\+V\+E\+RS@{L\+W\+I\+P\+\_\+\+R\+D\+N\+S\+S\+\_\+\+O\+P\+T\+I\+O\+N\+\_\+\+M\+A\+X\+\_\+\+S\+E\+R\+V\+E\+RS}!openmote-\/cc2538/lwip/src/include/lwip/prot/nd6.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/nd6.\+h}}
+\subsubsection{\texorpdfstring{L\+W\+I\+P\+\_\+\+R\+D\+N\+S\+S\+\_\+\+O\+P\+T\+I\+O\+N\+\_\+\+M\+A\+X\+\_\+\+S\+E\+R\+V\+E\+RS}{LWIP\_RDNSS\_OPTION\_MAX\_SERVERS}}
+{\footnotesize\ttfamily \#define L\+W\+I\+P\+\_\+\+R\+D\+N\+S\+S\+\_\+\+O\+P\+T\+I\+O\+N\+\_\+\+M\+A\+X\+\_\+\+S\+E\+R\+V\+E\+RS~1}
+
+Recursive D\+NS Server Option. \mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2nd6_8h_a37fb4993bbbf3c4886291d38b1c03393}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2nd6_8h_a37fb4993bbbf3c4886291d38b1c03393}} 
+\index{openmote-\/cc2538/lwip/src/include/lwip/prot/nd6.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/nd6.\+h}!N\+D6\+\_\+\+F\+L\+A\+G\+\_\+\+O\+V\+E\+R\+R\+I\+DE@{N\+D6\+\_\+\+F\+L\+A\+G\+\_\+\+O\+V\+E\+R\+R\+I\+DE}}
+\index{N\+D6\+\_\+\+F\+L\+A\+G\+\_\+\+O\+V\+E\+R\+R\+I\+DE@{N\+D6\+\_\+\+F\+L\+A\+G\+\_\+\+O\+V\+E\+R\+R\+I\+DE}!openmote-\/cc2538/lwip/src/include/lwip/prot/nd6.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/nd6.\+h}}
+\subsubsection{\texorpdfstring{N\+D6\+\_\+\+F\+L\+A\+G\+\_\+\+O\+V\+E\+R\+R\+I\+DE}{ND6\_FLAG\_OVERRIDE}}
+{\footnotesize\ttfamily \#define N\+D6\+\_\+\+F\+L\+A\+G\+\_\+\+O\+V\+E\+R\+R\+I\+DE~(0x20)}
+
+\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2nd6_8h_af41135736265f32503ac2340dc2d3ad3}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2nd6_8h_af41135736265f32503ac2340dc2d3ad3}} 
+\index{openmote-\/cc2538/lwip/src/include/lwip/prot/nd6.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/nd6.\+h}!N\+D6\+\_\+\+F\+L\+A\+G\+\_\+\+R\+O\+U\+T\+ER@{N\+D6\+\_\+\+F\+L\+A\+G\+\_\+\+R\+O\+U\+T\+ER}}
+\index{N\+D6\+\_\+\+F\+L\+A\+G\+\_\+\+R\+O\+U\+T\+ER@{N\+D6\+\_\+\+F\+L\+A\+G\+\_\+\+R\+O\+U\+T\+ER}!openmote-\/cc2538/lwip/src/include/lwip/prot/nd6.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/nd6.\+h}}
+\subsubsection{\texorpdfstring{N\+D6\+\_\+\+F\+L\+A\+G\+\_\+\+R\+O\+U\+T\+ER}{ND6\_FLAG\_ROUTER}}
+{\footnotesize\ttfamily \#define N\+D6\+\_\+\+F\+L\+A\+G\+\_\+\+R\+O\+U\+T\+ER~(0x80)}
+
+\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2nd6_8h_ae6bf6657a8a6b004681948090dfa2d7c}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2nd6_8h_ae6bf6657a8a6b004681948090dfa2d7c}} 
+\index{openmote-\/cc2538/lwip/src/include/lwip/prot/nd6.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/nd6.\+h}!N\+D6\+\_\+\+F\+L\+A\+G\+\_\+\+S\+O\+L\+I\+C\+I\+T\+ED@{N\+D6\+\_\+\+F\+L\+A\+G\+\_\+\+S\+O\+L\+I\+C\+I\+T\+ED}}
+\index{N\+D6\+\_\+\+F\+L\+A\+G\+\_\+\+S\+O\+L\+I\+C\+I\+T\+ED@{N\+D6\+\_\+\+F\+L\+A\+G\+\_\+\+S\+O\+L\+I\+C\+I\+T\+ED}!openmote-\/cc2538/lwip/src/include/lwip/prot/nd6.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/nd6.\+h}}
+\subsubsection{\texorpdfstring{N\+D6\+\_\+\+F\+L\+A\+G\+\_\+\+S\+O\+L\+I\+C\+I\+T\+ED}{ND6\_FLAG\_SOLICITED}}
+{\footnotesize\ttfamily \#define N\+D6\+\_\+\+F\+L\+A\+G\+\_\+\+S\+O\+L\+I\+C\+I\+T\+ED~(0x40)}
+
+\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2nd6_8h_aab6c15c9bea51fbdcc660f718bb403a8}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2nd6_8h_aab6c15c9bea51fbdcc660f718bb403a8}} 
+\index{openmote-\/cc2538/lwip/src/include/lwip/prot/nd6.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/nd6.\+h}!N\+D6\+\_\+\+O\+P\+T\+I\+O\+N\+\_\+\+T\+Y\+P\+E\+\_\+\+M\+TU@{N\+D6\+\_\+\+O\+P\+T\+I\+O\+N\+\_\+\+T\+Y\+P\+E\+\_\+\+M\+TU}}
+\index{N\+D6\+\_\+\+O\+P\+T\+I\+O\+N\+\_\+\+T\+Y\+P\+E\+\_\+\+M\+TU@{N\+D6\+\_\+\+O\+P\+T\+I\+O\+N\+\_\+\+T\+Y\+P\+E\+\_\+\+M\+TU}!openmote-\/cc2538/lwip/src/include/lwip/prot/nd6.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/nd6.\+h}}
+\subsubsection{\texorpdfstring{N\+D6\+\_\+\+O\+P\+T\+I\+O\+N\+\_\+\+T\+Y\+P\+E\+\_\+\+M\+TU}{ND6\_OPTION\_TYPE\_MTU}}
+{\footnotesize\ttfamily \#define N\+D6\+\_\+\+O\+P\+T\+I\+O\+N\+\_\+\+T\+Y\+P\+E\+\_\+\+M\+TU~(0x05)}
+
+M\+TU option. \mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2nd6_8h_a0225d4c8911efdbdbc2b40de208906c2}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2nd6_8h_a0225d4c8911efdbdbc2b40de208906c2}} 
+\index{openmote-\/cc2538/lwip/src/include/lwip/prot/nd6.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/nd6.\+h}!N\+D6\+\_\+\+O\+P\+T\+I\+O\+N\+\_\+\+T\+Y\+P\+E\+\_\+\+P\+R\+E\+F\+I\+X\+\_\+\+I\+N\+FO@{N\+D6\+\_\+\+O\+P\+T\+I\+O\+N\+\_\+\+T\+Y\+P\+E\+\_\+\+P\+R\+E\+F\+I\+X\+\_\+\+I\+N\+FO}}
+\index{N\+D6\+\_\+\+O\+P\+T\+I\+O\+N\+\_\+\+T\+Y\+P\+E\+\_\+\+P\+R\+E\+F\+I\+X\+\_\+\+I\+N\+FO@{N\+D6\+\_\+\+O\+P\+T\+I\+O\+N\+\_\+\+T\+Y\+P\+E\+\_\+\+P\+R\+E\+F\+I\+X\+\_\+\+I\+N\+FO}!openmote-\/cc2538/lwip/src/include/lwip/prot/nd6.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/nd6.\+h}}
+\subsubsection{\texorpdfstring{N\+D6\+\_\+\+O\+P\+T\+I\+O\+N\+\_\+\+T\+Y\+P\+E\+\_\+\+P\+R\+E\+F\+I\+X\+\_\+\+I\+N\+FO}{ND6\_OPTION\_TYPE\_PREFIX\_INFO}}
+{\footnotesize\ttfamily \#define N\+D6\+\_\+\+O\+P\+T\+I\+O\+N\+\_\+\+T\+Y\+P\+E\+\_\+\+P\+R\+E\+F\+I\+X\+\_\+\+I\+N\+FO~(0x03)}
+
+Prefix information option. \mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2nd6_8h_a3188b9704a8ca598f54b87c3db73272e}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2nd6_8h_a3188b9704a8ca598f54b87c3db73272e}} 
+\index{openmote-\/cc2538/lwip/src/include/lwip/prot/nd6.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/nd6.\+h}!N\+D6\+\_\+\+O\+P\+T\+I\+O\+N\+\_\+\+T\+Y\+P\+E\+\_\+\+R\+D\+N\+SS@{N\+D6\+\_\+\+O\+P\+T\+I\+O\+N\+\_\+\+T\+Y\+P\+E\+\_\+\+R\+D\+N\+SS}}
+\index{N\+D6\+\_\+\+O\+P\+T\+I\+O\+N\+\_\+\+T\+Y\+P\+E\+\_\+\+R\+D\+N\+SS@{N\+D6\+\_\+\+O\+P\+T\+I\+O\+N\+\_\+\+T\+Y\+P\+E\+\_\+\+R\+D\+N\+SS}!openmote-\/cc2538/lwip/src/include/lwip/prot/nd6.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/nd6.\+h}}
+\subsubsection{\texorpdfstring{N\+D6\+\_\+\+O\+P\+T\+I\+O\+N\+\_\+\+T\+Y\+P\+E\+\_\+\+R\+D\+N\+SS}{ND6\_OPTION\_TYPE\_RDNSS}}
+{\footnotesize\ttfamily \#define N\+D6\+\_\+\+O\+P\+T\+I\+O\+N\+\_\+\+T\+Y\+P\+E\+\_\+\+R\+D\+N\+SS~(25)}
+
+\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2nd6_8h_aeaa575c1a66ccaa2dc62ff2c0bd71619}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2nd6_8h_aeaa575c1a66ccaa2dc62ff2c0bd71619}} 
+\index{openmote-\/cc2538/lwip/src/include/lwip/prot/nd6.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/nd6.\+h}!N\+D6\+\_\+\+O\+P\+T\+I\+O\+N\+\_\+\+T\+Y\+P\+E\+\_\+\+R\+E\+D\+I\+R\+\_\+\+H\+DR@{N\+D6\+\_\+\+O\+P\+T\+I\+O\+N\+\_\+\+T\+Y\+P\+E\+\_\+\+R\+E\+D\+I\+R\+\_\+\+H\+DR}}
+\index{N\+D6\+\_\+\+O\+P\+T\+I\+O\+N\+\_\+\+T\+Y\+P\+E\+\_\+\+R\+E\+D\+I\+R\+\_\+\+H\+DR@{N\+D6\+\_\+\+O\+P\+T\+I\+O\+N\+\_\+\+T\+Y\+P\+E\+\_\+\+R\+E\+D\+I\+R\+\_\+\+H\+DR}!openmote-\/cc2538/lwip/src/include/lwip/prot/nd6.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/nd6.\+h}}
+\subsubsection{\texorpdfstring{N\+D6\+\_\+\+O\+P\+T\+I\+O\+N\+\_\+\+T\+Y\+P\+E\+\_\+\+R\+E\+D\+I\+R\+\_\+\+H\+DR}{ND6\_OPTION\_TYPE\_REDIR\_HDR}}
+{\footnotesize\ttfamily \#define N\+D6\+\_\+\+O\+P\+T\+I\+O\+N\+\_\+\+T\+Y\+P\+E\+\_\+\+R\+E\+D\+I\+R\+\_\+\+H\+DR~(0x04)}
+
+Redirected header option. \mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2nd6_8h_aff2e03766ee1fa15263c4aeda5097d28}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2nd6_8h_aff2e03766ee1fa15263c4aeda5097d28}} 
+\index{openmote-\/cc2538/lwip/src/include/lwip/prot/nd6.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/nd6.\+h}!N\+D6\+\_\+\+O\+P\+T\+I\+O\+N\+\_\+\+T\+Y\+P\+E\+\_\+\+R\+O\+U\+T\+E\+\_\+\+I\+N\+FO@{N\+D6\+\_\+\+O\+P\+T\+I\+O\+N\+\_\+\+T\+Y\+P\+E\+\_\+\+R\+O\+U\+T\+E\+\_\+\+I\+N\+FO}}
+\index{N\+D6\+\_\+\+O\+P\+T\+I\+O\+N\+\_\+\+T\+Y\+P\+E\+\_\+\+R\+O\+U\+T\+E\+\_\+\+I\+N\+FO@{N\+D6\+\_\+\+O\+P\+T\+I\+O\+N\+\_\+\+T\+Y\+P\+E\+\_\+\+R\+O\+U\+T\+E\+\_\+\+I\+N\+FO}!openmote-\/cc2538/lwip/src/include/lwip/prot/nd6.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/nd6.\+h}}
+\subsubsection{\texorpdfstring{N\+D6\+\_\+\+O\+P\+T\+I\+O\+N\+\_\+\+T\+Y\+P\+E\+\_\+\+R\+O\+U\+T\+E\+\_\+\+I\+N\+FO}{ND6\_OPTION\_TYPE\_ROUTE\_INFO}}
+{\footnotesize\ttfamily \#define N\+D6\+\_\+\+O\+P\+T\+I\+O\+N\+\_\+\+T\+Y\+P\+E\+\_\+\+R\+O\+U\+T\+E\+\_\+\+I\+N\+FO~(24)}
+
+Route information option. \mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2nd6_8h_a68ce8550a20cd30093d6e79e1ca51842}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2nd6_8h_a68ce8550a20cd30093d6e79e1ca51842}} 
+\index{openmote-\/cc2538/lwip/src/include/lwip/prot/nd6.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/nd6.\+h}!N\+D6\+\_\+\+O\+P\+T\+I\+O\+N\+\_\+\+T\+Y\+P\+E\+\_\+\+S\+O\+U\+R\+C\+E\+\_\+\+L\+L\+A\+D\+DR@{N\+D6\+\_\+\+O\+P\+T\+I\+O\+N\+\_\+\+T\+Y\+P\+E\+\_\+\+S\+O\+U\+R\+C\+E\+\_\+\+L\+L\+A\+D\+DR}}
+\index{N\+D6\+\_\+\+O\+P\+T\+I\+O\+N\+\_\+\+T\+Y\+P\+E\+\_\+\+S\+O\+U\+R\+C\+E\+\_\+\+L\+L\+A\+D\+DR@{N\+D6\+\_\+\+O\+P\+T\+I\+O\+N\+\_\+\+T\+Y\+P\+E\+\_\+\+S\+O\+U\+R\+C\+E\+\_\+\+L\+L\+A\+D\+DR}!openmote-\/cc2538/lwip/src/include/lwip/prot/nd6.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/nd6.\+h}}
+\subsubsection{\texorpdfstring{N\+D6\+\_\+\+O\+P\+T\+I\+O\+N\+\_\+\+T\+Y\+P\+E\+\_\+\+S\+O\+U\+R\+C\+E\+\_\+\+L\+L\+A\+D\+DR}{ND6\_OPTION\_TYPE\_SOURCE\_LLADDR}}
+{\footnotesize\ttfamily \#define N\+D6\+\_\+\+O\+P\+T\+I\+O\+N\+\_\+\+T\+Y\+P\+E\+\_\+\+S\+O\+U\+R\+C\+E\+\_\+\+L\+L\+A\+D\+DR~(0x01)}
+
+Link-\/layer address option. \mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2nd6_8h_a787edcc6357686798581dd714d68c8c1}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2nd6_8h_a787edcc6357686798581dd714d68c8c1}} 
+\index{openmote-\/cc2538/lwip/src/include/lwip/prot/nd6.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/nd6.\+h}!N\+D6\+\_\+\+O\+P\+T\+I\+O\+N\+\_\+\+T\+Y\+P\+E\+\_\+\+T\+A\+R\+G\+E\+T\+\_\+\+L\+L\+A\+D\+DR@{N\+D6\+\_\+\+O\+P\+T\+I\+O\+N\+\_\+\+T\+Y\+P\+E\+\_\+\+T\+A\+R\+G\+E\+T\+\_\+\+L\+L\+A\+D\+DR}}
+\index{N\+D6\+\_\+\+O\+P\+T\+I\+O\+N\+\_\+\+T\+Y\+P\+E\+\_\+\+T\+A\+R\+G\+E\+T\+\_\+\+L\+L\+A\+D\+DR@{N\+D6\+\_\+\+O\+P\+T\+I\+O\+N\+\_\+\+T\+Y\+P\+E\+\_\+\+T\+A\+R\+G\+E\+T\+\_\+\+L\+L\+A\+D\+DR}!openmote-\/cc2538/lwip/src/include/lwip/prot/nd6.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/nd6.\+h}}
+\subsubsection{\texorpdfstring{N\+D6\+\_\+\+O\+P\+T\+I\+O\+N\+\_\+\+T\+Y\+P\+E\+\_\+\+T\+A\+R\+G\+E\+T\+\_\+\+L\+L\+A\+D\+DR}{ND6\_OPTION\_TYPE\_TARGET\_LLADDR}}
+{\footnotesize\ttfamily \#define N\+D6\+\_\+\+O\+P\+T\+I\+O\+N\+\_\+\+T\+Y\+P\+E\+\_\+\+T\+A\+R\+G\+E\+T\+\_\+\+L\+L\+A\+D\+DR~(0x02)}
+
+\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2nd6_8h_acc8f3704e72b27a166b120eec5a2665b}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2nd6_8h_acc8f3704e72b27a166b120eec5a2665b}} 
+\index{openmote-\/cc2538/lwip/src/include/lwip/prot/nd6.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/nd6.\+h}!N\+D6\+\_\+\+P\+R\+E\+F\+I\+X\+\_\+\+F\+L\+A\+G\+\_\+\+A\+U\+T\+O\+N\+O\+M\+O\+US@{N\+D6\+\_\+\+P\+R\+E\+F\+I\+X\+\_\+\+F\+L\+A\+G\+\_\+\+A\+U\+T\+O\+N\+O\+M\+O\+US}}
+\index{N\+D6\+\_\+\+P\+R\+E\+F\+I\+X\+\_\+\+F\+L\+A\+G\+\_\+\+A\+U\+T\+O\+N\+O\+M\+O\+US@{N\+D6\+\_\+\+P\+R\+E\+F\+I\+X\+\_\+\+F\+L\+A\+G\+\_\+\+A\+U\+T\+O\+N\+O\+M\+O\+US}!openmote-\/cc2538/lwip/src/include/lwip/prot/nd6.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/nd6.\+h}}
+\subsubsection{\texorpdfstring{N\+D6\+\_\+\+P\+R\+E\+F\+I\+X\+\_\+\+F\+L\+A\+G\+\_\+\+A\+U\+T\+O\+N\+O\+M\+O\+US}{ND6\_PREFIX\_FLAG\_AUTONOMOUS}}
+{\footnotesize\ttfamily \#define N\+D6\+\_\+\+P\+R\+E\+F\+I\+X\+\_\+\+F\+L\+A\+G\+\_\+\+A\+U\+T\+O\+N\+O\+M\+O\+US~(0x40)}
+
+\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2nd6_8h_a5714faec71a571f2334ed750a33c61a2}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2nd6_8h_a5714faec71a571f2334ed750a33c61a2}} 
+\index{openmote-\/cc2538/lwip/src/include/lwip/prot/nd6.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/nd6.\+h}!N\+D6\+\_\+\+P\+R\+E\+F\+I\+X\+\_\+\+F\+L\+A\+G\+\_\+\+O\+N\+\_\+\+L\+I\+NK@{N\+D6\+\_\+\+P\+R\+E\+F\+I\+X\+\_\+\+F\+L\+A\+G\+\_\+\+O\+N\+\_\+\+L\+I\+NK}}
+\index{N\+D6\+\_\+\+P\+R\+E\+F\+I\+X\+\_\+\+F\+L\+A\+G\+\_\+\+O\+N\+\_\+\+L\+I\+NK@{N\+D6\+\_\+\+P\+R\+E\+F\+I\+X\+\_\+\+F\+L\+A\+G\+\_\+\+O\+N\+\_\+\+L\+I\+NK}!openmote-\/cc2538/lwip/src/include/lwip/prot/nd6.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/nd6.\+h}}
+\subsubsection{\texorpdfstring{N\+D6\+\_\+\+P\+R\+E\+F\+I\+X\+\_\+\+F\+L\+A\+G\+\_\+\+O\+N\+\_\+\+L\+I\+NK}{ND6\_PREFIX\_FLAG\_ON\_LINK}}
+{\footnotesize\ttfamily \#define N\+D6\+\_\+\+P\+R\+E\+F\+I\+X\+\_\+\+F\+L\+A\+G\+\_\+\+O\+N\+\_\+\+L\+I\+NK~(0x80)}
+
+\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2nd6_8h_a0c8db370ade873d6af1c2fcb5b943808}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2nd6_8h_a0c8db370ade873d6af1c2fcb5b943808}} 
+\index{openmote-\/cc2538/lwip/src/include/lwip/prot/nd6.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/nd6.\+h}!N\+D6\+\_\+\+P\+R\+E\+F\+I\+X\+\_\+\+F\+L\+A\+G\+\_\+\+R\+O\+U\+T\+E\+R\+\_\+\+A\+D\+D\+R\+E\+SS@{N\+D6\+\_\+\+P\+R\+E\+F\+I\+X\+\_\+\+F\+L\+A\+G\+\_\+\+R\+O\+U\+T\+E\+R\+\_\+\+A\+D\+D\+R\+E\+SS}}
+\index{N\+D6\+\_\+\+P\+R\+E\+F\+I\+X\+\_\+\+F\+L\+A\+G\+\_\+\+R\+O\+U\+T\+E\+R\+\_\+\+A\+D\+D\+R\+E\+SS@{N\+D6\+\_\+\+P\+R\+E\+F\+I\+X\+\_\+\+F\+L\+A\+G\+\_\+\+R\+O\+U\+T\+E\+R\+\_\+\+A\+D\+D\+R\+E\+SS}!openmote-\/cc2538/lwip/src/include/lwip/prot/nd6.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/nd6.\+h}}
+\subsubsection{\texorpdfstring{N\+D6\+\_\+\+P\+R\+E\+F\+I\+X\+\_\+\+F\+L\+A\+G\+\_\+\+R\+O\+U\+T\+E\+R\+\_\+\+A\+D\+D\+R\+E\+SS}{ND6\_PREFIX\_FLAG\_ROUTER\_ADDRESS}}
+{\footnotesize\ttfamily \#define N\+D6\+\_\+\+P\+R\+E\+F\+I\+X\+\_\+\+F\+L\+A\+G\+\_\+\+R\+O\+U\+T\+E\+R\+\_\+\+A\+D\+D\+R\+E\+SS~(0x20)}
+
+\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2nd6_8h_a95d286358c4dd448e1967e3a03f25d27}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2nd6_8h_a95d286358c4dd448e1967e3a03f25d27}} 
+\index{openmote-\/cc2538/lwip/src/include/lwip/prot/nd6.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/nd6.\+h}!N\+D6\+\_\+\+P\+R\+E\+F\+I\+X\+\_\+\+F\+L\+A\+G\+\_\+\+S\+I\+T\+E\+\_\+\+P\+R\+E\+F\+IX@{N\+D6\+\_\+\+P\+R\+E\+F\+I\+X\+\_\+\+F\+L\+A\+G\+\_\+\+S\+I\+T\+E\+\_\+\+P\+R\+E\+F\+IX}}
+\index{N\+D6\+\_\+\+P\+R\+E\+F\+I\+X\+\_\+\+F\+L\+A\+G\+\_\+\+S\+I\+T\+E\+\_\+\+P\+R\+E\+F\+IX@{N\+D6\+\_\+\+P\+R\+E\+F\+I\+X\+\_\+\+F\+L\+A\+G\+\_\+\+S\+I\+T\+E\+\_\+\+P\+R\+E\+F\+IX}!openmote-\/cc2538/lwip/src/include/lwip/prot/nd6.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/nd6.\+h}}
+\subsubsection{\texorpdfstring{N\+D6\+\_\+\+P\+R\+E\+F\+I\+X\+\_\+\+F\+L\+A\+G\+\_\+\+S\+I\+T\+E\+\_\+\+P\+R\+E\+F\+IX}{ND6\_PREFIX\_FLAG\_SITE\_PREFIX}}
+{\footnotesize\ttfamily \#define N\+D6\+\_\+\+P\+R\+E\+F\+I\+X\+\_\+\+F\+L\+A\+G\+\_\+\+S\+I\+T\+E\+\_\+\+P\+R\+E\+F\+IX~(0x10)}
+
+\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2nd6_8h_a7867a2c9435975e56656c78bc3c8dcaa}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2nd6_8h_a7867a2c9435975e56656c78bc3c8dcaa}} 
+\index{openmote-\/cc2538/lwip/src/include/lwip/prot/nd6.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/nd6.\+h}!N\+D6\+\_\+\+R\+A\+\_\+\+F\+L\+A\+G\+\_\+\+H\+O\+M\+E\+\_\+\+A\+G\+E\+NT@{N\+D6\+\_\+\+R\+A\+\_\+\+F\+L\+A\+G\+\_\+\+H\+O\+M\+E\+\_\+\+A\+G\+E\+NT}}
+\index{N\+D6\+\_\+\+R\+A\+\_\+\+F\+L\+A\+G\+\_\+\+H\+O\+M\+E\+\_\+\+A\+G\+E\+NT@{N\+D6\+\_\+\+R\+A\+\_\+\+F\+L\+A\+G\+\_\+\+H\+O\+M\+E\+\_\+\+A\+G\+E\+NT}!openmote-\/cc2538/lwip/src/include/lwip/prot/nd6.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/nd6.\+h}}
+\subsubsection{\texorpdfstring{N\+D6\+\_\+\+R\+A\+\_\+\+F\+L\+A\+G\+\_\+\+H\+O\+M\+E\+\_\+\+A\+G\+E\+NT}{ND6\_RA\_FLAG\_HOME\_AGENT}}
+{\footnotesize\ttfamily \#define N\+D6\+\_\+\+R\+A\+\_\+\+F\+L\+A\+G\+\_\+\+H\+O\+M\+E\+\_\+\+A\+G\+E\+NT~(0x20)}
+
+\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2nd6_8h_a7fb1b330719d83b7525374f4beca51bc}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2nd6_8h_a7fb1b330719d83b7525374f4beca51bc}} 
+\index{openmote-\/cc2538/lwip/src/include/lwip/prot/nd6.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/nd6.\+h}!N\+D6\+\_\+\+R\+A\+\_\+\+F\+L\+A\+G\+\_\+\+M\+A\+N\+A\+G\+E\+D\+\_\+\+A\+D\+D\+R\+\_\+\+C\+O\+N\+F\+IG@{N\+D6\+\_\+\+R\+A\+\_\+\+F\+L\+A\+G\+\_\+\+M\+A\+N\+A\+G\+E\+D\+\_\+\+A\+D\+D\+R\+\_\+\+C\+O\+N\+F\+IG}}
+\index{N\+D6\+\_\+\+R\+A\+\_\+\+F\+L\+A\+G\+\_\+\+M\+A\+N\+A\+G\+E\+D\+\_\+\+A\+D\+D\+R\+\_\+\+C\+O\+N\+F\+IG@{N\+D6\+\_\+\+R\+A\+\_\+\+F\+L\+A\+G\+\_\+\+M\+A\+N\+A\+G\+E\+D\+\_\+\+A\+D\+D\+R\+\_\+\+C\+O\+N\+F\+IG}!openmote-\/cc2538/lwip/src/include/lwip/prot/nd6.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/nd6.\+h}}
+\subsubsection{\texorpdfstring{N\+D6\+\_\+\+R\+A\+\_\+\+F\+L\+A\+G\+\_\+\+M\+A\+N\+A\+G\+E\+D\+\_\+\+A\+D\+D\+R\+\_\+\+C\+O\+N\+F\+IG}{ND6\_RA\_FLAG\_MANAGED\_ADDR\_CONFIG}}
+{\footnotesize\ttfamily \#define N\+D6\+\_\+\+R\+A\+\_\+\+F\+L\+A\+G\+\_\+\+M\+A\+N\+A\+G\+E\+D\+\_\+\+A\+D\+D\+R\+\_\+\+C\+O\+N\+F\+IG~(0x80)}
+
+Router advertisement message header. \mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2nd6_8h_a25c3846344db73334471f1a113999d82}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2nd6_8h_a25c3846344db73334471f1a113999d82}} 
+\index{openmote-\/cc2538/lwip/src/include/lwip/prot/nd6.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/nd6.\+h}!N\+D6\+\_\+\+R\+A\+\_\+\+F\+L\+A\+G\+\_\+\+O\+T\+H\+E\+R\+\_\+\+C\+O\+N\+F\+IG@{N\+D6\+\_\+\+R\+A\+\_\+\+F\+L\+A\+G\+\_\+\+O\+T\+H\+E\+R\+\_\+\+C\+O\+N\+F\+IG}}
+\index{N\+D6\+\_\+\+R\+A\+\_\+\+F\+L\+A\+G\+\_\+\+O\+T\+H\+E\+R\+\_\+\+C\+O\+N\+F\+IG@{N\+D6\+\_\+\+R\+A\+\_\+\+F\+L\+A\+G\+\_\+\+O\+T\+H\+E\+R\+\_\+\+C\+O\+N\+F\+IG}!openmote-\/cc2538/lwip/src/include/lwip/prot/nd6.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/nd6.\+h}}
+\subsubsection{\texorpdfstring{N\+D6\+\_\+\+R\+A\+\_\+\+F\+L\+A\+G\+\_\+\+O\+T\+H\+E\+R\+\_\+\+C\+O\+N\+F\+IG}{ND6\_RA\_FLAG\_OTHER\_CONFIG}}
+{\footnotesize\ttfamily \#define N\+D6\+\_\+\+R\+A\+\_\+\+F\+L\+A\+G\+\_\+\+O\+T\+H\+E\+R\+\_\+\+C\+O\+N\+F\+IG~(0x40)}
+
+\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2nd6_8h_aaa9aac80d5537508978ea0ed1b6dcdac}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2nd6_8h_aaa9aac80d5537508978ea0ed1b6dcdac}} 
+\index{openmote-\/cc2538/lwip/src/include/lwip/prot/nd6.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/nd6.\+h}!N\+D6\+\_\+\+R\+A\+\_\+\+P\+R\+E\+F\+E\+R\+E\+N\+C\+E\+\_\+\+D\+I\+S\+A\+B\+L\+ED@{N\+D6\+\_\+\+R\+A\+\_\+\+P\+R\+E\+F\+E\+R\+E\+N\+C\+E\+\_\+\+D\+I\+S\+A\+B\+L\+ED}}
+\index{N\+D6\+\_\+\+R\+A\+\_\+\+P\+R\+E\+F\+E\+R\+E\+N\+C\+E\+\_\+\+D\+I\+S\+A\+B\+L\+ED@{N\+D6\+\_\+\+R\+A\+\_\+\+P\+R\+E\+F\+E\+R\+E\+N\+C\+E\+\_\+\+D\+I\+S\+A\+B\+L\+ED}!openmote-\/cc2538/lwip/src/include/lwip/prot/nd6.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/nd6.\+h}}
+\subsubsection{\texorpdfstring{N\+D6\+\_\+\+R\+A\+\_\+\+P\+R\+E\+F\+E\+R\+E\+N\+C\+E\+\_\+\+D\+I\+S\+A\+B\+L\+ED}{ND6\_RA\_PREFERENCE\_DISABLED}}
+{\footnotesize\ttfamily \#define N\+D6\+\_\+\+R\+A\+\_\+\+P\+R\+E\+F\+E\+R\+E\+N\+C\+E\+\_\+\+D\+I\+S\+A\+B\+L\+ED~(0x10)}
+
+\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2nd6_8h_a63a5d0b59f2e493f04cb1df2d1495484}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2nd6_8h_a63a5d0b59f2e493f04cb1df2d1495484}} 
+\index{openmote-\/cc2538/lwip/src/include/lwip/prot/nd6.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/nd6.\+h}!N\+D6\+\_\+\+R\+A\+\_\+\+P\+R\+E\+F\+E\+R\+E\+N\+C\+E\+\_\+\+H\+I\+GH@{N\+D6\+\_\+\+R\+A\+\_\+\+P\+R\+E\+F\+E\+R\+E\+N\+C\+E\+\_\+\+H\+I\+GH}}
+\index{N\+D6\+\_\+\+R\+A\+\_\+\+P\+R\+E\+F\+E\+R\+E\+N\+C\+E\+\_\+\+H\+I\+GH@{N\+D6\+\_\+\+R\+A\+\_\+\+P\+R\+E\+F\+E\+R\+E\+N\+C\+E\+\_\+\+H\+I\+GH}!openmote-\/cc2538/lwip/src/include/lwip/prot/nd6.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/nd6.\+h}}
+\subsubsection{\texorpdfstring{N\+D6\+\_\+\+R\+A\+\_\+\+P\+R\+E\+F\+E\+R\+E\+N\+C\+E\+\_\+\+H\+I\+GH}{ND6\_RA\_PREFERENCE\_HIGH}}
+{\footnotesize\ttfamily \#define N\+D6\+\_\+\+R\+A\+\_\+\+P\+R\+E\+F\+E\+R\+E\+N\+C\+E\+\_\+\+H\+I\+GH~(0x08)}
+
+\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2nd6_8h_ab53c89ac0b858537e224797f924aa7bf}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2nd6_8h_ab53c89ac0b858537e224797f924aa7bf}} 
+\index{openmote-\/cc2538/lwip/src/include/lwip/prot/nd6.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/nd6.\+h}!N\+D6\+\_\+\+R\+A\+\_\+\+P\+R\+E\+F\+E\+R\+E\+N\+C\+E\+\_\+\+L\+OW@{N\+D6\+\_\+\+R\+A\+\_\+\+P\+R\+E\+F\+E\+R\+E\+N\+C\+E\+\_\+\+L\+OW}}
+\index{N\+D6\+\_\+\+R\+A\+\_\+\+P\+R\+E\+F\+E\+R\+E\+N\+C\+E\+\_\+\+L\+OW@{N\+D6\+\_\+\+R\+A\+\_\+\+P\+R\+E\+F\+E\+R\+E\+N\+C\+E\+\_\+\+L\+OW}!openmote-\/cc2538/lwip/src/include/lwip/prot/nd6.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/nd6.\+h}}
+\subsubsection{\texorpdfstring{N\+D6\+\_\+\+R\+A\+\_\+\+P\+R\+E\+F\+E\+R\+E\+N\+C\+E\+\_\+\+L\+OW}{ND6\_RA\_PREFERENCE\_LOW}}
+{\footnotesize\ttfamily \#define N\+D6\+\_\+\+R\+A\+\_\+\+P\+R\+E\+F\+E\+R\+E\+N\+C\+E\+\_\+\+L\+OW~(0x18)}
+
+\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2nd6_8h_a328acad71d1e71c00e413ab2df4af4de}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2nd6_8h_a328acad71d1e71c00e413ab2df4af4de}} 
+\index{openmote-\/cc2538/lwip/src/include/lwip/prot/nd6.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/nd6.\+h}!N\+D6\+\_\+\+R\+A\+\_\+\+P\+R\+E\+F\+E\+R\+E\+N\+C\+E\+\_\+\+M\+A\+SK@{N\+D6\+\_\+\+R\+A\+\_\+\+P\+R\+E\+F\+E\+R\+E\+N\+C\+E\+\_\+\+M\+A\+SK}}
+\index{N\+D6\+\_\+\+R\+A\+\_\+\+P\+R\+E\+F\+E\+R\+E\+N\+C\+E\+\_\+\+M\+A\+SK@{N\+D6\+\_\+\+R\+A\+\_\+\+P\+R\+E\+F\+E\+R\+E\+N\+C\+E\+\_\+\+M\+A\+SK}!openmote-\/cc2538/lwip/src/include/lwip/prot/nd6.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/nd6.\+h}}
+\subsubsection{\texorpdfstring{N\+D6\+\_\+\+R\+A\+\_\+\+P\+R\+E\+F\+E\+R\+E\+N\+C\+E\+\_\+\+M\+A\+SK}{ND6\_RA\_PREFERENCE\_MASK}}
+{\footnotesize\ttfamily \#define N\+D6\+\_\+\+R\+A\+\_\+\+P\+R\+E\+F\+E\+R\+E\+N\+C\+E\+\_\+\+M\+A\+SK~(0x18)}
+
+\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2nd6_8h_aeee05b7e05eaed56fec06b1bb7e263dd}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2nd6_8h_aeee05b7e05eaed56fec06b1bb7e263dd}} 
+\index{openmote-\/cc2538/lwip/src/include/lwip/prot/nd6.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/nd6.\+h}!N\+D6\+\_\+\+R\+A\+\_\+\+P\+R\+E\+F\+E\+R\+E\+N\+C\+E\+\_\+\+M\+E\+D\+I\+UM@{N\+D6\+\_\+\+R\+A\+\_\+\+P\+R\+E\+F\+E\+R\+E\+N\+C\+E\+\_\+\+M\+E\+D\+I\+UM}}
+\index{N\+D6\+\_\+\+R\+A\+\_\+\+P\+R\+E\+F\+E\+R\+E\+N\+C\+E\+\_\+\+M\+E\+D\+I\+UM@{N\+D6\+\_\+\+R\+A\+\_\+\+P\+R\+E\+F\+E\+R\+E\+N\+C\+E\+\_\+\+M\+E\+D\+I\+UM}!openmote-\/cc2538/lwip/src/include/lwip/prot/nd6.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/nd6.\+h}}
+\subsubsection{\texorpdfstring{N\+D6\+\_\+\+R\+A\+\_\+\+P\+R\+E\+F\+E\+R\+E\+N\+C\+E\+\_\+\+M\+E\+D\+I\+UM}{ND6\_RA\_PREFERENCE\_MEDIUM}}
+{\footnotesize\ttfamily \#define N\+D6\+\_\+\+R\+A\+\_\+\+P\+R\+E\+F\+E\+R\+E\+N\+C\+E\+\_\+\+M\+E\+D\+I\+UM~(0x00)}
+
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2nd6_8h_ad54849dd53aacbde86da366985f094eb}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2nd6_8h_ad54849dd53aacbde86da366985f094eb}} 
+\index{openmote-\/cc2538/lwip/src/include/lwip/prot/nd6.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/nd6.\+h}!P\+A\+C\+K\+\_\+\+S\+T\+R\+U\+C\+T\+\_\+\+S\+T\+R\+U\+CT@{P\+A\+C\+K\+\_\+\+S\+T\+R\+U\+C\+T\+\_\+\+S\+T\+R\+U\+CT}}
+\index{P\+A\+C\+K\+\_\+\+S\+T\+R\+U\+C\+T\+\_\+\+S\+T\+R\+U\+CT@{P\+A\+C\+K\+\_\+\+S\+T\+R\+U\+C\+T\+\_\+\+S\+T\+R\+U\+CT}!openmote-\/cc2538/lwip/src/include/lwip/prot/nd6.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/nd6.\+h}}
+\subsubsection{\texorpdfstring{P\+A\+C\+K\+\_\+\+S\+T\+R\+U\+C\+T\+\_\+\+S\+T\+R\+U\+CT}{PACK\_STRUCT\_STRUCT}}
+{\footnotesize\ttfamily \hyperlink{group__compiler__abstraction_ga73199061891adf1b912d20835c7d5e96}{P\+A\+C\+K\+\_\+\+S\+T\+R\+U\+C\+T\+\_\+\+B\+E\+G\+IN} struct \hyperlink{structrdnss__option}{rdnss\+\_\+option}  P\+A\+C\+K\+\_\+\+S\+T\+R\+U\+C\+T\+\_\+\+S\+T\+R\+U\+CT}
+

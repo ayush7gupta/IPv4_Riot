@@ -1,0 +1,99 @@
+\hypertarget{native_2lwip_2src_2include_2lwip_2debug_8h}{}\section{/home/ayush/\+R\+I\+O\+T/tests/lwip/bin/pkg/native/lwip/src/include/lwip/debug.h File Reference}
+\label{native_2lwip_2src_2include_2lwip_2debug_8h}\index{/home/ayush/\+R\+I\+O\+T/tests/lwip/bin/pkg/native/lwip/src/include/lwip/debug.\+h@{/home/ayush/\+R\+I\+O\+T/tests/lwip/bin/pkg/native/lwip/src/include/lwip/debug.\+h}}
+{\ttfamily \#include \char`\"{}lwip/arch.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}lwip/opt.\+h\char`\"{}}\newline
+Include dependency graph for debug.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=222pt]{native_2lwip_2src_2include_2lwip_2debug_8h__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group__debugging__levels_gad64836d29d071e1db104f49a01c951f1}{L\+W\+I\+P\+\_\+\+D\+B\+G\+\_\+\+M\+A\+S\+K\+\_\+\+L\+E\+V\+EL}~0x03
+\item 
+\#define \hyperlink{group__debugging__levels_gac2faac6759cbe02e4f1f9f27edbed78e}{L\+W\+I\+P\+\_\+\+D\+B\+G\+\_\+\+L\+E\+V\+E\+L\+\_\+\+O\+FF}~\hyperlink{group__debugging__levels_ga8ebaeb006b43f55897f3196b3617dc87}{L\+W\+I\+P\+\_\+\+D\+B\+G\+\_\+\+L\+E\+V\+E\+L\+\_\+\+A\+LL}
+\item 
+\#define \hyperlink{native_2lwip_2src_2include_2lwip_2debug_8h_a94ad086267808462beae2b38f91996ed}{L\+W\+I\+P\+\_\+\+A\+S\+S\+E\+RT}(message,  assertion)
+\item 
+\#define \hyperlink{native_2lwip_2src_2include_2lwip_2debug_8h_a451cdce6343503ea686ff5e4eff37d3c}{L\+W\+I\+P\+\_\+\+P\+L\+A\+T\+F\+O\+R\+M\+\_\+\+E\+R\+R\+OR}(message)~\hyperlink{group__compiler__abstraction_ga7e8bcd0282525704d6dd596bdd1b47d0}{L\+W\+I\+P\+\_\+\+P\+L\+A\+T\+F\+O\+R\+M\+\_\+\+A\+S\+S\+E\+RT}(message)
+\item 
+\#define \hyperlink{native_2lwip_2src_2include_2lwip_2debug_8h_a827bc03cd7889e7c007df39d33b33d18}{L\+W\+I\+P\+\_\+\+E\+R\+R\+OR}(message,  expression,  handler)
+\item 
+\#define \hyperlink{native_2lwip_2src_2include_2lwip_2debug_8h_a63a04edf7ff63c951bd8706711956cdb}{L\+W\+I\+P\+\_\+\+D\+E\+B\+U\+GF}(debug,  message)
+\end{DoxyCompactItemize}
+\begin{Indent}\textbf{ Debug level (L\+W\+I\+P\+\_\+\+D\+B\+G\+\_\+\+M\+I\+N\+\_\+\+L\+E\+V\+EL)}\par
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group__debugging__levels_ga8ebaeb006b43f55897f3196b3617dc87}{L\+W\+I\+P\+\_\+\+D\+B\+G\+\_\+\+L\+E\+V\+E\+L\+\_\+\+A\+LL}~0x00
+\item 
+\#define \hyperlink{group__debugging__levels_ga77c491e468bf7d9a1bc48430c1866a96}{L\+W\+I\+P\+\_\+\+D\+B\+G\+\_\+\+L\+E\+V\+E\+L\+\_\+\+W\+A\+R\+N\+I\+NG}~0x01
+\item 
+\#define \hyperlink{group__debugging__levels_ga0269bdc51f1e8a5ecf9af72c6e1c996c}{L\+W\+I\+P\+\_\+\+D\+B\+G\+\_\+\+L\+E\+V\+E\+L\+\_\+\+S\+E\+R\+I\+O\+US}~0x02
+\item 
+\#define \hyperlink{group__debugging__levels_gaab41143277cd38047b6660d90e9cec3b}{L\+W\+I\+P\+\_\+\+D\+B\+G\+\_\+\+L\+E\+V\+E\+L\+\_\+\+S\+E\+V\+E\+RE}~0x03
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ Enable/disable debug messages completely (L\+W\+I\+P\+\_\+\+D\+B\+G\+\_\+\+T\+Y\+P\+E\+S\+\_\+\+ON)}\par
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group__debugging__levels_ga9e31b7cbbc8f46af8e62b548079acd4e}{L\+W\+I\+P\+\_\+\+D\+B\+G\+\_\+\+ON}~0x80U
+\item 
+\#define \hyperlink{group__debugging__levels_gadab1cdc3f45939a3a5c9a3d7e04987e1}{L\+W\+I\+P\+\_\+\+D\+B\+G\+\_\+\+O\+FF}~0x00U
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ Debug message types (L\+W\+I\+P\+\_\+\+D\+B\+G\+\_\+\+T\+Y\+P\+E\+S\+\_\+\+ON)}\par
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group__debugging__levels_ga988147559b78642ac881815b66023646}{L\+W\+I\+P\+\_\+\+D\+B\+G\+\_\+\+T\+R\+A\+CE}~0x40U
+\item 
+\#define \hyperlink{group__debugging__levels_ga511ee3deb3240635f5ec6a1709c6d741}{L\+W\+I\+P\+\_\+\+D\+B\+G\+\_\+\+S\+T\+A\+TE}~0x20U
+\item 
+\#define \hyperlink{group__debugging__levels_ga7d44d1804fa5e747aed86816e2a6cae0}{L\+W\+I\+P\+\_\+\+D\+B\+G\+\_\+\+F\+R\+E\+SH}~0x10U
+\item 
+\#define \hyperlink{group__debugging__levels_gab0a296414983155b30ad51871606b90f}{L\+W\+I\+P\+\_\+\+D\+B\+G\+\_\+\+H\+A\+LT}~0x08U
+\end{DoxyCompactItemize}
+\end{Indent}
+
+
+\subsection{Detailed Description}
+Debug messages infrastructure 
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{native_2lwip_2src_2include_2lwip_2debug_8h_a94ad086267808462beae2b38f91996ed}\label{native_2lwip_2src_2include_2lwip_2debug_8h_a94ad086267808462beae2b38f91996ed}} 
+\index{native/lwip/src/include/lwip/debug.\+h@{native/lwip/src/include/lwip/debug.\+h}!L\+W\+I\+P\+\_\+\+A\+S\+S\+E\+RT@{L\+W\+I\+P\+\_\+\+A\+S\+S\+E\+RT}}
+\index{L\+W\+I\+P\+\_\+\+A\+S\+S\+E\+RT@{L\+W\+I\+P\+\_\+\+A\+S\+S\+E\+RT}!native/lwip/src/include/lwip/debug.\+h@{native/lwip/src/include/lwip/debug.\+h}}
+\subsubsection{\texorpdfstring{L\+W\+I\+P\+\_\+\+A\+S\+S\+E\+RT}{LWIP\_ASSERT}}
+{\footnotesize\ttfamily \#define L\+W\+I\+P\+\_\+\+A\+S\+S\+E\+RT(\begin{DoxyParamCaption}\item[{}]{message,  }\item[{}]{assertion }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\textcolor{keywordflow}{do} \{ \textcolor{keywordflow}{if} (!(assertion)) \{ \(\backslash\)
+  LWIP\_PLATFORM\_ASSERT(message); \}\} \textcolor{keywordflow}{while}(0)
+\end{DoxyCode}
+\mbox{\Hypertarget{native_2lwip_2src_2include_2lwip_2debug_8h_a63a04edf7ff63c951bd8706711956cdb}\label{native_2lwip_2src_2include_2lwip_2debug_8h_a63a04edf7ff63c951bd8706711956cdb}} 
+\index{native/lwip/src/include/lwip/debug.\+h@{native/lwip/src/include/lwip/debug.\+h}!L\+W\+I\+P\+\_\+\+D\+E\+B\+U\+GF@{L\+W\+I\+P\+\_\+\+D\+E\+B\+U\+GF}}
+\index{L\+W\+I\+P\+\_\+\+D\+E\+B\+U\+GF@{L\+W\+I\+P\+\_\+\+D\+E\+B\+U\+GF}!native/lwip/src/include/lwip/debug.\+h@{native/lwip/src/include/lwip/debug.\+h}}
+\subsubsection{\texorpdfstring{L\+W\+I\+P\+\_\+\+D\+E\+B\+U\+GF}{LWIP\_DEBUGF}}
+{\footnotesize\ttfamily \#define L\+W\+I\+P\+\_\+\+D\+E\+B\+U\+GF(\begin{DoxyParamCaption}\item[{}]{debug,  }\item[{}]{message }\end{DoxyParamCaption})}
+
+Enable debug message printing, but only if debug message type is enabled A\+ND is of correct type A\+ND is at least L\+W\+I\+P\+\_\+\+D\+B\+G\+\_\+\+L\+E\+V\+EL. \mbox{\Hypertarget{native_2lwip_2src_2include_2lwip_2debug_8h_a827bc03cd7889e7c007df39d33b33d18}\label{native_2lwip_2src_2include_2lwip_2debug_8h_a827bc03cd7889e7c007df39d33b33d18}} 
+\index{native/lwip/src/include/lwip/debug.\+h@{native/lwip/src/include/lwip/debug.\+h}!L\+W\+I\+P\+\_\+\+E\+R\+R\+OR@{L\+W\+I\+P\+\_\+\+E\+R\+R\+OR}}
+\index{L\+W\+I\+P\+\_\+\+E\+R\+R\+OR@{L\+W\+I\+P\+\_\+\+E\+R\+R\+OR}!native/lwip/src/include/lwip/debug.\+h@{native/lwip/src/include/lwip/debug.\+h}}
+\subsubsection{\texorpdfstring{L\+W\+I\+P\+\_\+\+E\+R\+R\+OR}{LWIP\_ERROR}}
+{\footnotesize\ttfamily \#define L\+W\+I\+P\+\_\+\+E\+R\+R\+OR(\begin{DoxyParamCaption}\item[{}]{message,  }\item[{}]{expression,  }\item[{}]{handler }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\textcolor{keywordflow}{do} \{ \textcolor{keywordflow}{if} (!(expression)) \{ \(\backslash\)
+  LWIP\_PLATFORM\_ERROR(message); handler;\}\} \textcolor{keywordflow}{while}(0)
+\end{DoxyCode}
+\mbox{\Hypertarget{native_2lwip_2src_2include_2lwip_2debug_8h_a451cdce6343503ea686ff5e4eff37d3c}\label{native_2lwip_2src_2include_2lwip_2debug_8h_a451cdce6343503ea686ff5e4eff37d3c}} 
+\index{native/lwip/src/include/lwip/debug.\+h@{native/lwip/src/include/lwip/debug.\+h}!L\+W\+I\+P\+\_\+\+P\+L\+A\+T\+F\+O\+R\+M\+\_\+\+E\+R\+R\+OR@{L\+W\+I\+P\+\_\+\+P\+L\+A\+T\+F\+O\+R\+M\+\_\+\+E\+R\+R\+OR}}
+\index{L\+W\+I\+P\+\_\+\+P\+L\+A\+T\+F\+O\+R\+M\+\_\+\+E\+R\+R\+OR@{L\+W\+I\+P\+\_\+\+P\+L\+A\+T\+F\+O\+R\+M\+\_\+\+E\+R\+R\+OR}!native/lwip/src/include/lwip/debug.\+h@{native/lwip/src/include/lwip/debug.\+h}}
+\subsubsection{\texorpdfstring{L\+W\+I\+P\+\_\+\+P\+L\+A\+T\+F\+O\+R\+M\+\_\+\+E\+R\+R\+OR}{LWIP\_PLATFORM\_ERROR}}
+{\footnotesize\ttfamily \#define L\+W\+I\+P\+\_\+\+P\+L\+A\+T\+F\+O\+R\+M\+\_\+\+E\+R\+R\+OR(\begin{DoxyParamCaption}\item[{}]{message }\end{DoxyParamCaption})~\hyperlink{group__compiler__abstraction_ga7e8bcd0282525704d6dd596bdd1b47d0}{L\+W\+I\+P\+\_\+\+P\+L\+A\+T\+F\+O\+R\+M\+\_\+\+A\+S\+S\+E\+RT}(message)}
+

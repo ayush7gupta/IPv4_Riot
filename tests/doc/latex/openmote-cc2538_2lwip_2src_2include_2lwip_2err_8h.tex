@@ -1,0 +1,106 @@
+\hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2err_8h}{}\section{/home/ayush/\+R\+I\+O\+T/tests/lwip/bin/pkg/openmote-\/cc2538/lwip/src/include/lwip/err.h File Reference}
+\label{openmote-cc2538_2lwip_2src_2include_2lwip_2err_8h}\index{/home/ayush/\+R\+I\+O\+T/tests/lwip/bin/pkg/openmote-\/cc2538/lwip/src/include/lwip/err.\+h@{/home/ayush/\+R\+I\+O\+T/tests/lwip/bin/pkg/openmote-\/cc2538/lwip/src/include/lwip/err.\+h}}
+{\ttfamily \#include \char`\"{}lwip/opt.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}lwip/arch.\+h\char`\"{}}\newline
+Include dependency graph for err.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=222pt]{openmote-cc2538_2lwip_2src_2include_2lwip_2err_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{openmote-cc2538_2lwip_2src_2include_2lwip_2err_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group__infrastructure__errors_gac36f9cda08ffce1f67529a432a046248}{E\+R\+R\+\_\+\+I\+S\+\_\+\+F\+A\+T\+AL}(e)~((e) $<$= \hyperlink{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadcaf316b2c5eee4079820f7100849115142}{E\+R\+R\+\_\+\+A\+B\+RT})
+\item 
+\#define \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2err_8h_ab58c2561ad3b133e625183721b25ba27}{lwip\+\_\+strerr}(x)~\char`\"{}\char`\"{}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef \hyperlink{group__compiler__abstraction_ga9cd1d7891fe315de1201e2c6e45f4f57}{s8\+\_\+t} \hyperlink{group__infrastructure__errors_gaf02d9da80fd66b4f986d2c53d7231ddb}{err\+\_\+t}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{group__infrastructure__errors_gae2e66c7d13afc90ffecd6151680fbadc}{err\+\_\+enum\+\_\+t} \{ \newline
+\hyperlink{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadcaa26c163b80b1f6786ca81dadc14b00fb}{E\+R\+R\+\_\+\+OK} = 0, 
+\hyperlink{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadcaaaeafdbf3aecc46864daa3cd829c7e05}{E\+R\+R\+\_\+\+M\+EM} = -\/1, 
+\hyperlink{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadca05c91366f1b5203a5db9a241b415cd63}{E\+R\+R\+\_\+\+B\+UF} = -\/2, 
+\hyperlink{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadcac568baeb6407ef5e2630084ccbc34be8}{E\+R\+R\+\_\+\+T\+I\+M\+E\+O\+UT} = -\/3, 
+\newline
+\hyperlink{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadca9448893187313c0c5a502ca9a9ad1c2a}{E\+R\+R\+\_\+\+R\+TE} = -\/4, 
+\hyperlink{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadca13e1dd0edca8a27b6abdf1524bde7929}{E\+R\+R\+\_\+\+I\+N\+P\+R\+O\+G\+R\+E\+SS} = -\/5, 
+\hyperlink{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadcaa9a1c5a6fdeed0aad7fe41d538482bbd}{E\+R\+R\+\_\+\+V\+AL} = -\/6, 
+\hyperlink{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadcab9dcf89d46668b072192278fb907b7ad}{E\+R\+R\+\_\+\+W\+O\+U\+L\+D\+B\+L\+O\+CK} = -\/7, 
+\newline
+\hyperlink{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadca4ebdc2aa1dbd75f927845733a3fb1f8b}{E\+R\+R\+\_\+\+U\+SE} = -\/8, 
+\hyperlink{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadcae6f9c1e4c18ca844f7934307d4cc30e5}{E\+R\+R\+\_\+\+A\+L\+R\+E\+A\+DY} = -\/9, 
+\hyperlink{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadca8543e1d6422fed7b318d97e08dcbaa33}{E\+R\+R\+\_\+\+I\+S\+C\+O\+NN} = -\/10, 
+\hyperlink{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadcab0036c51817b5200bfe8157cc4115b27}{E\+R\+R\+\_\+\+C\+O\+NN} = -\/11, 
+\newline
+\hyperlink{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadca7d61d90449ae6788575e8e46d5d3bbc6}{E\+R\+R\+\_\+\+IF} = -\/12, 
+\hyperlink{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadcaf316b2c5eee4079820f7100849115142}{E\+R\+R\+\_\+\+A\+B\+RT} = -\/13, 
+\hyperlink{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadca759030525f1768a23dc086a5fd45b4e5}{E\+R\+R\+\_\+\+R\+ST} = -\/14, 
+\hyperlink{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadcaa5176d9fecf8ec43d3bc49f4e6c3f7f5}{E\+R\+R\+\_\+\+C\+L\+SD} = -\/15, 
+\newline
+\hyperlink{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadcab508ce0ebdf3ca735208b00a80a45c91}{E\+R\+R\+\_\+\+A\+RG} = -\/16, 
+\hyperlink{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadcaa26c163b80b1f6786ca81dadc14b00fb}{E\+R\+R\+\_\+\+OK} = 0, 
+\hyperlink{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadcaaaeafdbf3aecc46864daa3cd829c7e05}{E\+R\+R\+\_\+\+M\+EM} = -\/1, 
+\hyperlink{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadca05c91366f1b5203a5db9a241b415cd63}{E\+R\+R\+\_\+\+B\+UF} = -\/2, 
+\newline
+\hyperlink{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadcac568baeb6407ef5e2630084ccbc34be8}{E\+R\+R\+\_\+\+T\+I\+M\+E\+O\+UT} = -\/3, 
+\hyperlink{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadca9448893187313c0c5a502ca9a9ad1c2a}{E\+R\+R\+\_\+\+R\+TE} = -\/4, 
+\hyperlink{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadca13e1dd0edca8a27b6abdf1524bde7929}{E\+R\+R\+\_\+\+I\+N\+P\+R\+O\+G\+R\+E\+SS} = -\/5, 
+\hyperlink{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadcaa9a1c5a6fdeed0aad7fe41d538482bbd}{E\+R\+R\+\_\+\+V\+AL} = -\/6, 
+\newline
+\hyperlink{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadcab9dcf89d46668b072192278fb907b7ad}{E\+R\+R\+\_\+\+W\+O\+U\+L\+D\+B\+L\+O\+CK} = -\/7, 
+\hyperlink{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadca4ebdc2aa1dbd75f927845733a3fb1f8b}{E\+R\+R\+\_\+\+U\+SE} = -\/8, 
+\hyperlink{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadcae6f9c1e4c18ca844f7934307d4cc30e5}{E\+R\+R\+\_\+\+A\+L\+R\+E\+A\+DY} = -\/9, 
+\hyperlink{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadca8543e1d6422fed7b318d97e08dcbaa33}{E\+R\+R\+\_\+\+I\+S\+C\+O\+NN} = -\/10, 
+\newline
+\hyperlink{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadcab0036c51817b5200bfe8157cc4115b27}{E\+R\+R\+\_\+\+C\+O\+NN} = -\/11, 
+\hyperlink{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadca7d61d90449ae6788575e8e46d5d3bbc6}{E\+R\+R\+\_\+\+IF} = -\/12, 
+\hyperlink{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadcaf316b2c5eee4079820f7100849115142}{E\+R\+R\+\_\+\+A\+B\+RT} = -\/13, 
+\hyperlink{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadca759030525f1768a23dc086a5fd45b4e5}{E\+R\+R\+\_\+\+R\+ST} = -\/14, 
+\newline
+\hyperlink{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadcaa5176d9fecf8ec43d3bc49f4e6c3f7f5}{E\+R\+R\+\_\+\+C\+L\+SD} = -\/15, 
+\hyperlink{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadcab508ce0ebdf3ca735208b00a80a45c91}{E\+R\+R\+\_\+\+A\+RG} = -\/16
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2err_8h_af6382b3192357c2fb582c84c48bdda40}{err\+\_\+to\+\_\+errno} (\hyperlink{group__infrastructure__errors_gaf02d9da80fd66b4f986d2c53d7231ddb}{err\+\_\+t} err)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+lw\+IP Error codes 
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2err_8h_ab58c2561ad3b133e625183721b25ba27}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2err_8h_ab58c2561ad3b133e625183721b25ba27}} 
+\index{openmote-\/cc2538/lwip/src/include/lwip/err.\+h@{openmote-\/cc2538/lwip/src/include/lwip/err.\+h}!lwip\+\_\+strerr@{lwip\+\_\+strerr}}
+\index{lwip\+\_\+strerr@{lwip\+\_\+strerr}!openmote-\/cc2538/lwip/src/include/lwip/err.\+h@{openmote-\/cc2538/lwip/src/include/lwip/err.\+h}}
+\subsubsection{\texorpdfstring{lwip\+\_\+strerr}{lwip\_strerr}}
+{\footnotesize\ttfamily \#define lwip\+\_\+strerr(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~\char`\"{}\char`\"{}}
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2err_8h_af6382b3192357c2fb582c84c48bdda40}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2err_8h_af6382b3192357c2fb582c84c48bdda40}} 
+\index{openmote-\/cc2538/lwip/src/include/lwip/err.\+h@{openmote-\/cc2538/lwip/src/include/lwip/err.\+h}!err\+\_\+to\+\_\+errno@{err\+\_\+to\+\_\+errno}}
+\index{err\+\_\+to\+\_\+errno@{err\+\_\+to\+\_\+errno}!openmote-\/cc2538/lwip/src/include/lwip/err.\+h@{openmote-\/cc2538/lwip/src/include/lwip/err.\+h}}
+\subsubsection{\texorpdfstring{err\+\_\+to\+\_\+errno()}{err\_to\_errno()}}
+{\footnotesize\ttfamily int err\+\_\+to\+\_\+errno (\begin{DoxyParamCaption}\item[{\hyperlink{group__infrastructure__errors_gaf02d9da80fd66b4f986d2c53d7231ddb}{err\+\_\+t}}]{err }\end{DoxyParamCaption})}
+

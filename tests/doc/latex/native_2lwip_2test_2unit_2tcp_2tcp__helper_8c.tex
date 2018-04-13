@@ -1,0 +1,175 @@
+\hypertarget{native_2lwip_2test_2unit_2tcp_2tcp__helper_8c}{}\section{/home/ayush/\+R\+I\+O\+T/tests/lwip/bin/pkg/native/lwip/test/unit/tcp/tcp\+\_\+helper.c File Reference}
+\label{native_2lwip_2test_2unit_2tcp_2tcp__helper_8c}\index{/home/ayush/\+R\+I\+O\+T/tests/lwip/bin/pkg/native/lwip/test/unit/tcp/tcp\+\_\+helper.\+c@{/home/ayush/\+R\+I\+O\+T/tests/lwip/bin/pkg/native/lwip/test/unit/tcp/tcp\+\_\+helper.\+c}}
+{\ttfamily \#include \char`\"{}tcp\+\_\+helper.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}lwip/priv/tcp\+\_\+priv.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}lwip/stats.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}lwip/pbuf.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}lwip/inet\+\_\+chksum.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}lwip/ip\+\_\+addr.\+h\char`\"{}}\newline
+Include dependency graph for tcp\+\_\+helper.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{native_2lwip_2test_2unit_2tcp_2tcp__helper_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{native_2lwip_2test_2unit_2tcp_2tcp__helper_8c_ab5eb6956494f1deb9a97569d4b95ef6a}{tcp\+\_\+remove\+\_\+all} (void)
+\item 
+struct \hyperlink{structpbuf}{pbuf} $\ast$ \hyperlink{native_2lwip_2test_2unit_2tcp_2tcp__helper_8c_aa6f4b7b087e8641f6c178d8752cc4fab}{tcp\+\_\+create\+\_\+segment} (\hyperlink{native_2lwip_2src_2include_2lwip_2ip__addr_8h_a88b43639738c4de2d3cd22e3a1fd7696}{ip\+\_\+addr\+\_\+t} $\ast$src\+\_\+ip, \hyperlink{native_2lwip_2src_2include_2lwip_2ip__addr_8h_a88b43639738c4de2d3cd22e3a1fd7696}{ip\+\_\+addr\+\_\+t} $\ast$dst\+\_\+ip, \hyperlink{group__compiler__abstraction_ga77570ac4fcab86864fa1916e55676da2}{u16\+\_\+t} src\+\_\+port, \hyperlink{group__compiler__abstraction_ga77570ac4fcab86864fa1916e55676da2}{u16\+\_\+t} dst\+\_\+port, void $\ast$data, size\+\_\+t data\+\_\+len, \hyperlink{group__compiler__abstraction_ga4c14294869aceba3ef9d4c0c302d0f33}{u32\+\_\+t} seqno, \hyperlink{group__compiler__abstraction_ga4c14294869aceba3ef9d4c0c302d0f33}{u32\+\_\+t} ackno, \hyperlink{group__compiler__abstraction_ga4caecabca98b43919dd11be1c0d4cd8e}{u8\+\_\+t} headerflags)
+\item 
+struct \hyperlink{structpbuf}{pbuf} $\ast$ \hyperlink{native_2lwip_2test_2unit_2tcp_2tcp__helper_8c_a53b3207c8e960cdad9af044b0606a55b}{tcp\+\_\+create\+\_\+rx\+\_\+segment} (struct tcp\+\_\+pcb $\ast$pcb, void $\ast$data, size\+\_\+t data\+\_\+len, \hyperlink{group__compiler__abstraction_ga4c14294869aceba3ef9d4c0c302d0f33}{u32\+\_\+t} seqno\+\_\+offset, \hyperlink{group__compiler__abstraction_ga4c14294869aceba3ef9d4c0c302d0f33}{u32\+\_\+t} ackno\+\_\+offset, \hyperlink{group__compiler__abstraction_ga4caecabca98b43919dd11be1c0d4cd8e}{u8\+\_\+t} headerflags)
+\item 
+struct \hyperlink{structpbuf}{pbuf} $\ast$ \hyperlink{native_2lwip_2test_2unit_2tcp_2tcp__helper_8c_aa45bbb22d0e973f9af6732ac35faed68}{tcp\+\_\+create\+\_\+rx\+\_\+segment\+\_\+wnd} (struct tcp\+\_\+pcb $\ast$pcb, void $\ast$data, size\+\_\+t data\+\_\+len, \hyperlink{group__compiler__abstraction_ga4c14294869aceba3ef9d4c0c302d0f33}{u32\+\_\+t} seqno\+\_\+offset, \hyperlink{group__compiler__abstraction_ga4c14294869aceba3ef9d4c0c302d0f33}{u32\+\_\+t} ackno\+\_\+offset, \hyperlink{group__compiler__abstraction_ga4caecabca98b43919dd11be1c0d4cd8e}{u8\+\_\+t} headerflags, \hyperlink{group__compiler__abstraction_ga77570ac4fcab86864fa1916e55676da2}{u16\+\_\+t} wnd)
+\item 
+void \hyperlink{native_2lwip_2test_2unit_2tcp_2tcp__helper_8c_a39f3f73a5ac75fb0de5253cc0a1da423}{tcp\+\_\+set\+\_\+state} (struct tcp\+\_\+pcb $\ast$pcb, enum tcp\+\_\+state state, \hyperlink{native_2lwip_2src_2include_2lwip_2ip__addr_8h_a88b43639738c4de2d3cd22e3a1fd7696}{ip\+\_\+addr\+\_\+t} $\ast$local\+\_\+ip, \hyperlink{native_2lwip_2src_2include_2lwip_2ip__addr_8h_a88b43639738c4de2d3cd22e3a1fd7696}{ip\+\_\+addr\+\_\+t} $\ast$remote\+\_\+ip, \hyperlink{group__compiler__abstraction_ga77570ac4fcab86864fa1916e55676da2}{u16\+\_\+t} local\+\_\+port, \hyperlink{group__compiler__abstraction_ga77570ac4fcab86864fa1916e55676da2}{u16\+\_\+t} remote\+\_\+port)
+\item 
+void \hyperlink{native_2lwip_2test_2unit_2tcp_2tcp__helper_8c_a3ddbc387487935205c08c161223031c7}{test\+\_\+tcp\+\_\+counters\+\_\+err} (void $\ast$arg, \hyperlink{group__infrastructure__errors_gaf02d9da80fd66b4f986d2c53d7231ddb}{err\+\_\+t} err)
+\item 
+\hyperlink{group__infrastructure__errors_gaf02d9da80fd66b4f986d2c53d7231ddb}{err\+\_\+t} \hyperlink{native_2lwip_2test_2unit_2tcp_2tcp__helper_8c_a6618a2d98d08a43995474cd3ef6704fc}{test\+\_\+tcp\+\_\+counters\+\_\+recv} (void $\ast$arg, struct tcp\+\_\+pcb $\ast$pcb, struct \hyperlink{structpbuf}{pbuf} $\ast$p, \hyperlink{group__infrastructure__errors_gaf02d9da80fd66b4f986d2c53d7231ddb}{err\+\_\+t} err)
+\item 
+struct tcp\+\_\+pcb $\ast$ \hyperlink{native_2lwip_2test_2unit_2tcp_2tcp__helper_8c_a4743f4d8687063a2fc6da6d448cfcdcf}{test\+\_\+tcp\+\_\+new\+\_\+counters\+\_\+pcb} (struct \hyperlink{structtest__tcp__counters}{test\+\_\+tcp\+\_\+counters} $\ast$counters)
+\item 
+void \hyperlink{native_2lwip_2test_2unit_2tcp_2tcp__helper_8c_a310f0aa8ac7ce26d35fd91c69ff98bda}{test\+\_\+tcp\+\_\+input} (struct \hyperlink{structpbuf}{pbuf} $\ast$p, struct \hyperlink{structnetif}{netif} $\ast$inp)
+\item 
+void \hyperlink{native_2lwip_2test_2unit_2tcp_2tcp__helper_8c_adce5a273dd4854e4d2b6282265e9fdb7}{test\+\_\+tcp\+\_\+init\+\_\+netif} (struct \hyperlink{structnetif}{netif} $\ast$\hyperlink{structnetif}{netif}, struct \hyperlink{structtest__tcp__txcounters}{test\+\_\+tcp\+\_\+txcounters} $\ast$txcounters, \hyperlink{native_2lwip_2src_2include_2lwip_2ip__addr_8h_a88b43639738c4de2d3cd22e3a1fd7696}{ip\+\_\+addr\+\_\+t} $\ast$ip\+\_\+addr, \hyperlink{native_2lwip_2src_2include_2lwip_2ip__addr_8h_a88b43639738c4de2d3cd22e3a1fd7696}{ip\+\_\+addr\+\_\+t} $\ast$netmask)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{native_2lwip_2test_2unit_2tcp_2tcp__helper_8c_a53b3207c8e960cdad9af044b0606a55b}\label{native_2lwip_2test_2unit_2tcp_2tcp__helper_8c_a53b3207c8e960cdad9af044b0606a55b}} 
+\index{native/lwip/test/unit/tcp/tcp\+\_\+helper.\+c@{native/lwip/test/unit/tcp/tcp\+\_\+helper.\+c}!tcp\+\_\+create\+\_\+rx\+\_\+segment@{tcp\+\_\+create\+\_\+rx\+\_\+segment}}
+\index{tcp\+\_\+create\+\_\+rx\+\_\+segment@{tcp\+\_\+create\+\_\+rx\+\_\+segment}!native/lwip/test/unit/tcp/tcp\+\_\+helper.\+c@{native/lwip/test/unit/tcp/tcp\+\_\+helper.\+c}}
+\subsubsection{\texorpdfstring{tcp\+\_\+create\+\_\+rx\+\_\+segment()}{tcp\_create\_rx\_segment()}}
+{\footnotesize\ttfamily struct \hyperlink{structpbuf}{pbuf}$\ast$ tcp\+\_\+create\+\_\+rx\+\_\+segment (\begin{DoxyParamCaption}\item[{struct tcp\+\_\+pcb $\ast$}]{pcb,  }\item[{void $\ast$}]{data,  }\item[{size\+\_\+t}]{data\+\_\+len,  }\item[{\hyperlink{group__compiler__abstraction_ga4c14294869aceba3ef9d4c0c302d0f33}{u32\+\_\+t}}]{seqno\+\_\+offset,  }\item[{\hyperlink{group__compiler__abstraction_ga4c14294869aceba3ef9d4c0c302d0f33}{u32\+\_\+t}}]{ackno\+\_\+offset,  }\item[{\hyperlink{group__compiler__abstraction_ga4caecabca98b43919dd11be1c0d4cd8e}{u8\+\_\+t}}]{headerflags }\end{DoxyParamCaption})}
+
+Create a T\+CP segment usable for passing to tcp\+\_\+input
+\begin{DoxyItemize}
+\item I\+P-\/addresses, ports, seqno and ackno are taken from pcb
+\item seqno and ackno can be altered with an offset 
+\end{DoxyItemize}Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=315pt]{native_2lwip_2test_2unit_2tcp_2tcp__helper_8c_a53b3207c8e960cdad9af044b0606a55b_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{native_2lwip_2test_2unit_2tcp_2tcp__helper_8c_aa45bbb22d0e973f9af6732ac35faed68}\label{native_2lwip_2test_2unit_2tcp_2tcp__helper_8c_aa45bbb22d0e973f9af6732ac35faed68}} 
+\index{native/lwip/test/unit/tcp/tcp\+\_\+helper.\+c@{native/lwip/test/unit/tcp/tcp\+\_\+helper.\+c}!tcp\+\_\+create\+\_\+rx\+\_\+segment\+\_\+wnd@{tcp\+\_\+create\+\_\+rx\+\_\+segment\+\_\+wnd}}
+\index{tcp\+\_\+create\+\_\+rx\+\_\+segment\+\_\+wnd@{tcp\+\_\+create\+\_\+rx\+\_\+segment\+\_\+wnd}!native/lwip/test/unit/tcp/tcp\+\_\+helper.\+c@{native/lwip/test/unit/tcp/tcp\+\_\+helper.\+c}}
+\subsubsection{\texorpdfstring{tcp\+\_\+create\+\_\+rx\+\_\+segment\+\_\+wnd()}{tcp\_create\_rx\_segment\_wnd()}}
+{\footnotesize\ttfamily struct \hyperlink{structpbuf}{pbuf}$\ast$ tcp\+\_\+create\+\_\+rx\+\_\+segment\+\_\+wnd (\begin{DoxyParamCaption}\item[{struct tcp\+\_\+pcb $\ast$}]{pcb,  }\item[{void $\ast$}]{data,  }\item[{size\+\_\+t}]{data\+\_\+len,  }\item[{\hyperlink{group__compiler__abstraction_ga4c14294869aceba3ef9d4c0c302d0f33}{u32\+\_\+t}}]{seqno\+\_\+offset,  }\item[{\hyperlink{group__compiler__abstraction_ga4c14294869aceba3ef9d4c0c302d0f33}{u32\+\_\+t}}]{ackno\+\_\+offset,  }\item[{\hyperlink{group__compiler__abstraction_ga4caecabca98b43919dd11be1c0d4cd8e}{u8\+\_\+t}}]{headerflags,  }\item[{\hyperlink{group__compiler__abstraction_ga77570ac4fcab86864fa1916e55676da2}{u16\+\_\+t}}]{wnd }\end{DoxyParamCaption})}
+
+Create a T\+CP segment usable for passing to tcp\+\_\+input
+\begin{DoxyItemize}
+\item I\+P-\/addresses, ports, seqno and ackno are taken from pcb
+\item seqno and ackno can be altered with an offset
+\item T\+CP window can be adjusted 
+\end{DoxyItemize}\mbox{\Hypertarget{native_2lwip_2test_2unit_2tcp_2tcp__helper_8c_aa6f4b7b087e8641f6c178d8752cc4fab}\label{native_2lwip_2test_2unit_2tcp_2tcp__helper_8c_aa6f4b7b087e8641f6c178d8752cc4fab}} 
+\index{native/lwip/test/unit/tcp/tcp\+\_\+helper.\+c@{native/lwip/test/unit/tcp/tcp\+\_\+helper.\+c}!tcp\+\_\+create\+\_\+segment@{tcp\+\_\+create\+\_\+segment}}
+\index{tcp\+\_\+create\+\_\+segment@{tcp\+\_\+create\+\_\+segment}!native/lwip/test/unit/tcp/tcp\+\_\+helper.\+c@{native/lwip/test/unit/tcp/tcp\+\_\+helper.\+c}}
+\subsubsection{\texorpdfstring{tcp\+\_\+create\+\_\+segment()}{tcp\_create\_segment()}}
+{\footnotesize\ttfamily struct \hyperlink{structpbuf}{pbuf}$\ast$ tcp\+\_\+create\+\_\+segment (\begin{DoxyParamCaption}\item[{\hyperlink{native_2lwip_2src_2include_2lwip_2ip__addr_8h_a88b43639738c4de2d3cd22e3a1fd7696}{ip\+\_\+addr\+\_\+t} $\ast$}]{src\+\_\+ip,  }\item[{\hyperlink{native_2lwip_2src_2include_2lwip_2ip__addr_8h_a88b43639738c4de2d3cd22e3a1fd7696}{ip\+\_\+addr\+\_\+t} $\ast$}]{dst\+\_\+ip,  }\item[{\hyperlink{group__compiler__abstraction_ga77570ac4fcab86864fa1916e55676da2}{u16\+\_\+t}}]{src\+\_\+port,  }\item[{\hyperlink{group__compiler__abstraction_ga77570ac4fcab86864fa1916e55676da2}{u16\+\_\+t}}]{dst\+\_\+port,  }\item[{void $\ast$}]{data,  }\item[{size\+\_\+t}]{data\+\_\+len,  }\item[{\hyperlink{group__compiler__abstraction_ga4c14294869aceba3ef9d4c0c302d0f33}{u32\+\_\+t}}]{seqno,  }\item[{\hyperlink{group__compiler__abstraction_ga4c14294869aceba3ef9d4c0c302d0f33}{u32\+\_\+t}}]{ackno,  }\item[{\hyperlink{group__compiler__abstraction_ga4caecabca98b43919dd11be1c0d4cd8e}{u8\+\_\+t}}]{headerflags }\end{DoxyParamCaption})}
+
+Create a T\+CP segment usable for passing to tcp\+\_\+input Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{native_2lwip_2test_2unit_2tcp_2tcp__helper_8c_aa6f4b7b087e8641f6c178d8752cc4fab_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{native_2lwip_2test_2unit_2tcp_2tcp__helper_8c_ab5eb6956494f1deb9a97569d4b95ef6a}\label{native_2lwip_2test_2unit_2tcp_2tcp__helper_8c_ab5eb6956494f1deb9a97569d4b95ef6a}} 
+\index{native/lwip/test/unit/tcp/tcp\+\_\+helper.\+c@{native/lwip/test/unit/tcp/tcp\+\_\+helper.\+c}!tcp\+\_\+remove\+\_\+all@{tcp\+\_\+remove\+\_\+all}}
+\index{tcp\+\_\+remove\+\_\+all@{tcp\+\_\+remove\+\_\+all}!native/lwip/test/unit/tcp/tcp\+\_\+helper.\+c@{native/lwip/test/unit/tcp/tcp\+\_\+helper.\+c}}
+\subsubsection{\texorpdfstring{tcp\+\_\+remove\+\_\+all()}{tcp\_remove\_all()}}
+{\footnotesize\ttfamily void tcp\+\_\+remove\+\_\+all (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Remove all pcbs on listen-\/, active-\/ and time-\/wait-\/list (bound-\/ isn\textquotesingle{}t exported). \mbox{\Hypertarget{native_2lwip_2test_2unit_2tcp_2tcp__helper_8c_a39f3f73a5ac75fb0de5253cc0a1da423}\label{native_2lwip_2test_2unit_2tcp_2tcp__helper_8c_a39f3f73a5ac75fb0de5253cc0a1da423}} 
+\index{native/lwip/test/unit/tcp/tcp\+\_\+helper.\+c@{native/lwip/test/unit/tcp/tcp\+\_\+helper.\+c}!tcp\+\_\+set\+\_\+state@{tcp\+\_\+set\+\_\+state}}
+\index{tcp\+\_\+set\+\_\+state@{tcp\+\_\+set\+\_\+state}!native/lwip/test/unit/tcp/tcp\+\_\+helper.\+c@{native/lwip/test/unit/tcp/tcp\+\_\+helper.\+c}}
+\subsubsection{\texorpdfstring{tcp\+\_\+set\+\_\+state()}{tcp\_set\_state()}}
+{\footnotesize\ttfamily void tcp\+\_\+set\+\_\+state (\begin{DoxyParamCaption}\item[{struct tcp\+\_\+pcb $\ast$}]{pcb,  }\item[{enum tcp\+\_\+state}]{state,  }\item[{\hyperlink{native_2lwip_2src_2include_2lwip_2ip__addr_8h_a88b43639738c4de2d3cd22e3a1fd7696}{ip\+\_\+addr\+\_\+t} $\ast$}]{local\+\_\+ip,  }\item[{\hyperlink{native_2lwip_2src_2include_2lwip_2ip__addr_8h_a88b43639738c4de2d3cd22e3a1fd7696}{ip\+\_\+addr\+\_\+t} $\ast$}]{remote\+\_\+ip,  }\item[{\hyperlink{group__compiler__abstraction_ga77570ac4fcab86864fa1916e55676da2}{u16\+\_\+t}}]{local\+\_\+port,  }\item[{\hyperlink{group__compiler__abstraction_ga77570ac4fcab86864fa1916e55676da2}{u16\+\_\+t}}]{remote\+\_\+port }\end{DoxyParamCaption})}
+
+Safely bring a tcp\+\_\+pcb into the requested state Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=272pt]{native_2lwip_2test_2unit_2tcp_2tcp__helper_8c_a39f3f73a5ac75fb0de5253cc0a1da423_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{native_2lwip_2test_2unit_2tcp_2tcp__helper_8c_a3ddbc387487935205c08c161223031c7}\label{native_2lwip_2test_2unit_2tcp_2tcp__helper_8c_a3ddbc387487935205c08c161223031c7}} 
+\index{native/lwip/test/unit/tcp/tcp\+\_\+helper.\+c@{native/lwip/test/unit/tcp/tcp\+\_\+helper.\+c}!test\+\_\+tcp\+\_\+counters\+\_\+err@{test\+\_\+tcp\+\_\+counters\+\_\+err}}
+\index{test\+\_\+tcp\+\_\+counters\+\_\+err@{test\+\_\+tcp\+\_\+counters\+\_\+err}!native/lwip/test/unit/tcp/tcp\+\_\+helper.\+c@{native/lwip/test/unit/tcp/tcp\+\_\+helper.\+c}}
+\subsubsection{\texorpdfstring{test\+\_\+tcp\+\_\+counters\+\_\+err()}{test\_tcp\_counters\_err()}}
+{\footnotesize\ttfamily void test\+\_\+tcp\+\_\+counters\+\_\+err (\begin{DoxyParamCaption}\item[{void $\ast$}]{arg,  }\item[{\hyperlink{group__infrastructure__errors_gaf02d9da80fd66b4f986d2c53d7231ddb}{err\+\_\+t}}]{err }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{native_2lwip_2test_2unit_2tcp_2tcp__helper_8c_a3ddbc387487935205c08c161223031c7_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{native_2lwip_2test_2unit_2tcp_2tcp__helper_8c_a6618a2d98d08a43995474cd3ef6704fc}\label{native_2lwip_2test_2unit_2tcp_2tcp__helper_8c_a6618a2d98d08a43995474cd3ef6704fc}} 
+\index{native/lwip/test/unit/tcp/tcp\+\_\+helper.\+c@{native/lwip/test/unit/tcp/tcp\+\_\+helper.\+c}!test\+\_\+tcp\+\_\+counters\+\_\+recv@{test\+\_\+tcp\+\_\+counters\+\_\+recv}}
+\index{test\+\_\+tcp\+\_\+counters\+\_\+recv@{test\+\_\+tcp\+\_\+counters\+\_\+recv}!native/lwip/test/unit/tcp/tcp\+\_\+helper.\+c@{native/lwip/test/unit/tcp/tcp\+\_\+helper.\+c}}
+\subsubsection{\texorpdfstring{test\+\_\+tcp\+\_\+counters\+\_\+recv()}{test\_tcp\_counters\_recv()}}
+{\footnotesize\ttfamily \hyperlink{group__infrastructure__errors_gaf02d9da80fd66b4f986d2c53d7231ddb}{err\+\_\+t} test\+\_\+tcp\+\_\+counters\+\_\+recv (\begin{DoxyParamCaption}\item[{void $\ast$}]{arg,  }\item[{struct tcp\+\_\+pcb $\ast$}]{pcb,  }\item[{struct \hyperlink{structpbuf}{pbuf} $\ast$}]{p,  }\item[{\hyperlink{group__infrastructure__errors_gaf02d9da80fd66b4f986d2c53d7231ddb}{err\+\_\+t}}]{err }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{native_2lwip_2test_2unit_2tcp_2tcp__helper_8c_a6618a2d98d08a43995474cd3ef6704fc_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{native_2lwip_2test_2unit_2tcp_2tcp__helper_8c_adce5a273dd4854e4d2b6282265e9fdb7}\label{native_2lwip_2test_2unit_2tcp_2tcp__helper_8c_adce5a273dd4854e4d2b6282265e9fdb7}} 
+\index{native/lwip/test/unit/tcp/tcp\+\_\+helper.\+c@{native/lwip/test/unit/tcp/tcp\+\_\+helper.\+c}!test\+\_\+tcp\+\_\+init\+\_\+netif@{test\+\_\+tcp\+\_\+init\+\_\+netif}}
+\index{test\+\_\+tcp\+\_\+init\+\_\+netif@{test\+\_\+tcp\+\_\+init\+\_\+netif}!native/lwip/test/unit/tcp/tcp\+\_\+helper.\+c@{native/lwip/test/unit/tcp/tcp\+\_\+helper.\+c}}
+\subsubsection{\texorpdfstring{test\+\_\+tcp\+\_\+init\+\_\+netif()}{test\_tcp\_init\_netif()}}
+{\footnotesize\ttfamily void test\+\_\+tcp\+\_\+init\+\_\+netif (\begin{DoxyParamCaption}\item[{struct \hyperlink{structnetif}{netif} $\ast$}]{netif,  }\item[{struct \hyperlink{structtest__tcp__txcounters}{test\+\_\+tcp\+\_\+txcounters} $\ast$}]{txcounters,  }\item[{\hyperlink{native_2lwip_2src_2include_2lwip_2ip__addr_8h_a88b43639738c4de2d3cd22e3a1fd7696}{ip\+\_\+addr\+\_\+t} $\ast$}]{ip\+\_\+addr,  }\item[{\hyperlink{native_2lwip_2src_2include_2lwip_2ip__addr_8h_a88b43639738c4de2d3cd22e3a1fd7696}{ip\+\_\+addr\+\_\+t} $\ast$}]{netmask }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=290pt]{native_2lwip_2test_2unit_2tcp_2tcp__helper_8c_adce5a273dd4854e4d2b6282265e9fdb7_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{native_2lwip_2test_2unit_2tcp_2tcp__helper_8c_a310f0aa8ac7ce26d35fd91c69ff98bda}\label{native_2lwip_2test_2unit_2tcp_2tcp__helper_8c_a310f0aa8ac7ce26d35fd91c69ff98bda}} 
+\index{native/lwip/test/unit/tcp/tcp\+\_\+helper.\+c@{native/lwip/test/unit/tcp/tcp\+\_\+helper.\+c}!test\+\_\+tcp\+\_\+input@{test\+\_\+tcp\+\_\+input}}
+\index{test\+\_\+tcp\+\_\+input@{test\+\_\+tcp\+\_\+input}!native/lwip/test/unit/tcp/tcp\+\_\+helper.\+c@{native/lwip/test/unit/tcp/tcp\+\_\+helper.\+c}}
+\subsubsection{\texorpdfstring{test\+\_\+tcp\+\_\+input()}{test\_tcp\_input()}}
+{\footnotesize\ttfamily void test\+\_\+tcp\+\_\+input (\begin{DoxyParamCaption}\item[{struct \hyperlink{structpbuf}{pbuf} $\ast$}]{p,  }\item[{struct \hyperlink{structnetif}{netif} $\ast$}]{inp }\end{DoxyParamCaption})}
+
+Calls tcp\+\_\+input() after adjusting current\+\_\+iphdr\+\_\+dest Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=274pt]{native_2lwip_2test_2unit_2tcp_2tcp__helper_8c_a310f0aa8ac7ce26d35fd91c69ff98bda_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{native_2lwip_2test_2unit_2tcp_2tcp__helper_8c_a4743f4d8687063a2fc6da6d448cfcdcf}\label{native_2lwip_2test_2unit_2tcp_2tcp__helper_8c_a4743f4d8687063a2fc6da6d448cfcdcf}} 
+\index{native/lwip/test/unit/tcp/tcp\+\_\+helper.\+c@{native/lwip/test/unit/tcp/tcp\+\_\+helper.\+c}!test\+\_\+tcp\+\_\+new\+\_\+counters\+\_\+pcb@{test\+\_\+tcp\+\_\+new\+\_\+counters\+\_\+pcb}}
+\index{test\+\_\+tcp\+\_\+new\+\_\+counters\+\_\+pcb@{test\+\_\+tcp\+\_\+new\+\_\+counters\+\_\+pcb}!native/lwip/test/unit/tcp/tcp\+\_\+helper.\+c@{native/lwip/test/unit/tcp/tcp\+\_\+helper.\+c}}
+\subsubsection{\texorpdfstring{test\+\_\+tcp\+\_\+new\+\_\+counters\+\_\+pcb()}{test\_tcp\_new\_counters\_pcb()}}
+{\footnotesize\ttfamily struct tcp\+\_\+pcb$\ast$ test\+\_\+tcp\+\_\+new\+\_\+counters\+\_\+pcb (\begin{DoxyParamCaption}\item[{struct \hyperlink{structtest__tcp__counters}{test\+\_\+tcp\+\_\+counters} $\ast$}]{counters }\end{DoxyParamCaption})}
+
+Allocate a pcb and set up the test\+\_\+tcp\+\_\+counters\+\_\+$\ast$ callbacks Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=335pt]{native_2lwip_2test_2unit_2tcp_2tcp__helper_8c_a4743f4d8687063a2fc6da6d448cfcdcf_icgraph}
+\end{center}
+\end{figure}

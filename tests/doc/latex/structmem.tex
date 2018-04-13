@@ -1,0 +1,40 @@
+\hypertarget{structmem}{}\section{mem Struct Reference}
+\label{structmem}\index{mem@{mem}}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{native_2lwip_2src_2include_2lwip_2mem_8h_a49bff6e5dd4cb95fe6dc0670962bbf54}{mem\+\_\+size\+\_\+t} \hyperlink{structmem_a5abf13a11156e92c417f7ff66ef0b5cf}{next}
+\item 
+\hyperlink{native_2lwip_2src_2include_2lwip_2mem_8h_a49bff6e5dd4cb95fe6dc0670962bbf54}{mem\+\_\+size\+\_\+t} \hyperlink{structmem_a9d7722ed10adf965fa98563d502f98ac}{prev}
+\item 
+\hyperlink{group__compiler__abstraction_ga4caecabca98b43919dd11be1c0d4cd8e}{u8\+\_\+t} \hyperlink{structmem_aa76b6a39425617435978dce903f0d456}{used}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The heap is made up as a list of structs of this type. This does not have to be aligned since for getting its size, we only use the macro S\+I\+Z\+E\+O\+F\+\_\+\+S\+T\+R\+U\+C\+T\+\_\+\+M\+EM, which automatically aligns. 
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{structmem_a5abf13a11156e92c417f7ff66ef0b5cf}\label{structmem_a5abf13a11156e92c417f7ff66ef0b5cf}} 
+\index{mem@{mem}!next@{next}}
+\index{next@{next}!mem@{mem}}
+\subsubsection{\texorpdfstring{next}{next}}
+{\footnotesize\ttfamily \hyperlink{native_2lwip_2src_2include_2lwip_2mem_8h_a49bff6e5dd4cb95fe6dc0670962bbf54}{mem\+\_\+size\+\_\+t} mem\+::next}
+
+index (-\/$>$ ram\mbox{[}next\mbox{]}) of the next struct \mbox{\Hypertarget{structmem_a9d7722ed10adf965fa98563d502f98ac}\label{structmem_a9d7722ed10adf965fa98563d502f98ac}} 
+\index{mem@{mem}!prev@{prev}}
+\index{prev@{prev}!mem@{mem}}
+\subsubsection{\texorpdfstring{prev}{prev}}
+{\footnotesize\ttfamily \hyperlink{native_2lwip_2src_2include_2lwip_2mem_8h_a49bff6e5dd4cb95fe6dc0670962bbf54}{mem\+\_\+size\+\_\+t} mem\+::prev}
+
+index (-\/$>$ ram\mbox{[}prev\mbox{]}) of the previous struct \mbox{\Hypertarget{structmem_aa76b6a39425617435978dce903f0d456}\label{structmem_aa76b6a39425617435978dce903f0d456}} 
+\index{mem@{mem}!used@{used}}
+\index{used@{used}!mem@{mem}}
+\subsubsection{\texorpdfstring{used}{used}}
+{\footnotesize\ttfamily \hyperlink{group__compiler__abstraction_ga4caecabca98b43919dd11be1c0d4cd8e}{u8\+\_\+t} mem\+::used}
+
+1\+: this area is used; 0\+: this area is unused 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/ayush/\+R\+I\+O\+T/tests/lwip/bin/pkg/native/lwip/src/core/\hyperlink{native_2lwip_2src_2core_2mem_8c}{mem.\+c}\end{DoxyCompactItemize}

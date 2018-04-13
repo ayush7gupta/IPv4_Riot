@@ -1,0 +1,271 @@
+\hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2priv_2tcpip__priv_8h}{}\section{/home/ayush/\+R\+I\+O\+T/tests/lwip/bin/pkg/openmote-\/cc2538/lwip/src/include/lwip/priv/tcpip\+\_\+priv.h File Reference}
+\label{openmote-cc2538_2lwip_2src_2include_2lwip_2priv_2tcpip__priv_8h}\index{/home/ayush/\+R\+I\+O\+T/tests/lwip/bin/pkg/openmote-\/cc2538/lwip/src/include/lwip/priv/tcpip\+\_\+priv.\+h@{/home/ayush/\+R\+I\+O\+T/tests/lwip/bin/pkg/openmote-\/cc2538/lwip/src/include/lwip/priv/tcpip\+\_\+priv.\+h}}
+{\ttfamily \#include \char`\"{}lwip/opt.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}lwip/tcpip.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}lwip/sys.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}lwip/timeouts.\+h\char`\"{}}\newline
+Include dependency graph for tcpip\+\_\+priv.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{openmote-cc2538_2lwip_2src_2include_2lwip_2priv_2tcpip__priv_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{openmote-cc2538_2lwip_2src_2include_2lwip_2priv_2tcpip__priv_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structtcpip__api__call__data}{tcpip\+\_\+api\+\_\+call\+\_\+data}
+\item 
+struct \hyperlink{structtcpip__msg}{tcpip\+\_\+msg}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2priv_2tcpip__priv_8h_a3518256af0d1a422755a899b13c2b563}{A\+P\+I\+\_\+\+V\+A\+R\+\_\+\+R\+EF}(name)~name
+\item 
+\#define \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2priv_2tcpip__priv_8h_ab5d4a4fa91c4c144bedabf593a68b4dd}{A\+P\+I\+\_\+\+V\+A\+R\+\_\+\+D\+E\+C\+L\+A\+RE}(type,  name)~type name
+\item 
+\#define \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2priv_2tcpip__priv_8h_a8ff9b936b16d91844c0e32424e97f493}{A\+P\+I\+\_\+\+V\+A\+R\+\_\+\+A\+L\+L\+OC}(type,  pool,  name,  errorval)
+\item 
+\#define \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2priv_2tcpip__priv_8h_a0b826b1ea2ee54ebb94ab354578a1ffe}{A\+P\+I\+\_\+\+V\+A\+R\+\_\+\+A\+L\+L\+O\+C\+\_\+\+P\+O\+OL}(type,  pool,  name,  errorval)
+\item 
+\#define \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2priv_2tcpip__priv_8h_a30caebb5334f52d49ac938a507094094}{A\+P\+I\+\_\+\+V\+A\+R\+\_\+\+F\+R\+EE}(pool,  name)
+\item 
+\#define \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2priv_2tcpip__priv_8h_a803c2dd81f7e69515115b78759be0d76}{A\+P\+I\+\_\+\+V\+A\+R\+\_\+\+F\+R\+E\+E\+\_\+\+P\+O\+OL}(pool,  name)
+\item 
+\#define \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2priv_2tcpip__priv_8h_a1f3c3ae0938b5510978cbd31560a5797}{A\+P\+I\+\_\+\+E\+X\+P\+R\+\_\+\+R\+EF}(expr)~expr
+\item 
+\#define \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2priv_2tcpip__priv_8h_a91e803b3c3f0ab89b20d7a85e3e92624}{A\+P\+I\+\_\+\+E\+X\+P\+R\+\_\+\+R\+E\+F\+\_\+\+S\+EM}(expr)~\hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2priv_2tcpip__priv_8h_a1f3c3ae0938b5510978cbd31560a5797}{A\+P\+I\+\_\+\+E\+X\+P\+R\+\_\+\+R\+EF}(expr)
+\item 
+\#define \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2priv_2tcpip__priv_8h_a4b2322aa0c1906f84f16acf359f06a92}{A\+P\+I\+\_\+\+E\+X\+P\+R\+\_\+\+D\+E\+R\+EF}(expr)~($\ast$(expr))
+\item 
+\#define \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2priv_2tcpip__priv_8h_ad299ce8f259fb9f1f6c5c5a812f1bc58}{A\+P\+I\+\_\+\+M\+S\+G\+\_\+\+M\+\_\+\+D\+EF}(m)~$\ast$m
+\item 
+\#define \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2priv_2tcpip__priv_8h_a3a9d654eb42f26b409d1386d162f1e31}{A\+P\+I\+\_\+\+M\+S\+G\+\_\+\+M\+\_\+\+D\+E\+F\+\_\+C}(t,  m)~const t $\ast$ m
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef \hyperlink{group__infrastructure__errors_gaf02d9da80fd66b4f986d2c53d7231ddb}{err\+\_\+t}($\ast$ \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2priv_2tcpip__priv_8h_aa7ecde8c8d8012fe5c498f7ee58f9458}{tcpip\+\_\+api\+\_\+call\+\_\+fn}) (struct \hyperlink{structtcpip__api__call__data}{tcpip\+\_\+api\+\_\+call\+\_\+data} $\ast$call)
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2priv_2tcpip__priv_8h_a1e0cb5032a61055e3f4a3426ed548937}{tcpip\+\_\+msg\+\_\+type} \{ \newline
+\hyperlink{native_2lwip_2src_2include_2lwip_2priv_2tcpip__priv_8h_a1e0cb5032a61055e3f4a3426ed548937a8665d0f2f1498c366e90d67a1e4c7f80}{T\+C\+P\+I\+P\+\_\+\+M\+S\+G\+\_\+\+A\+PI}, 
+\hyperlink{native_2lwip_2src_2include_2lwip_2priv_2tcpip__priv_8h_a1e0cb5032a61055e3f4a3426ed548937ae68ceceeb8f3bfda0dfdb824dfd0aa8a}{T\+C\+P\+I\+P\+\_\+\+M\+S\+G\+\_\+\+A\+P\+I\+\_\+\+C\+A\+LL}, 
+\hyperlink{native_2lwip_2src_2include_2lwip_2priv_2tcpip__priv_8h_a1e0cb5032a61055e3f4a3426ed548937a64972ba60577a99b44f088e0b5150c8a}{T\+C\+P\+I\+P\+\_\+\+M\+S\+G\+\_\+\+I\+N\+P\+KT}, 
+\hyperlink{native_2lwip_2src_2include_2lwip_2priv_2tcpip__priv_8h_a1e0cb5032a61055e3f4a3426ed548937a3915e837fa47d5b65cc17d47a0790662}{T\+C\+P\+I\+P\+\_\+\+M\+S\+G\+\_\+\+C\+A\+L\+L\+B\+A\+CK}, 
+\newline
+\hyperlink{native_2lwip_2src_2include_2lwip_2priv_2tcpip__priv_8h_a1e0cb5032a61055e3f4a3426ed548937a17160cdc581db556a47a57cd4efb3b78}{T\+C\+P\+I\+P\+\_\+\+M\+S\+G\+\_\+\+C\+A\+L\+L\+B\+A\+C\+K\+\_\+\+S\+T\+A\+T\+IC}, 
+\hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2priv_2tcpip__priv_8h_a1e0cb5032a61055e3f4a3426ed548937a8665d0f2f1498c366e90d67a1e4c7f80}{T\+C\+P\+I\+P\+\_\+\+M\+S\+G\+\_\+\+A\+PI}, 
+\hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2priv_2tcpip__priv_8h_a1e0cb5032a61055e3f4a3426ed548937ae68ceceeb8f3bfda0dfdb824dfd0aa8a}{T\+C\+P\+I\+P\+\_\+\+M\+S\+G\+\_\+\+A\+P\+I\+\_\+\+C\+A\+LL}, 
+\hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2priv_2tcpip__priv_8h_a1e0cb5032a61055e3f4a3426ed548937a64972ba60577a99b44f088e0b5150c8a}{T\+C\+P\+I\+P\+\_\+\+M\+S\+G\+\_\+\+I\+N\+P\+KT}, 
+\newline
+\hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2priv_2tcpip__priv_8h_a1e0cb5032a61055e3f4a3426ed548937a3915e837fa47d5b65cc17d47a0790662}{T\+C\+P\+I\+P\+\_\+\+M\+S\+G\+\_\+\+C\+A\+L\+L\+B\+A\+CK}, 
+\hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2priv_2tcpip__priv_8h_a1e0cb5032a61055e3f4a3426ed548937a17160cdc581db556a47a57cd4efb3b78}{T\+C\+P\+I\+P\+\_\+\+M\+S\+G\+\_\+\+C\+A\+L\+L\+B\+A\+C\+K\+\_\+\+S\+T\+A\+T\+IC}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group__infrastructure__errors_gaf02d9da80fd66b4f986d2c53d7231ddb}{err\+\_\+t} \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2priv_2tcpip__priv_8h_a12bdf37eddcd72c4178e3ea7d370395d}{tcpip\+\_\+send\+\_\+msg\+\_\+wait\+\_\+sem} (\hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2tcpip_8h_a35203296bb838f3b493839ffc6e7285d}{tcpip\+\_\+callback\+\_\+fn} fn, void $\ast$apimsg, sys\+\_\+sem\+\_\+t $\ast$sem)
+\item 
+\hyperlink{group__infrastructure__errors_gaf02d9da80fd66b4f986d2c53d7231ddb}{err\+\_\+t} \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2priv_2tcpip__priv_8h_a3d42b0c46607f91aedcc7745ed466b08}{tcpip\+\_\+api\+\_\+call} (\hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2priv_2tcpip__priv_8h_aa7ecde8c8d8012fe5c498f7ee58f9458}{tcpip\+\_\+api\+\_\+call\+\_\+fn} fn, struct \hyperlink{structtcpip__api__call__data}{tcpip\+\_\+api\+\_\+call\+\_\+data} $\ast$call)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+T\+C\+P\+IP A\+PI internal implementations (do not use in application code) 
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2priv_2tcpip__priv_8h_a4b2322aa0c1906f84f16acf359f06a92}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2priv_2tcpip__priv_8h_a4b2322aa0c1906f84f16acf359f06a92}} 
+\index{openmote-\/cc2538/lwip/src/include/lwip/priv/tcpip\+\_\+priv.\+h@{openmote-\/cc2538/lwip/src/include/lwip/priv/tcpip\+\_\+priv.\+h}!A\+P\+I\+\_\+\+E\+X\+P\+R\+\_\+\+D\+E\+R\+EF@{A\+P\+I\+\_\+\+E\+X\+P\+R\+\_\+\+D\+E\+R\+EF}}
+\index{A\+P\+I\+\_\+\+E\+X\+P\+R\+\_\+\+D\+E\+R\+EF@{A\+P\+I\+\_\+\+E\+X\+P\+R\+\_\+\+D\+E\+R\+EF}!openmote-\/cc2538/lwip/src/include/lwip/priv/tcpip\+\_\+priv.\+h@{openmote-\/cc2538/lwip/src/include/lwip/priv/tcpip\+\_\+priv.\+h}}
+\subsubsection{\texorpdfstring{A\+P\+I\+\_\+\+E\+X\+P\+R\+\_\+\+D\+E\+R\+EF}{API\_EXPR\_DEREF}}
+{\footnotesize\ttfamily \#define A\+P\+I\+\_\+\+E\+X\+P\+R\+\_\+\+D\+E\+R\+EF(\begin{DoxyParamCaption}\item[{}]{expr }\end{DoxyParamCaption})~($\ast$(expr))}
+
+\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2priv_2tcpip__priv_8h_a1f3c3ae0938b5510978cbd31560a5797}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2priv_2tcpip__priv_8h_a1f3c3ae0938b5510978cbd31560a5797}} 
+\index{openmote-\/cc2538/lwip/src/include/lwip/priv/tcpip\+\_\+priv.\+h@{openmote-\/cc2538/lwip/src/include/lwip/priv/tcpip\+\_\+priv.\+h}!A\+P\+I\+\_\+\+E\+X\+P\+R\+\_\+\+R\+EF@{A\+P\+I\+\_\+\+E\+X\+P\+R\+\_\+\+R\+EF}}
+\index{A\+P\+I\+\_\+\+E\+X\+P\+R\+\_\+\+R\+EF@{A\+P\+I\+\_\+\+E\+X\+P\+R\+\_\+\+R\+EF}!openmote-\/cc2538/lwip/src/include/lwip/priv/tcpip\+\_\+priv.\+h@{openmote-\/cc2538/lwip/src/include/lwip/priv/tcpip\+\_\+priv.\+h}}
+\subsubsection{\texorpdfstring{A\+P\+I\+\_\+\+E\+X\+P\+R\+\_\+\+R\+EF}{API\_EXPR\_REF}}
+{\footnotesize\ttfamily \#define A\+P\+I\+\_\+\+E\+X\+P\+R\+\_\+\+R\+EF(\begin{DoxyParamCaption}\item[{}]{expr }\end{DoxyParamCaption})~expr}
+
+\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2priv_2tcpip__priv_8h_a91e803b3c3f0ab89b20d7a85e3e92624}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2priv_2tcpip__priv_8h_a91e803b3c3f0ab89b20d7a85e3e92624}} 
+\index{openmote-\/cc2538/lwip/src/include/lwip/priv/tcpip\+\_\+priv.\+h@{openmote-\/cc2538/lwip/src/include/lwip/priv/tcpip\+\_\+priv.\+h}!A\+P\+I\+\_\+\+E\+X\+P\+R\+\_\+\+R\+E\+F\+\_\+\+S\+EM@{A\+P\+I\+\_\+\+E\+X\+P\+R\+\_\+\+R\+E\+F\+\_\+\+S\+EM}}
+\index{A\+P\+I\+\_\+\+E\+X\+P\+R\+\_\+\+R\+E\+F\+\_\+\+S\+EM@{A\+P\+I\+\_\+\+E\+X\+P\+R\+\_\+\+R\+E\+F\+\_\+\+S\+EM}!openmote-\/cc2538/lwip/src/include/lwip/priv/tcpip\+\_\+priv.\+h@{openmote-\/cc2538/lwip/src/include/lwip/priv/tcpip\+\_\+priv.\+h}}
+\subsubsection{\texorpdfstring{A\+P\+I\+\_\+\+E\+X\+P\+R\+\_\+\+R\+E\+F\+\_\+\+S\+EM}{API\_EXPR\_REF\_SEM}}
+{\footnotesize\ttfamily \#define A\+P\+I\+\_\+\+E\+X\+P\+R\+\_\+\+R\+E\+F\+\_\+\+S\+EM(\begin{DoxyParamCaption}\item[{}]{expr }\end{DoxyParamCaption})~\hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2priv_2tcpip__priv_8h_a1f3c3ae0938b5510978cbd31560a5797}{A\+P\+I\+\_\+\+E\+X\+P\+R\+\_\+\+R\+EF}(expr)}
+
+\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2priv_2tcpip__priv_8h_ad299ce8f259fb9f1f6c5c5a812f1bc58}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2priv_2tcpip__priv_8h_ad299ce8f259fb9f1f6c5c5a812f1bc58}} 
+\index{openmote-\/cc2538/lwip/src/include/lwip/priv/tcpip\+\_\+priv.\+h@{openmote-\/cc2538/lwip/src/include/lwip/priv/tcpip\+\_\+priv.\+h}!A\+P\+I\+\_\+\+M\+S\+G\+\_\+\+M\+\_\+\+D\+EF@{A\+P\+I\+\_\+\+M\+S\+G\+\_\+\+M\+\_\+\+D\+EF}}
+\index{A\+P\+I\+\_\+\+M\+S\+G\+\_\+\+M\+\_\+\+D\+EF@{A\+P\+I\+\_\+\+M\+S\+G\+\_\+\+M\+\_\+\+D\+EF}!openmote-\/cc2538/lwip/src/include/lwip/priv/tcpip\+\_\+priv.\+h@{openmote-\/cc2538/lwip/src/include/lwip/priv/tcpip\+\_\+priv.\+h}}
+\subsubsection{\texorpdfstring{A\+P\+I\+\_\+\+M\+S\+G\+\_\+\+M\+\_\+\+D\+EF}{API\_MSG\_M\_DEF}}
+{\footnotesize\ttfamily \#define A\+P\+I\+\_\+\+M\+S\+G\+\_\+\+M\+\_\+\+D\+EF(\begin{DoxyParamCaption}\item[{}]{m }\end{DoxyParamCaption})~$\ast$m}
+
+\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2priv_2tcpip__priv_8h_a3a9d654eb42f26b409d1386d162f1e31}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2priv_2tcpip__priv_8h_a3a9d654eb42f26b409d1386d162f1e31}} 
+\index{openmote-\/cc2538/lwip/src/include/lwip/priv/tcpip\+\_\+priv.\+h@{openmote-\/cc2538/lwip/src/include/lwip/priv/tcpip\+\_\+priv.\+h}!A\+P\+I\+\_\+\+M\+S\+G\+\_\+\+M\+\_\+\+D\+E\+F\+\_\+C@{A\+P\+I\+\_\+\+M\+S\+G\+\_\+\+M\+\_\+\+D\+E\+F\+\_\+C}}
+\index{A\+P\+I\+\_\+\+M\+S\+G\+\_\+\+M\+\_\+\+D\+E\+F\+\_\+C@{A\+P\+I\+\_\+\+M\+S\+G\+\_\+\+M\+\_\+\+D\+E\+F\+\_\+C}!openmote-\/cc2538/lwip/src/include/lwip/priv/tcpip\+\_\+priv.\+h@{openmote-\/cc2538/lwip/src/include/lwip/priv/tcpip\+\_\+priv.\+h}}
+\subsubsection{\texorpdfstring{A\+P\+I\+\_\+\+M\+S\+G\+\_\+\+M\+\_\+\+D\+E\+F\+\_\+C}{API\_MSG\_M\_DEF\_C}}
+{\footnotesize\ttfamily \#define A\+P\+I\+\_\+\+M\+S\+G\+\_\+\+M\+\_\+\+D\+E\+F\+\_\+C(\begin{DoxyParamCaption}\item[{}]{t,  }\item[{}]{m }\end{DoxyParamCaption})~const t $\ast$ m}
+
+\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2priv_2tcpip__priv_8h_a8ff9b936b16d91844c0e32424e97f493}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2priv_2tcpip__priv_8h_a8ff9b936b16d91844c0e32424e97f493}} 
+\index{openmote-\/cc2538/lwip/src/include/lwip/priv/tcpip\+\_\+priv.\+h@{openmote-\/cc2538/lwip/src/include/lwip/priv/tcpip\+\_\+priv.\+h}!A\+P\+I\+\_\+\+V\+A\+R\+\_\+\+A\+L\+L\+OC@{A\+P\+I\+\_\+\+V\+A\+R\+\_\+\+A\+L\+L\+OC}}
+\index{A\+P\+I\+\_\+\+V\+A\+R\+\_\+\+A\+L\+L\+OC@{A\+P\+I\+\_\+\+V\+A\+R\+\_\+\+A\+L\+L\+OC}!openmote-\/cc2538/lwip/src/include/lwip/priv/tcpip\+\_\+priv.\+h@{openmote-\/cc2538/lwip/src/include/lwip/priv/tcpip\+\_\+priv.\+h}}
+\subsubsection{\texorpdfstring{A\+P\+I\+\_\+\+V\+A\+R\+\_\+\+A\+L\+L\+OC}{API\_VAR\_ALLOC}}
+{\footnotesize\ttfamily \#define A\+P\+I\+\_\+\+V\+A\+R\+\_\+\+A\+L\+L\+OC(\begin{DoxyParamCaption}\item[{}]{type,  }\item[{}]{pool,  }\item[{}]{name,  }\item[{}]{errorval }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2priv_2tcpip__priv_8h_a0b826b1ea2ee54ebb94ab354578a1ffe}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2priv_2tcpip__priv_8h_a0b826b1ea2ee54ebb94ab354578a1ffe}} 
+\index{openmote-\/cc2538/lwip/src/include/lwip/priv/tcpip\+\_\+priv.\+h@{openmote-\/cc2538/lwip/src/include/lwip/priv/tcpip\+\_\+priv.\+h}!A\+P\+I\+\_\+\+V\+A\+R\+\_\+\+A\+L\+L\+O\+C\+\_\+\+P\+O\+OL@{A\+P\+I\+\_\+\+V\+A\+R\+\_\+\+A\+L\+L\+O\+C\+\_\+\+P\+O\+OL}}
+\index{A\+P\+I\+\_\+\+V\+A\+R\+\_\+\+A\+L\+L\+O\+C\+\_\+\+P\+O\+OL@{A\+P\+I\+\_\+\+V\+A\+R\+\_\+\+A\+L\+L\+O\+C\+\_\+\+P\+O\+OL}!openmote-\/cc2538/lwip/src/include/lwip/priv/tcpip\+\_\+priv.\+h@{openmote-\/cc2538/lwip/src/include/lwip/priv/tcpip\+\_\+priv.\+h}}
+\subsubsection{\texorpdfstring{A\+P\+I\+\_\+\+V\+A\+R\+\_\+\+A\+L\+L\+O\+C\+\_\+\+P\+O\+OL}{API\_VAR\_ALLOC\_POOL}}
+{\footnotesize\ttfamily \#define A\+P\+I\+\_\+\+V\+A\+R\+\_\+\+A\+L\+L\+O\+C\+\_\+\+P\+O\+OL(\begin{DoxyParamCaption}\item[{}]{type,  }\item[{}]{pool,  }\item[{}]{name,  }\item[{}]{errorval }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2priv_2tcpip__priv_8h_ab5d4a4fa91c4c144bedabf593a68b4dd}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2priv_2tcpip__priv_8h_ab5d4a4fa91c4c144bedabf593a68b4dd}} 
+\index{openmote-\/cc2538/lwip/src/include/lwip/priv/tcpip\+\_\+priv.\+h@{openmote-\/cc2538/lwip/src/include/lwip/priv/tcpip\+\_\+priv.\+h}!A\+P\+I\+\_\+\+V\+A\+R\+\_\+\+D\+E\+C\+L\+A\+RE@{A\+P\+I\+\_\+\+V\+A\+R\+\_\+\+D\+E\+C\+L\+A\+RE}}
+\index{A\+P\+I\+\_\+\+V\+A\+R\+\_\+\+D\+E\+C\+L\+A\+RE@{A\+P\+I\+\_\+\+V\+A\+R\+\_\+\+D\+E\+C\+L\+A\+RE}!openmote-\/cc2538/lwip/src/include/lwip/priv/tcpip\+\_\+priv.\+h@{openmote-\/cc2538/lwip/src/include/lwip/priv/tcpip\+\_\+priv.\+h}}
+\subsubsection{\texorpdfstring{A\+P\+I\+\_\+\+V\+A\+R\+\_\+\+D\+E\+C\+L\+A\+RE}{API\_VAR\_DECLARE}}
+{\footnotesize\ttfamily \#define A\+P\+I\+\_\+\+V\+A\+R\+\_\+\+D\+E\+C\+L\+A\+RE(\begin{DoxyParamCaption}\item[{}]{type,  }\item[{}]{name }\end{DoxyParamCaption})~type name}
+
+\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2priv_2tcpip__priv_8h_a30caebb5334f52d49ac938a507094094}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2priv_2tcpip__priv_8h_a30caebb5334f52d49ac938a507094094}} 
+\index{openmote-\/cc2538/lwip/src/include/lwip/priv/tcpip\+\_\+priv.\+h@{openmote-\/cc2538/lwip/src/include/lwip/priv/tcpip\+\_\+priv.\+h}!A\+P\+I\+\_\+\+V\+A\+R\+\_\+\+F\+R\+EE@{A\+P\+I\+\_\+\+V\+A\+R\+\_\+\+F\+R\+EE}}
+\index{A\+P\+I\+\_\+\+V\+A\+R\+\_\+\+F\+R\+EE@{A\+P\+I\+\_\+\+V\+A\+R\+\_\+\+F\+R\+EE}!openmote-\/cc2538/lwip/src/include/lwip/priv/tcpip\+\_\+priv.\+h@{openmote-\/cc2538/lwip/src/include/lwip/priv/tcpip\+\_\+priv.\+h}}
+\subsubsection{\texorpdfstring{A\+P\+I\+\_\+\+V\+A\+R\+\_\+\+F\+R\+EE}{API\_VAR\_FREE}}
+{\footnotesize\ttfamily \#define A\+P\+I\+\_\+\+V\+A\+R\+\_\+\+F\+R\+EE(\begin{DoxyParamCaption}\item[{}]{pool,  }\item[{}]{name }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2priv_2tcpip__priv_8h_a803c2dd81f7e69515115b78759be0d76}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2priv_2tcpip__priv_8h_a803c2dd81f7e69515115b78759be0d76}} 
+\index{openmote-\/cc2538/lwip/src/include/lwip/priv/tcpip\+\_\+priv.\+h@{openmote-\/cc2538/lwip/src/include/lwip/priv/tcpip\+\_\+priv.\+h}!A\+P\+I\+\_\+\+V\+A\+R\+\_\+\+F\+R\+E\+E\+\_\+\+P\+O\+OL@{A\+P\+I\+\_\+\+V\+A\+R\+\_\+\+F\+R\+E\+E\+\_\+\+P\+O\+OL}}
+\index{A\+P\+I\+\_\+\+V\+A\+R\+\_\+\+F\+R\+E\+E\+\_\+\+P\+O\+OL@{A\+P\+I\+\_\+\+V\+A\+R\+\_\+\+F\+R\+E\+E\+\_\+\+P\+O\+OL}!openmote-\/cc2538/lwip/src/include/lwip/priv/tcpip\+\_\+priv.\+h@{openmote-\/cc2538/lwip/src/include/lwip/priv/tcpip\+\_\+priv.\+h}}
+\subsubsection{\texorpdfstring{A\+P\+I\+\_\+\+V\+A\+R\+\_\+\+F\+R\+E\+E\+\_\+\+P\+O\+OL}{API\_VAR\_FREE\_POOL}}
+{\footnotesize\ttfamily \#define A\+P\+I\+\_\+\+V\+A\+R\+\_\+\+F\+R\+E\+E\+\_\+\+P\+O\+OL(\begin{DoxyParamCaption}\item[{}]{pool,  }\item[{}]{name }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2priv_2tcpip__priv_8h_a3518256af0d1a422755a899b13c2b563}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2priv_2tcpip__priv_8h_a3518256af0d1a422755a899b13c2b563}} 
+\index{openmote-\/cc2538/lwip/src/include/lwip/priv/tcpip\+\_\+priv.\+h@{openmote-\/cc2538/lwip/src/include/lwip/priv/tcpip\+\_\+priv.\+h}!A\+P\+I\+\_\+\+V\+A\+R\+\_\+\+R\+EF@{A\+P\+I\+\_\+\+V\+A\+R\+\_\+\+R\+EF}}
+\index{A\+P\+I\+\_\+\+V\+A\+R\+\_\+\+R\+EF@{A\+P\+I\+\_\+\+V\+A\+R\+\_\+\+R\+EF}!openmote-\/cc2538/lwip/src/include/lwip/priv/tcpip\+\_\+priv.\+h@{openmote-\/cc2538/lwip/src/include/lwip/priv/tcpip\+\_\+priv.\+h}}
+\subsubsection{\texorpdfstring{A\+P\+I\+\_\+\+V\+A\+R\+\_\+\+R\+EF}{API\_VAR\_REF}}
+{\footnotesize\ttfamily \#define A\+P\+I\+\_\+\+V\+A\+R\+\_\+\+R\+EF(\begin{DoxyParamCaption}\item[{}]{name }\end{DoxyParamCaption})~name}
+
+
+
+\subsection{Typedef Documentation}
+\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2priv_2tcpip__priv_8h_aa7ecde8c8d8012fe5c498f7ee58f9458}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2priv_2tcpip__priv_8h_aa7ecde8c8d8012fe5c498f7ee58f9458}} 
+\index{openmote-\/cc2538/lwip/src/include/lwip/priv/tcpip\+\_\+priv.\+h@{openmote-\/cc2538/lwip/src/include/lwip/priv/tcpip\+\_\+priv.\+h}!tcpip\+\_\+api\+\_\+call\+\_\+fn@{tcpip\+\_\+api\+\_\+call\+\_\+fn}}
+\index{tcpip\+\_\+api\+\_\+call\+\_\+fn@{tcpip\+\_\+api\+\_\+call\+\_\+fn}!openmote-\/cc2538/lwip/src/include/lwip/priv/tcpip\+\_\+priv.\+h@{openmote-\/cc2538/lwip/src/include/lwip/priv/tcpip\+\_\+priv.\+h}}
+\subsubsection{\texorpdfstring{tcpip\+\_\+api\+\_\+call\+\_\+fn}{tcpip\_api\_call\_fn}}
+{\footnotesize\ttfamily typedef \hyperlink{group__infrastructure__errors_gaf02d9da80fd66b4f986d2c53d7231ddb}{err\+\_\+t}($\ast$ tcpip\+\_\+api\+\_\+call\+\_\+fn) (struct \hyperlink{structtcpip__api__call__data}{tcpip\+\_\+api\+\_\+call\+\_\+data} $\ast$call)}
+
+
+
+\subsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2priv_2tcpip__priv_8h_a1e0cb5032a61055e3f4a3426ed548937}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2priv_2tcpip__priv_8h_a1e0cb5032a61055e3f4a3426ed548937}} 
+\index{openmote-\/cc2538/lwip/src/include/lwip/priv/tcpip\+\_\+priv.\+h@{openmote-\/cc2538/lwip/src/include/lwip/priv/tcpip\+\_\+priv.\+h}!tcpip\+\_\+msg\+\_\+type@{tcpip\+\_\+msg\+\_\+type}}
+\index{tcpip\+\_\+msg\+\_\+type@{tcpip\+\_\+msg\+\_\+type}!openmote-\/cc2538/lwip/src/include/lwip/priv/tcpip\+\_\+priv.\+h@{openmote-\/cc2538/lwip/src/include/lwip/priv/tcpip\+\_\+priv.\+h}}
+\subsubsection{\texorpdfstring{tcpip\+\_\+msg\+\_\+type}{tcpip\_msg\_type}}
+{\footnotesize\ttfamily enum \hyperlink{native_2lwip_2src_2include_2lwip_2priv_2tcpip__priv_8h_a1e0cb5032a61055e3f4a3426ed548937}{tcpip\+\_\+msg\+\_\+type}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{T\+C\+P\+I\+P\+\_\+\+M\+S\+G\+\_\+\+A\+PI@{T\+C\+P\+I\+P\+\_\+\+M\+S\+G\+\_\+\+A\+PI}!openmote-\/cc2538/lwip/src/include/lwip/priv/tcpip\+\_\+priv.\+h@{openmote-\/cc2538/lwip/src/include/lwip/priv/tcpip\+\_\+priv.\+h}}\index{openmote-\/cc2538/lwip/src/include/lwip/priv/tcpip\+\_\+priv.\+h@{openmote-\/cc2538/lwip/src/include/lwip/priv/tcpip\+\_\+priv.\+h}!T\+C\+P\+I\+P\+\_\+\+M\+S\+G\+\_\+\+A\+PI@{T\+C\+P\+I\+P\+\_\+\+M\+S\+G\+\_\+\+A\+PI}}}\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2priv_2tcpip__priv_8h_a1e0cb5032a61055e3f4a3426ed548937a8665d0f2f1498c366e90d67a1e4c7f80}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2priv_2tcpip__priv_8h_a1e0cb5032a61055e3f4a3426ed548937a8665d0f2f1498c366e90d67a1e4c7f80}} 
+T\+C\+P\+I\+P\+\_\+\+M\+S\+G\+\_\+\+A\+PI&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{T\+C\+P\+I\+P\+\_\+\+M\+S\+G\+\_\+\+A\+P\+I\+\_\+\+C\+A\+LL@{T\+C\+P\+I\+P\+\_\+\+M\+S\+G\+\_\+\+A\+P\+I\+\_\+\+C\+A\+LL}!openmote-\/cc2538/lwip/src/include/lwip/priv/tcpip\+\_\+priv.\+h@{openmote-\/cc2538/lwip/src/include/lwip/priv/tcpip\+\_\+priv.\+h}}\index{openmote-\/cc2538/lwip/src/include/lwip/priv/tcpip\+\_\+priv.\+h@{openmote-\/cc2538/lwip/src/include/lwip/priv/tcpip\+\_\+priv.\+h}!T\+C\+P\+I\+P\+\_\+\+M\+S\+G\+\_\+\+A\+P\+I\+\_\+\+C\+A\+LL@{T\+C\+P\+I\+P\+\_\+\+M\+S\+G\+\_\+\+A\+P\+I\+\_\+\+C\+A\+LL}}}\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2priv_2tcpip__priv_8h_a1e0cb5032a61055e3f4a3426ed548937ae68ceceeb8f3bfda0dfdb824dfd0aa8a}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2priv_2tcpip__priv_8h_a1e0cb5032a61055e3f4a3426ed548937ae68ceceeb8f3bfda0dfdb824dfd0aa8a}} 
+T\+C\+P\+I\+P\+\_\+\+M\+S\+G\+\_\+\+A\+P\+I\+\_\+\+C\+A\+LL&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{T\+C\+P\+I\+P\+\_\+\+M\+S\+G\+\_\+\+I\+N\+P\+KT@{T\+C\+P\+I\+P\+\_\+\+M\+S\+G\+\_\+\+I\+N\+P\+KT}!openmote-\/cc2538/lwip/src/include/lwip/priv/tcpip\+\_\+priv.\+h@{openmote-\/cc2538/lwip/src/include/lwip/priv/tcpip\+\_\+priv.\+h}}\index{openmote-\/cc2538/lwip/src/include/lwip/priv/tcpip\+\_\+priv.\+h@{openmote-\/cc2538/lwip/src/include/lwip/priv/tcpip\+\_\+priv.\+h}!T\+C\+P\+I\+P\+\_\+\+M\+S\+G\+\_\+\+I\+N\+P\+KT@{T\+C\+P\+I\+P\+\_\+\+M\+S\+G\+\_\+\+I\+N\+P\+KT}}}\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2priv_2tcpip__priv_8h_a1e0cb5032a61055e3f4a3426ed548937a64972ba60577a99b44f088e0b5150c8a}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2priv_2tcpip__priv_8h_a1e0cb5032a61055e3f4a3426ed548937a64972ba60577a99b44f088e0b5150c8a}} 
+T\+C\+P\+I\+P\+\_\+\+M\+S\+G\+\_\+\+I\+N\+P\+KT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{T\+C\+P\+I\+P\+\_\+\+M\+S\+G\+\_\+\+C\+A\+L\+L\+B\+A\+CK@{T\+C\+P\+I\+P\+\_\+\+M\+S\+G\+\_\+\+C\+A\+L\+L\+B\+A\+CK}!openmote-\/cc2538/lwip/src/include/lwip/priv/tcpip\+\_\+priv.\+h@{openmote-\/cc2538/lwip/src/include/lwip/priv/tcpip\+\_\+priv.\+h}}\index{openmote-\/cc2538/lwip/src/include/lwip/priv/tcpip\+\_\+priv.\+h@{openmote-\/cc2538/lwip/src/include/lwip/priv/tcpip\+\_\+priv.\+h}!T\+C\+P\+I\+P\+\_\+\+M\+S\+G\+\_\+\+C\+A\+L\+L\+B\+A\+CK@{T\+C\+P\+I\+P\+\_\+\+M\+S\+G\+\_\+\+C\+A\+L\+L\+B\+A\+CK}}}\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2priv_2tcpip__priv_8h_a1e0cb5032a61055e3f4a3426ed548937a3915e837fa47d5b65cc17d47a0790662}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2priv_2tcpip__priv_8h_a1e0cb5032a61055e3f4a3426ed548937a3915e837fa47d5b65cc17d47a0790662}} 
+T\+C\+P\+I\+P\+\_\+\+M\+S\+G\+\_\+\+C\+A\+L\+L\+B\+A\+CK&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{T\+C\+P\+I\+P\+\_\+\+M\+S\+G\+\_\+\+C\+A\+L\+L\+B\+A\+C\+K\+\_\+\+S\+T\+A\+T\+IC@{T\+C\+P\+I\+P\+\_\+\+M\+S\+G\+\_\+\+C\+A\+L\+L\+B\+A\+C\+K\+\_\+\+S\+T\+A\+T\+IC}!openmote-\/cc2538/lwip/src/include/lwip/priv/tcpip\+\_\+priv.\+h@{openmote-\/cc2538/lwip/src/include/lwip/priv/tcpip\+\_\+priv.\+h}}\index{openmote-\/cc2538/lwip/src/include/lwip/priv/tcpip\+\_\+priv.\+h@{openmote-\/cc2538/lwip/src/include/lwip/priv/tcpip\+\_\+priv.\+h}!T\+C\+P\+I\+P\+\_\+\+M\+S\+G\+\_\+\+C\+A\+L\+L\+B\+A\+C\+K\+\_\+\+S\+T\+A\+T\+IC@{T\+C\+P\+I\+P\+\_\+\+M\+S\+G\+\_\+\+C\+A\+L\+L\+B\+A\+C\+K\+\_\+\+S\+T\+A\+T\+IC}}}\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2priv_2tcpip__priv_8h_a1e0cb5032a61055e3f4a3426ed548937a17160cdc581db556a47a57cd4efb3b78}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2priv_2tcpip__priv_8h_a1e0cb5032a61055e3f4a3426ed548937a17160cdc581db556a47a57cd4efb3b78}} 
+T\+C\+P\+I\+P\+\_\+\+M\+S\+G\+\_\+\+C\+A\+L\+L\+B\+A\+C\+K\+\_\+\+S\+T\+A\+T\+IC&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{T\+C\+P\+I\+P\+\_\+\+M\+S\+G\+\_\+\+A\+PI@{T\+C\+P\+I\+P\+\_\+\+M\+S\+G\+\_\+\+A\+PI}!openmote-\/cc2538/lwip/src/include/lwip/priv/tcpip\+\_\+priv.\+h@{openmote-\/cc2538/lwip/src/include/lwip/priv/tcpip\+\_\+priv.\+h}}\index{openmote-\/cc2538/lwip/src/include/lwip/priv/tcpip\+\_\+priv.\+h@{openmote-\/cc2538/lwip/src/include/lwip/priv/tcpip\+\_\+priv.\+h}!T\+C\+P\+I\+P\+\_\+\+M\+S\+G\+\_\+\+A\+PI@{T\+C\+P\+I\+P\+\_\+\+M\+S\+G\+\_\+\+A\+PI}}}\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2priv_2tcpip__priv_8h_a1e0cb5032a61055e3f4a3426ed548937a8665d0f2f1498c366e90d67a1e4c7f80}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2priv_2tcpip__priv_8h_a1e0cb5032a61055e3f4a3426ed548937a8665d0f2f1498c366e90d67a1e4c7f80}} 
+T\+C\+P\+I\+P\+\_\+\+M\+S\+G\+\_\+\+A\+PI&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{T\+C\+P\+I\+P\+\_\+\+M\+S\+G\+\_\+\+A\+P\+I\+\_\+\+C\+A\+LL@{T\+C\+P\+I\+P\+\_\+\+M\+S\+G\+\_\+\+A\+P\+I\+\_\+\+C\+A\+LL}!openmote-\/cc2538/lwip/src/include/lwip/priv/tcpip\+\_\+priv.\+h@{openmote-\/cc2538/lwip/src/include/lwip/priv/tcpip\+\_\+priv.\+h}}\index{openmote-\/cc2538/lwip/src/include/lwip/priv/tcpip\+\_\+priv.\+h@{openmote-\/cc2538/lwip/src/include/lwip/priv/tcpip\+\_\+priv.\+h}!T\+C\+P\+I\+P\+\_\+\+M\+S\+G\+\_\+\+A\+P\+I\+\_\+\+C\+A\+LL@{T\+C\+P\+I\+P\+\_\+\+M\+S\+G\+\_\+\+A\+P\+I\+\_\+\+C\+A\+LL}}}\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2priv_2tcpip__priv_8h_a1e0cb5032a61055e3f4a3426ed548937ae68ceceeb8f3bfda0dfdb824dfd0aa8a}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2priv_2tcpip__priv_8h_a1e0cb5032a61055e3f4a3426ed548937ae68ceceeb8f3bfda0dfdb824dfd0aa8a}} 
+T\+C\+P\+I\+P\+\_\+\+M\+S\+G\+\_\+\+A\+P\+I\+\_\+\+C\+A\+LL&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{T\+C\+P\+I\+P\+\_\+\+M\+S\+G\+\_\+\+I\+N\+P\+KT@{T\+C\+P\+I\+P\+\_\+\+M\+S\+G\+\_\+\+I\+N\+P\+KT}!openmote-\/cc2538/lwip/src/include/lwip/priv/tcpip\+\_\+priv.\+h@{openmote-\/cc2538/lwip/src/include/lwip/priv/tcpip\+\_\+priv.\+h}}\index{openmote-\/cc2538/lwip/src/include/lwip/priv/tcpip\+\_\+priv.\+h@{openmote-\/cc2538/lwip/src/include/lwip/priv/tcpip\+\_\+priv.\+h}!T\+C\+P\+I\+P\+\_\+\+M\+S\+G\+\_\+\+I\+N\+P\+KT@{T\+C\+P\+I\+P\+\_\+\+M\+S\+G\+\_\+\+I\+N\+P\+KT}}}\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2priv_2tcpip__priv_8h_a1e0cb5032a61055e3f4a3426ed548937a64972ba60577a99b44f088e0b5150c8a}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2priv_2tcpip__priv_8h_a1e0cb5032a61055e3f4a3426ed548937a64972ba60577a99b44f088e0b5150c8a}} 
+T\+C\+P\+I\+P\+\_\+\+M\+S\+G\+\_\+\+I\+N\+P\+KT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{T\+C\+P\+I\+P\+\_\+\+M\+S\+G\+\_\+\+C\+A\+L\+L\+B\+A\+CK@{T\+C\+P\+I\+P\+\_\+\+M\+S\+G\+\_\+\+C\+A\+L\+L\+B\+A\+CK}!openmote-\/cc2538/lwip/src/include/lwip/priv/tcpip\+\_\+priv.\+h@{openmote-\/cc2538/lwip/src/include/lwip/priv/tcpip\+\_\+priv.\+h}}\index{openmote-\/cc2538/lwip/src/include/lwip/priv/tcpip\+\_\+priv.\+h@{openmote-\/cc2538/lwip/src/include/lwip/priv/tcpip\+\_\+priv.\+h}!T\+C\+P\+I\+P\+\_\+\+M\+S\+G\+\_\+\+C\+A\+L\+L\+B\+A\+CK@{T\+C\+P\+I\+P\+\_\+\+M\+S\+G\+\_\+\+C\+A\+L\+L\+B\+A\+CK}}}\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2priv_2tcpip__priv_8h_a1e0cb5032a61055e3f4a3426ed548937a3915e837fa47d5b65cc17d47a0790662}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2priv_2tcpip__priv_8h_a1e0cb5032a61055e3f4a3426ed548937a3915e837fa47d5b65cc17d47a0790662}} 
+T\+C\+P\+I\+P\+\_\+\+M\+S\+G\+\_\+\+C\+A\+L\+L\+B\+A\+CK&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{T\+C\+P\+I\+P\+\_\+\+M\+S\+G\+\_\+\+C\+A\+L\+L\+B\+A\+C\+K\+\_\+\+S\+T\+A\+T\+IC@{T\+C\+P\+I\+P\+\_\+\+M\+S\+G\+\_\+\+C\+A\+L\+L\+B\+A\+C\+K\+\_\+\+S\+T\+A\+T\+IC}!openmote-\/cc2538/lwip/src/include/lwip/priv/tcpip\+\_\+priv.\+h@{openmote-\/cc2538/lwip/src/include/lwip/priv/tcpip\+\_\+priv.\+h}}\index{openmote-\/cc2538/lwip/src/include/lwip/priv/tcpip\+\_\+priv.\+h@{openmote-\/cc2538/lwip/src/include/lwip/priv/tcpip\+\_\+priv.\+h}!T\+C\+P\+I\+P\+\_\+\+M\+S\+G\+\_\+\+C\+A\+L\+L\+B\+A\+C\+K\+\_\+\+S\+T\+A\+T\+IC@{T\+C\+P\+I\+P\+\_\+\+M\+S\+G\+\_\+\+C\+A\+L\+L\+B\+A\+C\+K\+\_\+\+S\+T\+A\+T\+IC}}}\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2priv_2tcpip__priv_8h_a1e0cb5032a61055e3f4a3426ed548937a17160cdc581db556a47a57cd4efb3b78}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2priv_2tcpip__priv_8h_a1e0cb5032a61055e3f4a3426ed548937a17160cdc581db556a47a57cd4efb3b78}} 
+T\+C\+P\+I\+P\+\_\+\+M\+S\+G\+\_\+\+C\+A\+L\+L\+B\+A\+C\+K\+\_\+\+S\+T\+A\+T\+IC&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2priv_2tcpip__priv_8h_a3d42b0c46607f91aedcc7745ed466b08}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2priv_2tcpip__priv_8h_a3d42b0c46607f91aedcc7745ed466b08}} 
+\index{openmote-\/cc2538/lwip/src/include/lwip/priv/tcpip\+\_\+priv.\+h@{openmote-\/cc2538/lwip/src/include/lwip/priv/tcpip\+\_\+priv.\+h}!tcpip\+\_\+api\+\_\+call@{tcpip\+\_\+api\+\_\+call}}
+\index{tcpip\+\_\+api\+\_\+call@{tcpip\+\_\+api\+\_\+call}!openmote-\/cc2538/lwip/src/include/lwip/priv/tcpip\+\_\+priv.\+h@{openmote-\/cc2538/lwip/src/include/lwip/priv/tcpip\+\_\+priv.\+h}}
+\subsubsection{\texorpdfstring{tcpip\+\_\+api\+\_\+call()}{tcpip\_api\_call()}}
+{\footnotesize\ttfamily \hyperlink{group__infrastructure__errors_gaf02d9da80fd66b4f986d2c53d7231ddb}{err\+\_\+t} tcpip\+\_\+api\+\_\+call (\begin{DoxyParamCaption}\item[{\hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2priv_2tcpip__priv_8h_aa7ecde8c8d8012fe5c498f7ee58f9458}{tcpip\+\_\+api\+\_\+call\+\_\+fn}}]{fn,  }\item[{struct \hyperlink{structtcpip__api__call__data}{tcpip\+\_\+api\+\_\+call\+\_\+data} $\ast$}]{call }\end{DoxyParamCaption})}
+
+Synchronously calls function in T\+C\+P\+IP thread and waits for its completion. It is recommended to use L\+W\+I\+P\+\_\+\+T\+C\+P\+I\+P\+\_\+\+C\+O\+R\+E\+\_\+\+L\+O\+C\+K\+I\+NG (preferred) or L\+W\+I\+P\+\_\+\+N\+E\+T\+C\+O\+N\+N\+\_\+\+S\+E\+M\+\_\+\+P\+E\+R\+\_\+\+T\+H\+R\+E\+AD. If not, a semaphore is created and destroyed on every call which is usually an expensive/slow operation. 
+\begin{DoxyParams}{Parameters}
+{\em fn} & Function to call \\
+\hline
+{\em call} & Call parameters \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Return value from tcpip\+\_\+api\+\_\+call\+\_\+fn 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=272pt]{openmote-cc2538_2lwip_2src_2include_2lwip_2priv_2tcpip__priv_8h_a3d42b0c46607f91aedcc7745ed466b08_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2priv_2tcpip__priv_8h_a12bdf37eddcd72c4178e3ea7d370395d}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2priv_2tcpip__priv_8h_a12bdf37eddcd72c4178e3ea7d370395d}} 
+\index{openmote-\/cc2538/lwip/src/include/lwip/priv/tcpip\+\_\+priv.\+h@{openmote-\/cc2538/lwip/src/include/lwip/priv/tcpip\+\_\+priv.\+h}!tcpip\+\_\+send\+\_\+msg\+\_\+wait\+\_\+sem@{tcpip\+\_\+send\+\_\+msg\+\_\+wait\+\_\+sem}}
+\index{tcpip\+\_\+send\+\_\+msg\+\_\+wait\+\_\+sem@{tcpip\+\_\+send\+\_\+msg\+\_\+wait\+\_\+sem}!openmote-\/cc2538/lwip/src/include/lwip/priv/tcpip\+\_\+priv.\+h@{openmote-\/cc2538/lwip/src/include/lwip/priv/tcpip\+\_\+priv.\+h}}
+\subsubsection{\texorpdfstring{tcpip\+\_\+send\+\_\+msg\+\_\+wait\+\_\+sem()}{tcpip\_send\_msg\_wait\_sem()}}
+{\footnotesize\ttfamily \hyperlink{group__infrastructure__errors_gaf02d9da80fd66b4f986d2c53d7231ddb}{err\+\_\+t} tcpip\+\_\+send\+\_\+msg\+\_\+wait\+\_\+sem (\begin{DoxyParamCaption}\item[{\hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2tcpip_8h_a35203296bb838f3b493839ffc6e7285d}{tcpip\+\_\+callback\+\_\+fn}}]{fn,  }\item[{void $\ast$}]{apimsg,  }\item[{sys\+\_\+sem\+\_\+t $\ast$}]{sem }\end{DoxyParamCaption})}
+
+Sends a message to T\+C\+P\+IP thread to call a function. Caller thread blocks on on a provided semaphore, which ist N\+OT automatically signalled by T\+C\+P\+IP thread, this has to be done by the user. It is recommended to use L\+W\+I\+P\+\_\+\+T\+C\+P\+I\+P\+\_\+\+C\+O\+R\+E\+\_\+\+L\+O\+C\+K\+I\+NG since this is the way with least runtime overhead.
+
+
+\begin{DoxyParams}{Parameters}
+{\em fn} & function to be called from T\+C\+P\+IP thread \\
+\hline
+{\em apimsg} & argument to A\+PI function \\
+\hline
+{\em sem} & semaphore to wait on \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+E\+R\+R\+\_\+\+OK if the function was called, another err\+\_\+t if not 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=333pt]{openmote-cc2538_2lwip_2src_2include_2lwip_2priv_2tcpip__priv_8h_a12bdf37eddcd72c4178e3ea7d370395d_cgraph}
+\end{center}
+\end{figure}

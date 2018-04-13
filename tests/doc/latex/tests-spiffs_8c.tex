@@ -1,0 +1,68 @@
+\hypertarget{tests-spiffs_8c}{}\section{/home/ayush/\+R\+I\+O\+T/tests/unittests/tests-\/spiffs/tests-\/spiffs.c File Reference}
+\label{tests-spiffs_8c}\index{/home/ayush/\+R\+I\+O\+T/tests/unittests/tests-\/spiffs/tests-\/spiffs.\+c@{/home/ayush/\+R\+I\+O\+T/tests/unittests/tests-\/spiffs/tests-\/spiffs.\+c}}
+{\ttfamily \#include \char`\"{}fs/spiffs\+\_\+fs.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}vfs.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}mtd.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}board.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$fcntl.\+h$>$}\newline
+{\ttfamily \#include $<$errno.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}emb\+Unit/emb\+Unit.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}tests-\/spiffs.\+h\char`\"{}}\newline
+Include dependency graph for tests-\/spiffs.c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{tests-spiffs_8c__incl}
+\end{center}
+\end{figure}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{tests-spiffs_8c_a2f4c02b9bb3a11b16f4f7dfec9333481}{S\+E\+C\+T\+O\+R\+\_\+\+C\+O\+U\+NT}~4
+\item 
+\#define \hyperlink{tests-spiffs_8c_a2494f21e4797c699def86fbbbd858fb1}{P\+A\+G\+E\+\_\+\+P\+E\+R\+\_\+\+S\+E\+C\+T\+OR}~8
+\item 
+\#define \hyperlink{tests-spiffs_8c_a7d467c1d283fdfa1f2081ba1e0d01b6e}{P\+A\+G\+E\+\_\+\+S\+I\+ZE}~128
+\item 
+Test $\ast$ \hyperlink{tests-spiffs_8c_ad92b2e5bdf15c38211974ac8676cf01f}{tests\+\_\+spiffs\+\_\+tests} (void)
+\item 
+void \hyperlink{group__unittests_ga80de15b6e1bf2cc394a940d69830d042}{tests\+\_\+spiffs} (void)
+\begin{DoxyCompactList}\small\item\em The entry point of this test suite. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{tests-spiffs_8c_a2494f21e4797c699def86fbbbd858fb1}\label{tests-spiffs_8c_a2494f21e4797c699def86fbbbd858fb1}} 
+\index{tests-\/spiffs.\+c@{tests-\/spiffs.\+c}!P\+A\+G\+E\+\_\+\+P\+E\+R\+\_\+\+S\+E\+C\+T\+OR@{P\+A\+G\+E\+\_\+\+P\+E\+R\+\_\+\+S\+E\+C\+T\+OR}}
+\index{P\+A\+G\+E\+\_\+\+P\+E\+R\+\_\+\+S\+E\+C\+T\+OR@{P\+A\+G\+E\+\_\+\+P\+E\+R\+\_\+\+S\+E\+C\+T\+OR}!tests-\/spiffs.\+c@{tests-\/spiffs.\+c}}
+\subsubsection{\texorpdfstring{P\+A\+G\+E\+\_\+\+P\+E\+R\+\_\+\+S\+E\+C\+T\+OR}{PAGE\_PER\_SECTOR}}
+{\footnotesize\ttfamily \#define P\+A\+G\+E\+\_\+\+P\+E\+R\+\_\+\+S\+E\+C\+T\+OR~8}
+
+\mbox{\Hypertarget{tests-spiffs_8c_a7d467c1d283fdfa1f2081ba1e0d01b6e}\label{tests-spiffs_8c_a7d467c1d283fdfa1f2081ba1e0d01b6e}} 
+\index{tests-\/spiffs.\+c@{tests-\/spiffs.\+c}!P\+A\+G\+E\+\_\+\+S\+I\+ZE@{P\+A\+G\+E\+\_\+\+S\+I\+ZE}}
+\index{P\+A\+G\+E\+\_\+\+S\+I\+ZE@{P\+A\+G\+E\+\_\+\+S\+I\+ZE}!tests-\/spiffs.\+c@{tests-\/spiffs.\+c}}
+\subsubsection{\texorpdfstring{P\+A\+G\+E\+\_\+\+S\+I\+ZE}{PAGE\_SIZE}}
+{\footnotesize\ttfamily \#define P\+A\+G\+E\+\_\+\+S\+I\+ZE~128}
+
+\mbox{\Hypertarget{tests-spiffs_8c_a2f4c02b9bb3a11b16f4f7dfec9333481}\label{tests-spiffs_8c_a2f4c02b9bb3a11b16f4f7dfec9333481}} 
+\index{tests-\/spiffs.\+c@{tests-\/spiffs.\+c}!S\+E\+C\+T\+O\+R\+\_\+\+C\+O\+U\+NT@{S\+E\+C\+T\+O\+R\+\_\+\+C\+O\+U\+NT}}
+\index{S\+E\+C\+T\+O\+R\+\_\+\+C\+O\+U\+NT@{S\+E\+C\+T\+O\+R\+\_\+\+C\+O\+U\+NT}!tests-\/spiffs.\+c@{tests-\/spiffs.\+c}}
+\subsubsection{\texorpdfstring{S\+E\+C\+T\+O\+R\+\_\+\+C\+O\+U\+NT}{SECTOR\_COUNT}}
+{\footnotesize\ttfamily \#define S\+E\+C\+T\+O\+R\+\_\+\+C\+O\+U\+NT~4}
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{tests-spiffs_8c_ad92b2e5bdf15c38211974ac8676cf01f}\label{tests-spiffs_8c_ad92b2e5bdf15c38211974ac8676cf01f}} 
+\index{tests-\/spiffs.\+c@{tests-\/spiffs.\+c}!tests\+\_\+spiffs\+\_\+tests@{tests\+\_\+spiffs\+\_\+tests}}
+\index{tests\+\_\+spiffs\+\_\+tests@{tests\+\_\+spiffs\+\_\+tests}!tests-\/spiffs.\+c@{tests-\/spiffs.\+c}}
+\subsubsection{\texorpdfstring{tests\+\_\+spiffs\+\_\+tests()}{tests\_spiffs\_tests()}}
+{\footnotesize\ttfamily Test$\ast$ tests\+\_\+spiffs\+\_\+tests (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=279pt]{tests-spiffs_8c_ad92b2e5bdf15c38211974ac8676cf01f_icgraph}
+\end{center}
+\end{figure}

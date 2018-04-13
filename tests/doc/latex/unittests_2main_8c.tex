@@ -1,0 +1,64 @@
+\hypertarget{unittests_2main_8c}{}\section{/home/ayush/\+R\+I\+O\+T/tests/unittests/main.c File Reference}
+\label{unittests_2main_8c}\index{/home/ayush/\+R\+I\+O\+T/tests/unittests/main.\+c@{/home/ayush/\+R\+I\+O\+T/tests/unittests/main.\+c}}
+{\ttfamily \#include \char`\"{}map.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}emb\+Unit.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}xtimer.\+h\char`\"{}}\newline
+Include dependency graph for main.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=274pt]{unittests_2main_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{unittests_2main_8c_aa96d519fa53af911d709110e07e974fd}{U\+N\+C\+U\+R\+RY}(F\+UN,  A\+R\+GS)~F\+UN(A\+R\+GS)
+\item 
+\#define \hyperlink{unittests_2main_8c_a4116383199ea90e6cd6744fbe3de09cd}{R\+U\+N\+\_\+\+T\+E\+S\+T\+\_\+\+S\+U\+I\+T\+ES}(...)~\hyperlink{map_8h_ab737f5c10b510e43a4b84ffa421c409a}{M\+AP}(\hyperlink{unittests_2main_8c_aca9d0c76a21d431e62ee6213d2ecaf0f}{R\+U\+N\+\_\+\+T\+E\+S\+T\+\_\+\+S\+U\+I\+TE}, \+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+)
+\item 
+\#define \hyperlink{unittests_2main_8c_aca9d0c76a21d431e62ee6213d2ecaf0f}{R\+U\+N\+\_\+\+T\+E\+S\+T\+\_\+\+S\+U\+I\+TE}(T\+E\+S\+T\+\_\+\+S\+U\+I\+TE)
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{unittests_2main_8c_a840291bc02cba5474a4cb46a9b9566fe}{main} (void)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{unittests_2main_8c_aca9d0c76a21d431e62ee6213d2ecaf0f}\label{unittests_2main_8c_aca9d0c76a21d431e62ee6213d2ecaf0f}} 
+\index{unittests/main.\+c@{unittests/main.\+c}!R\+U\+N\+\_\+\+T\+E\+S\+T\+\_\+\+S\+U\+I\+TE@{R\+U\+N\+\_\+\+T\+E\+S\+T\+\_\+\+S\+U\+I\+TE}}
+\index{R\+U\+N\+\_\+\+T\+E\+S\+T\+\_\+\+S\+U\+I\+TE@{R\+U\+N\+\_\+\+T\+E\+S\+T\+\_\+\+S\+U\+I\+TE}!unittests/main.\+c@{unittests/main.\+c}}
+\subsubsection{\texorpdfstring{R\+U\+N\+\_\+\+T\+E\+S\+T\+\_\+\+S\+U\+I\+TE}{RUN\_TEST\_SUITE}}
+{\footnotesize\ttfamily \#define R\+U\+N\+\_\+\+T\+E\+S\+T\+\_\+\+S\+U\+I\+TE(\begin{DoxyParamCaption}\item[{}]{T\+E\+S\+T\+\_\+\+S\+U\+I\+TE }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\textcolor{keywordflow}{do} \{ \(\backslash\)
+        extern \textcolor{keywordtype}{void} tests\_##TEST\_SUITE(\textcolor{keywordtype}{void}); \(\backslash\)
+        tests\_##TEST\_SUITE(); \(\backslash\)
+    \} \textcolor{keywordflow}{while} (0);
+\end{DoxyCode}
+\mbox{\Hypertarget{unittests_2main_8c_a4116383199ea90e6cd6744fbe3de09cd}\label{unittests_2main_8c_a4116383199ea90e6cd6744fbe3de09cd}} 
+\index{unittests/main.\+c@{unittests/main.\+c}!R\+U\+N\+\_\+\+T\+E\+S\+T\+\_\+\+S\+U\+I\+T\+ES@{R\+U\+N\+\_\+\+T\+E\+S\+T\+\_\+\+S\+U\+I\+T\+ES}}
+\index{R\+U\+N\+\_\+\+T\+E\+S\+T\+\_\+\+S\+U\+I\+T\+ES@{R\+U\+N\+\_\+\+T\+E\+S\+T\+\_\+\+S\+U\+I\+T\+ES}!unittests/main.\+c@{unittests/main.\+c}}
+\subsubsection{\texorpdfstring{R\+U\+N\+\_\+\+T\+E\+S\+T\+\_\+\+S\+U\+I\+T\+ES}{RUN\_TEST\_SUITES}}
+{\footnotesize\ttfamily \#define R\+U\+N\+\_\+\+T\+E\+S\+T\+\_\+\+S\+U\+I\+T\+ES(\begin{DoxyParamCaption}\item[{}]{... }\end{DoxyParamCaption})~\hyperlink{map_8h_ab737f5c10b510e43a4b84ffa421c409a}{M\+AP}(\hyperlink{unittests_2main_8c_aca9d0c76a21d431e62ee6213d2ecaf0f}{R\+U\+N\+\_\+\+T\+E\+S\+T\+\_\+\+S\+U\+I\+TE}, \+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+)}
+
+\mbox{\Hypertarget{unittests_2main_8c_aa96d519fa53af911d709110e07e974fd}\label{unittests_2main_8c_aa96d519fa53af911d709110e07e974fd}} 
+\index{unittests/main.\+c@{unittests/main.\+c}!U\+N\+C\+U\+R\+RY@{U\+N\+C\+U\+R\+RY}}
+\index{U\+N\+C\+U\+R\+RY@{U\+N\+C\+U\+R\+RY}!unittests/main.\+c@{unittests/main.\+c}}
+\subsubsection{\texorpdfstring{U\+N\+C\+U\+R\+RY}{UNCURRY}}
+{\footnotesize\ttfamily \#define U\+N\+C\+U\+R\+RY(\begin{DoxyParamCaption}\item[{}]{F\+UN,  }\item[{}]{A\+R\+GS }\end{DoxyParamCaption})~F\+UN(A\+R\+GS)}
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{unittests_2main_8c_a840291bc02cba5474a4cb46a9b9566fe}\label{unittests_2main_8c_a840291bc02cba5474a4cb46a9b9566fe}} 
+\index{unittests/main.\+c@{unittests/main.\+c}!main@{main}}
+\index{main@{main}!unittests/main.\+c@{unittests/main.\+c}}
+\subsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+

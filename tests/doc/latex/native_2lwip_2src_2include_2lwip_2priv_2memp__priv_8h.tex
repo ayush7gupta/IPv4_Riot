@@ -1,0 +1,124 @@
+\hypertarget{native_2lwip_2src_2include_2lwip_2priv_2memp__priv_8h}{}\section{/home/ayush/\+R\+I\+O\+T/tests/lwip/bin/pkg/native/lwip/src/include/lwip/priv/memp\+\_\+priv.h File Reference}
+\label{native_2lwip_2src_2include_2lwip_2priv_2memp__priv_8h}\index{/home/ayush/\+R\+I\+O\+T/tests/lwip/bin/pkg/native/lwip/src/include/lwip/priv/memp\+\_\+priv.\+h@{/home/ayush/\+R\+I\+O\+T/tests/lwip/bin/pkg/native/lwip/src/include/lwip/priv/memp\+\_\+priv.\+h}}
+{\ttfamily \#include \char`\"{}lwip/opt.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}lwip/mem.\+h\char`\"{}}\newline
+Include dependency graph for memp\+\_\+priv.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=245pt]{native_2lwip_2src_2include_2lwip_2priv_2memp__priv_8h__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structmemp}{memp}
+\item 
+struct \hyperlink{structmemp__desc}{memp\+\_\+desc}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{native_2lwip_2src_2include_2lwip_2priv_2memp__priv_8h_a7f8c378e0581aa2dc491cff52ae4fce2}{M\+E\+M\+P\+\_\+\+S\+I\+ZE}~0
+\item 
+\#define \hyperlink{native_2lwip_2src_2include_2lwip_2priv_2memp__priv_8h_a12e0cfbac9c8263e5a1fb319b92338e7}{M\+E\+M\+P\+\_\+\+A\+L\+I\+G\+N\+\_\+\+S\+I\+ZE}(x)~(\hyperlink{group__compiler__abstraction_gaef204be511fd32f681b55abc08e9ae18}{L\+W\+I\+P\+\_\+\+M\+E\+M\+\_\+\+A\+L\+I\+G\+N\+\_\+\+S\+I\+ZE}(x))
+\item 
+\#define \hyperlink{native_2lwip_2src_2include_2lwip_2priv_2memp__priv_8h_aabec8ab3418486aed704fb8bb933da42}{D\+E\+C\+L\+A\+R\+E\+\_\+\+L\+W\+I\+P\+\_\+\+M\+E\+M\+P\+O\+O\+L\+\_\+\+D\+E\+SC}(desc)
+\item 
+\#define \hyperlink{native_2lwip_2src_2include_2lwip_2priv_2memp__priv_8h_a9373cb7cc6e658a60cec6ca57173a72d}{L\+W\+I\+P\+\_\+\+M\+E\+M\+P\+O\+O\+L\+\_\+\+D\+E\+C\+L\+A\+R\+E\+\_\+\+S\+T\+A\+T\+S\+\_\+\+I\+N\+S\+T\+A\+N\+CE}(name)
+\item 
+\#define \hyperlink{native_2lwip_2src_2include_2lwip_2priv_2memp__priv_8h_a46723c1d1d900d5f23e5bde91d22d8be}{L\+W\+I\+P\+\_\+\+M\+E\+M\+P\+O\+O\+L\+\_\+\+D\+E\+C\+L\+A\+R\+E\+\_\+\+S\+T\+A\+T\+S\+\_\+\+R\+E\+F\+E\+R\+E\+N\+CE}(name)
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{native_2lwip_2src_2include_2lwip_2priv_2memp__priv_8h_a6416303426d05526bed33f241fa6ecd7}{memp\+\_\+init\+\_\+pool} (const struct \hyperlink{structmemp__desc}{memp\+\_\+desc} $\ast$desc)
+\item 
+void $\ast$ \hyperlink{native_2lwip_2src_2include_2lwip_2priv_2memp__priv_8h_a348c83ee972f1edf7296a1cdf1d75f22}{memp\+\_\+malloc\+\_\+pool} (const struct \hyperlink{structmemp__desc}{memp\+\_\+desc} $\ast$desc)
+\item 
+void \hyperlink{native_2lwip_2src_2include_2lwip_2priv_2memp__priv_8h_a62f8c3c907743e34eee3cdac7fa1eaa5}{memp\+\_\+free\+\_\+pool} (const struct \hyperlink{structmemp__desc}{memp\+\_\+desc} $\ast$desc, void $\ast$\hyperlink{structmem}{mem})
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+memory pools lw\+IP internal implementations (do not use in application code) 
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{native_2lwip_2src_2include_2lwip_2priv_2memp__priv_8h_aabec8ab3418486aed704fb8bb933da42}\label{native_2lwip_2src_2include_2lwip_2priv_2memp__priv_8h_aabec8ab3418486aed704fb8bb933da42}} 
+\index{native/lwip/src/include/lwip/priv/memp\+\_\+priv.\+h@{native/lwip/src/include/lwip/priv/memp\+\_\+priv.\+h}!D\+E\+C\+L\+A\+R\+E\+\_\+\+L\+W\+I\+P\+\_\+\+M\+E\+M\+P\+O\+O\+L\+\_\+\+D\+E\+SC@{D\+E\+C\+L\+A\+R\+E\+\_\+\+L\+W\+I\+P\+\_\+\+M\+E\+M\+P\+O\+O\+L\+\_\+\+D\+E\+SC}}
+\index{D\+E\+C\+L\+A\+R\+E\+\_\+\+L\+W\+I\+P\+\_\+\+M\+E\+M\+P\+O\+O\+L\+\_\+\+D\+E\+SC@{D\+E\+C\+L\+A\+R\+E\+\_\+\+L\+W\+I\+P\+\_\+\+M\+E\+M\+P\+O\+O\+L\+\_\+\+D\+E\+SC}!native/lwip/src/include/lwip/priv/memp\+\_\+priv.\+h@{native/lwip/src/include/lwip/priv/memp\+\_\+priv.\+h}}
+\subsubsection{\texorpdfstring{D\+E\+C\+L\+A\+R\+E\+\_\+\+L\+W\+I\+P\+\_\+\+M\+E\+M\+P\+O\+O\+L\+\_\+\+D\+E\+SC}{DECLARE\_LWIP\_MEMPOOL\_DESC}}
+{\footnotesize\ttfamily \#define D\+E\+C\+L\+A\+R\+E\+\_\+\+L\+W\+I\+P\+\_\+\+M\+E\+M\+P\+O\+O\+L\+\_\+\+D\+E\+SC(\begin{DoxyParamCaption}\item[{}]{desc }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{native_2lwip_2src_2include_2lwip_2priv_2memp__priv_8h_a9373cb7cc6e658a60cec6ca57173a72d}\label{native_2lwip_2src_2include_2lwip_2priv_2memp__priv_8h_a9373cb7cc6e658a60cec6ca57173a72d}} 
+\index{native/lwip/src/include/lwip/priv/memp\+\_\+priv.\+h@{native/lwip/src/include/lwip/priv/memp\+\_\+priv.\+h}!L\+W\+I\+P\+\_\+\+M\+E\+M\+P\+O\+O\+L\+\_\+\+D\+E\+C\+L\+A\+R\+E\+\_\+\+S\+T\+A\+T\+S\+\_\+\+I\+N\+S\+T\+A\+N\+CE@{L\+W\+I\+P\+\_\+\+M\+E\+M\+P\+O\+O\+L\+\_\+\+D\+E\+C\+L\+A\+R\+E\+\_\+\+S\+T\+A\+T\+S\+\_\+\+I\+N\+S\+T\+A\+N\+CE}}
+\index{L\+W\+I\+P\+\_\+\+M\+E\+M\+P\+O\+O\+L\+\_\+\+D\+E\+C\+L\+A\+R\+E\+\_\+\+S\+T\+A\+T\+S\+\_\+\+I\+N\+S\+T\+A\+N\+CE@{L\+W\+I\+P\+\_\+\+M\+E\+M\+P\+O\+O\+L\+\_\+\+D\+E\+C\+L\+A\+R\+E\+\_\+\+S\+T\+A\+T\+S\+\_\+\+I\+N\+S\+T\+A\+N\+CE}!native/lwip/src/include/lwip/priv/memp\+\_\+priv.\+h@{native/lwip/src/include/lwip/priv/memp\+\_\+priv.\+h}}
+\subsubsection{\texorpdfstring{L\+W\+I\+P\+\_\+\+M\+E\+M\+P\+O\+O\+L\+\_\+\+D\+E\+C\+L\+A\+R\+E\+\_\+\+S\+T\+A\+T\+S\+\_\+\+I\+N\+S\+T\+A\+N\+CE}{LWIP\_MEMPOOL\_DECLARE\_STATS\_INSTANCE}}
+{\footnotesize\ttfamily \#define L\+W\+I\+P\+\_\+\+M\+E\+M\+P\+O\+O\+L\+\_\+\+D\+E\+C\+L\+A\+R\+E\+\_\+\+S\+T\+A\+T\+S\+\_\+\+I\+N\+S\+T\+A\+N\+CE(\begin{DoxyParamCaption}\item[{}]{name }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{native_2lwip_2src_2include_2lwip_2priv_2memp__priv_8h_a46723c1d1d900d5f23e5bde91d22d8be}\label{native_2lwip_2src_2include_2lwip_2priv_2memp__priv_8h_a46723c1d1d900d5f23e5bde91d22d8be}} 
+\index{native/lwip/src/include/lwip/priv/memp\+\_\+priv.\+h@{native/lwip/src/include/lwip/priv/memp\+\_\+priv.\+h}!L\+W\+I\+P\+\_\+\+M\+E\+M\+P\+O\+O\+L\+\_\+\+D\+E\+C\+L\+A\+R\+E\+\_\+\+S\+T\+A\+T\+S\+\_\+\+R\+E\+F\+E\+R\+E\+N\+CE@{L\+W\+I\+P\+\_\+\+M\+E\+M\+P\+O\+O\+L\+\_\+\+D\+E\+C\+L\+A\+R\+E\+\_\+\+S\+T\+A\+T\+S\+\_\+\+R\+E\+F\+E\+R\+E\+N\+CE}}
+\index{L\+W\+I\+P\+\_\+\+M\+E\+M\+P\+O\+O\+L\+\_\+\+D\+E\+C\+L\+A\+R\+E\+\_\+\+S\+T\+A\+T\+S\+\_\+\+R\+E\+F\+E\+R\+E\+N\+CE@{L\+W\+I\+P\+\_\+\+M\+E\+M\+P\+O\+O\+L\+\_\+\+D\+E\+C\+L\+A\+R\+E\+\_\+\+S\+T\+A\+T\+S\+\_\+\+R\+E\+F\+E\+R\+E\+N\+CE}!native/lwip/src/include/lwip/priv/memp\+\_\+priv.\+h@{native/lwip/src/include/lwip/priv/memp\+\_\+priv.\+h}}
+\subsubsection{\texorpdfstring{L\+W\+I\+P\+\_\+\+M\+E\+M\+P\+O\+O\+L\+\_\+\+D\+E\+C\+L\+A\+R\+E\+\_\+\+S\+T\+A\+T\+S\+\_\+\+R\+E\+F\+E\+R\+E\+N\+CE}{LWIP\_MEMPOOL\_DECLARE\_STATS\_REFERENCE}}
+{\footnotesize\ttfamily \#define L\+W\+I\+P\+\_\+\+M\+E\+M\+P\+O\+O\+L\+\_\+\+D\+E\+C\+L\+A\+R\+E\+\_\+\+S\+T\+A\+T\+S\+\_\+\+R\+E\+F\+E\+R\+E\+N\+CE(\begin{DoxyParamCaption}\item[{}]{name }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{native_2lwip_2src_2include_2lwip_2priv_2memp__priv_8h_a12e0cfbac9c8263e5a1fb319b92338e7}\label{native_2lwip_2src_2include_2lwip_2priv_2memp__priv_8h_a12e0cfbac9c8263e5a1fb319b92338e7}} 
+\index{native/lwip/src/include/lwip/priv/memp\+\_\+priv.\+h@{native/lwip/src/include/lwip/priv/memp\+\_\+priv.\+h}!M\+E\+M\+P\+\_\+\+A\+L\+I\+G\+N\+\_\+\+S\+I\+ZE@{M\+E\+M\+P\+\_\+\+A\+L\+I\+G\+N\+\_\+\+S\+I\+ZE}}
+\index{M\+E\+M\+P\+\_\+\+A\+L\+I\+G\+N\+\_\+\+S\+I\+ZE@{M\+E\+M\+P\+\_\+\+A\+L\+I\+G\+N\+\_\+\+S\+I\+ZE}!native/lwip/src/include/lwip/priv/memp\+\_\+priv.\+h@{native/lwip/src/include/lwip/priv/memp\+\_\+priv.\+h}}
+\subsubsection{\texorpdfstring{M\+E\+M\+P\+\_\+\+A\+L\+I\+G\+N\+\_\+\+S\+I\+ZE}{MEMP\_ALIGN\_SIZE}}
+{\footnotesize\ttfamily \#define M\+E\+M\+P\+\_\+\+A\+L\+I\+G\+N\+\_\+\+S\+I\+ZE(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~(\hyperlink{group__compiler__abstraction_gaef204be511fd32f681b55abc08e9ae18}{L\+W\+I\+P\+\_\+\+M\+E\+M\+\_\+\+A\+L\+I\+G\+N\+\_\+\+S\+I\+ZE}(x))}
+
+\mbox{\Hypertarget{native_2lwip_2src_2include_2lwip_2priv_2memp__priv_8h_a7f8c378e0581aa2dc491cff52ae4fce2}\label{native_2lwip_2src_2include_2lwip_2priv_2memp__priv_8h_a7f8c378e0581aa2dc491cff52ae4fce2}} 
+\index{native/lwip/src/include/lwip/priv/memp\+\_\+priv.\+h@{native/lwip/src/include/lwip/priv/memp\+\_\+priv.\+h}!M\+E\+M\+P\+\_\+\+S\+I\+ZE@{M\+E\+M\+P\+\_\+\+S\+I\+ZE}}
+\index{M\+E\+M\+P\+\_\+\+S\+I\+ZE@{M\+E\+M\+P\+\_\+\+S\+I\+ZE}!native/lwip/src/include/lwip/priv/memp\+\_\+priv.\+h@{native/lwip/src/include/lwip/priv/memp\+\_\+priv.\+h}}
+\subsubsection{\texorpdfstring{M\+E\+M\+P\+\_\+\+S\+I\+ZE}{MEMP\_SIZE}}
+{\footnotesize\ttfamily \#define M\+E\+M\+P\+\_\+\+S\+I\+ZE~0}
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{native_2lwip_2src_2include_2lwip_2priv_2memp__priv_8h_a62f8c3c907743e34eee3cdac7fa1eaa5}\label{native_2lwip_2src_2include_2lwip_2priv_2memp__priv_8h_a62f8c3c907743e34eee3cdac7fa1eaa5}} 
+\index{native/lwip/src/include/lwip/priv/memp\+\_\+priv.\+h@{native/lwip/src/include/lwip/priv/memp\+\_\+priv.\+h}!memp\+\_\+free\+\_\+pool@{memp\+\_\+free\+\_\+pool}}
+\index{memp\+\_\+free\+\_\+pool@{memp\+\_\+free\+\_\+pool}!native/lwip/src/include/lwip/priv/memp\+\_\+priv.\+h@{native/lwip/src/include/lwip/priv/memp\+\_\+priv.\+h}}
+\subsubsection{\texorpdfstring{memp\+\_\+free\+\_\+pool()}{memp\_free\_pool()}}
+{\footnotesize\ttfamily void memp\+\_\+free\+\_\+pool (\begin{DoxyParamCaption}\item[{const struct \hyperlink{structmemp__desc}{memp\+\_\+desc} $\ast$}]{desc,  }\item[{void $\ast$}]{mem }\end{DoxyParamCaption})}
+
+Put a custom pool element back into its pool.
+
+
+\begin{DoxyParams}{Parameters}
+{\em desc} & the pool where to put mem \\
+\hline
+{\em mem} & the memp element to free \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{native_2lwip_2src_2include_2lwip_2priv_2memp__priv_8h_a6416303426d05526bed33f241fa6ecd7}\label{native_2lwip_2src_2include_2lwip_2priv_2memp__priv_8h_a6416303426d05526bed33f241fa6ecd7}} 
+\index{native/lwip/src/include/lwip/priv/memp\+\_\+priv.\+h@{native/lwip/src/include/lwip/priv/memp\+\_\+priv.\+h}!memp\+\_\+init\+\_\+pool@{memp\+\_\+init\+\_\+pool}}
+\index{memp\+\_\+init\+\_\+pool@{memp\+\_\+init\+\_\+pool}!native/lwip/src/include/lwip/priv/memp\+\_\+priv.\+h@{native/lwip/src/include/lwip/priv/memp\+\_\+priv.\+h}}
+\subsubsection{\texorpdfstring{memp\+\_\+init\+\_\+pool()}{memp\_init\_pool()}}
+{\footnotesize\ttfamily void memp\+\_\+init\+\_\+pool (\begin{DoxyParamCaption}\item[{const struct \hyperlink{structmemp__desc}{memp\+\_\+desc} $\ast$}]{desc }\end{DoxyParamCaption})}
+
+Initialize custom memory pool. Related functions\+: memp\+\_\+malloc\+\_\+pool, memp\+\_\+free\+\_\+pool
+
+
+\begin{DoxyParams}{Parameters}
+{\em desc} & pool to initialize \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{native_2lwip_2src_2include_2lwip_2priv_2memp__priv_8h_a348c83ee972f1edf7296a1cdf1d75f22}\label{native_2lwip_2src_2include_2lwip_2priv_2memp__priv_8h_a348c83ee972f1edf7296a1cdf1d75f22}} 
+\index{native/lwip/src/include/lwip/priv/memp\+\_\+priv.\+h@{native/lwip/src/include/lwip/priv/memp\+\_\+priv.\+h}!memp\+\_\+malloc\+\_\+pool@{memp\+\_\+malloc\+\_\+pool}}
+\index{memp\+\_\+malloc\+\_\+pool@{memp\+\_\+malloc\+\_\+pool}!native/lwip/src/include/lwip/priv/memp\+\_\+priv.\+h@{native/lwip/src/include/lwip/priv/memp\+\_\+priv.\+h}}
+\subsubsection{\texorpdfstring{memp\+\_\+malloc\+\_\+pool()}{memp\_malloc\_pool()}}
+{\footnotesize\ttfamily void$\ast$ memp\+\_\+malloc\+\_\+pool (\begin{DoxyParamCaption}\item[{const struct \hyperlink{structmemp__desc}{memp\+\_\+desc} $\ast$}]{desc }\end{DoxyParamCaption})}
+
+Get an element from a custom pool.
+
+
+\begin{DoxyParams}{Parameters}
+{\em desc} & the pool to get an element from\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a pointer to the allocated memory or a N\+U\+LL pointer on error 
+\end{DoxyReturn}

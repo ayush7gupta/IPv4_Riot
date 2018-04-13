@@ -1,0 +1,378 @@
+\hypertarget{native_2lwip_2src_2include_2lwip_2ip__addr_8h}{}\section{/home/ayush/\+R\+I\+O\+T/tests/lwip/bin/pkg/native/lwip/src/include/lwip/ip\+\_\+addr.h File Reference}
+\label{native_2lwip_2src_2include_2lwip_2ip__addr_8h}\index{/home/ayush/\+R\+I\+O\+T/tests/lwip/bin/pkg/native/lwip/src/include/lwip/ip\+\_\+addr.\+h@{/home/ayush/\+R\+I\+O\+T/tests/lwip/bin/pkg/native/lwip/src/include/lwip/ip\+\_\+addr.\+h}}
+{\ttfamily \#include \char`\"{}lwip/opt.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}lwip/def.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}lwip/ip4\+\_\+addr.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}lwip/ip6\+\_\+addr.\+h\char`\"{}}\newline
+Include dependency graph for ip\+\_\+addr.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{native_2lwip_2src_2include_2lwip_2ip__addr_8h__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{native_2lwip_2src_2include_2lwip_2ip__addr_8h_a234cb2e45cd58a80bc3ef433d23f4c57}{I\+P\+\_\+\+A\+D\+D\+R\+\_\+\+P\+C\+B\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+M\+A\+T\+CH}(addr,  pcb)~1
+\item 
+\#define \hyperlink{native_2lwip_2src_2include_2lwip_2ip__addr_8h_a81ed1fbe375d867d6e77c83976c07671}{I\+P\+\_\+\+A\+D\+D\+R\+\_\+\+P\+C\+B\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+M\+A\+T\+C\+H\+\_\+\+E\+X\+A\+CT}(pcb,  ipaddr)~1
+\item 
+\#define \hyperlink{native_2lwip_2src_2include_2lwip_2ip__addr_8h_a1266e500b1db0b7cdc4b269cace49746}{I\+P\+A\+D\+D\+R6\+\_\+\+I\+N\+IT}(a,  b,  c,  d)~\{ \{ a, b, c, d \} \}
+\item 
+\#define \hyperlink{native_2lwip_2src_2include_2lwip_2ip__addr_8h_adaff748da2b808995993dd3db5420f08}{I\+P\+A\+D\+D\+R6\+\_\+\+I\+N\+I\+T\+\_\+\+H\+O\+ST}(a,  b,  c,  d)~\{ \{ \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2def_8h_afea9c21aa1f56180cdf6fb42ef14a294}{P\+P\+\_\+\+H\+T\+O\+NL}(a), \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2def_8h_afea9c21aa1f56180cdf6fb42ef14a294}{P\+P\+\_\+\+H\+T\+O\+NL}(b), \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2def_8h_afea9c21aa1f56180cdf6fb42ef14a294}{P\+P\+\_\+\+H\+T\+O\+NL}(c), \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2def_8h_afea9c21aa1f56180cdf6fb42ef14a294}{P\+P\+\_\+\+H\+T\+O\+NL}(d) \} \}
+\item 
+\#define \hyperlink{native_2lwip_2src_2include_2lwip_2ip__addr_8h_ab1a059f07bd9c50aa58447d963b823a1}{I\+P\+\_\+\+I\+S\+\_\+\+V4\+\_\+\+V\+AL}(ipaddr)~0
+\item 
+\#define \hyperlink{native_2lwip_2src_2include_2lwip_2ip__addr_8h_a1578e34703e86711a7fb7dcc3857004d}{I\+P\+\_\+\+I\+S\+\_\+\+V6\+\_\+\+V\+AL}(ipaddr)~1
+\item 
+\#define \hyperlink{native_2lwip_2src_2include_2lwip_2ip__addr_8h_abee5dab2191bb0f3355d7f30d1496f24}{I\+P\+\_\+\+I\+S\+\_\+\+V4}(ipaddr)~0
+\item 
+\#define \hyperlink{native_2lwip_2src_2include_2lwip_2ip__addr_8h_a9bac7e938757f1d24df2404e8b57cb7d}{I\+P\+\_\+\+I\+S\+\_\+\+V6}(ipaddr)~1
+\item 
+\#define \hyperlink{native_2lwip_2src_2include_2lwip_2ip__addr_8h_a83b17dbf7d1faf5c8f8c20b039db8bb8}{I\+P\+\_\+\+I\+S\+\_\+\+A\+N\+Y\+\_\+\+T\+Y\+P\+E\+\_\+\+V\+AL}(ipaddr)~0
+\item 
+\#define \hyperlink{native_2lwip_2src_2include_2lwip_2ip__addr_8h_aaa800ce1929a1bb0f3d64bebd44e4051}{I\+P\+\_\+\+S\+E\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+V\+AL}(ipaddr,  iptype)
+\item 
+\#define \hyperlink{native_2lwip_2src_2include_2lwip_2ip__addr_8h_a4d435d88b2eaebaea1ef75ee586204fd}{I\+P\+\_\+\+S\+E\+T\+\_\+\+T\+Y\+PE}(ipaddr,  iptype)
+\item 
+\#define \hyperlink{native_2lwip_2src_2include_2lwip_2ip__addr_8h_aa2d07afd28376f89da2cdcf5d2497ce7}{I\+P\+\_\+\+G\+E\+T\+\_\+\+T\+Y\+PE}(ipaddr)~\hyperlink{group__ipaddr_ggaf2142f0dfdcc938e2db16aa745ed585caae510fd8ec7fe405b594b57af61f9a02}{I\+P\+A\+D\+D\+R\+\_\+\+T\+Y\+P\+E\+\_\+\+V6}
+\item 
+\#define \hyperlink{native_2lwip_2src_2include_2lwip_2ip__addr_8h_a06e75bcd198012b5ba39480c233608bd}{ip\+\_\+2\+\_\+ip6}(ipaddr)~(ipaddr)
+\item 
+\#define \hyperlink{native_2lwip_2src_2include_2lwip_2ip__addr_8h_a9ee53b601b89dcb517496ba0bccf9bd0}{I\+P\+\_\+\+A\+D\+D\+R6}(ipaddr,  i0,  i1,  i2,  i3)~I\+P6\+\_\+\+A\+D\+DR(ipaddr,i0,i1,i2,i3)
+\item 
+\#define \hyperlink{native_2lwip_2src_2include_2lwip_2ip__addr_8h_abfb1ce44d6a8791336bf3ac06aa086ca}{I\+P\+\_\+\+A\+D\+D\+R6\+\_\+\+H\+O\+ST}(ipaddr,  i0,  i1,  i2,  i3)~\hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2ip__addr_8h_a9ee53b601b89dcb517496ba0bccf9bd0}{I\+P\+\_\+\+A\+D\+D\+R6}(ipaddr,\hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2def_8h_afea9c21aa1f56180cdf6fb42ef14a294}{P\+P\+\_\+\+H\+T\+O\+NL}(i0),\hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2def_8h_afea9c21aa1f56180cdf6fb42ef14a294}{P\+P\+\_\+\+H\+T\+O\+NL}(i1),\hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2def_8h_afea9c21aa1f56180cdf6fb42ef14a294}{P\+P\+\_\+\+H\+T\+O\+NL}(i2),\hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2def_8h_afea9c21aa1f56180cdf6fb42ef14a294}{P\+P\+\_\+\+H\+T\+O\+NL}(i3))
+\item 
+\#define \hyperlink{native_2lwip_2src_2include_2lwip_2ip__addr_8h_a77a933975db287f6aa5c2e70249ba18f}{ip\+\_\+addr\+\_\+copy}(dest,  src)~ip6\+\_\+addr\+\_\+copy(dest, src)
+\item 
+\#define \hyperlink{native_2lwip_2src_2include_2lwip_2ip__addr_8h_abe6f7908ce8a91dc587e2ebc2172e651}{ip\+\_\+addr\+\_\+copy\+\_\+from\+\_\+ip6}(dest,  src)~ip6\+\_\+addr\+\_\+copy(dest, src)
+\item 
+\#define \hyperlink{native_2lwip_2src_2include_2lwip_2ip__addr_8h_a40db7feae2b92f7a7a01d65a85b06e18}{ip\+\_\+addr\+\_\+set}(dest,  src)~ip6\+\_\+addr\+\_\+set(dest, src)
+\item 
+\#define \hyperlink{native_2lwip_2src_2include_2lwip_2ip__addr_8h_aea5e4795598bc33fa2db1773c8e6fbac}{ip\+\_\+addr\+\_\+set\+\_\+ipaddr}(dest,  src)~ip6\+\_\+addr\+\_\+set(dest, src)
+\item 
+\#define \hyperlink{native_2lwip_2src_2include_2lwip_2ip__addr_8h_aae7edb585c062ae03bfbd3af7bf671bc}{ip\+\_\+addr\+\_\+set\+\_\+zero}(ipaddr)~ip6\+\_\+addr\+\_\+set\+\_\+zero(ipaddr)
+\item 
+\#define \hyperlink{native_2lwip_2src_2include_2lwip_2ip__addr_8h_afb3a0e5241683aff573e195f31ba8845}{ip\+\_\+addr\+\_\+set\+\_\+zero\+\_\+ip6}(ipaddr)~ip6\+\_\+addr\+\_\+set\+\_\+zero(ipaddr)
+\item 
+\#define \hyperlink{native_2lwip_2src_2include_2lwip_2ip__addr_8h_a8853fce54b1816dca3af90b48677e673}{ip\+\_\+addr\+\_\+set\+\_\+any}(is\+\_\+ipv6,  ipaddr)~ip6\+\_\+addr\+\_\+set\+\_\+any(ipaddr)
+\item 
+\#define \hyperlink{native_2lwip_2src_2include_2lwip_2ip__addr_8h_a8f9d56ac85cd87338a1823e4a58ba1da}{ip\+\_\+addr\+\_\+set\+\_\+loopback}(is\+\_\+ipv6,  ipaddr)~ip6\+\_\+addr\+\_\+set\+\_\+loopback(ipaddr)
+\item 
+\#define \hyperlink{native_2lwip_2src_2include_2lwip_2ip__addr_8h_a3528798be1d2f1ec6a6bccd35694edce}{ip\+\_\+addr\+\_\+set\+\_\+hton}(dest,  src)~ip6\+\_\+addr\+\_\+set\+\_\+hton(dest, src)
+\item 
+\#define \hyperlink{native_2lwip_2src_2include_2lwip_2ip__addr_8h_a535520cd0a0d08a4c4c29b331c55830f}{ip\+\_\+addr\+\_\+get\+\_\+network}(target,  host,  mask)~ip6\+\_\+addr\+\_\+set\+\_\+zero(target)
+\item 
+\#define \hyperlink{native_2lwip_2src_2include_2lwip_2ip__addr_8h_a3a2123f0bbf6fe843c8542e349c680eb}{ip\+\_\+addr\+\_\+netcmp}(addr1,  addr2,  mask)~0
+\item 
+\#define \hyperlink{native_2lwip_2src_2include_2lwip_2ip__addr_8h_a008c9c92d770cc030ea054e6b259835a}{ip\+\_\+addr\+\_\+cmp}(addr1,  addr2)~ip6\+\_\+addr\+\_\+cmp(addr1, addr2)
+\item 
+\#define \hyperlink{native_2lwip_2src_2include_2lwip_2ip__addr_8h_a279118890e6a90aa740051fb8b0cc5f4}{ip\+\_\+addr\+\_\+isany}(ipaddr)~ip6\+\_\+addr\+\_\+isany(ipaddr)
+\item 
+\#define \hyperlink{native_2lwip_2src_2include_2lwip_2ip__addr_8h_acd8f5aa151cff966fd28368b85f38c05}{ip\+\_\+addr\+\_\+isany\+\_\+val}(ipaddr)~ip6\+\_\+addr\+\_\+isany\+\_\+val(ipaddr)
+\item 
+\#define \hyperlink{native_2lwip_2src_2include_2lwip_2ip__addr_8h_a0fc8bf6662809274750868683b3a422e}{ip\+\_\+addr\+\_\+isloopback}(ipaddr)~ip6\+\_\+addr\+\_\+isloopback(ipaddr)
+\item 
+\#define \hyperlink{native_2lwip_2src_2include_2lwip_2ip__addr_8h_a33bc079baaf513a9a7381b9531a1f653}{ip\+\_\+addr\+\_\+islinklocal}(ipaddr)~ip6\+\_\+addr\+\_\+islinklocal(ipaddr)
+\item 
+\#define \hyperlink{native_2lwip_2src_2include_2lwip_2ip__addr_8h_a11275b39f9b8e876e8124a16410e8840}{ip\+\_\+addr\+\_\+isbroadcast}(addr,  \hyperlink{structnetif}{netif})~0
+\item 
+\#define \hyperlink{native_2lwip_2src_2include_2lwip_2ip__addr_8h_a2170d3ee13dd22722222228e7b1c5752}{ip\+\_\+addr\+\_\+ismulticast}(ipaddr)~ip6\+\_\+addr\+\_\+ismulticast(ipaddr)
+\item 
+\#define \hyperlink{native_2lwip_2src_2include_2lwip_2ip__addr_8h_af7d84bce2fb861a97f3047ecd69ab018}{ip\+\_\+addr\+\_\+debug\+\_\+print}(debug,  ipaddr)~ip6\+\_\+addr\+\_\+debug\+\_\+print(debug, ipaddr)
+\item 
+\#define \hyperlink{native_2lwip_2src_2include_2lwip_2ip__addr_8h_ac3d7eec8027db2203117e6f30df8fba5}{ip\+\_\+addr\+\_\+debug\+\_\+print\+\_\+val}(debug,  ipaddr)~ip6\+\_\+addr\+\_\+debug\+\_\+print\+\_\+val(debug, ipaddr)
+\item 
+\#define \hyperlink{native_2lwip_2src_2include_2lwip_2ip__addr_8h_ad345f630acbf2a01536d10d3aacee04f}{ipaddr\+\_\+ntoa}(ipaddr)~ip6addr\+\_\+ntoa(ipaddr)
+\item 
+\#define \hyperlink{native_2lwip_2src_2include_2lwip_2ip__addr_8h_ac5a2215f804102c72f59dcdf1ccf6449}{ipaddr\+\_\+ntoa\+\_\+r}(ipaddr,  buf,  buflen)~ip6addr\+\_\+ntoa\+\_\+r(ipaddr, buf, buflen)
+\item 
+\#define \hyperlink{native_2lwip_2src_2include_2lwip_2ip__addr_8h_a9b9fae6ad88a288c3c6da050644e2a48}{ipaddr\+\_\+aton}(cp,  addr)~ip6addr\+\_\+aton(cp, addr)
+\item 
+\#define \hyperlink{native_2lwip_2src_2include_2lwip_2ip__addr_8h_a8619278bcbf705844f584f36972fc758}{I\+P\+A\+D\+D\+R\+\_\+\+S\+T\+R\+L\+E\+N\+\_\+\+M\+AX}~I\+P6\+A\+D\+D\+R\+\_\+\+S\+T\+R\+L\+E\+N\+\_\+\+M\+AX
+\item 
+\#define \hyperlink{native_2lwip_2src_2include_2lwip_2ip__addr_8h_ae221446ab455b8a1a0d2a4153b9c1bb3}{I\+P46\+\_\+\+A\+D\+D\+R\+\_\+\+A\+NY}(type)~(I\+P6\+\_\+\+A\+D\+D\+R\+\_\+\+A\+NY)
+\item 
+\#define \hyperlink{native_2lwip_2src_2include_2lwip_2ip__addr_8h_abe43b154533b73585c4e58f568370ede}{I\+P\+\_\+\+A\+N\+Y\+\_\+\+T\+Y\+PE}~I\+P\+\_\+\+A\+D\+D\+R\+\_\+\+A\+NY
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef ip6\+\_\+addr\+\_\+t \hyperlink{native_2lwip_2src_2include_2lwip_2ip__addr_8h_a88b43639738c4de2d3cd22e3a1fd7696}{ip\+\_\+addr\+\_\+t}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{group__ipaddr_gaf2142f0dfdcc938e2db16aa745ed585c}{lwip\+\_\+ip\+\_\+addr\+\_\+type} \{ \newline
+\hyperlink{group__ipaddr_ggaf2142f0dfdcc938e2db16aa745ed585cace47fa82608deeb1c1c7c2c891eb5049}{I\+P\+A\+D\+D\+R\+\_\+\+T\+Y\+P\+E\+\_\+\+V4} = 0U, 
+\hyperlink{group__ipaddr_ggaf2142f0dfdcc938e2db16aa745ed585caae510fd8ec7fe405b594b57af61f9a02}{I\+P\+A\+D\+D\+R\+\_\+\+T\+Y\+P\+E\+\_\+\+V6} = 6U, 
+\hyperlink{group__ipaddr_ggaf2142f0dfdcc938e2db16aa745ed585cac6b2c99cf920e08efcb55dc40e42944e}{I\+P\+A\+D\+D\+R\+\_\+\+T\+Y\+P\+E\+\_\+\+A\+NY} = 46U, 
+\hyperlink{group__ipaddr_ggaf2142f0dfdcc938e2db16aa745ed585cace47fa82608deeb1c1c7c2c891eb5049}{I\+P\+A\+D\+D\+R\+\_\+\+T\+Y\+P\+E\+\_\+\+V4} = 0U, 
+\newline
+\hyperlink{group__ipaddr_ggaf2142f0dfdcc938e2db16aa745ed585caae510fd8ec7fe405b594b57af61f9a02}{I\+P\+A\+D\+D\+R\+\_\+\+T\+Y\+P\+E\+\_\+\+V6} = 6U, 
+\hyperlink{group__ipaddr_ggaf2142f0dfdcc938e2db16aa745ed585cac6b2c99cf920e08efcb55dc40e42944e}{I\+P\+A\+D\+D\+R\+\_\+\+T\+Y\+P\+E\+\_\+\+A\+NY} = 46U
+ \}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+IP address A\+PI (common I\+Pv4 and I\+Pv6) 
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{native_2lwip_2src_2include_2lwip_2ip__addr_8h_ae221446ab455b8a1a0d2a4153b9c1bb3}\label{native_2lwip_2src_2include_2lwip_2ip__addr_8h_ae221446ab455b8a1a0d2a4153b9c1bb3}} 
+\index{native/lwip/src/include/lwip/ip\+\_\+addr.\+h@{native/lwip/src/include/lwip/ip\+\_\+addr.\+h}!I\+P46\+\_\+\+A\+D\+D\+R\+\_\+\+A\+NY@{I\+P46\+\_\+\+A\+D\+D\+R\+\_\+\+A\+NY}}
+\index{I\+P46\+\_\+\+A\+D\+D\+R\+\_\+\+A\+NY@{I\+P46\+\_\+\+A\+D\+D\+R\+\_\+\+A\+NY}!native/lwip/src/include/lwip/ip\+\_\+addr.\+h@{native/lwip/src/include/lwip/ip\+\_\+addr.\+h}}
+\subsubsection{\texorpdfstring{I\+P46\+\_\+\+A\+D\+D\+R\+\_\+\+A\+NY}{IP46\_ADDR\_ANY}}
+{\footnotesize\ttfamily \#define I\+P46\+\_\+\+A\+D\+D\+R\+\_\+\+A\+NY(\begin{DoxyParamCaption}\item[{}]{type }\end{DoxyParamCaption})~(I\+P6\+\_\+\+A\+D\+D\+R\+\_\+\+A\+NY)}
+
+\mbox{\Hypertarget{native_2lwip_2src_2include_2lwip_2ip__addr_8h_a06e75bcd198012b5ba39480c233608bd}\label{native_2lwip_2src_2include_2lwip_2ip__addr_8h_a06e75bcd198012b5ba39480c233608bd}} 
+\index{native/lwip/src/include/lwip/ip\+\_\+addr.\+h@{native/lwip/src/include/lwip/ip\+\_\+addr.\+h}!ip\+\_\+2\+\_\+ip6@{ip\+\_\+2\+\_\+ip6}}
+\index{ip\+\_\+2\+\_\+ip6@{ip\+\_\+2\+\_\+ip6}!native/lwip/src/include/lwip/ip\+\_\+addr.\+h@{native/lwip/src/include/lwip/ip\+\_\+addr.\+h}}
+\subsubsection{\texorpdfstring{ip\+\_\+2\+\_\+ip6}{ip\_2\_ip6}}
+{\footnotesize\ttfamily \#define ip\+\_\+2\+\_\+ip6(\begin{DoxyParamCaption}\item[{}]{ipaddr }\end{DoxyParamCaption})~(ipaddr)}
+
+\mbox{\Hypertarget{native_2lwip_2src_2include_2lwip_2ip__addr_8h_a9ee53b601b89dcb517496ba0bccf9bd0}\label{native_2lwip_2src_2include_2lwip_2ip__addr_8h_a9ee53b601b89dcb517496ba0bccf9bd0}} 
+\index{native/lwip/src/include/lwip/ip\+\_\+addr.\+h@{native/lwip/src/include/lwip/ip\+\_\+addr.\+h}!I\+P\+\_\+\+A\+D\+D\+R6@{I\+P\+\_\+\+A\+D\+D\+R6}}
+\index{I\+P\+\_\+\+A\+D\+D\+R6@{I\+P\+\_\+\+A\+D\+D\+R6}!native/lwip/src/include/lwip/ip\+\_\+addr.\+h@{native/lwip/src/include/lwip/ip\+\_\+addr.\+h}}
+\subsubsection{\texorpdfstring{I\+P\+\_\+\+A\+D\+D\+R6}{IP\_ADDR6}}
+{\footnotesize\ttfamily \#define I\+P\+\_\+\+A\+D\+D\+R6(\begin{DoxyParamCaption}\item[{}]{ipaddr,  }\item[{}]{i0,  }\item[{}]{i1,  }\item[{}]{i2,  }\item[{}]{i3 }\end{DoxyParamCaption})~I\+P6\+\_\+\+A\+D\+DR(ipaddr,i0,i1,i2,i3)}
+
+\mbox{\Hypertarget{native_2lwip_2src_2include_2lwip_2ip__addr_8h_abfb1ce44d6a8791336bf3ac06aa086ca}\label{native_2lwip_2src_2include_2lwip_2ip__addr_8h_abfb1ce44d6a8791336bf3ac06aa086ca}} 
+\index{native/lwip/src/include/lwip/ip\+\_\+addr.\+h@{native/lwip/src/include/lwip/ip\+\_\+addr.\+h}!I\+P\+\_\+\+A\+D\+D\+R6\+\_\+\+H\+O\+ST@{I\+P\+\_\+\+A\+D\+D\+R6\+\_\+\+H\+O\+ST}}
+\index{I\+P\+\_\+\+A\+D\+D\+R6\+\_\+\+H\+O\+ST@{I\+P\+\_\+\+A\+D\+D\+R6\+\_\+\+H\+O\+ST}!native/lwip/src/include/lwip/ip\+\_\+addr.\+h@{native/lwip/src/include/lwip/ip\+\_\+addr.\+h}}
+\subsubsection{\texorpdfstring{I\+P\+\_\+\+A\+D\+D\+R6\+\_\+\+H\+O\+ST}{IP\_ADDR6\_HOST}}
+{\footnotesize\ttfamily \#define I\+P\+\_\+\+A\+D\+D\+R6\+\_\+\+H\+O\+ST(\begin{DoxyParamCaption}\item[{}]{ipaddr,  }\item[{}]{i0,  }\item[{}]{i1,  }\item[{}]{i2,  }\item[{}]{i3 }\end{DoxyParamCaption})~\hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2ip__addr_8h_a9ee53b601b89dcb517496ba0bccf9bd0}{I\+P\+\_\+\+A\+D\+D\+R6}(ipaddr,\hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2def_8h_afea9c21aa1f56180cdf6fb42ef14a294}{P\+P\+\_\+\+H\+T\+O\+NL}(i0),\hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2def_8h_afea9c21aa1f56180cdf6fb42ef14a294}{P\+P\+\_\+\+H\+T\+O\+NL}(i1),\hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2def_8h_afea9c21aa1f56180cdf6fb42ef14a294}{P\+P\+\_\+\+H\+T\+O\+NL}(i2),\hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2def_8h_afea9c21aa1f56180cdf6fb42ef14a294}{P\+P\+\_\+\+H\+T\+O\+NL}(i3))}
+
+\mbox{\Hypertarget{native_2lwip_2src_2include_2lwip_2ip__addr_8h_a008c9c92d770cc030ea054e6b259835a}\label{native_2lwip_2src_2include_2lwip_2ip__addr_8h_a008c9c92d770cc030ea054e6b259835a}} 
+\index{native/lwip/src/include/lwip/ip\+\_\+addr.\+h@{native/lwip/src/include/lwip/ip\+\_\+addr.\+h}!ip\+\_\+addr\+\_\+cmp@{ip\+\_\+addr\+\_\+cmp}}
+\index{ip\+\_\+addr\+\_\+cmp@{ip\+\_\+addr\+\_\+cmp}!native/lwip/src/include/lwip/ip\+\_\+addr.\+h@{native/lwip/src/include/lwip/ip\+\_\+addr.\+h}}
+\subsubsection{\texorpdfstring{ip\+\_\+addr\+\_\+cmp}{ip\_addr\_cmp}}
+{\footnotesize\ttfamily \#define ip\+\_\+addr\+\_\+cmp(\begin{DoxyParamCaption}\item[{}]{addr1,  }\item[{}]{addr2 }\end{DoxyParamCaption})~ip6\+\_\+addr\+\_\+cmp(addr1, addr2)}
+
+\mbox{\Hypertarget{native_2lwip_2src_2include_2lwip_2ip__addr_8h_a77a933975db287f6aa5c2e70249ba18f}\label{native_2lwip_2src_2include_2lwip_2ip__addr_8h_a77a933975db287f6aa5c2e70249ba18f}} 
+\index{native/lwip/src/include/lwip/ip\+\_\+addr.\+h@{native/lwip/src/include/lwip/ip\+\_\+addr.\+h}!ip\+\_\+addr\+\_\+copy@{ip\+\_\+addr\+\_\+copy}}
+\index{ip\+\_\+addr\+\_\+copy@{ip\+\_\+addr\+\_\+copy}!native/lwip/src/include/lwip/ip\+\_\+addr.\+h@{native/lwip/src/include/lwip/ip\+\_\+addr.\+h}}
+\subsubsection{\texorpdfstring{ip\+\_\+addr\+\_\+copy}{ip\_addr\_copy}}
+{\footnotesize\ttfamily \#define ip\+\_\+addr\+\_\+copy(\begin{DoxyParamCaption}\item[{}]{dest,  }\item[{}]{src }\end{DoxyParamCaption})~ip6\+\_\+addr\+\_\+copy(dest, src)}
+
+\mbox{\Hypertarget{native_2lwip_2src_2include_2lwip_2ip__addr_8h_abe6f7908ce8a91dc587e2ebc2172e651}\label{native_2lwip_2src_2include_2lwip_2ip__addr_8h_abe6f7908ce8a91dc587e2ebc2172e651}} 
+\index{native/lwip/src/include/lwip/ip\+\_\+addr.\+h@{native/lwip/src/include/lwip/ip\+\_\+addr.\+h}!ip\+\_\+addr\+\_\+copy\+\_\+from\+\_\+ip6@{ip\+\_\+addr\+\_\+copy\+\_\+from\+\_\+ip6}}
+\index{ip\+\_\+addr\+\_\+copy\+\_\+from\+\_\+ip6@{ip\+\_\+addr\+\_\+copy\+\_\+from\+\_\+ip6}!native/lwip/src/include/lwip/ip\+\_\+addr.\+h@{native/lwip/src/include/lwip/ip\+\_\+addr.\+h}}
+\subsubsection{\texorpdfstring{ip\+\_\+addr\+\_\+copy\+\_\+from\+\_\+ip6}{ip\_addr\_copy\_from\_ip6}}
+{\footnotesize\ttfamily \#define ip\+\_\+addr\+\_\+copy\+\_\+from\+\_\+ip6(\begin{DoxyParamCaption}\item[{}]{dest,  }\item[{}]{src }\end{DoxyParamCaption})~ip6\+\_\+addr\+\_\+copy(dest, src)}
+
+\mbox{\Hypertarget{native_2lwip_2src_2include_2lwip_2ip__addr_8h_af7d84bce2fb861a97f3047ecd69ab018}\label{native_2lwip_2src_2include_2lwip_2ip__addr_8h_af7d84bce2fb861a97f3047ecd69ab018}} 
+\index{native/lwip/src/include/lwip/ip\+\_\+addr.\+h@{native/lwip/src/include/lwip/ip\+\_\+addr.\+h}!ip\+\_\+addr\+\_\+debug\+\_\+print@{ip\+\_\+addr\+\_\+debug\+\_\+print}}
+\index{ip\+\_\+addr\+\_\+debug\+\_\+print@{ip\+\_\+addr\+\_\+debug\+\_\+print}!native/lwip/src/include/lwip/ip\+\_\+addr.\+h@{native/lwip/src/include/lwip/ip\+\_\+addr.\+h}}
+\subsubsection{\texorpdfstring{ip\+\_\+addr\+\_\+debug\+\_\+print}{ip\_addr\_debug\_print}}
+{\footnotesize\ttfamily \#define ip\+\_\+addr\+\_\+debug\+\_\+print(\begin{DoxyParamCaption}\item[{}]{debug,  }\item[{}]{ipaddr }\end{DoxyParamCaption})~ip6\+\_\+addr\+\_\+debug\+\_\+print(debug, ipaddr)}
+
+\mbox{\Hypertarget{native_2lwip_2src_2include_2lwip_2ip__addr_8h_ac3d7eec8027db2203117e6f30df8fba5}\label{native_2lwip_2src_2include_2lwip_2ip__addr_8h_ac3d7eec8027db2203117e6f30df8fba5}} 
+\index{native/lwip/src/include/lwip/ip\+\_\+addr.\+h@{native/lwip/src/include/lwip/ip\+\_\+addr.\+h}!ip\+\_\+addr\+\_\+debug\+\_\+print\+\_\+val@{ip\+\_\+addr\+\_\+debug\+\_\+print\+\_\+val}}
+\index{ip\+\_\+addr\+\_\+debug\+\_\+print\+\_\+val@{ip\+\_\+addr\+\_\+debug\+\_\+print\+\_\+val}!native/lwip/src/include/lwip/ip\+\_\+addr.\+h@{native/lwip/src/include/lwip/ip\+\_\+addr.\+h}}
+\subsubsection{\texorpdfstring{ip\+\_\+addr\+\_\+debug\+\_\+print\+\_\+val}{ip\_addr\_debug\_print\_val}}
+{\footnotesize\ttfamily \#define ip\+\_\+addr\+\_\+debug\+\_\+print\+\_\+val(\begin{DoxyParamCaption}\item[{}]{debug,  }\item[{}]{ipaddr }\end{DoxyParamCaption})~ip6\+\_\+addr\+\_\+debug\+\_\+print\+\_\+val(debug, ipaddr)}
+
+\mbox{\Hypertarget{native_2lwip_2src_2include_2lwip_2ip__addr_8h_a535520cd0a0d08a4c4c29b331c55830f}\label{native_2lwip_2src_2include_2lwip_2ip__addr_8h_a535520cd0a0d08a4c4c29b331c55830f}} 
+\index{native/lwip/src/include/lwip/ip\+\_\+addr.\+h@{native/lwip/src/include/lwip/ip\+\_\+addr.\+h}!ip\+\_\+addr\+\_\+get\+\_\+network@{ip\+\_\+addr\+\_\+get\+\_\+network}}
+\index{ip\+\_\+addr\+\_\+get\+\_\+network@{ip\+\_\+addr\+\_\+get\+\_\+network}!native/lwip/src/include/lwip/ip\+\_\+addr.\+h@{native/lwip/src/include/lwip/ip\+\_\+addr.\+h}}
+\subsubsection{\texorpdfstring{ip\+\_\+addr\+\_\+get\+\_\+network}{ip\_addr\_get\_network}}
+{\footnotesize\ttfamily \#define ip\+\_\+addr\+\_\+get\+\_\+network(\begin{DoxyParamCaption}\item[{}]{target,  }\item[{}]{host,  }\item[{}]{mask }\end{DoxyParamCaption})~ip6\+\_\+addr\+\_\+set\+\_\+zero(target)}
+
+\mbox{\Hypertarget{native_2lwip_2src_2include_2lwip_2ip__addr_8h_a279118890e6a90aa740051fb8b0cc5f4}\label{native_2lwip_2src_2include_2lwip_2ip__addr_8h_a279118890e6a90aa740051fb8b0cc5f4}} 
+\index{native/lwip/src/include/lwip/ip\+\_\+addr.\+h@{native/lwip/src/include/lwip/ip\+\_\+addr.\+h}!ip\+\_\+addr\+\_\+isany@{ip\+\_\+addr\+\_\+isany}}
+\index{ip\+\_\+addr\+\_\+isany@{ip\+\_\+addr\+\_\+isany}!native/lwip/src/include/lwip/ip\+\_\+addr.\+h@{native/lwip/src/include/lwip/ip\+\_\+addr.\+h}}
+\subsubsection{\texorpdfstring{ip\+\_\+addr\+\_\+isany}{ip\_addr\_isany}}
+{\footnotesize\ttfamily \#define ip\+\_\+addr\+\_\+isany(\begin{DoxyParamCaption}\item[{}]{ipaddr }\end{DoxyParamCaption})~ip6\+\_\+addr\+\_\+isany(ipaddr)}
+
+\mbox{\Hypertarget{native_2lwip_2src_2include_2lwip_2ip__addr_8h_acd8f5aa151cff966fd28368b85f38c05}\label{native_2lwip_2src_2include_2lwip_2ip__addr_8h_acd8f5aa151cff966fd28368b85f38c05}} 
+\index{native/lwip/src/include/lwip/ip\+\_\+addr.\+h@{native/lwip/src/include/lwip/ip\+\_\+addr.\+h}!ip\+\_\+addr\+\_\+isany\+\_\+val@{ip\+\_\+addr\+\_\+isany\+\_\+val}}
+\index{ip\+\_\+addr\+\_\+isany\+\_\+val@{ip\+\_\+addr\+\_\+isany\+\_\+val}!native/lwip/src/include/lwip/ip\+\_\+addr.\+h@{native/lwip/src/include/lwip/ip\+\_\+addr.\+h}}
+\subsubsection{\texorpdfstring{ip\+\_\+addr\+\_\+isany\+\_\+val}{ip\_addr\_isany\_val}}
+{\footnotesize\ttfamily \#define ip\+\_\+addr\+\_\+isany\+\_\+val(\begin{DoxyParamCaption}\item[{}]{ipaddr }\end{DoxyParamCaption})~ip6\+\_\+addr\+\_\+isany\+\_\+val(ipaddr)}
+
+\mbox{\Hypertarget{native_2lwip_2src_2include_2lwip_2ip__addr_8h_a11275b39f9b8e876e8124a16410e8840}\label{native_2lwip_2src_2include_2lwip_2ip__addr_8h_a11275b39f9b8e876e8124a16410e8840}} 
+\index{native/lwip/src/include/lwip/ip\+\_\+addr.\+h@{native/lwip/src/include/lwip/ip\+\_\+addr.\+h}!ip\+\_\+addr\+\_\+isbroadcast@{ip\+\_\+addr\+\_\+isbroadcast}}
+\index{ip\+\_\+addr\+\_\+isbroadcast@{ip\+\_\+addr\+\_\+isbroadcast}!native/lwip/src/include/lwip/ip\+\_\+addr.\+h@{native/lwip/src/include/lwip/ip\+\_\+addr.\+h}}
+\subsubsection{\texorpdfstring{ip\+\_\+addr\+\_\+isbroadcast}{ip\_addr\_isbroadcast}}
+{\footnotesize\ttfamily \#define ip\+\_\+addr\+\_\+isbroadcast(\begin{DoxyParamCaption}\item[{}]{addr,  }\item[{}]{\hyperlink{structnetif}{netif} }\end{DoxyParamCaption})~0}
+
+\mbox{\Hypertarget{native_2lwip_2src_2include_2lwip_2ip__addr_8h_a33bc079baaf513a9a7381b9531a1f653}\label{native_2lwip_2src_2include_2lwip_2ip__addr_8h_a33bc079baaf513a9a7381b9531a1f653}} 
+\index{native/lwip/src/include/lwip/ip\+\_\+addr.\+h@{native/lwip/src/include/lwip/ip\+\_\+addr.\+h}!ip\+\_\+addr\+\_\+islinklocal@{ip\+\_\+addr\+\_\+islinklocal}}
+\index{ip\+\_\+addr\+\_\+islinklocal@{ip\+\_\+addr\+\_\+islinklocal}!native/lwip/src/include/lwip/ip\+\_\+addr.\+h@{native/lwip/src/include/lwip/ip\+\_\+addr.\+h}}
+\subsubsection{\texorpdfstring{ip\+\_\+addr\+\_\+islinklocal}{ip\_addr\_islinklocal}}
+{\footnotesize\ttfamily \#define ip\+\_\+addr\+\_\+islinklocal(\begin{DoxyParamCaption}\item[{}]{ipaddr }\end{DoxyParamCaption})~ip6\+\_\+addr\+\_\+islinklocal(ipaddr)}
+
+\mbox{\Hypertarget{native_2lwip_2src_2include_2lwip_2ip__addr_8h_a0fc8bf6662809274750868683b3a422e}\label{native_2lwip_2src_2include_2lwip_2ip__addr_8h_a0fc8bf6662809274750868683b3a422e}} 
+\index{native/lwip/src/include/lwip/ip\+\_\+addr.\+h@{native/lwip/src/include/lwip/ip\+\_\+addr.\+h}!ip\+\_\+addr\+\_\+isloopback@{ip\+\_\+addr\+\_\+isloopback}}
+\index{ip\+\_\+addr\+\_\+isloopback@{ip\+\_\+addr\+\_\+isloopback}!native/lwip/src/include/lwip/ip\+\_\+addr.\+h@{native/lwip/src/include/lwip/ip\+\_\+addr.\+h}}
+\subsubsection{\texorpdfstring{ip\+\_\+addr\+\_\+isloopback}{ip\_addr\_isloopback}}
+{\footnotesize\ttfamily \#define ip\+\_\+addr\+\_\+isloopback(\begin{DoxyParamCaption}\item[{}]{ipaddr }\end{DoxyParamCaption})~ip6\+\_\+addr\+\_\+isloopback(ipaddr)}
+
+\mbox{\Hypertarget{native_2lwip_2src_2include_2lwip_2ip__addr_8h_a2170d3ee13dd22722222228e7b1c5752}\label{native_2lwip_2src_2include_2lwip_2ip__addr_8h_a2170d3ee13dd22722222228e7b1c5752}} 
+\index{native/lwip/src/include/lwip/ip\+\_\+addr.\+h@{native/lwip/src/include/lwip/ip\+\_\+addr.\+h}!ip\+\_\+addr\+\_\+ismulticast@{ip\+\_\+addr\+\_\+ismulticast}}
+\index{ip\+\_\+addr\+\_\+ismulticast@{ip\+\_\+addr\+\_\+ismulticast}!native/lwip/src/include/lwip/ip\+\_\+addr.\+h@{native/lwip/src/include/lwip/ip\+\_\+addr.\+h}}
+\subsubsection{\texorpdfstring{ip\+\_\+addr\+\_\+ismulticast}{ip\_addr\_ismulticast}}
+{\footnotesize\ttfamily \#define ip\+\_\+addr\+\_\+ismulticast(\begin{DoxyParamCaption}\item[{}]{ipaddr }\end{DoxyParamCaption})~ip6\+\_\+addr\+\_\+ismulticast(ipaddr)}
+
+\mbox{\Hypertarget{native_2lwip_2src_2include_2lwip_2ip__addr_8h_a3a2123f0bbf6fe843c8542e349c680eb}\label{native_2lwip_2src_2include_2lwip_2ip__addr_8h_a3a2123f0bbf6fe843c8542e349c680eb}} 
+\index{native/lwip/src/include/lwip/ip\+\_\+addr.\+h@{native/lwip/src/include/lwip/ip\+\_\+addr.\+h}!ip\+\_\+addr\+\_\+netcmp@{ip\+\_\+addr\+\_\+netcmp}}
+\index{ip\+\_\+addr\+\_\+netcmp@{ip\+\_\+addr\+\_\+netcmp}!native/lwip/src/include/lwip/ip\+\_\+addr.\+h@{native/lwip/src/include/lwip/ip\+\_\+addr.\+h}}
+\subsubsection{\texorpdfstring{ip\+\_\+addr\+\_\+netcmp}{ip\_addr\_netcmp}}
+{\footnotesize\ttfamily \#define ip\+\_\+addr\+\_\+netcmp(\begin{DoxyParamCaption}\item[{}]{addr1,  }\item[{}]{addr2,  }\item[{}]{mask }\end{DoxyParamCaption})~0}
+
+\mbox{\Hypertarget{native_2lwip_2src_2include_2lwip_2ip__addr_8h_a234cb2e45cd58a80bc3ef433d23f4c57}\label{native_2lwip_2src_2include_2lwip_2ip__addr_8h_a234cb2e45cd58a80bc3ef433d23f4c57}} 
+\index{native/lwip/src/include/lwip/ip\+\_\+addr.\+h@{native/lwip/src/include/lwip/ip\+\_\+addr.\+h}!I\+P\+\_\+\+A\+D\+D\+R\+\_\+\+P\+C\+B\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+M\+A\+T\+CH@{I\+P\+\_\+\+A\+D\+D\+R\+\_\+\+P\+C\+B\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+M\+A\+T\+CH}}
+\index{I\+P\+\_\+\+A\+D\+D\+R\+\_\+\+P\+C\+B\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+M\+A\+T\+CH@{I\+P\+\_\+\+A\+D\+D\+R\+\_\+\+P\+C\+B\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+M\+A\+T\+CH}!native/lwip/src/include/lwip/ip\+\_\+addr.\+h@{native/lwip/src/include/lwip/ip\+\_\+addr.\+h}}
+\subsubsection{\texorpdfstring{I\+P\+\_\+\+A\+D\+D\+R\+\_\+\+P\+C\+B\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+M\+A\+T\+CH}{IP\_ADDR\_PCB\_VERSION\_MATCH}}
+{\footnotesize\ttfamily \#define I\+P\+\_\+\+A\+D\+D\+R\+\_\+\+P\+C\+B\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+M\+A\+T\+CH(\begin{DoxyParamCaption}\item[{}]{addr,  }\item[{}]{pcb }\end{DoxyParamCaption})~1}
+
+\mbox{\Hypertarget{native_2lwip_2src_2include_2lwip_2ip__addr_8h_a81ed1fbe375d867d6e77c83976c07671}\label{native_2lwip_2src_2include_2lwip_2ip__addr_8h_a81ed1fbe375d867d6e77c83976c07671}} 
+\index{native/lwip/src/include/lwip/ip\+\_\+addr.\+h@{native/lwip/src/include/lwip/ip\+\_\+addr.\+h}!I\+P\+\_\+\+A\+D\+D\+R\+\_\+\+P\+C\+B\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+M\+A\+T\+C\+H\+\_\+\+E\+X\+A\+CT@{I\+P\+\_\+\+A\+D\+D\+R\+\_\+\+P\+C\+B\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+M\+A\+T\+C\+H\+\_\+\+E\+X\+A\+CT}}
+\index{I\+P\+\_\+\+A\+D\+D\+R\+\_\+\+P\+C\+B\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+M\+A\+T\+C\+H\+\_\+\+E\+X\+A\+CT@{I\+P\+\_\+\+A\+D\+D\+R\+\_\+\+P\+C\+B\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+M\+A\+T\+C\+H\+\_\+\+E\+X\+A\+CT}!native/lwip/src/include/lwip/ip\+\_\+addr.\+h@{native/lwip/src/include/lwip/ip\+\_\+addr.\+h}}
+\subsubsection{\texorpdfstring{I\+P\+\_\+\+A\+D\+D\+R\+\_\+\+P\+C\+B\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+M\+A\+T\+C\+H\+\_\+\+E\+X\+A\+CT}{IP\_ADDR\_PCB\_VERSION\_MATCH\_EXACT}}
+{\footnotesize\ttfamily \#define I\+P\+\_\+\+A\+D\+D\+R\+\_\+\+P\+C\+B\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+M\+A\+T\+C\+H\+\_\+\+E\+X\+A\+CT(\begin{DoxyParamCaption}\item[{}]{pcb,  }\item[{}]{ipaddr }\end{DoxyParamCaption})~1}
+
+\mbox{\Hypertarget{native_2lwip_2src_2include_2lwip_2ip__addr_8h_a40db7feae2b92f7a7a01d65a85b06e18}\label{native_2lwip_2src_2include_2lwip_2ip__addr_8h_a40db7feae2b92f7a7a01d65a85b06e18}} 
+\index{native/lwip/src/include/lwip/ip\+\_\+addr.\+h@{native/lwip/src/include/lwip/ip\+\_\+addr.\+h}!ip\+\_\+addr\+\_\+set@{ip\+\_\+addr\+\_\+set}}
+\index{ip\+\_\+addr\+\_\+set@{ip\+\_\+addr\+\_\+set}!native/lwip/src/include/lwip/ip\+\_\+addr.\+h@{native/lwip/src/include/lwip/ip\+\_\+addr.\+h}}
+\subsubsection{\texorpdfstring{ip\+\_\+addr\+\_\+set}{ip\_addr\_set}}
+{\footnotesize\ttfamily \#define ip\+\_\+addr\+\_\+set(\begin{DoxyParamCaption}\item[{}]{dest,  }\item[{}]{src }\end{DoxyParamCaption})~ip6\+\_\+addr\+\_\+set(dest, src)}
+
+\mbox{\Hypertarget{native_2lwip_2src_2include_2lwip_2ip__addr_8h_a8853fce54b1816dca3af90b48677e673}\label{native_2lwip_2src_2include_2lwip_2ip__addr_8h_a8853fce54b1816dca3af90b48677e673}} 
+\index{native/lwip/src/include/lwip/ip\+\_\+addr.\+h@{native/lwip/src/include/lwip/ip\+\_\+addr.\+h}!ip\+\_\+addr\+\_\+set\+\_\+any@{ip\+\_\+addr\+\_\+set\+\_\+any}}
+\index{ip\+\_\+addr\+\_\+set\+\_\+any@{ip\+\_\+addr\+\_\+set\+\_\+any}!native/lwip/src/include/lwip/ip\+\_\+addr.\+h@{native/lwip/src/include/lwip/ip\+\_\+addr.\+h}}
+\subsubsection{\texorpdfstring{ip\+\_\+addr\+\_\+set\+\_\+any}{ip\_addr\_set\_any}}
+{\footnotesize\ttfamily \#define ip\+\_\+addr\+\_\+set\+\_\+any(\begin{DoxyParamCaption}\item[{}]{is\+\_\+ipv6,  }\item[{}]{ipaddr }\end{DoxyParamCaption})~ip6\+\_\+addr\+\_\+set\+\_\+any(ipaddr)}
+
+\mbox{\Hypertarget{native_2lwip_2src_2include_2lwip_2ip__addr_8h_a3528798be1d2f1ec6a6bccd35694edce}\label{native_2lwip_2src_2include_2lwip_2ip__addr_8h_a3528798be1d2f1ec6a6bccd35694edce}} 
+\index{native/lwip/src/include/lwip/ip\+\_\+addr.\+h@{native/lwip/src/include/lwip/ip\+\_\+addr.\+h}!ip\+\_\+addr\+\_\+set\+\_\+hton@{ip\+\_\+addr\+\_\+set\+\_\+hton}}
+\index{ip\+\_\+addr\+\_\+set\+\_\+hton@{ip\+\_\+addr\+\_\+set\+\_\+hton}!native/lwip/src/include/lwip/ip\+\_\+addr.\+h@{native/lwip/src/include/lwip/ip\+\_\+addr.\+h}}
+\subsubsection{\texorpdfstring{ip\+\_\+addr\+\_\+set\+\_\+hton}{ip\_addr\_set\_hton}}
+{\footnotesize\ttfamily \#define ip\+\_\+addr\+\_\+set\+\_\+hton(\begin{DoxyParamCaption}\item[{}]{dest,  }\item[{}]{src }\end{DoxyParamCaption})~ip6\+\_\+addr\+\_\+set\+\_\+hton(dest, src)}
+
+\mbox{\Hypertarget{native_2lwip_2src_2include_2lwip_2ip__addr_8h_aea5e4795598bc33fa2db1773c8e6fbac}\label{native_2lwip_2src_2include_2lwip_2ip__addr_8h_aea5e4795598bc33fa2db1773c8e6fbac}} 
+\index{native/lwip/src/include/lwip/ip\+\_\+addr.\+h@{native/lwip/src/include/lwip/ip\+\_\+addr.\+h}!ip\+\_\+addr\+\_\+set\+\_\+ipaddr@{ip\+\_\+addr\+\_\+set\+\_\+ipaddr}}
+\index{ip\+\_\+addr\+\_\+set\+\_\+ipaddr@{ip\+\_\+addr\+\_\+set\+\_\+ipaddr}!native/lwip/src/include/lwip/ip\+\_\+addr.\+h@{native/lwip/src/include/lwip/ip\+\_\+addr.\+h}}
+\subsubsection{\texorpdfstring{ip\+\_\+addr\+\_\+set\+\_\+ipaddr}{ip\_addr\_set\_ipaddr}}
+{\footnotesize\ttfamily \#define ip\+\_\+addr\+\_\+set\+\_\+ipaddr(\begin{DoxyParamCaption}\item[{}]{dest,  }\item[{}]{src }\end{DoxyParamCaption})~ip6\+\_\+addr\+\_\+set(dest, src)}
+
+\mbox{\Hypertarget{native_2lwip_2src_2include_2lwip_2ip__addr_8h_a8f9d56ac85cd87338a1823e4a58ba1da}\label{native_2lwip_2src_2include_2lwip_2ip__addr_8h_a8f9d56ac85cd87338a1823e4a58ba1da}} 
+\index{native/lwip/src/include/lwip/ip\+\_\+addr.\+h@{native/lwip/src/include/lwip/ip\+\_\+addr.\+h}!ip\+\_\+addr\+\_\+set\+\_\+loopback@{ip\+\_\+addr\+\_\+set\+\_\+loopback}}
+\index{ip\+\_\+addr\+\_\+set\+\_\+loopback@{ip\+\_\+addr\+\_\+set\+\_\+loopback}!native/lwip/src/include/lwip/ip\+\_\+addr.\+h@{native/lwip/src/include/lwip/ip\+\_\+addr.\+h}}
+\subsubsection{\texorpdfstring{ip\+\_\+addr\+\_\+set\+\_\+loopback}{ip\_addr\_set\_loopback}}
+{\footnotesize\ttfamily \#define ip\+\_\+addr\+\_\+set\+\_\+loopback(\begin{DoxyParamCaption}\item[{}]{is\+\_\+ipv6,  }\item[{}]{ipaddr }\end{DoxyParamCaption})~ip6\+\_\+addr\+\_\+set\+\_\+loopback(ipaddr)}
+
+\mbox{\Hypertarget{native_2lwip_2src_2include_2lwip_2ip__addr_8h_aae7edb585c062ae03bfbd3af7bf671bc}\label{native_2lwip_2src_2include_2lwip_2ip__addr_8h_aae7edb585c062ae03bfbd3af7bf671bc}} 
+\index{native/lwip/src/include/lwip/ip\+\_\+addr.\+h@{native/lwip/src/include/lwip/ip\+\_\+addr.\+h}!ip\+\_\+addr\+\_\+set\+\_\+zero@{ip\+\_\+addr\+\_\+set\+\_\+zero}}
+\index{ip\+\_\+addr\+\_\+set\+\_\+zero@{ip\+\_\+addr\+\_\+set\+\_\+zero}!native/lwip/src/include/lwip/ip\+\_\+addr.\+h@{native/lwip/src/include/lwip/ip\+\_\+addr.\+h}}
+\subsubsection{\texorpdfstring{ip\+\_\+addr\+\_\+set\+\_\+zero}{ip\_addr\_set\_zero}}
+{\footnotesize\ttfamily \#define ip\+\_\+addr\+\_\+set\+\_\+zero(\begin{DoxyParamCaption}\item[{}]{ipaddr }\end{DoxyParamCaption})~ip6\+\_\+addr\+\_\+set\+\_\+zero(ipaddr)}
+
+\mbox{\Hypertarget{native_2lwip_2src_2include_2lwip_2ip__addr_8h_afb3a0e5241683aff573e195f31ba8845}\label{native_2lwip_2src_2include_2lwip_2ip__addr_8h_afb3a0e5241683aff573e195f31ba8845}} 
+\index{native/lwip/src/include/lwip/ip\+\_\+addr.\+h@{native/lwip/src/include/lwip/ip\+\_\+addr.\+h}!ip\+\_\+addr\+\_\+set\+\_\+zero\+\_\+ip6@{ip\+\_\+addr\+\_\+set\+\_\+zero\+\_\+ip6}}
+\index{ip\+\_\+addr\+\_\+set\+\_\+zero\+\_\+ip6@{ip\+\_\+addr\+\_\+set\+\_\+zero\+\_\+ip6}!native/lwip/src/include/lwip/ip\+\_\+addr.\+h@{native/lwip/src/include/lwip/ip\+\_\+addr.\+h}}
+\subsubsection{\texorpdfstring{ip\+\_\+addr\+\_\+set\+\_\+zero\+\_\+ip6}{ip\_addr\_set\_zero\_ip6}}
+{\footnotesize\ttfamily \#define ip\+\_\+addr\+\_\+set\+\_\+zero\+\_\+ip6(\begin{DoxyParamCaption}\item[{}]{ipaddr }\end{DoxyParamCaption})~ip6\+\_\+addr\+\_\+set\+\_\+zero(ipaddr)}
+
+\mbox{\Hypertarget{native_2lwip_2src_2include_2lwip_2ip__addr_8h_abe43b154533b73585c4e58f568370ede}\label{native_2lwip_2src_2include_2lwip_2ip__addr_8h_abe43b154533b73585c4e58f568370ede}} 
+\index{native/lwip/src/include/lwip/ip\+\_\+addr.\+h@{native/lwip/src/include/lwip/ip\+\_\+addr.\+h}!I\+P\+\_\+\+A\+N\+Y\+\_\+\+T\+Y\+PE@{I\+P\+\_\+\+A\+N\+Y\+\_\+\+T\+Y\+PE}}
+\index{I\+P\+\_\+\+A\+N\+Y\+\_\+\+T\+Y\+PE@{I\+P\+\_\+\+A\+N\+Y\+\_\+\+T\+Y\+PE}!native/lwip/src/include/lwip/ip\+\_\+addr.\+h@{native/lwip/src/include/lwip/ip\+\_\+addr.\+h}}
+\subsubsection{\texorpdfstring{I\+P\+\_\+\+A\+N\+Y\+\_\+\+T\+Y\+PE}{IP\_ANY\_TYPE}}
+{\footnotesize\ttfamily \#define I\+P\+\_\+\+A\+N\+Y\+\_\+\+T\+Y\+PE~I\+P\+\_\+\+A\+D\+D\+R\+\_\+\+A\+NY}
+
+\mbox{\Hypertarget{native_2lwip_2src_2include_2lwip_2ip__addr_8h_aa2d07afd28376f89da2cdcf5d2497ce7}\label{native_2lwip_2src_2include_2lwip_2ip__addr_8h_aa2d07afd28376f89da2cdcf5d2497ce7}} 
+\index{native/lwip/src/include/lwip/ip\+\_\+addr.\+h@{native/lwip/src/include/lwip/ip\+\_\+addr.\+h}!I\+P\+\_\+\+G\+E\+T\+\_\+\+T\+Y\+PE@{I\+P\+\_\+\+G\+E\+T\+\_\+\+T\+Y\+PE}}
+\index{I\+P\+\_\+\+G\+E\+T\+\_\+\+T\+Y\+PE@{I\+P\+\_\+\+G\+E\+T\+\_\+\+T\+Y\+PE}!native/lwip/src/include/lwip/ip\+\_\+addr.\+h@{native/lwip/src/include/lwip/ip\+\_\+addr.\+h}}
+\subsubsection{\texorpdfstring{I\+P\+\_\+\+G\+E\+T\+\_\+\+T\+Y\+PE}{IP\_GET\_TYPE}}
+{\footnotesize\ttfamily \#define I\+P\+\_\+\+G\+E\+T\+\_\+\+T\+Y\+PE(\begin{DoxyParamCaption}\item[{}]{ipaddr }\end{DoxyParamCaption})~\hyperlink{group__ipaddr_ggaf2142f0dfdcc938e2db16aa745ed585caae510fd8ec7fe405b594b57af61f9a02}{I\+P\+A\+D\+D\+R\+\_\+\+T\+Y\+P\+E\+\_\+\+V6}}
+
+\mbox{\Hypertarget{native_2lwip_2src_2include_2lwip_2ip__addr_8h_a83b17dbf7d1faf5c8f8c20b039db8bb8}\label{native_2lwip_2src_2include_2lwip_2ip__addr_8h_a83b17dbf7d1faf5c8f8c20b039db8bb8}} 
+\index{native/lwip/src/include/lwip/ip\+\_\+addr.\+h@{native/lwip/src/include/lwip/ip\+\_\+addr.\+h}!I\+P\+\_\+\+I\+S\+\_\+\+A\+N\+Y\+\_\+\+T\+Y\+P\+E\+\_\+\+V\+AL@{I\+P\+\_\+\+I\+S\+\_\+\+A\+N\+Y\+\_\+\+T\+Y\+P\+E\+\_\+\+V\+AL}}
+\index{I\+P\+\_\+\+I\+S\+\_\+\+A\+N\+Y\+\_\+\+T\+Y\+P\+E\+\_\+\+V\+AL@{I\+P\+\_\+\+I\+S\+\_\+\+A\+N\+Y\+\_\+\+T\+Y\+P\+E\+\_\+\+V\+AL}!native/lwip/src/include/lwip/ip\+\_\+addr.\+h@{native/lwip/src/include/lwip/ip\+\_\+addr.\+h}}
+\subsubsection{\texorpdfstring{I\+P\+\_\+\+I\+S\+\_\+\+A\+N\+Y\+\_\+\+T\+Y\+P\+E\+\_\+\+V\+AL}{IP\_IS\_ANY\_TYPE\_VAL}}
+{\footnotesize\ttfamily \#define I\+P\+\_\+\+I\+S\+\_\+\+A\+N\+Y\+\_\+\+T\+Y\+P\+E\+\_\+\+V\+AL(\begin{DoxyParamCaption}\item[{}]{ipaddr }\end{DoxyParamCaption})~0}
+
+\mbox{\Hypertarget{native_2lwip_2src_2include_2lwip_2ip__addr_8h_abee5dab2191bb0f3355d7f30d1496f24}\label{native_2lwip_2src_2include_2lwip_2ip__addr_8h_abee5dab2191bb0f3355d7f30d1496f24}} 
+\index{native/lwip/src/include/lwip/ip\+\_\+addr.\+h@{native/lwip/src/include/lwip/ip\+\_\+addr.\+h}!I\+P\+\_\+\+I\+S\+\_\+\+V4@{I\+P\+\_\+\+I\+S\+\_\+\+V4}}
+\index{I\+P\+\_\+\+I\+S\+\_\+\+V4@{I\+P\+\_\+\+I\+S\+\_\+\+V4}!native/lwip/src/include/lwip/ip\+\_\+addr.\+h@{native/lwip/src/include/lwip/ip\+\_\+addr.\+h}}
+\subsubsection{\texorpdfstring{I\+P\+\_\+\+I\+S\+\_\+\+V4}{IP\_IS\_V4}}
+{\footnotesize\ttfamily \#define I\+P\+\_\+\+I\+S\+\_\+\+V4(\begin{DoxyParamCaption}\item[{}]{ipaddr }\end{DoxyParamCaption})~0}
+
+\mbox{\Hypertarget{native_2lwip_2src_2include_2lwip_2ip__addr_8h_ab1a059f07bd9c50aa58447d963b823a1}\label{native_2lwip_2src_2include_2lwip_2ip__addr_8h_ab1a059f07bd9c50aa58447d963b823a1}} 
+\index{native/lwip/src/include/lwip/ip\+\_\+addr.\+h@{native/lwip/src/include/lwip/ip\+\_\+addr.\+h}!I\+P\+\_\+\+I\+S\+\_\+\+V4\+\_\+\+V\+AL@{I\+P\+\_\+\+I\+S\+\_\+\+V4\+\_\+\+V\+AL}}
+\index{I\+P\+\_\+\+I\+S\+\_\+\+V4\+\_\+\+V\+AL@{I\+P\+\_\+\+I\+S\+\_\+\+V4\+\_\+\+V\+AL}!native/lwip/src/include/lwip/ip\+\_\+addr.\+h@{native/lwip/src/include/lwip/ip\+\_\+addr.\+h}}
+\subsubsection{\texorpdfstring{I\+P\+\_\+\+I\+S\+\_\+\+V4\+\_\+\+V\+AL}{IP\_IS\_V4\_VAL}}
+{\footnotesize\ttfamily \#define I\+P\+\_\+\+I\+S\+\_\+\+V4\+\_\+\+V\+AL(\begin{DoxyParamCaption}\item[{}]{ipaddr }\end{DoxyParamCaption})~0}
+
+\mbox{\Hypertarget{native_2lwip_2src_2include_2lwip_2ip__addr_8h_a9bac7e938757f1d24df2404e8b57cb7d}\label{native_2lwip_2src_2include_2lwip_2ip__addr_8h_a9bac7e938757f1d24df2404e8b57cb7d}} 
+\index{native/lwip/src/include/lwip/ip\+\_\+addr.\+h@{native/lwip/src/include/lwip/ip\+\_\+addr.\+h}!I\+P\+\_\+\+I\+S\+\_\+\+V6@{I\+P\+\_\+\+I\+S\+\_\+\+V6}}
+\index{I\+P\+\_\+\+I\+S\+\_\+\+V6@{I\+P\+\_\+\+I\+S\+\_\+\+V6}!native/lwip/src/include/lwip/ip\+\_\+addr.\+h@{native/lwip/src/include/lwip/ip\+\_\+addr.\+h}}
+\subsubsection{\texorpdfstring{I\+P\+\_\+\+I\+S\+\_\+\+V6}{IP\_IS\_V6}}
+{\footnotesize\ttfamily \#define I\+P\+\_\+\+I\+S\+\_\+\+V6(\begin{DoxyParamCaption}\item[{}]{ipaddr }\end{DoxyParamCaption})~1}
+
+\mbox{\Hypertarget{native_2lwip_2src_2include_2lwip_2ip__addr_8h_a1578e34703e86711a7fb7dcc3857004d}\label{native_2lwip_2src_2include_2lwip_2ip__addr_8h_a1578e34703e86711a7fb7dcc3857004d}} 
+\index{native/lwip/src/include/lwip/ip\+\_\+addr.\+h@{native/lwip/src/include/lwip/ip\+\_\+addr.\+h}!I\+P\+\_\+\+I\+S\+\_\+\+V6\+\_\+\+V\+AL@{I\+P\+\_\+\+I\+S\+\_\+\+V6\+\_\+\+V\+AL}}
+\index{I\+P\+\_\+\+I\+S\+\_\+\+V6\+\_\+\+V\+AL@{I\+P\+\_\+\+I\+S\+\_\+\+V6\+\_\+\+V\+AL}!native/lwip/src/include/lwip/ip\+\_\+addr.\+h@{native/lwip/src/include/lwip/ip\+\_\+addr.\+h}}
+\subsubsection{\texorpdfstring{I\+P\+\_\+\+I\+S\+\_\+\+V6\+\_\+\+V\+AL}{IP\_IS\_V6\_VAL}}
+{\footnotesize\ttfamily \#define I\+P\+\_\+\+I\+S\+\_\+\+V6\+\_\+\+V\+AL(\begin{DoxyParamCaption}\item[{}]{ipaddr }\end{DoxyParamCaption})~1}
+
+\mbox{\Hypertarget{native_2lwip_2src_2include_2lwip_2ip__addr_8h_a4d435d88b2eaebaea1ef75ee586204fd}\label{native_2lwip_2src_2include_2lwip_2ip__addr_8h_a4d435d88b2eaebaea1ef75ee586204fd}} 
+\index{native/lwip/src/include/lwip/ip\+\_\+addr.\+h@{native/lwip/src/include/lwip/ip\+\_\+addr.\+h}!I\+P\+\_\+\+S\+E\+T\+\_\+\+T\+Y\+PE@{I\+P\+\_\+\+S\+E\+T\+\_\+\+T\+Y\+PE}}
+\index{I\+P\+\_\+\+S\+E\+T\+\_\+\+T\+Y\+PE@{I\+P\+\_\+\+S\+E\+T\+\_\+\+T\+Y\+PE}!native/lwip/src/include/lwip/ip\+\_\+addr.\+h@{native/lwip/src/include/lwip/ip\+\_\+addr.\+h}}
+\subsubsection{\texorpdfstring{I\+P\+\_\+\+S\+E\+T\+\_\+\+T\+Y\+PE}{IP\_SET\_TYPE}}
+{\footnotesize\ttfamily \#define I\+P\+\_\+\+S\+E\+T\+\_\+\+T\+Y\+PE(\begin{DoxyParamCaption}\item[{}]{ipaddr,  }\item[{}]{iptype }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{native_2lwip_2src_2include_2lwip_2ip__addr_8h_aaa800ce1929a1bb0f3d64bebd44e4051}\label{native_2lwip_2src_2include_2lwip_2ip__addr_8h_aaa800ce1929a1bb0f3d64bebd44e4051}} 
+\index{native/lwip/src/include/lwip/ip\+\_\+addr.\+h@{native/lwip/src/include/lwip/ip\+\_\+addr.\+h}!I\+P\+\_\+\+S\+E\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+V\+AL@{I\+P\+\_\+\+S\+E\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+V\+AL}}
+\index{I\+P\+\_\+\+S\+E\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+V\+AL@{I\+P\+\_\+\+S\+E\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+V\+AL}!native/lwip/src/include/lwip/ip\+\_\+addr.\+h@{native/lwip/src/include/lwip/ip\+\_\+addr.\+h}}
+\subsubsection{\texorpdfstring{I\+P\+\_\+\+S\+E\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+V\+AL}{IP\_SET\_TYPE\_VAL}}
+{\footnotesize\ttfamily \#define I\+P\+\_\+\+S\+E\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+V\+AL(\begin{DoxyParamCaption}\item[{}]{ipaddr,  }\item[{}]{iptype }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{native_2lwip_2src_2include_2lwip_2ip__addr_8h_a1266e500b1db0b7cdc4b269cace49746}\label{native_2lwip_2src_2include_2lwip_2ip__addr_8h_a1266e500b1db0b7cdc4b269cace49746}} 
+\index{native/lwip/src/include/lwip/ip\+\_\+addr.\+h@{native/lwip/src/include/lwip/ip\+\_\+addr.\+h}!I\+P\+A\+D\+D\+R6\+\_\+\+I\+N\+IT@{I\+P\+A\+D\+D\+R6\+\_\+\+I\+N\+IT}}
+\index{I\+P\+A\+D\+D\+R6\+\_\+\+I\+N\+IT@{I\+P\+A\+D\+D\+R6\+\_\+\+I\+N\+IT}!native/lwip/src/include/lwip/ip\+\_\+addr.\+h@{native/lwip/src/include/lwip/ip\+\_\+addr.\+h}}
+\subsubsection{\texorpdfstring{I\+P\+A\+D\+D\+R6\+\_\+\+I\+N\+IT}{IPADDR6\_INIT}}
+{\footnotesize\ttfamily \#define I\+P\+A\+D\+D\+R6\+\_\+\+I\+N\+IT(\begin{DoxyParamCaption}\item[{}]{a,  }\item[{}]{b,  }\item[{}]{c,  }\item[{}]{d }\end{DoxyParamCaption})~\{ \{ a, b, c, d \} \}}
+
+\mbox{\Hypertarget{native_2lwip_2src_2include_2lwip_2ip__addr_8h_adaff748da2b808995993dd3db5420f08}\label{native_2lwip_2src_2include_2lwip_2ip__addr_8h_adaff748da2b808995993dd3db5420f08}} 
+\index{native/lwip/src/include/lwip/ip\+\_\+addr.\+h@{native/lwip/src/include/lwip/ip\+\_\+addr.\+h}!I\+P\+A\+D\+D\+R6\+\_\+\+I\+N\+I\+T\+\_\+\+H\+O\+ST@{I\+P\+A\+D\+D\+R6\+\_\+\+I\+N\+I\+T\+\_\+\+H\+O\+ST}}
+\index{I\+P\+A\+D\+D\+R6\+\_\+\+I\+N\+I\+T\+\_\+\+H\+O\+ST@{I\+P\+A\+D\+D\+R6\+\_\+\+I\+N\+I\+T\+\_\+\+H\+O\+ST}!native/lwip/src/include/lwip/ip\+\_\+addr.\+h@{native/lwip/src/include/lwip/ip\+\_\+addr.\+h}}
+\subsubsection{\texorpdfstring{I\+P\+A\+D\+D\+R6\+\_\+\+I\+N\+I\+T\+\_\+\+H\+O\+ST}{IPADDR6\_INIT\_HOST}}
+{\footnotesize\ttfamily \#define I\+P\+A\+D\+D\+R6\+\_\+\+I\+N\+I\+T\+\_\+\+H\+O\+ST(\begin{DoxyParamCaption}\item[{}]{a,  }\item[{}]{b,  }\item[{}]{c,  }\item[{}]{d }\end{DoxyParamCaption})~\{ \{ \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2def_8h_afea9c21aa1f56180cdf6fb42ef14a294}{P\+P\+\_\+\+H\+T\+O\+NL}(a), \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2def_8h_afea9c21aa1f56180cdf6fb42ef14a294}{P\+P\+\_\+\+H\+T\+O\+NL}(b), \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2def_8h_afea9c21aa1f56180cdf6fb42ef14a294}{P\+P\+\_\+\+H\+T\+O\+NL}(c), \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2def_8h_afea9c21aa1f56180cdf6fb42ef14a294}{P\+P\+\_\+\+H\+T\+O\+NL}(d) \} \}}
+
+\mbox{\Hypertarget{native_2lwip_2src_2include_2lwip_2ip__addr_8h_a9b9fae6ad88a288c3c6da050644e2a48}\label{native_2lwip_2src_2include_2lwip_2ip__addr_8h_a9b9fae6ad88a288c3c6da050644e2a48}} 
+\index{native/lwip/src/include/lwip/ip\+\_\+addr.\+h@{native/lwip/src/include/lwip/ip\+\_\+addr.\+h}!ipaddr\+\_\+aton@{ipaddr\+\_\+aton}}
+\index{ipaddr\+\_\+aton@{ipaddr\+\_\+aton}!native/lwip/src/include/lwip/ip\+\_\+addr.\+h@{native/lwip/src/include/lwip/ip\+\_\+addr.\+h}}
+\subsubsection{\texorpdfstring{ipaddr\+\_\+aton}{ipaddr\_aton}}
+{\footnotesize\ttfamily \#define ipaddr\+\_\+aton(\begin{DoxyParamCaption}\item[{}]{cp,  }\item[{}]{addr }\end{DoxyParamCaption})~ip6addr\+\_\+aton(cp, addr)}
+
+\mbox{\Hypertarget{native_2lwip_2src_2include_2lwip_2ip__addr_8h_ad345f630acbf2a01536d10d3aacee04f}\label{native_2lwip_2src_2include_2lwip_2ip__addr_8h_ad345f630acbf2a01536d10d3aacee04f}} 
+\index{native/lwip/src/include/lwip/ip\+\_\+addr.\+h@{native/lwip/src/include/lwip/ip\+\_\+addr.\+h}!ipaddr\+\_\+ntoa@{ipaddr\+\_\+ntoa}}
+\index{ipaddr\+\_\+ntoa@{ipaddr\+\_\+ntoa}!native/lwip/src/include/lwip/ip\+\_\+addr.\+h@{native/lwip/src/include/lwip/ip\+\_\+addr.\+h}}
+\subsubsection{\texorpdfstring{ipaddr\+\_\+ntoa}{ipaddr\_ntoa}}
+{\footnotesize\ttfamily \#define ipaddr\+\_\+ntoa(\begin{DoxyParamCaption}\item[{}]{ipaddr }\end{DoxyParamCaption})~ip6addr\+\_\+ntoa(ipaddr)}
+
+\mbox{\Hypertarget{native_2lwip_2src_2include_2lwip_2ip__addr_8h_ac5a2215f804102c72f59dcdf1ccf6449}\label{native_2lwip_2src_2include_2lwip_2ip__addr_8h_ac5a2215f804102c72f59dcdf1ccf6449}} 
+\index{native/lwip/src/include/lwip/ip\+\_\+addr.\+h@{native/lwip/src/include/lwip/ip\+\_\+addr.\+h}!ipaddr\+\_\+ntoa\+\_\+r@{ipaddr\+\_\+ntoa\+\_\+r}}
+\index{ipaddr\+\_\+ntoa\+\_\+r@{ipaddr\+\_\+ntoa\+\_\+r}!native/lwip/src/include/lwip/ip\+\_\+addr.\+h@{native/lwip/src/include/lwip/ip\+\_\+addr.\+h}}
+\subsubsection{\texorpdfstring{ipaddr\+\_\+ntoa\+\_\+r}{ipaddr\_ntoa\_r}}
+{\footnotesize\ttfamily \#define ipaddr\+\_\+ntoa\+\_\+r(\begin{DoxyParamCaption}\item[{}]{ipaddr,  }\item[{}]{buf,  }\item[{}]{buflen }\end{DoxyParamCaption})~ip6addr\+\_\+ntoa\+\_\+r(ipaddr, buf, buflen)}
+
+\mbox{\Hypertarget{native_2lwip_2src_2include_2lwip_2ip__addr_8h_a8619278bcbf705844f584f36972fc758}\label{native_2lwip_2src_2include_2lwip_2ip__addr_8h_a8619278bcbf705844f584f36972fc758}} 
+\index{native/lwip/src/include/lwip/ip\+\_\+addr.\+h@{native/lwip/src/include/lwip/ip\+\_\+addr.\+h}!I\+P\+A\+D\+D\+R\+\_\+\+S\+T\+R\+L\+E\+N\+\_\+\+M\+AX@{I\+P\+A\+D\+D\+R\+\_\+\+S\+T\+R\+L\+E\+N\+\_\+\+M\+AX}}
+\index{I\+P\+A\+D\+D\+R\+\_\+\+S\+T\+R\+L\+E\+N\+\_\+\+M\+AX@{I\+P\+A\+D\+D\+R\+\_\+\+S\+T\+R\+L\+E\+N\+\_\+\+M\+AX}!native/lwip/src/include/lwip/ip\+\_\+addr.\+h@{native/lwip/src/include/lwip/ip\+\_\+addr.\+h}}
+\subsubsection{\texorpdfstring{I\+P\+A\+D\+D\+R\+\_\+\+S\+T\+R\+L\+E\+N\+\_\+\+M\+AX}{IPADDR\_STRLEN\_MAX}}
+{\footnotesize\ttfamily \#define I\+P\+A\+D\+D\+R\+\_\+\+S\+T\+R\+L\+E\+N\+\_\+\+M\+AX~I\+P6\+A\+D\+D\+R\+\_\+\+S\+T\+R\+L\+E\+N\+\_\+\+M\+AX}
+
+
+
+\subsection{Typedef Documentation}
+\mbox{\Hypertarget{native_2lwip_2src_2include_2lwip_2ip__addr_8h_a88b43639738c4de2d3cd22e3a1fd7696}\label{native_2lwip_2src_2include_2lwip_2ip__addr_8h_a88b43639738c4de2d3cd22e3a1fd7696}} 
+\index{native/lwip/src/include/lwip/ip\+\_\+addr.\+h@{native/lwip/src/include/lwip/ip\+\_\+addr.\+h}!ip\+\_\+addr\+\_\+t@{ip\+\_\+addr\+\_\+t}}
+\index{ip\+\_\+addr\+\_\+t@{ip\+\_\+addr\+\_\+t}!native/lwip/src/include/lwip/ip\+\_\+addr.\+h@{native/lwip/src/include/lwip/ip\+\_\+addr.\+h}}
+\subsubsection{\texorpdfstring{ip\+\_\+addr\+\_\+t}{ip\_addr\_t}}
+{\footnotesize\ttfamily typedef ip6\+\_\+addr\+\_\+t \hyperlink{native_2lwip_2src_2include_2lwip_2ip__addr_8h_a88b43639738c4de2d3cd22e3a1fd7696}{ip\+\_\+addr\+\_\+t}}
+

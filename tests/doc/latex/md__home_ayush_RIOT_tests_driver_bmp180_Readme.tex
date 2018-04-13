@@ -1,0 +1,14 @@
+This is a test application for the B\+M\+P180 Pressure and Temperature sensor.
+
+\subsection*{Usage}
+
+The application will initialize the B\+M\+P180 sensor and display its calibration coefficients. Please see section 3.\+4 of the \href{https://www.adafruit.com/datasheets/BST-BMP180-DS000-09.pdf}{\tt datasheet} for more information.
+
+After initialization, every 2 seconds, the application\+:
+\begin{DoxyItemize}
+\item reads the temperature (d°C);
+\item reads the pressure (Pa);
+\item computes the pressure at sea level based on the T\+E\+S\+T\+\_\+\+A\+L\+T\+I\+T\+U\+DE variable;
+\item computes the altitude based on the pressure at sea level calculated above;
+\item those values are then printed to S\+T\+D\+O\+UT. 
+\end{DoxyItemize}

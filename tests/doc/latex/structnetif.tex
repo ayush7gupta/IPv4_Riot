@@ -1,0 +1,113 @@
+\hypertarget{structnetif}{}\section{netif Struct Reference}
+\label{structnetif}\index{netif@{netif}}
+
+
+{\ttfamily \#include $<$netif.\+h$>$}
+
+
+
+Collaboration diagram for netif\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=179pt]{structnetif__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structnetif}{netif} $\ast$ \hyperlink{structnetif_af6c29611a8719fc99de967f60da71c8c}{next}
+\item 
+\hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2netif_8h_ab2302b1b64ac7b95f24c6bab754a575e}{netif\+\_\+input\+\_\+fn} \hyperlink{structnetif_a8fe4f1b7b0d710216287da9615164a5c}{input}
+\item 
+\hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2netif_8h_ab75e9d808bc1b788bea84213e6a111ed}{netif\+\_\+linkoutput\+\_\+fn} \hyperlink{structnetif_acaaac9b415a7be73eb8a287c8ed18a8d}{linkoutput}
+\item 
+void $\ast$ \hyperlink{structnetif_ad61510fed9cecbafc268ca0424dbd34e}{state}
+\item 
+\hyperlink{group__compiler__abstraction_ga77570ac4fcab86864fa1916e55676da2}{u16\+\_\+t} \hyperlink{structnetif_aca7d56b4e0f822b0ced2885f222b8d48}{mtu}
+\item 
+\hyperlink{group__compiler__abstraction_ga4caecabca98b43919dd11be1c0d4cd8e}{u8\+\_\+t} \hyperlink{structnetif_afe1181561cb16241f3cb5ed01e567d42}{hwaddr\+\_\+len}
+\item 
+\hyperlink{group__compiler__abstraction_ga4caecabca98b43919dd11be1c0d4cd8e}{u8\+\_\+t} \hyperlink{structnetif_aa6d410efeb59c69a881251a93b8abd1e}{hwaddr} \mbox{[}\hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2netif_8h_ab887a8ec553de1be1d04cf2961c63c41}{N\+E\+T\+I\+F\+\_\+\+M\+A\+X\+\_\+\+H\+W\+A\+D\+D\+R\+\_\+\+L\+EN}\mbox{]}
+\item 
+\hyperlink{group__compiler__abstraction_ga4caecabca98b43919dd11be1c0d4cd8e}{u8\+\_\+t} \hyperlink{structnetif_a1c171db6097bbb6f09f63549a66e00ea}{flags}
+\item 
+char \hyperlink{structnetif_abd48227dcb80f70597ac0439126a0c2d}{name} \mbox{[}2\mbox{]}
+\item 
+\hyperlink{group__compiler__abstraction_ga4caecabca98b43919dd11be1c0d4cd8e}{u8\+\_\+t} \hyperlink{structnetif_ab7ef01e505dd2feb781fe86756b1c973}{num}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Generic data structure used for all lw\+IP network interfaces. The following fields should be filled in by the initialization function for the device driver\+: hwaddr\+\_\+len, hwaddr\mbox{[}\mbox{]}, mtu, flags 
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{structnetif_a1c171db6097bbb6f09f63549a66e00ea}\label{structnetif_a1c171db6097bbb6f09f63549a66e00ea}} 
+\index{netif@{netif}!flags@{flags}}
+\index{flags@{flags}!netif@{netif}}
+\subsubsection{\texorpdfstring{flags}{flags}}
+{\footnotesize\ttfamily \hyperlink{group__compiler__abstraction_ga4caecabca98b43919dd11be1c0d4cd8e}{u8\+\_\+t} netif\+::flags}
+
+flags (\begin{DoxySeeAlso}{See also}
+\hyperlink{group__netif__flags}{Flags}) 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{structnetif_aa6d410efeb59c69a881251a93b8abd1e}\label{structnetif_aa6d410efeb59c69a881251a93b8abd1e}} 
+\index{netif@{netif}!hwaddr@{hwaddr}}
+\index{hwaddr@{hwaddr}!netif@{netif}}
+\subsubsection{\texorpdfstring{hwaddr}{hwaddr}}
+{\footnotesize\ttfamily \hyperlink{group__compiler__abstraction_ga4caecabca98b43919dd11be1c0d4cd8e}{u8\+\_\+t} netif\+::hwaddr}
+
+link level hardware address of this interface \mbox{\Hypertarget{structnetif_afe1181561cb16241f3cb5ed01e567d42}\label{structnetif_afe1181561cb16241f3cb5ed01e567d42}} 
+\index{netif@{netif}!hwaddr\+\_\+len@{hwaddr\+\_\+len}}
+\index{hwaddr\+\_\+len@{hwaddr\+\_\+len}!netif@{netif}}
+\subsubsection{\texorpdfstring{hwaddr\+\_\+len}{hwaddr\_len}}
+{\footnotesize\ttfamily \hyperlink{group__compiler__abstraction_ga4caecabca98b43919dd11be1c0d4cd8e}{u8\+\_\+t} netif\+::hwaddr\+\_\+len}
+
+number of bytes used in hwaddr \mbox{\Hypertarget{structnetif_a8fe4f1b7b0d710216287da9615164a5c}\label{structnetif_a8fe4f1b7b0d710216287da9615164a5c}} 
+\index{netif@{netif}!input@{input}}
+\index{input@{input}!netif@{netif}}
+\subsubsection{\texorpdfstring{input}{input}}
+{\footnotesize\ttfamily \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2netif_8h_ab2302b1b64ac7b95f24c6bab754a575e}{netif\+\_\+input\+\_\+fn} netif\+::input}
+
+This function is called by the network device driver to pass a packet up the T\+C\+P/\+IP stack. \mbox{\Hypertarget{structnetif_acaaac9b415a7be73eb8a287c8ed18a8d}\label{structnetif_acaaac9b415a7be73eb8a287c8ed18a8d}} 
+\index{netif@{netif}!linkoutput@{linkoutput}}
+\index{linkoutput@{linkoutput}!netif@{netif}}
+\subsubsection{\texorpdfstring{linkoutput}{linkoutput}}
+{\footnotesize\ttfamily \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2netif_8h_ab75e9d808bc1b788bea84213e6a111ed}{netif\+\_\+linkoutput\+\_\+fn} netif\+::linkoutput}
+
+This function is called by ethernet\+\_\+output() when it wants to send a packet on the interface. This function outputs the pbuf as-\/is on the link medium. \mbox{\Hypertarget{structnetif_aca7d56b4e0f822b0ced2885f222b8d48}\label{structnetif_aca7d56b4e0f822b0ced2885f222b8d48}} 
+\index{netif@{netif}!mtu@{mtu}}
+\index{mtu@{mtu}!netif@{netif}}
+\subsubsection{\texorpdfstring{mtu}{mtu}}
+{\footnotesize\ttfamily \hyperlink{group__compiler__abstraction_ga77570ac4fcab86864fa1916e55676da2}{u16\+\_\+t} netif\+::mtu}
+
+maximum transfer unit (in bytes) \mbox{\Hypertarget{structnetif_abd48227dcb80f70597ac0439126a0c2d}\label{structnetif_abd48227dcb80f70597ac0439126a0c2d}} 
+\index{netif@{netif}!name@{name}}
+\index{name@{name}!netif@{netif}}
+\subsubsection{\texorpdfstring{name}{name}}
+{\footnotesize\ttfamily char netif\+::name}
+
+descriptive abbreviation \mbox{\Hypertarget{structnetif_af6c29611a8719fc99de967f60da71c8c}\label{structnetif_af6c29611a8719fc99de967f60da71c8c}} 
+\index{netif@{netif}!next@{next}}
+\index{next@{next}!netif@{netif}}
+\subsubsection{\texorpdfstring{next}{next}}
+{\footnotesize\ttfamily struct \hyperlink{structnetif}{netif} $\ast$ netif\+::next}
+
+pointer to next in linked list \mbox{\Hypertarget{structnetif_ab7ef01e505dd2feb781fe86756b1c973}\label{structnetif_ab7ef01e505dd2feb781fe86756b1c973}} 
+\index{netif@{netif}!num@{num}}
+\index{num@{num}!netif@{netif}}
+\subsubsection{\texorpdfstring{num}{num}}
+{\footnotesize\ttfamily \hyperlink{group__compiler__abstraction_ga4caecabca98b43919dd11be1c0d4cd8e}{u8\+\_\+t} netif\+::num}
+
+number of this interface \mbox{\Hypertarget{structnetif_ad61510fed9cecbafc268ca0424dbd34e}\label{structnetif_ad61510fed9cecbafc268ca0424dbd34e}} 
+\index{netif@{netif}!state@{state}}
+\index{state@{state}!netif@{netif}}
+\subsubsection{\texorpdfstring{state}{state}}
+{\footnotesize\ttfamily void $\ast$ netif\+::state}
+
+This field can be set by the device driver and could point to state information for the device. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/ayush/\+R\+I\+O\+T/tests/lwip/bin/pkg/native/lwip/src/include/lwip/\hyperlink{native_2lwip_2src_2include_2lwip_2netif_8h}{netif.\+h}\end{DoxyCompactItemize}

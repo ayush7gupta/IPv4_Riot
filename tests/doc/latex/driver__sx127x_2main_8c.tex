@@ -1,0 +1,141 @@
+\hypertarget{driver__sx127x_2main_8c}{}\section{/home/ayush/\+R\+I\+O\+T/tests/driver\+\_\+sx127x/main.c File Reference}
+\label{driver__sx127x_2main_8c}\index{/home/ayush/\+R\+I\+O\+T/tests/driver\+\_\+sx127x/main.\+c@{/home/ayush/\+R\+I\+O\+T/tests/driver\+\_\+sx127x/main.\+c}}
+
+
+Test application for S\+X127X modem driver.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}thread.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}xtimer.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}shell.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}shell\+\_\+commands.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}net/gnrc/netdev.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}net/netdev.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}board.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}periph/rtc.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}sx127x\+\_\+internal.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}sx127x\+\_\+params.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}sx127x\+\_\+netdev.\+h\char`\"{}}\newline
+Include dependency graph for main.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{driver__sx127x_2main_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{driver__sx127x_2main_8c_a900be2797ece71b2a2c96b76eac9a818}{S\+X127\+X\+\_\+\+L\+O\+R\+A\+\_\+\+M\+S\+G\+\_\+\+Q\+U\+E\+UE}~(16\+U)
+\item 
+\#define \hyperlink{driver__sx127x_2main_8c_a91caa6601c999c72264e8375a0622e6c}{S\+X127\+X\+\_\+\+S\+T\+A\+C\+K\+S\+I\+ZE}~(T\+H\+R\+E\+A\+D\+\_\+\+S\+T\+A\+C\+K\+S\+I\+Z\+E\+\_\+\+D\+E\+F\+A\+U\+LT)
+\item 
+\#define \hyperlink{driver__sx127x_2main_8c_a87488dc6198d5fb672131845b958850a}{M\+S\+G\+\_\+\+T\+Y\+P\+E\+\_\+\+I\+SR}~(0x3456)
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{driver__sx127x_2main_8c_a086134062a22732746f9bd06f2f51659}{lora\+\_\+setup\+\_\+cmd} (int argc, char $\ast$$\ast$argv)
+\item 
+int \hyperlink{driver__sx127x_2main_8c_a29f52c9cd18533e40cd07e41a25993e1}{random\+\_\+cmd} (int argc, char $\ast$$\ast$argv)
+\item 
+int \hyperlink{driver__sx127x_2main_8c_a0ef9d52206f9489c0cc37dd0be3b78cd}{register\+\_\+cmd} (int argc, char $\ast$$\ast$argv)
+\item 
+int \hyperlink{driver__sx127x_2main_8c_acf539f04d5457df8bdd2de67663904ba}{send\+\_\+cmd} (int argc, char $\ast$$\ast$argv)
+\item 
+int \hyperlink{driver__sx127x_2main_8c_a67e5fa3e1914970cff619f64765d30bf}{listen\+\_\+cmd} (int argc, char $\ast$$\ast$argv)
+\item 
+int \hyperlink{driver__sx127x_2main_8c_ab62d7806b0f629ce4b2ccc36c4597f31}{channel\+\_\+cmd} (int argc, char $\ast$$\ast$argv)
+\item 
+void $\ast$ \hyperlink{driver__sx127x_2main_8c_a7a15716e3f6e0a115c8f3beabf4f3c49}{\+\_\+recv\+\_\+thread} (void $\ast$arg)
+\item 
+int \hyperlink{driver__sx127x_2main_8c_a840291bc02cba5474a4cb46a9b9566fe}{main} (void)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Test application for S\+X127X modem driver. 
+
+\begin{DoxyAuthor}{Author}
+Eugene P. \href{mailto:ep@unwds.com}{\tt ep@unwds.\+com} 
+
+José Ignacio Alamos \href{mailto:jose.alamos@inria.cl}{\tt jose.\+alamos@inria.\+cl} 
+
+Alexandre Abadie \href{mailto:alexandre.abadie@inria.fr}{\tt alexandre.\+abadie@inria.\+fr} 
+\end{DoxyAuthor}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{driver__sx127x_2main_8c_a87488dc6198d5fb672131845b958850a}\label{driver__sx127x_2main_8c_a87488dc6198d5fb672131845b958850a}} 
+\index{driver\+\_\+sx127x/main.\+c@{driver\+\_\+sx127x/main.\+c}!M\+S\+G\+\_\+\+T\+Y\+P\+E\+\_\+\+I\+SR@{M\+S\+G\+\_\+\+T\+Y\+P\+E\+\_\+\+I\+SR}}
+\index{M\+S\+G\+\_\+\+T\+Y\+P\+E\+\_\+\+I\+SR@{M\+S\+G\+\_\+\+T\+Y\+P\+E\+\_\+\+I\+SR}!driver\+\_\+sx127x/main.\+c@{driver\+\_\+sx127x/main.\+c}}
+\subsubsection{\texorpdfstring{M\+S\+G\+\_\+\+T\+Y\+P\+E\+\_\+\+I\+SR}{MSG\_TYPE\_ISR}}
+{\footnotesize\ttfamily \#define M\+S\+G\+\_\+\+T\+Y\+P\+E\+\_\+\+I\+SR~(0x3456)}
+
+\mbox{\Hypertarget{driver__sx127x_2main_8c_a900be2797ece71b2a2c96b76eac9a818}\label{driver__sx127x_2main_8c_a900be2797ece71b2a2c96b76eac9a818}} 
+\index{driver\+\_\+sx127x/main.\+c@{driver\+\_\+sx127x/main.\+c}!S\+X127\+X\+\_\+\+L\+O\+R\+A\+\_\+\+M\+S\+G\+\_\+\+Q\+U\+E\+UE@{S\+X127\+X\+\_\+\+L\+O\+R\+A\+\_\+\+M\+S\+G\+\_\+\+Q\+U\+E\+UE}}
+\index{S\+X127\+X\+\_\+\+L\+O\+R\+A\+\_\+\+M\+S\+G\+\_\+\+Q\+U\+E\+UE@{S\+X127\+X\+\_\+\+L\+O\+R\+A\+\_\+\+M\+S\+G\+\_\+\+Q\+U\+E\+UE}!driver\+\_\+sx127x/main.\+c@{driver\+\_\+sx127x/main.\+c}}
+\subsubsection{\texorpdfstring{S\+X127\+X\+\_\+\+L\+O\+R\+A\+\_\+\+M\+S\+G\+\_\+\+Q\+U\+E\+UE}{SX127X\_LORA\_MSG\_QUEUE}}
+{\footnotesize\ttfamily \#define S\+X127\+X\+\_\+\+L\+O\+R\+A\+\_\+\+M\+S\+G\+\_\+\+Q\+U\+E\+UE~(16\+U)}
+
+\mbox{\Hypertarget{driver__sx127x_2main_8c_a91caa6601c999c72264e8375a0622e6c}\label{driver__sx127x_2main_8c_a91caa6601c999c72264e8375a0622e6c}} 
+\index{driver\+\_\+sx127x/main.\+c@{driver\+\_\+sx127x/main.\+c}!S\+X127\+X\+\_\+\+S\+T\+A\+C\+K\+S\+I\+ZE@{S\+X127\+X\+\_\+\+S\+T\+A\+C\+K\+S\+I\+ZE}}
+\index{S\+X127\+X\+\_\+\+S\+T\+A\+C\+K\+S\+I\+ZE@{S\+X127\+X\+\_\+\+S\+T\+A\+C\+K\+S\+I\+ZE}!driver\+\_\+sx127x/main.\+c@{driver\+\_\+sx127x/main.\+c}}
+\subsubsection{\texorpdfstring{S\+X127\+X\+\_\+\+S\+T\+A\+C\+K\+S\+I\+ZE}{SX127X\_STACKSIZE}}
+{\footnotesize\ttfamily \#define S\+X127\+X\+\_\+\+S\+T\+A\+C\+K\+S\+I\+ZE~(T\+H\+R\+E\+A\+D\+\_\+\+S\+T\+A\+C\+K\+S\+I\+Z\+E\+\_\+\+D\+E\+F\+A\+U\+LT)}
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{driver__sx127x_2main_8c_a7a15716e3f6e0a115c8f3beabf4f3c49}\label{driver__sx127x_2main_8c_a7a15716e3f6e0a115c8f3beabf4f3c49}} 
+\index{driver\+\_\+sx127x/main.\+c@{driver\+\_\+sx127x/main.\+c}!\+\_\+recv\+\_\+thread@{\+\_\+recv\+\_\+thread}}
+\index{\+\_\+recv\+\_\+thread@{\+\_\+recv\+\_\+thread}!driver\+\_\+sx127x/main.\+c@{driver\+\_\+sx127x/main.\+c}}
+\subsubsection{\texorpdfstring{\+\_\+recv\+\_\+thread()}{\_recv\_thread()}}
+{\footnotesize\ttfamily void$\ast$ \+\_\+recv\+\_\+thread (\begin{DoxyParamCaption}\item[{void $\ast$}]{arg }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{driver__sx127x_2main_8c_ab62d7806b0f629ce4b2ccc36c4597f31}\label{driver__sx127x_2main_8c_ab62d7806b0f629ce4b2ccc36c4597f31}} 
+\index{driver\+\_\+sx127x/main.\+c@{driver\+\_\+sx127x/main.\+c}!channel\+\_\+cmd@{channel\+\_\+cmd}}
+\index{channel\+\_\+cmd@{channel\+\_\+cmd}!driver\+\_\+sx127x/main.\+c@{driver\+\_\+sx127x/main.\+c}}
+\subsubsection{\texorpdfstring{channel\+\_\+cmd()}{channel\_cmd()}}
+{\footnotesize\ttfamily int channel\+\_\+cmd (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$$\ast$}]{argv }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{driver__sx127x_2main_8c_a67e5fa3e1914970cff619f64765d30bf}\label{driver__sx127x_2main_8c_a67e5fa3e1914970cff619f64765d30bf}} 
+\index{driver\+\_\+sx127x/main.\+c@{driver\+\_\+sx127x/main.\+c}!listen\+\_\+cmd@{listen\+\_\+cmd}}
+\index{listen\+\_\+cmd@{listen\+\_\+cmd}!driver\+\_\+sx127x/main.\+c@{driver\+\_\+sx127x/main.\+c}}
+\subsubsection{\texorpdfstring{listen\+\_\+cmd()}{listen\_cmd()}}
+{\footnotesize\ttfamily int listen\+\_\+cmd (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$$\ast$}]{argv }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{driver__sx127x_2main_8c_a086134062a22732746f9bd06f2f51659}\label{driver__sx127x_2main_8c_a086134062a22732746f9bd06f2f51659}} 
+\index{driver\+\_\+sx127x/main.\+c@{driver\+\_\+sx127x/main.\+c}!lora\+\_\+setup\+\_\+cmd@{lora\+\_\+setup\+\_\+cmd}}
+\index{lora\+\_\+setup\+\_\+cmd@{lora\+\_\+setup\+\_\+cmd}!driver\+\_\+sx127x/main.\+c@{driver\+\_\+sx127x/main.\+c}}
+\subsubsection{\texorpdfstring{lora\+\_\+setup\+\_\+cmd()}{lora\_setup\_cmd()}}
+{\footnotesize\ttfamily int lora\+\_\+setup\+\_\+cmd (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$$\ast$}]{argv }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{driver__sx127x_2main_8c_a840291bc02cba5474a4cb46a9b9566fe}\label{driver__sx127x_2main_8c_a840291bc02cba5474a4cb46a9b9566fe}} 
+\index{driver\+\_\+sx127x/main.\+c@{driver\+\_\+sx127x/main.\+c}!main@{main}}
+\index{main@{main}!driver\+\_\+sx127x/main.\+c@{driver\+\_\+sx127x/main.\+c}}
+\subsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{driver__sx127x_2main_8c_a29f52c9cd18533e40cd07e41a25993e1}\label{driver__sx127x_2main_8c_a29f52c9cd18533e40cd07e41a25993e1}} 
+\index{driver\+\_\+sx127x/main.\+c@{driver\+\_\+sx127x/main.\+c}!random\+\_\+cmd@{random\+\_\+cmd}}
+\index{random\+\_\+cmd@{random\+\_\+cmd}!driver\+\_\+sx127x/main.\+c@{driver\+\_\+sx127x/main.\+c}}
+\subsubsection{\texorpdfstring{random\+\_\+cmd()}{random\_cmd()}}
+{\footnotesize\ttfamily int random\+\_\+cmd (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$$\ast$}]{argv }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{driver__sx127x_2main_8c_a0ef9d52206f9489c0cc37dd0be3b78cd}\label{driver__sx127x_2main_8c_a0ef9d52206f9489c0cc37dd0be3b78cd}} 
+\index{driver\+\_\+sx127x/main.\+c@{driver\+\_\+sx127x/main.\+c}!register\+\_\+cmd@{register\+\_\+cmd}}
+\index{register\+\_\+cmd@{register\+\_\+cmd}!driver\+\_\+sx127x/main.\+c@{driver\+\_\+sx127x/main.\+c}}
+\subsubsection{\texorpdfstring{register\+\_\+cmd()}{register\_cmd()}}
+{\footnotesize\ttfamily int register\+\_\+cmd (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$$\ast$}]{argv }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{driver__sx127x_2main_8c_acf539f04d5457df8bdd2de67663904ba}\label{driver__sx127x_2main_8c_acf539f04d5457df8bdd2de67663904ba}} 
+\index{driver\+\_\+sx127x/main.\+c@{driver\+\_\+sx127x/main.\+c}!send\+\_\+cmd@{send\+\_\+cmd}}
+\index{send\+\_\+cmd@{send\+\_\+cmd}!driver\+\_\+sx127x/main.\+c@{driver\+\_\+sx127x/main.\+c}}
+\subsubsection{\texorpdfstring{send\+\_\+cmd()}{send\_cmd()}}
+{\footnotesize\ttfamily int send\+\_\+cmd (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$$\ast$}]{argv }\end{DoxyParamCaption})}
+

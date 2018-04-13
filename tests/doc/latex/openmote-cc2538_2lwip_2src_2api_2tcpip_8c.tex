@@ -1,0 +1,281 @@
+\hypertarget{openmote-cc2538_2lwip_2src_2api_2tcpip_8c}{}\section{/home/ayush/\+R\+I\+O\+T/tests/lwip/bin/pkg/openmote-\/cc2538/lwip/src/api/tcpip.c File Reference}
+\label{openmote-cc2538_2lwip_2src_2api_2tcpip_8c}\index{/home/ayush/\+R\+I\+O\+T/tests/lwip/bin/pkg/openmote-\/cc2538/lwip/src/api/tcpip.\+c@{/home/ayush/\+R\+I\+O\+T/tests/lwip/bin/pkg/openmote-\/cc2538/lwip/src/api/tcpip.\+c}}
+{\ttfamily \#include \char`\"{}lwip/opt.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}lwip/priv/tcpip\+\_\+priv.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}lwip/sys.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}lwip/memp.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}lwip/mem.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}lwip/init.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}lwip/ip.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}lwip/pbuf.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}lwip/etharp.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}netif/ethernet.\+h\char`\"{}}\newline
+Include dependency graph for tcpip.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{openmote-cc2538_2lwip_2src_2api_2tcpip_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{openmote-cc2538_2lwip_2src_2api_2tcpip_8c_ad42dbf6b1a12f07523637e44cf85756d}{T\+C\+P\+I\+P\+\_\+\+M\+S\+G\+\_\+\+V\+A\+R\+\_\+\+R\+EF}(name)~\hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2priv_2tcpip__priv_8h_a3518256af0d1a422755a899b13c2b563}{A\+P\+I\+\_\+\+V\+A\+R\+\_\+\+R\+EF}(name)
+\item 
+\#define \hyperlink{openmote-cc2538_2lwip_2src_2api_2tcpip_8c_aecf85047afc1ea35a976f7e279fb0f7b}{T\+C\+P\+I\+P\+\_\+\+M\+S\+G\+\_\+\+V\+A\+R\+\_\+\+D\+E\+C\+L\+A\+RE}(name)~\hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2priv_2tcpip__priv_8h_ab5d4a4fa91c4c144bedabf593a68b4dd}{A\+P\+I\+\_\+\+V\+A\+R\+\_\+\+D\+E\+C\+L\+A\+RE}(struct \hyperlink{structtcpip__msg}{tcpip\+\_\+msg}, name)
+\item 
+\#define \hyperlink{openmote-cc2538_2lwip_2src_2api_2tcpip_8c_a2485bb329e586fe0b440cff72bf364e4}{T\+C\+P\+I\+P\+\_\+\+M\+S\+G\+\_\+\+V\+A\+R\+\_\+\+A\+L\+L\+OC}(name)~\hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2priv_2tcpip__priv_8h_a8ff9b936b16d91844c0e32424e97f493}{A\+P\+I\+\_\+\+V\+A\+R\+\_\+\+A\+L\+L\+OC}(struct \hyperlink{structtcpip__msg}{tcpip\+\_\+msg}, M\+E\+M\+P\+\_\+\+T\+C\+P\+I\+P\+\_\+\+M\+S\+G\+\_\+\+A\+PI, name, \hyperlink{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadcaaaeafdbf3aecc46864daa3cd829c7e05}{E\+R\+R\+\_\+\+M\+EM})
+\item 
+\#define \hyperlink{openmote-cc2538_2lwip_2src_2api_2tcpip_8c_acf5d75be78b6af27ca5ed13da28681d4}{T\+C\+P\+I\+P\+\_\+\+M\+S\+G\+\_\+\+V\+A\+R\+\_\+\+F\+R\+EE}(name)~\hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2priv_2tcpip__priv_8h_a30caebb5334f52d49ac938a507094094}{A\+P\+I\+\_\+\+V\+A\+R\+\_\+\+F\+R\+EE}(M\+E\+M\+P\+\_\+\+T\+C\+P\+I\+P\+\_\+\+M\+S\+G\+\_\+\+A\+PI, name)
+\item 
+\#define \hyperlink{openmote-cc2538_2lwip_2src_2api_2tcpip_8c_a509daeff3c37e5659d0decb841b4e262}{T\+C\+P\+I\+P\+\_\+\+M\+B\+O\+X\+\_\+\+F\+E\+T\+CH}(mbox,  msg)~\hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2sys_8h_a5bae9efa9c945dc810665dc4a7e60117}{sys\+\_\+mbox\+\_\+fetch}(mbox, msg)
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group__infrastructure__errors_gaf02d9da80fd66b4f986d2c53d7231ddb}{err\+\_\+t} \hyperlink{openmote-cc2538_2lwip_2src_2api_2tcpip_8c_a93043b3c66dbe4a15a60299c6199d102}{tcpip\+\_\+inpkt} (struct \hyperlink{structpbuf}{pbuf} $\ast$p, struct \hyperlink{structnetif}{netif} $\ast$inp, \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2netif_8h_ab2302b1b64ac7b95f24c6bab754a575e}{netif\+\_\+input\+\_\+fn} input\+\_\+fn)
+\item 
+\hyperlink{group__infrastructure__errors_gaf02d9da80fd66b4f986d2c53d7231ddb}{err\+\_\+t} \hyperlink{group__lwip__os_gae510f195171bed8499ae94e264a92717}{tcpip\+\_\+input} (struct \hyperlink{structpbuf}{pbuf} $\ast$p, struct \hyperlink{structnetif}{netif} $\ast$inp)
+\item 
+\hyperlink{group__infrastructure__errors_gaf02d9da80fd66b4f986d2c53d7231ddb}{err\+\_\+t} \hyperlink{openmote-cc2538_2lwip_2src_2api_2tcpip_8c_ab1d3ef23817d7703fa75ed67bd45ea1d}{tcpip\+\_\+callback\+\_\+with\+\_\+block} (\hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2tcpip_8h_a35203296bb838f3b493839ffc6e7285d}{tcpip\+\_\+callback\+\_\+fn} function, void $\ast$ctx, \hyperlink{group__compiler__abstraction_ga4caecabca98b43919dd11be1c0d4cd8e}{u8\+\_\+t} block)
+\item 
+\hyperlink{group__infrastructure__errors_gaf02d9da80fd66b4f986d2c53d7231ddb}{err\+\_\+t} \hyperlink{openmote-cc2538_2lwip_2src_2api_2tcpip_8c_a12bdf37eddcd72c4178e3ea7d370395d}{tcpip\+\_\+send\+\_\+msg\+\_\+wait\+\_\+sem} (\hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2tcpip_8h_a35203296bb838f3b493839ffc6e7285d}{tcpip\+\_\+callback\+\_\+fn} fn, void $\ast$apimsg, sys\+\_\+sem\+\_\+t $\ast$sem)
+\item 
+\hyperlink{group__infrastructure__errors_gaf02d9da80fd66b4f986d2c53d7231ddb}{err\+\_\+t} \hyperlink{openmote-cc2538_2lwip_2src_2api_2tcpip_8c_a3d42b0c46607f91aedcc7745ed466b08}{tcpip\+\_\+api\+\_\+call} (\hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2priv_2tcpip__priv_8h_aa7ecde8c8d8012fe5c498f7ee58f9458}{tcpip\+\_\+api\+\_\+call\+\_\+fn} fn, struct \hyperlink{structtcpip__api__call__data}{tcpip\+\_\+api\+\_\+call\+\_\+data} $\ast$call)
+\item 
+struct tcpip\+\_\+callback\+\_\+msg $\ast$ \hyperlink{openmote-cc2538_2lwip_2src_2api_2tcpip_8c_aee14fa2587a9ba9d23e4c7e16c4526ac}{tcpip\+\_\+callbackmsg\+\_\+new} (\hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2tcpip_8h_a35203296bb838f3b493839ffc6e7285d}{tcpip\+\_\+callback\+\_\+fn} function, void $\ast$ctx)
+\item 
+void \hyperlink{openmote-cc2538_2lwip_2src_2api_2tcpip_8c_ac5b7a59f4c3f5f721ab9ee81f231c9fd}{tcpip\+\_\+callbackmsg\+\_\+delete} (struct tcpip\+\_\+callback\+\_\+msg $\ast$msg)
+\item 
+\hyperlink{group__infrastructure__errors_gaf02d9da80fd66b4f986d2c53d7231ddb}{err\+\_\+t} \hyperlink{openmote-cc2538_2lwip_2src_2api_2tcpip_8c_acfc81ad493f68714a22b3b8ea7d04378}{tcpip\+\_\+trycallback} (struct tcpip\+\_\+callback\+\_\+msg $\ast$msg)
+\item 
+void \hyperlink{group__lwip__os_ga1f3a88b8df6ba3b9ed1c00e0a305e3db}{tcpip\+\_\+init} (\hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2tcpip_8h_a5fe07216c441e27c3028bcac60fa0992}{tcpip\+\_\+init\+\_\+done\+\_\+fn} initfunc, void $\ast$arg)
+\item 
+\hyperlink{group__infrastructure__errors_gaf02d9da80fd66b4f986d2c53d7231ddb}{err\+\_\+t} \hyperlink{openmote-cc2538_2lwip_2src_2api_2tcpip_8c_a5cdcb6b784fe0e8736a5b31a5cfbed6c}{pbuf\+\_\+free\+\_\+callback} (struct \hyperlink{structpbuf}{pbuf} $\ast$p)
+\item 
+\hyperlink{group__infrastructure__errors_gaf02d9da80fd66b4f986d2c53d7231ddb}{err\+\_\+t} \hyperlink{openmote-cc2538_2lwip_2src_2api_2tcpip_8c_a55b4de3765c6a37b3f2b26a11603771c}{mem\+\_\+free\+\_\+callback} (void $\ast$m)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Sequential A\+PI Main thread module 
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2api_2tcpip_8c_a509daeff3c37e5659d0decb841b4e262}\label{openmote-cc2538_2lwip_2src_2api_2tcpip_8c_a509daeff3c37e5659d0decb841b4e262}} 
+\index{openmote-\/cc2538/lwip/src/api/tcpip.\+c@{openmote-\/cc2538/lwip/src/api/tcpip.\+c}!T\+C\+P\+I\+P\+\_\+\+M\+B\+O\+X\+\_\+\+F\+E\+T\+CH@{T\+C\+P\+I\+P\+\_\+\+M\+B\+O\+X\+\_\+\+F\+E\+T\+CH}}
+\index{T\+C\+P\+I\+P\+\_\+\+M\+B\+O\+X\+\_\+\+F\+E\+T\+CH@{T\+C\+P\+I\+P\+\_\+\+M\+B\+O\+X\+\_\+\+F\+E\+T\+CH}!openmote-\/cc2538/lwip/src/api/tcpip.\+c@{openmote-\/cc2538/lwip/src/api/tcpip.\+c}}
+\subsubsection{\texorpdfstring{T\+C\+P\+I\+P\+\_\+\+M\+B\+O\+X\+\_\+\+F\+E\+T\+CH}{TCPIP\_MBOX\_FETCH}}
+{\footnotesize\ttfamily \#define T\+C\+P\+I\+P\+\_\+\+M\+B\+O\+X\+\_\+\+F\+E\+T\+CH(\begin{DoxyParamCaption}\item[{}]{mbox,  }\item[{}]{msg }\end{DoxyParamCaption})~\hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2sys_8h_a5bae9efa9c945dc810665dc4a7e60117}{sys\+\_\+mbox\+\_\+fetch}(mbox, msg)}
+
+\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2api_2tcpip_8c_a2485bb329e586fe0b440cff72bf364e4}\label{openmote-cc2538_2lwip_2src_2api_2tcpip_8c_a2485bb329e586fe0b440cff72bf364e4}} 
+\index{openmote-\/cc2538/lwip/src/api/tcpip.\+c@{openmote-\/cc2538/lwip/src/api/tcpip.\+c}!T\+C\+P\+I\+P\+\_\+\+M\+S\+G\+\_\+\+V\+A\+R\+\_\+\+A\+L\+L\+OC@{T\+C\+P\+I\+P\+\_\+\+M\+S\+G\+\_\+\+V\+A\+R\+\_\+\+A\+L\+L\+OC}}
+\index{T\+C\+P\+I\+P\+\_\+\+M\+S\+G\+\_\+\+V\+A\+R\+\_\+\+A\+L\+L\+OC@{T\+C\+P\+I\+P\+\_\+\+M\+S\+G\+\_\+\+V\+A\+R\+\_\+\+A\+L\+L\+OC}!openmote-\/cc2538/lwip/src/api/tcpip.\+c@{openmote-\/cc2538/lwip/src/api/tcpip.\+c}}
+\subsubsection{\texorpdfstring{T\+C\+P\+I\+P\+\_\+\+M\+S\+G\+\_\+\+V\+A\+R\+\_\+\+A\+L\+L\+OC}{TCPIP\_MSG\_VAR\_ALLOC}}
+{\footnotesize\ttfamily \#define T\+C\+P\+I\+P\+\_\+\+M\+S\+G\+\_\+\+V\+A\+R\+\_\+\+A\+L\+L\+OC(\begin{DoxyParamCaption}\item[{}]{name }\end{DoxyParamCaption})~\hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2priv_2tcpip__priv_8h_a8ff9b936b16d91844c0e32424e97f493}{A\+P\+I\+\_\+\+V\+A\+R\+\_\+\+A\+L\+L\+OC}(struct \hyperlink{structtcpip__msg}{tcpip\+\_\+msg}, M\+E\+M\+P\+\_\+\+T\+C\+P\+I\+P\+\_\+\+M\+S\+G\+\_\+\+A\+PI, name, \hyperlink{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadcaaaeafdbf3aecc46864daa3cd829c7e05}{E\+R\+R\+\_\+\+M\+EM})}
+
+\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2api_2tcpip_8c_aecf85047afc1ea35a976f7e279fb0f7b}\label{openmote-cc2538_2lwip_2src_2api_2tcpip_8c_aecf85047afc1ea35a976f7e279fb0f7b}} 
+\index{openmote-\/cc2538/lwip/src/api/tcpip.\+c@{openmote-\/cc2538/lwip/src/api/tcpip.\+c}!T\+C\+P\+I\+P\+\_\+\+M\+S\+G\+\_\+\+V\+A\+R\+\_\+\+D\+E\+C\+L\+A\+RE@{T\+C\+P\+I\+P\+\_\+\+M\+S\+G\+\_\+\+V\+A\+R\+\_\+\+D\+E\+C\+L\+A\+RE}}
+\index{T\+C\+P\+I\+P\+\_\+\+M\+S\+G\+\_\+\+V\+A\+R\+\_\+\+D\+E\+C\+L\+A\+RE@{T\+C\+P\+I\+P\+\_\+\+M\+S\+G\+\_\+\+V\+A\+R\+\_\+\+D\+E\+C\+L\+A\+RE}!openmote-\/cc2538/lwip/src/api/tcpip.\+c@{openmote-\/cc2538/lwip/src/api/tcpip.\+c}}
+\subsubsection{\texorpdfstring{T\+C\+P\+I\+P\+\_\+\+M\+S\+G\+\_\+\+V\+A\+R\+\_\+\+D\+E\+C\+L\+A\+RE}{TCPIP\_MSG\_VAR\_DECLARE}}
+{\footnotesize\ttfamily \#define T\+C\+P\+I\+P\+\_\+\+M\+S\+G\+\_\+\+V\+A\+R\+\_\+\+D\+E\+C\+L\+A\+RE(\begin{DoxyParamCaption}\item[{}]{name }\end{DoxyParamCaption})~\hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2priv_2tcpip__priv_8h_ab5d4a4fa91c4c144bedabf593a68b4dd}{A\+P\+I\+\_\+\+V\+A\+R\+\_\+\+D\+E\+C\+L\+A\+RE}(struct \hyperlink{structtcpip__msg}{tcpip\+\_\+msg}, name)}
+
+\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2api_2tcpip_8c_acf5d75be78b6af27ca5ed13da28681d4}\label{openmote-cc2538_2lwip_2src_2api_2tcpip_8c_acf5d75be78b6af27ca5ed13da28681d4}} 
+\index{openmote-\/cc2538/lwip/src/api/tcpip.\+c@{openmote-\/cc2538/lwip/src/api/tcpip.\+c}!T\+C\+P\+I\+P\+\_\+\+M\+S\+G\+\_\+\+V\+A\+R\+\_\+\+F\+R\+EE@{T\+C\+P\+I\+P\+\_\+\+M\+S\+G\+\_\+\+V\+A\+R\+\_\+\+F\+R\+EE}}
+\index{T\+C\+P\+I\+P\+\_\+\+M\+S\+G\+\_\+\+V\+A\+R\+\_\+\+F\+R\+EE@{T\+C\+P\+I\+P\+\_\+\+M\+S\+G\+\_\+\+V\+A\+R\+\_\+\+F\+R\+EE}!openmote-\/cc2538/lwip/src/api/tcpip.\+c@{openmote-\/cc2538/lwip/src/api/tcpip.\+c}}
+\subsubsection{\texorpdfstring{T\+C\+P\+I\+P\+\_\+\+M\+S\+G\+\_\+\+V\+A\+R\+\_\+\+F\+R\+EE}{TCPIP\_MSG\_VAR\_FREE}}
+{\footnotesize\ttfamily \#define T\+C\+P\+I\+P\+\_\+\+M\+S\+G\+\_\+\+V\+A\+R\+\_\+\+F\+R\+EE(\begin{DoxyParamCaption}\item[{}]{name }\end{DoxyParamCaption})~\hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2priv_2tcpip__priv_8h_a30caebb5334f52d49ac938a507094094}{A\+P\+I\+\_\+\+V\+A\+R\+\_\+\+F\+R\+EE}(M\+E\+M\+P\+\_\+\+T\+C\+P\+I\+P\+\_\+\+M\+S\+G\+\_\+\+A\+PI, name)}
+
+\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2api_2tcpip_8c_ad42dbf6b1a12f07523637e44cf85756d}\label{openmote-cc2538_2lwip_2src_2api_2tcpip_8c_ad42dbf6b1a12f07523637e44cf85756d}} 
+\index{openmote-\/cc2538/lwip/src/api/tcpip.\+c@{openmote-\/cc2538/lwip/src/api/tcpip.\+c}!T\+C\+P\+I\+P\+\_\+\+M\+S\+G\+\_\+\+V\+A\+R\+\_\+\+R\+EF@{T\+C\+P\+I\+P\+\_\+\+M\+S\+G\+\_\+\+V\+A\+R\+\_\+\+R\+EF}}
+\index{T\+C\+P\+I\+P\+\_\+\+M\+S\+G\+\_\+\+V\+A\+R\+\_\+\+R\+EF@{T\+C\+P\+I\+P\+\_\+\+M\+S\+G\+\_\+\+V\+A\+R\+\_\+\+R\+EF}!openmote-\/cc2538/lwip/src/api/tcpip.\+c@{openmote-\/cc2538/lwip/src/api/tcpip.\+c}}
+\subsubsection{\texorpdfstring{T\+C\+P\+I\+P\+\_\+\+M\+S\+G\+\_\+\+V\+A\+R\+\_\+\+R\+EF}{TCPIP\_MSG\_VAR\_REF}}
+{\footnotesize\ttfamily \#define T\+C\+P\+I\+P\+\_\+\+M\+S\+G\+\_\+\+V\+A\+R\+\_\+\+R\+EF(\begin{DoxyParamCaption}\item[{}]{name }\end{DoxyParamCaption})~\hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2priv_2tcpip__priv_8h_a3518256af0d1a422755a899b13c2b563}{A\+P\+I\+\_\+\+V\+A\+R\+\_\+\+R\+EF}(name)}
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2api_2tcpip_8c_a55b4de3765c6a37b3f2b26a11603771c}\label{openmote-cc2538_2lwip_2src_2api_2tcpip_8c_a55b4de3765c6a37b3f2b26a11603771c}} 
+\index{openmote-\/cc2538/lwip/src/api/tcpip.\+c@{openmote-\/cc2538/lwip/src/api/tcpip.\+c}!mem\+\_\+free\+\_\+callback@{mem\+\_\+free\+\_\+callback}}
+\index{mem\+\_\+free\+\_\+callback@{mem\+\_\+free\+\_\+callback}!openmote-\/cc2538/lwip/src/api/tcpip.\+c@{openmote-\/cc2538/lwip/src/api/tcpip.\+c}}
+\subsubsection{\texorpdfstring{mem\+\_\+free\+\_\+callback()}{mem\_free\_callback()}}
+{\footnotesize\ttfamily \hyperlink{group__infrastructure__errors_gaf02d9da80fd66b4f986d2c53d7231ddb}{err\+\_\+t} mem\+\_\+free\+\_\+callback (\begin{DoxyParamCaption}\item[{void $\ast$}]{m }\end{DoxyParamCaption})}
+
+A simple wrapper function that allows you to free heap memory from interrupt context.
+
+
+\begin{DoxyParams}{Parameters}
+{\em m} & the heap memory to free \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+E\+R\+R\+\_\+\+OK if callback could be enqueued, an err\+\_\+t if not 
+\end{DoxyReturn}
+\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2api_2tcpip_8c_a5cdcb6b784fe0e8736a5b31a5cfbed6c}\label{openmote-cc2538_2lwip_2src_2api_2tcpip_8c_a5cdcb6b784fe0e8736a5b31a5cfbed6c}} 
+\index{openmote-\/cc2538/lwip/src/api/tcpip.\+c@{openmote-\/cc2538/lwip/src/api/tcpip.\+c}!pbuf\+\_\+free\+\_\+callback@{pbuf\+\_\+free\+\_\+callback}}
+\index{pbuf\+\_\+free\+\_\+callback@{pbuf\+\_\+free\+\_\+callback}!openmote-\/cc2538/lwip/src/api/tcpip.\+c@{openmote-\/cc2538/lwip/src/api/tcpip.\+c}}
+\subsubsection{\texorpdfstring{pbuf\+\_\+free\+\_\+callback()}{pbuf\_free\_callback()}}
+{\footnotesize\ttfamily \hyperlink{group__infrastructure__errors_gaf02d9da80fd66b4f986d2c53d7231ddb}{err\+\_\+t} pbuf\+\_\+free\+\_\+callback (\begin{DoxyParamCaption}\item[{struct \hyperlink{structpbuf}{pbuf} $\ast$}]{p }\end{DoxyParamCaption})}
+
+A simple wrapper function that allows you to free a pbuf from interrupt context.
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & The pbuf (chain) to be dereferenced. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+E\+R\+R\+\_\+\+OK if callback could be enqueued, an err\+\_\+t if not 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=316pt]{openmote-cc2538_2lwip_2src_2api_2tcpip_8c_a5cdcb6b784fe0e8736a5b31a5cfbed6c_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2api_2tcpip_8c_a3d42b0c46607f91aedcc7745ed466b08}\label{openmote-cc2538_2lwip_2src_2api_2tcpip_8c_a3d42b0c46607f91aedcc7745ed466b08}} 
+\index{openmote-\/cc2538/lwip/src/api/tcpip.\+c@{openmote-\/cc2538/lwip/src/api/tcpip.\+c}!tcpip\+\_\+api\+\_\+call@{tcpip\+\_\+api\+\_\+call}}
+\index{tcpip\+\_\+api\+\_\+call@{tcpip\+\_\+api\+\_\+call}!openmote-\/cc2538/lwip/src/api/tcpip.\+c@{openmote-\/cc2538/lwip/src/api/tcpip.\+c}}
+\subsubsection{\texorpdfstring{tcpip\+\_\+api\+\_\+call()}{tcpip\_api\_call()}}
+{\footnotesize\ttfamily \hyperlink{group__infrastructure__errors_gaf02d9da80fd66b4f986d2c53d7231ddb}{err\+\_\+t} tcpip\+\_\+api\+\_\+call (\begin{DoxyParamCaption}\item[{\hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2priv_2tcpip__priv_8h_aa7ecde8c8d8012fe5c498f7ee58f9458}{tcpip\+\_\+api\+\_\+call\+\_\+fn}}]{fn,  }\item[{struct \hyperlink{structtcpip__api__call__data}{tcpip\+\_\+api\+\_\+call\+\_\+data} $\ast$}]{call }\end{DoxyParamCaption})}
+
+Synchronously calls function in T\+C\+P\+IP thread and waits for its completion. It is recommended to use L\+W\+I\+P\+\_\+\+T\+C\+P\+I\+P\+\_\+\+C\+O\+R\+E\+\_\+\+L\+O\+C\+K\+I\+NG (preferred) or L\+W\+I\+P\+\_\+\+N\+E\+T\+C\+O\+N\+N\+\_\+\+S\+E\+M\+\_\+\+P\+E\+R\+\_\+\+T\+H\+R\+E\+AD. If not, a semaphore is created and destroyed on every call which is usually an expensive/slow operation. 
+\begin{DoxyParams}{Parameters}
+{\em fn} & Function to call \\
+\hline
+{\em call} & Call parameters \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Return value from tcpip\+\_\+api\+\_\+call\+\_\+fn 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=272pt]{openmote-cc2538_2lwip_2src_2api_2tcpip_8c_a3d42b0c46607f91aedcc7745ed466b08_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2api_2tcpip_8c_ab1d3ef23817d7703fa75ed67bd45ea1d}\label{openmote-cc2538_2lwip_2src_2api_2tcpip_8c_ab1d3ef23817d7703fa75ed67bd45ea1d}} 
+\index{openmote-\/cc2538/lwip/src/api/tcpip.\+c@{openmote-\/cc2538/lwip/src/api/tcpip.\+c}!tcpip\+\_\+callback\+\_\+with\+\_\+block@{tcpip\+\_\+callback\+\_\+with\+\_\+block}}
+\index{tcpip\+\_\+callback\+\_\+with\+\_\+block@{tcpip\+\_\+callback\+\_\+with\+\_\+block}!openmote-\/cc2538/lwip/src/api/tcpip.\+c@{openmote-\/cc2538/lwip/src/api/tcpip.\+c}}
+\subsubsection{\texorpdfstring{tcpip\+\_\+callback\+\_\+with\+\_\+block()}{tcpip\_callback\_with\_block()}}
+{\footnotesize\ttfamily \hyperlink{group__infrastructure__errors_gaf02d9da80fd66b4f986d2c53d7231ddb}{err\+\_\+t} tcpip\+\_\+callback\+\_\+with\+\_\+block (\begin{DoxyParamCaption}\item[{\hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2tcpip_8h_a35203296bb838f3b493839ffc6e7285d}{tcpip\+\_\+callback\+\_\+fn}}]{function,  }\item[{void $\ast$}]{ctx,  }\item[{\hyperlink{group__compiler__abstraction_ga4caecabca98b43919dd11be1c0d4cd8e}{u8\+\_\+t}}]{block }\end{DoxyParamCaption})}
+
+Call a specific function in the thread context of tcpip\+\_\+thread for easy access synchronization. A function called in that way may access lw\+IP core code without fearing concurrent access.
+
+
+\begin{DoxyParams}{Parameters}
+{\em function} & the function to call \\
+\hline
+{\em ctx} & parameter passed to f \\
+\hline
+{\em block} & 1 to block until the request is posted, 0 to non-\/blocking mode \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+E\+R\+R\+\_\+\+OK if the function was called, another err\+\_\+t if not 
+\end{DoxyReturn}
+\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2api_2tcpip_8c_ac5b7a59f4c3f5f721ab9ee81f231c9fd}\label{openmote-cc2538_2lwip_2src_2api_2tcpip_8c_ac5b7a59f4c3f5f721ab9ee81f231c9fd}} 
+\index{openmote-\/cc2538/lwip/src/api/tcpip.\+c@{openmote-\/cc2538/lwip/src/api/tcpip.\+c}!tcpip\+\_\+callbackmsg\+\_\+delete@{tcpip\+\_\+callbackmsg\+\_\+delete}}
+\index{tcpip\+\_\+callbackmsg\+\_\+delete@{tcpip\+\_\+callbackmsg\+\_\+delete}!openmote-\/cc2538/lwip/src/api/tcpip.\+c@{openmote-\/cc2538/lwip/src/api/tcpip.\+c}}
+\subsubsection{\texorpdfstring{tcpip\+\_\+callbackmsg\+\_\+delete()}{tcpip\_callbackmsg\_delete()}}
+{\footnotesize\ttfamily void tcpip\+\_\+callbackmsg\+\_\+delete (\begin{DoxyParamCaption}\item[{struct tcpip\+\_\+callback\+\_\+msg $\ast$}]{msg }\end{DoxyParamCaption})}
+
+Free a callback message allocated by \hyperlink{native_2lwip_2src_2api_2tcpip_8c_aee14fa2587a9ba9d23e4c7e16c4526ac}{tcpip\+\_\+callbackmsg\+\_\+new()}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em msg} & the message to free \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=310pt]{openmote-cc2538_2lwip_2src_2api_2tcpip_8c_ac5b7a59f4c3f5f721ab9ee81f231c9fd_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2api_2tcpip_8c_aee14fa2587a9ba9d23e4c7e16c4526ac}\label{openmote-cc2538_2lwip_2src_2api_2tcpip_8c_aee14fa2587a9ba9d23e4c7e16c4526ac}} 
+\index{openmote-\/cc2538/lwip/src/api/tcpip.\+c@{openmote-\/cc2538/lwip/src/api/tcpip.\+c}!tcpip\+\_\+callbackmsg\+\_\+new@{tcpip\+\_\+callbackmsg\+\_\+new}}
+\index{tcpip\+\_\+callbackmsg\+\_\+new@{tcpip\+\_\+callbackmsg\+\_\+new}!openmote-\/cc2538/lwip/src/api/tcpip.\+c@{openmote-\/cc2538/lwip/src/api/tcpip.\+c}}
+\subsubsection{\texorpdfstring{tcpip\+\_\+callbackmsg\+\_\+new()}{tcpip\_callbackmsg\_new()}}
+{\footnotesize\ttfamily struct tcpip\+\_\+callback\+\_\+msg$\ast$ tcpip\+\_\+callbackmsg\+\_\+new (\begin{DoxyParamCaption}\item[{\hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2tcpip_8h_a35203296bb838f3b493839ffc6e7285d}{tcpip\+\_\+callback\+\_\+fn}}]{function,  }\item[{void $\ast$}]{ctx }\end{DoxyParamCaption})}
+
+Allocate a structure for a static callback message and initialize it. This is intended to be used to send \char`\"{}static\char`\"{} messages from interrupt context.
+
+
+\begin{DoxyParams}{Parameters}
+{\em function} & the function to call \\
+\hline
+{\em ctx} & parameter passed to function \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a struct pointer to pass to \hyperlink{native_2lwip_2src_2api_2tcpip_8c_acfc81ad493f68714a22b3b8ea7d04378}{tcpip\+\_\+trycallback()}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2api_2tcpip_8c_a93043b3c66dbe4a15a60299c6199d102}\label{openmote-cc2538_2lwip_2src_2api_2tcpip_8c_a93043b3c66dbe4a15a60299c6199d102}} 
+\index{openmote-\/cc2538/lwip/src/api/tcpip.\+c@{openmote-\/cc2538/lwip/src/api/tcpip.\+c}!tcpip\+\_\+inpkt@{tcpip\+\_\+inpkt}}
+\index{tcpip\+\_\+inpkt@{tcpip\+\_\+inpkt}!openmote-\/cc2538/lwip/src/api/tcpip.\+c@{openmote-\/cc2538/lwip/src/api/tcpip.\+c}}
+\subsubsection{\texorpdfstring{tcpip\+\_\+inpkt()}{tcpip\_inpkt()}}
+{\footnotesize\ttfamily \hyperlink{group__infrastructure__errors_gaf02d9da80fd66b4f986d2c53d7231ddb}{err\+\_\+t} tcpip\+\_\+inpkt (\begin{DoxyParamCaption}\item[{struct \hyperlink{structpbuf}{pbuf} $\ast$}]{p,  }\item[{struct \hyperlink{structnetif}{netif} $\ast$}]{inp,  }\item[{\hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2netif_8h_ab2302b1b64ac7b95f24c6bab754a575e}{netif\+\_\+input\+\_\+fn}}]{input\+\_\+fn }\end{DoxyParamCaption})}
+
+Pass a received packet to tcpip\+\_\+thread for input processing
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & the received packet \\
+\hline
+{\em inp} & the network interface on which the packet was received \\
+\hline
+{\em input\+\_\+fn} & input function to call \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2api_2tcpip_8c_a12bdf37eddcd72c4178e3ea7d370395d}\label{openmote-cc2538_2lwip_2src_2api_2tcpip_8c_a12bdf37eddcd72c4178e3ea7d370395d}} 
+\index{openmote-\/cc2538/lwip/src/api/tcpip.\+c@{openmote-\/cc2538/lwip/src/api/tcpip.\+c}!tcpip\+\_\+send\+\_\+msg\+\_\+wait\+\_\+sem@{tcpip\+\_\+send\+\_\+msg\+\_\+wait\+\_\+sem}}
+\index{tcpip\+\_\+send\+\_\+msg\+\_\+wait\+\_\+sem@{tcpip\+\_\+send\+\_\+msg\+\_\+wait\+\_\+sem}!openmote-\/cc2538/lwip/src/api/tcpip.\+c@{openmote-\/cc2538/lwip/src/api/tcpip.\+c}}
+\subsubsection{\texorpdfstring{tcpip\+\_\+send\+\_\+msg\+\_\+wait\+\_\+sem()}{tcpip\_send\_msg\_wait\_sem()}}
+{\footnotesize\ttfamily \hyperlink{group__infrastructure__errors_gaf02d9da80fd66b4f986d2c53d7231ddb}{err\+\_\+t} tcpip\+\_\+send\+\_\+msg\+\_\+wait\+\_\+sem (\begin{DoxyParamCaption}\item[{\hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2tcpip_8h_a35203296bb838f3b493839ffc6e7285d}{tcpip\+\_\+callback\+\_\+fn}}]{fn,  }\item[{void $\ast$}]{apimsg,  }\item[{sys\+\_\+sem\+\_\+t $\ast$}]{sem }\end{DoxyParamCaption})}
+
+Sends a message to T\+C\+P\+IP thread to call a function. Caller thread blocks on on a provided semaphore, which ist N\+OT automatically signalled by T\+C\+P\+IP thread, this has to be done by the user. It is recommended to use L\+W\+I\+P\+\_\+\+T\+C\+P\+I\+P\+\_\+\+C\+O\+R\+E\+\_\+\+L\+O\+C\+K\+I\+NG since this is the way with least runtime overhead.
+
+
+\begin{DoxyParams}{Parameters}
+{\em fn} & function to be called from T\+C\+P\+IP thread \\
+\hline
+{\em apimsg} & argument to A\+PI function \\
+\hline
+{\em sem} & semaphore to wait on \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+E\+R\+R\+\_\+\+OK if the function was called, another err\+\_\+t if not 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=333pt]{openmote-cc2538_2lwip_2src_2api_2tcpip_8c_a12bdf37eddcd72c4178e3ea7d370395d_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2api_2tcpip_8c_acfc81ad493f68714a22b3b8ea7d04378}\label{openmote-cc2538_2lwip_2src_2api_2tcpip_8c_acfc81ad493f68714a22b3b8ea7d04378}} 
+\index{openmote-\/cc2538/lwip/src/api/tcpip.\+c@{openmote-\/cc2538/lwip/src/api/tcpip.\+c}!tcpip\+\_\+trycallback@{tcpip\+\_\+trycallback}}
+\index{tcpip\+\_\+trycallback@{tcpip\+\_\+trycallback}!openmote-\/cc2538/lwip/src/api/tcpip.\+c@{openmote-\/cc2538/lwip/src/api/tcpip.\+c}}
+\subsubsection{\texorpdfstring{tcpip\+\_\+trycallback()}{tcpip\_trycallback()}}
+{\footnotesize\ttfamily \hyperlink{group__infrastructure__errors_gaf02d9da80fd66b4f986d2c53d7231ddb}{err\+\_\+t} tcpip\+\_\+trycallback (\begin{DoxyParamCaption}\item[{struct tcpip\+\_\+callback\+\_\+msg $\ast$}]{msg }\end{DoxyParamCaption})}
+
+Try to post a callback-\/message to the tcpip\+\_\+thread mbox This is intended to be used to send \char`\"{}static\char`\"{} messages from interrupt context.
+
+
+\begin{DoxyParams}{Parameters}
+{\em msg} & pointer to the message to post \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{group__sys__mbox_gaa36345e48a49d67cbb0878cd4cbd2195}{sys\+\_\+mbox\+\_\+trypost()} return code 
+\end{DoxyReturn}

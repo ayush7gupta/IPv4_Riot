@@ -1,0 +1,158 @@
+\hypertarget{tests-hashes-sha1_8c}{}\section{/home/ayush/\+R\+I\+O\+T/tests/unittests/tests-\/hashes/tests-\/hashes-\/sha1.c File Reference}
+\label{tests-hashes-sha1_8c}\index{/home/ayush/\+R\+I\+O\+T/tests/unittests/tests-\/hashes/tests-\/hashes-\/sha1.\+c@{/home/ayush/\+R\+I\+O\+T/tests/unittests/tests-\/hashes/tests-\/hashes-\/sha1.\+c}}
+
+
+Test cases for the S\+H\+A-\/1 hash implementation.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}emb\+Unit/emb\+Unit.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}hashes/sha1.\+h\char`\"{}}\newline
+Include dependency graph for tests-\/hashes-\/sha1.c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{tests-hashes-sha1_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{tests-hashes-sha1_8c_a980428b3085b33ec46312fe0f3cb57b4}{T\+E\+S\+T\+\_\+\+C\+A\+S\+E\+S\+\_\+\+N\+UM}~(4)
+\item 
+\#define \hyperlink{tests-hashes-sha1_8c_aef8471770769d5643c8d0e9d49de0678}{T\+E\+S\+T1}~\char`\"{}abc\char`\"{}
+\item 
+\#define \hyperlink{tests-hashes-sha1_8c_a199333d354e3c1f5fc4dd571284fdd7d}{T\+E\+S\+T2a}~\char`\"{}abcdbcdecdefdefgefghfghighijhi\char`\"{}
+\item 
+\#define \hyperlink{tests-hashes-sha1_8c_a20a905eeace7ee3234ac0f352991d698}{T\+E\+S\+T2b}~\char`\"{}jkijkljklmklmnlmnomnopnopq\char`\"{}
+\item 
+\#define \hyperlink{tests-hashes-sha1_8c_a1b5997c11166c594b80d44bfde1cfa9c}{T\+E\+S\+T2}~\hyperlink{tests-hashes-sha1_8c_a199333d354e3c1f5fc4dd571284fdd7d}{T\+E\+S\+T2a} \hyperlink{tests-hashes-sha1_8c_a20a905eeace7ee3234ac0f352991d698}{T\+E\+S\+T2b}
+\item 
+\#define \hyperlink{tests-hashes-sha1_8c_a4671cc5352089a85a3b62399fd09099d}{T\+E\+S\+T3}~\char`\"{}a\char`\"{}
+\item 
+\#define \hyperlink{tests-hashes-sha1_8c_adac545ef2463994bbf27a39f2eae4706}{T\+E\+S\+T4a}~\char`\"{}01234567012345670123456701234567\char`\"{}
+\item 
+\#define \hyperlink{tests-hashes-sha1_8c_ada1e800575402b797af4de598255aac1}{T\+E\+S\+T4b}~\char`\"{}01234567012345670123456701234567\char`\"{}
+\item 
+\#define \hyperlink{tests-hashes-sha1_8c_a48a5cfeeedd2a33c0cc9bf96155603fe}{T\+E\+S\+T4}~\hyperlink{tests-hashes-sha1_8c_adac545ef2463994bbf27a39f2eae4706}{T\+E\+S\+T4a} \hyperlink{tests-hashes-sha1_8c_ada1e800575402b797af4de598255aac1}{T\+E\+S\+T4b}
+\item 
+\#define \hyperlink{tests-hashes-sha1_8c_a202f666594f995415c036dbe453c119f}{T\+E\+S\+T\+\_\+\+C\+A\+S\+E\+S\+\_\+\+H\+M\+A\+C\+\_\+\+N\+UM}~(5)
+\item 
+\#define \hyperlink{tests-hashes-sha1_8c_a64adb2d5a7abb689ffacaef002f48f72}{T\+E\+S\+T1\+\_\+\+H\+M\+AC}~\char`\"{}Hi There\char`\"{}
+\item 
+\#define \hyperlink{tests-hashes-sha1_8c_a2a3075ba5d6b067488617c91ab666bd6}{T\+E\+S\+T2\+\_\+\+H\+M\+AC}~\char`\"{}what do ya want for nothing?\char`\"{}
+\item 
+\#define \hyperlink{tests-hashes-sha1_8c_ae910f65fed01cd0bef78c1831442fae5}{T\+E\+S\+T3\+\_\+\+H\+M\+AC}~\char`\"{}Test With Truncation\char`\"{}
+\item 
+\#define \hyperlink{tests-hashes-sha1_8c_afd4689334b6359413f57a5417b15551b}{T\+E\+S\+T4\+\_\+\+H\+M\+AC}~\char`\"{}Test Using Larger Than Block-\/Size Key -\/ Hash Key First\char`\"{}
+\item 
+\#define \hyperlink{tests-hashes-sha1_8c_ae9d58987eb9e323f8958a26fcdbeb9ef}{T\+E\+S\+T5\+\_\+\+H\+M\+AC}~\char`\"{}Test Using Larger Than Block-\/Size Key and Larger Than One Block-\/Size Data\char`\"{}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+Test $\ast$ \hyperlink{group__unittests_ga5567d66422cdc40775eeacf6fa796893}{tests\+\_\+hashes\+\_\+sha1\+\_\+tests} (void)
+\begin{DoxyCompactList}\small\item\em Generates tests for hashes/sha1.\+h. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Test cases for the S\+H\+A-\/1 hash implementation. 
+
+\begin{DoxyAuthor}{Author}
+Oliver Hahm \href{mailto:oliver.hahm@inria.fr}{\tt oliver.\+hahm@inria.\+fr} 
+\end{DoxyAuthor}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{tests-hashes-sha1_8c_aef8471770769d5643c8d0e9d49de0678}\label{tests-hashes-sha1_8c_aef8471770769d5643c8d0e9d49de0678}} 
+\index{tests-\/hashes-\/sha1.\+c@{tests-\/hashes-\/sha1.\+c}!T\+E\+S\+T1@{T\+E\+S\+T1}}
+\index{T\+E\+S\+T1@{T\+E\+S\+T1}!tests-\/hashes-\/sha1.\+c@{tests-\/hashes-\/sha1.\+c}}
+\subsubsection{\texorpdfstring{T\+E\+S\+T1}{TEST1}}
+{\footnotesize\ttfamily \#define T\+E\+S\+T1~\char`\"{}abc\char`\"{}}
+
+\mbox{\Hypertarget{tests-hashes-sha1_8c_a64adb2d5a7abb689ffacaef002f48f72}\label{tests-hashes-sha1_8c_a64adb2d5a7abb689ffacaef002f48f72}} 
+\index{tests-\/hashes-\/sha1.\+c@{tests-\/hashes-\/sha1.\+c}!T\+E\+S\+T1\+\_\+\+H\+M\+AC@{T\+E\+S\+T1\+\_\+\+H\+M\+AC}}
+\index{T\+E\+S\+T1\+\_\+\+H\+M\+AC@{T\+E\+S\+T1\+\_\+\+H\+M\+AC}!tests-\/hashes-\/sha1.\+c@{tests-\/hashes-\/sha1.\+c}}
+\subsubsection{\texorpdfstring{T\+E\+S\+T1\+\_\+\+H\+M\+AC}{TEST1\_HMAC}}
+{\footnotesize\ttfamily \#define T\+E\+S\+T1\+\_\+\+H\+M\+AC~\char`\"{}Hi There\char`\"{}}
+
+\mbox{\Hypertarget{tests-hashes-sha1_8c_a1b5997c11166c594b80d44bfde1cfa9c}\label{tests-hashes-sha1_8c_a1b5997c11166c594b80d44bfde1cfa9c}} 
+\index{tests-\/hashes-\/sha1.\+c@{tests-\/hashes-\/sha1.\+c}!T\+E\+S\+T2@{T\+E\+S\+T2}}
+\index{T\+E\+S\+T2@{T\+E\+S\+T2}!tests-\/hashes-\/sha1.\+c@{tests-\/hashes-\/sha1.\+c}}
+\subsubsection{\texorpdfstring{T\+E\+S\+T2}{TEST2}}
+{\footnotesize\ttfamily \#define T\+E\+S\+T2~\hyperlink{tests-hashes-sha1_8c_a199333d354e3c1f5fc4dd571284fdd7d}{T\+E\+S\+T2a} \hyperlink{tests-hashes-sha1_8c_a20a905eeace7ee3234ac0f352991d698}{T\+E\+S\+T2b}}
+
+\mbox{\Hypertarget{tests-hashes-sha1_8c_a2a3075ba5d6b067488617c91ab666bd6}\label{tests-hashes-sha1_8c_a2a3075ba5d6b067488617c91ab666bd6}} 
+\index{tests-\/hashes-\/sha1.\+c@{tests-\/hashes-\/sha1.\+c}!T\+E\+S\+T2\+\_\+\+H\+M\+AC@{T\+E\+S\+T2\+\_\+\+H\+M\+AC}}
+\index{T\+E\+S\+T2\+\_\+\+H\+M\+AC@{T\+E\+S\+T2\+\_\+\+H\+M\+AC}!tests-\/hashes-\/sha1.\+c@{tests-\/hashes-\/sha1.\+c}}
+\subsubsection{\texorpdfstring{T\+E\+S\+T2\+\_\+\+H\+M\+AC}{TEST2\_HMAC}}
+{\footnotesize\ttfamily \#define T\+E\+S\+T2\+\_\+\+H\+M\+AC~\char`\"{}what do ya want for nothing?\char`\"{}}
+
+\mbox{\Hypertarget{tests-hashes-sha1_8c_a199333d354e3c1f5fc4dd571284fdd7d}\label{tests-hashes-sha1_8c_a199333d354e3c1f5fc4dd571284fdd7d}} 
+\index{tests-\/hashes-\/sha1.\+c@{tests-\/hashes-\/sha1.\+c}!T\+E\+S\+T2a@{T\+E\+S\+T2a}}
+\index{T\+E\+S\+T2a@{T\+E\+S\+T2a}!tests-\/hashes-\/sha1.\+c@{tests-\/hashes-\/sha1.\+c}}
+\subsubsection{\texorpdfstring{T\+E\+S\+T2a}{TEST2a}}
+{\footnotesize\ttfamily \#define T\+E\+S\+T2a~\char`\"{}abcdbcdecdefdefgefghfghighijhi\char`\"{}}
+
+\mbox{\Hypertarget{tests-hashes-sha1_8c_a20a905eeace7ee3234ac0f352991d698}\label{tests-hashes-sha1_8c_a20a905eeace7ee3234ac0f352991d698}} 
+\index{tests-\/hashes-\/sha1.\+c@{tests-\/hashes-\/sha1.\+c}!T\+E\+S\+T2b@{T\+E\+S\+T2b}}
+\index{T\+E\+S\+T2b@{T\+E\+S\+T2b}!tests-\/hashes-\/sha1.\+c@{tests-\/hashes-\/sha1.\+c}}
+\subsubsection{\texorpdfstring{T\+E\+S\+T2b}{TEST2b}}
+{\footnotesize\ttfamily \#define T\+E\+S\+T2b~\char`\"{}jkijkljklmklmnlmnomnopnopq\char`\"{}}
+
+\mbox{\Hypertarget{tests-hashes-sha1_8c_a4671cc5352089a85a3b62399fd09099d}\label{tests-hashes-sha1_8c_a4671cc5352089a85a3b62399fd09099d}} 
+\index{tests-\/hashes-\/sha1.\+c@{tests-\/hashes-\/sha1.\+c}!T\+E\+S\+T3@{T\+E\+S\+T3}}
+\index{T\+E\+S\+T3@{T\+E\+S\+T3}!tests-\/hashes-\/sha1.\+c@{tests-\/hashes-\/sha1.\+c}}
+\subsubsection{\texorpdfstring{T\+E\+S\+T3}{TEST3}}
+{\footnotesize\ttfamily \#define T\+E\+S\+T3~\char`\"{}a\char`\"{}}
+
+\mbox{\Hypertarget{tests-hashes-sha1_8c_ae910f65fed01cd0bef78c1831442fae5}\label{tests-hashes-sha1_8c_ae910f65fed01cd0bef78c1831442fae5}} 
+\index{tests-\/hashes-\/sha1.\+c@{tests-\/hashes-\/sha1.\+c}!T\+E\+S\+T3\+\_\+\+H\+M\+AC@{T\+E\+S\+T3\+\_\+\+H\+M\+AC}}
+\index{T\+E\+S\+T3\+\_\+\+H\+M\+AC@{T\+E\+S\+T3\+\_\+\+H\+M\+AC}!tests-\/hashes-\/sha1.\+c@{tests-\/hashes-\/sha1.\+c}}
+\subsubsection{\texorpdfstring{T\+E\+S\+T3\+\_\+\+H\+M\+AC}{TEST3\_HMAC}}
+{\footnotesize\ttfamily \#define T\+E\+S\+T3\+\_\+\+H\+M\+AC~\char`\"{}Test With Truncation\char`\"{}}
+
+\mbox{\Hypertarget{tests-hashes-sha1_8c_a48a5cfeeedd2a33c0cc9bf96155603fe}\label{tests-hashes-sha1_8c_a48a5cfeeedd2a33c0cc9bf96155603fe}} 
+\index{tests-\/hashes-\/sha1.\+c@{tests-\/hashes-\/sha1.\+c}!T\+E\+S\+T4@{T\+E\+S\+T4}}
+\index{T\+E\+S\+T4@{T\+E\+S\+T4}!tests-\/hashes-\/sha1.\+c@{tests-\/hashes-\/sha1.\+c}}
+\subsubsection{\texorpdfstring{T\+E\+S\+T4}{TEST4}}
+{\footnotesize\ttfamily \#define T\+E\+S\+T4~\hyperlink{tests-hashes-sha1_8c_adac545ef2463994bbf27a39f2eae4706}{T\+E\+S\+T4a} \hyperlink{tests-hashes-sha1_8c_ada1e800575402b797af4de598255aac1}{T\+E\+S\+T4b}}
+
+\mbox{\Hypertarget{tests-hashes-sha1_8c_afd4689334b6359413f57a5417b15551b}\label{tests-hashes-sha1_8c_afd4689334b6359413f57a5417b15551b}} 
+\index{tests-\/hashes-\/sha1.\+c@{tests-\/hashes-\/sha1.\+c}!T\+E\+S\+T4\+\_\+\+H\+M\+AC@{T\+E\+S\+T4\+\_\+\+H\+M\+AC}}
+\index{T\+E\+S\+T4\+\_\+\+H\+M\+AC@{T\+E\+S\+T4\+\_\+\+H\+M\+AC}!tests-\/hashes-\/sha1.\+c@{tests-\/hashes-\/sha1.\+c}}
+\subsubsection{\texorpdfstring{T\+E\+S\+T4\+\_\+\+H\+M\+AC}{TEST4\_HMAC}}
+{\footnotesize\ttfamily \#define T\+E\+S\+T4\+\_\+\+H\+M\+AC~\char`\"{}Test Using Larger Than Block-\/Size Key -\/ Hash Key First\char`\"{}}
+
+\mbox{\Hypertarget{tests-hashes-sha1_8c_adac545ef2463994bbf27a39f2eae4706}\label{tests-hashes-sha1_8c_adac545ef2463994bbf27a39f2eae4706}} 
+\index{tests-\/hashes-\/sha1.\+c@{tests-\/hashes-\/sha1.\+c}!T\+E\+S\+T4a@{T\+E\+S\+T4a}}
+\index{T\+E\+S\+T4a@{T\+E\+S\+T4a}!tests-\/hashes-\/sha1.\+c@{tests-\/hashes-\/sha1.\+c}}
+\subsubsection{\texorpdfstring{T\+E\+S\+T4a}{TEST4a}}
+{\footnotesize\ttfamily \#define T\+E\+S\+T4a~\char`\"{}01234567012345670123456701234567\char`\"{}}
+
+\mbox{\Hypertarget{tests-hashes-sha1_8c_ada1e800575402b797af4de598255aac1}\label{tests-hashes-sha1_8c_ada1e800575402b797af4de598255aac1}} 
+\index{tests-\/hashes-\/sha1.\+c@{tests-\/hashes-\/sha1.\+c}!T\+E\+S\+T4b@{T\+E\+S\+T4b}}
+\index{T\+E\+S\+T4b@{T\+E\+S\+T4b}!tests-\/hashes-\/sha1.\+c@{tests-\/hashes-\/sha1.\+c}}
+\subsubsection{\texorpdfstring{T\+E\+S\+T4b}{TEST4b}}
+{\footnotesize\ttfamily \#define T\+E\+S\+T4b~\char`\"{}01234567012345670123456701234567\char`\"{}}
+
+\mbox{\Hypertarget{tests-hashes-sha1_8c_ae9d58987eb9e323f8958a26fcdbeb9ef}\label{tests-hashes-sha1_8c_ae9d58987eb9e323f8958a26fcdbeb9ef}} 
+\index{tests-\/hashes-\/sha1.\+c@{tests-\/hashes-\/sha1.\+c}!T\+E\+S\+T5\+\_\+\+H\+M\+AC@{T\+E\+S\+T5\+\_\+\+H\+M\+AC}}
+\index{T\+E\+S\+T5\+\_\+\+H\+M\+AC@{T\+E\+S\+T5\+\_\+\+H\+M\+AC}!tests-\/hashes-\/sha1.\+c@{tests-\/hashes-\/sha1.\+c}}
+\subsubsection{\texorpdfstring{T\+E\+S\+T5\+\_\+\+H\+M\+AC}{TEST5\_HMAC}}
+{\footnotesize\ttfamily \#define T\+E\+S\+T5\+\_\+\+H\+M\+AC~\char`\"{}Test Using Larger Than Block-\/Size Key and Larger Than One Block-\/Size Data\char`\"{}}
+
+\mbox{\Hypertarget{tests-hashes-sha1_8c_a202f666594f995415c036dbe453c119f}\label{tests-hashes-sha1_8c_a202f666594f995415c036dbe453c119f}} 
+\index{tests-\/hashes-\/sha1.\+c@{tests-\/hashes-\/sha1.\+c}!T\+E\+S\+T\+\_\+\+C\+A\+S\+E\+S\+\_\+\+H\+M\+A\+C\+\_\+\+N\+UM@{T\+E\+S\+T\+\_\+\+C\+A\+S\+E\+S\+\_\+\+H\+M\+A\+C\+\_\+\+N\+UM}}
+\index{T\+E\+S\+T\+\_\+\+C\+A\+S\+E\+S\+\_\+\+H\+M\+A\+C\+\_\+\+N\+UM@{T\+E\+S\+T\+\_\+\+C\+A\+S\+E\+S\+\_\+\+H\+M\+A\+C\+\_\+\+N\+UM}!tests-\/hashes-\/sha1.\+c@{tests-\/hashes-\/sha1.\+c}}
+\subsubsection{\texorpdfstring{T\+E\+S\+T\+\_\+\+C\+A\+S\+E\+S\+\_\+\+H\+M\+A\+C\+\_\+\+N\+UM}{TEST\_CASES\_HMAC\_NUM}}
+{\footnotesize\ttfamily \#define T\+E\+S\+T\+\_\+\+C\+A\+S\+E\+S\+\_\+\+H\+M\+A\+C\+\_\+\+N\+UM~(5)}
+
+\mbox{\Hypertarget{tests-hashes-sha1_8c_a980428b3085b33ec46312fe0f3cb57b4}\label{tests-hashes-sha1_8c_a980428b3085b33ec46312fe0f3cb57b4}} 
+\index{tests-\/hashes-\/sha1.\+c@{tests-\/hashes-\/sha1.\+c}!T\+E\+S\+T\+\_\+\+C\+A\+S\+E\+S\+\_\+\+N\+UM@{T\+E\+S\+T\+\_\+\+C\+A\+S\+E\+S\+\_\+\+N\+UM}}
+\index{T\+E\+S\+T\+\_\+\+C\+A\+S\+E\+S\+\_\+\+N\+UM@{T\+E\+S\+T\+\_\+\+C\+A\+S\+E\+S\+\_\+\+N\+UM}!tests-\/hashes-\/sha1.\+c@{tests-\/hashes-\/sha1.\+c}}
+\subsubsection{\texorpdfstring{T\+E\+S\+T\+\_\+\+C\+A\+S\+E\+S\+\_\+\+N\+UM}{TEST\_CASES\_NUM}}
+{\footnotesize\ttfamily \#define T\+E\+S\+T\+\_\+\+C\+A\+S\+E\+S\+\_\+\+N\+UM~(4)}
+

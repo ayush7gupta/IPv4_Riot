@@ -1,0 +1,9 @@
+This test is intended to compile a hello-\/world program taking into account the existence of the M\+C\+U\+Boot bootloader at the first 32K in the R\+OM.
+
+For this first support, a pre-\/compiled mynewt M\+C\+U\+Boot binary is downloaded at compile time.
+
+The goal is to produce an E\+LF file which is linked to be flashed at a {\ttfamily B\+O\+O\+T\+L\+O\+A\+D\+E\+R\+\_\+\+O\+F\+F\+S\+ET} offset rather than the beginning of R\+OM. M\+C\+U\+Boot also expects an image padded with some specific headers containing the version information, and T\+L\+Vs with hash and signing information. This is done through the imgtool.\+py application, which is executed automatically by the build system.
+
+This test can be called using {\ttfamily make mcuboot} to produce such E\+LF file, which can also be flashed using {\ttfamily make flash-\/mcuboot}.This command also flashes the pre-\/compiled bootloader.
+
+It\textquotesingle{}s also possible to build and flash M\+C\+U\+Boot by following the instructions on the M\+C\+U\+Boot repository either using mynewt or zephyr operating systems. 

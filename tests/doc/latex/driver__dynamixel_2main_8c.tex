@@ -1,0 +1,83 @@
+\hypertarget{driver__dynamixel_2main_8c}{}\section{/home/ayush/\+R\+I\+O\+T/tests/driver\+\_\+dynamixel/main.c File Reference}
+\label{driver__dynamixel_2main_8c}\index{/home/ayush/\+R\+I\+O\+T/tests/driver\+\_\+dynamixel/main.\+c@{/home/ayush/\+R\+I\+O\+T/tests/driver\+\_\+dynamixel/main.\+c}}
+{\ttfamily \#include \char`\"{}dynamixel.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}shell.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}shell\+\_\+commands.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}uart\+\_\+stdio.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}board.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}periph/gpio.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+Include dependency graph for main.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{driver__dynamixel_2main_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structreg__name__addr__t}{reg\+\_\+name\+\_\+addr\+\_\+t}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{driver__dynamixel_2main_8c_a44c876c78e2fc722c001dfc1a36b638f}{A\+R\+R\+A\+Y\+\_\+\+L\+EN}(array)~(sizeof(array)/sizeof(array\mbox{[}0\mbox{]}))
+\item 
+\#define \hyperlink{driver__dynamixel_2main_8c_a8c5994cfb032b83efa5a12fd34e03b88}{dir\+\_\+init}~\hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2def_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}
+\item 
+\#define \hyperlink{driver__dynamixel_2main_8c_a1001b29f822318e9764827fad2ad5e38}{dir\+\_\+enable\+\_\+tx}~\hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2def_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}
+\item 
+\#define \hyperlink{driver__dynamixel_2main_8c_a807b7284fd71fe8b50ef041ac7a0d40f}{dir\+\_\+disable\+\_\+tx}~\hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2def_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{driver__dynamixel_2main_8c_a553059e6f944a8feab73b46568ae5df6}{print\+\_\+registers} (void)
+\item 
+int \hyperlink{driver__dynamixel_2main_8c_a840291bc02cba5474a4cb46a9b9566fe}{main} (void)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{driver__dynamixel_2main_8c_a44c876c78e2fc722c001dfc1a36b638f}\label{driver__dynamixel_2main_8c_a44c876c78e2fc722c001dfc1a36b638f}} 
+\index{driver\+\_\+dynamixel/main.\+c@{driver\+\_\+dynamixel/main.\+c}!A\+R\+R\+A\+Y\+\_\+\+L\+EN@{A\+R\+R\+A\+Y\+\_\+\+L\+EN}}
+\index{A\+R\+R\+A\+Y\+\_\+\+L\+EN@{A\+R\+R\+A\+Y\+\_\+\+L\+EN}!driver\+\_\+dynamixel/main.\+c@{driver\+\_\+dynamixel/main.\+c}}
+\subsubsection{\texorpdfstring{A\+R\+R\+A\+Y\+\_\+\+L\+EN}{ARRAY\_LEN}}
+{\footnotesize\ttfamily \#define A\+R\+R\+A\+Y\+\_\+\+L\+EN(\begin{DoxyParamCaption}\item[{}]{array }\end{DoxyParamCaption})~(sizeof(array)/sizeof(array\mbox{[}0\mbox{]}))}
+
+\mbox{\Hypertarget{driver__dynamixel_2main_8c_a807b7284fd71fe8b50ef041ac7a0d40f}\label{driver__dynamixel_2main_8c_a807b7284fd71fe8b50ef041ac7a0d40f}} 
+\index{driver\+\_\+dynamixel/main.\+c@{driver\+\_\+dynamixel/main.\+c}!dir\+\_\+disable\+\_\+tx@{dir\+\_\+disable\+\_\+tx}}
+\index{dir\+\_\+disable\+\_\+tx@{dir\+\_\+disable\+\_\+tx}!driver\+\_\+dynamixel/main.\+c@{driver\+\_\+dynamixel/main.\+c}}
+\subsubsection{\texorpdfstring{dir\+\_\+disable\+\_\+tx}{dir\_disable\_tx}}
+{\footnotesize\ttfamily \#define dir\+\_\+disable\+\_\+tx~\hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2def_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}}
+
+\mbox{\Hypertarget{driver__dynamixel_2main_8c_a1001b29f822318e9764827fad2ad5e38}\label{driver__dynamixel_2main_8c_a1001b29f822318e9764827fad2ad5e38}} 
+\index{driver\+\_\+dynamixel/main.\+c@{driver\+\_\+dynamixel/main.\+c}!dir\+\_\+enable\+\_\+tx@{dir\+\_\+enable\+\_\+tx}}
+\index{dir\+\_\+enable\+\_\+tx@{dir\+\_\+enable\+\_\+tx}!driver\+\_\+dynamixel/main.\+c@{driver\+\_\+dynamixel/main.\+c}}
+\subsubsection{\texorpdfstring{dir\+\_\+enable\+\_\+tx}{dir\_enable\_tx}}
+{\footnotesize\ttfamily \#define dir\+\_\+enable\+\_\+tx~\hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2def_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}}
+
+\mbox{\Hypertarget{driver__dynamixel_2main_8c_a8c5994cfb032b83efa5a12fd34e03b88}\label{driver__dynamixel_2main_8c_a8c5994cfb032b83efa5a12fd34e03b88}} 
+\index{driver\+\_\+dynamixel/main.\+c@{driver\+\_\+dynamixel/main.\+c}!dir\+\_\+init@{dir\+\_\+init}}
+\index{dir\+\_\+init@{dir\+\_\+init}!driver\+\_\+dynamixel/main.\+c@{driver\+\_\+dynamixel/main.\+c}}
+\subsubsection{\texorpdfstring{dir\+\_\+init}{dir\_init}}
+{\footnotesize\ttfamily \#define dir\+\_\+init~\hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2def_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}}
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{driver__dynamixel_2main_8c_a840291bc02cba5474a4cb46a9b9566fe}\label{driver__dynamixel_2main_8c_a840291bc02cba5474a4cb46a9b9566fe}} 
+\index{driver\+\_\+dynamixel/main.\+c@{driver\+\_\+dynamixel/main.\+c}!main@{main}}
+\index{main@{main}!driver\+\_\+dynamixel/main.\+c@{driver\+\_\+dynamixel/main.\+c}}
+\subsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{driver__dynamixel_2main_8c_a553059e6f944a8feab73b46568ae5df6}\label{driver__dynamixel_2main_8c_a553059e6f944a8feab73b46568ae5df6}} 
+\index{driver\+\_\+dynamixel/main.\+c@{driver\+\_\+dynamixel/main.\+c}!print\+\_\+registers@{print\+\_\+registers}}
+\index{print\+\_\+registers@{print\+\_\+registers}!driver\+\_\+dynamixel/main.\+c@{driver\+\_\+dynamixel/main.\+c}}
+\subsubsection{\texorpdfstring{print\+\_\+registers()}{print\_registers()}}
+{\footnotesize\ttfamily void print\+\_\+registers (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+

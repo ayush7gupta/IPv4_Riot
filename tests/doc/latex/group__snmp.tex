@@ -1,0 +1,128 @@
+\hypertarget{group__snmp}{}\section{S\+N\+M\+Pv2c agent}
+\label{group__snmp}\index{S\+N\+M\+Pv2c agent@{S\+N\+M\+Pv2c agent}}
+Collaboration diagram for S\+N\+M\+Pv2c agent\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{group__snmp}
+\end{center}
+\end{figure}
+\subsection*{Modules}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group__snmp__core}{Core}
+\item 
+\hyperlink{group__snmp__traps}{Traps}
+\item 
+\hyperlink{group__snmp__mib2}{M\+I\+B2}
+\item 
+\hyperlink{group__snmp__opts}{Options}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+S\+N\+M\+Pv2c compatible agent~\newline
+There is also a M\+IB compiler and a M\+IB viewer in lw\+IP contrib repository (lwip-\/contrib/apps/\+Lwip\+Mib\+Compiler).~\newline
+The agent implements the most important M\+I\+B2 M\+I\+Bs including I\+Pv6 support (interfaces, U\+DP, T\+CP, S\+N\+MP, I\+C\+MP, S\+Y\+S\+T\+EM). IP M\+IB is an older version whithout I\+Pv6 statistics (T\+O\+DO).~\newline
+Rewritten by Martin Hentschel \href{mailto:info@cl-soft.de}{\tt info@cl-\/soft.\+de} and Dirk Ziegelmeier \href{mailto:dziegel@gmx.de}{\tt dziegel@gmx.\+de}~\newline
+Work on S\+N\+M\+Pv3 has started, but is not finished.~\newline
+ \subsection*{0 Agent Capabilities }
+
+\subsubsection*{Features\+: }
+
+
+\begin{DoxyItemize}
+\item S\+N\+M\+Pv2c support.
+\item Low R\+AM usage -\/ no memory pools, stack only.
+\item M\+I\+B2 implementation is separated from S\+N\+MP stack.
+\item Support for multiple M\+I\+Bs (snmp\+\_\+set\+\_\+mibs() call) -\/ e.\+g. for private M\+IB.
+\item Simple and generic A\+PI for M\+IB implementation.
+\item Comfortable node types and helper functions for scalar arrays and tables.
+\item Counter64, bit and truthvalue datatype support.
+\item Callbacks for S\+N\+MP writes e.\+g. to implement persistency.
+\item Runs on two A\+P\+Is\+: R\+AW and netconn.
+\item Async A\+PI is gone -\/ the stack now supports netconn A\+PI instead, so blocking operations can be done in M\+IB calls. S\+N\+MP runs in a worker thread when netconn A\+PI is used.
+\item Simplified thread sync support for M\+I\+Bs -\/ useful when M\+I\+Bs need to access variables shared with other threads where no locking is possible. Used in M\+I\+B2 to access lw\+IP stats from lw\+IP thread.
+\end{DoxyItemize}
+
+\subsubsection*{M\+IB compiler (code generator)\+: }
+
+
+\begin{DoxyItemize}
+\item Provided in lw\+IP contrib repository.
+\item Written in C\#. M\+IB viewer used Windows Forms.
+\item Developed on Windows with Visual Studio 2010.
+\item Can be compiled and used on all platforms with \href{http://www.monodevelop.com/}{\tt http\+://www.\+monodevelop.\+com/}.
+\item Based on a heavily modified version of of Sharp\+Snmp\+Lib (a4bd05c6afb4) (\href{https://sharpsnmplib.codeplex.com/SourceControl/network/forks/Nemo157/MIBParserUpdate}{\tt https\+://sharpsnmplib.\+codeplex.\+com/\+Source\+Control/network/forks/\+Nemo157/\+M\+I\+B\+Parser\+Update}).
+\item M\+IB parser, C file generation framework and L\+W\+IP code generation are cleanly separated, which means the code may be useful as a base for code generation of other S\+N\+MP agents.
+\end{DoxyItemize}
+
+\subsubsection*{Notes\+: }
+
+
+\begin{DoxyItemize}
+\item Stack and M\+IB compiler were used to implement a Profinet device. Compiled/implemented M\+I\+Bs\+: L\+L\+D\+P-\/\+M\+IB, L\+L\+D\+P-\/\+E\+X\+T-\/\+D\+O\+T3-\/\+M\+IB, L\+L\+D\+P-\/\+E\+X\+T-\/\+P\+N\+O-\/\+M\+IB.
+\end{DoxyItemize}
+
+\subsubsection*{S\+N\+M\+Pv1 per R\+F\+C1157 and S\+N\+M\+Pv2c per R\+FC 3416 }
+
+Note the S in S\+N\+MP stands for \char`\"{}\+Simple\char`\"{}. Note that \char`\"{}\+Simple\char`\"{} is relative. S\+N\+MP is simple compared to the complex I\+SO network management protocols C\+M\+IP (Common Management Information Protocol) and C\+M\+OT (C\+Mip Over Tcp).
+
+\subsubsection*{M\+IB II }
+
+The standard lw\+IP stack management information base. This is a required M\+IB, so this is always enabled. The groups E\+GP, C\+M\+OT and transmission are disabled by default.
+
+Most mib-\/2 objects are not writable except\+: sys\+Name, sys\+Location, sys\+Contact, snmp\+Enable\+Authen\+Traps. Writing to or changing the A\+RP and IP address and route tables is not possible.
+
+Note lw\+IP has a very limited notion of IP routing. It currently doen\textquotesingle{}t have a route table and doesn\textquotesingle{}t have a notion of the U,G,H flags. Instead lw\+IP uses the interface list with only one default interface acting as a single gateway interface (G) for the default route.
+
+The agent returns a \char`\"{}virtual table\char`\"{} with the default route 0.\+0.\+0.\+0 for the default interface and network routes (no H) for each network interface in the netif\+\_\+list. All routes are considered to be up (U).
+
+\subsubsection*{Loading additional M\+I\+Bs }
+
+M\+I\+Bs can only be added in compile-\/time, not in run-\/time.
+
+\subsection*{1 Building the Agent }
+
+First of all you\textquotesingle{}ll need to add the following define to your local lwipopts.\+h\+: \#define L\+W\+I\+P\+\_\+\+S\+N\+MP 1
+
+and add the source files your makefile.
+
+Note you\textquotesingle{}ll might need to adapt you network driver to update the mib2 variables for your interface.
+
+\subsection*{2 Running the Agent }
+
+The following function calls must be made in your program to actually get the S\+N\+MP agent running.
+
+Before starting the agent you should supply pointers for sys\+Contact, sys\+Location, and snmp\+Enable\+Authen\+Traps. You can do this by calling
+
+
+\begin{DoxyItemize}
+\item snmp\+\_\+mib2\+\_\+set\+\_\+syscontact()
+\item snmp\+\_\+mib2\+\_\+set\+\_\+syslocation()
+\item snmp\+\_\+set\+\_\+auth\+\_\+traps\+\_\+enabled()
+\end{DoxyItemize}
+
+You can register a callback which is called on successful write access\+: snmp\+\_\+set\+\_\+write\+\_\+callback().
+
+Additionally you may want to set
+
+
+\begin{DoxyItemize}
+\item snmp\+\_\+mib2\+\_\+set\+\_\+sysdescr()
+\item snmp\+\_\+set\+\_\+device\+\_\+enterprise\+\_\+oid()
+\item snmp\+\_\+mib2\+\_\+set\+\_\+sysname()
+\end{DoxyItemize}
+
+Also before starting the agent you need to setup one or more trap destinations using these calls\+:
+
+
+\begin{DoxyItemize}
+\item snmp\+\_\+trap\+\_\+dst\+\_\+enable()
+\item snmp\+\_\+trap\+\_\+dst\+\_\+ip\+\_\+set()
+\end{DoxyItemize}
+
+If you need more than M\+I\+B2, set the M\+I\+Bs you want to use by snmp\+\_\+set\+\_\+mibs().
+
+Finally, enable the agent by calling snmp\+\_\+init() 

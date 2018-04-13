@@ -1,0 +1,39 @@
+\hypertarget{group__mdns}{}\section{M\+D\+NS}
+\label{group__mdns}\index{M\+D\+NS@{M\+D\+NS}}
+Collaboration diagram for M\+D\+NS\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=319pt]{group__mdns}
+\end{center}
+\end{figure}
+\subsection*{Modules}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group__mdns__opts}{Options}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+R\+FC 6762 -\/ Multicast D\+NS~\newline
+R\+FC 6763 -\/ D\+N\+S-\/\+Based Service Discovery~\newline
+ 
+\begin{DoxyVerbInclude}
+\end{DoxyVerbInclude}
+
+
+\subsubsection*{Things left to implement\+: }
+
+
+\begin{DoxyItemize}
+\item Probing/conflict resolution
+\item Sending goodbye messages (zero ttl) -\/ shutdown, D\+H\+CP lease about to expire, D\+H\+CP turned off...
+\item Checking that source address of unicast requests are on the same network
+\item Limiting multicast responses to 1 per second per resource record
+\item Fragmenting replies if required
+\item Subscribe to netif address/link change events and act on them (currently needs to be done manually)
+\item Handling multi-\/packet known answers
+\item Individual known answer detection for all local I\+Pv6 addresses
+\item Dynamic size of outgoing packet 
+\end{DoxyItemize}

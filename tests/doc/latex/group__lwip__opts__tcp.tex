@@ -1,0 +1,392 @@
+\hypertarget{group__lwip__opts__tcp}{}\section{T\+CP}
+\label{group__lwip__opts__tcp}\index{T\+CP@{T\+CP}}
+Collaboration diagram for T\+CP\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=257pt]{group__lwip__opts__tcp}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group__lwip__opts__tcp_gaa4ed98deb97b77c633cb8870f34c71e9}{L\+W\+I\+P\+\_\+\+T\+CP}~1
+\item 
+\#define \hyperlink{group__lwip__opts__tcp_gacd5b25ea81d2894790d25da5393cdab4}{T\+C\+P\+\_\+\+T\+TL}~(\hyperlink{group__lwip__opts__ipv4_ga556b9b58fd02c0fdd126791baef77411}{I\+P\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+T\+TL})
+\item 
+\#define \hyperlink{group__lwip__opts__tcp_ga7f535a6efb5cdf86c3210e35ece1d6a7}{T\+C\+P\+\_\+\+W\+ND}~(4 $\ast$ \hyperlink{group__lwip__opts__tcp_gaf1ab7bb27860aa3677c387a2f3ba317b}{T\+C\+P\+\_\+\+M\+SS})
+\item 
+\#define \hyperlink{group__lwip__opts__tcp_ga0dee0911197855bdf19ef79778c241a6}{T\+C\+P\+\_\+\+M\+A\+X\+R\+TX}~12
+\item 
+\#define \hyperlink{group__lwip__opts__tcp_ga50b434a8541a4813f7b27f576c05d1b6}{T\+C\+P\+\_\+\+S\+Y\+N\+M\+A\+X\+R\+TX}~6
+\item 
+\#define \hyperlink{group__lwip__opts__tcp_ga89ffd0d7d1529bdb26bfbad267d0ad75}{T\+C\+P\+\_\+\+Q\+U\+E\+U\+E\+\_\+\+O\+O\+S\+EQ}~(\hyperlink{group__lwip__opts__tcp_gaa4ed98deb97b77c633cb8870f34c71e9}{L\+W\+I\+P\+\_\+\+T\+CP})
+\item 
+\#define \hyperlink{group__lwip__opts__tcp_gaf1ab7bb27860aa3677c387a2f3ba317b}{T\+C\+P\+\_\+\+M\+SS}~536
+\item 
+\#define \hyperlink{group__lwip__opts__tcp_gac04b84d32251ac558f0c3a8af85ba3a5}{T\+C\+P\+\_\+\+C\+A\+L\+C\+U\+L\+A\+T\+E\+\_\+\+E\+F\+F\+\_\+\+S\+E\+N\+D\+\_\+\+M\+SS}~1
+\item 
+\#define \hyperlink{group__lwip__opts__tcp_ga871d111968d8c6c7880ff36b93c5c4dd}{T\+C\+P\+\_\+\+S\+N\+D\+\_\+\+B\+UF}~(2 $\ast$ \hyperlink{group__lwip__opts__tcp_gaf1ab7bb27860aa3677c387a2f3ba317b}{T\+C\+P\+\_\+\+M\+SS})
+\item 
+\#define \hyperlink{group__lwip__opts__tcp_ga9beaa47832ead4180981bfbf71074904}{T\+C\+P\+\_\+\+S\+N\+D\+\_\+\+Q\+U\+E\+U\+E\+L\+EN}~((4 $\ast$ (\hyperlink{openmote-cc2538_2lwip_2test_2unit_2lwipopts_8h_a871d111968d8c6c7880ff36b93c5c4dd}{T\+C\+P\+\_\+\+S\+N\+D\+\_\+\+B\+UF}) + (\hyperlink{group__lwip__opts__tcp_gaf1ab7bb27860aa3677c387a2f3ba317b}{T\+C\+P\+\_\+\+M\+SS} -\/ 1))/(\hyperlink{group__lwip__opts__tcp_gaf1ab7bb27860aa3677c387a2f3ba317b}{T\+C\+P\+\_\+\+M\+SS}))
+\item 
+\#define \hyperlink{group__lwip__opts__tcp_gae5c9866d7cd463ac7b36792182145aec}{T\+C\+P\+\_\+\+S\+N\+D\+L\+O\+W\+AT}~\hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2def_8h_a748f5df614a3fc989e8900fd229d6e4e}{L\+W\+I\+P\+\_\+\+M\+IN}(\hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2def_8h_a21ea174d374106caeafb4aa3a24fbd2b}{L\+W\+I\+P\+\_\+\+M\+AX}(((\hyperlink{openmote-cc2538_2lwip_2test_2unit_2lwipopts_8h_a871d111968d8c6c7880ff36b93c5c4dd}{T\+C\+P\+\_\+\+S\+N\+D\+\_\+\+B\+UF})/2), (2 $\ast$ \hyperlink{group__lwip__opts__tcp_gaf1ab7bb27860aa3677c387a2f3ba317b}{T\+C\+P\+\_\+\+M\+SS}) + 1), (\hyperlink{openmote-cc2538_2lwip_2test_2unit_2lwipopts_8h_a871d111968d8c6c7880ff36b93c5c4dd}{T\+C\+P\+\_\+\+S\+N\+D\+\_\+\+B\+UF}) -\/ 1)
+\item 
+\#define \hyperlink{group__lwip__opts__tcp_ga75659867592a6b01c198532ed1b65698}{T\+C\+P\+\_\+\+S\+N\+D\+Q\+U\+E\+U\+E\+L\+O\+W\+AT}~\hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2def_8h_a21ea174d374106caeafb4aa3a24fbd2b}{L\+W\+I\+P\+\_\+\+M\+AX}(((\hyperlink{openmote-cc2538_2lwip_2test_2unit_2lwipopts_8h_a9beaa47832ead4180981bfbf71074904}{T\+C\+P\+\_\+\+S\+N\+D\+\_\+\+Q\+U\+E\+U\+E\+L\+EN})/2), 5)
+\item 
+\#define \hyperlink{group__lwip__opts__tcp_ga9d6d3219bb5fc0bc760a64114de13c25}{T\+C\+P\+\_\+\+O\+O\+S\+E\+Q\+\_\+\+M\+A\+X\+\_\+\+B\+Y\+T\+ES}~0
+\item 
+\#define \hyperlink{group__lwip__opts__tcp_ga1f57d3859c4556f785708e5dc440617e}{T\+C\+P\+\_\+\+O\+O\+S\+E\+Q\+\_\+\+M\+A\+X\+\_\+\+P\+B\+U\+FS}~0
+\item 
+\#define \hyperlink{group__lwip__opts__tcp_ga98b23e7cbd3281915c50a485cb61899d}{T\+C\+P\+\_\+\+L\+I\+S\+T\+E\+N\+\_\+\+B\+A\+C\+K\+L\+OG}~0
+\item 
+\#define \hyperlink{group__lwip__opts__tcp_ga93cce3f47e33df11248c908d1775bacf}{T\+C\+P\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+L\+I\+S\+T\+E\+N\+\_\+\+B\+A\+C\+K\+L\+OG}~0xff
+\item 
+\#define \hyperlink{group__lwip__opts__tcp_ga5648e2580bb55c0efdfbebcf3bad1eef}{T\+C\+P\+\_\+\+O\+V\+E\+R\+S\+I\+ZE}~\hyperlink{group__lwip__opts__tcp_gaf1ab7bb27860aa3677c387a2f3ba317b}{T\+C\+P\+\_\+\+M\+SS}
+\item 
+\#define \hyperlink{group__lwip__opts__tcp_ga249bc450bb818cf2ef3cf1472ff354fd}{L\+W\+I\+P\+\_\+\+T\+C\+P\+\_\+\+T\+I\+M\+E\+S\+T\+A\+M\+PS}~0
+\item 
+\#define \hyperlink{group__lwip__opts__tcp_ga5d45732ba3a8438b141096d86e07ef8d}{T\+C\+P\+\_\+\+W\+N\+D\+\_\+\+U\+P\+D\+A\+T\+E\+\_\+\+T\+H\+R\+E\+S\+H\+O\+LD}~\hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2def_8h_a748f5df614a3fc989e8900fd229d6e4e}{L\+W\+I\+P\+\_\+\+M\+IN}((\hyperlink{openmote-cc2538_2lwip_2test_2unit_2lwipopts_8h_a7f535a6efb5cdf86c3210e35ece1d6a7}{T\+C\+P\+\_\+\+W\+ND} / 4), (\hyperlink{group__lwip__opts__tcp_gaf1ab7bb27860aa3677c387a2f3ba317b}{T\+C\+P\+\_\+\+M\+SS} $\ast$ 4))
+\item 
+\#define \hyperlink{group__lwip__opts__tcp_ga39f76e811117155be8525bb386ecddb7}{L\+W\+I\+P\+\_\+\+E\+V\+E\+N\+T\+\_\+\+A\+PI}~0
+\item 
+\#define \hyperlink{group__lwip__opts__tcp_ga2ca03bfa6f604ba536e38ccfdbdf9c8d}{L\+W\+I\+P\+\_\+\+C\+A\+L\+L\+B\+A\+C\+K\+\_\+\+A\+PI}~1
+\item 
+\#define \hyperlink{group__lwip__opts__tcp_ga88dbbfeeeb41b129fdc8235fc08bb530}{L\+W\+I\+P\+\_\+\+W\+N\+D\+\_\+\+S\+C\+A\+LE}~0
+\item 
+\#define \hyperlink{group__lwip__opts__tcp_ga768765a2c678fefeca6c89aae0cf629f}{T\+C\+P\+\_\+\+R\+C\+V\+\_\+\+S\+C\+A\+LE}~0
+\item 
+\#define \hyperlink{group__lwip__opts__tcp_gaa4ed98deb97b77c633cb8870f34c71e9}{L\+W\+I\+P\+\_\+\+T\+CP}~1
+\item 
+\#define \hyperlink{group__lwip__opts__tcp_gacd5b25ea81d2894790d25da5393cdab4}{T\+C\+P\+\_\+\+T\+TL}~(\hyperlink{group__lwip__opts__ipv4_ga556b9b58fd02c0fdd126791baef77411}{I\+P\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+T\+TL})
+\item 
+\#define \hyperlink{group__lwip__opts__tcp_ga7f535a6efb5cdf86c3210e35ece1d6a7}{T\+C\+P\+\_\+\+W\+ND}~(4 $\ast$ \hyperlink{group__lwip__opts__tcp_gaf1ab7bb27860aa3677c387a2f3ba317b}{T\+C\+P\+\_\+\+M\+SS})
+\item 
+\#define \hyperlink{group__lwip__opts__tcp_ga0dee0911197855bdf19ef79778c241a6}{T\+C\+P\+\_\+\+M\+A\+X\+R\+TX}~12
+\item 
+\#define \hyperlink{group__lwip__opts__tcp_ga50b434a8541a4813f7b27f576c05d1b6}{T\+C\+P\+\_\+\+S\+Y\+N\+M\+A\+X\+R\+TX}~6
+\item 
+\#define \hyperlink{group__lwip__opts__tcp_ga89ffd0d7d1529bdb26bfbad267d0ad75}{T\+C\+P\+\_\+\+Q\+U\+E\+U\+E\+\_\+\+O\+O\+S\+EQ}~(\hyperlink{group__lwip__opts__tcp_gaa4ed98deb97b77c633cb8870f34c71e9}{L\+W\+I\+P\+\_\+\+T\+CP})
+\item 
+\#define \hyperlink{group__lwip__opts__tcp_gaf1ab7bb27860aa3677c387a2f3ba317b}{T\+C\+P\+\_\+\+M\+SS}~536
+\item 
+\#define \hyperlink{group__lwip__opts__tcp_gac04b84d32251ac558f0c3a8af85ba3a5}{T\+C\+P\+\_\+\+C\+A\+L\+C\+U\+L\+A\+T\+E\+\_\+\+E\+F\+F\+\_\+\+S\+E\+N\+D\+\_\+\+M\+SS}~1
+\item 
+\#define \hyperlink{group__lwip__opts__tcp_ga871d111968d8c6c7880ff36b93c5c4dd}{T\+C\+P\+\_\+\+S\+N\+D\+\_\+\+B\+UF}~(2 $\ast$ \hyperlink{group__lwip__opts__tcp_gaf1ab7bb27860aa3677c387a2f3ba317b}{T\+C\+P\+\_\+\+M\+SS})
+\item 
+\#define \hyperlink{group__lwip__opts__tcp_ga9beaa47832ead4180981bfbf71074904}{T\+C\+P\+\_\+\+S\+N\+D\+\_\+\+Q\+U\+E\+U\+E\+L\+EN}~((4 $\ast$ (\hyperlink{openmote-cc2538_2lwip_2test_2unit_2lwipopts_8h_a871d111968d8c6c7880ff36b93c5c4dd}{T\+C\+P\+\_\+\+S\+N\+D\+\_\+\+B\+UF}) + (\hyperlink{group__lwip__opts__tcp_gaf1ab7bb27860aa3677c387a2f3ba317b}{T\+C\+P\+\_\+\+M\+SS} -\/ 1))/(\hyperlink{group__lwip__opts__tcp_gaf1ab7bb27860aa3677c387a2f3ba317b}{T\+C\+P\+\_\+\+M\+SS}))
+\item 
+\#define \hyperlink{group__lwip__opts__tcp_gae5c9866d7cd463ac7b36792182145aec}{T\+C\+P\+\_\+\+S\+N\+D\+L\+O\+W\+AT}~\hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2def_8h_a748f5df614a3fc989e8900fd229d6e4e}{L\+W\+I\+P\+\_\+\+M\+IN}(\hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2def_8h_a21ea174d374106caeafb4aa3a24fbd2b}{L\+W\+I\+P\+\_\+\+M\+AX}(((\hyperlink{openmote-cc2538_2lwip_2test_2unit_2lwipopts_8h_a871d111968d8c6c7880ff36b93c5c4dd}{T\+C\+P\+\_\+\+S\+N\+D\+\_\+\+B\+UF})/2), (2 $\ast$ \hyperlink{group__lwip__opts__tcp_gaf1ab7bb27860aa3677c387a2f3ba317b}{T\+C\+P\+\_\+\+M\+SS}) + 1), (\hyperlink{openmote-cc2538_2lwip_2test_2unit_2lwipopts_8h_a871d111968d8c6c7880ff36b93c5c4dd}{T\+C\+P\+\_\+\+S\+N\+D\+\_\+\+B\+UF}) -\/ 1)
+\item 
+\#define \hyperlink{group__lwip__opts__tcp_ga75659867592a6b01c198532ed1b65698}{T\+C\+P\+\_\+\+S\+N\+D\+Q\+U\+E\+U\+E\+L\+O\+W\+AT}~\hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2def_8h_a21ea174d374106caeafb4aa3a24fbd2b}{L\+W\+I\+P\+\_\+\+M\+AX}(((\hyperlink{openmote-cc2538_2lwip_2test_2unit_2lwipopts_8h_a9beaa47832ead4180981bfbf71074904}{T\+C\+P\+\_\+\+S\+N\+D\+\_\+\+Q\+U\+E\+U\+E\+L\+EN})/2), 5)
+\item 
+\#define \hyperlink{group__lwip__opts__tcp_ga9d6d3219bb5fc0bc760a64114de13c25}{T\+C\+P\+\_\+\+O\+O\+S\+E\+Q\+\_\+\+M\+A\+X\+\_\+\+B\+Y\+T\+ES}~0
+\item 
+\#define \hyperlink{group__lwip__opts__tcp_ga1f57d3859c4556f785708e5dc440617e}{T\+C\+P\+\_\+\+O\+O\+S\+E\+Q\+\_\+\+M\+A\+X\+\_\+\+P\+B\+U\+FS}~0
+\item 
+\#define \hyperlink{group__lwip__opts__tcp_ga98b23e7cbd3281915c50a485cb61899d}{T\+C\+P\+\_\+\+L\+I\+S\+T\+E\+N\+\_\+\+B\+A\+C\+K\+L\+OG}~0
+\item 
+\#define \hyperlink{group__lwip__opts__tcp_ga93cce3f47e33df11248c908d1775bacf}{T\+C\+P\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+L\+I\+S\+T\+E\+N\+\_\+\+B\+A\+C\+K\+L\+OG}~0xff
+\item 
+\#define \hyperlink{group__lwip__opts__tcp_ga5648e2580bb55c0efdfbebcf3bad1eef}{T\+C\+P\+\_\+\+O\+V\+E\+R\+S\+I\+ZE}~\hyperlink{group__lwip__opts__tcp_gaf1ab7bb27860aa3677c387a2f3ba317b}{T\+C\+P\+\_\+\+M\+SS}
+\item 
+\#define \hyperlink{group__lwip__opts__tcp_ga249bc450bb818cf2ef3cf1472ff354fd}{L\+W\+I\+P\+\_\+\+T\+C\+P\+\_\+\+T\+I\+M\+E\+S\+T\+A\+M\+PS}~0
+\item 
+\#define \hyperlink{group__lwip__opts__tcp_ga5d45732ba3a8438b141096d86e07ef8d}{T\+C\+P\+\_\+\+W\+N\+D\+\_\+\+U\+P\+D\+A\+T\+E\+\_\+\+T\+H\+R\+E\+S\+H\+O\+LD}~\hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2def_8h_a748f5df614a3fc989e8900fd229d6e4e}{L\+W\+I\+P\+\_\+\+M\+IN}((\hyperlink{openmote-cc2538_2lwip_2test_2unit_2lwipopts_8h_a7f535a6efb5cdf86c3210e35ece1d6a7}{T\+C\+P\+\_\+\+W\+ND} / 4), (\hyperlink{group__lwip__opts__tcp_gaf1ab7bb27860aa3677c387a2f3ba317b}{T\+C\+P\+\_\+\+M\+SS} $\ast$ 4))
+\item 
+\#define \hyperlink{group__lwip__opts__tcp_ga39f76e811117155be8525bb386ecddb7}{L\+W\+I\+P\+\_\+\+E\+V\+E\+N\+T\+\_\+\+A\+PI}~0
+\item 
+\#define \hyperlink{group__lwip__opts__tcp_ga2ca03bfa6f604ba536e38ccfdbdf9c8d}{L\+W\+I\+P\+\_\+\+C\+A\+L\+L\+B\+A\+C\+K\+\_\+\+A\+PI}~1
+\item 
+\#define \hyperlink{group__lwip__opts__tcp_ga88dbbfeeeb41b129fdc8235fc08bb530}{L\+W\+I\+P\+\_\+\+W\+N\+D\+\_\+\+S\+C\+A\+LE}~0
+\item 
+\#define \hyperlink{group__lwip__opts__tcp_ga768765a2c678fefeca6c89aae0cf629f}{T\+C\+P\+\_\+\+R\+C\+V\+\_\+\+S\+C\+A\+LE}~0
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{group__lwip__opts__tcp_ga2ca03bfa6f604ba536e38ccfdbdf9c8d}\label{group__lwip__opts__tcp_ga2ca03bfa6f604ba536e38ccfdbdf9c8d}} 
+\index{T\+CP@{T\+CP}!L\+W\+I\+P\+\_\+\+C\+A\+L\+L\+B\+A\+C\+K\+\_\+\+A\+PI@{L\+W\+I\+P\+\_\+\+C\+A\+L\+L\+B\+A\+C\+K\+\_\+\+A\+PI}}
+\index{L\+W\+I\+P\+\_\+\+C\+A\+L\+L\+B\+A\+C\+K\+\_\+\+A\+PI@{L\+W\+I\+P\+\_\+\+C\+A\+L\+L\+B\+A\+C\+K\+\_\+\+A\+PI}!T\+CP@{T\+CP}}
+\subsubsection{\texorpdfstring{L\+W\+I\+P\+\_\+\+C\+A\+L\+L\+B\+A\+C\+K\+\_\+\+A\+PI}{LWIP\_CALLBACK\_API}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \#define L\+W\+I\+P\+\_\+\+C\+A\+L\+L\+B\+A\+C\+K\+\_\+\+A\+PI~1}
+
+\mbox{\Hypertarget{group__lwip__opts__tcp_ga2ca03bfa6f604ba536e38ccfdbdf9c8d}\label{group__lwip__opts__tcp_ga2ca03bfa6f604ba536e38ccfdbdf9c8d}} 
+\index{T\+CP@{T\+CP}!L\+W\+I\+P\+\_\+\+C\+A\+L\+L\+B\+A\+C\+K\+\_\+\+A\+PI@{L\+W\+I\+P\+\_\+\+C\+A\+L\+L\+B\+A\+C\+K\+\_\+\+A\+PI}}
+\index{L\+W\+I\+P\+\_\+\+C\+A\+L\+L\+B\+A\+C\+K\+\_\+\+A\+PI@{L\+W\+I\+P\+\_\+\+C\+A\+L\+L\+B\+A\+C\+K\+\_\+\+A\+PI}!T\+CP@{T\+CP}}
+\subsubsection{\texorpdfstring{L\+W\+I\+P\+\_\+\+C\+A\+L\+L\+B\+A\+C\+K\+\_\+\+A\+PI}{LWIP\_CALLBACK\_API}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \#define L\+W\+I\+P\+\_\+\+C\+A\+L\+L\+B\+A\+C\+K\+\_\+\+A\+PI~1}
+
+\mbox{\Hypertarget{group__lwip__opts__tcp_ga39f76e811117155be8525bb386ecddb7}\label{group__lwip__opts__tcp_ga39f76e811117155be8525bb386ecddb7}} 
+\index{T\+CP@{T\+CP}!L\+W\+I\+P\+\_\+\+E\+V\+E\+N\+T\+\_\+\+A\+PI@{L\+W\+I\+P\+\_\+\+E\+V\+E\+N\+T\+\_\+\+A\+PI}}
+\index{L\+W\+I\+P\+\_\+\+E\+V\+E\+N\+T\+\_\+\+A\+PI@{L\+W\+I\+P\+\_\+\+E\+V\+E\+N\+T\+\_\+\+A\+PI}!T\+CP@{T\+CP}}
+\subsubsection{\texorpdfstring{L\+W\+I\+P\+\_\+\+E\+V\+E\+N\+T\+\_\+\+A\+PI}{LWIP\_EVENT\_API}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \#define L\+W\+I\+P\+\_\+\+E\+V\+E\+N\+T\+\_\+\+A\+PI~0}
+
+L\+W\+I\+P\+\_\+\+E\+V\+E\+N\+T\+\_\+\+A\+PI and L\+W\+I\+P\+\_\+\+C\+A\+L\+L\+B\+A\+C\+K\+\_\+\+A\+PI\+: Only one of these should be set to 1. L\+W\+I\+P\+\_\+\+E\+V\+E\+N\+T\+\_\+\+A\+PI==1\+: The user defines lwip\+\_\+tcp\+\_\+event() to receive all events (accept, sent, etc) that happen in the system. L\+W\+I\+P\+\_\+\+C\+A\+L\+L\+B\+A\+C\+K\+\_\+\+A\+PI==1\+: The P\+CB callback function is called directly for the event. This is the default. \mbox{\Hypertarget{group__lwip__opts__tcp_ga39f76e811117155be8525bb386ecddb7}\label{group__lwip__opts__tcp_ga39f76e811117155be8525bb386ecddb7}} 
+\index{T\+CP@{T\+CP}!L\+W\+I\+P\+\_\+\+E\+V\+E\+N\+T\+\_\+\+A\+PI@{L\+W\+I\+P\+\_\+\+E\+V\+E\+N\+T\+\_\+\+A\+PI}}
+\index{L\+W\+I\+P\+\_\+\+E\+V\+E\+N\+T\+\_\+\+A\+PI@{L\+W\+I\+P\+\_\+\+E\+V\+E\+N\+T\+\_\+\+A\+PI}!T\+CP@{T\+CP}}
+\subsubsection{\texorpdfstring{L\+W\+I\+P\+\_\+\+E\+V\+E\+N\+T\+\_\+\+A\+PI}{LWIP\_EVENT\_API}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \#define L\+W\+I\+P\+\_\+\+E\+V\+E\+N\+T\+\_\+\+A\+PI~0}
+
+L\+W\+I\+P\+\_\+\+E\+V\+E\+N\+T\+\_\+\+A\+PI and L\+W\+I\+P\+\_\+\+C\+A\+L\+L\+B\+A\+C\+K\+\_\+\+A\+PI\+: Only one of these should be set to 1. L\+W\+I\+P\+\_\+\+E\+V\+E\+N\+T\+\_\+\+A\+PI==1\+: The user defines lwip\+\_\+tcp\+\_\+event() to receive all events (accept, sent, etc) that happen in the system. L\+W\+I\+P\+\_\+\+C\+A\+L\+L\+B\+A\+C\+K\+\_\+\+A\+PI==1\+: The P\+CB callback function is called directly for the event. This is the default. \mbox{\Hypertarget{group__lwip__opts__tcp_gaa4ed98deb97b77c633cb8870f34c71e9}\label{group__lwip__opts__tcp_gaa4ed98deb97b77c633cb8870f34c71e9}} 
+\index{T\+CP@{T\+CP}!L\+W\+I\+P\+\_\+\+T\+CP@{L\+W\+I\+P\+\_\+\+T\+CP}}
+\index{L\+W\+I\+P\+\_\+\+T\+CP@{L\+W\+I\+P\+\_\+\+T\+CP}!T\+CP@{T\+CP}}
+\subsubsection{\texorpdfstring{L\+W\+I\+P\+\_\+\+T\+CP}{LWIP\_TCP}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \#define L\+W\+I\+P\+\_\+\+T\+CP~1}
+
+L\+W\+I\+P\+\_\+\+T\+CP==1\+: Turn on T\+CP. \mbox{\Hypertarget{group__lwip__opts__tcp_gaa4ed98deb97b77c633cb8870f34c71e9}\label{group__lwip__opts__tcp_gaa4ed98deb97b77c633cb8870f34c71e9}} 
+\index{T\+CP@{T\+CP}!L\+W\+I\+P\+\_\+\+T\+CP@{L\+W\+I\+P\+\_\+\+T\+CP}}
+\index{L\+W\+I\+P\+\_\+\+T\+CP@{L\+W\+I\+P\+\_\+\+T\+CP}!T\+CP@{T\+CP}}
+\subsubsection{\texorpdfstring{L\+W\+I\+P\+\_\+\+T\+CP}{LWIP\_TCP}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \#define L\+W\+I\+P\+\_\+\+T\+CP~1}
+
+L\+W\+I\+P\+\_\+\+T\+CP==1\+: Turn on T\+CP. \mbox{\Hypertarget{group__lwip__opts__tcp_ga249bc450bb818cf2ef3cf1472ff354fd}\label{group__lwip__opts__tcp_ga249bc450bb818cf2ef3cf1472ff354fd}} 
+\index{T\+CP@{T\+CP}!L\+W\+I\+P\+\_\+\+T\+C\+P\+\_\+\+T\+I\+M\+E\+S\+T\+A\+M\+PS@{L\+W\+I\+P\+\_\+\+T\+C\+P\+\_\+\+T\+I\+M\+E\+S\+T\+A\+M\+PS}}
+\index{L\+W\+I\+P\+\_\+\+T\+C\+P\+\_\+\+T\+I\+M\+E\+S\+T\+A\+M\+PS@{L\+W\+I\+P\+\_\+\+T\+C\+P\+\_\+\+T\+I\+M\+E\+S\+T\+A\+M\+PS}!T\+CP@{T\+CP}}
+\subsubsection{\texorpdfstring{L\+W\+I\+P\+\_\+\+T\+C\+P\+\_\+\+T\+I\+M\+E\+S\+T\+A\+M\+PS}{LWIP\_TCP\_TIMESTAMPS}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \#define L\+W\+I\+P\+\_\+\+T\+C\+P\+\_\+\+T\+I\+M\+E\+S\+T\+A\+M\+PS~0}
+
+L\+W\+I\+P\+\_\+\+T\+C\+P\+\_\+\+T\+I\+M\+E\+S\+T\+A\+M\+PS==1\+: support the T\+CP timestamp option. The timestamp option is currently only used to help remote hosts, it is not really used locally. Therefore, it is only enabled when a TS option is received in the initial S\+YN packet from a remote host. \mbox{\Hypertarget{group__lwip__opts__tcp_ga249bc450bb818cf2ef3cf1472ff354fd}\label{group__lwip__opts__tcp_ga249bc450bb818cf2ef3cf1472ff354fd}} 
+\index{T\+CP@{T\+CP}!L\+W\+I\+P\+\_\+\+T\+C\+P\+\_\+\+T\+I\+M\+E\+S\+T\+A\+M\+PS@{L\+W\+I\+P\+\_\+\+T\+C\+P\+\_\+\+T\+I\+M\+E\+S\+T\+A\+M\+PS}}
+\index{L\+W\+I\+P\+\_\+\+T\+C\+P\+\_\+\+T\+I\+M\+E\+S\+T\+A\+M\+PS@{L\+W\+I\+P\+\_\+\+T\+C\+P\+\_\+\+T\+I\+M\+E\+S\+T\+A\+M\+PS}!T\+CP@{T\+CP}}
+\subsubsection{\texorpdfstring{L\+W\+I\+P\+\_\+\+T\+C\+P\+\_\+\+T\+I\+M\+E\+S\+T\+A\+M\+PS}{LWIP\_TCP\_TIMESTAMPS}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \#define L\+W\+I\+P\+\_\+\+T\+C\+P\+\_\+\+T\+I\+M\+E\+S\+T\+A\+M\+PS~0}
+
+L\+W\+I\+P\+\_\+\+T\+C\+P\+\_\+\+T\+I\+M\+E\+S\+T\+A\+M\+PS==1\+: support the T\+CP timestamp option. The timestamp option is currently only used to help remote hosts, it is not really used locally. Therefore, it is only enabled when a TS option is received in the initial S\+YN packet from a remote host. \mbox{\Hypertarget{group__lwip__opts__tcp_ga88dbbfeeeb41b129fdc8235fc08bb530}\label{group__lwip__opts__tcp_ga88dbbfeeeb41b129fdc8235fc08bb530}} 
+\index{T\+CP@{T\+CP}!L\+W\+I\+P\+\_\+\+W\+N\+D\+\_\+\+S\+C\+A\+LE@{L\+W\+I\+P\+\_\+\+W\+N\+D\+\_\+\+S\+C\+A\+LE}}
+\index{L\+W\+I\+P\+\_\+\+W\+N\+D\+\_\+\+S\+C\+A\+LE@{L\+W\+I\+P\+\_\+\+W\+N\+D\+\_\+\+S\+C\+A\+LE}!T\+CP@{T\+CP}}
+\subsubsection{\texorpdfstring{L\+W\+I\+P\+\_\+\+W\+N\+D\+\_\+\+S\+C\+A\+LE}{LWIP\_WND\_SCALE}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \#define L\+W\+I\+P\+\_\+\+W\+N\+D\+\_\+\+S\+C\+A\+LE~0}
+
+L\+W\+I\+P\+\_\+\+W\+N\+D\+\_\+\+S\+C\+A\+LE and T\+C\+P\+\_\+\+R\+C\+V\+\_\+\+S\+C\+A\+LE\+: Set L\+W\+I\+P\+\_\+\+W\+N\+D\+\_\+\+S\+C\+A\+LE to 1 to enable window scaling. Set T\+C\+P\+\_\+\+R\+C\+V\+\_\+\+S\+C\+A\+LE to the desired scaling factor (shift count in the range of \mbox{[}0..14\mbox{]}). When L\+W\+I\+P\+\_\+\+W\+N\+D\+\_\+\+S\+C\+A\+LE is enabled but T\+C\+P\+\_\+\+R\+C\+V\+\_\+\+S\+C\+A\+LE is 0, we can use a large send window while having a small receive window only. \mbox{\Hypertarget{group__lwip__opts__tcp_ga88dbbfeeeb41b129fdc8235fc08bb530}\label{group__lwip__opts__tcp_ga88dbbfeeeb41b129fdc8235fc08bb530}} 
+\index{T\+CP@{T\+CP}!L\+W\+I\+P\+\_\+\+W\+N\+D\+\_\+\+S\+C\+A\+LE@{L\+W\+I\+P\+\_\+\+W\+N\+D\+\_\+\+S\+C\+A\+LE}}
+\index{L\+W\+I\+P\+\_\+\+W\+N\+D\+\_\+\+S\+C\+A\+LE@{L\+W\+I\+P\+\_\+\+W\+N\+D\+\_\+\+S\+C\+A\+LE}!T\+CP@{T\+CP}}
+\subsubsection{\texorpdfstring{L\+W\+I\+P\+\_\+\+W\+N\+D\+\_\+\+S\+C\+A\+LE}{LWIP\_WND\_SCALE}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \#define L\+W\+I\+P\+\_\+\+W\+N\+D\+\_\+\+S\+C\+A\+LE~0}
+
+L\+W\+I\+P\+\_\+\+W\+N\+D\+\_\+\+S\+C\+A\+LE and T\+C\+P\+\_\+\+R\+C\+V\+\_\+\+S\+C\+A\+LE\+: Set L\+W\+I\+P\+\_\+\+W\+N\+D\+\_\+\+S\+C\+A\+LE to 1 to enable window scaling. Set T\+C\+P\+\_\+\+R\+C\+V\+\_\+\+S\+C\+A\+LE to the desired scaling factor (shift count in the range of \mbox{[}0..14\mbox{]}). When L\+W\+I\+P\+\_\+\+W\+N\+D\+\_\+\+S\+C\+A\+LE is enabled but T\+C\+P\+\_\+\+R\+C\+V\+\_\+\+S\+C\+A\+LE is 0, we can use a large send window while having a small receive window only. \mbox{\Hypertarget{group__lwip__opts__tcp_gac04b84d32251ac558f0c3a8af85ba3a5}\label{group__lwip__opts__tcp_gac04b84d32251ac558f0c3a8af85ba3a5}} 
+\index{T\+CP@{T\+CP}!T\+C\+P\+\_\+\+C\+A\+L\+C\+U\+L\+A\+T\+E\+\_\+\+E\+F\+F\+\_\+\+S\+E\+N\+D\+\_\+\+M\+SS@{T\+C\+P\+\_\+\+C\+A\+L\+C\+U\+L\+A\+T\+E\+\_\+\+E\+F\+F\+\_\+\+S\+E\+N\+D\+\_\+\+M\+SS}}
+\index{T\+C\+P\+\_\+\+C\+A\+L\+C\+U\+L\+A\+T\+E\+\_\+\+E\+F\+F\+\_\+\+S\+E\+N\+D\+\_\+\+M\+SS@{T\+C\+P\+\_\+\+C\+A\+L\+C\+U\+L\+A\+T\+E\+\_\+\+E\+F\+F\+\_\+\+S\+E\+N\+D\+\_\+\+M\+SS}!T\+CP@{T\+CP}}
+\subsubsection{\texorpdfstring{T\+C\+P\+\_\+\+C\+A\+L\+C\+U\+L\+A\+T\+E\+\_\+\+E\+F\+F\+\_\+\+S\+E\+N\+D\+\_\+\+M\+SS}{TCP\_CALCULATE\_EFF\_SEND\_MSS}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \#define T\+C\+P\+\_\+\+C\+A\+L\+C\+U\+L\+A\+T\+E\+\_\+\+E\+F\+F\+\_\+\+S\+E\+N\+D\+\_\+\+M\+SS~1}
+
+T\+C\+P\+\_\+\+C\+A\+L\+C\+U\+L\+A\+T\+E\+\_\+\+E\+F\+F\+\_\+\+S\+E\+N\+D\+\_\+\+M\+SS\+: "The maximum size of a segment that T\+CP really sends, the \textquotesingle{}effective send M\+SS,\textquotesingle{} M\+U\+ST be the smaller of the send M\+SS (which reflects the available reassembly buffer size at the remote host) and the largest size permitted by the IP layer" (R\+FC 1122) Setting this to 1 enables code that checks T\+C\+P\+\_\+\+M\+SS against the M\+TU of the netif used for a connection and limits the M\+SS if it would be too big otherwise. \mbox{\Hypertarget{group__lwip__opts__tcp_gac04b84d32251ac558f0c3a8af85ba3a5}\label{group__lwip__opts__tcp_gac04b84d32251ac558f0c3a8af85ba3a5}} 
+\index{T\+CP@{T\+CP}!T\+C\+P\+\_\+\+C\+A\+L\+C\+U\+L\+A\+T\+E\+\_\+\+E\+F\+F\+\_\+\+S\+E\+N\+D\+\_\+\+M\+SS@{T\+C\+P\+\_\+\+C\+A\+L\+C\+U\+L\+A\+T\+E\+\_\+\+E\+F\+F\+\_\+\+S\+E\+N\+D\+\_\+\+M\+SS}}
+\index{T\+C\+P\+\_\+\+C\+A\+L\+C\+U\+L\+A\+T\+E\+\_\+\+E\+F\+F\+\_\+\+S\+E\+N\+D\+\_\+\+M\+SS@{T\+C\+P\+\_\+\+C\+A\+L\+C\+U\+L\+A\+T\+E\+\_\+\+E\+F\+F\+\_\+\+S\+E\+N\+D\+\_\+\+M\+SS}!T\+CP@{T\+CP}}
+\subsubsection{\texorpdfstring{T\+C\+P\+\_\+\+C\+A\+L\+C\+U\+L\+A\+T\+E\+\_\+\+E\+F\+F\+\_\+\+S\+E\+N\+D\+\_\+\+M\+SS}{TCP\_CALCULATE\_EFF\_SEND\_MSS}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \#define T\+C\+P\+\_\+\+C\+A\+L\+C\+U\+L\+A\+T\+E\+\_\+\+E\+F\+F\+\_\+\+S\+E\+N\+D\+\_\+\+M\+SS~1}
+
+T\+C\+P\+\_\+\+C\+A\+L\+C\+U\+L\+A\+T\+E\+\_\+\+E\+F\+F\+\_\+\+S\+E\+N\+D\+\_\+\+M\+SS\+: "The maximum size of a segment that T\+CP really sends, the \textquotesingle{}effective send M\+SS,\textquotesingle{} M\+U\+ST be the smaller of the send M\+SS (which reflects the available reassembly buffer size at the remote host) and the largest size permitted by the IP layer" (R\+FC 1122) Setting this to 1 enables code that checks T\+C\+P\+\_\+\+M\+SS against the M\+TU of the netif used for a connection and limits the M\+SS if it would be too big otherwise. \mbox{\Hypertarget{group__lwip__opts__tcp_ga93cce3f47e33df11248c908d1775bacf}\label{group__lwip__opts__tcp_ga93cce3f47e33df11248c908d1775bacf}} 
+\index{T\+CP@{T\+CP}!T\+C\+P\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+L\+I\+S\+T\+E\+N\+\_\+\+B\+A\+C\+K\+L\+OG@{T\+C\+P\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+L\+I\+S\+T\+E\+N\+\_\+\+B\+A\+C\+K\+L\+OG}}
+\index{T\+C\+P\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+L\+I\+S\+T\+E\+N\+\_\+\+B\+A\+C\+K\+L\+OG@{T\+C\+P\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+L\+I\+S\+T\+E\+N\+\_\+\+B\+A\+C\+K\+L\+OG}!T\+CP@{T\+CP}}
+\subsubsection{\texorpdfstring{T\+C\+P\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+L\+I\+S\+T\+E\+N\+\_\+\+B\+A\+C\+K\+L\+OG}{TCP\_DEFAULT\_LISTEN\_BACKLOG}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \#define T\+C\+P\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+L\+I\+S\+T\+E\+N\+\_\+\+B\+A\+C\+K\+L\+OG~0xff}
+
+The maximum allowed backlog for T\+CP listen netconns. This backlog is used unless another is explicitly specified. 0xff is the maximum (u8\+\_\+t). \mbox{\Hypertarget{group__lwip__opts__tcp_ga93cce3f47e33df11248c908d1775bacf}\label{group__lwip__opts__tcp_ga93cce3f47e33df11248c908d1775bacf}} 
+\index{T\+CP@{T\+CP}!T\+C\+P\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+L\+I\+S\+T\+E\+N\+\_\+\+B\+A\+C\+K\+L\+OG@{T\+C\+P\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+L\+I\+S\+T\+E\+N\+\_\+\+B\+A\+C\+K\+L\+OG}}
+\index{T\+C\+P\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+L\+I\+S\+T\+E\+N\+\_\+\+B\+A\+C\+K\+L\+OG@{T\+C\+P\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+L\+I\+S\+T\+E\+N\+\_\+\+B\+A\+C\+K\+L\+OG}!T\+CP@{T\+CP}}
+\subsubsection{\texorpdfstring{T\+C\+P\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+L\+I\+S\+T\+E\+N\+\_\+\+B\+A\+C\+K\+L\+OG}{TCP\_DEFAULT\_LISTEN\_BACKLOG}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \#define T\+C\+P\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+L\+I\+S\+T\+E\+N\+\_\+\+B\+A\+C\+K\+L\+OG~0xff}
+
+The maximum allowed backlog for T\+CP listen netconns. This backlog is used unless another is explicitly specified. 0xff is the maximum (u8\+\_\+t). \mbox{\Hypertarget{group__lwip__opts__tcp_ga98b23e7cbd3281915c50a485cb61899d}\label{group__lwip__opts__tcp_ga98b23e7cbd3281915c50a485cb61899d}} 
+\index{T\+CP@{T\+CP}!T\+C\+P\+\_\+\+L\+I\+S\+T\+E\+N\+\_\+\+B\+A\+C\+K\+L\+OG@{T\+C\+P\+\_\+\+L\+I\+S\+T\+E\+N\+\_\+\+B\+A\+C\+K\+L\+OG}}
+\index{T\+C\+P\+\_\+\+L\+I\+S\+T\+E\+N\+\_\+\+B\+A\+C\+K\+L\+OG@{T\+C\+P\+\_\+\+L\+I\+S\+T\+E\+N\+\_\+\+B\+A\+C\+K\+L\+OG}!T\+CP@{T\+CP}}
+\subsubsection{\texorpdfstring{T\+C\+P\+\_\+\+L\+I\+S\+T\+E\+N\+\_\+\+B\+A\+C\+K\+L\+OG}{TCP\_LISTEN\_BACKLOG}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \#define T\+C\+P\+\_\+\+L\+I\+S\+T\+E\+N\+\_\+\+B\+A\+C\+K\+L\+OG~0}
+
+T\+C\+P\+\_\+\+L\+I\+S\+T\+E\+N\+\_\+\+B\+A\+C\+K\+L\+OG\+: Enable the backlog option for tcp listen pcb. \mbox{\Hypertarget{group__lwip__opts__tcp_ga98b23e7cbd3281915c50a485cb61899d}\label{group__lwip__opts__tcp_ga98b23e7cbd3281915c50a485cb61899d}} 
+\index{T\+CP@{T\+CP}!T\+C\+P\+\_\+\+L\+I\+S\+T\+E\+N\+\_\+\+B\+A\+C\+K\+L\+OG@{T\+C\+P\+\_\+\+L\+I\+S\+T\+E\+N\+\_\+\+B\+A\+C\+K\+L\+OG}}
+\index{T\+C\+P\+\_\+\+L\+I\+S\+T\+E\+N\+\_\+\+B\+A\+C\+K\+L\+OG@{T\+C\+P\+\_\+\+L\+I\+S\+T\+E\+N\+\_\+\+B\+A\+C\+K\+L\+OG}!T\+CP@{T\+CP}}
+\subsubsection{\texorpdfstring{T\+C\+P\+\_\+\+L\+I\+S\+T\+E\+N\+\_\+\+B\+A\+C\+K\+L\+OG}{TCP\_LISTEN\_BACKLOG}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \#define T\+C\+P\+\_\+\+L\+I\+S\+T\+E\+N\+\_\+\+B\+A\+C\+K\+L\+OG~0}
+
+T\+C\+P\+\_\+\+L\+I\+S\+T\+E\+N\+\_\+\+B\+A\+C\+K\+L\+OG\+: Enable the backlog option for tcp listen pcb. \mbox{\Hypertarget{group__lwip__opts__tcp_ga0dee0911197855bdf19ef79778c241a6}\label{group__lwip__opts__tcp_ga0dee0911197855bdf19ef79778c241a6}} 
+\index{T\+CP@{T\+CP}!T\+C\+P\+\_\+\+M\+A\+X\+R\+TX@{T\+C\+P\+\_\+\+M\+A\+X\+R\+TX}}
+\index{T\+C\+P\+\_\+\+M\+A\+X\+R\+TX@{T\+C\+P\+\_\+\+M\+A\+X\+R\+TX}!T\+CP@{T\+CP}}
+\subsubsection{\texorpdfstring{T\+C\+P\+\_\+\+M\+A\+X\+R\+TX}{TCP\_MAXRTX}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \#define T\+C\+P\+\_\+\+M\+A\+X\+R\+TX~12}
+
+T\+C\+P\+\_\+\+M\+A\+X\+R\+TX\+: Maximum number of retransmissions of data segments. \mbox{\Hypertarget{group__lwip__opts__tcp_ga0dee0911197855bdf19ef79778c241a6}\label{group__lwip__opts__tcp_ga0dee0911197855bdf19ef79778c241a6}} 
+\index{T\+CP@{T\+CP}!T\+C\+P\+\_\+\+M\+A\+X\+R\+TX@{T\+C\+P\+\_\+\+M\+A\+X\+R\+TX}}
+\index{T\+C\+P\+\_\+\+M\+A\+X\+R\+TX@{T\+C\+P\+\_\+\+M\+A\+X\+R\+TX}!T\+CP@{T\+CP}}
+\subsubsection{\texorpdfstring{T\+C\+P\+\_\+\+M\+A\+X\+R\+TX}{TCP\_MAXRTX}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \#define T\+C\+P\+\_\+\+M\+A\+X\+R\+TX~12}
+
+T\+C\+P\+\_\+\+M\+A\+X\+R\+TX\+: Maximum number of retransmissions of data segments. \mbox{\Hypertarget{group__lwip__opts__tcp_gaf1ab7bb27860aa3677c387a2f3ba317b}\label{group__lwip__opts__tcp_gaf1ab7bb27860aa3677c387a2f3ba317b}} 
+\index{T\+CP@{T\+CP}!T\+C\+P\+\_\+\+M\+SS@{T\+C\+P\+\_\+\+M\+SS}}
+\index{T\+C\+P\+\_\+\+M\+SS@{T\+C\+P\+\_\+\+M\+SS}!T\+CP@{T\+CP}}
+\subsubsection{\texorpdfstring{T\+C\+P\+\_\+\+M\+SS}{TCP\_MSS}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \#define T\+C\+P\+\_\+\+M\+SS~536}
+
+T\+C\+P\+\_\+\+M\+SS\+: T\+CP Maximum segment size. (default is 536, a conservative default, you might want to increase this.) For the receive side, this M\+SS is advertised to the remote side when opening a connection. For the transmit size, this M\+SS sets an upper limit on the M\+SS advertised by the remote host. \mbox{\Hypertarget{group__lwip__opts__tcp_gaf1ab7bb27860aa3677c387a2f3ba317b}\label{group__lwip__opts__tcp_gaf1ab7bb27860aa3677c387a2f3ba317b}} 
+\index{T\+CP@{T\+CP}!T\+C\+P\+\_\+\+M\+SS@{T\+C\+P\+\_\+\+M\+SS}}
+\index{T\+C\+P\+\_\+\+M\+SS@{T\+C\+P\+\_\+\+M\+SS}!T\+CP@{T\+CP}}
+\subsubsection{\texorpdfstring{T\+C\+P\+\_\+\+M\+SS}{TCP\_MSS}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \#define T\+C\+P\+\_\+\+M\+SS~536}
+
+T\+C\+P\+\_\+\+M\+SS\+: T\+CP Maximum segment size. (default is 536, a conservative default, you might want to increase this.) For the receive side, this M\+SS is advertised to the remote side when opening a connection. For the transmit size, this M\+SS sets an upper limit on the M\+SS advertised by the remote host. \mbox{\Hypertarget{group__lwip__opts__tcp_ga9d6d3219bb5fc0bc760a64114de13c25}\label{group__lwip__opts__tcp_ga9d6d3219bb5fc0bc760a64114de13c25}} 
+\index{T\+CP@{T\+CP}!T\+C\+P\+\_\+\+O\+O\+S\+E\+Q\+\_\+\+M\+A\+X\+\_\+\+B\+Y\+T\+ES@{T\+C\+P\+\_\+\+O\+O\+S\+E\+Q\+\_\+\+M\+A\+X\+\_\+\+B\+Y\+T\+ES}}
+\index{T\+C\+P\+\_\+\+O\+O\+S\+E\+Q\+\_\+\+M\+A\+X\+\_\+\+B\+Y\+T\+ES@{T\+C\+P\+\_\+\+O\+O\+S\+E\+Q\+\_\+\+M\+A\+X\+\_\+\+B\+Y\+T\+ES}!T\+CP@{T\+CP}}
+\subsubsection{\texorpdfstring{T\+C\+P\+\_\+\+O\+O\+S\+E\+Q\+\_\+\+M\+A\+X\+\_\+\+B\+Y\+T\+ES}{TCP\_OOSEQ\_MAX\_BYTES}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \#define T\+C\+P\+\_\+\+O\+O\+S\+E\+Q\+\_\+\+M\+A\+X\+\_\+\+B\+Y\+T\+ES~0}
+
+T\+C\+P\+\_\+\+O\+O\+S\+E\+Q\+\_\+\+M\+A\+X\+\_\+\+B\+Y\+T\+ES\+: The maximum number of bytes queued on ooseq per pcb. Default is 0 (no limit). Only valid for T\+C\+P\+\_\+\+Q\+U\+E\+U\+E\+\_\+\+O\+O\+S\+EQ==1. \mbox{\Hypertarget{group__lwip__opts__tcp_ga9d6d3219bb5fc0bc760a64114de13c25}\label{group__lwip__opts__tcp_ga9d6d3219bb5fc0bc760a64114de13c25}} 
+\index{T\+CP@{T\+CP}!T\+C\+P\+\_\+\+O\+O\+S\+E\+Q\+\_\+\+M\+A\+X\+\_\+\+B\+Y\+T\+ES@{T\+C\+P\+\_\+\+O\+O\+S\+E\+Q\+\_\+\+M\+A\+X\+\_\+\+B\+Y\+T\+ES}}
+\index{T\+C\+P\+\_\+\+O\+O\+S\+E\+Q\+\_\+\+M\+A\+X\+\_\+\+B\+Y\+T\+ES@{T\+C\+P\+\_\+\+O\+O\+S\+E\+Q\+\_\+\+M\+A\+X\+\_\+\+B\+Y\+T\+ES}!T\+CP@{T\+CP}}
+\subsubsection{\texorpdfstring{T\+C\+P\+\_\+\+O\+O\+S\+E\+Q\+\_\+\+M\+A\+X\+\_\+\+B\+Y\+T\+ES}{TCP\_OOSEQ\_MAX\_BYTES}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \#define T\+C\+P\+\_\+\+O\+O\+S\+E\+Q\+\_\+\+M\+A\+X\+\_\+\+B\+Y\+T\+ES~0}
+
+T\+C\+P\+\_\+\+O\+O\+S\+E\+Q\+\_\+\+M\+A\+X\+\_\+\+B\+Y\+T\+ES\+: The maximum number of bytes queued on ooseq per pcb. Default is 0 (no limit). Only valid for T\+C\+P\+\_\+\+Q\+U\+E\+U\+E\+\_\+\+O\+O\+S\+EQ==1. \mbox{\Hypertarget{group__lwip__opts__tcp_ga1f57d3859c4556f785708e5dc440617e}\label{group__lwip__opts__tcp_ga1f57d3859c4556f785708e5dc440617e}} 
+\index{T\+CP@{T\+CP}!T\+C\+P\+\_\+\+O\+O\+S\+E\+Q\+\_\+\+M\+A\+X\+\_\+\+P\+B\+U\+FS@{T\+C\+P\+\_\+\+O\+O\+S\+E\+Q\+\_\+\+M\+A\+X\+\_\+\+P\+B\+U\+FS}}
+\index{T\+C\+P\+\_\+\+O\+O\+S\+E\+Q\+\_\+\+M\+A\+X\+\_\+\+P\+B\+U\+FS@{T\+C\+P\+\_\+\+O\+O\+S\+E\+Q\+\_\+\+M\+A\+X\+\_\+\+P\+B\+U\+FS}!T\+CP@{T\+CP}}
+\subsubsection{\texorpdfstring{T\+C\+P\+\_\+\+O\+O\+S\+E\+Q\+\_\+\+M\+A\+X\+\_\+\+P\+B\+U\+FS}{TCP\_OOSEQ\_MAX\_PBUFS}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \#define T\+C\+P\+\_\+\+O\+O\+S\+E\+Q\+\_\+\+M\+A\+X\+\_\+\+P\+B\+U\+FS~0}
+
+T\+C\+P\+\_\+\+O\+O\+S\+E\+Q\+\_\+\+M\+A\+X\+\_\+\+P\+B\+U\+FS\+: The maximum number of pbufs queued on ooseq per pcb. Default is 0 (no limit). Only valid for T\+C\+P\+\_\+\+Q\+U\+E\+U\+E\+\_\+\+O\+O\+S\+EQ==1. \mbox{\Hypertarget{group__lwip__opts__tcp_ga1f57d3859c4556f785708e5dc440617e}\label{group__lwip__opts__tcp_ga1f57d3859c4556f785708e5dc440617e}} 
+\index{T\+CP@{T\+CP}!T\+C\+P\+\_\+\+O\+O\+S\+E\+Q\+\_\+\+M\+A\+X\+\_\+\+P\+B\+U\+FS@{T\+C\+P\+\_\+\+O\+O\+S\+E\+Q\+\_\+\+M\+A\+X\+\_\+\+P\+B\+U\+FS}}
+\index{T\+C\+P\+\_\+\+O\+O\+S\+E\+Q\+\_\+\+M\+A\+X\+\_\+\+P\+B\+U\+FS@{T\+C\+P\+\_\+\+O\+O\+S\+E\+Q\+\_\+\+M\+A\+X\+\_\+\+P\+B\+U\+FS}!T\+CP@{T\+CP}}
+\subsubsection{\texorpdfstring{T\+C\+P\+\_\+\+O\+O\+S\+E\+Q\+\_\+\+M\+A\+X\+\_\+\+P\+B\+U\+FS}{TCP\_OOSEQ\_MAX\_PBUFS}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \#define T\+C\+P\+\_\+\+O\+O\+S\+E\+Q\+\_\+\+M\+A\+X\+\_\+\+P\+B\+U\+FS~0}
+
+T\+C\+P\+\_\+\+O\+O\+S\+E\+Q\+\_\+\+M\+A\+X\+\_\+\+P\+B\+U\+FS\+: The maximum number of pbufs queued on ooseq per pcb. Default is 0 (no limit). Only valid for T\+C\+P\+\_\+\+Q\+U\+E\+U\+E\+\_\+\+O\+O\+S\+EQ==1. \mbox{\Hypertarget{group__lwip__opts__tcp_ga5648e2580bb55c0efdfbebcf3bad1eef}\label{group__lwip__opts__tcp_ga5648e2580bb55c0efdfbebcf3bad1eef}} 
+\index{T\+CP@{T\+CP}!T\+C\+P\+\_\+\+O\+V\+E\+R\+S\+I\+ZE@{T\+C\+P\+\_\+\+O\+V\+E\+R\+S\+I\+ZE}}
+\index{T\+C\+P\+\_\+\+O\+V\+E\+R\+S\+I\+ZE@{T\+C\+P\+\_\+\+O\+V\+E\+R\+S\+I\+ZE}!T\+CP@{T\+CP}}
+\subsubsection{\texorpdfstring{T\+C\+P\+\_\+\+O\+V\+E\+R\+S\+I\+ZE}{TCP\_OVERSIZE}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \#define T\+C\+P\+\_\+\+O\+V\+E\+R\+S\+I\+ZE~\hyperlink{group__lwip__opts__tcp_gaf1ab7bb27860aa3677c387a2f3ba317b}{T\+C\+P\+\_\+\+M\+SS}}
+
+T\+C\+P\+\_\+\+O\+V\+E\+R\+S\+I\+ZE\+: The maximum number of bytes that tcp\+\_\+write may allocate ahead of time in an attempt to create shorter pbuf chains for transmission. The meaningful range is 0 to T\+C\+P\+\_\+\+M\+SS. Some suggested values are\+:
+
+0\+: Disable oversized allocation. Each tcp\+\_\+write() allocates a new pbuf (old behaviour). 1\+: Allocate size-\/aligned pbufs with minimal excess. Use this if your scatter-\/gather D\+MA requires aligned fragments. 128\+: Limit the pbuf/memory overhead to 20\%. T\+C\+P\+\_\+\+M\+SS\+: Try to create unfragmented T\+CP packets. T\+C\+P\+\_\+\+M\+S\+S/4\+: Try to create 4 fragments or less per T\+CP packet. \mbox{\Hypertarget{group__lwip__opts__tcp_ga5648e2580bb55c0efdfbebcf3bad1eef}\label{group__lwip__opts__tcp_ga5648e2580bb55c0efdfbebcf3bad1eef}} 
+\index{T\+CP@{T\+CP}!T\+C\+P\+\_\+\+O\+V\+E\+R\+S\+I\+ZE@{T\+C\+P\+\_\+\+O\+V\+E\+R\+S\+I\+ZE}}
+\index{T\+C\+P\+\_\+\+O\+V\+E\+R\+S\+I\+ZE@{T\+C\+P\+\_\+\+O\+V\+E\+R\+S\+I\+ZE}!T\+CP@{T\+CP}}
+\subsubsection{\texorpdfstring{T\+C\+P\+\_\+\+O\+V\+E\+R\+S\+I\+ZE}{TCP\_OVERSIZE}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \#define T\+C\+P\+\_\+\+O\+V\+E\+R\+S\+I\+ZE~\hyperlink{group__lwip__opts__tcp_gaf1ab7bb27860aa3677c387a2f3ba317b}{T\+C\+P\+\_\+\+M\+SS}}
+
+T\+C\+P\+\_\+\+O\+V\+E\+R\+S\+I\+ZE\+: The maximum number of bytes that tcp\+\_\+write may allocate ahead of time in an attempt to create shorter pbuf chains for transmission. The meaningful range is 0 to T\+C\+P\+\_\+\+M\+SS. Some suggested values are\+:
+
+0\+: Disable oversized allocation. Each tcp\+\_\+write() allocates a new pbuf (old behaviour). 1\+: Allocate size-\/aligned pbufs with minimal excess. Use this if your scatter-\/gather D\+MA requires aligned fragments. 128\+: Limit the pbuf/memory overhead to 20\%. T\+C\+P\+\_\+\+M\+SS\+: Try to create unfragmented T\+CP packets. T\+C\+P\+\_\+\+M\+S\+S/4\+: Try to create 4 fragments or less per T\+CP packet. \mbox{\Hypertarget{group__lwip__opts__tcp_ga89ffd0d7d1529bdb26bfbad267d0ad75}\label{group__lwip__opts__tcp_ga89ffd0d7d1529bdb26bfbad267d0ad75}} 
+\index{T\+CP@{T\+CP}!T\+C\+P\+\_\+\+Q\+U\+E\+U\+E\+\_\+\+O\+O\+S\+EQ@{T\+C\+P\+\_\+\+Q\+U\+E\+U\+E\+\_\+\+O\+O\+S\+EQ}}
+\index{T\+C\+P\+\_\+\+Q\+U\+E\+U\+E\+\_\+\+O\+O\+S\+EQ@{T\+C\+P\+\_\+\+Q\+U\+E\+U\+E\+\_\+\+O\+O\+S\+EQ}!T\+CP@{T\+CP}}
+\subsubsection{\texorpdfstring{T\+C\+P\+\_\+\+Q\+U\+E\+U\+E\+\_\+\+O\+O\+S\+EQ}{TCP\_QUEUE\_OOSEQ}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \#define T\+C\+P\+\_\+\+Q\+U\+E\+U\+E\+\_\+\+O\+O\+S\+EQ~(\hyperlink{group__lwip__opts__tcp_gaa4ed98deb97b77c633cb8870f34c71e9}{L\+W\+I\+P\+\_\+\+T\+CP})}
+
+T\+C\+P\+\_\+\+Q\+U\+E\+U\+E\+\_\+\+O\+O\+S\+EQ==1\+: T\+CP will queue segments that arrive out of order. Define to 0 if your device is low on memory. \mbox{\Hypertarget{group__lwip__opts__tcp_ga89ffd0d7d1529bdb26bfbad267d0ad75}\label{group__lwip__opts__tcp_ga89ffd0d7d1529bdb26bfbad267d0ad75}} 
+\index{T\+CP@{T\+CP}!T\+C\+P\+\_\+\+Q\+U\+E\+U\+E\+\_\+\+O\+O\+S\+EQ@{T\+C\+P\+\_\+\+Q\+U\+E\+U\+E\+\_\+\+O\+O\+S\+EQ}}
+\index{T\+C\+P\+\_\+\+Q\+U\+E\+U\+E\+\_\+\+O\+O\+S\+EQ@{T\+C\+P\+\_\+\+Q\+U\+E\+U\+E\+\_\+\+O\+O\+S\+EQ}!T\+CP@{T\+CP}}
+\subsubsection{\texorpdfstring{T\+C\+P\+\_\+\+Q\+U\+E\+U\+E\+\_\+\+O\+O\+S\+EQ}{TCP\_QUEUE\_OOSEQ}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \#define T\+C\+P\+\_\+\+Q\+U\+E\+U\+E\+\_\+\+O\+O\+S\+EQ~(\hyperlink{group__lwip__opts__tcp_gaa4ed98deb97b77c633cb8870f34c71e9}{L\+W\+I\+P\+\_\+\+T\+CP})}
+
+T\+C\+P\+\_\+\+Q\+U\+E\+U\+E\+\_\+\+O\+O\+S\+EQ==1\+: T\+CP will queue segments that arrive out of order. Define to 0 if your device is low on memory. \mbox{\Hypertarget{group__lwip__opts__tcp_ga768765a2c678fefeca6c89aae0cf629f}\label{group__lwip__opts__tcp_ga768765a2c678fefeca6c89aae0cf629f}} 
+\index{T\+CP@{T\+CP}!T\+C\+P\+\_\+\+R\+C\+V\+\_\+\+S\+C\+A\+LE@{T\+C\+P\+\_\+\+R\+C\+V\+\_\+\+S\+C\+A\+LE}}
+\index{T\+C\+P\+\_\+\+R\+C\+V\+\_\+\+S\+C\+A\+LE@{T\+C\+P\+\_\+\+R\+C\+V\+\_\+\+S\+C\+A\+LE}!T\+CP@{T\+CP}}
+\subsubsection{\texorpdfstring{T\+C\+P\+\_\+\+R\+C\+V\+\_\+\+S\+C\+A\+LE}{TCP\_RCV\_SCALE}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \#define T\+C\+P\+\_\+\+R\+C\+V\+\_\+\+S\+C\+A\+LE~0}
+
+\mbox{\Hypertarget{group__lwip__opts__tcp_ga768765a2c678fefeca6c89aae0cf629f}\label{group__lwip__opts__tcp_ga768765a2c678fefeca6c89aae0cf629f}} 
+\index{T\+CP@{T\+CP}!T\+C\+P\+\_\+\+R\+C\+V\+\_\+\+S\+C\+A\+LE@{T\+C\+P\+\_\+\+R\+C\+V\+\_\+\+S\+C\+A\+LE}}
+\index{T\+C\+P\+\_\+\+R\+C\+V\+\_\+\+S\+C\+A\+LE@{T\+C\+P\+\_\+\+R\+C\+V\+\_\+\+S\+C\+A\+LE}!T\+CP@{T\+CP}}
+\subsubsection{\texorpdfstring{T\+C\+P\+\_\+\+R\+C\+V\+\_\+\+S\+C\+A\+LE}{TCP\_RCV\_SCALE}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \#define T\+C\+P\+\_\+\+R\+C\+V\+\_\+\+S\+C\+A\+LE~0}
+
+\mbox{\Hypertarget{group__lwip__opts__tcp_ga871d111968d8c6c7880ff36b93c5c4dd}\label{group__lwip__opts__tcp_ga871d111968d8c6c7880ff36b93c5c4dd}} 
+\index{T\+CP@{T\+CP}!T\+C\+P\+\_\+\+S\+N\+D\+\_\+\+B\+UF@{T\+C\+P\+\_\+\+S\+N\+D\+\_\+\+B\+UF}}
+\index{T\+C\+P\+\_\+\+S\+N\+D\+\_\+\+B\+UF@{T\+C\+P\+\_\+\+S\+N\+D\+\_\+\+B\+UF}!T\+CP@{T\+CP}}
+\subsubsection{\texorpdfstring{T\+C\+P\+\_\+\+S\+N\+D\+\_\+\+B\+UF}{TCP\_SND\_BUF}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \#define T\+C\+P\+\_\+\+S\+N\+D\+\_\+\+B\+UF~(2 $\ast$ \hyperlink{group__lwip__opts__tcp_gaf1ab7bb27860aa3677c387a2f3ba317b}{T\+C\+P\+\_\+\+M\+SS})}
+
+T\+C\+P\+\_\+\+S\+N\+D\+\_\+\+B\+UF\+: T\+CP sender buffer space (bytes). To achieve good performance, this should be at least 2 $\ast$ T\+C\+P\+\_\+\+M\+SS. \mbox{\Hypertarget{group__lwip__opts__tcp_ga871d111968d8c6c7880ff36b93c5c4dd}\label{group__lwip__opts__tcp_ga871d111968d8c6c7880ff36b93c5c4dd}} 
+\index{T\+CP@{T\+CP}!T\+C\+P\+\_\+\+S\+N\+D\+\_\+\+B\+UF@{T\+C\+P\+\_\+\+S\+N\+D\+\_\+\+B\+UF}}
+\index{T\+C\+P\+\_\+\+S\+N\+D\+\_\+\+B\+UF@{T\+C\+P\+\_\+\+S\+N\+D\+\_\+\+B\+UF}!T\+CP@{T\+CP}}
+\subsubsection{\texorpdfstring{T\+C\+P\+\_\+\+S\+N\+D\+\_\+\+B\+UF}{TCP\_SND\_BUF}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \#define T\+C\+P\+\_\+\+S\+N\+D\+\_\+\+B\+UF~(2 $\ast$ \hyperlink{group__lwip__opts__tcp_gaf1ab7bb27860aa3677c387a2f3ba317b}{T\+C\+P\+\_\+\+M\+SS})}
+
+T\+C\+P\+\_\+\+S\+N\+D\+\_\+\+B\+UF\+: T\+CP sender buffer space (bytes). To achieve good performance, this should be at least 2 $\ast$ T\+C\+P\+\_\+\+M\+SS. \mbox{\Hypertarget{group__lwip__opts__tcp_ga9beaa47832ead4180981bfbf71074904}\label{group__lwip__opts__tcp_ga9beaa47832ead4180981bfbf71074904}} 
+\index{T\+CP@{T\+CP}!T\+C\+P\+\_\+\+S\+N\+D\+\_\+\+Q\+U\+E\+U\+E\+L\+EN@{T\+C\+P\+\_\+\+S\+N\+D\+\_\+\+Q\+U\+E\+U\+E\+L\+EN}}
+\index{T\+C\+P\+\_\+\+S\+N\+D\+\_\+\+Q\+U\+E\+U\+E\+L\+EN@{T\+C\+P\+\_\+\+S\+N\+D\+\_\+\+Q\+U\+E\+U\+E\+L\+EN}!T\+CP@{T\+CP}}
+\subsubsection{\texorpdfstring{T\+C\+P\+\_\+\+S\+N\+D\+\_\+\+Q\+U\+E\+U\+E\+L\+EN}{TCP\_SND\_QUEUELEN}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \#define T\+C\+P\+\_\+\+S\+N\+D\+\_\+\+Q\+U\+E\+U\+E\+L\+EN~((4 $\ast$ (\hyperlink{openmote-cc2538_2lwip_2test_2unit_2lwipopts_8h_a871d111968d8c6c7880ff36b93c5c4dd}{T\+C\+P\+\_\+\+S\+N\+D\+\_\+\+B\+UF}) + (\hyperlink{group__lwip__opts__tcp_gaf1ab7bb27860aa3677c387a2f3ba317b}{T\+C\+P\+\_\+\+M\+SS} -\/ 1))/(\hyperlink{group__lwip__opts__tcp_gaf1ab7bb27860aa3677c387a2f3ba317b}{T\+C\+P\+\_\+\+M\+SS}))}
+
+T\+C\+P\+\_\+\+S\+N\+D\+\_\+\+Q\+U\+E\+U\+E\+L\+EN\+: T\+CP sender buffer space (pbufs). This must be at least as much as (2 $\ast$ T\+C\+P\+\_\+\+S\+N\+D\+\_\+\+B\+U\+F/\+T\+C\+P\+\_\+\+M\+SS) for things to work. \mbox{\Hypertarget{group__lwip__opts__tcp_ga9beaa47832ead4180981bfbf71074904}\label{group__lwip__opts__tcp_ga9beaa47832ead4180981bfbf71074904}} 
+\index{T\+CP@{T\+CP}!T\+C\+P\+\_\+\+S\+N\+D\+\_\+\+Q\+U\+E\+U\+E\+L\+EN@{T\+C\+P\+\_\+\+S\+N\+D\+\_\+\+Q\+U\+E\+U\+E\+L\+EN}}
+\index{T\+C\+P\+\_\+\+S\+N\+D\+\_\+\+Q\+U\+E\+U\+E\+L\+EN@{T\+C\+P\+\_\+\+S\+N\+D\+\_\+\+Q\+U\+E\+U\+E\+L\+EN}!T\+CP@{T\+CP}}
+\subsubsection{\texorpdfstring{T\+C\+P\+\_\+\+S\+N\+D\+\_\+\+Q\+U\+E\+U\+E\+L\+EN}{TCP\_SND\_QUEUELEN}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \#define T\+C\+P\+\_\+\+S\+N\+D\+\_\+\+Q\+U\+E\+U\+E\+L\+EN~((4 $\ast$ (\hyperlink{openmote-cc2538_2lwip_2test_2unit_2lwipopts_8h_a871d111968d8c6c7880ff36b93c5c4dd}{T\+C\+P\+\_\+\+S\+N\+D\+\_\+\+B\+UF}) + (\hyperlink{group__lwip__opts__tcp_gaf1ab7bb27860aa3677c387a2f3ba317b}{T\+C\+P\+\_\+\+M\+SS} -\/ 1))/(\hyperlink{group__lwip__opts__tcp_gaf1ab7bb27860aa3677c387a2f3ba317b}{T\+C\+P\+\_\+\+M\+SS}))}
+
+T\+C\+P\+\_\+\+S\+N\+D\+\_\+\+Q\+U\+E\+U\+E\+L\+EN\+: T\+CP sender buffer space (pbufs). This must be at least as much as (2 $\ast$ T\+C\+P\+\_\+\+S\+N\+D\+\_\+\+B\+U\+F/\+T\+C\+P\+\_\+\+M\+SS) for things to work. \mbox{\Hypertarget{group__lwip__opts__tcp_gae5c9866d7cd463ac7b36792182145aec}\label{group__lwip__opts__tcp_gae5c9866d7cd463ac7b36792182145aec}} 
+\index{T\+CP@{T\+CP}!T\+C\+P\+\_\+\+S\+N\+D\+L\+O\+W\+AT@{T\+C\+P\+\_\+\+S\+N\+D\+L\+O\+W\+AT}}
+\index{T\+C\+P\+\_\+\+S\+N\+D\+L\+O\+W\+AT@{T\+C\+P\+\_\+\+S\+N\+D\+L\+O\+W\+AT}!T\+CP@{T\+CP}}
+\subsubsection{\texorpdfstring{T\+C\+P\+\_\+\+S\+N\+D\+L\+O\+W\+AT}{TCP\_SNDLOWAT}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \#define T\+C\+P\+\_\+\+S\+N\+D\+L\+O\+W\+AT~\hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2def_8h_a748f5df614a3fc989e8900fd229d6e4e}{L\+W\+I\+P\+\_\+\+M\+IN}(\hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2def_8h_a21ea174d374106caeafb4aa3a24fbd2b}{L\+W\+I\+P\+\_\+\+M\+AX}(((\hyperlink{openmote-cc2538_2lwip_2test_2unit_2lwipopts_8h_a871d111968d8c6c7880ff36b93c5c4dd}{T\+C\+P\+\_\+\+S\+N\+D\+\_\+\+B\+UF})/2), (2 $\ast$ \hyperlink{group__lwip__opts__tcp_gaf1ab7bb27860aa3677c387a2f3ba317b}{T\+C\+P\+\_\+\+M\+SS}) + 1), (\hyperlink{openmote-cc2538_2lwip_2test_2unit_2lwipopts_8h_a871d111968d8c6c7880ff36b93c5c4dd}{T\+C\+P\+\_\+\+S\+N\+D\+\_\+\+B\+UF}) -\/ 1)}
+
+T\+C\+P\+\_\+\+S\+N\+D\+L\+O\+W\+AT\+: T\+CP writable space (bytes). This must be less than T\+C\+P\+\_\+\+S\+N\+D\+\_\+\+B\+UF. It is the amount of space which must be available in the T\+CP snd\+\_\+buf for select to return writable (combined with T\+C\+P\+\_\+\+S\+N\+D\+Q\+U\+E\+U\+E\+L\+O\+W\+AT). \mbox{\Hypertarget{group__lwip__opts__tcp_gae5c9866d7cd463ac7b36792182145aec}\label{group__lwip__opts__tcp_gae5c9866d7cd463ac7b36792182145aec}} 
+\index{T\+CP@{T\+CP}!T\+C\+P\+\_\+\+S\+N\+D\+L\+O\+W\+AT@{T\+C\+P\+\_\+\+S\+N\+D\+L\+O\+W\+AT}}
+\index{T\+C\+P\+\_\+\+S\+N\+D\+L\+O\+W\+AT@{T\+C\+P\+\_\+\+S\+N\+D\+L\+O\+W\+AT}!T\+CP@{T\+CP}}
+\subsubsection{\texorpdfstring{T\+C\+P\+\_\+\+S\+N\+D\+L\+O\+W\+AT}{TCP\_SNDLOWAT}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \#define T\+C\+P\+\_\+\+S\+N\+D\+L\+O\+W\+AT~\hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2def_8h_a748f5df614a3fc989e8900fd229d6e4e}{L\+W\+I\+P\+\_\+\+M\+IN}(\hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2def_8h_a21ea174d374106caeafb4aa3a24fbd2b}{L\+W\+I\+P\+\_\+\+M\+AX}(((\hyperlink{openmote-cc2538_2lwip_2test_2unit_2lwipopts_8h_a871d111968d8c6c7880ff36b93c5c4dd}{T\+C\+P\+\_\+\+S\+N\+D\+\_\+\+B\+UF})/2), (2 $\ast$ \hyperlink{group__lwip__opts__tcp_gaf1ab7bb27860aa3677c387a2f3ba317b}{T\+C\+P\+\_\+\+M\+SS}) + 1), (\hyperlink{openmote-cc2538_2lwip_2test_2unit_2lwipopts_8h_a871d111968d8c6c7880ff36b93c5c4dd}{T\+C\+P\+\_\+\+S\+N\+D\+\_\+\+B\+UF}) -\/ 1)}
+
+T\+C\+P\+\_\+\+S\+N\+D\+L\+O\+W\+AT\+: T\+CP writable space (bytes). This must be less than T\+C\+P\+\_\+\+S\+N\+D\+\_\+\+B\+UF. It is the amount of space which must be available in the T\+CP snd\+\_\+buf for select to return writable (combined with T\+C\+P\+\_\+\+S\+N\+D\+Q\+U\+E\+U\+E\+L\+O\+W\+AT). \mbox{\Hypertarget{group__lwip__opts__tcp_ga75659867592a6b01c198532ed1b65698}\label{group__lwip__opts__tcp_ga75659867592a6b01c198532ed1b65698}} 
+\index{T\+CP@{T\+CP}!T\+C\+P\+\_\+\+S\+N\+D\+Q\+U\+E\+U\+E\+L\+O\+W\+AT@{T\+C\+P\+\_\+\+S\+N\+D\+Q\+U\+E\+U\+E\+L\+O\+W\+AT}}
+\index{T\+C\+P\+\_\+\+S\+N\+D\+Q\+U\+E\+U\+E\+L\+O\+W\+AT@{T\+C\+P\+\_\+\+S\+N\+D\+Q\+U\+E\+U\+E\+L\+O\+W\+AT}!T\+CP@{T\+CP}}
+\subsubsection{\texorpdfstring{T\+C\+P\+\_\+\+S\+N\+D\+Q\+U\+E\+U\+E\+L\+O\+W\+AT}{TCP\_SNDQUEUELOWAT}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \#define T\+C\+P\+\_\+\+S\+N\+D\+Q\+U\+E\+U\+E\+L\+O\+W\+AT~\hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2def_8h_a21ea174d374106caeafb4aa3a24fbd2b}{L\+W\+I\+P\+\_\+\+M\+AX}(((\hyperlink{openmote-cc2538_2lwip_2test_2unit_2lwipopts_8h_a9beaa47832ead4180981bfbf71074904}{T\+C\+P\+\_\+\+S\+N\+D\+\_\+\+Q\+U\+E\+U\+E\+L\+EN})/2), 5)}
+
+T\+C\+P\+\_\+\+S\+N\+D\+Q\+U\+E\+U\+E\+L\+O\+W\+AT\+: T\+CP writable bufs (pbuf count). This must be less than T\+C\+P\+\_\+\+S\+N\+D\+\_\+\+Q\+U\+E\+U\+E\+L\+EN. If the number of pbufs queued on a pcb drops below this number, select returns writable (combined with T\+C\+P\+\_\+\+S\+N\+D\+L\+O\+W\+AT). \mbox{\Hypertarget{group__lwip__opts__tcp_ga75659867592a6b01c198532ed1b65698}\label{group__lwip__opts__tcp_ga75659867592a6b01c198532ed1b65698}} 
+\index{T\+CP@{T\+CP}!T\+C\+P\+\_\+\+S\+N\+D\+Q\+U\+E\+U\+E\+L\+O\+W\+AT@{T\+C\+P\+\_\+\+S\+N\+D\+Q\+U\+E\+U\+E\+L\+O\+W\+AT}}
+\index{T\+C\+P\+\_\+\+S\+N\+D\+Q\+U\+E\+U\+E\+L\+O\+W\+AT@{T\+C\+P\+\_\+\+S\+N\+D\+Q\+U\+E\+U\+E\+L\+O\+W\+AT}!T\+CP@{T\+CP}}
+\subsubsection{\texorpdfstring{T\+C\+P\+\_\+\+S\+N\+D\+Q\+U\+E\+U\+E\+L\+O\+W\+AT}{TCP\_SNDQUEUELOWAT}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \#define T\+C\+P\+\_\+\+S\+N\+D\+Q\+U\+E\+U\+E\+L\+O\+W\+AT~\hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2def_8h_a21ea174d374106caeafb4aa3a24fbd2b}{L\+W\+I\+P\+\_\+\+M\+AX}(((\hyperlink{openmote-cc2538_2lwip_2test_2unit_2lwipopts_8h_a9beaa47832ead4180981bfbf71074904}{T\+C\+P\+\_\+\+S\+N\+D\+\_\+\+Q\+U\+E\+U\+E\+L\+EN})/2), 5)}
+
+T\+C\+P\+\_\+\+S\+N\+D\+Q\+U\+E\+U\+E\+L\+O\+W\+AT\+: T\+CP writable bufs (pbuf count). This must be less than T\+C\+P\+\_\+\+S\+N\+D\+\_\+\+Q\+U\+E\+U\+E\+L\+EN. If the number of pbufs queued on a pcb drops below this number, select returns writable (combined with T\+C\+P\+\_\+\+S\+N\+D\+L\+O\+W\+AT). \mbox{\Hypertarget{group__lwip__opts__tcp_ga50b434a8541a4813f7b27f576c05d1b6}\label{group__lwip__opts__tcp_ga50b434a8541a4813f7b27f576c05d1b6}} 
+\index{T\+CP@{T\+CP}!T\+C\+P\+\_\+\+S\+Y\+N\+M\+A\+X\+R\+TX@{T\+C\+P\+\_\+\+S\+Y\+N\+M\+A\+X\+R\+TX}}
+\index{T\+C\+P\+\_\+\+S\+Y\+N\+M\+A\+X\+R\+TX@{T\+C\+P\+\_\+\+S\+Y\+N\+M\+A\+X\+R\+TX}!T\+CP@{T\+CP}}
+\subsubsection{\texorpdfstring{T\+C\+P\+\_\+\+S\+Y\+N\+M\+A\+X\+R\+TX}{TCP\_SYNMAXRTX}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \#define T\+C\+P\+\_\+\+S\+Y\+N\+M\+A\+X\+R\+TX~6}
+
+T\+C\+P\+\_\+\+S\+Y\+N\+M\+A\+X\+R\+TX\+: Maximum number of retransmissions of S\+YN segments. \mbox{\Hypertarget{group__lwip__opts__tcp_ga50b434a8541a4813f7b27f576c05d1b6}\label{group__lwip__opts__tcp_ga50b434a8541a4813f7b27f576c05d1b6}} 
+\index{T\+CP@{T\+CP}!T\+C\+P\+\_\+\+S\+Y\+N\+M\+A\+X\+R\+TX@{T\+C\+P\+\_\+\+S\+Y\+N\+M\+A\+X\+R\+TX}}
+\index{T\+C\+P\+\_\+\+S\+Y\+N\+M\+A\+X\+R\+TX@{T\+C\+P\+\_\+\+S\+Y\+N\+M\+A\+X\+R\+TX}!T\+CP@{T\+CP}}
+\subsubsection{\texorpdfstring{T\+C\+P\+\_\+\+S\+Y\+N\+M\+A\+X\+R\+TX}{TCP\_SYNMAXRTX}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \#define T\+C\+P\+\_\+\+S\+Y\+N\+M\+A\+X\+R\+TX~6}
+
+T\+C\+P\+\_\+\+S\+Y\+N\+M\+A\+X\+R\+TX\+: Maximum number of retransmissions of S\+YN segments. \mbox{\Hypertarget{group__lwip__opts__tcp_gacd5b25ea81d2894790d25da5393cdab4}\label{group__lwip__opts__tcp_gacd5b25ea81d2894790d25da5393cdab4}} 
+\index{T\+CP@{T\+CP}!T\+C\+P\+\_\+\+T\+TL@{T\+C\+P\+\_\+\+T\+TL}}
+\index{T\+C\+P\+\_\+\+T\+TL@{T\+C\+P\+\_\+\+T\+TL}!T\+CP@{T\+CP}}
+\subsubsection{\texorpdfstring{T\+C\+P\+\_\+\+T\+TL}{TCP\_TTL}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \#define T\+C\+P\+\_\+\+T\+TL~(\hyperlink{group__lwip__opts__ipv4_ga556b9b58fd02c0fdd126791baef77411}{I\+P\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+T\+TL})}
+
+T\+C\+P\+\_\+\+T\+TL\+: Default Time-\/\+To-\/\+Live value. \mbox{\Hypertarget{group__lwip__opts__tcp_gacd5b25ea81d2894790d25da5393cdab4}\label{group__lwip__opts__tcp_gacd5b25ea81d2894790d25da5393cdab4}} 
+\index{T\+CP@{T\+CP}!T\+C\+P\+\_\+\+T\+TL@{T\+C\+P\+\_\+\+T\+TL}}
+\index{T\+C\+P\+\_\+\+T\+TL@{T\+C\+P\+\_\+\+T\+TL}!T\+CP@{T\+CP}}
+\subsubsection{\texorpdfstring{T\+C\+P\+\_\+\+T\+TL}{TCP\_TTL}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \#define T\+C\+P\+\_\+\+T\+TL~(\hyperlink{group__lwip__opts__ipv4_ga556b9b58fd02c0fdd126791baef77411}{I\+P\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+T\+TL})}
+
+T\+C\+P\+\_\+\+T\+TL\+: Default Time-\/\+To-\/\+Live value. \mbox{\Hypertarget{group__lwip__opts__tcp_ga7f535a6efb5cdf86c3210e35ece1d6a7}\label{group__lwip__opts__tcp_ga7f535a6efb5cdf86c3210e35ece1d6a7}} 
+\index{T\+CP@{T\+CP}!T\+C\+P\+\_\+\+W\+ND@{T\+C\+P\+\_\+\+W\+ND}}
+\index{T\+C\+P\+\_\+\+W\+ND@{T\+C\+P\+\_\+\+W\+ND}!T\+CP@{T\+CP}}
+\subsubsection{\texorpdfstring{T\+C\+P\+\_\+\+W\+ND}{TCP\_WND}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \#define T\+C\+P\+\_\+\+W\+ND~(4 $\ast$ \hyperlink{group__lwip__opts__tcp_gaf1ab7bb27860aa3677c387a2f3ba317b}{T\+C\+P\+\_\+\+M\+SS})}
+
+T\+C\+P\+\_\+\+W\+ND\+: The size of a T\+CP window. This must be at least (2 $\ast$ T\+C\+P\+\_\+\+M\+SS) for things to work well. A\+T\+T\+E\+N\+T\+I\+ON\+: when using T\+C\+P\+\_\+\+R\+C\+V\+\_\+\+S\+C\+A\+LE, T\+C\+P\+\_\+\+W\+ND is the total size with scaling applied. Maximum window value in the T\+CP header will be T\+C\+P\+\_\+\+W\+ND $>$$>$ T\+C\+P\+\_\+\+R\+C\+V\+\_\+\+S\+C\+A\+LE \mbox{\Hypertarget{group__lwip__opts__tcp_ga7f535a6efb5cdf86c3210e35ece1d6a7}\label{group__lwip__opts__tcp_ga7f535a6efb5cdf86c3210e35ece1d6a7}} 
+\index{T\+CP@{T\+CP}!T\+C\+P\+\_\+\+W\+ND@{T\+C\+P\+\_\+\+W\+ND}}
+\index{T\+C\+P\+\_\+\+W\+ND@{T\+C\+P\+\_\+\+W\+ND}!T\+CP@{T\+CP}}
+\subsubsection{\texorpdfstring{T\+C\+P\+\_\+\+W\+ND}{TCP\_WND}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \#define T\+C\+P\+\_\+\+W\+ND~(4 $\ast$ \hyperlink{group__lwip__opts__tcp_gaf1ab7bb27860aa3677c387a2f3ba317b}{T\+C\+P\+\_\+\+M\+SS})}
+
+T\+C\+P\+\_\+\+W\+ND\+: The size of a T\+CP window. This must be at least (2 $\ast$ T\+C\+P\+\_\+\+M\+SS) for things to work well. A\+T\+T\+E\+N\+T\+I\+ON\+: when using T\+C\+P\+\_\+\+R\+C\+V\+\_\+\+S\+C\+A\+LE, T\+C\+P\+\_\+\+W\+ND is the total size with scaling applied. Maximum window value in the T\+CP header will be T\+C\+P\+\_\+\+W\+ND $>$$>$ T\+C\+P\+\_\+\+R\+C\+V\+\_\+\+S\+C\+A\+LE \mbox{\Hypertarget{group__lwip__opts__tcp_ga5d45732ba3a8438b141096d86e07ef8d}\label{group__lwip__opts__tcp_ga5d45732ba3a8438b141096d86e07ef8d}} 
+\index{T\+CP@{T\+CP}!T\+C\+P\+\_\+\+W\+N\+D\+\_\+\+U\+P\+D\+A\+T\+E\+\_\+\+T\+H\+R\+E\+S\+H\+O\+LD@{T\+C\+P\+\_\+\+W\+N\+D\+\_\+\+U\+P\+D\+A\+T\+E\+\_\+\+T\+H\+R\+E\+S\+H\+O\+LD}}
+\index{T\+C\+P\+\_\+\+W\+N\+D\+\_\+\+U\+P\+D\+A\+T\+E\+\_\+\+T\+H\+R\+E\+S\+H\+O\+LD@{T\+C\+P\+\_\+\+W\+N\+D\+\_\+\+U\+P\+D\+A\+T\+E\+\_\+\+T\+H\+R\+E\+S\+H\+O\+LD}!T\+CP@{T\+CP}}
+\subsubsection{\texorpdfstring{T\+C\+P\+\_\+\+W\+N\+D\+\_\+\+U\+P\+D\+A\+T\+E\+\_\+\+T\+H\+R\+E\+S\+H\+O\+LD}{TCP\_WND\_UPDATE\_THRESHOLD}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \#define T\+C\+P\+\_\+\+W\+N\+D\+\_\+\+U\+P\+D\+A\+T\+E\+\_\+\+T\+H\+R\+E\+S\+H\+O\+LD~\hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2def_8h_a748f5df614a3fc989e8900fd229d6e4e}{L\+W\+I\+P\+\_\+\+M\+IN}((\hyperlink{openmote-cc2538_2lwip_2test_2unit_2lwipopts_8h_a7f535a6efb5cdf86c3210e35ece1d6a7}{T\+C\+P\+\_\+\+W\+ND} / 4), (\hyperlink{group__lwip__opts__tcp_gaf1ab7bb27860aa3677c387a2f3ba317b}{T\+C\+P\+\_\+\+M\+SS} $\ast$ 4))}
+
+T\+C\+P\+\_\+\+W\+N\+D\+\_\+\+U\+P\+D\+A\+T\+E\+\_\+\+T\+H\+R\+E\+S\+H\+O\+LD\+: difference in window to trigger an explicit window update \mbox{\Hypertarget{group__lwip__opts__tcp_ga5d45732ba3a8438b141096d86e07ef8d}\label{group__lwip__opts__tcp_ga5d45732ba3a8438b141096d86e07ef8d}} 
+\index{T\+CP@{T\+CP}!T\+C\+P\+\_\+\+W\+N\+D\+\_\+\+U\+P\+D\+A\+T\+E\+\_\+\+T\+H\+R\+E\+S\+H\+O\+LD@{T\+C\+P\+\_\+\+W\+N\+D\+\_\+\+U\+P\+D\+A\+T\+E\+\_\+\+T\+H\+R\+E\+S\+H\+O\+LD}}
+\index{T\+C\+P\+\_\+\+W\+N\+D\+\_\+\+U\+P\+D\+A\+T\+E\+\_\+\+T\+H\+R\+E\+S\+H\+O\+LD@{T\+C\+P\+\_\+\+W\+N\+D\+\_\+\+U\+P\+D\+A\+T\+E\+\_\+\+T\+H\+R\+E\+S\+H\+O\+LD}!T\+CP@{T\+CP}}
+\subsubsection{\texorpdfstring{T\+C\+P\+\_\+\+W\+N\+D\+\_\+\+U\+P\+D\+A\+T\+E\+\_\+\+T\+H\+R\+E\+S\+H\+O\+LD}{TCP\_WND\_UPDATE\_THRESHOLD}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \#define T\+C\+P\+\_\+\+W\+N\+D\+\_\+\+U\+P\+D\+A\+T\+E\+\_\+\+T\+H\+R\+E\+S\+H\+O\+LD~\hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2def_8h_a748f5df614a3fc989e8900fd229d6e4e}{L\+W\+I\+P\+\_\+\+M\+IN}((\hyperlink{openmote-cc2538_2lwip_2test_2unit_2lwipopts_8h_a7f535a6efb5cdf86c3210e35ece1d6a7}{T\+C\+P\+\_\+\+W\+ND} / 4), (\hyperlink{group__lwip__opts__tcp_gaf1ab7bb27860aa3677c387a2f3ba317b}{T\+C\+P\+\_\+\+M\+SS} $\ast$ 4))}
+
+T\+C\+P\+\_\+\+W\+N\+D\+\_\+\+U\+P\+D\+A\+T\+E\+\_\+\+T\+H\+R\+E\+S\+H\+O\+LD\+: difference in window to trigger an explicit window update 

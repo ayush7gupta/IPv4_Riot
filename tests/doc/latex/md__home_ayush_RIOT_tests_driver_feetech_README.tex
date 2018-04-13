@@ -1,0 +1,42 @@
+This application is intended for testing Feetech T\+TL bus. It is especially designed to test Feetech S\+C\+S15 servomotors.
+
+\section*{Usage}
+
+To have the list of available commands \+: 
+\begin{DoxyCode}
+help
+\end{DoxyCode}
+
+
+You will need to initialize one U\+A\+RT at 1000000 baudrate (if the servomotor is in factory configuration) \+: 
+\begin{DoxyCode}
+init 1 1000000
+\end{DoxyCode}
+
+
+To ping the servomotor \+: 
+\begin{DoxyCode}
+ping 1
+\end{DoxyCode}
+
+
+Be careful ! If 2 servomotors with the same ID are connected on the same bus, you will have no response. Factory configuration ID is 1, you need to change this to connect an other servo.
+
+To scan every connected servomotors (I\+Ds from 0 to 253) \+: 
+\begin{DoxyCode}
+scan
+\end{DoxyCode}
+
+
+To read a servo register \+: 
+\begin{DoxyCode}
+read 1 PRESENT\_POSITION
+\end{DoxyCode}
+
+
+To move a servo, you need to enable the torque and set the goal position \mbox{[}0-\/1024\mbox{]} \+: 
+\begin{DoxyCode}
+write 1 ENABLE\_TORQUE 1
+write 1 GOAL\_POSITION 512
+\end{DoxyCode}
+ 

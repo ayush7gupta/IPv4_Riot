@@ -1,0 +1,28 @@
+\hypertarget{group__autoip}{}\section{A\+U\+T\+O\+IP}
+\label{group__autoip}\index{A\+U\+T\+O\+IP@{A\+U\+T\+O\+IP}}
+Collaboration diagram for A\+U\+T\+O\+IP\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=207pt]{group__autoip}
+\end{center}
+\end{figure}
+A\+U\+T\+O\+IP related functions U\+S\+A\+GE\+:
+
+define \hyperlink{group__lwip__opts__autoip_gaaf1b3a089827223589baf1b7f4f57069}{L\+W\+I\+P\+\_\+\+A\+U\+T\+O\+IP} 1 in your lwipopts.\+h Options\+: A\+U\+T\+O\+I\+P\+\_\+\+T\+M\+R\+\_\+\+I\+N\+T\+E\+R\+V\+AL msecs, I recommend a value of 100. The value must divide 1000 with a remainder almost 0. Possible values are 1000, 500, 333, 250, 200, 166, 142, 125, 111, 100 ....
+
+Without D\+H\+CP\+:
+\begin{DoxyItemize}
+\item Call autoip\+\_\+start() after \hyperlink{group__netif_gabde72af134ae7047a46ad7719d2a1ee9}{netif\+\_\+add()}.
+\end{DoxyItemize}
+
+With D\+H\+CP\+:
+\begin{DoxyItemize}
+\item define \hyperlink{group__lwip__opts__autoip_ga1a91e18dbb9777bc6e3963f52cb5f9fe}{L\+W\+I\+P\+\_\+\+D\+H\+C\+P\+\_\+\+A\+U\+T\+O\+I\+P\+\_\+\+C\+O\+OP} 1 in your lwipopts.\+h.
+\item Configure your D\+H\+CP Client.
+\end{DoxyItemize}
+
+\begin{DoxySeeAlso}{See also}
+netifapi\+\_\+autoip 
+\end{DoxySeeAlso}

@@ -1,0 +1,19 @@
+This is a test application for the \href{https://www.embeddedadventures.com/datasheets/DSP-0401B_hw_v4.pdf}{\tt D\+S\+P0401}, a 4 digits with 16 segments alpha-\/numeric display.
+
+\subsection*{Connecting the device}
+
+The display can be controlled from the J\+P1 connection jumper as follows\+:
+\begin{DoxyItemize}
+\item Connect {\ttfamily S\+IN} to the board {\ttfamily D\+S\+P0401\+\_\+\+P\+A\+R\+A\+M\+\_\+\+S\+D\+I\+\_\+\+P\+IN} (see your board\+\_\+params.\+h file)
+\item Connect {\ttfamily C\+LK} to the board {\ttfamily D\+S\+P0401\+\_\+\+P\+A\+R\+A\+M\+\_\+\+C\+L\+K\+\_\+\+P\+IN}
+\item Connect {\ttfamily L\+AT} to the board {\ttfamily D\+S\+P0401\+\_\+\+P\+A\+R\+A\+M\+\_\+\+L\+A\+T\+\_\+\+P\+IN}
+\item Connect {\ttfamily P\+WM} to the board {\ttfamily D\+S\+P0401\+\_\+\+P\+A\+R\+A\+M\+\_\+\+P\+W\+M\+\_\+\+D\+EV} pwm device. See the board periph\+\_\+conf.\+h to find a valid pin and configuration.
+\item Connect {\ttfamily V\+CC} to one of the board V\+CC pin (3.\+3V or 5V depending on your board. Example\+: use 3.\+3V with ST Nucleo)
+\item Connect {\ttfamily G\+ND} to one of the board G\+ND.
+\end{DoxyItemize}
+
+Since there are potentially a lot of L\+E\+Ds to poweron, it\textquotesingle{}s preferable to use an external power supply to power the D\+S\+P0401 module. This is what J\+P2 is meant for. See the \href{https://www.embeddedadventures.com/datasheets/DSP-0401B_hw_v4.pdf}{\tt datasheet} section {\ttfamily Power} for more information on power configuration.
+
+\subsection*{Chaining devices}
+
+Since D\+S\+P0401 contains a shift register, it\textquotesingle{}s possible to chain devices by connecting the J\+P4 and J\+P5 connection jumpers of the device N to respectively J\+P2 and J\+P1 of the device N+1. Attention\+: ensure your power supply is able to provide enough current for the number of devices you plan to use. 

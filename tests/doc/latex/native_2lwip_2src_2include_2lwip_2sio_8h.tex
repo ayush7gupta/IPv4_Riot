@@ -1,0 +1,183 @@
+\hypertarget{native_2lwip_2src_2include_2lwip_2sio_8h}{}\section{/home/ayush/\+R\+I\+O\+T/tests/lwip/bin/pkg/native/lwip/src/include/lwip/sio.h File Reference}
+\label{native_2lwip_2src_2include_2lwip_2sio_8h}\index{/home/ayush/\+R\+I\+O\+T/tests/lwip/bin/pkg/native/lwip/src/include/lwip/sio.\+h@{/home/ayush/\+R\+I\+O\+T/tests/lwip/bin/pkg/native/lwip/src/include/lwip/sio.\+h}}
+{\ttfamily \#include \char`\"{}lwip/arch.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}lwip/opt.\+h\char`\"{}}\newline
+Include dependency graph for sio.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=222pt]{native_2lwip_2src_2include_2lwip_2sio_8h__incl}
+\end{center}
+\end{figure}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef void $\ast$ \hyperlink{native_2lwip_2src_2include_2lwip_2sio_8h_ac868e938508a529a77cdc81a6765bd0b}{sio\+\_\+fd\+\_\+t}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{native_2lwip_2src_2include_2lwip_2sio_8h_ac868e938508a529a77cdc81a6765bd0b}{sio\+\_\+fd\+\_\+t} \hyperlink{native_2lwip_2src_2include_2lwip_2sio_8h_a127c33a3c36b7de915a9fe0e1223e063}{sio\+\_\+open} (\hyperlink{group__compiler__abstraction_ga4caecabca98b43919dd11be1c0d4cd8e}{u8\+\_\+t} devnum)
+\item 
+void \hyperlink{native_2lwip_2src_2include_2lwip_2sio_8h_a2c60bae2a81c07930ee504308f6a38b2}{sio\+\_\+send} (\hyperlink{group__compiler__abstraction_ga4caecabca98b43919dd11be1c0d4cd8e}{u8\+\_\+t} c, \hyperlink{native_2lwip_2src_2include_2lwip_2sio_8h_ac868e938508a529a77cdc81a6765bd0b}{sio\+\_\+fd\+\_\+t} fd)
+\item 
+\hyperlink{group__compiler__abstraction_ga4caecabca98b43919dd11be1c0d4cd8e}{u8\+\_\+t} \hyperlink{native_2lwip_2src_2include_2lwip_2sio_8h_a5747f8d8042b712aa5219d5338bf2721}{sio\+\_\+recv} (\hyperlink{native_2lwip_2src_2include_2lwip_2sio_8h_ac868e938508a529a77cdc81a6765bd0b}{sio\+\_\+fd\+\_\+t} fd)
+\item 
+\hyperlink{group__compiler__abstraction_ga4c14294869aceba3ef9d4c0c302d0f33}{u32\+\_\+t} \hyperlink{native_2lwip_2src_2include_2lwip_2sio_8h_ac5a6563ee5f12459451010139a04a03b}{sio\+\_\+read} (\hyperlink{native_2lwip_2src_2include_2lwip_2sio_8h_ac868e938508a529a77cdc81a6765bd0b}{sio\+\_\+fd\+\_\+t} fd, \hyperlink{group__compiler__abstraction_ga4caecabca98b43919dd11be1c0d4cd8e}{u8\+\_\+t} $\ast$data, \hyperlink{group__compiler__abstraction_ga4c14294869aceba3ef9d4c0c302d0f33}{u32\+\_\+t} len)
+\item 
+\hyperlink{group__compiler__abstraction_ga4c14294869aceba3ef9d4c0c302d0f33}{u32\+\_\+t} \hyperlink{native_2lwip_2src_2include_2lwip_2sio_8h_a3780ab1928702f82974ee66988220040}{sio\+\_\+tryread} (\hyperlink{native_2lwip_2src_2include_2lwip_2sio_8h_ac868e938508a529a77cdc81a6765bd0b}{sio\+\_\+fd\+\_\+t} fd, \hyperlink{group__compiler__abstraction_ga4caecabca98b43919dd11be1c0d4cd8e}{u8\+\_\+t} $\ast$data, \hyperlink{group__compiler__abstraction_ga4c14294869aceba3ef9d4c0c302d0f33}{u32\+\_\+t} len)
+\item 
+\hyperlink{group__compiler__abstraction_ga4c14294869aceba3ef9d4c0c302d0f33}{u32\+\_\+t} \hyperlink{native_2lwip_2src_2include_2lwip_2sio_8h_a23df0f187d94bc56513062032289c488}{sio\+\_\+write} (\hyperlink{native_2lwip_2src_2include_2lwip_2sio_8h_ac868e938508a529a77cdc81a6765bd0b}{sio\+\_\+fd\+\_\+t} fd, \hyperlink{group__compiler__abstraction_ga4caecabca98b43919dd11be1c0d4cd8e}{u8\+\_\+t} $\ast$data, \hyperlink{group__compiler__abstraction_ga4c14294869aceba3ef9d4c0c302d0f33}{u32\+\_\+t} len)
+\item 
+void \hyperlink{native_2lwip_2src_2include_2lwip_2sio_8h_aee1b714fc5a4f0fa198537fa7ea48359}{sio\+\_\+read\+\_\+abort} (\hyperlink{native_2lwip_2src_2include_2lwip_2sio_8h_ac868e938508a529a77cdc81a6765bd0b}{sio\+\_\+fd\+\_\+t} fd)
+\end{DoxyCompactItemize}
+
+
+\subsection{Typedef Documentation}
+\mbox{\Hypertarget{native_2lwip_2src_2include_2lwip_2sio_8h_ac868e938508a529a77cdc81a6765bd0b}\label{native_2lwip_2src_2include_2lwip_2sio_8h_ac868e938508a529a77cdc81a6765bd0b}} 
+\index{native/lwip/src/include/lwip/sio.\+h@{native/lwip/src/include/lwip/sio.\+h}!sio\+\_\+fd\+\_\+t@{sio\+\_\+fd\+\_\+t}}
+\index{sio\+\_\+fd\+\_\+t@{sio\+\_\+fd\+\_\+t}!native/lwip/src/include/lwip/sio.\+h@{native/lwip/src/include/lwip/sio.\+h}}
+\subsubsection{\texorpdfstring{sio\+\_\+fd\+\_\+t}{sio\_fd\_t}}
+{\footnotesize\ttfamily typedef void$\ast$ \hyperlink{native_2lwip_2src_2include_2lwip_2sio_8h_ac868e938508a529a77cdc81a6765bd0b}{sio\+\_\+fd\+\_\+t}}
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{native_2lwip_2src_2include_2lwip_2sio_8h_a127c33a3c36b7de915a9fe0e1223e063}\label{native_2lwip_2src_2include_2lwip_2sio_8h_a127c33a3c36b7de915a9fe0e1223e063}} 
+\index{native/lwip/src/include/lwip/sio.\+h@{native/lwip/src/include/lwip/sio.\+h}!sio\+\_\+open@{sio\+\_\+open}}
+\index{sio\+\_\+open@{sio\+\_\+open}!native/lwip/src/include/lwip/sio.\+h@{native/lwip/src/include/lwip/sio.\+h}}
+\subsubsection{\texorpdfstring{sio\+\_\+open()}{sio\_open()}}
+{\footnotesize\ttfamily \hyperlink{native_2lwip_2src_2include_2lwip_2sio_8h_ac868e938508a529a77cdc81a6765bd0b}{sio\+\_\+fd\+\_\+t} sio\+\_\+open (\begin{DoxyParamCaption}\item[{\hyperlink{group__compiler__abstraction_ga4caecabca98b43919dd11be1c0d4cd8e}{u8\+\_\+t}}]{devnum }\end{DoxyParamCaption})}
+
+Opens a serial device for communication.
+
+
+\begin{DoxyParams}{Parameters}
+{\em devnum} & device number \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+handle to serial device if successful, N\+U\+LL otherwise 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=227pt]{native_2lwip_2src_2include_2lwip_2sio_8h_a127c33a3c36b7de915a9fe0e1223e063_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{native_2lwip_2src_2include_2lwip_2sio_8h_ac5a6563ee5f12459451010139a04a03b}\label{native_2lwip_2src_2include_2lwip_2sio_8h_ac5a6563ee5f12459451010139a04a03b}} 
+\index{native/lwip/src/include/lwip/sio.\+h@{native/lwip/src/include/lwip/sio.\+h}!sio\+\_\+read@{sio\+\_\+read}}
+\index{sio\+\_\+read@{sio\+\_\+read}!native/lwip/src/include/lwip/sio.\+h@{native/lwip/src/include/lwip/sio.\+h}}
+\subsubsection{\texorpdfstring{sio\+\_\+read()}{sio\_read()}}
+{\footnotesize\ttfamily \hyperlink{group__compiler__abstraction_ga4c14294869aceba3ef9d4c0c302d0f33}{u32\+\_\+t} sio\+\_\+read (\begin{DoxyParamCaption}\item[{\hyperlink{native_2lwip_2src_2include_2lwip_2sio_8h_ac868e938508a529a77cdc81a6765bd0b}{sio\+\_\+fd\+\_\+t}}]{fd,  }\item[{\hyperlink{group__compiler__abstraction_ga4caecabca98b43919dd11be1c0d4cd8e}{u8\+\_\+t} $\ast$}]{data,  }\item[{\hyperlink{group__compiler__abstraction_ga4c14294869aceba3ef9d4c0c302d0f33}{u32\+\_\+t}}]{len }\end{DoxyParamCaption})}
+
+Reads from the serial device.
+
+
+\begin{DoxyParams}{Parameters}
+{\em fd} & serial device handle \\
+\hline
+{\em data} & pointer to data buffer for receiving \\
+\hline
+{\em len} & maximum length (in bytes) of data to receive \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+number of bytes actually received -\/ may be 0 if aborted by sio\+\_\+read\+\_\+abort
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+This function will block until data can be received. The blocking can be cancelled by calling \hyperlink{native_2lwip_2src_2include_2lwip_2sio_8h_aee1b714fc5a4f0fa198537fa7ea48359}{sio\+\_\+read\+\_\+abort()}. 
+\end{DoxyNote}
+\mbox{\Hypertarget{native_2lwip_2src_2include_2lwip_2sio_8h_aee1b714fc5a4f0fa198537fa7ea48359}\label{native_2lwip_2src_2include_2lwip_2sio_8h_aee1b714fc5a4f0fa198537fa7ea48359}} 
+\index{native/lwip/src/include/lwip/sio.\+h@{native/lwip/src/include/lwip/sio.\+h}!sio\+\_\+read\+\_\+abort@{sio\+\_\+read\+\_\+abort}}
+\index{sio\+\_\+read\+\_\+abort@{sio\+\_\+read\+\_\+abort}!native/lwip/src/include/lwip/sio.\+h@{native/lwip/src/include/lwip/sio.\+h}}
+\subsubsection{\texorpdfstring{sio\+\_\+read\+\_\+abort()}{sio\_read\_abort()}}
+{\footnotesize\ttfamily void sio\+\_\+read\+\_\+abort (\begin{DoxyParamCaption}\item[{\hyperlink{native_2lwip_2src_2include_2lwip_2sio_8h_ac868e938508a529a77cdc81a6765bd0b}{sio\+\_\+fd\+\_\+t}}]{fd }\end{DoxyParamCaption})}
+
+Aborts a blocking \hyperlink{native_2lwip_2src_2include_2lwip_2sio_8h_ac5a6563ee5f12459451010139a04a03b}{sio\+\_\+read()} call.
+
+
+\begin{DoxyParams}{Parameters}
+{\em fd} & serial device handle \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{native_2lwip_2src_2include_2lwip_2sio_8h_a5747f8d8042b712aa5219d5338bf2721}\label{native_2lwip_2src_2include_2lwip_2sio_8h_a5747f8d8042b712aa5219d5338bf2721}} 
+\index{native/lwip/src/include/lwip/sio.\+h@{native/lwip/src/include/lwip/sio.\+h}!sio\+\_\+recv@{sio\+\_\+recv}}
+\index{sio\+\_\+recv@{sio\+\_\+recv}!native/lwip/src/include/lwip/sio.\+h@{native/lwip/src/include/lwip/sio.\+h}}
+\subsubsection{\texorpdfstring{sio\+\_\+recv()}{sio\_recv()}}
+{\footnotesize\ttfamily \hyperlink{group__compiler__abstraction_ga4caecabca98b43919dd11be1c0d4cd8e}{u8\+\_\+t} sio\+\_\+recv (\begin{DoxyParamCaption}\item[{\hyperlink{native_2lwip_2src_2include_2lwip_2sio_8h_ac868e938508a529a77cdc81a6765bd0b}{sio\+\_\+fd\+\_\+t}}]{fd }\end{DoxyParamCaption})}
+
+Receives a single character from the serial device.
+
+
+\begin{DoxyParams}{Parameters}
+{\em fd} & serial device handle\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+This function will block until a character is received. 
+\end{DoxyNote}
+\mbox{\Hypertarget{native_2lwip_2src_2include_2lwip_2sio_8h_a2c60bae2a81c07930ee504308f6a38b2}\label{native_2lwip_2src_2include_2lwip_2sio_8h_a2c60bae2a81c07930ee504308f6a38b2}} 
+\index{native/lwip/src/include/lwip/sio.\+h@{native/lwip/src/include/lwip/sio.\+h}!sio\+\_\+send@{sio\+\_\+send}}
+\index{sio\+\_\+send@{sio\+\_\+send}!native/lwip/src/include/lwip/sio.\+h@{native/lwip/src/include/lwip/sio.\+h}}
+\subsubsection{\texorpdfstring{sio\+\_\+send()}{sio\_send()}}
+{\footnotesize\ttfamily void sio\+\_\+send (\begin{DoxyParamCaption}\item[{\hyperlink{group__compiler__abstraction_ga4caecabca98b43919dd11be1c0d4cd8e}{u8\+\_\+t}}]{c,  }\item[{\hyperlink{native_2lwip_2src_2include_2lwip_2sio_8h_ac868e938508a529a77cdc81a6765bd0b}{sio\+\_\+fd\+\_\+t}}]{fd }\end{DoxyParamCaption})}
+
+Sends a single character to the serial device.
+
+
+\begin{DoxyParams}{Parameters}
+{\em c} & character to send \\
+\hline
+{\em fd} & serial device handle\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+This function will block until the character can be sent. 
+\end{DoxyNote}
+\mbox{\Hypertarget{native_2lwip_2src_2include_2lwip_2sio_8h_a3780ab1928702f82974ee66988220040}\label{native_2lwip_2src_2include_2lwip_2sio_8h_a3780ab1928702f82974ee66988220040}} 
+\index{native/lwip/src/include/lwip/sio.\+h@{native/lwip/src/include/lwip/sio.\+h}!sio\+\_\+tryread@{sio\+\_\+tryread}}
+\index{sio\+\_\+tryread@{sio\+\_\+tryread}!native/lwip/src/include/lwip/sio.\+h@{native/lwip/src/include/lwip/sio.\+h}}
+\subsubsection{\texorpdfstring{sio\+\_\+tryread()}{sio\_tryread()}}
+{\footnotesize\ttfamily \hyperlink{group__compiler__abstraction_ga4c14294869aceba3ef9d4c0c302d0f33}{u32\+\_\+t} sio\+\_\+tryread (\begin{DoxyParamCaption}\item[{\hyperlink{native_2lwip_2src_2include_2lwip_2sio_8h_ac868e938508a529a77cdc81a6765bd0b}{sio\+\_\+fd\+\_\+t}}]{fd,  }\item[{\hyperlink{group__compiler__abstraction_ga4caecabca98b43919dd11be1c0d4cd8e}{u8\+\_\+t} $\ast$}]{data,  }\item[{\hyperlink{group__compiler__abstraction_ga4c14294869aceba3ef9d4c0c302d0f33}{u32\+\_\+t}}]{len }\end{DoxyParamCaption})}
+
+Tries to read from the serial device. Same as sio\+\_\+read but returns immediately if no data is available and never blocks.
+
+
+\begin{DoxyParams}{Parameters}
+{\em fd} & serial device handle \\
+\hline
+{\em data} & pointer to data buffer for receiving \\
+\hline
+{\em len} & maximum length (in bytes) of data to receive \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+number of bytes actually received 
+\end{DoxyReturn}
+\mbox{\Hypertarget{native_2lwip_2src_2include_2lwip_2sio_8h_a23df0f187d94bc56513062032289c488}\label{native_2lwip_2src_2include_2lwip_2sio_8h_a23df0f187d94bc56513062032289c488}} 
+\index{native/lwip/src/include/lwip/sio.\+h@{native/lwip/src/include/lwip/sio.\+h}!sio\+\_\+write@{sio\+\_\+write}}
+\index{sio\+\_\+write@{sio\+\_\+write}!native/lwip/src/include/lwip/sio.\+h@{native/lwip/src/include/lwip/sio.\+h}}
+\subsubsection{\texorpdfstring{sio\+\_\+write()}{sio\_write()}}
+{\footnotesize\ttfamily \hyperlink{group__compiler__abstraction_ga4c14294869aceba3ef9d4c0c302d0f33}{u32\+\_\+t} sio\+\_\+write (\begin{DoxyParamCaption}\item[{\hyperlink{native_2lwip_2src_2include_2lwip_2sio_8h_ac868e938508a529a77cdc81a6765bd0b}{sio\+\_\+fd\+\_\+t}}]{fd,  }\item[{\hyperlink{group__compiler__abstraction_ga4caecabca98b43919dd11be1c0d4cd8e}{u8\+\_\+t} $\ast$}]{data,  }\item[{\hyperlink{group__compiler__abstraction_ga4c14294869aceba3ef9d4c0c302d0f33}{u32\+\_\+t}}]{len }\end{DoxyParamCaption})}
+
+Writes to the serial device.
+
+
+\begin{DoxyParams}{Parameters}
+{\em fd} & serial device handle \\
+\hline
+{\em data} & pointer to data to send \\
+\hline
+{\em len} & length (in bytes) of data to send \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+number of bytes actually sent
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+This function will block until all data can be sent. 
+\end{DoxyNote}

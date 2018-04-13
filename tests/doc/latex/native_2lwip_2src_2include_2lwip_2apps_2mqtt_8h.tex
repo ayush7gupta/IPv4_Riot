@@ -1,0 +1,149 @@
+\hypertarget{native_2lwip_2src_2include_2lwip_2apps_2mqtt_8h}{}\section{/home/ayush/\+R\+I\+O\+T/tests/lwip/bin/pkg/native/lwip/src/include/lwip/apps/mqtt.h File Reference}
+\label{native_2lwip_2src_2include_2lwip_2apps_2mqtt_8h}\index{/home/ayush/\+R\+I\+O\+T/tests/lwip/bin/pkg/native/lwip/src/include/lwip/apps/mqtt.\+h@{/home/ayush/\+R\+I\+O\+T/tests/lwip/bin/pkg/native/lwip/src/include/lwip/apps/mqtt.\+h}}
+{\ttfamily \#include \char`\"{}lwip/apps/mqtt\+\_\+opts.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}lwip/err.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}lwip/ip\+\_\+addr.\+h\char`\"{}}\newline
+Include dependency graph for mqtt.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{native_2lwip_2src_2include_2lwip_2apps_2mqtt_8h__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structmqtt__connect__client__info__t}{mqtt\+\_\+connect\+\_\+client\+\_\+info\+\_\+t}
+\item 
+struct \hyperlink{structmqtt__request__t}{mqtt\+\_\+request\+\_\+t}
+\item 
+struct \hyperlink{structmqtt__ringbuf__t}{mqtt\+\_\+ringbuf\+\_\+t}
+\item 
+struct \hyperlink{structmqtt__client__t}{mqtt\+\_\+client\+\_\+t}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group__mqtt_gaa8632baff6bbb5004385998918f1e6bd}{M\+Q\+T\+T\+\_\+\+P\+O\+RT}~1883
+\item 
+\#define \hyperlink{group__mqtt_ga83d6a6d811b201a74d793bc1b5d4e029}{mqtt\+\_\+subscribe}(client,  topic,  qos,  \hyperlink{periph__rtt_2main_8c_afd4145001d494db2ea612e1239724148}{cb},  arg)~\hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2apps_2mqtt_8h_afdb39d4a9758f98c02451aaa9a9b3103}{mqtt\+\_\+sub\+\_\+unsub}(client, topic, qos, \hyperlink{periph__rtt_2main_8c_afd4145001d494db2ea612e1239724148}{cb}, arg, 1)
+\item 
+\#define \hyperlink{group__mqtt_ga0f133ef09cbe56c46ebe2cc21afccf3f}{mqtt\+\_\+unsubscribe}(client,  topic,  \hyperlink{periph__rtt_2main_8c_afd4145001d494db2ea612e1239724148}{cb},  arg)~\hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2apps_2mqtt_8h_afdb39d4a9758f98c02451aaa9a9b3103}{mqtt\+\_\+sub\+\_\+unsub}(client, topic, 0, \hyperlink{periph__rtt_2main_8c_afd4145001d494db2ea612e1239724148}{cb}, arg, 0)
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{structmqtt__client__t}{mqtt\+\_\+client\+\_\+t} \hyperlink{native_2lwip_2src_2include_2lwip_2apps_2mqtt_8h_a3fa4eba06ca6187c7a8a8e7cb22b7e96}{mqtt\+\_\+client\+\_\+t}
+\item 
+typedef void($\ast$ \hyperlink{group__mqtt_ga8558743bdb7d599a93844fbc56c9029f}{mqtt\+\_\+connection\+\_\+cb\+\_\+t}) (\hyperlink{structmqtt__client__t}{mqtt\+\_\+client\+\_\+t} $\ast$client, void $\ast$arg, \hyperlink{group__mqtt_ga8cf0f360ab20343af37e1d124395a77d}{mqtt\+\_\+connection\+\_\+status\+\_\+t} status)
+\item 
+typedef void($\ast$ \hyperlink{group__mqtt_gafec7e75fe6a746eef9ca411463446c81}{mqtt\+\_\+incoming\+\_\+data\+\_\+cb\+\_\+t}) (void $\ast$arg, const \hyperlink{group__compiler__abstraction_ga4caecabca98b43919dd11be1c0d4cd8e}{u8\+\_\+t} $\ast$data, \hyperlink{group__compiler__abstraction_ga77570ac4fcab86864fa1916e55676da2}{u16\+\_\+t} len, \hyperlink{group__compiler__abstraction_ga4caecabca98b43919dd11be1c0d4cd8e}{u8\+\_\+t} flags)
+\item 
+typedef void($\ast$ \hyperlink{group__mqtt_ga7116bb85255394cec4b1d9fa38842c29}{mqtt\+\_\+incoming\+\_\+publish\+\_\+cb\+\_\+t}) (void $\ast$arg, const char $\ast$topic, \hyperlink{group__compiler__abstraction_ga4c14294869aceba3ef9d4c0c302d0f33}{u32\+\_\+t} tot\+\_\+len)
+\item 
+typedef void($\ast$ \hyperlink{group__mqtt_gacad2bbe2cee76eaa120cc63e2f6094fd}{mqtt\+\_\+request\+\_\+cb\+\_\+t}) (void $\ast$arg, \hyperlink{group__infrastructure__errors_gaf02d9da80fd66b4f986d2c53d7231ddb}{err\+\_\+t} err)
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{group__mqtt_ga8cf0f360ab20343af37e1d124395a77d}{mqtt\+\_\+connection\+\_\+status\+\_\+t} \{ \newline
+\hyperlink{group__mqtt_gga8cf0f360ab20343af37e1d124395a77da074dc1d289b8e8d4aad91f6a2cb93dc1}{M\+Q\+T\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+A\+C\+C\+E\+P\+T\+ED} = 0, 
+\hyperlink{group__mqtt_gga8cf0f360ab20343af37e1d124395a77da41f8aa97142be337cb639f94d9145190}{M\+Q\+T\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+R\+E\+F\+U\+S\+E\+D\+\_\+\+P\+R\+O\+T\+O\+C\+O\+L\+\_\+\+V\+E\+R\+S\+I\+ON} = 1, 
+\hyperlink{group__mqtt_gga8cf0f360ab20343af37e1d124395a77da28ffe49b0175adaa2b9a27cb4873224a}{M\+Q\+T\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+R\+E\+F\+U\+S\+E\+D\+\_\+\+I\+D\+E\+N\+T\+I\+F\+I\+ER} = 2, 
+\hyperlink{group__mqtt_gga8cf0f360ab20343af37e1d124395a77dade28ec1c2ce3d874e91251d683c92b2a}{M\+Q\+T\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+R\+E\+F\+U\+S\+E\+D\+\_\+\+S\+E\+R\+V\+ER} = 3, 
+\newline
+\hyperlink{group__mqtt_gga8cf0f360ab20343af37e1d124395a77da290cf9037054c42022cc864cfade896a}{M\+Q\+T\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+R\+E\+F\+U\+S\+E\+D\+\_\+\+U\+S\+E\+R\+N\+A\+M\+E\+\_\+\+P\+A\+SS} = 4, 
+\hyperlink{group__mqtt_gga8cf0f360ab20343af37e1d124395a77dafc4888158dd6ee84269a5f0bfdc12b17}{M\+Q\+T\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+R\+E\+F\+U\+S\+E\+D\+\_\+\+N\+O\+T\+\_\+\+A\+U\+T\+H\+O\+R\+I\+Z\+E\+D\+\_\+} = 5, 
+\hyperlink{group__mqtt_gga8cf0f360ab20343af37e1d124395a77da321f5ce31b173f235de1a517fcfd00dd}{M\+Q\+T\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+D\+I\+S\+C\+O\+N\+N\+E\+C\+T\+ED} = 256, 
+\hyperlink{group__mqtt_gga8cf0f360ab20343af37e1d124395a77da57153f2ab4331c6f76a9ee74e1bcfc62}{M\+Q\+T\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+T\+I\+M\+E\+O\+UT} = 257, 
+\newline
+\hyperlink{group__mqtt_gga8cf0f360ab20343af37e1d124395a77da074dc1d289b8e8d4aad91f6a2cb93dc1}{M\+Q\+T\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+A\+C\+C\+E\+P\+T\+ED} = 0, 
+\hyperlink{group__mqtt_gga8cf0f360ab20343af37e1d124395a77da41f8aa97142be337cb639f94d9145190}{M\+Q\+T\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+R\+E\+F\+U\+S\+E\+D\+\_\+\+P\+R\+O\+T\+O\+C\+O\+L\+\_\+\+V\+E\+R\+S\+I\+ON} = 1, 
+\hyperlink{group__mqtt_gga8cf0f360ab20343af37e1d124395a77da28ffe49b0175adaa2b9a27cb4873224a}{M\+Q\+T\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+R\+E\+F\+U\+S\+E\+D\+\_\+\+I\+D\+E\+N\+T\+I\+F\+I\+ER} = 2, 
+\hyperlink{group__mqtt_gga8cf0f360ab20343af37e1d124395a77dade28ec1c2ce3d874e91251d683c92b2a}{M\+Q\+T\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+R\+E\+F\+U\+S\+E\+D\+\_\+\+S\+E\+R\+V\+ER} = 3, 
+\newline
+\hyperlink{group__mqtt_gga8cf0f360ab20343af37e1d124395a77da290cf9037054c42022cc864cfade896a}{M\+Q\+T\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+R\+E\+F\+U\+S\+E\+D\+\_\+\+U\+S\+E\+R\+N\+A\+M\+E\+\_\+\+P\+A\+SS} = 4, 
+\hyperlink{group__mqtt_gga8cf0f360ab20343af37e1d124395a77dafc4888158dd6ee84269a5f0bfdc12b17}{M\+Q\+T\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+R\+E\+F\+U\+S\+E\+D\+\_\+\+N\+O\+T\+\_\+\+A\+U\+T\+H\+O\+R\+I\+Z\+E\+D\+\_\+} = 5, 
+\hyperlink{group__mqtt_gga8cf0f360ab20343af37e1d124395a77da321f5ce31b173f235de1a517fcfd00dd}{M\+Q\+T\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+D\+I\+S\+C\+O\+N\+N\+E\+C\+T\+ED} = 256, 
+\hyperlink{group__mqtt_gga8cf0f360ab20343af37e1d124395a77da57153f2ab4331c6f76a9ee74e1bcfc62}{M\+Q\+T\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+T\+I\+M\+E\+O\+UT} = 257
+ \}
+\item 
+enum \{ \hyperlink{group__mqtt_gga06fc87d81c62e9abb8790b6e5713c55ba79cd00d0a5a8df13207e0c49447df87f}{M\+Q\+T\+T\+\_\+\+D\+A\+T\+A\+\_\+\+F\+L\+A\+G\+\_\+\+L\+A\+ST} = 1
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group__infrastructure__errors_gaf02d9da80fd66b4f986d2c53d7231ddb}{err\+\_\+t} \hyperlink{native_2lwip_2src_2include_2lwip_2apps_2mqtt_8h_aaa9248041cdc76f3bf528c6434d83967}{mqtt\+\_\+client\+\_\+connect} (\hyperlink{structmqtt__client__t}{mqtt\+\_\+client\+\_\+t} $\ast$client, const \hyperlink{native_2lwip_2src_2include_2lwip_2ip__addr_8h_a88b43639738c4de2d3cd22e3a1fd7696}{ip\+\_\+addr\+\_\+t} $\ast$ipaddr, \hyperlink{group__compiler__abstraction_ga77570ac4fcab86864fa1916e55676da2}{u16\+\_\+t} port, \hyperlink{group__mqtt_ga8558743bdb7d599a93844fbc56c9029f}{mqtt\+\_\+connection\+\_\+cb\+\_\+t} \hyperlink{periph__rtt_2main_8c_afd4145001d494db2ea612e1239724148}{cb}, void $\ast$arg, const struct \hyperlink{structmqtt__connect__client__info__t}{mqtt\+\_\+connect\+\_\+client\+\_\+info\+\_\+t} $\ast$client\+\_\+info)
+\item 
+void \hyperlink{native_2lwip_2src_2include_2lwip_2apps_2mqtt_8h_a73d8dd718bce09bfaab452770b4f76e6}{mqtt\+\_\+disconnect} (\hyperlink{structmqtt__client__t}{mqtt\+\_\+client\+\_\+t} $\ast$client)
+\item 
+\hyperlink{structmqtt__client__t}{mqtt\+\_\+client\+\_\+t} $\ast$ \hyperlink{native_2lwip_2src_2include_2lwip_2apps_2mqtt_8h_ae7e19e236eb6122c8c39e93db6f5f53f}{mqtt\+\_\+client\+\_\+new} (void)
+\item 
+\hyperlink{group__compiler__abstraction_ga4caecabca98b43919dd11be1c0d4cd8e}{u8\+\_\+t} \hyperlink{native_2lwip_2src_2include_2lwip_2apps_2mqtt_8h_a98f0fd168112b8b7db59bcd7a325a5c5}{mqtt\+\_\+client\+\_\+is\+\_\+connected} (\hyperlink{structmqtt__client__t}{mqtt\+\_\+client\+\_\+t} $\ast$client)
+\item 
+void \hyperlink{native_2lwip_2src_2include_2lwip_2apps_2mqtt_8h_a1f165225a0aab027ba72b6077bc5dda0}{mqtt\+\_\+set\+\_\+inpub\+\_\+callback} (\hyperlink{structmqtt__client__t}{mqtt\+\_\+client\+\_\+t} $\ast$client, \hyperlink{group__mqtt_ga7116bb85255394cec4b1d9fa38842c29}{mqtt\+\_\+incoming\+\_\+publish\+\_\+cb\+\_\+t}, \hyperlink{group__mqtt_gafec7e75fe6a746eef9ca411463446c81}{mqtt\+\_\+incoming\+\_\+data\+\_\+cb\+\_\+t} data\+\_\+cb, void $\ast$arg)
+\item 
+\hyperlink{group__infrastructure__errors_gaf02d9da80fd66b4f986d2c53d7231ddb}{err\+\_\+t} \hyperlink{native_2lwip_2src_2include_2lwip_2apps_2mqtt_8h_afdb39d4a9758f98c02451aaa9a9b3103}{mqtt\+\_\+sub\+\_\+unsub} (\hyperlink{structmqtt__client__t}{mqtt\+\_\+client\+\_\+t} $\ast$client, const char $\ast$topic, \hyperlink{group__compiler__abstraction_ga4caecabca98b43919dd11be1c0d4cd8e}{u8\+\_\+t} qos, \hyperlink{group__mqtt_gacad2bbe2cee76eaa120cc63e2f6094fd}{mqtt\+\_\+request\+\_\+cb\+\_\+t} \hyperlink{periph__rtt_2main_8c_afd4145001d494db2ea612e1239724148}{cb}, void $\ast$arg, \hyperlink{group__compiler__abstraction_ga4caecabca98b43919dd11be1c0d4cd8e}{u8\+\_\+t} sub)
+\item 
+\hyperlink{group__infrastructure__errors_gaf02d9da80fd66b4f986d2c53d7231ddb}{err\+\_\+t} \hyperlink{native_2lwip_2src_2include_2lwip_2apps_2mqtt_8h_ade9850d716e81fde572cb012be795d2f}{mqtt\+\_\+publish} (\hyperlink{structmqtt__client__t}{mqtt\+\_\+client\+\_\+t} $\ast$client, const char $\ast$topic, const void $\ast$payload, \hyperlink{group__compiler__abstraction_ga77570ac4fcab86864fa1916e55676da2}{u16\+\_\+t} payload\+\_\+length, \hyperlink{group__compiler__abstraction_ga4caecabca98b43919dd11be1c0d4cd8e}{u8\+\_\+t} qos, \hyperlink{group__compiler__abstraction_ga4caecabca98b43919dd11be1c0d4cd8e}{u8\+\_\+t} retain, \hyperlink{group__mqtt_gacad2bbe2cee76eaa120cc63e2f6094fd}{mqtt\+\_\+request\+\_\+cb\+\_\+t} \hyperlink{periph__rtt_2main_8c_afd4145001d494db2ea612e1239724148}{cb}, void $\ast$arg)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+M\+Q\+TT client 
+
+\subsection{Typedef Documentation}
+\mbox{\Hypertarget{native_2lwip_2src_2include_2lwip_2apps_2mqtt_8h_a3fa4eba06ca6187c7a8a8e7cb22b7e96}\label{native_2lwip_2src_2include_2lwip_2apps_2mqtt_8h_a3fa4eba06ca6187c7a8a8e7cb22b7e96}} 
+\index{native/lwip/src/include/lwip/apps/mqtt.\+h@{native/lwip/src/include/lwip/apps/mqtt.\+h}!mqtt\+\_\+client\+\_\+t@{mqtt\+\_\+client\+\_\+t}}
+\index{mqtt\+\_\+client\+\_\+t@{mqtt\+\_\+client\+\_\+t}!native/lwip/src/include/lwip/apps/mqtt.\+h@{native/lwip/src/include/lwip/apps/mqtt.\+h}}
+\subsubsection{\texorpdfstring{mqtt\+\_\+client\+\_\+t}{mqtt\_client\_t}}
+{\footnotesize\ttfamily typedef struct \hyperlink{structmqtt__client__t}{mqtt\+\_\+client\+\_\+t} \hyperlink{structmqtt__client__t}{mqtt\+\_\+client\+\_\+t}}
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{native_2lwip_2src_2include_2lwip_2apps_2mqtt_8h_aaa9248041cdc76f3bf528c6434d83967}\label{native_2lwip_2src_2include_2lwip_2apps_2mqtt_8h_aaa9248041cdc76f3bf528c6434d83967}} 
+\index{native/lwip/src/include/lwip/apps/mqtt.\+h@{native/lwip/src/include/lwip/apps/mqtt.\+h}!mqtt\+\_\+client\+\_\+connect@{mqtt\+\_\+client\+\_\+connect}}
+\index{mqtt\+\_\+client\+\_\+connect@{mqtt\+\_\+client\+\_\+connect}!native/lwip/src/include/lwip/apps/mqtt.\+h@{native/lwip/src/include/lwip/apps/mqtt.\+h}}
+\subsubsection{\texorpdfstring{mqtt\+\_\+client\+\_\+connect()}{mqtt\_client\_connect()}}
+{\footnotesize\ttfamily \hyperlink{group__infrastructure__errors_gaf02d9da80fd66b4f986d2c53d7231ddb}{err\+\_\+t} mqtt\+\_\+client\+\_\+connect (\begin{DoxyParamCaption}\item[{\hyperlink{structmqtt__client__t}{mqtt\+\_\+client\+\_\+t} $\ast$}]{client,  }\item[{const \hyperlink{native_2lwip_2src_2include_2lwip_2ip__addr_8h_a88b43639738c4de2d3cd22e3a1fd7696}{ip\+\_\+addr\+\_\+t} $\ast$}]{ipaddr,  }\item[{\hyperlink{group__compiler__abstraction_ga77570ac4fcab86864fa1916e55676da2}{u16\+\_\+t}}]{port,  }\item[{\hyperlink{group__mqtt_ga8558743bdb7d599a93844fbc56c9029f}{mqtt\+\_\+connection\+\_\+cb\+\_\+t}}]{cb,  }\item[{void $\ast$}]{arg,  }\item[{const struct \hyperlink{structmqtt__connect__client__info__t}{mqtt\+\_\+connect\+\_\+client\+\_\+info\+\_\+t} $\ast$}]{client\+\_\+info }\end{DoxyParamCaption})}
+
+Connect to server \mbox{\Hypertarget{native_2lwip_2src_2include_2lwip_2apps_2mqtt_8h_a98f0fd168112b8b7db59bcd7a325a5c5}\label{native_2lwip_2src_2include_2lwip_2apps_2mqtt_8h_a98f0fd168112b8b7db59bcd7a325a5c5}} 
+\index{native/lwip/src/include/lwip/apps/mqtt.\+h@{native/lwip/src/include/lwip/apps/mqtt.\+h}!mqtt\+\_\+client\+\_\+is\+\_\+connected@{mqtt\+\_\+client\+\_\+is\+\_\+connected}}
+\index{mqtt\+\_\+client\+\_\+is\+\_\+connected@{mqtt\+\_\+client\+\_\+is\+\_\+connected}!native/lwip/src/include/lwip/apps/mqtt.\+h@{native/lwip/src/include/lwip/apps/mqtt.\+h}}
+\subsubsection{\texorpdfstring{mqtt\+\_\+client\+\_\+is\+\_\+connected()}{mqtt\_client\_is\_connected()}}
+{\footnotesize\ttfamily \hyperlink{group__compiler__abstraction_ga4caecabca98b43919dd11be1c0d4cd8e}{u8\+\_\+t} mqtt\+\_\+client\+\_\+is\+\_\+connected (\begin{DoxyParamCaption}\item[{\hyperlink{structmqtt__client__t}{mqtt\+\_\+client\+\_\+t} $\ast$}]{client }\end{DoxyParamCaption})}
+
+Check connection status \mbox{\Hypertarget{native_2lwip_2src_2include_2lwip_2apps_2mqtt_8h_ae7e19e236eb6122c8c39e93db6f5f53f}\label{native_2lwip_2src_2include_2lwip_2apps_2mqtt_8h_ae7e19e236eb6122c8c39e93db6f5f53f}} 
+\index{native/lwip/src/include/lwip/apps/mqtt.\+h@{native/lwip/src/include/lwip/apps/mqtt.\+h}!mqtt\+\_\+client\+\_\+new@{mqtt\+\_\+client\+\_\+new}}
+\index{mqtt\+\_\+client\+\_\+new@{mqtt\+\_\+client\+\_\+new}!native/lwip/src/include/lwip/apps/mqtt.\+h@{native/lwip/src/include/lwip/apps/mqtt.\+h}}
+\subsubsection{\texorpdfstring{mqtt\+\_\+client\+\_\+new()}{mqtt\_client\_new()}}
+{\footnotesize\ttfamily \hyperlink{structmqtt__client__t}{mqtt\+\_\+client\+\_\+t}$\ast$ mqtt\+\_\+client\+\_\+new (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Create new client \mbox{\Hypertarget{native_2lwip_2src_2include_2lwip_2apps_2mqtt_8h_a73d8dd718bce09bfaab452770b4f76e6}\label{native_2lwip_2src_2include_2lwip_2apps_2mqtt_8h_a73d8dd718bce09bfaab452770b4f76e6}} 
+\index{native/lwip/src/include/lwip/apps/mqtt.\+h@{native/lwip/src/include/lwip/apps/mqtt.\+h}!mqtt\+\_\+disconnect@{mqtt\+\_\+disconnect}}
+\index{mqtt\+\_\+disconnect@{mqtt\+\_\+disconnect}!native/lwip/src/include/lwip/apps/mqtt.\+h@{native/lwip/src/include/lwip/apps/mqtt.\+h}}
+\subsubsection{\texorpdfstring{mqtt\+\_\+disconnect()}{mqtt\_disconnect()}}
+{\footnotesize\ttfamily void mqtt\+\_\+disconnect (\begin{DoxyParamCaption}\item[{\hyperlink{structmqtt__client__t}{mqtt\+\_\+client\+\_\+t} $\ast$}]{client }\end{DoxyParamCaption})}
+
+Disconnect from server \mbox{\Hypertarget{native_2lwip_2src_2include_2lwip_2apps_2mqtt_8h_ade9850d716e81fde572cb012be795d2f}\label{native_2lwip_2src_2include_2lwip_2apps_2mqtt_8h_ade9850d716e81fde572cb012be795d2f}} 
+\index{native/lwip/src/include/lwip/apps/mqtt.\+h@{native/lwip/src/include/lwip/apps/mqtt.\+h}!mqtt\+\_\+publish@{mqtt\+\_\+publish}}
+\index{mqtt\+\_\+publish@{mqtt\+\_\+publish}!native/lwip/src/include/lwip/apps/mqtt.\+h@{native/lwip/src/include/lwip/apps/mqtt.\+h}}
+\subsubsection{\texorpdfstring{mqtt\+\_\+publish()}{mqtt\_publish()}}
+{\footnotesize\ttfamily \hyperlink{group__infrastructure__errors_gaf02d9da80fd66b4f986d2c53d7231ddb}{err\+\_\+t} mqtt\+\_\+publish (\begin{DoxyParamCaption}\item[{\hyperlink{structmqtt__client__t}{mqtt\+\_\+client\+\_\+t} $\ast$}]{client,  }\item[{const char $\ast$}]{topic,  }\item[{const void $\ast$}]{payload,  }\item[{\hyperlink{group__compiler__abstraction_ga77570ac4fcab86864fa1916e55676da2}{u16\+\_\+t}}]{payload\+\_\+length,  }\item[{\hyperlink{group__compiler__abstraction_ga4caecabca98b43919dd11be1c0d4cd8e}{u8\+\_\+t}}]{qos,  }\item[{\hyperlink{group__compiler__abstraction_ga4caecabca98b43919dd11be1c0d4cd8e}{u8\+\_\+t}}]{retain,  }\item[{\hyperlink{group__mqtt_gacad2bbe2cee76eaa120cc63e2f6094fd}{mqtt\+\_\+request\+\_\+cb\+\_\+t}}]{cb,  }\item[{void $\ast$}]{arg }\end{DoxyParamCaption})}
+
+Publish data to topic \mbox{\Hypertarget{native_2lwip_2src_2include_2lwip_2apps_2mqtt_8h_a1f165225a0aab027ba72b6077bc5dda0}\label{native_2lwip_2src_2include_2lwip_2apps_2mqtt_8h_a1f165225a0aab027ba72b6077bc5dda0}} 
+\index{native/lwip/src/include/lwip/apps/mqtt.\+h@{native/lwip/src/include/lwip/apps/mqtt.\+h}!mqtt\+\_\+set\+\_\+inpub\+\_\+callback@{mqtt\+\_\+set\+\_\+inpub\+\_\+callback}}
+\index{mqtt\+\_\+set\+\_\+inpub\+\_\+callback@{mqtt\+\_\+set\+\_\+inpub\+\_\+callback}!native/lwip/src/include/lwip/apps/mqtt.\+h@{native/lwip/src/include/lwip/apps/mqtt.\+h}}
+\subsubsection{\texorpdfstring{mqtt\+\_\+set\+\_\+inpub\+\_\+callback()}{mqtt\_set\_inpub\_callback()}}
+{\footnotesize\ttfamily void mqtt\+\_\+set\+\_\+inpub\+\_\+callback (\begin{DoxyParamCaption}\item[{\hyperlink{structmqtt__client__t}{mqtt\+\_\+client\+\_\+t} $\ast$}]{client,  }\item[{\hyperlink{group__mqtt_ga7116bb85255394cec4b1d9fa38842c29}{mqtt\+\_\+incoming\+\_\+publish\+\_\+cb\+\_\+t}}]{,  }\item[{\hyperlink{group__mqtt_gafec7e75fe6a746eef9ca411463446c81}{mqtt\+\_\+incoming\+\_\+data\+\_\+cb\+\_\+t}}]{data\+\_\+cb,  }\item[{void $\ast$}]{arg }\end{DoxyParamCaption})}
+
+Set callback to call for incoming publish \mbox{\Hypertarget{native_2lwip_2src_2include_2lwip_2apps_2mqtt_8h_afdb39d4a9758f98c02451aaa9a9b3103}\label{native_2lwip_2src_2include_2lwip_2apps_2mqtt_8h_afdb39d4a9758f98c02451aaa9a9b3103}} 
+\index{native/lwip/src/include/lwip/apps/mqtt.\+h@{native/lwip/src/include/lwip/apps/mqtt.\+h}!mqtt\+\_\+sub\+\_\+unsub@{mqtt\+\_\+sub\+\_\+unsub}}
+\index{mqtt\+\_\+sub\+\_\+unsub@{mqtt\+\_\+sub\+\_\+unsub}!native/lwip/src/include/lwip/apps/mqtt.\+h@{native/lwip/src/include/lwip/apps/mqtt.\+h}}
+\subsubsection{\texorpdfstring{mqtt\+\_\+sub\+\_\+unsub()}{mqtt\_sub\_unsub()}}
+{\footnotesize\ttfamily \hyperlink{group__infrastructure__errors_gaf02d9da80fd66b4f986d2c53d7231ddb}{err\+\_\+t} mqtt\+\_\+sub\+\_\+unsub (\begin{DoxyParamCaption}\item[{\hyperlink{structmqtt__client__t}{mqtt\+\_\+client\+\_\+t} $\ast$}]{client,  }\item[{const char $\ast$}]{topic,  }\item[{\hyperlink{group__compiler__abstraction_ga4caecabca98b43919dd11be1c0d4cd8e}{u8\+\_\+t}}]{qos,  }\item[{\hyperlink{group__mqtt_gacad2bbe2cee76eaa120cc63e2f6094fd}{mqtt\+\_\+request\+\_\+cb\+\_\+t}}]{cb,  }\item[{void $\ast$}]{arg,  }\item[{\hyperlink{group__compiler__abstraction_ga4caecabca98b43919dd11be1c0d4cd8e}{u8\+\_\+t}}]{sub }\end{DoxyParamCaption})}
+
+Common function for subscribe and unsubscribe 

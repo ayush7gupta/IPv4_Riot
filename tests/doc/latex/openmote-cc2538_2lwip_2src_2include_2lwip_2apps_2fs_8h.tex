@@ -1,0 +1,93 @@
+\hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2apps_2fs_8h}{}\section{/home/ayush/\+R\+I\+O\+T/tests/lwip/bin/pkg/openmote-\/cc2538/lwip/src/include/lwip/apps/fs.h File Reference}
+\label{openmote-cc2538_2lwip_2src_2include_2lwip_2apps_2fs_8h}\index{/home/ayush/\+R\+I\+O\+T/tests/lwip/bin/pkg/openmote-\/cc2538/lwip/src/include/lwip/apps/fs.\+h@{/home/ayush/\+R\+I\+O\+T/tests/lwip/bin/pkg/openmote-\/cc2538/lwip/src/include/lwip/apps/fs.\+h}}
+{\ttfamily \#include \char`\"{}httpd\+\_\+opts.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}lwip/err.\+h\char`\"{}}\newline
+Include dependency graph for fs.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=226pt]{openmote-cc2538_2lwip_2src_2include_2lwip_2apps_2fs_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{openmote-cc2538_2lwip_2src_2include_2lwip_2apps_2fs_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structfs__file}{fs\+\_\+file}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2apps_2fs_8h_a05d23b3c867c1f9d701efa0d6d0db92d}{F\+S\+\_\+\+R\+E\+A\+D\+\_\+\+E\+OF}~-\/1
+\item 
+\#define \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2apps_2fs_8h_a3f90d15249e0bc12ed287140356f71dc}{F\+S\+\_\+\+R\+E\+A\+D\+\_\+\+D\+E\+L\+A\+Y\+ED}~-\/2
+\item 
+\#define \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2apps_2fs_8h_a7e36694e0257a7642d41ffda5bf03634}{F\+S\+\_\+\+F\+I\+L\+E\+\_\+\+F\+L\+A\+G\+S\+\_\+\+H\+E\+A\+D\+E\+R\+\_\+\+I\+N\+C\+L\+U\+D\+ED}~0x01
+\item 
+\#define \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2apps_2fs_8h_a95e84b4ba432cf58a59f14ba85733584}{F\+S\+\_\+\+F\+I\+L\+E\+\_\+\+F\+L\+A\+G\+S\+\_\+\+H\+E\+A\+D\+E\+R\+\_\+\+P\+E\+R\+S\+I\+S\+T\+E\+NT}~0x02
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group__infrastructure__errors_gaf02d9da80fd66b4f986d2c53d7231ddb}{err\+\_\+t} \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2apps_2fs_8h_a594058d3f4dd9f333c51b7e5ca910ac3}{fs\+\_\+open} (struct \hyperlink{structfs__file}{fs\+\_\+file} $\ast$file, const char $\ast$name)
+\item 
+void \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2apps_2fs_8h_a742b1911f18d0c780436b7a6abb08c70}{fs\+\_\+close} (struct \hyperlink{structfs__file}{fs\+\_\+file} $\ast$file)
+\item 
+int \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2apps_2fs_8h_a3a7ab7c6c0ddd559030d8e91d94ea02b}{fs\+\_\+bytes\+\_\+left} (struct \hyperlink{structfs__file}{fs\+\_\+file} $\ast$file)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2apps_2fs_8h_a7e36694e0257a7642d41ffda5bf03634}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2apps_2fs_8h_a7e36694e0257a7642d41ffda5bf03634}} 
+\index{openmote-\/cc2538/lwip/src/include/lwip/apps/fs.\+h@{openmote-\/cc2538/lwip/src/include/lwip/apps/fs.\+h}!F\+S\+\_\+\+F\+I\+L\+E\+\_\+\+F\+L\+A\+G\+S\+\_\+\+H\+E\+A\+D\+E\+R\+\_\+\+I\+N\+C\+L\+U\+D\+ED@{F\+S\+\_\+\+F\+I\+L\+E\+\_\+\+F\+L\+A\+G\+S\+\_\+\+H\+E\+A\+D\+E\+R\+\_\+\+I\+N\+C\+L\+U\+D\+ED}}
+\index{F\+S\+\_\+\+F\+I\+L\+E\+\_\+\+F\+L\+A\+G\+S\+\_\+\+H\+E\+A\+D\+E\+R\+\_\+\+I\+N\+C\+L\+U\+D\+ED@{F\+S\+\_\+\+F\+I\+L\+E\+\_\+\+F\+L\+A\+G\+S\+\_\+\+H\+E\+A\+D\+E\+R\+\_\+\+I\+N\+C\+L\+U\+D\+ED}!openmote-\/cc2538/lwip/src/include/lwip/apps/fs.\+h@{openmote-\/cc2538/lwip/src/include/lwip/apps/fs.\+h}}
+\subsubsection{\texorpdfstring{F\+S\+\_\+\+F\+I\+L\+E\+\_\+\+F\+L\+A\+G\+S\+\_\+\+H\+E\+A\+D\+E\+R\+\_\+\+I\+N\+C\+L\+U\+D\+ED}{FS\_FILE\_FLAGS\_HEADER\_INCLUDED}}
+{\footnotesize\ttfamily \#define F\+S\+\_\+\+F\+I\+L\+E\+\_\+\+F\+L\+A\+G\+S\+\_\+\+H\+E\+A\+D\+E\+R\+\_\+\+I\+N\+C\+L\+U\+D\+ED~0x01}
+
+\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2apps_2fs_8h_a95e84b4ba432cf58a59f14ba85733584}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2apps_2fs_8h_a95e84b4ba432cf58a59f14ba85733584}} 
+\index{openmote-\/cc2538/lwip/src/include/lwip/apps/fs.\+h@{openmote-\/cc2538/lwip/src/include/lwip/apps/fs.\+h}!F\+S\+\_\+\+F\+I\+L\+E\+\_\+\+F\+L\+A\+G\+S\+\_\+\+H\+E\+A\+D\+E\+R\+\_\+\+P\+E\+R\+S\+I\+S\+T\+E\+NT@{F\+S\+\_\+\+F\+I\+L\+E\+\_\+\+F\+L\+A\+G\+S\+\_\+\+H\+E\+A\+D\+E\+R\+\_\+\+P\+E\+R\+S\+I\+S\+T\+E\+NT}}
+\index{F\+S\+\_\+\+F\+I\+L\+E\+\_\+\+F\+L\+A\+G\+S\+\_\+\+H\+E\+A\+D\+E\+R\+\_\+\+P\+E\+R\+S\+I\+S\+T\+E\+NT@{F\+S\+\_\+\+F\+I\+L\+E\+\_\+\+F\+L\+A\+G\+S\+\_\+\+H\+E\+A\+D\+E\+R\+\_\+\+P\+E\+R\+S\+I\+S\+T\+E\+NT}!openmote-\/cc2538/lwip/src/include/lwip/apps/fs.\+h@{openmote-\/cc2538/lwip/src/include/lwip/apps/fs.\+h}}
+\subsubsection{\texorpdfstring{F\+S\+\_\+\+F\+I\+L\+E\+\_\+\+F\+L\+A\+G\+S\+\_\+\+H\+E\+A\+D\+E\+R\+\_\+\+P\+E\+R\+S\+I\+S\+T\+E\+NT}{FS\_FILE\_FLAGS\_HEADER\_PERSISTENT}}
+{\footnotesize\ttfamily \#define F\+S\+\_\+\+F\+I\+L\+E\+\_\+\+F\+L\+A\+G\+S\+\_\+\+H\+E\+A\+D\+E\+R\+\_\+\+P\+E\+R\+S\+I\+S\+T\+E\+NT~0x02}
+
+\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2apps_2fs_8h_a3f90d15249e0bc12ed287140356f71dc}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2apps_2fs_8h_a3f90d15249e0bc12ed287140356f71dc}} 
+\index{openmote-\/cc2538/lwip/src/include/lwip/apps/fs.\+h@{openmote-\/cc2538/lwip/src/include/lwip/apps/fs.\+h}!F\+S\+\_\+\+R\+E\+A\+D\+\_\+\+D\+E\+L\+A\+Y\+ED@{F\+S\+\_\+\+R\+E\+A\+D\+\_\+\+D\+E\+L\+A\+Y\+ED}}
+\index{F\+S\+\_\+\+R\+E\+A\+D\+\_\+\+D\+E\+L\+A\+Y\+ED@{F\+S\+\_\+\+R\+E\+A\+D\+\_\+\+D\+E\+L\+A\+Y\+ED}!openmote-\/cc2538/lwip/src/include/lwip/apps/fs.\+h@{openmote-\/cc2538/lwip/src/include/lwip/apps/fs.\+h}}
+\subsubsection{\texorpdfstring{F\+S\+\_\+\+R\+E\+A\+D\+\_\+\+D\+E\+L\+A\+Y\+ED}{FS\_READ\_DELAYED}}
+{\footnotesize\ttfamily \#define F\+S\+\_\+\+R\+E\+A\+D\+\_\+\+D\+E\+L\+A\+Y\+ED~-\/2}
+
+\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2apps_2fs_8h_a05d23b3c867c1f9d701efa0d6d0db92d}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2apps_2fs_8h_a05d23b3c867c1f9d701efa0d6d0db92d}} 
+\index{openmote-\/cc2538/lwip/src/include/lwip/apps/fs.\+h@{openmote-\/cc2538/lwip/src/include/lwip/apps/fs.\+h}!F\+S\+\_\+\+R\+E\+A\+D\+\_\+\+E\+OF@{F\+S\+\_\+\+R\+E\+A\+D\+\_\+\+E\+OF}}
+\index{F\+S\+\_\+\+R\+E\+A\+D\+\_\+\+E\+OF@{F\+S\+\_\+\+R\+E\+A\+D\+\_\+\+E\+OF}!openmote-\/cc2538/lwip/src/include/lwip/apps/fs.\+h@{openmote-\/cc2538/lwip/src/include/lwip/apps/fs.\+h}}
+\subsubsection{\texorpdfstring{F\+S\+\_\+\+R\+E\+A\+D\+\_\+\+E\+OF}{FS\_READ\_EOF}}
+{\footnotesize\ttfamily \#define F\+S\+\_\+\+R\+E\+A\+D\+\_\+\+E\+OF~-\/1}
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2apps_2fs_8h_a3a7ab7c6c0ddd559030d8e91d94ea02b}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2apps_2fs_8h_a3a7ab7c6c0ddd559030d8e91d94ea02b}} 
+\index{openmote-\/cc2538/lwip/src/include/lwip/apps/fs.\+h@{openmote-\/cc2538/lwip/src/include/lwip/apps/fs.\+h}!fs\+\_\+bytes\+\_\+left@{fs\+\_\+bytes\+\_\+left}}
+\index{fs\+\_\+bytes\+\_\+left@{fs\+\_\+bytes\+\_\+left}!openmote-\/cc2538/lwip/src/include/lwip/apps/fs.\+h@{openmote-\/cc2538/lwip/src/include/lwip/apps/fs.\+h}}
+\subsubsection{\texorpdfstring{fs\+\_\+bytes\+\_\+left()}{fs\_bytes\_left()}}
+{\footnotesize\ttfamily int fs\+\_\+bytes\+\_\+left (\begin{DoxyParamCaption}\item[{struct \hyperlink{structfs__file}{fs\+\_\+file} $\ast$}]{file }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2apps_2fs_8h_a742b1911f18d0c780436b7a6abb08c70}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2apps_2fs_8h_a742b1911f18d0c780436b7a6abb08c70}} 
+\index{openmote-\/cc2538/lwip/src/include/lwip/apps/fs.\+h@{openmote-\/cc2538/lwip/src/include/lwip/apps/fs.\+h}!fs\+\_\+close@{fs\+\_\+close}}
+\index{fs\+\_\+close@{fs\+\_\+close}!openmote-\/cc2538/lwip/src/include/lwip/apps/fs.\+h@{openmote-\/cc2538/lwip/src/include/lwip/apps/fs.\+h}}
+\subsubsection{\texorpdfstring{fs\+\_\+close()}{fs\_close()}}
+{\footnotesize\ttfamily void fs\+\_\+close (\begin{DoxyParamCaption}\item[{struct \hyperlink{structfs__file}{fs\+\_\+file} $\ast$}]{file }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2apps_2fs_8h_a594058d3f4dd9f333c51b7e5ca910ac3}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2apps_2fs_8h_a594058d3f4dd9f333c51b7e5ca910ac3}} 
+\index{openmote-\/cc2538/lwip/src/include/lwip/apps/fs.\+h@{openmote-\/cc2538/lwip/src/include/lwip/apps/fs.\+h}!fs\+\_\+open@{fs\+\_\+open}}
+\index{fs\+\_\+open@{fs\+\_\+open}!openmote-\/cc2538/lwip/src/include/lwip/apps/fs.\+h@{openmote-\/cc2538/lwip/src/include/lwip/apps/fs.\+h}}
+\subsubsection{\texorpdfstring{fs\+\_\+open()}{fs\_open()}}
+{\footnotesize\ttfamily \hyperlink{group__infrastructure__errors_gaf02d9da80fd66b4f986d2c53d7231ddb}{err\+\_\+t} fs\+\_\+open (\begin{DoxyParamCaption}\item[{struct \hyperlink{structfs__file}{fs\+\_\+file} $\ast$}]{file,  }\item[{const char $\ast$}]{name }\end{DoxyParamCaption})}
+

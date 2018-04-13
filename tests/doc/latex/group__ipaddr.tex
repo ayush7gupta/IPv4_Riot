@@ -1,0 +1,116 @@
+\hypertarget{group__ipaddr}{}\section{IP address handling}
+\label{group__ipaddr}\index{I\+P address handling@{I\+P address handling}}
+Collaboration diagram for IP address handling\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{group__ipaddr}
+\end{center}
+\end{figure}
+\subsection*{Modules}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group__ip4addr}{I\+Pv4 only}
+\item 
+\hyperlink{group__ip6addr}{I\+Pv6 only}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{group__ipaddr_gaf2142f0dfdcc938e2db16aa745ed585c}{lwip\+\_\+ip\+\_\+addr\+\_\+type} \{ \newline
+\hyperlink{group__ipaddr_ggaf2142f0dfdcc938e2db16aa745ed585cace47fa82608deeb1c1c7c2c891eb5049}{I\+P\+A\+D\+D\+R\+\_\+\+T\+Y\+P\+E\+\_\+\+V4} = 0U, 
+\hyperlink{group__ipaddr_ggaf2142f0dfdcc938e2db16aa745ed585caae510fd8ec7fe405b594b57af61f9a02}{I\+P\+A\+D\+D\+R\+\_\+\+T\+Y\+P\+E\+\_\+\+V6} = 6U, 
+\hyperlink{group__ipaddr_ggaf2142f0dfdcc938e2db16aa745ed585cac6b2c99cf920e08efcb55dc40e42944e}{I\+P\+A\+D\+D\+R\+\_\+\+T\+Y\+P\+E\+\_\+\+A\+NY} = 46U, 
+\hyperlink{group__ipaddr_ggaf2142f0dfdcc938e2db16aa745ed585cace47fa82608deeb1c1c7c2c891eb5049}{I\+P\+A\+D\+D\+R\+\_\+\+T\+Y\+P\+E\+\_\+\+V4} = 0U, 
+\newline
+\hyperlink{group__ipaddr_ggaf2142f0dfdcc938e2db16aa745ed585caae510fd8ec7fe405b594b57af61f9a02}{I\+P\+A\+D\+D\+R\+\_\+\+T\+Y\+P\+E\+\_\+\+V6} = 6U, 
+\hyperlink{group__ipaddr_ggaf2142f0dfdcc938e2db16aa745ed585cac6b2c99cf920e08efcb55dc40e42944e}{I\+P\+A\+D\+D\+R\+\_\+\+T\+Y\+P\+E\+\_\+\+A\+NY} = 46U
+ \}
+\item 
+enum \hyperlink{group__ipaddr_gaf2142f0dfdcc938e2db16aa745ed585c}{lwip\+\_\+ip\+\_\+addr\+\_\+type} \{ \newline
+\hyperlink{group__ipaddr_ggaf2142f0dfdcc938e2db16aa745ed585cace47fa82608deeb1c1c7c2c891eb5049}{I\+P\+A\+D\+D\+R\+\_\+\+T\+Y\+P\+E\+\_\+\+V4} = 0U, 
+\hyperlink{group__ipaddr_ggaf2142f0dfdcc938e2db16aa745ed585caae510fd8ec7fe405b594b57af61f9a02}{I\+P\+A\+D\+D\+R\+\_\+\+T\+Y\+P\+E\+\_\+\+V6} = 6U, 
+\hyperlink{group__ipaddr_ggaf2142f0dfdcc938e2db16aa745ed585cac6b2c99cf920e08efcb55dc40e42944e}{I\+P\+A\+D\+D\+R\+\_\+\+T\+Y\+P\+E\+\_\+\+A\+NY} = 46U, 
+\hyperlink{group__ipaddr_ggaf2142f0dfdcc938e2db16aa745ed585cace47fa82608deeb1c1c7c2c891eb5049}{I\+P\+A\+D\+D\+R\+\_\+\+T\+Y\+P\+E\+\_\+\+V4} = 0U, 
+\newline
+\hyperlink{group__ipaddr_ggaf2142f0dfdcc938e2db16aa745ed585caae510fd8ec7fe405b594b57af61f9a02}{I\+P\+A\+D\+D\+R\+\_\+\+T\+Y\+P\+E\+\_\+\+V6} = 6U, 
+\hyperlink{group__ipaddr_ggaf2142f0dfdcc938e2db16aa745ed585cac6b2c99cf920e08efcb55dc40e42944e}{I\+P\+A\+D\+D\+R\+\_\+\+T\+Y\+P\+E\+\_\+\+A\+NY} = 46U
+ \}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{group__ipaddr_gaf2142f0dfdcc938e2db16aa745ed585c}\label{group__ipaddr_gaf2142f0dfdcc938e2db16aa745ed585c}} 
+\index{I\+P address handling@{I\+P address handling}!lwip\+\_\+ip\+\_\+addr\+\_\+type@{lwip\+\_\+ip\+\_\+addr\+\_\+type}}
+\index{lwip\+\_\+ip\+\_\+addr\+\_\+type@{lwip\+\_\+ip\+\_\+addr\+\_\+type}!I\+P address handling@{I\+P address handling}}
+\subsubsection{\texorpdfstring{lwip\+\_\+ip\+\_\+addr\+\_\+type}{lwip\_ip\_addr\_type}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily enum \hyperlink{group__ipaddr_gaf2142f0dfdcc938e2db16aa745ed585c}{lwip\+\_\+ip\+\_\+addr\+\_\+type}}
+
+IP address types for use in ip\+\_\+addr\+\_\+t.\+type member. \begin{DoxySeeAlso}{See also}
+tcp\+\_\+new\+\_\+ip\+\_\+type(), udp\+\_\+new\+\_\+ip\+\_\+type(), raw\+\_\+new\+\_\+ip\+\_\+type(). 
+\end{DoxySeeAlso}
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{I\+P\+A\+D\+D\+R\+\_\+\+T\+Y\+P\+E\+\_\+\+V4@{I\+P\+A\+D\+D\+R\+\_\+\+T\+Y\+P\+E\+\_\+\+V4}!I\+P address handling@{I\+P address handling}}\index{I\+P address handling@{I\+P address handling}!I\+P\+A\+D\+D\+R\+\_\+\+T\+Y\+P\+E\+\_\+\+V4@{I\+P\+A\+D\+D\+R\+\_\+\+T\+Y\+P\+E\+\_\+\+V4}}}\mbox{\Hypertarget{group__ipaddr_ggaf2142f0dfdcc938e2db16aa745ed585cace47fa82608deeb1c1c7c2c891eb5049}\label{group__ipaddr_ggaf2142f0dfdcc938e2db16aa745ed585cace47fa82608deeb1c1c7c2c891eb5049}} 
+I\+P\+A\+D\+D\+R\+\_\+\+T\+Y\+P\+E\+\_\+\+V4&I\+Pv4 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{I\+P\+A\+D\+D\+R\+\_\+\+T\+Y\+P\+E\+\_\+\+V6@{I\+P\+A\+D\+D\+R\+\_\+\+T\+Y\+P\+E\+\_\+\+V6}!I\+P address handling@{I\+P address handling}}\index{I\+P address handling@{I\+P address handling}!I\+P\+A\+D\+D\+R\+\_\+\+T\+Y\+P\+E\+\_\+\+V6@{I\+P\+A\+D\+D\+R\+\_\+\+T\+Y\+P\+E\+\_\+\+V6}}}\mbox{\Hypertarget{group__ipaddr_ggaf2142f0dfdcc938e2db16aa745ed585caae510fd8ec7fe405b594b57af61f9a02}\label{group__ipaddr_ggaf2142f0dfdcc938e2db16aa745ed585caae510fd8ec7fe405b594b57af61f9a02}} 
+I\+P\+A\+D\+D\+R\+\_\+\+T\+Y\+P\+E\+\_\+\+V6&I\+Pv6 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{I\+P\+A\+D\+D\+R\+\_\+\+T\+Y\+P\+E\+\_\+\+A\+NY@{I\+P\+A\+D\+D\+R\+\_\+\+T\+Y\+P\+E\+\_\+\+A\+NY}!I\+P address handling@{I\+P address handling}}\index{I\+P address handling@{I\+P address handling}!I\+P\+A\+D\+D\+R\+\_\+\+T\+Y\+P\+E\+\_\+\+A\+NY@{I\+P\+A\+D\+D\+R\+\_\+\+T\+Y\+P\+E\+\_\+\+A\+NY}}}\mbox{\Hypertarget{group__ipaddr_ggaf2142f0dfdcc938e2db16aa745ed585cac6b2c99cf920e08efcb55dc40e42944e}\label{group__ipaddr_ggaf2142f0dfdcc938e2db16aa745ed585cac6b2c99cf920e08efcb55dc40e42944e}} 
+I\+P\+A\+D\+D\+R\+\_\+\+T\+Y\+P\+E\+\_\+\+A\+NY&I\+Pv4+\+I\+Pv6 (\char`\"{}dual-\/stack\char`\"{}) \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{I\+P\+A\+D\+D\+R\+\_\+\+T\+Y\+P\+E\+\_\+\+V4@{I\+P\+A\+D\+D\+R\+\_\+\+T\+Y\+P\+E\+\_\+\+V4}!I\+P address handling@{I\+P address handling}}\index{I\+P address handling@{I\+P address handling}!I\+P\+A\+D\+D\+R\+\_\+\+T\+Y\+P\+E\+\_\+\+V4@{I\+P\+A\+D\+D\+R\+\_\+\+T\+Y\+P\+E\+\_\+\+V4}}}\mbox{\Hypertarget{group__ipaddr_ggaf2142f0dfdcc938e2db16aa745ed585cace47fa82608deeb1c1c7c2c891eb5049}\label{group__ipaddr_ggaf2142f0dfdcc938e2db16aa745ed585cace47fa82608deeb1c1c7c2c891eb5049}} 
+I\+P\+A\+D\+D\+R\+\_\+\+T\+Y\+P\+E\+\_\+\+V4&I\+Pv4 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{I\+P\+A\+D\+D\+R\+\_\+\+T\+Y\+P\+E\+\_\+\+V6@{I\+P\+A\+D\+D\+R\+\_\+\+T\+Y\+P\+E\+\_\+\+V6}!I\+P address handling@{I\+P address handling}}\index{I\+P address handling@{I\+P address handling}!I\+P\+A\+D\+D\+R\+\_\+\+T\+Y\+P\+E\+\_\+\+V6@{I\+P\+A\+D\+D\+R\+\_\+\+T\+Y\+P\+E\+\_\+\+V6}}}\mbox{\Hypertarget{group__ipaddr_ggaf2142f0dfdcc938e2db16aa745ed585caae510fd8ec7fe405b594b57af61f9a02}\label{group__ipaddr_ggaf2142f0dfdcc938e2db16aa745ed585caae510fd8ec7fe405b594b57af61f9a02}} 
+I\+P\+A\+D\+D\+R\+\_\+\+T\+Y\+P\+E\+\_\+\+V6&I\+Pv6 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{I\+P\+A\+D\+D\+R\+\_\+\+T\+Y\+P\+E\+\_\+\+A\+NY@{I\+P\+A\+D\+D\+R\+\_\+\+T\+Y\+P\+E\+\_\+\+A\+NY}!I\+P address handling@{I\+P address handling}}\index{I\+P address handling@{I\+P address handling}!I\+P\+A\+D\+D\+R\+\_\+\+T\+Y\+P\+E\+\_\+\+A\+NY@{I\+P\+A\+D\+D\+R\+\_\+\+T\+Y\+P\+E\+\_\+\+A\+NY}}}\mbox{\Hypertarget{group__ipaddr_ggaf2142f0dfdcc938e2db16aa745ed585cac6b2c99cf920e08efcb55dc40e42944e}\label{group__ipaddr_ggaf2142f0dfdcc938e2db16aa745ed585cac6b2c99cf920e08efcb55dc40e42944e}} 
+I\+P\+A\+D\+D\+R\+\_\+\+T\+Y\+P\+E\+\_\+\+A\+NY&I\+Pv4+\+I\+Pv6 (\char`\"{}dual-\/stack\char`\"{}) \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{group__ipaddr_gaf2142f0dfdcc938e2db16aa745ed585c}\label{group__ipaddr_gaf2142f0dfdcc938e2db16aa745ed585c}} 
+\index{I\+P address handling@{I\+P address handling}!lwip\+\_\+ip\+\_\+addr\+\_\+type@{lwip\+\_\+ip\+\_\+addr\+\_\+type}}
+\index{lwip\+\_\+ip\+\_\+addr\+\_\+type@{lwip\+\_\+ip\+\_\+addr\+\_\+type}!I\+P address handling@{I\+P address handling}}
+\subsubsection{\texorpdfstring{lwip\+\_\+ip\+\_\+addr\+\_\+type}{lwip\_ip\_addr\_type}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily enum \hyperlink{group__ipaddr_gaf2142f0dfdcc938e2db16aa745ed585c}{lwip\+\_\+ip\+\_\+addr\+\_\+type}}
+
+IP address types for use in ip\+\_\+addr\+\_\+t.\+type member. \begin{DoxySeeAlso}{See also}
+tcp\+\_\+new\+\_\+ip\+\_\+type(), udp\+\_\+new\+\_\+ip\+\_\+type(), raw\+\_\+new\+\_\+ip\+\_\+type(). 
+\end{DoxySeeAlso}
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{I\+P\+A\+D\+D\+R\+\_\+\+T\+Y\+P\+E\+\_\+\+V4@{I\+P\+A\+D\+D\+R\+\_\+\+T\+Y\+P\+E\+\_\+\+V4}!I\+P address handling@{I\+P address handling}}\index{I\+P address handling@{I\+P address handling}!I\+P\+A\+D\+D\+R\+\_\+\+T\+Y\+P\+E\+\_\+\+V4@{I\+P\+A\+D\+D\+R\+\_\+\+T\+Y\+P\+E\+\_\+\+V4}}}\mbox{\Hypertarget{group__ipaddr_ggaf2142f0dfdcc938e2db16aa745ed585cace47fa82608deeb1c1c7c2c891eb5049}\label{group__ipaddr_ggaf2142f0dfdcc938e2db16aa745ed585cace47fa82608deeb1c1c7c2c891eb5049}} 
+I\+P\+A\+D\+D\+R\+\_\+\+T\+Y\+P\+E\+\_\+\+V4&I\+Pv4 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{I\+P\+A\+D\+D\+R\+\_\+\+T\+Y\+P\+E\+\_\+\+V6@{I\+P\+A\+D\+D\+R\+\_\+\+T\+Y\+P\+E\+\_\+\+V6}!I\+P address handling@{I\+P address handling}}\index{I\+P address handling@{I\+P address handling}!I\+P\+A\+D\+D\+R\+\_\+\+T\+Y\+P\+E\+\_\+\+V6@{I\+P\+A\+D\+D\+R\+\_\+\+T\+Y\+P\+E\+\_\+\+V6}}}\mbox{\Hypertarget{group__ipaddr_ggaf2142f0dfdcc938e2db16aa745ed585caae510fd8ec7fe405b594b57af61f9a02}\label{group__ipaddr_ggaf2142f0dfdcc938e2db16aa745ed585caae510fd8ec7fe405b594b57af61f9a02}} 
+I\+P\+A\+D\+D\+R\+\_\+\+T\+Y\+P\+E\+\_\+\+V6&I\+Pv6 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{I\+P\+A\+D\+D\+R\+\_\+\+T\+Y\+P\+E\+\_\+\+A\+NY@{I\+P\+A\+D\+D\+R\+\_\+\+T\+Y\+P\+E\+\_\+\+A\+NY}!I\+P address handling@{I\+P address handling}}\index{I\+P address handling@{I\+P address handling}!I\+P\+A\+D\+D\+R\+\_\+\+T\+Y\+P\+E\+\_\+\+A\+NY@{I\+P\+A\+D\+D\+R\+\_\+\+T\+Y\+P\+E\+\_\+\+A\+NY}}}\mbox{\Hypertarget{group__ipaddr_ggaf2142f0dfdcc938e2db16aa745ed585cac6b2c99cf920e08efcb55dc40e42944e}\label{group__ipaddr_ggaf2142f0dfdcc938e2db16aa745ed585cac6b2c99cf920e08efcb55dc40e42944e}} 
+I\+P\+A\+D\+D\+R\+\_\+\+T\+Y\+P\+E\+\_\+\+A\+NY&I\+Pv4+\+I\+Pv6 (\char`\"{}dual-\/stack\char`\"{}) \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{I\+P\+A\+D\+D\+R\+\_\+\+T\+Y\+P\+E\+\_\+\+V4@{I\+P\+A\+D\+D\+R\+\_\+\+T\+Y\+P\+E\+\_\+\+V4}!I\+P address handling@{I\+P address handling}}\index{I\+P address handling@{I\+P address handling}!I\+P\+A\+D\+D\+R\+\_\+\+T\+Y\+P\+E\+\_\+\+V4@{I\+P\+A\+D\+D\+R\+\_\+\+T\+Y\+P\+E\+\_\+\+V4}}}\mbox{\Hypertarget{group__ipaddr_ggaf2142f0dfdcc938e2db16aa745ed585cace47fa82608deeb1c1c7c2c891eb5049}\label{group__ipaddr_ggaf2142f0dfdcc938e2db16aa745ed585cace47fa82608deeb1c1c7c2c891eb5049}} 
+I\+P\+A\+D\+D\+R\+\_\+\+T\+Y\+P\+E\+\_\+\+V4&I\+Pv4 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{I\+P\+A\+D\+D\+R\+\_\+\+T\+Y\+P\+E\+\_\+\+V6@{I\+P\+A\+D\+D\+R\+\_\+\+T\+Y\+P\+E\+\_\+\+V6}!I\+P address handling@{I\+P address handling}}\index{I\+P address handling@{I\+P address handling}!I\+P\+A\+D\+D\+R\+\_\+\+T\+Y\+P\+E\+\_\+\+V6@{I\+P\+A\+D\+D\+R\+\_\+\+T\+Y\+P\+E\+\_\+\+V6}}}\mbox{\Hypertarget{group__ipaddr_ggaf2142f0dfdcc938e2db16aa745ed585caae510fd8ec7fe405b594b57af61f9a02}\label{group__ipaddr_ggaf2142f0dfdcc938e2db16aa745ed585caae510fd8ec7fe405b594b57af61f9a02}} 
+I\+P\+A\+D\+D\+R\+\_\+\+T\+Y\+P\+E\+\_\+\+V6&I\+Pv6 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{I\+P\+A\+D\+D\+R\+\_\+\+T\+Y\+P\+E\+\_\+\+A\+NY@{I\+P\+A\+D\+D\+R\+\_\+\+T\+Y\+P\+E\+\_\+\+A\+NY}!I\+P address handling@{I\+P address handling}}\index{I\+P address handling@{I\+P address handling}!I\+P\+A\+D\+D\+R\+\_\+\+T\+Y\+P\+E\+\_\+\+A\+NY@{I\+P\+A\+D\+D\+R\+\_\+\+T\+Y\+P\+E\+\_\+\+A\+NY}}}\mbox{\Hypertarget{group__ipaddr_ggaf2142f0dfdcc938e2db16aa745ed585cac6b2c99cf920e08efcb55dc40e42944e}\label{group__ipaddr_ggaf2142f0dfdcc938e2db16aa745ed585cac6b2c99cf920e08efcb55dc40e42944e}} 
+I\+P\+A\+D\+D\+R\+\_\+\+T\+Y\+P\+E\+\_\+\+A\+NY&I\+Pv4+\+I\+Pv6 (\char`\"{}dual-\/stack\char`\"{}) \\
+\hline
+
+\end{DoxyEnumFields}

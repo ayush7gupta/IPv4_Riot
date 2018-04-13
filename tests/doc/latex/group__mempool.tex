@@ -1,0 +1,152 @@
+\hypertarget{group__mempool}{}\section{Memory pools}
+\label{group__mempool}\index{Memory pools@{Memory pools}}
+Collaboration diagram for Memory pools\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=268pt]{group__mempool}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group__mempool_ga92fc8c29d0e2654f2a2ecc43b2b7fb13}{L\+W\+I\+P\+\_\+\+M\+E\+M\+P\+O\+O\+L\+\_\+\+P\+R\+O\+T\+O\+T\+Y\+PE}(name)~extern const struct \hyperlink{structmemp__desc}{memp\+\_\+desc} memp\+\_\+ \#\# name
+\item 
+\#define \hyperlink{group__mempool_ga5b1fb3ce7942432d87cc948b1c5ed6cb}{L\+W\+I\+P\+\_\+\+M\+E\+M\+P\+O\+O\+L\+\_\+\+D\+E\+C\+L\+A\+RE}(name,  num,  size,  desc)
+\item 
+\#define \hyperlink{group__mempool_ga60b51c06d276f525b35d8b7abd4dcb41}{L\+W\+I\+P\+\_\+\+M\+E\+M\+P\+O\+O\+L\+\_\+\+I\+N\+IT}(name)~\hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2priv_2memp__priv_8h_a6416303426d05526bed33f241fa6ecd7}{memp\+\_\+init\+\_\+pool}(\&memp\+\_\+ \#\# name)
+\item 
+\#define \hyperlink{group__mempool_ga5e2498f6c17746c1fe7153de5f7f275a}{L\+W\+I\+P\+\_\+\+M\+E\+M\+P\+O\+O\+L\+\_\+\+A\+L\+L\+OC}(name)~\hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2priv_2memp__priv_8h_a348c83ee972f1edf7296a1cdf1d75f22}{memp\+\_\+malloc\+\_\+pool}(\&memp\+\_\+ \#\# name)
+\item 
+\#define \hyperlink{group__mempool_gaa43d114dd702fbd8f1db18474ea93a04}{L\+W\+I\+P\+\_\+\+M\+E\+M\+P\+O\+O\+L\+\_\+\+F\+R\+EE}(name,  x)~\hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2priv_2memp__priv_8h_a62f8c3c907743e34eee3cdac7fa1eaa5}{memp\+\_\+free\+\_\+pool}(\&memp\+\_\+ \#\# name, (x))
+\item 
+\#define \hyperlink{group__mempool_ga92fc8c29d0e2654f2a2ecc43b2b7fb13}{L\+W\+I\+P\+\_\+\+M\+E\+M\+P\+O\+O\+L\+\_\+\+P\+R\+O\+T\+O\+T\+Y\+PE}(name)~extern const struct \hyperlink{structmemp__desc}{memp\+\_\+desc} memp\+\_\+ \#\# name
+\item 
+\#define \hyperlink{group__mempool_ga5b1fb3ce7942432d87cc948b1c5ed6cb}{L\+W\+I\+P\+\_\+\+M\+E\+M\+P\+O\+O\+L\+\_\+\+D\+E\+C\+L\+A\+RE}(name,  num,  size,  desc)
+\item 
+\#define \hyperlink{group__mempool_ga60b51c06d276f525b35d8b7abd4dcb41}{L\+W\+I\+P\+\_\+\+M\+E\+M\+P\+O\+O\+L\+\_\+\+I\+N\+IT}(name)~\hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2priv_2memp__priv_8h_a6416303426d05526bed33f241fa6ecd7}{memp\+\_\+init\+\_\+pool}(\&memp\+\_\+ \#\# name)
+\item 
+\#define \hyperlink{group__mempool_ga5e2498f6c17746c1fe7153de5f7f275a}{L\+W\+I\+P\+\_\+\+M\+E\+M\+P\+O\+O\+L\+\_\+\+A\+L\+L\+OC}(name)~\hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2priv_2memp__priv_8h_a348c83ee972f1edf7296a1cdf1d75f22}{memp\+\_\+malloc\+\_\+pool}(\&memp\+\_\+ \#\# name)
+\item 
+\#define \hyperlink{group__mempool_gaa43d114dd702fbd8f1db18474ea93a04}{L\+W\+I\+P\+\_\+\+M\+E\+M\+P\+O\+O\+L\+\_\+\+F\+R\+EE}(name,  x)~\hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2priv_2memp__priv_8h_a62f8c3c907743e34eee3cdac7fa1eaa5}{memp\+\_\+free\+\_\+pool}(\&memp\+\_\+ \#\# name, (x))
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Custom memory pools 
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{group__mempool_ga5e2498f6c17746c1fe7153de5f7f275a}\label{group__mempool_ga5e2498f6c17746c1fe7153de5f7f275a}} 
+\index{Memory pools@{Memory pools}!L\+W\+I\+P\+\_\+\+M\+E\+M\+P\+O\+O\+L\+\_\+\+A\+L\+L\+OC@{L\+W\+I\+P\+\_\+\+M\+E\+M\+P\+O\+O\+L\+\_\+\+A\+L\+L\+OC}}
+\index{L\+W\+I\+P\+\_\+\+M\+E\+M\+P\+O\+O\+L\+\_\+\+A\+L\+L\+OC@{L\+W\+I\+P\+\_\+\+M\+E\+M\+P\+O\+O\+L\+\_\+\+A\+L\+L\+OC}!Memory pools@{Memory pools}}
+\subsubsection{\texorpdfstring{L\+W\+I\+P\+\_\+\+M\+E\+M\+P\+O\+O\+L\+\_\+\+A\+L\+L\+OC}{LWIP\_MEMPOOL\_ALLOC}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \#define L\+W\+I\+P\+\_\+\+M\+E\+M\+P\+O\+O\+L\+\_\+\+A\+L\+L\+OC(\begin{DoxyParamCaption}\item[{}]{name }\end{DoxyParamCaption})~\hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2priv_2memp__priv_8h_a348c83ee972f1edf7296a1cdf1d75f22}{memp\+\_\+malloc\+\_\+pool}(\&memp\+\_\+ \#\# name)}
+
+Allocate from a private memory pool \mbox{\Hypertarget{group__mempool_ga5e2498f6c17746c1fe7153de5f7f275a}\label{group__mempool_ga5e2498f6c17746c1fe7153de5f7f275a}} 
+\index{Memory pools@{Memory pools}!L\+W\+I\+P\+\_\+\+M\+E\+M\+P\+O\+O\+L\+\_\+\+A\+L\+L\+OC@{L\+W\+I\+P\+\_\+\+M\+E\+M\+P\+O\+O\+L\+\_\+\+A\+L\+L\+OC}}
+\index{L\+W\+I\+P\+\_\+\+M\+E\+M\+P\+O\+O\+L\+\_\+\+A\+L\+L\+OC@{L\+W\+I\+P\+\_\+\+M\+E\+M\+P\+O\+O\+L\+\_\+\+A\+L\+L\+OC}!Memory pools@{Memory pools}}
+\subsubsection{\texorpdfstring{L\+W\+I\+P\+\_\+\+M\+E\+M\+P\+O\+O\+L\+\_\+\+A\+L\+L\+OC}{LWIP\_MEMPOOL\_ALLOC}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \#define L\+W\+I\+P\+\_\+\+M\+E\+M\+P\+O\+O\+L\+\_\+\+A\+L\+L\+OC(\begin{DoxyParamCaption}\item[{}]{name }\end{DoxyParamCaption})~\hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2priv_2memp__priv_8h_a348c83ee972f1edf7296a1cdf1d75f22}{memp\+\_\+malloc\+\_\+pool}(\&memp\+\_\+ \#\# name)}
+
+Allocate from a private memory pool \mbox{\Hypertarget{group__mempool_ga5b1fb3ce7942432d87cc948b1c5ed6cb}\label{group__mempool_ga5b1fb3ce7942432d87cc948b1c5ed6cb}} 
+\index{Memory pools@{Memory pools}!L\+W\+I\+P\+\_\+\+M\+E\+M\+P\+O\+O\+L\+\_\+\+D\+E\+C\+L\+A\+RE@{L\+W\+I\+P\+\_\+\+M\+E\+M\+P\+O\+O\+L\+\_\+\+D\+E\+C\+L\+A\+RE}}
+\index{L\+W\+I\+P\+\_\+\+M\+E\+M\+P\+O\+O\+L\+\_\+\+D\+E\+C\+L\+A\+RE@{L\+W\+I\+P\+\_\+\+M\+E\+M\+P\+O\+O\+L\+\_\+\+D\+E\+C\+L\+A\+RE}!Memory pools@{Memory pools}}
+\subsubsection{\texorpdfstring{L\+W\+I\+P\+\_\+\+M\+E\+M\+P\+O\+O\+L\+\_\+\+D\+E\+C\+L\+A\+RE}{LWIP\_MEMPOOL\_DECLARE}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \#define L\+W\+I\+P\+\_\+\+M\+E\+M\+P\+O\+O\+L\+\_\+\+D\+E\+C\+L\+A\+RE(\begin{DoxyParamCaption}\item[{}]{name,  }\item[{}]{num,  }\item[{}]{size,  }\item[{}]{desc }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\hyperlink{group__compiler__abstraction_ga651bb349041669fe717b19f127ef16c0}{LWIP\_DECLARE\_MEMORY\_ALIGNED}(memp\_memory\_ ## name ## \_base, ((num) * (
+      \hyperlink{native_2lwip_2src_2include_2lwip_2priv_2memp__priv_8h_a7f8c378e0581aa2dc491cff52ae4fce2}{MEMP\_SIZE} + \hyperlink{native_2lwip_2src_2include_2lwip_2priv_2memp__priv_8h_a12e0cfbac9c8263e5a1fb319b92338e7}{MEMP\_ALIGN\_SIZE}(size)))); \hyperlink{native_2lwip_2src_2include_2lwip_2priv_2memp__priv_8h_a9373cb7cc6e658a60cec6ca57173a72d}{\(\backslash\)}
+\hyperlink{native_2lwip_2src_2include_2lwip_2priv_2memp__priv_8h_a9373cb7cc6e658a60cec6ca57173a72d}{    \(\backslash\)}
+\hyperlink{native_2lwip_2src_2include_2lwip_2priv_2memp__priv_8h_a9373cb7cc6e658a60cec6ca57173a72d}{  LWIP\_MEMPOOL\_DECLARE\_STATS\_INSTANCE}(memp\_stats\_ ## name) \(\backslash\)
+    \(\backslash\)
+  static \textcolor{keyword}{struct }\hyperlink{structmemp}{memp} *memp\_tab\_ ## name; \(\backslash\)
+    \(\backslash\)
+  const \textcolor{keyword}{struct }\hyperlink{structmemp__desc}{memp\_desc} memp\_ ## name = \{ \(\backslash\)
+    DECLARE\_LWIP\_MEMPOOL\_DESC(desc) \(\backslash\)
+    LWIP\_MEMPOOL\_DECLARE\_STATS\_REFERENCE(memp\_stats\_ ## name) \(\backslash\)
+    LWIP\_MEM\_ALIGN\_SIZE(\hyperlink{structmemp__desc_a1688d2bdd5a7b77700e1fa627f025ba3}{size}), \(\backslash\)
+    (\hyperlink{structmemp__desc_a2c32db78e565b8812ca0e20fe929a8a7}{num}), \(\backslash\)
+    memp\_memory\_ ## name ## \_base, \(\backslash\)
+    &memp\_tab\_ ## name \(\backslash\)
+  \};
+\end{DoxyCode}
+Declare a private memory pool Private mempools example\+: .h\+: only when pool is used in multiple .c files\+: \hyperlink{group__mempool_ga92fc8c29d0e2654f2a2ecc43b2b7fb13}{L\+W\+I\+P\+\_\+\+M\+E\+M\+P\+O\+O\+L\+\_\+\+P\+R\+O\+T\+O\+T\+Y\+P\+E(my\+\_\+private\+\_\+pool)}; .c\+:
+\begin{DoxyItemize}
+\item in global variables section\+: L\+W\+I\+P\+\_\+\+M\+E\+M\+P\+O\+O\+L\+\_\+\+D\+E\+C\+L\+A\+RE(my\+\_\+private\+\_\+pool, 10, sizeof(foo), \char`\"{}\+Some description\char`\"{})
+\item call O\+N\+CE before using pool (e.\+g. in some init() function)\+: \hyperlink{group__mempool_ga60b51c06d276f525b35d8b7abd4dcb41}{L\+W\+I\+P\+\_\+\+M\+E\+M\+P\+O\+O\+L\+\_\+\+I\+N\+I\+T(my\+\_\+private\+\_\+pool)};
+\item allocate\+: void$\ast$ my\+\_\+new\+\_\+mem = \hyperlink{group__mempool_ga5e2498f6c17746c1fe7153de5f7f275a}{L\+W\+I\+P\+\_\+\+M\+E\+M\+P\+O\+O\+L\+\_\+\+A\+L\+L\+O\+C(my\+\_\+private\+\_\+pool)};
+\item free\+: \hyperlink{group__mempool_gaa43d114dd702fbd8f1db18474ea93a04}{L\+W\+I\+P\+\_\+\+M\+E\+M\+P\+O\+O\+L\+\_\+\+F\+R\+E\+E(my\+\_\+private\+\_\+pool, my\+\_\+new\+\_\+mem)};
+\end{DoxyItemize}
+
+To relocate a pool, declare it as extern in cc.\+h. Example for G\+CC\+: extern u8\+\_\+t {\bfseries attribute}((section(\char`\"{}.\+onchip\+\_\+mem\char`\"{}))) memp\+\_\+memory\+\_\+my\+\_\+private\+\_\+pool\mbox{[}\mbox{]}; \mbox{\Hypertarget{group__mempool_ga5b1fb3ce7942432d87cc948b1c5ed6cb}\label{group__mempool_ga5b1fb3ce7942432d87cc948b1c5ed6cb}} 
+\index{Memory pools@{Memory pools}!L\+W\+I\+P\+\_\+\+M\+E\+M\+P\+O\+O\+L\+\_\+\+D\+E\+C\+L\+A\+RE@{L\+W\+I\+P\+\_\+\+M\+E\+M\+P\+O\+O\+L\+\_\+\+D\+E\+C\+L\+A\+RE}}
+\index{L\+W\+I\+P\+\_\+\+M\+E\+M\+P\+O\+O\+L\+\_\+\+D\+E\+C\+L\+A\+RE@{L\+W\+I\+P\+\_\+\+M\+E\+M\+P\+O\+O\+L\+\_\+\+D\+E\+C\+L\+A\+RE}!Memory pools@{Memory pools}}
+\subsubsection{\texorpdfstring{L\+W\+I\+P\+\_\+\+M\+E\+M\+P\+O\+O\+L\+\_\+\+D\+E\+C\+L\+A\+RE}{LWIP\_MEMPOOL\_DECLARE}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \#define L\+W\+I\+P\+\_\+\+M\+E\+M\+P\+O\+O\+L\+\_\+\+D\+E\+C\+L\+A\+RE(\begin{DoxyParamCaption}\item[{}]{name,  }\item[{}]{num,  }\item[{}]{size,  }\item[{}]{desc }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\hyperlink{group__compiler__abstraction_ga651bb349041669fe717b19f127ef16c0}{LWIP\_DECLARE\_MEMORY\_ALIGNED}(memp\_memory\_ ## name ## \_base, ((
+      \hyperlink{structmemp__desc_a2c32db78e565b8812ca0e20fe929a8a7}{num}) * (\hyperlink{native_2lwip_2src_2include_2lwip_2priv_2memp__priv_8h_a7f8c378e0581aa2dc491cff52ae4fce2}{MEMP\_SIZE} + \hyperlink{native_2lwip_2src_2include_2lwip_2priv_2memp__priv_8h_a12e0cfbac9c8263e5a1fb319b92338e7}{MEMP\_ALIGN\_SIZE}(\hyperlink{structmemp__desc_a1688d2bdd5a7b77700e1fa627f025ba3}{size})))); \hyperlink{native_2lwip_2src_2include_2lwip_2priv_2memp__priv_8h_a9373cb7cc6e658a60cec6ca57173a72d}{\(\backslash\)}
+\hyperlink{native_2lwip_2src_2include_2lwip_2priv_2memp__priv_8h_a9373cb7cc6e658a60cec6ca57173a72d}{    \(\backslash\)}
+\hyperlink{native_2lwip_2src_2include_2lwip_2priv_2memp__priv_8h_a9373cb7cc6e658a60cec6ca57173a72d}{  LWIP\_MEMPOOL\_DECLARE\_STATS\_INSTANCE}(memp\_stats\_ ## name) \(\backslash\)
+    \(\backslash\)
+  static \textcolor{keyword}{struct }\hyperlink{structmemp}{memp} *memp\_tab\_ ## name; \(\backslash\)
+    \(\backslash\)
+  const \textcolor{keyword}{struct }\hyperlink{structmemp__desc}{memp\_desc} memp\_ ## name = \{ \(\backslash\)
+    DECLARE\_LWIP\_MEMPOOL\_DESC(desc) \(\backslash\)
+    LWIP\_MEMPOOL\_DECLARE\_STATS\_REFERENCE(memp\_stats\_ ## name) \(\backslash\)
+    LWIP\_MEM\_ALIGN\_SIZE(\hyperlink{structmemp__desc_a1688d2bdd5a7b77700e1fa627f025ba3}{size}), \(\backslash\)
+    (\hyperlink{structmemp__desc_a2c32db78e565b8812ca0e20fe929a8a7}{num}), \(\backslash\)
+    memp\_memory\_ ## name ## \_base, \(\backslash\)
+    &memp\_tab\_ ## name \(\backslash\)
+  \};
+\end{DoxyCode}
+Declare a private memory pool Private mempools example\+: .h\+: only when pool is used in multiple .c files\+: \hyperlink{group__mempool_ga92fc8c29d0e2654f2a2ecc43b2b7fb13}{L\+W\+I\+P\+\_\+\+M\+E\+M\+P\+O\+O\+L\+\_\+\+P\+R\+O\+T\+O\+T\+Y\+P\+E(my\+\_\+private\+\_\+pool)}; .c\+:
+\begin{DoxyItemize}
+\item in global variables section\+: L\+W\+I\+P\+\_\+\+M\+E\+M\+P\+O\+O\+L\+\_\+\+D\+E\+C\+L\+A\+RE(my\+\_\+private\+\_\+pool, 10, sizeof(foo), \char`\"{}\+Some description\char`\"{})
+\item call O\+N\+CE before using pool (e.\+g. in some init() function)\+: \hyperlink{group__mempool_ga60b51c06d276f525b35d8b7abd4dcb41}{L\+W\+I\+P\+\_\+\+M\+E\+M\+P\+O\+O\+L\+\_\+\+I\+N\+I\+T(my\+\_\+private\+\_\+pool)};
+\item allocate\+: void$\ast$ my\+\_\+new\+\_\+mem = \hyperlink{group__mempool_ga5e2498f6c17746c1fe7153de5f7f275a}{L\+W\+I\+P\+\_\+\+M\+E\+M\+P\+O\+O\+L\+\_\+\+A\+L\+L\+O\+C(my\+\_\+private\+\_\+pool)};
+\item free\+: \hyperlink{group__mempool_gaa43d114dd702fbd8f1db18474ea93a04}{L\+W\+I\+P\+\_\+\+M\+E\+M\+P\+O\+O\+L\+\_\+\+F\+R\+E\+E(my\+\_\+private\+\_\+pool, my\+\_\+new\+\_\+mem)};
+\end{DoxyItemize}
+
+To relocate a pool, declare it as extern in cc.\+h. Example for G\+CC\+: extern u8\+\_\+t {\bfseries attribute}((section(\char`\"{}.\+onchip\+\_\+mem\char`\"{}))) memp\+\_\+memory\+\_\+my\+\_\+private\+\_\+pool\mbox{[}\mbox{]}; \mbox{\Hypertarget{group__mempool_gaa43d114dd702fbd8f1db18474ea93a04}\label{group__mempool_gaa43d114dd702fbd8f1db18474ea93a04}} 
+\index{Memory pools@{Memory pools}!L\+W\+I\+P\+\_\+\+M\+E\+M\+P\+O\+O\+L\+\_\+\+F\+R\+EE@{L\+W\+I\+P\+\_\+\+M\+E\+M\+P\+O\+O\+L\+\_\+\+F\+R\+EE}}
+\index{L\+W\+I\+P\+\_\+\+M\+E\+M\+P\+O\+O\+L\+\_\+\+F\+R\+EE@{L\+W\+I\+P\+\_\+\+M\+E\+M\+P\+O\+O\+L\+\_\+\+F\+R\+EE}!Memory pools@{Memory pools}}
+\subsubsection{\texorpdfstring{L\+W\+I\+P\+\_\+\+M\+E\+M\+P\+O\+O\+L\+\_\+\+F\+R\+EE}{LWIP\_MEMPOOL\_FREE}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \#define L\+W\+I\+P\+\_\+\+M\+E\+M\+P\+O\+O\+L\+\_\+\+F\+R\+EE(\begin{DoxyParamCaption}\item[{}]{name,  }\item[{}]{x }\end{DoxyParamCaption})~\hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2priv_2memp__priv_8h_a62f8c3c907743e34eee3cdac7fa1eaa5}{memp\+\_\+free\+\_\+pool}(\&memp\+\_\+ \#\# name, (x))}
+
+Free element from a private memory pool \mbox{\Hypertarget{group__mempool_gaa43d114dd702fbd8f1db18474ea93a04}\label{group__mempool_gaa43d114dd702fbd8f1db18474ea93a04}} 
+\index{Memory pools@{Memory pools}!L\+W\+I\+P\+\_\+\+M\+E\+M\+P\+O\+O\+L\+\_\+\+F\+R\+EE@{L\+W\+I\+P\+\_\+\+M\+E\+M\+P\+O\+O\+L\+\_\+\+F\+R\+EE}}
+\index{L\+W\+I\+P\+\_\+\+M\+E\+M\+P\+O\+O\+L\+\_\+\+F\+R\+EE@{L\+W\+I\+P\+\_\+\+M\+E\+M\+P\+O\+O\+L\+\_\+\+F\+R\+EE}!Memory pools@{Memory pools}}
+\subsubsection{\texorpdfstring{L\+W\+I\+P\+\_\+\+M\+E\+M\+P\+O\+O\+L\+\_\+\+F\+R\+EE}{LWIP\_MEMPOOL\_FREE}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \#define L\+W\+I\+P\+\_\+\+M\+E\+M\+P\+O\+O\+L\+\_\+\+F\+R\+EE(\begin{DoxyParamCaption}\item[{}]{name,  }\item[{}]{x }\end{DoxyParamCaption})~\hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2priv_2memp__priv_8h_a62f8c3c907743e34eee3cdac7fa1eaa5}{memp\+\_\+free\+\_\+pool}(\&memp\+\_\+ \#\# name, (x))}
+
+Free element from a private memory pool \mbox{\Hypertarget{group__mempool_ga60b51c06d276f525b35d8b7abd4dcb41}\label{group__mempool_ga60b51c06d276f525b35d8b7abd4dcb41}} 
+\index{Memory pools@{Memory pools}!L\+W\+I\+P\+\_\+\+M\+E\+M\+P\+O\+O\+L\+\_\+\+I\+N\+IT@{L\+W\+I\+P\+\_\+\+M\+E\+M\+P\+O\+O\+L\+\_\+\+I\+N\+IT}}
+\index{L\+W\+I\+P\+\_\+\+M\+E\+M\+P\+O\+O\+L\+\_\+\+I\+N\+IT@{L\+W\+I\+P\+\_\+\+M\+E\+M\+P\+O\+O\+L\+\_\+\+I\+N\+IT}!Memory pools@{Memory pools}}
+\subsubsection{\texorpdfstring{L\+W\+I\+P\+\_\+\+M\+E\+M\+P\+O\+O\+L\+\_\+\+I\+N\+IT}{LWIP\_MEMPOOL\_INIT}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \#define L\+W\+I\+P\+\_\+\+M\+E\+M\+P\+O\+O\+L\+\_\+\+I\+N\+IT(\begin{DoxyParamCaption}\item[{}]{name }\end{DoxyParamCaption})~\hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2priv_2memp__priv_8h_a6416303426d05526bed33f241fa6ecd7}{memp\+\_\+init\+\_\+pool}(\&memp\+\_\+ \#\# name)}
+
+Initialize a private memory pool \mbox{\Hypertarget{group__mempool_ga60b51c06d276f525b35d8b7abd4dcb41}\label{group__mempool_ga60b51c06d276f525b35d8b7abd4dcb41}} 
+\index{Memory pools@{Memory pools}!L\+W\+I\+P\+\_\+\+M\+E\+M\+P\+O\+O\+L\+\_\+\+I\+N\+IT@{L\+W\+I\+P\+\_\+\+M\+E\+M\+P\+O\+O\+L\+\_\+\+I\+N\+IT}}
+\index{L\+W\+I\+P\+\_\+\+M\+E\+M\+P\+O\+O\+L\+\_\+\+I\+N\+IT@{L\+W\+I\+P\+\_\+\+M\+E\+M\+P\+O\+O\+L\+\_\+\+I\+N\+IT}!Memory pools@{Memory pools}}
+\subsubsection{\texorpdfstring{L\+W\+I\+P\+\_\+\+M\+E\+M\+P\+O\+O\+L\+\_\+\+I\+N\+IT}{LWIP\_MEMPOOL\_INIT}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \#define L\+W\+I\+P\+\_\+\+M\+E\+M\+P\+O\+O\+L\+\_\+\+I\+N\+IT(\begin{DoxyParamCaption}\item[{}]{name }\end{DoxyParamCaption})~\hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2priv_2memp__priv_8h_a6416303426d05526bed33f241fa6ecd7}{memp\+\_\+init\+\_\+pool}(\&memp\+\_\+ \#\# name)}
+
+Initialize a private memory pool \mbox{\Hypertarget{group__mempool_ga92fc8c29d0e2654f2a2ecc43b2b7fb13}\label{group__mempool_ga92fc8c29d0e2654f2a2ecc43b2b7fb13}} 
+\index{Memory pools@{Memory pools}!L\+W\+I\+P\+\_\+\+M\+E\+M\+P\+O\+O\+L\+\_\+\+P\+R\+O\+T\+O\+T\+Y\+PE@{L\+W\+I\+P\+\_\+\+M\+E\+M\+P\+O\+O\+L\+\_\+\+P\+R\+O\+T\+O\+T\+Y\+PE}}
+\index{L\+W\+I\+P\+\_\+\+M\+E\+M\+P\+O\+O\+L\+\_\+\+P\+R\+O\+T\+O\+T\+Y\+PE@{L\+W\+I\+P\+\_\+\+M\+E\+M\+P\+O\+O\+L\+\_\+\+P\+R\+O\+T\+O\+T\+Y\+PE}!Memory pools@{Memory pools}}
+\subsubsection{\texorpdfstring{L\+W\+I\+P\+\_\+\+M\+E\+M\+P\+O\+O\+L\+\_\+\+P\+R\+O\+T\+O\+T\+Y\+PE}{LWIP\_MEMPOOL\_PROTOTYPE}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \#define L\+W\+I\+P\+\_\+\+M\+E\+M\+P\+O\+O\+L\+\_\+\+P\+R\+O\+T\+O\+T\+Y\+PE(\begin{DoxyParamCaption}\item[{}]{name }\end{DoxyParamCaption})~extern const struct \hyperlink{structmemp__desc}{memp\+\_\+desc} memp\+\_\+ \#\# name}
+
+Declare prototype for private memory pool if it is used in multiple files \mbox{\Hypertarget{group__mempool_ga92fc8c29d0e2654f2a2ecc43b2b7fb13}\label{group__mempool_ga92fc8c29d0e2654f2a2ecc43b2b7fb13}} 
+\index{Memory pools@{Memory pools}!L\+W\+I\+P\+\_\+\+M\+E\+M\+P\+O\+O\+L\+\_\+\+P\+R\+O\+T\+O\+T\+Y\+PE@{L\+W\+I\+P\+\_\+\+M\+E\+M\+P\+O\+O\+L\+\_\+\+P\+R\+O\+T\+O\+T\+Y\+PE}}
+\index{L\+W\+I\+P\+\_\+\+M\+E\+M\+P\+O\+O\+L\+\_\+\+P\+R\+O\+T\+O\+T\+Y\+PE@{L\+W\+I\+P\+\_\+\+M\+E\+M\+P\+O\+O\+L\+\_\+\+P\+R\+O\+T\+O\+T\+Y\+PE}!Memory pools@{Memory pools}}
+\subsubsection{\texorpdfstring{L\+W\+I\+P\+\_\+\+M\+E\+M\+P\+O\+O\+L\+\_\+\+P\+R\+O\+T\+O\+T\+Y\+PE}{LWIP\_MEMPOOL\_PROTOTYPE}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \#define L\+W\+I\+P\+\_\+\+M\+E\+M\+P\+O\+O\+L\+\_\+\+P\+R\+O\+T\+O\+T\+Y\+PE(\begin{DoxyParamCaption}\item[{}]{name }\end{DoxyParamCaption})~extern const struct \hyperlink{structmemp__desc}{memp\+\_\+desc} memp\+\_\+ \#\# name}
+
+Declare prototype for private memory pool if it is used in multiple files 

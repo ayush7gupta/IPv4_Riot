@@ -1,0 +1,69 @@
+\hypertarget{mpu__stack__guard_2main_8c}{}\section{/home/ayush/\+R\+I\+O\+T/tests/mpu\+\_\+stack\+\_\+guard/main.c File Reference}
+\label{mpu__stack__guard_2main_8c}\index{/home/ayush/\+R\+I\+O\+T/tests/mpu\+\_\+stack\+\_\+guard/main.\+c@{/home/ayush/\+R\+I\+O\+T/tests/mpu\+\_\+stack\+\_\+guard/main.\+c}}
+
+
+Test application for the mpu\+\_\+stack\+\_\+guard pseudo-\/module.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}cpu.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}thread.\+h\char`\"{}}\newline
+Include dependency graph for main.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=256pt]{mpu__stack__guard_2main_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{mpu__stack__guard_2main_8c_ae09915f592311e3a76ee2e935e6d6649}{C\+A\+N\+A\+R\+Y\+\_\+\+V\+A\+L\+UE}~0xdeadbeef
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{mpu__stack__guard_2main_8c_a840291bc02cba5474a4cb46a9b9566fe}{main} (void)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Test application for the mpu\+\_\+stack\+\_\+guard pseudo-\/module. 
+
+\begin{DoxyAuthor}{Author}
+Ian Martin \href{mailto:ian@locicontrols.com}{\tt ian@locicontrols.\+com} 
+\end{DoxyAuthor}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{mpu__stack__guard_2main_8c_ae09915f592311e3a76ee2e935e6d6649}\label{mpu__stack__guard_2main_8c_ae09915f592311e3a76ee2e935e6d6649}} 
+\index{mpu\+\_\+stack\+\_\+guard/main.\+c@{mpu\+\_\+stack\+\_\+guard/main.\+c}!C\+A\+N\+A\+R\+Y\+\_\+\+V\+A\+L\+UE@{C\+A\+N\+A\+R\+Y\+\_\+\+V\+A\+L\+UE}}
+\index{C\+A\+N\+A\+R\+Y\+\_\+\+V\+A\+L\+UE@{C\+A\+N\+A\+R\+Y\+\_\+\+V\+A\+L\+UE}!mpu\+\_\+stack\+\_\+guard/main.\+c@{mpu\+\_\+stack\+\_\+guard/main.\+c}}
+\subsubsection{\texorpdfstring{C\+A\+N\+A\+R\+Y\+\_\+\+V\+A\+L\+UE}{CANARY\_VALUE}}
+{\footnotesize\ttfamily \#define C\+A\+N\+A\+R\+Y\+\_\+\+V\+A\+L\+UE~0xdeadbeef}
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{mpu__stack__guard_2main_8c_a840291bc02cba5474a4cb46a9b9566fe}\label{mpu__stack__guard_2main_8c_a840291bc02cba5474a4cb46a9b9566fe}} 
+\index{mpu\+\_\+stack\+\_\+guard/main.\+c@{mpu\+\_\+stack\+\_\+guard/main.\+c}!main@{main}}
+\index{main@{main}!mpu\+\_\+stack\+\_\+guard/main.\+c@{mpu\+\_\+stack\+\_\+guard/main.\+c}}
+\subsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{mpu__stack__guard_2main_8c_a573eb580f5598bf0fbb9df6fb722cff6}\label{mpu__stack__guard_2main_8c_a573eb580f5598bf0fbb9df6fb722cff6}} 
+\index{mpu\+\_\+stack\+\_\+guard/main.\+c@{mpu\+\_\+stack\+\_\+guard/main.\+c}!canary@{canary}}
+\index{canary@{canary}!mpu\+\_\+stack\+\_\+guard/main.\+c@{mpu\+\_\+stack\+\_\+guard/main.\+c}}
+\subsubsection{\texorpdfstring{canary}{canary}}
+{\footnotesize\ttfamily unsigned int canary}
+
+\mbox{\Hypertarget{mpu__stack__guard_2main_8c_a6459a8fccfe19ec42de696e9e76bd731}\label{mpu__stack__guard_2main_8c_a6459a8fccfe19ec42de696e9e76bd731}} 
+\index{mpu\+\_\+stack\+\_\+guard/main.\+c@{mpu\+\_\+stack\+\_\+guard/main.\+c}!stack@{stack}}
+\index{stack@{stack}!mpu\+\_\+stack\+\_\+guard/main.\+c@{mpu\+\_\+stack\+\_\+guard/main.\+c}}
+\subsubsection{\texorpdfstring{stack}{stack}}
+{\footnotesize\ttfamily char stack\mbox{[}T\+H\+R\+E\+A\+D\+\_\+\+S\+T\+A\+C\+K\+S\+I\+Z\+E\+\_\+\+M\+A\+IN\mbox{]}}
+

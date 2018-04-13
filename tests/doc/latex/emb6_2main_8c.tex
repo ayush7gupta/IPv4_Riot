@@ -1,0 +1,79 @@
+\hypertarget{emb6_2main_8c}{}\section{/home/ayush/\+R\+I\+O\+T/tests/emb6/main.c File Reference}
+\label{emb6_2main_8c}\index{/home/ayush/\+R\+I\+O\+T/tests/emb6/main.\+c@{/home/ayush/\+R\+I\+O\+T/tests/emb6/main.\+c}}
+
+
+Test for raw I\+Pv6 connections.  
+
+
+{\ttfamily \#include $<$errno.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}at86rf2xx.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}at86rf2xx\+\_\+params.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}common.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}emb6.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}emb6/netdev.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}uip-\/ds6.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}net/ipv6/addr.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}shell.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}thread.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}xtimer.\+h\char`\"{}}\newline
+Include dependency graph for main.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{emb6_2main_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{emb6_2main_8c_a9769aab6f6843c5a703ba4f663f8d9ec}{E\+M\+B6\+\_\+\+S\+T\+A\+C\+K\+S\+I\+ZE}~(T\+H\+R\+E\+A\+D\+\_\+\+S\+T\+A\+C\+K\+S\+I\+Z\+E\+\_\+\+D\+E\+F\+A\+U\+LT)
+\item 
+\#define \hyperlink{emb6_2main_8c_af4eae7af4c94c13f83def2802ecaf2d2}{E\+M\+B6\+\_\+\+P\+R\+IO}~(T\+H\+R\+E\+A\+D\+\_\+\+P\+R\+I\+O\+R\+I\+T\+Y\+\_\+\+M\+A\+IN -\/ 3)
+\item 
+\#define \hyperlink{emb6_2main_8c_ae143c9550e437a88fad0566ab40af55c}{E\+M\+B6\+\_\+\+D\+E\+L\+AY}~(500)
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{emb6_2main_8c_a840291bc02cba5474a4cb46a9b9566fe}{main} (void)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Test for raw I\+Pv6 connections. 
+
+\begin{DoxyAuthor}{Author}
+Martine Lenders \href{mailto:mlenders@inf.fu-berlin.de}{\tt mlenders@inf.\+fu-\/berlin.\+de}
+\end{DoxyAuthor}
+This test application tests the emb6\+\_\+conn\+\_\+ip module. 
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{emb6_2main_8c_ae143c9550e437a88fad0566ab40af55c}\label{emb6_2main_8c_ae143c9550e437a88fad0566ab40af55c}} 
+\index{emb6/main.\+c@{emb6/main.\+c}!E\+M\+B6\+\_\+\+D\+E\+L\+AY@{E\+M\+B6\+\_\+\+D\+E\+L\+AY}}
+\index{E\+M\+B6\+\_\+\+D\+E\+L\+AY@{E\+M\+B6\+\_\+\+D\+E\+L\+AY}!emb6/main.\+c@{emb6/main.\+c}}
+\subsubsection{\texorpdfstring{E\+M\+B6\+\_\+\+D\+E\+L\+AY}{EMB6\_DELAY}}
+{\footnotesize\ttfamily \#define E\+M\+B6\+\_\+\+D\+E\+L\+AY~(500)}
+
+\mbox{\Hypertarget{emb6_2main_8c_af4eae7af4c94c13f83def2802ecaf2d2}\label{emb6_2main_8c_af4eae7af4c94c13f83def2802ecaf2d2}} 
+\index{emb6/main.\+c@{emb6/main.\+c}!E\+M\+B6\+\_\+\+P\+R\+IO@{E\+M\+B6\+\_\+\+P\+R\+IO}}
+\index{E\+M\+B6\+\_\+\+P\+R\+IO@{E\+M\+B6\+\_\+\+P\+R\+IO}!emb6/main.\+c@{emb6/main.\+c}}
+\subsubsection{\texorpdfstring{E\+M\+B6\+\_\+\+P\+R\+IO}{EMB6\_PRIO}}
+{\footnotesize\ttfamily \#define E\+M\+B6\+\_\+\+P\+R\+IO~(T\+H\+R\+E\+A\+D\+\_\+\+P\+R\+I\+O\+R\+I\+T\+Y\+\_\+\+M\+A\+IN -\/ 3)}
+
+\mbox{\Hypertarget{emb6_2main_8c_a9769aab6f6843c5a703ba4f663f8d9ec}\label{emb6_2main_8c_a9769aab6f6843c5a703ba4f663f8d9ec}} 
+\index{emb6/main.\+c@{emb6/main.\+c}!E\+M\+B6\+\_\+\+S\+T\+A\+C\+K\+S\+I\+ZE@{E\+M\+B6\+\_\+\+S\+T\+A\+C\+K\+S\+I\+ZE}}
+\index{E\+M\+B6\+\_\+\+S\+T\+A\+C\+K\+S\+I\+ZE@{E\+M\+B6\+\_\+\+S\+T\+A\+C\+K\+S\+I\+ZE}!emb6/main.\+c@{emb6/main.\+c}}
+\subsubsection{\texorpdfstring{E\+M\+B6\+\_\+\+S\+T\+A\+C\+K\+S\+I\+ZE}{EMB6\_STACKSIZE}}
+{\footnotesize\ttfamily \#define E\+M\+B6\+\_\+\+S\+T\+A\+C\+K\+S\+I\+ZE~(T\+H\+R\+E\+A\+D\+\_\+\+S\+T\+A\+C\+K\+S\+I\+Z\+E\+\_\+\+D\+E\+F\+A\+U\+LT)}
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{emb6_2main_8c_a840291bc02cba5474a4cb46a9b9566fe}\label{emb6_2main_8c_a840291bc02cba5474a4cb46a9b9566fe}} 
+\index{emb6/main.\+c@{emb6/main.\+c}!main@{main}}
+\index{main@{main}!emb6/main.\+c@{emb6/main.\+c}}
+\subsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+

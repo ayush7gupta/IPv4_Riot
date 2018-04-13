@@ -1,0 +1,115 @@
+\hypertarget{driver__servo_2main_8c}{}\section{/home/ayush/\+R\+I\+O\+T/tests/driver\+\_\+servo/main.c File Reference}
+\label{driver__servo_2main_8c}\index{/home/ayush/\+R\+I\+O\+T/tests/driver\+\_\+servo/main.\+c@{/home/ayush/\+R\+I\+O\+T/tests/driver\+\_\+servo/main.\+c}}
+
+
+Test for servo driver.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}cpu.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}board.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}xtimer.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}periph/pwm.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}servo.\+h\char`\"{}}\newline
+Include dependency graph for main.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{driver__servo_2main_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{driver__servo_2main_8c_adb08aff46bb7262714b2a36aba398c9d}{D\+EV}~P\+W\+M\+\_\+\+D\+EV(0)
+\item 
+\#define \hyperlink{driver__servo_2main_8c_ace6a11e892466500d47d1f45f042bc53}{C\+H\+A\+N\+N\+EL}~0
+\item 
+\#define \hyperlink{driver__servo_2main_8c_ad8b453f1fd48a79e14e1c58cbb8efad0}{S\+E\+R\+V\+O\+\_\+\+M\+IN}~(1000\+U)
+\item 
+\#define \hyperlink{driver__servo_2main_8c_a458215e61949d9180bc820b5eff66d0b}{S\+E\+R\+V\+O\+\_\+\+M\+AX}~(2000\+U)
+\item 
+\#define \hyperlink{driver__servo_2main_8c_a74ac37caecb8f6fd04decf5536114818}{S\+T\+E\+P\+\_\+\+L\+O\+W\+E\+R\+\_\+\+B\+O\+U\+ND}~(900\+U)
+\item 
+\#define \hyperlink{driver__servo_2main_8c_aebf5c0ff489f7bfdf9352737c5cc4aca}{S\+T\+E\+P\+\_\+\+U\+P\+P\+E\+R\+\_\+\+B\+O\+U\+ND}~(2100\+U)
+\item 
+\#define \hyperlink{driver__servo_2main_8c_a70be2dc5c8bdc85b027ea6118753cca1}{S\+T\+EP}~(10\+U)
+\item 
+\#define \hyperlink{driver__servo_2main_8c_aef72fe86b7c60b1a86920496456edeac}{W\+A\+IT}~(10000\+U)
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{driver__servo_2main_8c_a840291bc02cba5474a4cb46a9b9566fe}{main} (void)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Test for servo driver. 
+
+This test initializes the given servo device and moves it between 1.\+000 -- 2.\+000 ms, roughly -\//+ 90 degrees from the middle position if the connected servo is a standard RC servo.
+
+\begin{DoxyAuthor}{Author}
+Joakim Nohlgård \href{mailto:joakim.nohlgard@eistec.se}{\tt joakim.\+nohlgard@eistec.\+se} 
+\end{DoxyAuthor}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{driver__servo_2main_8c_ace6a11e892466500d47d1f45f042bc53}\label{driver__servo_2main_8c_ace6a11e892466500d47d1f45f042bc53}} 
+\index{driver\+\_\+servo/main.\+c@{driver\+\_\+servo/main.\+c}!C\+H\+A\+N\+N\+EL@{C\+H\+A\+N\+N\+EL}}
+\index{C\+H\+A\+N\+N\+EL@{C\+H\+A\+N\+N\+EL}!driver\+\_\+servo/main.\+c@{driver\+\_\+servo/main.\+c}}
+\subsubsection{\texorpdfstring{C\+H\+A\+N\+N\+EL}{CHANNEL}}
+{\footnotesize\ttfamily \#define C\+H\+A\+N\+N\+EL~0}
+
+\mbox{\Hypertarget{driver__servo_2main_8c_adb08aff46bb7262714b2a36aba398c9d}\label{driver__servo_2main_8c_adb08aff46bb7262714b2a36aba398c9d}} 
+\index{driver\+\_\+servo/main.\+c@{driver\+\_\+servo/main.\+c}!D\+EV@{D\+EV}}
+\index{D\+EV@{D\+EV}!driver\+\_\+servo/main.\+c@{driver\+\_\+servo/main.\+c}}
+\subsubsection{\texorpdfstring{D\+EV}{DEV}}
+{\footnotesize\ttfamily \#define D\+EV~P\+W\+M\+\_\+\+D\+EV(0)}
+
+\mbox{\Hypertarget{driver__servo_2main_8c_a458215e61949d9180bc820b5eff66d0b}\label{driver__servo_2main_8c_a458215e61949d9180bc820b5eff66d0b}} 
+\index{driver\+\_\+servo/main.\+c@{driver\+\_\+servo/main.\+c}!S\+E\+R\+V\+O\+\_\+\+M\+AX@{S\+E\+R\+V\+O\+\_\+\+M\+AX}}
+\index{S\+E\+R\+V\+O\+\_\+\+M\+AX@{S\+E\+R\+V\+O\+\_\+\+M\+AX}!driver\+\_\+servo/main.\+c@{driver\+\_\+servo/main.\+c}}
+\subsubsection{\texorpdfstring{S\+E\+R\+V\+O\+\_\+\+M\+AX}{SERVO\_MAX}}
+{\footnotesize\ttfamily \#define S\+E\+R\+V\+O\+\_\+\+M\+AX~(2000\+U)}
+
+\mbox{\Hypertarget{driver__servo_2main_8c_ad8b453f1fd48a79e14e1c58cbb8efad0}\label{driver__servo_2main_8c_ad8b453f1fd48a79e14e1c58cbb8efad0}} 
+\index{driver\+\_\+servo/main.\+c@{driver\+\_\+servo/main.\+c}!S\+E\+R\+V\+O\+\_\+\+M\+IN@{S\+E\+R\+V\+O\+\_\+\+M\+IN}}
+\index{S\+E\+R\+V\+O\+\_\+\+M\+IN@{S\+E\+R\+V\+O\+\_\+\+M\+IN}!driver\+\_\+servo/main.\+c@{driver\+\_\+servo/main.\+c}}
+\subsubsection{\texorpdfstring{S\+E\+R\+V\+O\+\_\+\+M\+IN}{SERVO\_MIN}}
+{\footnotesize\ttfamily \#define S\+E\+R\+V\+O\+\_\+\+M\+IN~(1000\+U)}
+
+\mbox{\Hypertarget{driver__servo_2main_8c_a70be2dc5c8bdc85b027ea6118753cca1}\label{driver__servo_2main_8c_a70be2dc5c8bdc85b027ea6118753cca1}} 
+\index{driver\+\_\+servo/main.\+c@{driver\+\_\+servo/main.\+c}!S\+T\+EP@{S\+T\+EP}}
+\index{S\+T\+EP@{S\+T\+EP}!driver\+\_\+servo/main.\+c@{driver\+\_\+servo/main.\+c}}
+\subsubsection{\texorpdfstring{S\+T\+EP}{STEP}}
+{\footnotesize\ttfamily \#define S\+T\+EP~(10\+U)}
+
+\mbox{\Hypertarget{driver__servo_2main_8c_a74ac37caecb8f6fd04decf5536114818}\label{driver__servo_2main_8c_a74ac37caecb8f6fd04decf5536114818}} 
+\index{driver\+\_\+servo/main.\+c@{driver\+\_\+servo/main.\+c}!S\+T\+E\+P\+\_\+\+L\+O\+W\+E\+R\+\_\+\+B\+O\+U\+ND@{S\+T\+E\+P\+\_\+\+L\+O\+W\+E\+R\+\_\+\+B\+O\+U\+ND}}
+\index{S\+T\+E\+P\+\_\+\+L\+O\+W\+E\+R\+\_\+\+B\+O\+U\+ND@{S\+T\+E\+P\+\_\+\+L\+O\+W\+E\+R\+\_\+\+B\+O\+U\+ND}!driver\+\_\+servo/main.\+c@{driver\+\_\+servo/main.\+c}}
+\subsubsection{\texorpdfstring{S\+T\+E\+P\+\_\+\+L\+O\+W\+E\+R\+\_\+\+B\+O\+U\+ND}{STEP\_LOWER\_BOUND}}
+{\footnotesize\ttfamily \#define S\+T\+E\+P\+\_\+\+L\+O\+W\+E\+R\+\_\+\+B\+O\+U\+ND~(900\+U)}
+
+\mbox{\Hypertarget{driver__servo_2main_8c_aebf5c0ff489f7bfdf9352737c5cc4aca}\label{driver__servo_2main_8c_aebf5c0ff489f7bfdf9352737c5cc4aca}} 
+\index{driver\+\_\+servo/main.\+c@{driver\+\_\+servo/main.\+c}!S\+T\+E\+P\+\_\+\+U\+P\+P\+E\+R\+\_\+\+B\+O\+U\+ND@{S\+T\+E\+P\+\_\+\+U\+P\+P\+E\+R\+\_\+\+B\+O\+U\+ND}}
+\index{S\+T\+E\+P\+\_\+\+U\+P\+P\+E\+R\+\_\+\+B\+O\+U\+ND@{S\+T\+E\+P\+\_\+\+U\+P\+P\+E\+R\+\_\+\+B\+O\+U\+ND}!driver\+\_\+servo/main.\+c@{driver\+\_\+servo/main.\+c}}
+\subsubsection{\texorpdfstring{S\+T\+E\+P\+\_\+\+U\+P\+P\+E\+R\+\_\+\+B\+O\+U\+ND}{STEP\_UPPER\_BOUND}}
+{\footnotesize\ttfamily \#define S\+T\+E\+P\+\_\+\+U\+P\+P\+E\+R\+\_\+\+B\+O\+U\+ND~(2100\+U)}
+
+\mbox{\Hypertarget{driver__servo_2main_8c_aef72fe86b7c60b1a86920496456edeac}\label{driver__servo_2main_8c_aef72fe86b7c60b1a86920496456edeac}} 
+\index{driver\+\_\+servo/main.\+c@{driver\+\_\+servo/main.\+c}!W\+A\+IT@{W\+A\+IT}}
+\index{W\+A\+IT@{W\+A\+IT}!driver\+\_\+servo/main.\+c@{driver\+\_\+servo/main.\+c}}
+\subsubsection{\texorpdfstring{W\+A\+IT}{WAIT}}
+{\footnotesize\ttfamily \#define W\+A\+IT~(10000\+U)}
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{driver__servo_2main_8c_a840291bc02cba5474a4cb46a9b9566fe}\label{driver__servo_2main_8c_a840291bc02cba5474a4cb46a9b9566fe}} 
+\index{driver\+\_\+servo/main.\+c@{driver\+\_\+servo/main.\+c}!main@{main}}
+\index{main@{main}!driver\+\_\+servo/main.\+c@{driver\+\_\+servo/main.\+c}}
+\subsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+

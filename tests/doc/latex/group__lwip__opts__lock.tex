@@ -1,0 +1,88 @@
+\hypertarget{group__lwip__opts__lock}{}\section{Core locking and M\+PU}
+\label{group__lwip__opts__lock}\index{Core locking and M\+PU@{Core locking and M\+PU}}
+Collaboration diagram for Core locking and M\+PU\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=306pt]{group__lwip__opts__lock}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group__lwip__opts__lock_gae9afcefa5d233372abb9413188dd98c9}{L\+W\+I\+P\+\_\+\+M\+P\+U\+\_\+\+C\+O\+M\+P\+A\+T\+I\+B\+LE}~0
+\item 
+\#define \hyperlink{group__lwip__opts__lock_ga8e46232794349c209e8ed4e9e7e4f011}{L\+W\+I\+P\+\_\+\+T\+C\+P\+I\+P\+\_\+\+C\+O\+R\+E\+\_\+\+L\+O\+C\+K\+I\+NG}~1
+\item 
+\#define \hyperlink{group__lwip__opts__lock_ga351beb1c06affe49e717bc9f76c66acf}{L\+W\+I\+P\+\_\+\+T\+C\+P\+I\+P\+\_\+\+C\+O\+R\+E\+\_\+\+L\+O\+C\+K\+I\+N\+G\+\_\+\+I\+N\+P\+UT}~0
+\item 
+\#define \hyperlink{group__lwip__opts__lock_gae85efb3a5fcf8585c94b3c2669978959}{S\+Y\+S\+\_\+\+L\+I\+G\+H\+T\+W\+E\+I\+G\+H\+T\+\_\+\+P\+R\+OT}~1
+\item 
+\#define \hyperlink{group__lwip__opts__lock_gae9afcefa5d233372abb9413188dd98c9}{L\+W\+I\+P\+\_\+\+M\+P\+U\+\_\+\+C\+O\+M\+P\+A\+T\+I\+B\+LE}~0
+\item 
+\#define \hyperlink{group__lwip__opts__lock_ga8e46232794349c209e8ed4e9e7e4f011}{L\+W\+I\+P\+\_\+\+T\+C\+P\+I\+P\+\_\+\+C\+O\+R\+E\+\_\+\+L\+O\+C\+K\+I\+NG}~1
+\item 
+\#define \hyperlink{group__lwip__opts__lock_ga351beb1c06affe49e717bc9f76c66acf}{L\+W\+I\+P\+\_\+\+T\+C\+P\+I\+P\+\_\+\+C\+O\+R\+E\+\_\+\+L\+O\+C\+K\+I\+N\+G\+\_\+\+I\+N\+P\+UT}~0
+\item 
+\#define \hyperlink{group__lwip__opts__lock_gae85efb3a5fcf8585c94b3c2669978959}{S\+Y\+S\+\_\+\+L\+I\+G\+H\+T\+W\+E\+I\+G\+H\+T\+\_\+\+P\+R\+OT}~1
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{group__lwip__opts__lock_gae9afcefa5d233372abb9413188dd98c9}\label{group__lwip__opts__lock_gae9afcefa5d233372abb9413188dd98c9}} 
+\index{Core locking and M\+PU@{Core locking and M\+PU}!L\+W\+I\+P\+\_\+\+M\+P\+U\+\_\+\+C\+O\+M\+P\+A\+T\+I\+B\+LE@{L\+W\+I\+P\+\_\+\+M\+P\+U\+\_\+\+C\+O\+M\+P\+A\+T\+I\+B\+LE}}
+\index{L\+W\+I\+P\+\_\+\+M\+P\+U\+\_\+\+C\+O\+M\+P\+A\+T\+I\+B\+LE@{L\+W\+I\+P\+\_\+\+M\+P\+U\+\_\+\+C\+O\+M\+P\+A\+T\+I\+B\+LE}!Core locking and M\+PU@{Core locking and M\+PU}}
+\subsubsection{\texorpdfstring{L\+W\+I\+P\+\_\+\+M\+P\+U\+\_\+\+C\+O\+M\+P\+A\+T\+I\+B\+LE}{LWIP\_MPU\_COMPATIBLE}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \#define L\+W\+I\+P\+\_\+\+M\+P\+U\+\_\+\+C\+O\+M\+P\+A\+T\+I\+B\+LE~0}
+
+L\+W\+I\+P\+\_\+\+M\+P\+U\+\_\+\+C\+O\+M\+P\+A\+T\+I\+B\+LE\+: enables special memory management mechanism which makes lwip able to work on M\+PU (Memory Protection Unit) system by not passing stack-\/pointers to other threads (this decreases performance as memory is allocated from pools instead of keeping it on the stack) \mbox{\Hypertarget{group__lwip__opts__lock_gae9afcefa5d233372abb9413188dd98c9}\label{group__lwip__opts__lock_gae9afcefa5d233372abb9413188dd98c9}} 
+\index{Core locking and M\+PU@{Core locking and M\+PU}!L\+W\+I\+P\+\_\+\+M\+P\+U\+\_\+\+C\+O\+M\+P\+A\+T\+I\+B\+LE@{L\+W\+I\+P\+\_\+\+M\+P\+U\+\_\+\+C\+O\+M\+P\+A\+T\+I\+B\+LE}}
+\index{L\+W\+I\+P\+\_\+\+M\+P\+U\+\_\+\+C\+O\+M\+P\+A\+T\+I\+B\+LE@{L\+W\+I\+P\+\_\+\+M\+P\+U\+\_\+\+C\+O\+M\+P\+A\+T\+I\+B\+LE}!Core locking and M\+PU@{Core locking and M\+PU}}
+\subsubsection{\texorpdfstring{L\+W\+I\+P\+\_\+\+M\+P\+U\+\_\+\+C\+O\+M\+P\+A\+T\+I\+B\+LE}{LWIP\_MPU\_COMPATIBLE}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \#define L\+W\+I\+P\+\_\+\+M\+P\+U\+\_\+\+C\+O\+M\+P\+A\+T\+I\+B\+LE~0}
+
+L\+W\+I\+P\+\_\+\+M\+P\+U\+\_\+\+C\+O\+M\+P\+A\+T\+I\+B\+LE\+: enables special memory management mechanism which makes lwip able to work on M\+PU (Memory Protection Unit) system by not passing stack-\/pointers to other threads (this decreases performance as memory is allocated from pools instead of keeping it on the stack) \mbox{\Hypertarget{group__lwip__opts__lock_ga8e46232794349c209e8ed4e9e7e4f011}\label{group__lwip__opts__lock_ga8e46232794349c209e8ed4e9e7e4f011}} 
+\index{Core locking and M\+PU@{Core locking and M\+PU}!L\+W\+I\+P\+\_\+\+T\+C\+P\+I\+P\+\_\+\+C\+O\+R\+E\+\_\+\+L\+O\+C\+K\+I\+NG@{L\+W\+I\+P\+\_\+\+T\+C\+P\+I\+P\+\_\+\+C\+O\+R\+E\+\_\+\+L\+O\+C\+K\+I\+NG}}
+\index{L\+W\+I\+P\+\_\+\+T\+C\+P\+I\+P\+\_\+\+C\+O\+R\+E\+\_\+\+L\+O\+C\+K\+I\+NG@{L\+W\+I\+P\+\_\+\+T\+C\+P\+I\+P\+\_\+\+C\+O\+R\+E\+\_\+\+L\+O\+C\+K\+I\+NG}!Core locking and M\+PU@{Core locking and M\+PU}}
+\subsubsection{\texorpdfstring{L\+W\+I\+P\+\_\+\+T\+C\+P\+I\+P\+\_\+\+C\+O\+R\+E\+\_\+\+L\+O\+C\+K\+I\+NG}{LWIP\_TCPIP\_CORE\_LOCKING}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \#define L\+W\+I\+P\+\_\+\+T\+C\+P\+I\+P\+\_\+\+C\+O\+R\+E\+\_\+\+L\+O\+C\+K\+I\+NG~1}
+
+L\+W\+I\+P\+\_\+\+T\+C\+P\+I\+P\+\_\+\+C\+O\+R\+E\+\_\+\+L\+O\+C\+K\+I\+NG Creates a global mutex that is held during T\+C\+P\+IP thread operations. Can be locked by client code to perform lw\+IP operations without changing into T\+C\+P\+IP thread using callbacks. See \hyperlink{native_2lwip_2src_2include_2lwip_2tcpip_8h_a4700525e737fc025fea4887b172e0c95}{L\+O\+C\+K\+\_\+\+T\+C\+P\+I\+P\+\_\+\+C\+O\+R\+E()} and \hyperlink{native_2lwip_2src_2include_2lwip_2tcpip_8h_a915effea029b9c4891e1ec635eb1826d}{U\+N\+L\+O\+C\+K\+\_\+\+T\+C\+P\+I\+P\+\_\+\+C\+O\+R\+E()}. Your system should provide mutexes supporting priority inversion to use this. \mbox{\Hypertarget{group__lwip__opts__lock_ga8e46232794349c209e8ed4e9e7e4f011}\label{group__lwip__opts__lock_ga8e46232794349c209e8ed4e9e7e4f011}} 
+\index{Core locking and M\+PU@{Core locking and M\+PU}!L\+W\+I\+P\+\_\+\+T\+C\+P\+I\+P\+\_\+\+C\+O\+R\+E\+\_\+\+L\+O\+C\+K\+I\+NG@{L\+W\+I\+P\+\_\+\+T\+C\+P\+I\+P\+\_\+\+C\+O\+R\+E\+\_\+\+L\+O\+C\+K\+I\+NG}}
+\index{L\+W\+I\+P\+\_\+\+T\+C\+P\+I\+P\+\_\+\+C\+O\+R\+E\+\_\+\+L\+O\+C\+K\+I\+NG@{L\+W\+I\+P\+\_\+\+T\+C\+P\+I\+P\+\_\+\+C\+O\+R\+E\+\_\+\+L\+O\+C\+K\+I\+NG}!Core locking and M\+PU@{Core locking and M\+PU}}
+\subsubsection{\texorpdfstring{L\+W\+I\+P\+\_\+\+T\+C\+P\+I\+P\+\_\+\+C\+O\+R\+E\+\_\+\+L\+O\+C\+K\+I\+NG}{LWIP\_TCPIP\_CORE\_LOCKING}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \#define L\+W\+I\+P\+\_\+\+T\+C\+P\+I\+P\+\_\+\+C\+O\+R\+E\+\_\+\+L\+O\+C\+K\+I\+NG~1}
+
+L\+W\+I\+P\+\_\+\+T\+C\+P\+I\+P\+\_\+\+C\+O\+R\+E\+\_\+\+L\+O\+C\+K\+I\+NG Creates a global mutex that is held during T\+C\+P\+IP thread operations. Can be locked by client code to perform lw\+IP operations without changing into T\+C\+P\+IP thread using callbacks. See \hyperlink{native_2lwip_2src_2include_2lwip_2tcpip_8h_a4700525e737fc025fea4887b172e0c95}{L\+O\+C\+K\+\_\+\+T\+C\+P\+I\+P\+\_\+\+C\+O\+R\+E()} and \hyperlink{native_2lwip_2src_2include_2lwip_2tcpip_8h_a915effea029b9c4891e1ec635eb1826d}{U\+N\+L\+O\+C\+K\+\_\+\+T\+C\+P\+I\+P\+\_\+\+C\+O\+R\+E()}. Your system should provide mutexes supporting priority inversion to use this. \mbox{\Hypertarget{group__lwip__opts__lock_ga351beb1c06affe49e717bc9f76c66acf}\label{group__lwip__opts__lock_ga351beb1c06affe49e717bc9f76c66acf}} 
+\index{Core locking and M\+PU@{Core locking and M\+PU}!L\+W\+I\+P\+\_\+\+T\+C\+P\+I\+P\+\_\+\+C\+O\+R\+E\+\_\+\+L\+O\+C\+K\+I\+N\+G\+\_\+\+I\+N\+P\+UT@{L\+W\+I\+P\+\_\+\+T\+C\+P\+I\+P\+\_\+\+C\+O\+R\+E\+\_\+\+L\+O\+C\+K\+I\+N\+G\+\_\+\+I\+N\+P\+UT}}
+\index{L\+W\+I\+P\+\_\+\+T\+C\+P\+I\+P\+\_\+\+C\+O\+R\+E\+\_\+\+L\+O\+C\+K\+I\+N\+G\+\_\+\+I\+N\+P\+UT@{L\+W\+I\+P\+\_\+\+T\+C\+P\+I\+P\+\_\+\+C\+O\+R\+E\+\_\+\+L\+O\+C\+K\+I\+N\+G\+\_\+\+I\+N\+P\+UT}!Core locking and M\+PU@{Core locking and M\+PU}}
+\subsubsection{\texorpdfstring{L\+W\+I\+P\+\_\+\+T\+C\+P\+I\+P\+\_\+\+C\+O\+R\+E\+\_\+\+L\+O\+C\+K\+I\+N\+G\+\_\+\+I\+N\+P\+UT}{LWIP\_TCPIP\_CORE\_LOCKING\_INPUT}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \#define L\+W\+I\+P\+\_\+\+T\+C\+P\+I\+P\+\_\+\+C\+O\+R\+E\+\_\+\+L\+O\+C\+K\+I\+N\+G\+\_\+\+I\+N\+P\+UT~0}
+
+L\+W\+I\+P\+\_\+\+T\+C\+P\+I\+P\+\_\+\+C\+O\+R\+E\+\_\+\+L\+O\+C\+K\+I\+N\+G\+\_\+\+I\+N\+P\+UT\+: when L\+W\+I\+P\+\_\+\+T\+C\+P\+I\+P\+\_\+\+C\+O\+R\+E\+\_\+\+L\+O\+C\+K\+I\+NG is enabled, this lets \hyperlink{group__lwip__os_gae510f195171bed8499ae94e264a92717}{tcpip\+\_\+input()} grab the mutex for input packets as well, instead of allocating a message and passing it to tcpip\+\_\+thread.
+
+A\+T\+T\+E\+N\+T\+I\+ON\+: this does not work when \hyperlink{group__lwip__os_gae510f195171bed8499ae94e264a92717}{tcpip\+\_\+input()} is called from interrupt context! \mbox{\Hypertarget{group__lwip__opts__lock_ga351beb1c06affe49e717bc9f76c66acf}\label{group__lwip__opts__lock_ga351beb1c06affe49e717bc9f76c66acf}} 
+\index{Core locking and M\+PU@{Core locking and M\+PU}!L\+W\+I\+P\+\_\+\+T\+C\+P\+I\+P\+\_\+\+C\+O\+R\+E\+\_\+\+L\+O\+C\+K\+I\+N\+G\+\_\+\+I\+N\+P\+UT@{L\+W\+I\+P\+\_\+\+T\+C\+P\+I\+P\+\_\+\+C\+O\+R\+E\+\_\+\+L\+O\+C\+K\+I\+N\+G\+\_\+\+I\+N\+P\+UT}}
+\index{L\+W\+I\+P\+\_\+\+T\+C\+P\+I\+P\+\_\+\+C\+O\+R\+E\+\_\+\+L\+O\+C\+K\+I\+N\+G\+\_\+\+I\+N\+P\+UT@{L\+W\+I\+P\+\_\+\+T\+C\+P\+I\+P\+\_\+\+C\+O\+R\+E\+\_\+\+L\+O\+C\+K\+I\+N\+G\+\_\+\+I\+N\+P\+UT}!Core locking and M\+PU@{Core locking and M\+PU}}
+\subsubsection{\texorpdfstring{L\+W\+I\+P\+\_\+\+T\+C\+P\+I\+P\+\_\+\+C\+O\+R\+E\+\_\+\+L\+O\+C\+K\+I\+N\+G\+\_\+\+I\+N\+P\+UT}{LWIP\_TCPIP\_CORE\_LOCKING\_INPUT}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \#define L\+W\+I\+P\+\_\+\+T\+C\+P\+I\+P\+\_\+\+C\+O\+R\+E\+\_\+\+L\+O\+C\+K\+I\+N\+G\+\_\+\+I\+N\+P\+UT~0}
+
+L\+W\+I\+P\+\_\+\+T\+C\+P\+I\+P\+\_\+\+C\+O\+R\+E\+\_\+\+L\+O\+C\+K\+I\+N\+G\+\_\+\+I\+N\+P\+UT\+: when L\+W\+I\+P\+\_\+\+T\+C\+P\+I\+P\+\_\+\+C\+O\+R\+E\+\_\+\+L\+O\+C\+K\+I\+NG is enabled, this lets \hyperlink{group__lwip__os_gae510f195171bed8499ae94e264a92717}{tcpip\+\_\+input()} grab the mutex for input packets as well, instead of allocating a message and passing it to tcpip\+\_\+thread.
+
+A\+T\+T\+E\+N\+T\+I\+ON\+: this does not work when \hyperlink{group__lwip__os_gae510f195171bed8499ae94e264a92717}{tcpip\+\_\+input()} is called from interrupt context! \mbox{\Hypertarget{group__lwip__opts__lock_gae85efb3a5fcf8585c94b3c2669978959}\label{group__lwip__opts__lock_gae85efb3a5fcf8585c94b3c2669978959}} 
+\index{Core locking and M\+PU@{Core locking and M\+PU}!S\+Y\+S\+\_\+\+L\+I\+G\+H\+T\+W\+E\+I\+G\+H\+T\+\_\+\+P\+R\+OT@{S\+Y\+S\+\_\+\+L\+I\+G\+H\+T\+W\+E\+I\+G\+H\+T\+\_\+\+P\+R\+OT}}
+\index{S\+Y\+S\+\_\+\+L\+I\+G\+H\+T\+W\+E\+I\+G\+H\+T\+\_\+\+P\+R\+OT@{S\+Y\+S\+\_\+\+L\+I\+G\+H\+T\+W\+E\+I\+G\+H\+T\+\_\+\+P\+R\+OT}!Core locking and M\+PU@{Core locking and M\+PU}}
+\subsubsection{\texorpdfstring{S\+Y\+S\+\_\+\+L\+I\+G\+H\+T\+W\+E\+I\+G\+H\+T\+\_\+\+P\+R\+OT}{SYS\_LIGHTWEIGHT\_PROT}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \#define S\+Y\+S\+\_\+\+L\+I\+G\+H\+T\+W\+E\+I\+G\+H\+T\+\_\+\+P\+R\+OT~1}
+
+S\+Y\+S\+\_\+\+L\+I\+G\+H\+T\+W\+E\+I\+G\+H\+T\+\_\+\+P\+R\+OT==1\+: enable inter-\/task protection (and task-\/vs-\/interrupt protection) for certain critical regions during buffer allocation, deallocation and memory allocation and deallocation. A\+T\+T\+E\+N\+T\+I\+ON\+: This is required when using lw\+IP from more than one context! If you disable this, you must be sure what you are doing! \mbox{\Hypertarget{group__lwip__opts__lock_gae85efb3a5fcf8585c94b3c2669978959}\label{group__lwip__opts__lock_gae85efb3a5fcf8585c94b3c2669978959}} 
+\index{Core locking and M\+PU@{Core locking and M\+PU}!S\+Y\+S\+\_\+\+L\+I\+G\+H\+T\+W\+E\+I\+G\+H\+T\+\_\+\+P\+R\+OT@{S\+Y\+S\+\_\+\+L\+I\+G\+H\+T\+W\+E\+I\+G\+H\+T\+\_\+\+P\+R\+OT}}
+\index{S\+Y\+S\+\_\+\+L\+I\+G\+H\+T\+W\+E\+I\+G\+H\+T\+\_\+\+P\+R\+OT@{S\+Y\+S\+\_\+\+L\+I\+G\+H\+T\+W\+E\+I\+G\+H\+T\+\_\+\+P\+R\+OT}!Core locking and M\+PU@{Core locking and M\+PU}}
+\subsubsection{\texorpdfstring{S\+Y\+S\+\_\+\+L\+I\+G\+H\+T\+W\+E\+I\+G\+H\+T\+\_\+\+P\+R\+OT}{SYS\_LIGHTWEIGHT\_PROT}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \#define S\+Y\+S\+\_\+\+L\+I\+G\+H\+T\+W\+E\+I\+G\+H\+T\+\_\+\+P\+R\+OT~1}
+
+S\+Y\+S\+\_\+\+L\+I\+G\+H\+T\+W\+E\+I\+G\+H\+T\+\_\+\+P\+R\+OT==1\+: enable inter-\/task protection (and task-\/vs-\/interrupt protection) for certain critical regions during buffer allocation, deallocation and memory allocation and deallocation. A\+T\+T\+E\+N\+T\+I\+ON\+: This is required when using lw\+IP from more than one context! If you disable this, you must be sure what you are doing! 

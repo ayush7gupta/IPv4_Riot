@@ -1,0 +1,22 @@
+This is a test application for the H\+D44780 L\+CD driver. This display comes with many Arduino starter kits under the name of L\+C\+M1602C, and typically has 16x2 columns and rows.
+
+\section*{Details}
+
+This test application will initialize the H\+D44780 driver with the configuration as specified in the default {\ttfamily \hyperlink{hd44780__params_8h}{hd44780\+\_\+params.\+h}} file. To connect the display with your board use the following minimal pinout for the L\+CD (i.\+e., Arduino here)\+:
+
+
+\begin{DoxyItemize}
+\item Pin 1 is connected directly to G\+ND.
+\item Pin 2 is connected directly to V\+CC +5V.
+\item Pin 3 is used to set L\+CD contrast, for max use +5V or a 10k potentiometer.
+\item Pin 4 (RS or “register select”) is connected to pin 2 on the Arduino
+\item Pin 5 (RW or “read/write”) is connected directly to G\+ND, i.\+e., unused. Also note\+: if you connect RW to your board that the L\+CD is driven by 5V, while many boards internally run at 3.\+3V -\/ so this could fry the board \+:/
+\item Pin 6 (EN or “enable”) is connected to pin 3 on the Arduino.
+\item Pins 7 – 10\+: Not connected.
+\item Pin 11 on the L\+CD is connected to pin 4 on the Arduino.
+\item Pin 12 on the L\+CD is connected to pin 5 on the Arduino.
+\item Pin 13 on the L\+CD is connected to pin 6 on the Arduino.
+\item Pin 14 on the L\+CD is connected to pin 7 on the Arduino.
+\item Pin 15 is connected to one end of a 1k resistor, and its other end to V\+CC +5V.
+\item Pin 16 is connected directly to G\+ND. 
+\end{DoxyItemize}

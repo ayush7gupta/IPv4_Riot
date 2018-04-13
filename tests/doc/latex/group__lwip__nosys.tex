@@ -1,0 +1,60 @@
+\hypertarget{group__lwip__nosys}{}\section{Mainloop mode (\char`\"{}\+N\+O\+\_\+\+S\+Y\+S\char`\"{})}
+\label{group__lwip__nosys}\index{Mainloop mode (\char`\"{}\+N\+O\+\_\+\+S\+Y\+S\char`\"{})@{Mainloop mode (""N\+O\+\_\+\+S\+YS"")}}
+Collaboration diagram for Mainloop mode (\char`\"{}\+N\+O\+\_\+\+S\+Y\+S\char`\"{})\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=259pt]{group__lwip__nosys}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{group__lwip__nosys_ga0c1a18439524d2f4a5e51d25c0ca2ce9}{lwip\+\_\+init} (void)
+\item 
+\hyperlink{group__infrastructure__errors_gaf02d9da80fd66b4f986d2c53d7231ddb}{err\+\_\+t} \hyperlink{group__lwip__nosys_ga5532f93d68c874fb99c681bff2165385}{netif\+\_\+input} (struct \hyperlink{structpbuf}{pbuf} $\ast$p, struct \hyperlink{structnetif}{netif} $\ast$inp)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Use this mode if you do not run an OS on your system. \#define N\+O\+\_\+\+S\+YS to 1. Feed incoming packets to netif-\/$>$input(pbuf, netif) function from mainloop, {\itshape not} {\itshape from} {\itshape interrupt} {\itshape context}. You can allocate a \hyperlink{group__pbuf}{Packet buffers (P\+B\+UF)} in interrupt context and put them into a queue which is processed from mainloop.~\newline
+Call sys\+\_\+check\+\_\+timeouts() periodically in the mainloop.~\newline
+Porting\+: implement all functions in \hyperlink{group__sys__time}{Time}, \hyperlink{group__sys__prot}{Critical sections} and \hyperlink{group__compiler__abstraction}{Compiler/platform abstraction}.~\newline
+You can only use \hyperlink{group__callbackstyle__api}{Callback-\/style A\+P\+Is} in this mode.~\newline
+Sample code\+:~\newline
+
+\begin{DoxyCodeInclude}
+\end{DoxyCodeInclude}
+ 
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{group__lwip__nosys_ga0c1a18439524d2f4a5e51d25c0ca2ce9}\label{group__lwip__nosys_ga0c1a18439524d2f4a5e51d25c0ca2ce9}} 
+\index{Mainloop mode (\char`\"{}\+N\+O\+\_\+\+S\+Y\+S\char`\"{})@{Mainloop mode (""N\+O\+\_\+\+S\+YS"")}!lwip\+\_\+init@{lwip\+\_\+init}}
+\index{lwip\+\_\+init@{lwip\+\_\+init}!Mainloop mode (\char`\"{}\+N\+O\+\_\+\+S\+Y\+S\char`\"{})@{Mainloop mode (""N\+O\+\_\+\+S\+YS"")}}
+\subsubsection{\texorpdfstring{lwip\+\_\+init()}{lwip\_init()}}
+{\footnotesize\ttfamily void lwip\+\_\+init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Initialize all modules. Use this in N\+O\+\_\+\+S\+YS mode. Use \hyperlink{group__lwip__os_ga1f3a88b8df6ba3b9ed1c00e0a305e3db}{tcpip\+\_\+init()} otherwise. Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=230pt]{group__lwip__nosys_ga0c1a18439524d2f4a5e51d25c0ca2ce9_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=224pt]{group__lwip__nosys_ga0c1a18439524d2f4a5e51d25c0ca2ce9_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{group__lwip__nosys_ga5532f93d68c874fb99c681bff2165385}\label{group__lwip__nosys_ga5532f93d68c874fb99c681bff2165385}} 
+\index{Mainloop mode (\char`\"{}\+N\+O\+\_\+\+S\+Y\+S\char`\"{})@{Mainloop mode (""N\+O\+\_\+\+S\+YS"")}!netif\+\_\+input@{netif\+\_\+input}}
+\index{netif\+\_\+input@{netif\+\_\+input}!Mainloop mode (\char`\"{}\+N\+O\+\_\+\+S\+Y\+S\char`\"{})@{Mainloop mode (""N\+O\+\_\+\+S\+YS"")}}
+\subsubsection{\texorpdfstring{netif\+\_\+input()}{netif\_input()}}
+{\footnotesize\ttfamily \hyperlink{group__infrastructure__errors_gaf02d9da80fd66b4f986d2c53d7231ddb}{err\+\_\+t} netif\+\_\+input (\begin{DoxyParamCaption}\item[{struct \hyperlink{structpbuf}{pbuf} $\ast$}]{p,  }\item[{struct \hyperlink{structnetif}{netif} $\ast$}]{inp }\end{DoxyParamCaption})}
+
+Forwards a received packet for input processing with ethernet\+\_\+input() or ip\+\_\+input() depending on netif flags. Don\textquotesingle{}t call directly, pass to \hyperlink{group__netif_gabde72af134ae7047a46ad7719d2a1ee9}{netif\+\_\+add()} and call netif-\/$>$input(). Only works if the netif driver correctly sets N\+E\+T\+I\+F\+\_\+\+F\+L\+A\+G\+\_\+\+E\+T\+H\+A\+RP and/or N\+E\+T\+I\+F\+\_\+\+F\+L\+A\+G\+\_\+\+E\+T\+H\+E\+R\+N\+ET flag! 

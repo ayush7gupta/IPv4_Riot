@@ -1,0 +1,383 @@
+\hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2dns_8h}{}\section{/home/ayush/\+R\+I\+O\+T/tests/lwip/bin/pkg/openmote-\/cc2538/lwip/src/include/lwip/prot/dns.h File Reference}
+\label{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2dns_8h}\index{/home/ayush/\+R\+I\+O\+T/tests/lwip/bin/pkg/openmote-\/cc2538/lwip/src/include/lwip/prot/dns.\+h@{/home/ayush/\+R\+I\+O\+T/tests/lwip/bin/pkg/openmote-\/cc2538/lwip/src/include/lwip/prot/dns.\+h}}
+{\ttfamily \#include \char`\"{}lwip/arch.\+h\char`\"{}}\newline
+Include dependency graph for dns.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=205pt]{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2dns_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2dns_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structdns__hdr}{dns\+\_\+hdr}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2dns_8h_a9266b48706648ecf0625a3e651095317}{D\+N\+S\+\_\+\+S\+E\+R\+V\+E\+R\+\_\+\+P\+O\+RT}~53
+\item 
+\#define \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2dns_8h_a830e99420463950d3c4d661487f20d0d}{D\+N\+S\+\_\+\+R\+R\+T\+Y\+P\+E\+\_\+A}~1     /$\ast$ a host address $\ast$/
+\item 
+\#define \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2dns_8h_acca8f4a2a1bea8615d892150ed890633}{D\+N\+S\+\_\+\+R\+R\+T\+Y\+P\+E\+\_\+\+NS}~2     /$\ast$ an authoritative name server $\ast$/
+\item 
+\#define \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2dns_8h_ae7d66bce2de34d6dbc3e4efc1a31e664}{D\+N\+S\+\_\+\+R\+R\+T\+Y\+P\+E\+\_\+\+MD}~3     /$\ast$ a mail destination (Obsolete -\/ use MX) $\ast$/
+\item 
+\#define \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2dns_8h_a3e88aee3ce8e0395e04b4248600e805d}{D\+N\+S\+\_\+\+R\+R\+T\+Y\+P\+E\+\_\+\+MF}~4     /$\ast$ a mail forwarder (Obsolete -\/ use MX) $\ast$/
+\item 
+\#define \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2dns_8h_a3dab0550bbdea0b4957461427d07be41}{D\+N\+S\+\_\+\+R\+R\+T\+Y\+P\+E\+\_\+\+C\+N\+A\+ME}~5     /$\ast$ the canonical name for an alias $\ast$/
+\item 
+\#define \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2dns_8h_aba0e1e44b7ad6b4096384d041111ee7a}{D\+N\+S\+\_\+\+R\+R\+T\+Y\+P\+E\+\_\+\+S\+OA}~6     /$\ast$ marks the start of a zone of authority $\ast$/
+\item 
+\#define \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2dns_8h_a70b5c47284dbde86c3563f20c6201962}{D\+N\+S\+\_\+\+R\+R\+T\+Y\+P\+E\+\_\+\+MB}~7     /$\ast$ a mailbox domain name (E\+X\+P\+E\+R\+I\+M\+E\+N\+T\+AL) $\ast$/
+\item 
+\#define \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2dns_8h_a102558e1400d41a35868f82c7eba8503}{D\+N\+S\+\_\+\+R\+R\+T\+Y\+P\+E\+\_\+\+MG}~8     /$\ast$ a mail group member (E\+X\+P\+E\+R\+I\+M\+E\+N\+T\+AL) $\ast$/
+\item 
+\#define \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2dns_8h_a2d4fdfd7f5d8f9f758278003dc243d04}{D\+N\+S\+\_\+\+R\+R\+T\+Y\+P\+E\+\_\+\+MR}~9     /$\ast$ a mail rename domain name (E\+X\+P\+E\+R\+I\+M\+E\+N\+T\+AL) $\ast$/
+\item 
+\#define \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2dns_8h_aaa883ee62a659bdde6207d737e77795c}{D\+N\+S\+\_\+\+R\+R\+T\+Y\+P\+E\+\_\+\+N\+U\+LL}~10    /$\ast$ a null RR (E\+X\+P\+E\+R\+I\+M\+E\+N\+T\+AL) $\ast$/
+\item 
+\#define \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2dns_8h_aa64d1579e0da263c09134d12c89c9ce4}{D\+N\+S\+\_\+\+R\+R\+T\+Y\+P\+E\+\_\+\+W\+KS}~11    /$\ast$ a well known service description $\ast$/
+\item 
+\#define \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2dns_8h_ace55462cfcd4872a7c68178ed779cb89}{D\+N\+S\+\_\+\+R\+R\+T\+Y\+P\+E\+\_\+\+P\+TR}~12    /$\ast$ a domain name pointer $\ast$/
+\item 
+\#define \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2dns_8h_aa38f49c344b6aa0caa6656dbc4f1b7c6}{D\+N\+S\+\_\+\+R\+R\+T\+Y\+P\+E\+\_\+\+H\+I\+N\+FO}~13    /$\ast$ host information $\ast$/
+\item 
+\#define \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2dns_8h_a952c8c700b3ddad714e51873692a345b}{D\+N\+S\+\_\+\+R\+R\+T\+Y\+P\+E\+\_\+\+M\+I\+N\+FO}~14    /$\ast$ mailbox or mail list information $\ast$/
+\item 
+\#define \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2dns_8h_a52c933b4a3def47075a16ba3006d7f99}{D\+N\+S\+\_\+\+R\+R\+T\+Y\+P\+E\+\_\+\+MX}~15    /$\ast$ mail exchange $\ast$/
+\item 
+\#define \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2dns_8h_a62820cc2f56dd4fdd301729fa05b4f96}{D\+N\+S\+\_\+\+R\+R\+T\+Y\+P\+E\+\_\+\+T\+XT}~16    /$\ast$ text strings $\ast$/
+\item 
+\#define \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2dns_8h_ae533fbb9f59f4de915ed3ecb9ff24953}{D\+N\+S\+\_\+\+R\+R\+T\+Y\+P\+E\+\_\+\+A\+A\+AA}~28    /$\ast$ I\+Pv6 address $\ast$/
+\item 
+\#define \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2dns_8h_a38f81c327955912ba9cc893c26d3a86e}{D\+N\+S\+\_\+\+R\+R\+T\+Y\+P\+E\+\_\+\+S\+RV}~33    /$\ast$ service location $\ast$/
+\item 
+\#define \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2dns_8h_aea32c0d7d57c585bb1a9bfd3ce81bed5}{D\+N\+S\+\_\+\+R\+R\+T\+Y\+P\+E\+\_\+\+A\+NY}~255   /$\ast$ any type $\ast$/
+\item 
+\#define \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2dns_8h_a08bc1c1897d2921b6f102365be55da2a}{D\+N\+S\+\_\+\+R\+R\+C\+L\+A\+S\+S\+\_\+\+IN}~1     /$\ast$ the Internet $\ast$/
+\item 
+\#define \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2dns_8h_a9d64fb2a8d4b656f11c7b334b810b5f1}{D\+N\+S\+\_\+\+R\+R\+C\+L\+A\+S\+S\+\_\+\+CS}~2     /$\ast$ the C\+S\+N\+ET class (Obsolete -\/ used only for examples in some obsolete R\+F\+Cs) $\ast$/
+\item 
+\#define \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2dns_8h_ae403127af0f1656d8c724e723f6b3252}{D\+N\+S\+\_\+\+R\+R\+C\+L\+A\+S\+S\+\_\+\+CH}~3     /$\ast$ the C\+H\+A\+OS class $\ast$/
+\item 
+\#define \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2dns_8h_a47055a9391e4a5c03e2aba7b1a4ad39a}{D\+N\+S\+\_\+\+R\+R\+C\+L\+A\+S\+S\+\_\+\+HS}~4     /$\ast$ Hesiod \mbox{[}Dyer 87\mbox{]} $\ast$/
+\item 
+\#define \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2dns_8h_a21008b249272ea02cfdc31aa7502a217}{D\+N\+S\+\_\+\+R\+R\+C\+L\+A\+S\+S\+\_\+\+A\+NY}~255   /$\ast$ any class $\ast$/
+\item 
+\#define \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2dns_8h_ad8e2e9df5f9942d5f2a50bbfc6da80d3}{D\+N\+S\+\_\+\+R\+R\+C\+L\+A\+S\+S\+\_\+\+F\+L\+U\+SH}~0x800 /$\ast$ Flush bit $\ast$/
+\item 
+\#define \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2dns_8h_a96eb4534b574ece96ed36806039f73d3}{D\+N\+S\+\_\+\+F\+L\+A\+G1\+\_\+\+R\+E\+S\+P\+O\+N\+SE}~0x80
+\item 
+\#define \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2dns_8h_a4350350ce0d4595876743d4c0a720bcc}{D\+N\+S\+\_\+\+F\+L\+A\+G1\+\_\+\+O\+P\+C\+O\+D\+E\+\_\+\+S\+T\+A\+T\+US}~0x10
+\item 
+\#define \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2dns_8h_ae7250008b68d1909d54040515eef8ebb}{D\+N\+S\+\_\+\+F\+L\+A\+G1\+\_\+\+O\+P\+C\+O\+D\+E\+\_\+\+I\+N\+V\+E\+R\+SE}~0x08
+\item 
+\#define \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2dns_8h_a6a327c0ffd40f69fbcd5f01f12e5745c}{D\+N\+S\+\_\+\+F\+L\+A\+G1\+\_\+\+O\+P\+C\+O\+D\+E\+\_\+\+S\+T\+A\+N\+D\+A\+RD}~0x00
+\item 
+\#define \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2dns_8h_add685a0f8b5e76a2687cc0f306813bfb}{D\+N\+S\+\_\+\+F\+L\+A\+G1\+\_\+\+A\+U\+T\+H\+O\+R\+A\+T\+I\+VE}~0x04
+\item 
+\#define \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2dns_8h_a2e52037249bb98d7bbecf42e275beb07}{D\+N\+S\+\_\+\+F\+L\+A\+G1\+\_\+\+T\+R\+U\+NC}~0x02
+\item 
+\#define \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2dns_8h_a72d99b1623afa14bd58c667b748c2ddc}{D\+N\+S\+\_\+\+F\+L\+A\+G1\+\_\+\+RD}~0x01
+\item 
+\#define \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2dns_8h_ac72f8777ccc45ae274449ea7a9f3de04}{D\+N\+S\+\_\+\+F\+L\+A\+G2\+\_\+\+RA}~0x80
+\item 
+\#define \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2dns_8h_a9f6c329c04baba17fe0f5b2a6597d713}{D\+N\+S\+\_\+\+F\+L\+A\+G2\+\_\+\+E\+R\+R\+\_\+\+M\+A\+SK}~0x0f
+\item 
+\#define \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2dns_8h_a6aaa9da3d0f8d4c0799516d46d939942}{D\+N\+S\+\_\+\+F\+L\+A\+G2\+\_\+\+E\+R\+R\+\_\+\+N\+O\+NE}~0x00
+\item 
+\#define \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2dns_8h_a8ee5e2c8e517d6e4f2198057f81e93c6}{D\+N\+S\+\_\+\+F\+L\+A\+G2\+\_\+\+E\+R\+R\+\_\+\+N\+A\+ME}~0x03
+\item 
+\#define \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2dns_8h_a8b3138fb652e7b2fcdf8c24d555188af}{D\+N\+S\+\_\+\+H\+D\+R\+\_\+\+G\+E\+T\+\_\+\+O\+P\+C\+O\+DE}(hdr)~((((hdr)-\/$>$flags1) $>$$>$ 3) \& 0x\+F)
+\item 
+\#define \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2dns_8h_a1ffff846513e2493ba915d8874c26476}{S\+I\+Z\+E\+O\+F\+\_\+\+D\+N\+S\+\_\+\+H\+DR}~12
+\item 
+\#define \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2dns_8h_a62d67af5ac6c6b3f98a6566a42564276}{D\+N\+S\+\_\+\+M\+Q\+U\+E\+R\+Y\+\_\+\+P\+O\+RT}~5353
+\item 
+\#define \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2dns_8h_a861fa0ab623ace9086f5c7247a9f04c8}{D\+N\+S\+\_\+\+M\+Q\+U\+E\+R\+Y\+\_\+\+I\+P\+V4\+\_\+\+G\+R\+O\+U\+P\+\_\+\+I\+N\+IT}~I\+P\+A\+D\+D\+R4\+\_\+\+I\+N\+I\+T\+\_\+\+B\+Y\+T\+ES(224,0,0,251)
+\item 
+\#define \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2dns_8h_ae8c419a73ada8ec6b470b3679ae87b8e}{D\+N\+S\+\_\+\+M\+Q\+U\+E\+R\+Y\+\_\+\+I\+P\+V6\+\_\+\+G\+R\+O\+U\+P\+\_\+\+I\+N\+IT}~\hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2ip__addr_8h_adaff748da2b808995993dd3db5420f08}{I\+P\+A\+D\+D\+R6\+\_\+\+I\+N\+I\+T\+\_\+\+H\+O\+ST}(0x\+F\+F020000,0,0,0x\+F\+B)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group__compiler__abstraction_ga73199061891adf1b912d20835c7d5e96}{P\+A\+C\+K\+\_\+\+S\+T\+R\+U\+C\+T\+\_\+\+B\+E\+G\+IN} struct \hyperlink{structdns__hdr}{dns\+\_\+hdr} \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2dns_8h_abfbe0197612b7e138ae2dd9545e3664c}{P\+A\+C\+K\+\_\+\+S\+T\+R\+U\+C\+T\+\_\+\+S\+T\+R\+U\+CT}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+D\+NS -\/ host name to IP address resolver. 
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2dns_8h_add685a0f8b5e76a2687cc0f306813bfb}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2dns_8h_add685a0f8b5e76a2687cc0f306813bfb}} 
+\index{openmote-\/cc2538/lwip/src/include/lwip/prot/dns.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/dns.\+h}!D\+N\+S\+\_\+\+F\+L\+A\+G1\+\_\+\+A\+U\+T\+H\+O\+R\+A\+T\+I\+VE@{D\+N\+S\+\_\+\+F\+L\+A\+G1\+\_\+\+A\+U\+T\+H\+O\+R\+A\+T\+I\+VE}}
+\index{D\+N\+S\+\_\+\+F\+L\+A\+G1\+\_\+\+A\+U\+T\+H\+O\+R\+A\+T\+I\+VE@{D\+N\+S\+\_\+\+F\+L\+A\+G1\+\_\+\+A\+U\+T\+H\+O\+R\+A\+T\+I\+VE}!openmote-\/cc2538/lwip/src/include/lwip/prot/dns.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/dns.\+h}}
+\subsubsection{\texorpdfstring{D\+N\+S\+\_\+\+F\+L\+A\+G1\+\_\+\+A\+U\+T\+H\+O\+R\+A\+T\+I\+VE}{DNS\_FLAG1\_AUTHORATIVE}}
+{\footnotesize\ttfamily \#define D\+N\+S\+\_\+\+F\+L\+A\+G1\+\_\+\+A\+U\+T\+H\+O\+R\+A\+T\+I\+VE~0x04}
+
+\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2dns_8h_ae7250008b68d1909d54040515eef8ebb}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2dns_8h_ae7250008b68d1909d54040515eef8ebb}} 
+\index{openmote-\/cc2538/lwip/src/include/lwip/prot/dns.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/dns.\+h}!D\+N\+S\+\_\+\+F\+L\+A\+G1\+\_\+\+O\+P\+C\+O\+D\+E\+\_\+\+I\+N\+V\+E\+R\+SE@{D\+N\+S\+\_\+\+F\+L\+A\+G1\+\_\+\+O\+P\+C\+O\+D\+E\+\_\+\+I\+N\+V\+E\+R\+SE}}
+\index{D\+N\+S\+\_\+\+F\+L\+A\+G1\+\_\+\+O\+P\+C\+O\+D\+E\+\_\+\+I\+N\+V\+E\+R\+SE@{D\+N\+S\+\_\+\+F\+L\+A\+G1\+\_\+\+O\+P\+C\+O\+D\+E\+\_\+\+I\+N\+V\+E\+R\+SE}!openmote-\/cc2538/lwip/src/include/lwip/prot/dns.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/dns.\+h}}
+\subsubsection{\texorpdfstring{D\+N\+S\+\_\+\+F\+L\+A\+G1\+\_\+\+O\+P\+C\+O\+D\+E\+\_\+\+I\+N\+V\+E\+R\+SE}{DNS\_FLAG1\_OPCODE\_INVERSE}}
+{\footnotesize\ttfamily \#define D\+N\+S\+\_\+\+F\+L\+A\+G1\+\_\+\+O\+P\+C\+O\+D\+E\+\_\+\+I\+N\+V\+E\+R\+SE~0x08}
+
+\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2dns_8h_a6a327c0ffd40f69fbcd5f01f12e5745c}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2dns_8h_a6a327c0ffd40f69fbcd5f01f12e5745c}} 
+\index{openmote-\/cc2538/lwip/src/include/lwip/prot/dns.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/dns.\+h}!D\+N\+S\+\_\+\+F\+L\+A\+G1\+\_\+\+O\+P\+C\+O\+D\+E\+\_\+\+S\+T\+A\+N\+D\+A\+RD@{D\+N\+S\+\_\+\+F\+L\+A\+G1\+\_\+\+O\+P\+C\+O\+D\+E\+\_\+\+S\+T\+A\+N\+D\+A\+RD}}
+\index{D\+N\+S\+\_\+\+F\+L\+A\+G1\+\_\+\+O\+P\+C\+O\+D\+E\+\_\+\+S\+T\+A\+N\+D\+A\+RD@{D\+N\+S\+\_\+\+F\+L\+A\+G1\+\_\+\+O\+P\+C\+O\+D\+E\+\_\+\+S\+T\+A\+N\+D\+A\+RD}!openmote-\/cc2538/lwip/src/include/lwip/prot/dns.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/dns.\+h}}
+\subsubsection{\texorpdfstring{D\+N\+S\+\_\+\+F\+L\+A\+G1\+\_\+\+O\+P\+C\+O\+D\+E\+\_\+\+S\+T\+A\+N\+D\+A\+RD}{DNS\_FLAG1\_OPCODE\_STANDARD}}
+{\footnotesize\ttfamily \#define D\+N\+S\+\_\+\+F\+L\+A\+G1\+\_\+\+O\+P\+C\+O\+D\+E\+\_\+\+S\+T\+A\+N\+D\+A\+RD~0x00}
+
+\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2dns_8h_a4350350ce0d4595876743d4c0a720bcc}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2dns_8h_a4350350ce0d4595876743d4c0a720bcc}} 
+\index{openmote-\/cc2538/lwip/src/include/lwip/prot/dns.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/dns.\+h}!D\+N\+S\+\_\+\+F\+L\+A\+G1\+\_\+\+O\+P\+C\+O\+D\+E\+\_\+\+S\+T\+A\+T\+US@{D\+N\+S\+\_\+\+F\+L\+A\+G1\+\_\+\+O\+P\+C\+O\+D\+E\+\_\+\+S\+T\+A\+T\+US}}
+\index{D\+N\+S\+\_\+\+F\+L\+A\+G1\+\_\+\+O\+P\+C\+O\+D\+E\+\_\+\+S\+T\+A\+T\+US@{D\+N\+S\+\_\+\+F\+L\+A\+G1\+\_\+\+O\+P\+C\+O\+D\+E\+\_\+\+S\+T\+A\+T\+US}!openmote-\/cc2538/lwip/src/include/lwip/prot/dns.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/dns.\+h}}
+\subsubsection{\texorpdfstring{D\+N\+S\+\_\+\+F\+L\+A\+G1\+\_\+\+O\+P\+C\+O\+D\+E\+\_\+\+S\+T\+A\+T\+US}{DNS\_FLAG1\_OPCODE\_STATUS}}
+{\footnotesize\ttfamily \#define D\+N\+S\+\_\+\+F\+L\+A\+G1\+\_\+\+O\+P\+C\+O\+D\+E\+\_\+\+S\+T\+A\+T\+US~0x10}
+
+\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2dns_8h_a72d99b1623afa14bd58c667b748c2ddc}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2dns_8h_a72d99b1623afa14bd58c667b748c2ddc}} 
+\index{openmote-\/cc2538/lwip/src/include/lwip/prot/dns.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/dns.\+h}!D\+N\+S\+\_\+\+F\+L\+A\+G1\+\_\+\+RD@{D\+N\+S\+\_\+\+F\+L\+A\+G1\+\_\+\+RD}}
+\index{D\+N\+S\+\_\+\+F\+L\+A\+G1\+\_\+\+RD@{D\+N\+S\+\_\+\+F\+L\+A\+G1\+\_\+\+RD}!openmote-\/cc2538/lwip/src/include/lwip/prot/dns.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/dns.\+h}}
+\subsubsection{\texorpdfstring{D\+N\+S\+\_\+\+F\+L\+A\+G1\+\_\+\+RD}{DNS\_FLAG1\_RD}}
+{\footnotesize\ttfamily \#define D\+N\+S\+\_\+\+F\+L\+A\+G1\+\_\+\+RD~0x01}
+
+\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2dns_8h_a96eb4534b574ece96ed36806039f73d3}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2dns_8h_a96eb4534b574ece96ed36806039f73d3}} 
+\index{openmote-\/cc2538/lwip/src/include/lwip/prot/dns.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/dns.\+h}!D\+N\+S\+\_\+\+F\+L\+A\+G1\+\_\+\+R\+E\+S\+P\+O\+N\+SE@{D\+N\+S\+\_\+\+F\+L\+A\+G1\+\_\+\+R\+E\+S\+P\+O\+N\+SE}}
+\index{D\+N\+S\+\_\+\+F\+L\+A\+G1\+\_\+\+R\+E\+S\+P\+O\+N\+SE@{D\+N\+S\+\_\+\+F\+L\+A\+G1\+\_\+\+R\+E\+S\+P\+O\+N\+SE}!openmote-\/cc2538/lwip/src/include/lwip/prot/dns.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/dns.\+h}}
+\subsubsection{\texorpdfstring{D\+N\+S\+\_\+\+F\+L\+A\+G1\+\_\+\+R\+E\+S\+P\+O\+N\+SE}{DNS\_FLAG1\_RESPONSE}}
+{\footnotesize\ttfamily \#define D\+N\+S\+\_\+\+F\+L\+A\+G1\+\_\+\+R\+E\+S\+P\+O\+N\+SE~0x80}
+
+\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2dns_8h_a2e52037249bb98d7bbecf42e275beb07}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2dns_8h_a2e52037249bb98d7bbecf42e275beb07}} 
+\index{openmote-\/cc2538/lwip/src/include/lwip/prot/dns.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/dns.\+h}!D\+N\+S\+\_\+\+F\+L\+A\+G1\+\_\+\+T\+R\+U\+NC@{D\+N\+S\+\_\+\+F\+L\+A\+G1\+\_\+\+T\+R\+U\+NC}}
+\index{D\+N\+S\+\_\+\+F\+L\+A\+G1\+\_\+\+T\+R\+U\+NC@{D\+N\+S\+\_\+\+F\+L\+A\+G1\+\_\+\+T\+R\+U\+NC}!openmote-\/cc2538/lwip/src/include/lwip/prot/dns.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/dns.\+h}}
+\subsubsection{\texorpdfstring{D\+N\+S\+\_\+\+F\+L\+A\+G1\+\_\+\+T\+R\+U\+NC}{DNS\_FLAG1\_TRUNC}}
+{\footnotesize\ttfamily \#define D\+N\+S\+\_\+\+F\+L\+A\+G1\+\_\+\+T\+R\+U\+NC~0x02}
+
+\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2dns_8h_a9f6c329c04baba17fe0f5b2a6597d713}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2dns_8h_a9f6c329c04baba17fe0f5b2a6597d713}} 
+\index{openmote-\/cc2538/lwip/src/include/lwip/prot/dns.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/dns.\+h}!D\+N\+S\+\_\+\+F\+L\+A\+G2\+\_\+\+E\+R\+R\+\_\+\+M\+A\+SK@{D\+N\+S\+\_\+\+F\+L\+A\+G2\+\_\+\+E\+R\+R\+\_\+\+M\+A\+SK}}
+\index{D\+N\+S\+\_\+\+F\+L\+A\+G2\+\_\+\+E\+R\+R\+\_\+\+M\+A\+SK@{D\+N\+S\+\_\+\+F\+L\+A\+G2\+\_\+\+E\+R\+R\+\_\+\+M\+A\+SK}!openmote-\/cc2538/lwip/src/include/lwip/prot/dns.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/dns.\+h}}
+\subsubsection{\texorpdfstring{D\+N\+S\+\_\+\+F\+L\+A\+G2\+\_\+\+E\+R\+R\+\_\+\+M\+A\+SK}{DNS\_FLAG2\_ERR\_MASK}}
+{\footnotesize\ttfamily \#define D\+N\+S\+\_\+\+F\+L\+A\+G2\+\_\+\+E\+R\+R\+\_\+\+M\+A\+SK~0x0f}
+
+\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2dns_8h_a8ee5e2c8e517d6e4f2198057f81e93c6}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2dns_8h_a8ee5e2c8e517d6e4f2198057f81e93c6}} 
+\index{openmote-\/cc2538/lwip/src/include/lwip/prot/dns.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/dns.\+h}!D\+N\+S\+\_\+\+F\+L\+A\+G2\+\_\+\+E\+R\+R\+\_\+\+N\+A\+ME@{D\+N\+S\+\_\+\+F\+L\+A\+G2\+\_\+\+E\+R\+R\+\_\+\+N\+A\+ME}}
+\index{D\+N\+S\+\_\+\+F\+L\+A\+G2\+\_\+\+E\+R\+R\+\_\+\+N\+A\+ME@{D\+N\+S\+\_\+\+F\+L\+A\+G2\+\_\+\+E\+R\+R\+\_\+\+N\+A\+ME}!openmote-\/cc2538/lwip/src/include/lwip/prot/dns.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/dns.\+h}}
+\subsubsection{\texorpdfstring{D\+N\+S\+\_\+\+F\+L\+A\+G2\+\_\+\+E\+R\+R\+\_\+\+N\+A\+ME}{DNS\_FLAG2\_ERR\_NAME}}
+{\footnotesize\ttfamily \#define D\+N\+S\+\_\+\+F\+L\+A\+G2\+\_\+\+E\+R\+R\+\_\+\+N\+A\+ME~0x03}
+
+\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2dns_8h_a6aaa9da3d0f8d4c0799516d46d939942}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2dns_8h_a6aaa9da3d0f8d4c0799516d46d939942}} 
+\index{openmote-\/cc2538/lwip/src/include/lwip/prot/dns.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/dns.\+h}!D\+N\+S\+\_\+\+F\+L\+A\+G2\+\_\+\+E\+R\+R\+\_\+\+N\+O\+NE@{D\+N\+S\+\_\+\+F\+L\+A\+G2\+\_\+\+E\+R\+R\+\_\+\+N\+O\+NE}}
+\index{D\+N\+S\+\_\+\+F\+L\+A\+G2\+\_\+\+E\+R\+R\+\_\+\+N\+O\+NE@{D\+N\+S\+\_\+\+F\+L\+A\+G2\+\_\+\+E\+R\+R\+\_\+\+N\+O\+NE}!openmote-\/cc2538/lwip/src/include/lwip/prot/dns.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/dns.\+h}}
+\subsubsection{\texorpdfstring{D\+N\+S\+\_\+\+F\+L\+A\+G2\+\_\+\+E\+R\+R\+\_\+\+N\+O\+NE}{DNS\_FLAG2\_ERR\_NONE}}
+{\footnotesize\ttfamily \#define D\+N\+S\+\_\+\+F\+L\+A\+G2\+\_\+\+E\+R\+R\+\_\+\+N\+O\+NE~0x00}
+
+\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2dns_8h_ac72f8777ccc45ae274449ea7a9f3de04}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2dns_8h_ac72f8777ccc45ae274449ea7a9f3de04}} 
+\index{openmote-\/cc2538/lwip/src/include/lwip/prot/dns.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/dns.\+h}!D\+N\+S\+\_\+\+F\+L\+A\+G2\+\_\+\+RA@{D\+N\+S\+\_\+\+F\+L\+A\+G2\+\_\+\+RA}}
+\index{D\+N\+S\+\_\+\+F\+L\+A\+G2\+\_\+\+RA@{D\+N\+S\+\_\+\+F\+L\+A\+G2\+\_\+\+RA}!openmote-\/cc2538/lwip/src/include/lwip/prot/dns.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/dns.\+h}}
+\subsubsection{\texorpdfstring{D\+N\+S\+\_\+\+F\+L\+A\+G2\+\_\+\+RA}{DNS\_FLAG2\_RA}}
+{\footnotesize\ttfamily \#define D\+N\+S\+\_\+\+F\+L\+A\+G2\+\_\+\+RA~0x80}
+
+\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2dns_8h_a8b3138fb652e7b2fcdf8c24d555188af}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2dns_8h_a8b3138fb652e7b2fcdf8c24d555188af}} 
+\index{openmote-\/cc2538/lwip/src/include/lwip/prot/dns.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/dns.\+h}!D\+N\+S\+\_\+\+H\+D\+R\+\_\+\+G\+E\+T\+\_\+\+O\+P\+C\+O\+DE@{D\+N\+S\+\_\+\+H\+D\+R\+\_\+\+G\+E\+T\+\_\+\+O\+P\+C\+O\+DE}}
+\index{D\+N\+S\+\_\+\+H\+D\+R\+\_\+\+G\+E\+T\+\_\+\+O\+P\+C\+O\+DE@{D\+N\+S\+\_\+\+H\+D\+R\+\_\+\+G\+E\+T\+\_\+\+O\+P\+C\+O\+DE}!openmote-\/cc2538/lwip/src/include/lwip/prot/dns.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/dns.\+h}}
+\subsubsection{\texorpdfstring{D\+N\+S\+\_\+\+H\+D\+R\+\_\+\+G\+E\+T\+\_\+\+O\+P\+C\+O\+DE}{DNS\_HDR\_GET\_OPCODE}}
+{\footnotesize\ttfamily \#define D\+N\+S\+\_\+\+H\+D\+R\+\_\+\+G\+E\+T\+\_\+\+O\+P\+C\+O\+DE(\begin{DoxyParamCaption}\item[{}]{hdr }\end{DoxyParamCaption})~((((hdr)-\/$>$flags1) $>$$>$ 3) \& 0x\+F)}
+
+\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2dns_8h_a861fa0ab623ace9086f5c7247a9f04c8}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2dns_8h_a861fa0ab623ace9086f5c7247a9f04c8}} 
+\index{openmote-\/cc2538/lwip/src/include/lwip/prot/dns.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/dns.\+h}!D\+N\+S\+\_\+\+M\+Q\+U\+E\+R\+Y\+\_\+\+I\+P\+V4\+\_\+\+G\+R\+O\+U\+P\+\_\+\+I\+N\+IT@{D\+N\+S\+\_\+\+M\+Q\+U\+E\+R\+Y\+\_\+\+I\+P\+V4\+\_\+\+G\+R\+O\+U\+P\+\_\+\+I\+N\+IT}}
+\index{D\+N\+S\+\_\+\+M\+Q\+U\+E\+R\+Y\+\_\+\+I\+P\+V4\+\_\+\+G\+R\+O\+U\+P\+\_\+\+I\+N\+IT@{D\+N\+S\+\_\+\+M\+Q\+U\+E\+R\+Y\+\_\+\+I\+P\+V4\+\_\+\+G\+R\+O\+U\+P\+\_\+\+I\+N\+IT}!openmote-\/cc2538/lwip/src/include/lwip/prot/dns.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/dns.\+h}}
+\subsubsection{\texorpdfstring{D\+N\+S\+\_\+\+M\+Q\+U\+E\+R\+Y\+\_\+\+I\+P\+V4\+\_\+\+G\+R\+O\+U\+P\+\_\+\+I\+N\+IT}{DNS\_MQUERY\_IPV4\_GROUP\_INIT}}
+{\footnotesize\ttfamily \#define D\+N\+S\+\_\+\+M\+Q\+U\+E\+R\+Y\+\_\+\+I\+P\+V4\+\_\+\+G\+R\+O\+U\+P\+\_\+\+I\+N\+IT~I\+P\+A\+D\+D\+R4\+\_\+\+I\+N\+I\+T\+\_\+\+B\+Y\+T\+ES(224,0,0,251)}
+
+\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2dns_8h_ae8c419a73ada8ec6b470b3679ae87b8e}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2dns_8h_ae8c419a73ada8ec6b470b3679ae87b8e}} 
+\index{openmote-\/cc2538/lwip/src/include/lwip/prot/dns.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/dns.\+h}!D\+N\+S\+\_\+\+M\+Q\+U\+E\+R\+Y\+\_\+\+I\+P\+V6\+\_\+\+G\+R\+O\+U\+P\+\_\+\+I\+N\+IT@{D\+N\+S\+\_\+\+M\+Q\+U\+E\+R\+Y\+\_\+\+I\+P\+V6\+\_\+\+G\+R\+O\+U\+P\+\_\+\+I\+N\+IT}}
+\index{D\+N\+S\+\_\+\+M\+Q\+U\+E\+R\+Y\+\_\+\+I\+P\+V6\+\_\+\+G\+R\+O\+U\+P\+\_\+\+I\+N\+IT@{D\+N\+S\+\_\+\+M\+Q\+U\+E\+R\+Y\+\_\+\+I\+P\+V6\+\_\+\+G\+R\+O\+U\+P\+\_\+\+I\+N\+IT}!openmote-\/cc2538/lwip/src/include/lwip/prot/dns.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/dns.\+h}}
+\subsubsection{\texorpdfstring{D\+N\+S\+\_\+\+M\+Q\+U\+E\+R\+Y\+\_\+\+I\+P\+V6\+\_\+\+G\+R\+O\+U\+P\+\_\+\+I\+N\+IT}{DNS\_MQUERY\_IPV6\_GROUP\_INIT}}
+{\footnotesize\ttfamily \#define D\+N\+S\+\_\+\+M\+Q\+U\+E\+R\+Y\+\_\+\+I\+P\+V6\+\_\+\+G\+R\+O\+U\+P\+\_\+\+I\+N\+IT~\hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2ip__addr_8h_adaff748da2b808995993dd3db5420f08}{I\+P\+A\+D\+D\+R6\+\_\+\+I\+N\+I\+T\+\_\+\+H\+O\+ST}(0x\+F\+F020000,0,0,0x\+F\+B)}
+
+\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2dns_8h_a62d67af5ac6c6b3f98a6566a42564276}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2dns_8h_a62d67af5ac6c6b3f98a6566a42564276}} 
+\index{openmote-\/cc2538/lwip/src/include/lwip/prot/dns.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/dns.\+h}!D\+N\+S\+\_\+\+M\+Q\+U\+E\+R\+Y\+\_\+\+P\+O\+RT@{D\+N\+S\+\_\+\+M\+Q\+U\+E\+R\+Y\+\_\+\+P\+O\+RT}}
+\index{D\+N\+S\+\_\+\+M\+Q\+U\+E\+R\+Y\+\_\+\+P\+O\+RT@{D\+N\+S\+\_\+\+M\+Q\+U\+E\+R\+Y\+\_\+\+P\+O\+RT}!openmote-\/cc2538/lwip/src/include/lwip/prot/dns.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/dns.\+h}}
+\subsubsection{\texorpdfstring{D\+N\+S\+\_\+\+M\+Q\+U\+E\+R\+Y\+\_\+\+P\+O\+RT}{DNS\_MQUERY\_PORT}}
+{\footnotesize\ttfamily \#define D\+N\+S\+\_\+\+M\+Q\+U\+E\+R\+Y\+\_\+\+P\+O\+RT~5353}
+
+U\+DP port for multicast D\+NS queries \mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2dns_8h_a21008b249272ea02cfdc31aa7502a217}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2dns_8h_a21008b249272ea02cfdc31aa7502a217}} 
+\index{openmote-\/cc2538/lwip/src/include/lwip/prot/dns.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/dns.\+h}!D\+N\+S\+\_\+\+R\+R\+C\+L\+A\+S\+S\+\_\+\+A\+NY@{D\+N\+S\+\_\+\+R\+R\+C\+L\+A\+S\+S\+\_\+\+A\+NY}}
+\index{D\+N\+S\+\_\+\+R\+R\+C\+L\+A\+S\+S\+\_\+\+A\+NY@{D\+N\+S\+\_\+\+R\+R\+C\+L\+A\+S\+S\+\_\+\+A\+NY}!openmote-\/cc2538/lwip/src/include/lwip/prot/dns.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/dns.\+h}}
+\subsubsection{\texorpdfstring{D\+N\+S\+\_\+\+R\+R\+C\+L\+A\+S\+S\+\_\+\+A\+NY}{DNS\_RRCLASS\_ANY}}
+{\footnotesize\ttfamily \#define D\+N\+S\+\_\+\+R\+R\+C\+L\+A\+S\+S\+\_\+\+A\+NY~255   /$\ast$ any class $\ast$/}
+
+\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2dns_8h_ae403127af0f1656d8c724e723f6b3252}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2dns_8h_ae403127af0f1656d8c724e723f6b3252}} 
+\index{openmote-\/cc2538/lwip/src/include/lwip/prot/dns.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/dns.\+h}!D\+N\+S\+\_\+\+R\+R\+C\+L\+A\+S\+S\+\_\+\+CH@{D\+N\+S\+\_\+\+R\+R\+C\+L\+A\+S\+S\+\_\+\+CH}}
+\index{D\+N\+S\+\_\+\+R\+R\+C\+L\+A\+S\+S\+\_\+\+CH@{D\+N\+S\+\_\+\+R\+R\+C\+L\+A\+S\+S\+\_\+\+CH}!openmote-\/cc2538/lwip/src/include/lwip/prot/dns.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/dns.\+h}}
+\subsubsection{\texorpdfstring{D\+N\+S\+\_\+\+R\+R\+C\+L\+A\+S\+S\+\_\+\+CH}{DNS\_RRCLASS\_CH}}
+{\footnotesize\ttfamily \#define D\+N\+S\+\_\+\+R\+R\+C\+L\+A\+S\+S\+\_\+\+CH~3     /$\ast$ the C\+H\+A\+OS class $\ast$/}
+
+\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2dns_8h_a9d64fb2a8d4b656f11c7b334b810b5f1}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2dns_8h_a9d64fb2a8d4b656f11c7b334b810b5f1}} 
+\index{openmote-\/cc2538/lwip/src/include/lwip/prot/dns.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/dns.\+h}!D\+N\+S\+\_\+\+R\+R\+C\+L\+A\+S\+S\+\_\+\+CS@{D\+N\+S\+\_\+\+R\+R\+C\+L\+A\+S\+S\+\_\+\+CS}}
+\index{D\+N\+S\+\_\+\+R\+R\+C\+L\+A\+S\+S\+\_\+\+CS@{D\+N\+S\+\_\+\+R\+R\+C\+L\+A\+S\+S\+\_\+\+CS}!openmote-\/cc2538/lwip/src/include/lwip/prot/dns.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/dns.\+h}}
+\subsubsection{\texorpdfstring{D\+N\+S\+\_\+\+R\+R\+C\+L\+A\+S\+S\+\_\+\+CS}{DNS\_RRCLASS\_CS}}
+{\footnotesize\ttfamily \#define D\+N\+S\+\_\+\+R\+R\+C\+L\+A\+S\+S\+\_\+\+CS~2     /$\ast$ the C\+S\+N\+ET class (Obsolete -\/ used only for examples in some obsolete R\+F\+Cs) $\ast$/}
+
+\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2dns_8h_ad8e2e9df5f9942d5f2a50bbfc6da80d3}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2dns_8h_ad8e2e9df5f9942d5f2a50bbfc6da80d3}} 
+\index{openmote-\/cc2538/lwip/src/include/lwip/prot/dns.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/dns.\+h}!D\+N\+S\+\_\+\+R\+R\+C\+L\+A\+S\+S\+\_\+\+F\+L\+U\+SH@{D\+N\+S\+\_\+\+R\+R\+C\+L\+A\+S\+S\+\_\+\+F\+L\+U\+SH}}
+\index{D\+N\+S\+\_\+\+R\+R\+C\+L\+A\+S\+S\+\_\+\+F\+L\+U\+SH@{D\+N\+S\+\_\+\+R\+R\+C\+L\+A\+S\+S\+\_\+\+F\+L\+U\+SH}!openmote-\/cc2538/lwip/src/include/lwip/prot/dns.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/dns.\+h}}
+\subsubsection{\texorpdfstring{D\+N\+S\+\_\+\+R\+R\+C\+L\+A\+S\+S\+\_\+\+F\+L\+U\+SH}{DNS\_RRCLASS\_FLUSH}}
+{\footnotesize\ttfamily \#define D\+N\+S\+\_\+\+R\+R\+C\+L\+A\+S\+S\+\_\+\+F\+L\+U\+SH~0x800 /$\ast$ Flush bit $\ast$/}
+
+\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2dns_8h_a47055a9391e4a5c03e2aba7b1a4ad39a}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2dns_8h_a47055a9391e4a5c03e2aba7b1a4ad39a}} 
+\index{openmote-\/cc2538/lwip/src/include/lwip/prot/dns.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/dns.\+h}!D\+N\+S\+\_\+\+R\+R\+C\+L\+A\+S\+S\+\_\+\+HS@{D\+N\+S\+\_\+\+R\+R\+C\+L\+A\+S\+S\+\_\+\+HS}}
+\index{D\+N\+S\+\_\+\+R\+R\+C\+L\+A\+S\+S\+\_\+\+HS@{D\+N\+S\+\_\+\+R\+R\+C\+L\+A\+S\+S\+\_\+\+HS}!openmote-\/cc2538/lwip/src/include/lwip/prot/dns.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/dns.\+h}}
+\subsubsection{\texorpdfstring{D\+N\+S\+\_\+\+R\+R\+C\+L\+A\+S\+S\+\_\+\+HS}{DNS\_RRCLASS\_HS}}
+{\footnotesize\ttfamily \#define D\+N\+S\+\_\+\+R\+R\+C\+L\+A\+S\+S\+\_\+\+HS~4     /$\ast$ Hesiod \mbox{[}Dyer 87\mbox{]} $\ast$/}
+
+\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2dns_8h_a08bc1c1897d2921b6f102365be55da2a}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2dns_8h_a08bc1c1897d2921b6f102365be55da2a}} 
+\index{openmote-\/cc2538/lwip/src/include/lwip/prot/dns.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/dns.\+h}!D\+N\+S\+\_\+\+R\+R\+C\+L\+A\+S\+S\+\_\+\+IN@{D\+N\+S\+\_\+\+R\+R\+C\+L\+A\+S\+S\+\_\+\+IN}}
+\index{D\+N\+S\+\_\+\+R\+R\+C\+L\+A\+S\+S\+\_\+\+IN@{D\+N\+S\+\_\+\+R\+R\+C\+L\+A\+S\+S\+\_\+\+IN}!openmote-\/cc2538/lwip/src/include/lwip/prot/dns.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/dns.\+h}}
+\subsubsection{\texorpdfstring{D\+N\+S\+\_\+\+R\+R\+C\+L\+A\+S\+S\+\_\+\+IN}{DNS\_RRCLASS\_IN}}
+{\footnotesize\ttfamily \#define D\+N\+S\+\_\+\+R\+R\+C\+L\+A\+S\+S\+\_\+\+IN~1     /$\ast$ the Internet $\ast$/}
+
+\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2dns_8h_a830e99420463950d3c4d661487f20d0d}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2dns_8h_a830e99420463950d3c4d661487f20d0d}} 
+\index{openmote-\/cc2538/lwip/src/include/lwip/prot/dns.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/dns.\+h}!D\+N\+S\+\_\+\+R\+R\+T\+Y\+P\+E\+\_\+A@{D\+N\+S\+\_\+\+R\+R\+T\+Y\+P\+E\+\_\+A}}
+\index{D\+N\+S\+\_\+\+R\+R\+T\+Y\+P\+E\+\_\+A@{D\+N\+S\+\_\+\+R\+R\+T\+Y\+P\+E\+\_\+A}!openmote-\/cc2538/lwip/src/include/lwip/prot/dns.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/dns.\+h}}
+\subsubsection{\texorpdfstring{D\+N\+S\+\_\+\+R\+R\+T\+Y\+P\+E\+\_\+A}{DNS\_RRTYPE\_A}}
+{\footnotesize\ttfamily \#define D\+N\+S\+\_\+\+R\+R\+T\+Y\+P\+E\+\_\+A~1     /$\ast$ a host address $\ast$/}
+
+\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2dns_8h_ae533fbb9f59f4de915ed3ecb9ff24953}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2dns_8h_ae533fbb9f59f4de915ed3ecb9ff24953}} 
+\index{openmote-\/cc2538/lwip/src/include/lwip/prot/dns.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/dns.\+h}!D\+N\+S\+\_\+\+R\+R\+T\+Y\+P\+E\+\_\+\+A\+A\+AA@{D\+N\+S\+\_\+\+R\+R\+T\+Y\+P\+E\+\_\+\+A\+A\+AA}}
+\index{D\+N\+S\+\_\+\+R\+R\+T\+Y\+P\+E\+\_\+\+A\+A\+AA@{D\+N\+S\+\_\+\+R\+R\+T\+Y\+P\+E\+\_\+\+A\+A\+AA}!openmote-\/cc2538/lwip/src/include/lwip/prot/dns.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/dns.\+h}}
+\subsubsection{\texorpdfstring{D\+N\+S\+\_\+\+R\+R\+T\+Y\+P\+E\+\_\+\+A\+A\+AA}{DNS\_RRTYPE\_AAAA}}
+{\footnotesize\ttfamily \#define D\+N\+S\+\_\+\+R\+R\+T\+Y\+P\+E\+\_\+\+A\+A\+AA~28    /$\ast$ I\+Pv6 address $\ast$/}
+
+\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2dns_8h_aea32c0d7d57c585bb1a9bfd3ce81bed5}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2dns_8h_aea32c0d7d57c585bb1a9bfd3ce81bed5}} 
+\index{openmote-\/cc2538/lwip/src/include/lwip/prot/dns.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/dns.\+h}!D\+N\+S\+\_\+\+R\+R\+T\+Y\+P\+E\+\_\+\+A\+NY@{D\+N\+S\+\_\+\+R\+R\+T\+Y\+P\+E\+\_\+\+A\+NY}}
+\index{D\+N\+S\+\_\+\+R\+R\+T\+Y\+P\+E\+\_\+\+A\+NY@{D\+N\+S\+\_\+\+R\+R\+T\+Y\+P\+E\+\_\+\+A\+NY}!openmote-\/cc2538/lwip/src/include/lwip/prot/dns.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/dns.\+h}}
+\subsubsection{\texorpdfstring{D\+N\+S\+\_\+\+R\+R\+T\+Y\+P\+E\+\_\+\+A\+NY}{DNS\_RRTYPE\_ANY}}
+{\footnotesize\ttfamily \#define D\+N\+S\+\_\+\+R\+R\+T\+Y\+P\+E\+\_\+\+A\+NY~255   /$\ast$ any type $\ast$/}
+
+\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2dns_8h_a3dab0550bbdea0b4957461427d07be41}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2dns_8h_a3dab0550bbdea0b4957461427d07be41}} 
+\index{openmote-\/cc2538/lwip/src/include/lwip/prot/dns.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/dns.\+h}!D\+N\+S\+\_\+\+R\+R\+T\+Y\+P\+E\+\_\+\+C\+N\+A\+ME@{D\+N\+S\+\_\+\+R\+R\+T\+Y\+P\+E\+\_\+\+C\+N\+A\+ME}}
+\index{D\+N\+S\+\_\+\+R\+R\+T\+Y\+P\+E\+\_\+\+C\+N\+A\+ME@{D\+N\+S\+\_\+\+R\+R\+T\+Y\+P\+E\+\_\+\+C\+N\+A\+ME}!openmote-\/cc2538/lwip/src/include/lwip/prot/dns.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/dns.\+h}}
+\subsubsection{\texorpdfstring{D\+N\+S\+\_\+\+R\+R\+T\+Y\+P\+E\+\_\+\+C\+N\+A\+ME}{DNS\_RRTYPE\_CNAME}}
+{\footnotesize\ttfamily \#define D\+N\+S\+\_\+\+R\+R\+T\+Y\+P\+E\+\_\+\+C\+N\+A\+ME~5     /$\ast$ the canonical name for an alias $\ast$/}
+
+\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2dns_8h_aa38f49c344b6aa0caa6656dbc4f1b7c6}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2dns_8h_aa38f49c344b6aa0caa6656dbc4f1b7c6}} 
+\index{openmote-\/cc2538/lwip/src/include/lwip/prot/dns.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/dns.\+h}!D\+N\+S\+\_\+\+R\+R\+T\+Y\+P\+E\+\_\+\+H\+I\+N\+FO@{D\+N\+S\+\_\+\+R\+R\+T\+Y\+P\+E\+\_\+\+H\+I\+N\+FO}}
+\index{D\+N\+S\+\_\+\+R\+R\+T\+Y\+P\+E\+\_\+\+H\+I\+N\+FO@{D\+N\+S\+\_\+\+R\+R\+T\+Y\+P\+E\+\_\+\+H\+I\+N\+FO}!openmote-\/cc2538/lwip/src/include/lwip/prot/dns.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/dns.\+h}}
+\subsubsection{\texorpdfstring{D\+N\+S\+\_\+\+R\+R\+T\+Y\+P\+E\+\_\+\+H\+I\+N\+FO}{DNS\_RRTYPE\_HINFO}}
+{\footnotesize\ttfamily \#define D\+N\+S\+\_\+\+R\+R\+T\+Y\+P\+E\+\_\+\+H\+I\+N\+FO~13    /$\ast$ host information $\ast$/}
+
+\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2dns_8h_a70b5c47284dbde86c3563f20c6201962}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2dns_8h_a70b5c47284dbde86c3563f20c6201962}} 
+\index{openmote-\/cc2538/lwip/src/include/lwip/prot/dns.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/dns.\+h}!D\+N\+S\+\_\+\+R\+R\+T\+Y\+P\+E\+\_\+\+MB@{D\+N\+S\+\_\+\+R\+R\+T\+Y\+P\+E\+\_\+\+MB}}
+\index{D\+N\+S\+\_\+\+R\+R\+T\+Y\+P\+E\+\_\+\+MB@{D\+N\+S\+\_\+\+R\+R\+T\+Y\+P\+E\+\_\+\+MB}!openmote-\/cc2538/lwip/src/include/lwip/prot/dns.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/dns.\+h}}
+\subsubsection{\texorpdfstring{D\+N\+S\+\_\+\+R\+R\+T\+Y\+P\+E\+\_\+\+MB}{DNS\_RRTYPE\_MB}}
+{\footnotesize\ttfamily \#define D\+N\+S\+\_\+\+R\+R\+T\+Y\+P\+E\+\_\+\+MB~7     /$\ast$ a mailbox domain name (E\+X\+P\+E\+R\+I\+M\+E\+N\+T\+AL) $\ast$/}
+
+\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2dns_8h_ae7d66bce2de34d6dbc3e4efc1a31e664}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2dns_8h_ae7d66bce2de34d6dbc3e4efc1a31e664}} 
+\index{openmote-\/cc2538/lwip/src/include/lwip/prot/dns.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/dns.\+h}!D\+N\+S\+\_\+\+R\+R\+T\+Y\+P\+E\+\_\+\+MD@{D\+N\+S\+\_\+\+R\+R\+T\+Y\+P\+E\+\_\+\+MD}}
+\index{D\+N\+S\+\_\+\+R\+R\+T\+Y\+P\+E\+\_\+\+MD@{D\+N\+S\+\_\+\+R\+R\+T\+Y\+P\+E\+\_\+\+MD}!openmote-\/cc2538/lwip/src/include/lwip/prot/dns.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/dns.\+h}}
+\subsubsection{\texorpdfstring{D\+N\+S\+\_\+\+R\+R\+T\+Y\+P\+E\+\_\+\+MD}{DNS\_RRTYPE\_MD}}
+{\footnotesize\ttfamily \#define D\+N\+S\+\_\+\+R\+R\+T\+Y\+P\+E\+\_\+\+MD~3     /$\ast$ a mail destination (Obsolete -\/ use MX) $\ast$/}
+
+\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2dns_8h_a3e88aee3ce8e0395e04b4248600e805d}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2dns_8h_a3e88aee3ce8e0395e04b4248600e805d}} 
+\index{openmote-\/cc2538/lwip/src/include/lwip/prot/dns.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/dns.\+h}!D\+N\+S\+\_\+\+R\+R\+T\+Y\+P\+E\+\_\+\+MF@{D\+N\+S\+\_\+\+R\+R\+T\+Y\+P\+E\+\_\+\+MF}}
+\index{D\+N\+S\+\_\+\+R\+R\+T\+Y\+P\+E\+\_\+\+MF@{D\+N\+S\+\_\+\+R\+R\+T\+Y\+P\+E\+\_\+\+MF}!openmote-\/cc2538/lwip/src/include/lwip/prot/dns.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/dns.\+h}}
+\subsubsection{\texorpdfstring{D\+N\+S\+\_\+\+R\+R\+T\+Y\+P\+E\+\_\+\+MF}{DNS\_RRTYPE\_MF}}
+{\footnotesize\ttfamily \#define D\+N\+S\+\_\+\+R\+R\+T\+Y\+P\+E\+\_\+\+MF~4     /$\ast$ a mail forwarder (Obsolete -\/ use MX) $\ast$/}
+
+\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2dns_8h_a102558e1400d41a35868f82c7eba8503}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2dns_8h_a102558e1400d41a35868f82c7eba8503}} 
+\index{openmote-\/cc2538/lwip/src/include/lwip/prot/dns.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/dns.\+h}!D\+N\+S\+\_\+\+R\+R\+T\+Y\+P\+E\+\_\+\+MG@{D\+N\+S\+\_\+\+R\+R\+T\+Y\+P\+E\+\_\+\+MG}}
+\index{D\+N\+S\+\_\+\+R\+R\+T\+Y\+P\+E\+\_\+\+MG@{D\+N\+S\+\_\+\+R\+R\+T\+Y\+P\+E\+\_\+\+MG}!openmote-\/cc2538/lwip/src/include/lwip/prot/dns.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/dns.\+h}}
+\subsubsection{\texorpdfstring{D\+N\+S\+\_\+\+R\+R\+T\+Y\+P\+E\+\_\+\+MG}{DNS\_RRTYPE\_MG}}
+{\footnotesize\ttfamily \#define D\+N\+S\+\_\+\+R\+R\+T\+Y\+P\+E\+\_\+\+MG~8     /$\ast$ a mail group member (E\+X\+P\+E\+R\+I\+M\+E\+N\+T\+AL) $\ast$/}
+
+\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2dns_8h_a952c8c700b3ddad714e51873692a345b}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2dns_8h_a952c8c700b3ddad714e51873692a345b}} 
+\index{openmote-\/cc2538/lwip/src/include/lwip/prot/dns.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/dns.\+h}!D\+N\+S\+\_\+\+R\+R\+T\+Y\+P\+E\+\_\+\+M\+I\+N\+FO@{D\+N\+S\+\_\+\+R\+R\+T\+Y\+P\+E\+\_\+\+M\+I\+N\+FO}}
+\index{D\+N\+S\+\_\+\+R\+R\+T\+Y\+P\+E\+\_\+\+M\+I\+N\+FO@{D\+N\+S\+\_\+\+R\+R\+T\+Y\+P\+E\+\_\+\+M\+I\+N\+FO}!openmote-\/cc2538/lwip/src/include/lwip/prot/dns.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/dns.\+h}}
+\subsubsection{\texorpdfstring{D\+N\+S\+\_\+\+R\+R\+T\+Y\+P\+E\+\_\+\+M\+I\+N\+FO}{DNS\_RRTYPE\_MINFO}}
+{\footnotesize\ttfamily \#define D\+N\+S\+\_\+\+R\+R\+T\+Y\+P\+E\+\_\+\+M\+I\+N\+FO~14    /$\ast$ mailbox or mail list information $\ast$/}
+
+\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2dns_8h_a2d4fdfd7f5d8f9f758278003dc243d04}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2dns_8h_a2d4fdfd7f5d8f9f758278003dc243d04}} 
+\index{openmote-\/cc2538/lwip/src/include/lwip/prot/dns.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/dns.\+h}!D\+N\+S\+\_\+\+R\+R\+T\+Y\+P\+E\+\_\+\+MR@{D\+N\+S\+\_\+\+R\+R\+T\+Y\+P\+E\+\_\+\+MR}}
+\index{D\+N\+S\+\_\+\+R\+R\+T\+Y\+P\+E\+\_\+\+MR@{D\+N\+S\+\_\+\+R\+R\+T\+Y\+P\+E\+\_\+\+MR}!openmote-\/cc2538/lwip/src/include/lwip/prot/dns.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/dns.\+h}}
+\subsubsection{\texorpdfstring{D\+N\+S\+\_\+\+R\+R\+T\+Y\+P\+E\+\_\+\+MR}{DNS\_RRTYPE\_MR}}
+{\footnotesize\ttfamily \#define D\+N\+S\+\_\+\+R\+R\+T\+Y\+P\+E\+\_\+\+MR~9     /$\ast$ a mail rename domain name (E\+X\+P\+E\+R\+I\+M\+E\+N\+T\+AL) $\ast$/}
+
+\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2dns_8h_a52c933b4a3def47075a16ba3006d7f99}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2dns_8h_a52c933b4a3def47075a16ba3006d7f99}} 
+\index{openmote-\/cc2538/lwip/src/include/lwip/prot/dns.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/dns.\+h}!D\+N\+S\+\_\+\+R\+R\+T\+Y\+P\+E\+\_\+\+MX@{D\+N\+S\+\_\+\+R\+R\+T\+Y\+P\+E\+\_\+\+MX}}
+\index{D\+N\+S\+\_\+\+R\+R\+T\+Y\+P\+E\+\_\+\+MX@{D\+N\+S\+\_\+\+R\+R\+T\+Y\+P\+E\+\_\+\+MX}!openmote-\/cc2538/lwip/src/include/lwip/prot/dns.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/dns.\+h}}
+\subsubsection{\texorpdfstring{D\+N\+S\+\_\+\+R\+R\+T\+Y\+P\+E\+\_\+\+MX}{DNS\_RRTYPE\_MX}}
+{\footnotesize\ttfamily \#define D\+N\+S\+\_\+\+R\+R\+T\+Y\+P\+E\+\_\+\+MX~15    /$\ast$ mail exchange $\ast$/}
+
+\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2dns_8h_acca8f4a2a1bea8615d892150ed890633}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2dns_8h_acca8f4a2a1bea8615d892150ed890633}} 
+\index{openmote-\/cc2538/lwip/src/include/lwip/prot/dns.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/dns.\+h}!D\+N\+S\+\_\+\+R\+R\+T\+Y\+P\+E\+\_\+\+NS@{D\+N\+S\+\_\+\+R\+R\+T\+Y\+P\+E\+\_\+\+NS}}
+\index{D\+N\+S\+\_\+\+R\+R\+T\+Y\+P\+E\+\_\+\+NS@{D\+N\+S\+\_\+\+R\+R\+T\+Y\+P\+E\+\_\+\+NS}!openmote-\/cc2538/lwip/src/include/lwip/prot/dns.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/dns.\+h}}
+\subsubsection{\texorpdfstring{D\+N\+S\+\_\+\+R\+R\+T\+Y\+P\+E\+\_\+\+NS}{DNS\_RRTYPE\_NS}}
+{\footnotesize\ttfamily \#define D\+N\+S\+\_\+\+R\+R\+T\+Y\+P\+E\+\_\+\+NS~2     /$\ast$ an authoritative name server $\ast$/}
+
+\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2dns_8h_aaa883ee62a659bdde6207d737e77795c}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2dns_8h_aaa883ee62a659bdde6207d737e77795c}} 
+\index{openmote-\/cc2538/lwip/src/include/lwip/prot/dns.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/dns.\+h}!D\+N\+S\+\_\+\+R\+R\+T\+Y\+P\+E\+\_\+\+N\+U\+LL@{D\+N\+S\+\_\+\+R\+R\+T\+Y\+P\+E\+\_\+\+N\+U\+LL}}
+\index{D\+N\+S\+\_\+\+R\+R\+T\+Y\+P\+E\+\_\+\+N\+U\+LL@{D\+N\+S\+\_\+\+R\+R\+T\+Y\+P\+E\+\_\+\+N\+U\+LL}!openmote-\/cc2538/lwip/src/include/lwip/prot/dns.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/dns.\+h}}
+\subsubsection{\texorpdfstring{D\+N\+S\+\_\+\+R\+R\+T\+Y\+P\+E\+\_\+\+N\+U\+LL}{DNS\_RRTYPE\_NULL}}
+{\footnotesize\ttfamily \#define D\+N\+S\+\_\+\+R\+R\+T\+Y\+P\+E\+\_\+\+N\+U\+LL~10    /$\ast$ a null RR (E\+X\+P\+E\+R\+I\+M\+E\+N\+T\+AL) $\ast$/}
+
+\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2dns_8h_ace55462cfcd4872a7c68178ed779cb89}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2dns_8h_ace55462cfcd4872a7c68178ed779cb89}} 
+\index{openmote-\/cc2538/lwip/src/include/lwip/prot/dns.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/dns.\+h}!D\+N\+S\+\_\+\+R\+R\+T\+Y\+P\+E\+\_\+\+P\+TR@{D\+N\+S\+\_\+\+R\+R\+T\+Y\+P\+E\+\_\+\+P\+TR}}
+\index{D\+N\+S\+\_\+\+R\+R\+T\+Y\+P\+E\+\_\+\+P\+TR@{D\+N\+S\+\_\+\+R\+R\+T\+Y\+P\+E\+\_\+\+P\+TR}!openmote-\/cc2538/lwip/src/include/lwip/prot/dns.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/dns.\+h}}
+\subsubsection{\texorpdfstring{D\+N\+S\+\_\+\+R\+R\+T\+Y\+P\+E\+\_\+\+P\+TR}{DNS\_RRTYPE\_PTR}}
+{\footnotesize\ttfamily \#define D\+N\+S\+\_\+\+R\+R\+T\+Y\+P\+E\+\_\+\+P\+TR~12    /$\ast$ a domain name pointer $\ast$/}
+
+\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2dns_8h_aba0e1e44b7ad6b4096384d041111ee7a}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2dns_8h_aba0e1e44b7ad6b4096384d041111ee7a}} 
+\index{openmote-\/cc2538/lwip/src/include/lwip/prot/dns.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/dns.\+h}!D\+N\+S\+\_\+\+R\+R\+T\+Y\+P\+E\+\_\+\+S\+OA@{D\+N\+S\+\_\+\+R\+R\+T\+Y\+P\+E\+\_\+\+S\+OA}}
+\index{D\+N\+S\+\_\+\+R\+R\+T\+Y\+P\+E\+\_\+\+S\+OA@{D\+N\+S\+\_\+\+R\+R\+T\+Y\+P\+E\+\_\+\+S\+OA}!openmote-\/cc2538/lwip/src/include/lwip/prot/dns.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/dns.\+h}}
+\subsubsection{\texorpdfstring{D\+N\+S\+\_\+\+R\+R\+T\+Y\+P\+E\+\_\+\+S\+OA}{DNS\_RRTYPE\_SOA}}
+{\footnotesize\ttfamily \#define D\+N\+S\+\_\+\+R\+R\+T\+Y\+P\+E\+\_\+\+S\+OA~6     /$\ast$ marks the start of a zone of authority $\ast$/}
+
+\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2dns_8h_a38f81c327955912ba9cc893c26d3a86e}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2dns_8h_a38f81c327955912ba9cc893c26d3a86e}} 
+\index{openmote-\/cc2538/lwip/src/include/lwip/prot/dns.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/dns.\+h}!D\+N\+S\+\_\+\+R\+R\+T\+Y\+P\+E\+\_\+\+S\+RV@{D\+N\+S\+\_\+\+R\+R\+T\+Y\+P\+E\+\_\+\+S\+RV}}
+\index{D\+N\+S\+\_\+\+R\+R\+T\+Y\+P\+E\+\_\+\+S\+RV@{D\+N\+S\+\_\+\+R\+R\+T\+Y\+P\+E\+\_\+\+S\+RV}!openmote-\/cc2538/lwip/src/include/lwip/prot/dns.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/dns.\+h}}
+\subsubsection{\texorpdfstring{D\+N\+S\+\_\+\+R\+R\+T\+Y\+P\+E\+\_\+\+S\+RV}{DNS\_RRTYPE\_SRV}}
+{\footnotesize\ttfamily \#define D\+N\+S\+\_\+\+R\+R\+T\+Y\+P\+E\+\_\+\+S\+RV~33    /$\ast$ service location $\ast$/}
+
+\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2dns_8h_a62820cc2f56dd4fdd301729fa05b4f96}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2dns_8h_a62820cc2f56dd4fdd301729fa05b4f96}} 
+\index{openmote-\/cc2538/lwip/src/include/lwip/prot/dns.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/dns.\+h}!D\+N\+S\+\_\+\+R\+R\+T\+Y\+P\+E\+\_\+\+T\+XT@{D\+N\+S\+\_\+\+R\+R\+T\+Y\+P\+E\+\_\+\+T\+XT}}
+\index{D\+N\+S\+\_\+\+R\+R\+T\+Y\+P\+E\+\_\+\+T\+XT@{D\+N\+S\+\_\+\+R\+R\+T\+Y\+P\+E\+\_\+\+T\+XT}!openmote-\/cc2538/lwip/src/include/lwip/prot/dns.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/dns.\+h}}
+\subsubsection{\texorpdfstring{D\+N\+S\+\_\+\+R\+R\+T\+Y\+P\+E\+\_\+\+T\+XT}{DNS\_RRTYPE\_TXT}}
+{\footnotesize\ttfamily \#define D\+N\+S\+\_\+\+R\+R\+T\+Y\+P\+E\+\_\+\+T\+XT~16    /$\ast$ text strings $\ast$/}
+
+\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2dns_8h_aa64d1579e0da263c09134d12c89c9ce4}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2dns_8h_aa64d1579e0da263c09134d12c89c9ce4}} 
+\index{openmote-\/cc2538/lwip/src/include/lwip/prot/dns.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/dns.\+h}!D\+N\+S\+\_\+\+R\+R\+T\+Y\+P\+E\+\_\+\+W\+KS@{D\+N\+S\+\_\+\+R\+R\+T\+Y\+P\+E\+\_\+\+W\+KS}}
+\index{D\+N\+S\+\_\+\+R\+R\+T\+Y\+P\+E\+\_\+\+W\+KS@{D\+N\+S\+\_\+\+R\+R\+T\+Y\+P\+E\+\_\+\+W\+KS}!openmote-\/cc2538/lwip/src/include/lwip/prot/dns.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/dns.\+h}}
+\subsubsection{\texorpdfstring{D\+N\+S\+\_\+\+R\+R\+T\+Y\+P\+E\+\_\+\+W\+KS}{DNS\_RRTYPE\_WKS}}
+{\footnotesize\ttfamily \#define D\+N\+S\+\_\+\+R\+R\+T\+Y\+P\+E\+\_\+\+W\+KS~11    /$\ast$ a well known service description $\ast$/}
+
+\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2dns_8h_a9266b48706648ecf0625a3e651095317}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2dns_8h_a9266b48706648ecf0625a3e651095317}} 
+\index{openmote-\/cc2538/lwip/src/include/lwip/prot/dns.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/dns.\+h}!D\+N\+S\+\_\+\+S\+E\+R\+V\+E\+R\+\_\+\+P\+O\+RT@{D\+N\+S\+\_\+\+S\+E\+R\+V\+E\+R\+\_\+\+P\+O\+RT}}
+\index{D\+N\+S\+\_\+\+S\+E\+R\+V\+E\+R\+\_\+\+P\+O\+RT@{D\+N\+S\+\_\+\+S\+E\+R\+V\+E\+R\+\_\+\+P\+O\+RT}!openmote-\/cc2538/lwip/src/include/lwip/prot/dns.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/dns.\+h}}
+\subsubsection{\texorpdfstring{D\+N\+S\+\_\+\+S\+E\+R\+V\+E\+R\+\_\+\+P\+O\+RT}{DNS\_SERVER\_PORT}}
+{\footnotesize\ttfamily \#define D\+N\+S\+\_\+\+S\+E\+R\+V\+E\+R\+\_\+\+P\+O\+RT~53}
+
+D\+NS server port address \mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2dns_8h_a1ffff846513e2493ba915d8874c26476}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2dns_8h_a1ffff846513e2493ba915d8874c26476}} 
+\index{openmote-\/cc2538/lwip/src/include/lwip/prot/dns.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/dns.\+h}!S\+I\+Z\+E\+O\+F\+\_\+\+D\+N\+S\+\_\+\+H\+DR@{S\+I\+Z\+E\+O\+F\+\_\+\+D\+N\+S\+\_\+\+H\+DR}}
+\index{S\+I\+Z\+E\+O\+F\+\_\+\+D\+N\+S\+\_\+\+H\+DR@{S\+I\+Z\+E\+O\+F\+\_\+\+D\+N\+S\+\_\+\+H\+DR}!openmote-\/cc2538/lwip/src/include/lwip/prot/dns.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/dns.\+h}}
+\subsubsection{\texorpdfstring{S\+I\+Z\+E\+O\+F\+\_\+\+D\+N\+S\+\_\+\+H\+DR}{SIZEOF\_DNS\_HDR}}
+{\footnotesize\ttfamily \#define S\+I\+Z\+E\+O\+F\+\_\+\+D\+N\+S\+\_\+\+H\+DR~12}
+
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2dns_8h_abfbe0197612b7e138ae2dd9545e3664c}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2dns_8h_abfbe0197612b7e138ae2dd9545e3664c}} 
+\index{openmote-\/cc2538/lwip/src/include/lwip/prot/dns.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/dns.\+h}!P\+A\+C\+K\+\_\+\+S\+T\+R\+U\+C\+T\+\_\+\+S\+T\+R\+U\+CT@{P\+A\+C\+K\+\_\+\+S\+T\+R\+U\+C\+T\+\_\+\+S\+T\+R\+U\+CT}}
+\index{P\+A\+C\+K\+\_\+\+S\+T\+R\+U\+C\+T\+\_\+\+S\+T\+R\+U\+CT@{P\+A\+C\+K\+\_\+\+S\+T\+R\+U\+C\+T\+\_\+\+S\+T\+R\+U\+CT}!openmote-\/cc2538/lwip/src/include/lwip/prot/dns.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/dns.\+h}}
+\subsubsection{\texorpdfstring{P\+A\+C\+K\+\_\+\+S\+T\+R\+U\+C\+T\+\_\+\+S\+T\+R\+U\+CT}{PACK\_STRUCT\_STRUCT}}
+{\footnotesize\ttfamily \hyperlink{group__compiler__abstraction_ga73199061891adf1b912d20835c7d5e96}{P\+A\+C\+K\+\_\+\+S\+T\+R\+U\+C\+T\+\_\+\+B\+E\+G\+IN} struct \hyperlink{structdns__hdr}{dns\+\_\+hdr}  P\+A\+C\+K\+\_\+\+S\+T\+R\+U\+C\+T\+\_\+\+S\+T\+R\+U\+CT}
+

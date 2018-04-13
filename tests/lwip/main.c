@@ -32,6 +32,7 @@ static int ifconfig(int argc, char **argv)
 {
     (void)argc;
     (void)argv;
+    //printf("192.168.0.1");
     for (struct netif *iface = netif_list; iface != NULL; iface = iface->next) {
         printf("%s_%02u: ", iface->name, iface->num);
 #ifdef MODULE_LWIP_IPV6
@@ -43,8 +44,13 @@ static int ifconfig(int argc, char **argv)
             }
         }
 #endif
+
         puts("");
     }
+    #ifdef MODULE_LWIP_IPV4
+    printf("192.168.0.1");
+#endif
+
     return 0;
 }
 

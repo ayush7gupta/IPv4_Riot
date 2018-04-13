@@ -1,0 +1,109 @@
+\hypertarget{posix__semaphore_2main_8c}{}\section{/home/ayush/\+R\+I\+O\+T/tests/posix\+\_\+semaphore/main.c File Reference}
+\label{posix__semaphore_2main_8c}\index{/home/ayush/\+R\+I\+O\+T/tests/posix\+\_\+semaphore/main.\+c@{/home/ayush/\+R\+I\+O\+T/tests/posix\+\_\+semaphore/main.\+c}}
+
+
+Semaphore test application.  
+
+
+{\ttfamily \#include $<$errno.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$semaphore.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}fmt.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}msg.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}timex.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}thread.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}xtimer.\+h\char`\"{}}\newline
+Include dependency graph for main.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{posix__semaphore_2main_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{posix__semaphore_2main_8c_a38bacd71d5e7e5ac6e385b087b370649}{S\+E\+M\+A\+P\+H\+O\+R\+E\+\_\+\+M\+S\+G\+\_\+\+Q\+U\+E\+U\+E\+\_\+\+S\+I\+ZE}~(8)
+\item 
+\#define \hyperlink{posix__semaphore_2main_8c_aeff8f0a85dc577deb0ad88ea851b4611}{S\+E\+M\+A\+P\+H\+O\+R\+E\+\_\+\+T\+E\+S\+T\+\_\+\+T\+H\+R\+E\+A\+DS}~(5)
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{posix__semaphore_2main_8c_a53dde2070b2e7c66cae9dfd7bf09b380}{test2} (void)
+\item 
+void \hyperlink{posix__semaphore_2main_8c_ab0f93702cbdb4b0ad3172fbacde22e85}{test3} (void)
+\item 
+void \hyperlink{posix__semaphore_2main_8c_a8cd5114dae85c02da78296daa44d39e2}{test4} (void)
+\item 
+int \hyperlink{posix__semaphore_2main_8c_a840291bc02cba5474a4cb46a9b9566fe}{main} (void)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+char \hyperlink{posix__semaphore_2main_8c_a2574843ddc59f7300b67849ae65d6ebd}{names} \mbox{[}\hyperlink{posix__semaphore_2main_8c_aeff8f0a85dc577deb0ad88ea851b4611}{S\+E\+M\+A\+P\+H\+O\+R\+E\+\_\+\+T\+E\+S\+T\+\_\+\+T\+H\+R\+E\+A\+DS}\mbox{]}\mbox{[}16\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Semaphore test application. 
+
+\begin{DoxyAuthor}{Author}
+Christian Mehlis \href{mailto:mehlis@inf.fu-berlin.de}{\tt mehlis@inf.\+fu-\/berlin.\+de} 
+
+René Kijewski \href{mailto:rene.kijewski@fu-berlin.de}{\tt rene.\+kijewski@fu-\/berlin.\+de} 
+
+Martine Lenders \href{mailto:mlenders@inf.fu-berlin.de}{\tt mlenders@inf.\+fu-\/berlin.\+de} 
+\end{DoxyAuthor}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{posix__semaphore_2main_8c_a38bacd71d5e7e5ac6e385b087b370649}\label{posix__semaphore_2main_8c_a38bacd71d5e7e5ac6e385b087b370649}} 
+\index{posix\+\_\+semaphore/main.\+c@{posix\+\_\+semaphore/main.\+c}!S\+E\+M\+A\+P\+H\+O\+R\+E\+\_\+\+M\+S\+G\+\_\+\+Q\+U\+E\+U\+E\+\_\+\+S\+I\+ZE@{S\+E\+M\+A\+P\+H\+O\+R\+E\+\_\+\+M\+S\+G\+\_\+\+Q\+U\+E\+U\+E\+\_\+\+S\+I\+ZE}}
+\index{S\+E\+M\+A\+P\+H\+O\+R\+E\+\_\+\+M\+S\+G\+\_\+\+Q\+U\+E\+U\+E\+\_\+\+S\+I\+ZE@{S\+E\+M\+A\+P\+H\+O\+R\+E\+\_\+\+M\+S\+G\+\_\+\+Q\+U\+E\+U\+E\+\_\+\+S\+I\+ZE}!posix\+\_\+semaphore/main.\+c@{posix\+\_\+semaphore/main.\+c}}
+\subsubsection{\texorpdfstring{S\+E\+M\+A\+P\+H\+O\+R\+E\+\_\+\+M\+S\+G\+\_\+\+Q\+U\+E\+U\+E\+\_\+\+S\+I\+ZE}{SEMAPHORE\_MSG\_QUEUE\_SIZE}}
+{\footnotesize\ttfamily \#define S\+E\+M\+A\+P\+H\+O\+R\+E\+\_\+\+M\+S\+G\+\_\+\+Q\+U\+E\+U\+E\+\_\+\+S\+I\+ZE~(8)}
+
+\mbox{\Hypertarget{posix__semaphore_2main_8c_aeff8f0a85dc577deb0ad88ea851b4611}\label{posix__semaphore_2main_8c_aeff8f0a85dc577deb0ad88ea851b4611}} 
+\index{posix\+\_\+semaphore/main.\+c@{posix\+\_\+semaphore/main.\+c}!S\+E\+M\+A\+P\+H\+O\+R\+E\+\_\+\+T\+E\+S\+T\+\_\+\+T\+H\+R\+E\+A\+DS@{S\+E\+M\+A\+P\+H\+O\+R\+E\+\_\+\+T\+E\+S\+T\+\_\+\+T\+H\+R\+E\+A\+DS}}
+\index{S\+E\+M\+A\+P\+H\+O\+R\+E\+\_\+\+T\+E\+S\+T\+\_\+\+T\+H\+R\+E\+A\+DS@{S\+E\+M\+A\+P\+H\+O\+R\+E\+\_\+\+T\+E\+S\+T\+\_\+\+T\+H\+R\+E\+A\+DS}!posix\+\_\+semaphore/main.\+c@{posix\+\_\+semaphore/main.\+c}}
+\subsubsection{\texorpdfstring{S\+E\+M\+A\+P\+H\+O\+R\+E\+\_\+\+T\+E\+S\+T\+\_\+\+T\+H\+R\+E\+A\+DS}{SEMAPHORE\_TEST\_THREADS}}
+{\footnotesize\ttfamily \#define S\+E\+M\+A\+P\+H\+O\+R\+E\+\_\+\+T\+E\+S\+T\+\_\+\+T\+H\+R\+E\+A\+DS~(5)}
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{posix__semaphore_2main_8c_a840291bc02cba5474a4cb46a9b9566fe}\label{posix__semaphore_2main_8c_a840291bc02cba5474a4cb46a9b9566fe}} 
+\index{posix\+\_\+semaphore/main.\+c@{posix\+\_\+semaphore/main.\+c}!main@{main}}
+\index{main@{main}!posix\+\_\+semaphore/main.\+c@{posix\+\_\+semaphore/main.\+c}}
+\subsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{posix__semaphore_2main_8c_a53dde2070b2e7c66cae9dfd7bf09b380}\label{posix__semaphore_2main_8c_a53dde2070b2e7c66cae9dfd7bf09b380}} 
+\index{posix\+\_\+semaphore/main.\+c@{posix\+\_\+semaphore/main.\+c}!test2@{test2}}
+\index{test2@{test2}!posix\+\_\+semaphore/main.\+c@{posix\+\_\+semaphore/main.\+c}}
+\subsubsection{\texorpdfstring{test2()}{test2()}}
+{\footnotesize\ttfamily void test2 (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{posix__semaphore_2main_8c_ab0f93702cbdb4b0ad3172fbacde22e85}\label{posix__semaphore_2main_8c_ab0f93702cbdb4b0ad3172fbacde22e85}} 
+\index{posix\+\_\+semaphore/main.\+c@{posix\+\_\+semaphore/main.\+c}!test3@{test3}}
+\index{test3@{test3}!posix\+\_\+semaphore/main.\+c@{posix\+\_\+semaphore/main.\+c}}
+\subsubsection{\texorpdfstring{test3()}{test3()}}
+{\footnotesize\ttfamily void test3 (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{posix__semaphore_2main_8c_a8cd5114dae85c02da78296daa44d39e2}\label{posix__semaphore_2main_8c_a8cd5114dae85c02da78296daa44d39e2}} 
+\index{posix\+\_\+semaphore/main.\+c@{posix\+\_\+semaphore/main.\+c}!test4@{test4}}
+\index{test4@{test4}!posix\+\_\+semaphore/main.\+c@{posix\+\_\+semaphore/main.\+c}}
+\subsubsection{\texorpdfstring{test4()}{test4()}}
+{\footnotesize\ttfamily void test4 (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{posix__semaphore_2main_8c_a2574843ddc59f7300b67849ae65d6ebd}\label{posix__semaphore_2main_8c_a2574843ddc59f7300b67849ae65d6ebd}} 
+\index{posix\+\_\+semaphore/main.\+c@{posix\+\_\+semaphore/main.\+c}!names@{names}}
+\index{names@{names}!posix\+\_\+semaphore/main.\+c@{posix\+\_\+semaphore/main.\+c}}
+\subsubsection{\texorpdfstring{names}{names}}
+{\footnotesize\ttfamily char names\mbox{[}\hyperlink{posix__semaphore_2main_8c_aeff8f0a85dc577deb0ad88ea851b4611}{S\+E\+M\+A\+P\+H\+O\+R\+E\+\_\+\+T\+E\+S\+T\+\_\+\+T\+H\+R\+E\+A\+DS}\mbox{]}\mbox{[}16\mbox{]}}
+

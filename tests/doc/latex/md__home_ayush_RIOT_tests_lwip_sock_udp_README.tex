@@ -1,0 +1,29 @@
+This tests the {\ttfamily sock\+\_\+udp} port of lw\+IP. There is no network device needed since a \href{http://doc.riot-os.org/group__sys__netdev__test.html}{\tt virtual device} is provided at the backend.
+
+These tests test both I\+Pv4 and I\+Pv6 capabilities. They can be activated by the {\ttfamily L\+W\+I\+P\+\_\+\+I\+P\+V4} and {\ttfamily L\+W\+I\+P\+\_\+\+I\+P\+V6} environment variables to a non-\/zero value. I\+Pv6 is activated by default\+:
+
+
+\begin{DoxyCode}
+make all test
+# or
+LWIP\_IPV6=1 make all test
+\end{DoxyCode}
+
+
+To just test I\+Pv4 set the {\ttfamily L\+W\+I\+P\+\_\+\+I\+P\+V4} to a non-\/zero value (I\+Pv6 will be deactivated automatically)\+:
+
+
+\begin{DoxyCode}
+LWIP\_IPV4=1 make all test
+\end{DoxyCode}
+
+
+To test both set the {\ttfamily L\+W\+I\+P\+\_\+\+I\+P\+V4} and {\ttfamily L\+W\+I\+P\+\_\+\+I\+P\+V6} to a non-\/zero value\+:
+
+
+\begin{DoxyCode}
+LWIP\_IPV4=1 LWIP\_IPV6=1 make all test
+\end{DoxyCode}
+
+
+Since lw\+IP uses a lot of macro magic to activate/deactivate these capabilities it is advisable to {\bfseries test all three configurations individually} (just I\+Pv4, just I\+Pv6, I\+Pv4/\+I\+Pv6 dual stack mode). 

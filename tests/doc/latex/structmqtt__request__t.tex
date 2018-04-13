@@ -1,0 +1,70 @@
+\hypertarget{structmqtt__request__t}{}\section{mqtt\+\_\+request\+\_\+t Struct Reference}
+\label{structmqtt__request__t}\index{mqtt\+\_\+request\+\_\+t@{mqtt\+\_\+request\+\_\+t}}
+
+
+{\ttfamily \#include $<$mqtt.\+h$>$}
+
+
+
+Collaboration diagram for mqtt\+\_\+request\+\_\+t\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=202pt]{structmqtt__request__t__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structmqtt__request__t}{mqtt\+\_\+request\+\_\+t} $\ast$ \hyperlink{structmqtt__request__t_af313d3aad3b4be3e61547ff3f1188ea1}{next}
+\item 
+\hyperlink{group__mqtt_gacad2bbe2cee76eaa120cc63e2f6094fd}{mqtt\+\_\+request\+\_\+cb\+\_\+t} \hyperlink{structmqtt__request__t_a32a4b14b0b8b5b8ce8db1074e53f4a79}{cb}
+\item 
+void $\ast$ \hyperlink{structmqtt__request__t_a4489023eb18e6cff7829e4bb2e66227f}{arg}
+\item 
+\hyperlink{group__compiler__abstraction_ga77570ac4fcab86864fa1916e55676da2}{u16\+\_\+t} \hyperlink{structmqtt__request__t_af2dc3cd85cdad25b9b3e1534ecc0cb58}{pkt\+\_\+id}
+\item 
+\hyperlink{group__compiler__abstraction_ga77570ac4fcab86864fa1916e55676da2}{u16\+\_\+t} \hyperlink{structmqtt__request__t_a65a7292669bc1f2d9df8f30bbcd77073}{timeout\+\_\+diff}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Pending request item, binds application callback to pending server requests 
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{structmqtt__request__t_a4489023eb18e6cff7829e4bb2e66227f}\label{structmqtt__request__t_a4489023eb18e6cff7829e4bb2e66227f}} 
+\index{mqtt\+\_\+request\+\_\+t@{mqtt\+\_\+request\+\_\+t}!arg@{arg}}
+\index{arg@{arg}!mqtt\+\_\+request\+\_\+t@{mqtt\+\_\+request\+\_\+t}}
+\subsubsection{\texorpdfstring{arg}{arg}}
+{\footnotesize\ttfamily void $\ast$ mqtt\+\_\+request\+\_\+t\+::arg}
+
+\mbox{\Hypertarget{structmqtt__request__t_a32a4b14b0b8b5b8ce8db1074e53f4a79}\label{structmqtt__request__t_a32a4b14b0b8b5b8ce8db1074e53f4a79}} 
+\index{mqtt\+\_\+request\+\_\+t@{mqtt\+\_\+request\+\_\+t}!cb@{cb}}
+\index{cb@{cb}!mqtt\+\_\+request\+\_\+t@{mqtt\+\_\+request\+\_\+t}}
+\subsubsection{\texorpdfstring{cb}{cb}}
+{\footnotesize\ttfamily \hyperlink{group__mqtt_gacad2bbe2cee76eaa120cc63e2f6094fd}{mqtt\+\_\+request\+\_\+cb\+\_\+t} mqtt\+\_\+request\+\_\+t\+::cb}
+
+Callback to upper layer \mbox{\Hypertarget{structmqtt__request__t_af313d3aad3b4be3e61547ff3f1188ea1}\label{structmqtt__request__t_af313d3aad3b4be3e61547ff3f1188ea1}} 
+\index{mqtt\+\_\+request\+\_\+t@{mqtt\+\_\+request\+\_\+t}!next@{next}}
+\index{next@{next}!mqtt\+\_\+request\+\_\+t@{mqtt\+\_\+request\+\_\+t}}
+\subsubsection{\texorpdfstring{next}{next}}
+{\footnotesize\ttfamily struct \hyperlink{structmqtt__request__t}{mqtt\+\_\+request\+\_\+t} $\ast$ mqtt\+\_\+request\+\_\+t\+::next}
+
+Next item in list, N\+U\+LL means this is the last in chain, next pointing at itself means request is unallocated \mbox{\Hypertarget{structmqtt__request__t_af2dc3cd85cdad25b9b3e1534ecc0cb58}\label{structmqtt__request__t_af2dc3cd85cdad25b9b3e1534ecc0cb58}} 
+\index{mqtt\+\_\+request\+\_\+t@{mqtt\+\_\+request\+\_\+t}!pkt\+\_\+id@{pkt\+\_\+id}}
+\index{pkt\+\_\+id@{pkt\+\_\+id}!mqtt\+\_\+request\+\_\+t@{mqtt\+\_\+request\+\_\+t}}
+\subsubsection{\texorpdfstring{pkt\+\_\+id}{pkt\_id}}
+{\footnotesize\ttfamily \hyperlink{group__compiler__abstraction_ga77570ac4fcab86864fa1916e55676da2}{u16\+\_\+t} mqtt\+\_\+request\+\_\+t\+::pkt\+\_\+id}
+
+M\+Q\+TT packet identifier \mbox{\Hypertarget{structmqtt__request__t_a65a7292669bc1f2d9df8f30bbcd77073}\label{structmqtt__request__t_a65a7292669bc1f2d9df8f30bbcd77073}} 
+\index{mqtt\+\_\+request\+\_\+t@{mqtt\+\_\+request\+\_\+t}!timeout\+\_\+diff@{timeout\+\_\+diff}}
+\index{timeout\+\_\+diff@{timeout\+\_\+diff}!mqtt\+\_\+request\+\_\+t@{mqtt\+\_\+request\+\_\+t}}
+\subsubsection{\texorpdfstring{timeout\+\_\+diff}{timeout\_diff}}
+{\footnotesize\ttfamily \hyperlink{group__compiler__abstraction_ga77570ac4fcab86864fa1916e55676da2}{u16\+\_\+t} mqtt\+\_\+request\+\_\+t\+::timeout\+\_\+diff}
+
+Expire time relative to element before this 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/ayush/\+R\+I\+O\+T/tests/lwip/bin/pkg/native/lwip/src/include/lwip/apps/\hyperlink{native_2lwip_2src_2include_2lwip_2apps_2mqtt_8h}{mqtt.\+h}\end{DoxyCompactItemize}

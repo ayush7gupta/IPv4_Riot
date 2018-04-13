@@ -1,0 +1,11 @@
+This test application is made for verification of the L\+P\+D8808 L\+ED strip driver.
+
+\section*{Usage}
+
+Connect a L\+P\+D8808 based L\+ED strip to a board of your choice, build, and flash this application. You should see a light running up and down your strip, slowly changing it\textquotesingle{}s color.
+
+You might need to adjust the default parameters (number of L\+E\+Ds on the strip and pin configuration). You can do this simply by pre-\/setting the {\ttfamily C\+F\+L\+A\+GS} environment variable, e.\+g.\+: 
+\begin{DoxyCode}
+$ CFLAGS="-DLPD8808\_PARAM\_LED\_CNT=78"" make all
+\end{DoxyCode}
+ 

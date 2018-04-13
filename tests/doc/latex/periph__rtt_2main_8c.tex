@@ -1,0 +1,66 @@
+\hypertarget{periph__rtt_2main_8c}{}\section{/home/ayush/\+R\+I\+O\+T/tests/periph\+\_\+rtt/main.c File Reference}
+\label{periph__rtt_2main_8c}\index{/home/ayush/\+R\+I\+O\+T/tests/periph\+\_\+rtt/main.\+c@{/home/ayush/\+R\+I\+O\+T/tests/periph\+\_\+rtt/main.\+c}}
+
+
+Test for low-\/level Real Time Timer drivers.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}cpu.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}periph\+\_\+conf.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}periph/rtt.\+h\char`\"{}}\newline
+Include dependency graph for main.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{periph__rtt_2main_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{periph__rtt_2main_8c_a826eb9c8df09d11ebdc57e7a7fc8c9b0}{T\+I\+C\+K\+S\+\_\+\+T\+O\+\_\+\+W\+A\+IT}~(10 $\ast$ R\+T\+T\+\_\+\+F\+R\+E\+Q\+U\+E\+N\+CY)
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{periph__rtt_2main_8c_afd4145001d494db2ea612e1239724148}{cb} (void $\ast$arg)
+\item 
+int \hyperlink{periph__rtt_2main_8c_a840291bc02cba5474a4cb46a9b9566fe}{main} (void)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Test for low-\/level Real Time Timer drivers. 
+
+This test will initialize the real-\/time timer and trigger an alarm printing \textquotesingle{}Hello\textquotesingle{} every 10 seconds
+
+\begin{DoxyAuthor}{Author}
+Hauke Petersen \href{mailto:hauke.petersen@fu-berlin.de}{\tt hauke.\+petersen@fu-\/berlin.\+de} 
+\end{DoxyAuthor}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{periph__rtt_2main_8c_a826eb9c8df09d11ebdc57e7a7fc8c9b0}\label{periph__rtt_2main_8c_a826eb9c8df09d11ebdc57e7a7fc8c9b0}} 
+\index{periph\+\_\+rtt/main.\+c@{periph\+\_\+rtt/main.\+c}!T\+I\+C\+K\+S\+\_\+\+T\+O\+\_\+\+W\+A\+IT@{T\+I\+C\+K\+S\+\_\+\+T\+O\+\_\+\+W\+A\+IT}}
+\index{T\+I\+C\+K\+S\+\_\+\+T\+O\+\_\+\+W\+A\+IT@{T\+I\+C\+K\+S\+\_\+\+T\+O\+\_\+\+W\+A\+IT}!periph\+\_\+rtt/main.\+c@{periph\+\_\+rtt/main.\+c}}
+\subsubsection{\texorpdfstring{T\+I\+C\+K\+S\+\_\+\+T\+O\+\_\+\+W\+A\+IT}{TICKS\_TO\_WAIT}}
+{\footnotesize\ttfamily \#define T\+I\+C\+K\+S\+\_\+\+T\+O\+\_\+\+W\+A\+IT~(10 $\ast$ R\+T\+T\+\_\+\+F\+R\+E\+Q\+U\+E\+N\+CY)}
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{periph__rtt_2main_8c_afd4145001d494db2ea612e1239724148}\label{periph__rtt_2main_8c_afd4145001d494db2ea612e1239724148}} 
+\index{periph\+\_\+rtt/main.\+c@{periph\+\_\+rtt/main.\+c}!cb@{cb}}
+\index{cb@{cb}!periph\+\_\+rtt/main.\+c@{periph\+\_\+rtt/main.\+c}}
+\subsubsection{\texorpdfstring{cb()}{cb()}}
+{\footnotesize\ttfamily void cb (\begin{DoxyParamCaption}\item[{void $\ast$}]{arg }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{periph__rtt_2main_8c_a840291bc02cba5474a4cb46a9b9566fe}\label{periph__rtt_2main_8c_a840291bc02cba5474a4cb46a9b9566fe}} 
+\index{periph\+\_\+rtt/main.\+c@{periph\+\_\+rtt/main.\+c}!main@{main}}
+\index{main@{main}!periph\+\_\+rtt/main.\+c@{periph\+\_\+rtt/main.\+c}}
+\subsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+

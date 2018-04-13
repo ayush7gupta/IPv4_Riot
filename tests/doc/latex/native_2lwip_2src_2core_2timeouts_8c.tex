@@ -1,0 +1,73 @@
+\hypertarget{native_2lwip_2src_2core_2timeouts_8c}{}\section{/home/ayush/\+R\+I\+O\+T/tests/lwip/bin/pkg/native/lwip/src/core/timeouts.c File Reference}
+\label{native_2lwip_2src_2core_2timeouts_8c}\index{/home/ayush/\+R\+I\+O\+T/tests/lwip/bin/pkg/native/lwip/src/core/timeouts.\+c@{/home/ayush/\+R\+I\+O\+T/tests/lwip/bin/pkg/native/lwip/src/core/timeouts.\+c}}
+{\ttfamily \#include \char`\"{}lwip/opt.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}lwip/timeouts.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}lwip/priv/tcp\+\_\+priv.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}lwip/def.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}lwip/memp.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}lwip/priv/tcpip\+\_\+priv.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}lwip/ip4\+\_\+frag.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}lwip/etharp.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}lwip/dhcp.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}lwip/autoip.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}lwip/igmp.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}lwip/dns.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}lwip/nd6.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}lwip/ip6\+\_\+frag.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}lwip/mld6.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}lwip/sys.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}lwip/pbuf.\+h\char`\"{}}\newline
+Include dependency graph for timeouts.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{native_2lwip_2src_2core_2timeouts_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{native_2lwip_2src_2core_2timeouts_8c_a9f8226a5ad45684da350fe29edb1ba7b}{H\+A\+N\+D\+L\+ER}(x)~x
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{native_2lwip_2src_2core_2timeouts_8c_a8181bc316fdf61b85f787c5cadfcd249}{tcp\+\_\+timer\+\_\+needed} (void)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const struct \hyperlink{structlwip__cyclic__timer}{lwip\+\_\+cyclic\+\_\+timer} \hyperlink{native_2lwip_2src_2core_2timeouts_8c_addc06ab816f051a0fe6f280972eed142}{lwip\+\_\+cyclic\+\_\+timers} \mbox{[}$\,$\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Stack-\/internal timers implementation. This file includes timer callbacks for stack-\/internal timers as well as functions to set up or stop timers and check for expired timers. 
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{native_2lwip_2src_2core_2timeouts_8c_a9f8226a5ad45684da350fe29edb1ba7b}\label{native_2lwip_2src_2core_2timeouts_8c_a9f8226a5ad45684da350fe29edb1ba7b}} 
+\index{native/lwip/src/core/timeouts.\+c@{native/lwip/src/core/timeouts.\+c}!H\+A\+N\+D\+L\+ER@{H\+A\+N\+D\+L\+ER}}
+\index{H\+A\+N\+D\+L\+ER@{H\+A\+N\+D\+L\+ER}!native/lwip/src/core/timeouts.\+c@{native/lwip/src/core/timeouts.\+c}}
+\subsubsection{\texorpdfstring{H\+A\+N\+D\+L\+ER}{HANDLER}}
+{\footnotesize\ttfamily \#define H\+A\+N\+D\+L\+ER(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~x}
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{native_2lwip_2src_2core_2timeouts_8c_a8181bc316fdf61b85f787c5cadfcd249}\label{native_2lwip_2src_2core_2timeouts_8c_a8181bc316fdf61b85f787c5cadfcd249}} 
+\index{native/lwip/src/core/timeouts.\+c@{native/lwip/src/core/timeouts.\+c}!tcp\+\_\+timer\+\_\+needed@{tcp\+\_\+timer\+\_\+needed}}
+\index{tcp\+\_\+timer\+\_\+needed@{tcp\+\_\+timer\+\_\+needed}!native/lwip/src/core/timeouts.\+c@{native/lwip/src/core/timeouts.\+c}}
+\subsubsection{\texorpdfstring{tcp\+\_\+timer\+\_\+needed()}{tcp\_timer\_needed()}}
+{\footnotesize\ttfamily void tcp\+\_\+timer\+\_\+needed (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{native_2lwip_2src_2core_2timeouts_8c_addc06ab816f051a0fe6f280972eed142}\label{native_2lwip_2src_2core_2timeouts_8c_addc06ab816f051a0fe6f280972eed142}} 
+\index{native/lwip/src/core/timeouts.\+c@{native/lwip/src/core/timeouts.\+c}!lwip\+\_\+cyclic\+\_\+timers@{lwip\+\_\+cyclic\+\_\+timers}}
+\index{lwip\+\_\+cyclic\+\_\+timers@{lwip\+\_\+cyclic\+\_\+timers}!native/lwip/src/core/timeouts.\+c@{native/lwip/src/core/timeouts.\+c}}
+\subsubsection{\texorpdfstring{lwip\+\_\+cyclic\+\_\+timers}{lwip\_cyclic\_timers}}
+{\footnotesize\ttfamily const struct \hyperlink{structlwip__cyclic__timer}{lwip\+\_\+cyclic\+\_\+timer} lwip\+\_\+cyclic\+\_\+timers\mbox{[}$\,$\mbox{]}}
+
+This array contains all stack-\/internal cyclic timers. To get the number of timers, use \hyperlink{native_2lwip_2src_2include_2lwip_2def_8h_a4abb61f4c9339d8a0a0c63b4fbfe6a37}{L\+W\+I\+P\+\_\+\+A\+R\+R\+A\+Y\+S\+I\+Z\+E()} 

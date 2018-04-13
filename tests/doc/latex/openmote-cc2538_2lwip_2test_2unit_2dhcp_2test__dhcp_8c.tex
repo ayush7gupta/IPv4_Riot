@@ -1,0 +1,161 @@
+\hypertarget{openmote-cc2538_2lwip_2test_2unit_2dhcp_2test__dhcp_8c}{}\section{/home/ayush/\+R\+I\+O\+T/tests/lwip/bin/pkg/openmote-\/cc2538/lwip/test/unit/dhcp/test\+\_\+dhcp.c File Reference}
+\label{openmote-cc2538_2lwip_2test_2unit_2dhcp_2test__dhcp_8c}\index{/home/ayush/\+R\+I\+O\+T/tests/lwip/bin/pkg/openmote-\/cc2538/lwip/test/unit/dhcp/test\+\_\+dhcp.\+c@{/home/ayush/\+R\+I\+O\+T/tests/lwip/bin/pkg/openmote-\/cc2538/lwip/test/unit/dhcp/test\+\_\+dhcp.\+c}}
+{\ttfamily \#include \char`\"{}test\+\_\+dhcp.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}lwip/netif.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}lwip/dhcp.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}lwip/prot/dhcp.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}lwip/etharp.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}netif/ethernet.\+h\char`\"{}}\newline
+Include dependency graph for test\+\_\+dhcp.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{openmote-cc2538_2lwip_2test_2unit_2dhcp_2test__dhcp_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{openmote-cc2538_2lwip_2test_2unit_2dhcp_2test__dhcp_8c_a1078c63ec0347d587df84e26daaebc2c}{tcase} \{ \newline
+\hyperlink{native_2lwip_2test_2unit_2dhcp_2test__dhcp_8c_a1078c63ec0347d587df84e26daaebc2ca4a1513c17b1b3ea3382fd404d06d6adb}{T\+E\+S\+T\+\_\+\+L\+W\+I\+P\+\_\+\+D\+H\+CP}, 
+\hyperlink{native_2lwip_2test_2unit_2dhcp_2test__dhcp_8c_a1078c63ec0347d587df84e26daaebc2ca9e584e34137573e094ed7e2a994f7226}{T\+E\+S\+T\+\_\+\+L\+W\+I\+P\+\_\+\+D\+H\+C\+P\+\_\+\+N\+AK}, 
+\hyperlink{native_2lwip_2test_2unit_2dhcp_2test__dhcp_8c_a1078c63ec0347d587df84e26daaebc2ca93f873f1604faf119f15071eb26f1beb}{T\+E\+S\+T\+\_\+\+L\+W\+I\+P\+\_\+\+D\+H\+C\+P\+\_\+\+R\+E\+L\+AY}, 
+\hyperlink{native_2lwip_2test_2unit_2dhcp_2test__dhcp_8c_a1078c63ec0347d587df84e26daaebc2ca3ea33732b45a4764c8f09b700d5916d9}{T\+E\+S\+T\+\_\+\+L\+W\+I\+P\+\_\+\+D\+H\+C\+P\+\_\+\+N\+A\+K\+\_\+\+N\+O\+\_\+\+E\+N\+D\+M\+A\+R\+K\+ER}, 
+\newline
+\hyperlink{native_2lwip_2test_2unit_2dhcp_2test__dhcp_8c_a1078c63ec0347d587df84e26daaebc2ca639d86ea8c23983f339e49649095abdc}{T\+E\+S\+T\+\_\+\+L\+W\+I\+P\+\_\+\+D\+H\+C\+P\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+O\+V\+E\+R\+L\+O\+AD}, 
+\hyperlink{openmote-cc2538_2lwip_2test_2unit_2dhcp_2test__dhcp_8c_a1078c63ec0347d587df84e26daaebc2ca4a1513c17b1b3ea3382fd404d06d6adb}{T\+E\+S\+T\+\_\+\+L\+W\+I\+P\+\_\+\+D\+H\+CP}, 
+\hyperlink{openmote-cc2538_2lwip_2test_2unit_2dhcp_2test__dhcp_8c_a1078c63ec0347d587df84e26daaebc2ca9e584e34137573e094ed7e2a994f7226}{T\+E\+S\+T\+\_\+\+L\+W\+I\+P\+\_\+\+D\+H\+C\+P\+\_\+\+N\+AK}, 
+\hyperlink{openmote-cc2538_2lwip_2test_2unit_2dhcp_2test__dhcp_8c_a1078c63ec0347d587df84e26daaebc2ca93f873f1604faf119f15071eb26f1beb}{T\+E\+S\+T\+\_\+\+L\+W\+I\+P\+\_\+\+D\+H\+C\+P\+\_\+\+R\+E\+L\+AY}, 
+\newline
+\hyperlink{openmote-cc2538_2lwip_2test_2unit_2dhcp_2test__dhcp_8c_a1078c63ec0347d587df84e26daaebc2ca3ea33732b45a4764c8f09b700d5916d9}{T\+E\+S\+T\+\_\+\+L\+W\+I\+P\+\_\+\+D\+H\+C\+P\+\_\+\+N\+A\+K\+\_\+\+N\+O\+\_\+\+E\+N\+D\+M\+A\+R\+K\+ER}, 
+\hyperlink{openmote-cc2538_2lwip_2test_2unit_2dhcp_2test__dhcp_8c_a1078c63ec0347d587df84e26daaebc2ca639d86ea8c23983f339e49649095abdc}{T\+E\+S\+T\+\_\+\+L\+W\+I\+P\+\_\+\+D\+H\+C\+P\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+O\+V\+E\+R\+L\+O\+AD}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{openmote-cc2538_2lwip_2test_2unit_2dhcp_2test__dhcp_8c_a7a2a6f7b32d1c396e14be8199fedaada}{S\+T\+A\+R\+T\+\_\+\+T\+E\+ST} (test\+\_\+dhcp)
+\item 
+E\+N\+D\+\_\+\+T\+E\+ST \hyperlink{openmote-cc2538_2lwip_2test_2unit_2dhcp_2test__dhcp_8c_a4fd1e283fce78681e0e76a54387031ae}{S\+T\+A\+R\+T\+\_\+\+T\+E\+ST} (test\+\_\+dhcp\+\_\+nak)
+\item 
+E\+N\+D\+\_\+\+T\+E\+ST \hyperlink{openmote-cc2538_2lwip_2test_2unit_2dhcp_2test__dhcp_8c_aefd7327fb3c8d0fdff3614b926a359ec}{S\+T\+A\+R\+T\+\_\+\+T\+E\+ST} (test\+\_\+dhcp\+\_\+relayed)
+\item 
+E\+N\+D\+\_\+\+T\+E\+ST \hyperlink{openmote-cc2538_2lwip_2test_2unit_2dhcp_2test__dhcp_8c_af7d5cd09524414060c090ac253b78b33}{S\+T\+A\+R\+T\+\_\+\+T\+E\+ST} (test\+\_\+dhcp\+\_\+nak\+\_\+no\+\_\+endmarker)
+\item 
+E\+N\+D\+\_\+\+T\+E\+ST \hyperlink{openmote-cc2538_2lwip_2test_2unit_2dhcp_2test__dhcp_8c_a5586bb7e087c78116cb6d9cc1fc0007c}{S\+T\+A\+R\+T\+\_\+\+T\+E\+ST} (test\+\_\+dhcp\+\_\+invalid\+\_\+overload)
+\item 
+E\+N\+D\+\_\+\+T\+E\+ST Suite $\ast$ \hyperlink{openmote-cc2538_2lwip_2test_2unit_2dhcp_2test__dhcp_8c_a71a2282e4ff03b248c9ac117cc8ae3b5}{dhcp\+\_\+suite} (void)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structnetif}{netif} \hyperlink{openmote-cc2538_2lwip_2test_2unit_2dhcp_2test__dhcp_8c_af164a2cab991b7a252402d6cd3fdc9f5}{net\+\_\+test}
+\end{DoxyCompactItemize}
+
+
+\subsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{openmote-cc2538_2lwip_2test_2unit_2dhcp_2test__dhcp_8c_a1078c63ec0347d587df84e26daaebc2c}\label{openmote-cc2538_2lwip_2test_2unit_2dhcp_2test__dhcp_8c_a1078c63ec0347d587df84e26daaebc2c}} 
+\index{openmote-\/cc2538/lwip/test/unit/dhcp/test\+\_\+dhcp.\+c@{openmote-\/cc2538/lwip/test/unit/dhcp/test\+\_\+dhcp.\+c}!tcase@{tcase}}
+\index{tcase@{tcase}!openmote-\/cc2538/lwip/test/unit/dhcp/test\+\_\+dhcp.\+c@{openmote-\/cc2538/lwip/test/unit/dhcp/test\+\_\+dhcp.\+c}}
+\subsubsection{\texorpdfstring{tcase}{tcase}}
+{\footnotesize\ttfamily enum \hyperlink{native_2lwip_2test_2unit_2dhcp_2test__dhcp_8c_a1078c63ec0347d587df84e26daaebc2c}{tcase}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{T\+E\+S\+T\+\_\+\+L\+W\+I\+P\+\_\+\+D\+H\+CP@{T\+E\+S\+T\+\_\+\+L\+W\+I\+P\+\_\+\+D\+H\+CP}!openmote-\/cc2538/lwip/test/unit/dhcp/test\+\_\+dhcp.\+c@{openmote-\/cc2538/lwip/test/unit/dhcp/test\+\_\+dhcp.\+c}}\index{openmote-\/cc2538/lwip/test/unit/dhcp/test\+\_\+dhcp.\+c@{openmote-\/cc2538/lwip/test/unit/dhcp/test\+\_\+dhcp.\+c}!T\+E\+S\+T\+\_\+\+L\+W\+I\+P\+\_\+\+D\+H\+CP@{T\+E\+S\+T\+\_\+\+L\+W\+I\+P\+\_\+\+D\+H\+CP}}}\mbox{\Hypertarget{openmote-cc2538_2lwip_2test_2unit_2dhcp_2test__dhcp_8c_a1078c63ec0347d587df84e26daaebc2ca4a1513c17b1b3ea3382fd404d06d6adb}\label{openmote-cc2538_2lwip_2test_2unit_2dhcp_2test__dhcp_8c_a1078c63ec0347d587df84e26daaebc2ca4a1513c17b1b3ea3382fd404d06d6adb}} 
+T\+E\+S\+T\+\_\+\+L\+W\+I\+P\+\_\+\+D\+H\+CP&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{T\+E\+S\+T\+\_\+\+L\+W\+I\+P\+\_\+\+D\+H\+C\+P\+\_\+\+N\+AK@{T\+E\+S\+T\+\_\+\+L\+W\+I\+P\+\_\+\+D\+H\+C\+P\+\_\+\+N\+AK}!openmote-\/cc2538/lwip/test/unit/dhcp/test\+\_\+dhcp.\+c@{openmote-\/cc2538/lwip/test/unit/dhcp/test\+\_\+dhcp.\+c}}\index{openmote-\/cc2538/lwip/test/unit/dhcp/test\+\_\+dhcp.\+c@{openmote-\/cc2538/lwip/test/unit/dhcp/test\+\_\+dhcp.\+c}!T\+E\+S\+T\+\_\+\+L\+W\+I\+P\+\_\+\+D\+H\+C\+P\+\_\+\+N\+AK@{T\+E\+S\+T\+\_\+\+L\+W\+I\+P\+\_\+\+D\+H\+C\+P\+\_\+\+N\+AK}}}\mbox{\Hypertarget{openmote-cc2538_2lwip_2test_2unit_2dhcp_2test__dhcp_8c_a1078c63ec0347d587df84e26daaebc2ca9e584e34137573e094ed7e2a994f7226}\label{openmote-cc2538_2lwip_2test_2unit_2dhcp_2test__dhcp_8c_a1078c63ec0347d587df84e26daaebc2ca9e584e34137573e094ed7e2a994f7226}} 
+T\+E\+S\+T\+\_\+\+L\+W\+I\+P\+\_\+\+D\+H\+C\+P\+\_\+\+N\+AK&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{T\+E\+S\+T\+\_\+\+L\+W\+I\+P\+\_\+\+D\+H\+C\+P\+\_\+\+R\+E\+L\+AY@{T\+E\+S\+T\+\_\+\+L\+W\+I\+P\+\_\+\+D\+H\+C\+P\+\_\+\+R\+E\+L\+AY}!openmote-\/cc2538/lwip/test/unit/dhcp/test\+\_\+dhcp.\+c@{openmote-\/cc2538/lwip/test/unit/dhcp/test\+\_\+dhcp.\+c}}\index{openmote-\/cc2538/lwip/test/unit/dhcp/test\+\_\+dhcp.\+c@{openmote-\/cc2538/lwip/test/unit/dhcp/test\+\_\+dhcp.\+c}!T\+E\+S\+T\+\_\+\+L\+W\+I\+P\+\_\+\+D\+H\+C\+P\+\_\+\+R\+E\+L\+AY@{T\+E\+S\+T\+\_\+\+L\+W\+I\+P\+\_\+\+D\+H\+C\+P\+\_\+\+R\+E\+L\+AY}}}\mbox{\Hypertarget{openmote-cc2538_2lwip_2test_2unit_2dhcp_2test__dhcp_8c_a1078c63ec0347d587df84e26daaebc2ca93f873f1604faf119f15071eb26f1beb}\label{openmote-cc2538_2lwip_2test_2unit_2dhcp_2test__dhcp_8c_a1078c63ec0347d587df84e26daaebc2ca93f873f1604faf119f15071eb26f1beb}} 
+T\+E\+S\+T\+\_\+\+L\+W\+I\+P\+\_\+\+D\+H\+C\+P\+\_\+\+R\+E\+L\+AY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{T\+E\+S\+T\+\_\+\+L\+W\+I\+P\+\_\+\+D\+H\+C\+P\+\_\+\+N\+A\+K\+\_\+\+N\+O\+\_\+\+E\+N\+D\+M\+A\+R\+K\+ER@{T\+E\+S\+T\+\_\+\+L\+W\+I\+P\+\_\+\+D\+H\+C\+P\+\_\+\+N\+A\+K\+\_\+\+N\+O\+\_\+\+E\+N\+D\+M\+A\+R\+K\+ER}!openmote-\/cc2538/lwip/test/unit/dhcp/test\+\_\+dhcp.\+c@{openmote-\/cc2538/lwip/test/unit/dhcp/test\+\_\+dhcp.\+c}}\index{openmote-\/cc2538/lwip/test/unit/dhcp/test\+\_\+dhcp.\+c@{openmote-\/cc2538/lwip/test/unit/dhcp/test\+\_\+dhcp.\+c}!T\+E\+S\+T\+\_\+\+L\+W\+I\+P\+\_\+\+D\+H\+C\+P\+\_\+\+N\+A\+K\+\_\+\+N\+O\+\_\+\+E\+N\+D\+M\+A\+R\+K\+ER@{T\+E\+S\+T\+\_\+\+L\+W\+I\+P\+\_\+\+D\+H\+C\+P\+\_\+\+N\+A\+K\+\_\+\+N\+O\+\_\+\+E\+N\+D\+M\+A\+R\+K\+ER}}}\mbox{\Hypertarget{openmote-cc2538_2lwip_2test_2unit_2dhcp_2test__dhcp_8c_a1078c63ec0347d587df84e26daaebc2ca3ea33732b45a4764c8f09b700d5916d9}\label{openmote-cc2538_2lwip_2test_2unit_2dhcp_2test__dhcp_8c_a1078c63ec0347d587df84e26daaebc2ca3ea33732b45a4764c8f09b700d5916d9}} 
+T\+E\+S\+T\+\_\+\+L\+W\+I\+P\+\_\+\+D\+H\+C\+P\+\_\+\+N\+A\+K\+\_\+\+N\+O\+\_\+\+E\+N\+D\+M\+A\+R\+K\+ER&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{T\+E\+S\+T\+\_\+\+L\+W\+I\+P\+\_\+\+D\+H\+C\+P\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+O\+V\+E\+R\+L\+O\+AD@{T\+E\+S\+T\+\_\+\+L\+W\+I\+P\+\_\+\+D\+H\+C\+P\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+O\+V\+E\+R\+L\+O\+AD}!openmote-\/cc2538/lwip/test/unit/dhcp/test\+\_\+dhcp.\+c@{openmote-\/cc2538/lwip/test/unit/dhcp/test\+\_\+dhcp.\+c}}\index{openmote-\/cc2538/lwip/test/unit/dhcp/test\+\_\+dhcp.\+c@{openmote-\/cc2538/lwip/test/unit/dhcp/test\+\_\+dhcp.\+c}!T\+E\+S\+T\+\_\+\+L\+W\+I\+P\+\_\+\+D\+H\+C\+P\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+O\+V\+E\+R\+L\+O\+AD@{T\+E\+S\+T\+\_\+\+L\+W\+I\+P\+\_\+\+D\+H\+C\+P\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+O\+V\+E\+R\+L\+O\+AD}}}\mbox{\Hypertarget{openmote-cc2538_2lwip_2test_2unit_2dhcp_2test__dhcp_8c_a1078c63ec0347d587df84e26daaebc2ca639d86ea8c23983f339e49649095abdc}\label{openmote-cc2538_2lwip_2test_2unit_2dhcp_2test__dhcp_8c_a1078c63ec0347d587df84e26daaebc2ca639d86ea8c23983f339e49649095abdc}} 
+T\+E\+S\+T\+\_\+\+L\+W\+I\+P\+\_\+\+D\+H\+C\+P\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+O\+V\+E\+R\+L\+O\+AD&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{T\+E\+S\+T\+\_\+\+L\+W\+I\+P\+\_\+\+D\+H\+CP@{T\+E\+S\+T\+\_\+\+L\+W\+I\+P\+\_\+\+D\+H\+CP}!openmote-\/cc2538/lwip/test/unit/dhcp/test\+\_\+dhcp.\+c@{openmote-\/cc2538/lwip/test/unit/dhcp/test\+\_\+dhcp.\+c}}\index{openmote-\/cc2538/lwip/test/unit/dhcp/test\+\_\+dhcp.\+c@{openmote-\/cc2538/lwip/test/unit/dhcp/test\+\_\+dhcp.\+c}!T\+E\+S\+T\+\_\+\+L\+W\+I\+P\+\_\+\+D\+H\+CP@{T\+E\+S\+T\+\_\+\+L\+W\+I\+P\+\_\+\+D\+H\+CP}}}\mbox{\Hypertarget{openmote-cc2538_2lwip_2test_2unit_2dhcp_2test__dhcp_8c_a1078c63ec0347d587df84e26daaebc2ca4a1513c17b1b3ea3382fd404d06d6adb}\label{openmote-cc2538_2lwip_2test_2unit_2dhcp_2test__dhcp_8c_a1078c63ec0347d587df84e26daaebc2ca4a1513c17b1b3ea3382fd404d06d6adb}} 
+T\+E\+S\+T\+\_\+\+L\+W\+I\+P\+\_\+\+D\+H\+CP&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{T\+E\+S\+T\+\_\+\+L\+W\+I\+P\+\_\+\+D\+H\+C\+P\+\_\+\+N\+AK@{T\+E\+S\+T\+\_\+\+L\+W\+I\+P\+\_\+\+D\+H\+C\+P\+\_\+\+N\+AK}!openmote-\/cc2538/lwip/test/unit/dhcp/test\+\_\+dhcp.\+c@{openmote-\/cc2538/lwip/test/unit/dhcp/test\+\_\+dhcp.\+c}}\index{openmote-\/cc2538/lwip/test/unit/dhcp/test\+\_\+dhcp.\+c@{openmote-\/cc2538/lwip/test/unit/dhcp/test\+\_\+dhcp.\+c}!T\+E\+S\+T\+\_\+\+L\+W\+I\+P\+\_\+\+D\+H\+C\+P\+\_\+\+N\+AK@{T\+E\+S\+T\+\_\+\+L\+W\+I\+P\+\_\+\+D\+H\+C\+P\+\_\+\+N\+AK}}}\mbox{\Hypertarget{openmote-cc2538_2lwip_2test_2unit_2dhcp_2test__dhcp_8c_a1078c63ec0347d587df84e26daaebc2ca9e584e34137573e094ed7e2a994f7226}\label{openmote-cc2538_2lwip_2test_2unit_2dhcp_2test__dhcp_8c_a1078c63ec0347d587df84e26daaebc2ca9e584e34137573e094ed7e2a994f7226}} 
+T\+E\+S\+T\+\_\+\+L\+W\+I\+P\+\_\+\+D\+H\+C\+P\+\_\+\+N\+AK&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{T\+E\+S\+T\+\_\+\+L\+W\+I\+P\+\_\+\+D\+H\+C\+P\+\_\+\+R\+E\+L\+AY@{T\+E\+S\+T\+\_\+\+L\+W\+I\+P\+\_\+\+D\+H\+C\+P\+\_\+\+R\+E\+L\+AY}!openmote-\/cc2538/lwip/test/unit/dhcp/test\+\_\+dhcp.\+c@{openmote-\/cc2538/lwip/test/unit/dhcp/test\+\_\+dhcp.\+c}}\index{openmote-\/cc2538/lwip/test/unit/dhcp/test\+\_\+dhcp.\+c@{openmote-\/cc2538/lwip/test/unit/dhcp/test\+\_\+dhcp.\+c}!T\+E\+S\+T\+\_\+\+L\+W\+I\+P\+\_\+\+D\+H\+C\+P\+\_\+\+R\+E\+L\+AY@{T\+E\+S\+T\+\_\+\+L\+W\+I\+P\+\_\+\+D\+H\+C\+P\+\_\+\+R\+E\+L\+AY}}}\mbox{\Hypertarget{openmote-cc2538_2lwip_2test_2unit_2dhcp_2test__dhcp_8c_a1078c63ec0347d587df84e26daaebc2ca93f873f1604faf119f15071eb26f1beb}\label{openmote-cc2538_2lwip_2test_2unit_2dhcp_2test__dhcp_8c_a1078c63ec0347d587df84e26daaebc2ca93f873f1604faf119f15071eb26f1beb}} 
+T\+E\+S\+T\+\_\+\+L\+W\+I\+P\+\_\+\+D\+H\+C\+P\+\_\+\+R\+E\+L\+AY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{T\+E\+S\+T\+\_\+\+L\+W\+I\+P\+\_\+\+D\+H\+C\+P\+\_\+\+N\+A\+K\+\_\+\+N\+O\+\_\+\+E\+N\+D\+M\+A\+R\+K\+ER@{T\+E\+S\+T\+\_\+\+L\+W\+I\+P\+\_\+\+D\+H\+C\+P\+\_\+\+N\+A\+K\+\_\+\+N\+O\+\_\+\+E\+N\+D\+M\+A\+R\+K\+ER}!openmote-\/cc2538/lwip/test/unit/dhcp/test\+\_\+dhcp.\+c@{openmote-\/cc2538/lwip/test/unit/dhcp/test\+\_\+dhcp.\+c}}\index{openmote-\/cc2538/lwip/test/unit/dhcp/test\+\_\+dhcp.\+c@{openmote-\/cc2538/lwip/test/unit/dhcp/test\+\_\+dhcp.\+c}!T\+E\+S\+T\+\_\+\+L\+W\+I\+P\+\_\+\+D\+H\+C\+P\+\_\+\+N\+A\+K\+\_\+\+N\+O\+\_\+\+E\+N\+D\+M\+A\+R\+K\+ER@{T\+E\+S\+T\+\_\+\+L\+W\+I\+P\+\_\+\+D\+H\+C\+P\+\_\+\+N\+A\+K\+\_\+\+N\+O\+\_\+\+E\+N\+D\+M\+A\+R\+K\+ER}}}\mbox{\Hypertarget{openmote-cc2538_2lwip_2test_2unit_2dhcp_2test__dhcp_8c_a1078c63ec0347d587df84e26daaebc2ca3ea33732b45a4764c8f09b700d5916d9}\label{openmote-cc2538_2lwip_2test_2unit_2dhcp_2test__dhcp_8c_a1078c63ec0347d587df84e26daaebc2ca3ea33732b45a4764c8f09b700d5916d9}} 
+T\+E\+S\+T\+\_\+\+L\+W\+I\+P\+\_\+\+D\+H\+C\+P\+\_\+\+N\+A\+K\+\_\+\+N\+O\+\_\+\+E\+N\+D\+M\+A\+R\+K\+ER&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{T\+E\+S\+T\+\_\+\+L\+W\+I\+P\+\_\+\+D\+H\+C\+P\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+O\+V\+E\+R\+L\+O\+AD@{T\+E\+S\+T\+\_\+\+L\+W\+I\+P\+\_\+\+D\+H\+C\+P\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+O\+V\+E\+R\+L\+O\+AD}!openmote-\/cc2538/lwip/test/unit/dhcp/test\+\_\+dhcp.\+c@{openmote-\/cc2538/lwip/test/unit/dhcp/test\+\_\+dhcp.\+c}}\index{openmote-\/cc2538/lwip/test/unit/dhcp/test\+\_\+dhcp.\+c@{openmote-\/cc2538/lwip/test/unit/dhcp/test\+\_\+dhcp.\+c}!T\+E\+S\+T\+\_\+\+L\+W\+I\+P\+\_\+\+D\+H\+C\+P\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+O\+V\+E\+R\+L\+O\+AD@{T\+E\+S\+T\+\_\+\+L\+W\+I\+P\+\_\+\+D\+H\+C\+P\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+O\+V\+E\+R\+L\+O\+AD}}}\mbox{\Hypertarget{openmote-cc2538_2lwip_2test_2unit_2dhcp_2test__dhcp_8c_a1078c63ec0347d587df84e26daaebc2ca639d86ea8c23983f339e49649095abdc}\label{openmote-cc2538_2lwip_2test_2unit_2dhcp_2test__dhcp_8c_a1078c63ec0347d587df84e26daaebc2ca639d86ea8c23983f339e49649095abdc}} 
+T\+E\+S\+T\+\_\+\+L\+W\+I\+P\+\_\+\+D\+H\+C\+P\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+O\+V\+E\+R\+L\+O\+AD&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{openmote-cc2538_2lwip_2test_2unit_2dhcp_2test__dhcp_8c_a71a2282e4ff03b248c9ac117cc8ae3b5}\label{openmote-cc2538_2lwip_2test_2unit_2dhcp_2test__dhcp_8c_a71a2282e4ff03b248c9ac117cc8ae3b5}} 
+\index{openmote-\/cc2538/lwip/test/unit/dhcp/test\+\_\+dhcp.\+c@{openmote-\/cc2538/lwip/test/unit/dhcp/test\+\_\+dhcp.\+c}!dhcp\+\_\+suite@{dhcp\+\_\+suite}}
+\index{dhcp\+\_\+suite@{dhcp\+\_\+suite}!openmote-\/cc2538/lwip/test/unit/dhcp/test\+\_\+dhcp.\+c@{openmote-\/cc2538/lwip/test/unit/dhcp/test\+\_\+dhcp.\+c}}
+\subsubsection{\texorpdfstring{dhcp\+\_\+suite()}{dhcp\_suite()}}
+{\footnotesize\ttfamily E\+N\+D\+\_\+\+T\+E\+ST Suite$\ast$ dhcp\+\_\+suite (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Create the suite including all tests for this module Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=250pt]{openmote-cc2538_2lwip_2test_2unit_2dhcp_2test__dhcp_8c_a71a2282e4ff03b248c9ac117cc8ae3b5_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{openmote-cc2538_2lwip_2test_2unit_2dhcp_2test__dhcp_8c_a7a2a6f7b32d1c396e14be8199fedaada}\label{openmote-cc2538_2lwip_2test_2unit_2dhcp_2test__dhcp_8c_a7a2a6f7b32d1c396e14be8199fedaada}} 
+\index{openmote-\/cc2538/lwip/test/unit/dhcp/test\+\_\+dhcp.\+c@{openmote-\/cc2538/lwip/test/unit/dhcp/test\+\_\+dhcp.\+c}!S\+T\+A\+R\+T\+\_\+\+T\+E\+ST@{S\+T\+A\+R\+T\+\_\+\+T\+E\+ST}}
+\index{S\+T\+A\+R\+T\+\_\+\+T\+E\+ST@{S\+T\+A\+R\+T\+\_\+\+T\+E\+ST}!openmote-\/cc2538/lwip/test/unit/dhcp/test\+\_\+dhcp.\+c@{openmote-\/cc2538/lwip/test/unit/dhcp/test\+\_\+dhcp.\+c}}
+\subsubsection{\texorpdfstring{S\+T\+A\+R\+T\+\_\+\+T\+E\+S\+T()}{START\_TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [1/5]}}
+{\footnotesize\ttfamily S\+T\+A\+R\+T\+\_\+\+T\+E\+ST (\begin{DoxyParamCaption}\item[{test\+\_\+dhcp}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{openmote-cc2538_2lwip_2test_2unit_2dhcp_2test__dhcp_8c_a4fd1e283fce78681e0e76a54387031ae}\label{openmote-cc2538_2lwip_2test_2unit_2dhcp_2test__dhcp_8c_a4fd1e283fce78681e0e76a54387031ae}} 
+\index{openmote-\/cc2538/lwip/test/unit/dhcp/test\+\_\+dhcp.\+c@{openmote-\/cc2538/lwip/test/unit/dhcp/test\+\_\+dhcp.\+c}!S\+T\+A\+R\+T\+\_\+\+T\+E\+ST@{S\+T\+A\+R\+T\+\_\+\+T\+E\+ST}}
+\index{S\+T\+A\+R\+T\+\_\+\+T\+E\+ST@{S\+T\+A\+R\+T\+\_\+\+T\+E\+ST}!openmote-\/cc2538/lwip/test/unit/dhcp/test\+\_\+dhcp.\+c@{openmote-\/cc2538/lwip/test/unit/dhcp/test\+\_\+dhcp.\+c}}
+\subsubsection{\texorpdfstring{S\+T\+A\+R\+T\+\_\+\+T\+E\+S\+T()}{START\_TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [2/5]}}
+{\footnotesize\ttfamily E\+N\+D\+\_\+\+T\+E\+ST S\+T\+A\+R\+T\+\_\+\+T\+E\+ST (\begin{DoxyParamCaption}\item[{test\+\_\+dhcp\+\_\+nak}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{openmote-cc2538_2lwip_2test_2unit_2dhcp_2test__dhcp_8c_aefd7327fb3c8d0fdff3614b926a359ec}\label{openmote-cc2538_2lwip_2test_2unit_2dhcp_2test__dhcp_8c_aefd7327fb3c8d0fdff3614b926a359ec}} 
+\index{openmote-\/cc2538/lwip/test/unit/dhcp/test\+\_\+dhcp.\+c@{openmote-\/cc2538/lwip/test/unit/dhcp/test\+\_\+dhcp.\+c}!S\+T\+A\+R\+T\+\_\+\+T\+E\+ST@{S\+T\+A\+R\+T\+\_\+\+T\+E\+ST}}
+\index{S\+T\+A\+R\+T\+\_\+\+T\+E\+ST@{S\+T\+A\+R\+T\+\_\+\+T\+E\+ST}!openmote-\/cc2538/lwip/test/unit/dhcp/test\+\_\+dhcp.\+c@{openmote-\/cc2538/lwip/test/unit/dhcp/test\+\_\+dhcp.\+c}}
+\subsubsection{\texorpdfstring{S\+T\+A\+R\+T\+\_\+\+T\+E\+S\+T()}{START\_TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [3/5]}}
+{\footnotesize\ttfamily E\+N\+D\+\_\+\+T\+E\+ST S\+T\+A\+R\+T\+\_\+\+T\+E\+ST (\begin{DoxyParamCaption}\item[{test\+\_\+dhcp\+\_\+relayed}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{openmote-cc2538_2lwip_2test_2unit_2dhcp_2test__dhcp_8c_af7d5cd09524414060c090ac253b78b33}\label{openmote-cc2538_2lwip_2test_2unit_2dhcp_2test__dhcp_8c_af7d5cd09524414060c090ac253b78b33}} 
+\index{openmote-\/cc2538/lwip/test/unit/dhcp/test\+\_\+dhcp.\+c@{openmote-\/cc2538/lwip/test/unit/dhcp/test\+\_\+dhcp.\+c}!S\+T\+A\+R\+T\+\_\+\+T\+E\+ST@{S\+T\+A\+R\+T\+\_\+\+T\+E\+ST}}
+\index{S\+T\+A\+R\+T\+\_\+\+T\+E\+ST@{S\+T\+A\+R\+T\+\_\+\+T\+E\+ST}!openmote-\/cc2538/lwip/test/unit/dhcp/test\+\_\+dhcp.\+c@{openmote-\/cc2538/lwip/test/unit/dhcp/test\+\_\+dhcp.\+c}}
+\subsubsection{\texorpdfstring{S\+T\+A\+R\+T\+\_\+\+T\+E\+S\+T()}{START\_TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [4/5]}}
+{\footnotesize\ttfamily E\+N\+D\+\_\+\+T\+E\+ST S\+T\+A\+R\+T\+\_\+\+T\+E\+ST (\begin{DoxyParamCaption}\item[{test\+\_\+dhcp\+\_\+nak\+\_\+no\+\_\+endmarker}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{openmote-cc2538_2lwip_2test_2unit_2dhcp_2test__dhcp_8c_a5586bb7e087c78116cb6d9cc1fc0007c}\label{openmote-cc2538_2lwip_2test_2unit_2dhcp_2test__dhcp_8c_a5586bb7e087c78116cb6d9cc1fc0007c}} 
+\index{openmote-\/cc2538/lwip/test/unit/dhcp/test\+\_\+dhcp.\+c@{openmote-\/cc2538/lwip/test/unit/dhcp/test\+\_\+dhcp.\+c}!S\+T\+A\+R\+T\+\_\+\+T\+E\+ST@{S\+T\+A\+R\+T\+\_\+\+T\+E\+ST}}
+\index{S\+T\+A\+R\+T\+\_\+\+T\+E\+ST@{S\+T\+A\+R\+T\+\_\+\+T\+E\+ST}!openmote-\/cc2538/lwip/test/unit/dhcp/test\+\_\+dhcp.\+c@{openmote-\/cc2538/lwip/test/unit/dhcp/test\+\_\+dhcp.\+c}}
+\subsubsection{\texorpdfstring{S\+T\+A\+R\+T\+\_\+\+T\+E\+S\+T()}{START\_TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [5/5]}}
+{\footnotesize\ttfamily E\+N\+D\+\_\+\+T\+E\+ST S\+T\+A\+R\+T\+\_\+\+T\+E\+ST (\begin{DoxyParamCaption}\item[{test\+\_\+dhcp\+\_\+invalid\+\_\+overload}]{ }\end{DoxyParamCaption})}
+
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{openmote-cc2538_2lwip_2test_2unit_2dhcp_2test__dhcp_8c_af164a2cab991b7a252402d6cd3fdc9f5}\label{openmote-cc2538_2lwip_2test_2unit_2dhcp_2test__dhcp_8c_af164a2cab991b7a252402d6cd3fdc9f5}} 
+\index{openmote-\/cc2538/lwip/test/unit/dhcp/test\+\_\+dhcp.\+c@{openmote-\/cc2538/lwip/test/unit/dhcp/test\+\_\+dhcp.\+c}!net\+\_\+test@{net\+\_\+test}}
+\index{net\+\_\+test@{net\+\_\+test}!openmote-\/cc2538/lwip/test/unit/dhcp/test\+\_\+dhcp.\+c@{openmote-\/cc2538/lwip/test/unit/dhcp/test\+\_\+dhcp.\+c}}
+\subsubsection{\texorpdfstring{net\+\_\+test}{net\_test}}
+{\footnotesize\ttfamily struct \hyperlink{structnetif}{netif} net\+\_\+test}
+

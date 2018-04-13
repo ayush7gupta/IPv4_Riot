@@ -1,0 +1,165 @@
+\hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2apps_2lwiperf_8h}{}\section{/home/ayush/\+R\+I\+O\+T/tests/lwip/bin/pkg/openmote-\/cc2538/lwip/src/include/lwip/apps/lwiperf.h File Reference}
+\label{openmote-cc2538_2lwip_2src_2include_2lwip_2apps_2lwiperf_8h}\index{/home/ayush/\+R\+I\+O\+T/tests/lwip/bin/pkg/openmote-\/cc2538/lwip/src/include/lwip/apps/lwiperf.\+h@{/home/ayush/\+R\+I\+O\+T/tests/lwip/bin/pkg/openmote-\/cc2538/lwip/src/include/lwip/apps/lwiperf.\+h}}
+{\ttfamily \#include \char`\"{}lwip/opt.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}lwip/ip\+\_\+addr.\+h\char`\"{}}\newline
+Include dependency graph for lwiperf.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=234pt]{openmote-cc2538_2lwip_2src_2include_2lwip_2apps_2lwiperf_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{openmote-cc2538_2lwip_2src_2include_2lwip_2apps_2lwiperf_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2apps_2lwiperf_8h_a911cc7e298ab38433bd4a4980cdcad15}{L\+W\+I\+P\+E\+R\+F\+\_\+\+T\+C\+P\+\_\+\+P\+O\+R\+T\+\_\+\+D\+E\+F\+A\+U\+LT}~5001
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef void($\ast$ \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2apps_2lwiperf_8h_a248ea47a58a14c6aecf6525217a812fd}{lwiperf\+\_\+report\+\_\+fn}) (void $\ast$arg, enum \hyperlink{native_2lwip_2src_2include_2lwip_2apps_2lwiperf_8h_ab72a2d205e43d5243a291f937bbc24d6}{lwiperf\+\_\+report\+\_\+type} report\+\_\+type, const \hyperlink{native_2lwip_2src_2include_2lwip_2ip__addr_8h_a88b43639738c4de2d3cd22e3a1fd7696}{ip\+\_\+addr\+\_\+t} $\ast$local\+\_\+addr, \hyperlink{group__compiler__abstraction_ga77570ac4fcab86864fa1916e55676da2}{u16\+\_\+t} local\+\_\+port, const \hyperlink{native_2lwip_2src_2include_2lwip_2ip__addr_8h_a88b43639738c4de2d3cd22e3a1fd7696}{ip\+\_\+addr\+\_\+t} $\ast$remote\+\_\+addr, \hyperlink{group__compiler__abstraction_ga77570ac4fcab86864fa1916e55676da2}{u16\+\_\+t} remote\+\_\+port, \hyperlink{group__compiler__abstraction_ga4c14294869aceba3ef9d4c0c302d0f33}{u32\+\_\+t} bytes\+\_\+transferred, \hyperlink{group__compiler__abstraction_ga4c14294869aceba3ef9d4c0c302d0f33}{u32\+\_\+t} ms\+\_\+duration, \hyperlink{group__compiler__abstraction_ga4c14294869aceba3ef9d4c0c302d0f33}{u32\+\_\+t} bandwidth\+\_\+kbitpsec)
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2apps_2lwiperf_8h_ab72a2d205e43d5243a291f937bbc24d6}{lwiperf\+\_\+report\+\_\+type} \{ \newline
+\hyperlink{native_2lwip_2src_2include_2lwip_2apps_2lwiperf_8h_ab72a2d205e43d5243a291f937bbc24d6aa52255236ad2983346311ce7f28210e5}{L\+W\+I\+P\+E\+R\+F\+\_\+\+T\+C\+P\+\_\+\+D\+O\+N\+E\+\_\+\+S\+E\+R\+V\+ER}, 
+\hyperlink{native_2lwip_2src_2include_2lwip_2apps_2lwiperf_8h_ab72a2d205e43d5243a291f937bbc24d6a4f9bde0cad305eaab25d2c1d0196677b}{L\+W\+I\+P\+E\+R\+F\+\_\+\+T\+C\+P\+\_\+\+D\+O\+N\+E\+\_\+\+C\+L\+I\+E\+NT}, 
+\hyperlink{native_2lwip_2src_2include_2lwip_2apps_2lwiperf_8h_ab72a2d205e43d5243a291f937bbc24d6abee2bf6da51a0845c15ac52b280203cb}{L\+W\+I\+P\+E\+R\+F\+\_\+\+T\+C\+P\+\_\+\+A\+B\+O\+R\+T\+E\+D\+\_\+\+L\+O\+C\+AL}, 
+\hyperlink{native_2lwip_2src_2include_2lwip_2apps_2lwiperf_8h_ab72a2d205e43d5243a291f937bbc24d6adda7e5dbaf1e04eb04ec0fd2b05584a5}{L\+W\+I\+P\+E\+R\+F\+\_\+\+T\+C\+P\+\_\+\+A\+B\+O\+R\+T\+E\+D\+\_\+\+L\+O\+C\+A\+L\+\_\+\+D\+A\+T\+A\+E\+R\+R\+OR}, 
+\newline
+\hyperlink{native_2lwip_2src_2include_2lwip_2apps_2lwiperf_8h_ab72a2d205e43d5243a291f937bbc24d6a3d4e1f5742d80aeafb6b22aa74d93e40}{L\+W\+I\+P\+E\+R\+F\+\_\+\+T\+C\+P\+\_\+\+A\+B\+O\+R\+T\+E\+D\+\_\+\+L\+O\+C\+A\+L\+\_\+\+T\+X\+E\+R\+R\+OR}, 
+\hyperlink{native_2lwip_2src_2include_2lwip_2apps_2lwiperf_8h_ab72a2d205e43d5243a291f937bbc24d6ae664c0f987584f07fb0f6f8896aada0d}{L\+W\+I\+P\+E\+R\+F\+\_\+\+T\+C\+P\+\_\+\+A\+B\+O\+R\+T\+E\+D\+\_\+\+R\+E\+M\+O\+TE}, 
+\hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2apps_2lwiperf_8h_ab72a2d205e43d5243a291f937bbc24d6aa52255236ad2983346311ce7f28210e5}{L\+W\+I\+P\+E\+R\+F\+\_\+\+T\+C\+P\+\_\+\+D\+O\+N\+E\+\_\+\+S\+E\+R\+V\+ER}, 
+\hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2apps_2lwiperf_8h_ab72a2d205e43d5243a291f937bbc24d6a4f9bde0cad305eaab25d2c1d0196677b}{L\+W\+I\+P\+E\+R\+F\+\_\+\+T\+C\+P\+\_\+\+D\+O\+N\+E\+\_\+\+C\+L\+I\+E\+NT}, 
+\newline
+\hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2apps_2lwiperf_8h_ab72a2d205e43d5243a291f937bbc24d6abee2bf6da51a0845c15ac52b280203cb}{L\+W\+I\+P\+E\+R\+F\+\_\+\+T\+C\+P\+\_\+\+A\+B\+O\+R\+T\+E\+D\+\_\+\+L\+O\+C\+AL}, 
+\hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2apps_2lwiperf_8h_ab72a2d205e43d5243a291f937bbc24d6adda7e5dbaf1e04eb04ec0fd2b05584a5}{L\+W\+I\+P\+E\+R\+F\+\_\+\+T\+C\+P\+\_\+\+A\+B\+O\+R\+T\+E\+D\+\_\+\+L\+O\+C\+A\+L\+\_\+\+D\+A\+T\+A\+E\+R\+R\+OR}, 
+\hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2apps_2lwiperf_8h_ab72a2d205e43d5243a291f937bbc24d6a3d4e1f5742d80aeafb6b22aa74d93e40}{L\+W\+I\+P\+E\+R\+F\+\_\+\+T\+C\+P\+\_\+\+A\+B\+O\+R\+T\+E\+D\+\_\+\+L\+O\+C\+A\+L\+\_\+\+T\+X\+E\+R\+R\+OR}, 
+\hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2apps_2lwiperf_8h_ab72a2d205e43d5243a291f937bbc24d6ae664c0f987584f07fb0f6f8896aada0d}{L\+W\+I\+P\+E\+R\+F\+\_\+\+T\+C\+P\+\_\+\+A\+B\+O\+R\+T\+E\+D\+\_\+\+R\+E\+M\+O\+TE}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void $\ast$ \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2apps_2lwiperf_8h_ad97bf77057e7f96d6d8def812deea202}{lwiperf\+\_\+start\+\_\+tcp\+\_\+server} (const \hyperlink{native_2lwip_2src_2include_2lwip_2ip__addr_8h_a88b43639738c4de2d3cd22e3a1fd7696}{ip\+\_\+addr\+\_\+t} $\ast$local\+\_\+addr, \hyperlink{group__compiler__abstraction_ga77570ac4fcab86864fa1916e55676da2}{u16\+\_\+t} local\+\_\+port, \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2apps_2lwiperf_8h_a248ea47a58a14c6aecf6525217a812fd}{lwiperf\+\_\+report\+\_\+fn} report\+\_\+fn, void $\ast$report\+\_\+arg)
+\item 
+void $\ast$ \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2apps_2lwiperf_8h_ae1f30a02b86c4dd3d47810cd493baf26}{lwiperf\+\_\+start\+\_\+tcp\+\_\+server\+\_\+default} (\hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2apps_2lwiperf_8h_a248ea47a58a14c6aecf6525217a812fd}{lwiperf\+\_\+report\+\_\+fn} report\+\_\+fn, void $\ast$report\+\_\+arg)
+\item 
+void \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2apps_2lwiperf_8h_ac51c9c44a38bfa1140bd44b793a0a004}{lwiperf\+\_\+abort} (void $\ast$lwiperf\+\_\+session)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+lw\+IP i\+Perf server implementation 
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2apps_2lwiperf_8h_a911cc7e298ab38433bd4a4980cdcad15}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2apps_2lwiperf_8h_a911cc7e298ab38433bd4a4980cdcad15}} 
+\index{openmote-\/cc2538/lwip/src/include/lwip/apps/lwiperf.\+h@{openmote-\/cc2538/lwip/src/include/lwip/apps/lwiperf.\+h}!L\+W\+I\+P\+E\+R\+F\+\_\+\+T\+C\+P\+\_\+\+P\+O\+R\+T\+\_\+\+D\+E\+F\+A\+U\+LT@{L\+W\+I\+P\+E\+R\+F\+\_\+\+T\+C\+P\+\_\+\+P\+O\+R\+T\+\_\+\+D\+E\+F\+A\+U\+LT}}
+\index{L\+W\+I\+P\+E\+R\+F\+\_\+\+T\+C\+P\+\_\+\+P\+O\+R\+T\+\_\+\+D\+E\+F\+A\+U\+LT@{L\+W\+I\+P\+E\+R\+F\+\_\+\+T\+C\+P\+\_\+\+P\+O\+R\+T\+\_\+\+D\+E\+F\+A\+U\+LT}!openmote-\/cc2538/lwip/src/include/lwip/apps/lwiperf.\+h@{openmote-\/cc2538/lwip/src/include/lwip/apps/lwiperf.\+h}}
+\subsubsection{\texorpdfstring{L\+W\+I\+P\+E\+R\+F\+\_\+\+T\+C\+P\+\_\+\+P\+O\+R\+T\+\_\+\+D\+E\+F\+A\+U\+LT}{LWIPERF\_TCP\_PORT\_DEFAULT}}
+{\footnotesize\ttfamily \#define L\+W\+I\+P\+E\+R\+F\+\_\+\+T\+C\+P\+\_\+\+P\+O\+R\+T\+\_\+\+D\+E\+F\+A\+U\+LT~5001}
+
+
+
+\subsection{Typedef Documentation}
+\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2apps_2lwiperf_8h_a248ea47a58a14c6aecf6525217a812fd}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2apps_2lwiperf_8h_a248ea47a58a14c6aecf6525217a812fd}} 
+\index{openmote-\/cc2538/lwip/src/include/lwip/apps/lwiperf.\+h@{openmote-\/cc2538/lwip/src/include/lwip/apps/lwiperf.\+h}!lwiperf\+\_\+report\+\_\+fn@{lwiperf\+\_\+report\+\_\+fn}}
+\index{lwiperf\+\_\+report\+\_\+fn@{lwiperf\+\_\+report\+\_\+fn}!openmote-\/cc2538/lwip/src/include/lwip/apps/lwiperf.\+h@{openmote-\/cc2538/lwip/src/include/lwip/apps/lwiperf.\+h}}
+\subsubsection{\texorpdfstring{lwiperf\+\_\+report\+\_\+fn}{lwiperf\_report\_fn}}
+{\footnotesize\ttfamily typedef void($\ast$ lwiperf\+\_\+report\+\_\+fn) (void $\ast$arg, enum \hyperlink{native_2lwip_2src_2include_2lwip_2apps_2lwiperf_8h_ab72a2d205e43d5243a291f937bbc24d6}{lwiperf\+\_\+report\+\_\+type} report\+\_\+type, const \hyperlink{native_2lwip_2src_2include_2lwip_2ip__addr_8h_a88b43639738c4de2d3cd22e3a1fd7696}{ip\+\_\+addr\+\_\+t} $\ast$local\+\_\+addr, \hyperlink{group__compiler__abstraction_ga77570ac4fcab86864fa1916e55676da2}{u16\+\_\+t} local\+\_\+port, const \hyperlink{native_2lwip_2src_2include_2lwip_2ip__addr_8h_a88b43639738c4de2d3cd22e3a1fd7696}{ip\+\_\+addr\+\_\+t} $\ast$remote\+\_\+addr, \hyperlink{group__compiler__abstraction_ga77570ac4fcab86864fa1916e55676da2}{u16\+\_\+t} remote\+\_\+port, \hyperlink{group__compiler__abstraction_ga4c14294869aceba3ef9d4c0c302d0f33}{u32\+\_\+t} bytes\+\_\+transferred, \hyperlink{group__compiler__abstraction_ga4c14294869aceba3ef9d4c0c302d0f33}{u32\+\_\+t} ms\+\_\+duration, \hyperlink{group__compiler__abstraction_ga4c14294869aceba3ef9d4c0c302d0f33}{u32\+\_\+t} bandwidth\+\_\+kbitpsec)}
+
+Prototype of a report function that is called when a session is finished. This report function can show the test results. 
+\begin{DoxyParams}{Parameters}
+{\em report\+\_\+type} & contains the test result \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2apps_2lwiperf_8h_ab72a2d205e43d5243a291f937bbc24d6}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2apps_2lwiperf_8h_ab72a2d205e43d5243a291f937bbc24d6}} 
+\index{openmote-\/cc2538/lwip/src/include/lwip/apps/lwiperf.\+h@{openmote-\/cc2538/lwip/src/include/lwip/apps/lwiperf.\+h}!lwiperf\+\_\+report\+\_\+type@{lwiperf\+\_\+report\+\_\+type}}
+\index{lwiperf\+\_\+report\+\_\+type@{lwiperf\+\_\+report\+\_\+type}!openmote-\/cc2538/lwip/src/include/lwip/apps/lwiperf.\+h@{openmote-\/cc2538/lwip/src/include/lwip/apps/lwiperf.\+h}}
+\subsubsection{\texorpdfstring{lwiperf\+\_\+report\+\_\+type}{lwiperf\_report\_type}}
+{\footnotesize\ttfamily enum \hyperlink{native_2lwip_2src_2include_2lwip_2apps_2lwiperf_8h_ab72a2d205e43d5243a291f937bbc24d6}{lwiperf\+\_\+report\+\_\+type}}
+
+lw\+I\+Perf test results \begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{L\+W\+I\+P\+E\+R\+F\+\_\+\+T\+C\+P\+\_\+\+D\+O\+N\+E\+\_\+\+S\+E\+R\+V\+ER@{L\+W\+I\+P\+E\+R\+F\+\_\+\+T\+C\+P\+\_\+\+D\+O\+N\+E\+\_\+\+S\+E\+R\+V\+ER}!openmote-\/cc2538/lwip/src/include/lwip/apps/lwiperf.\+h@{openmote-\/cc2538/lwip/src/include/lwip/apps/lwiperf.\+h}}\index{openmote-\/cc2538/lwip/src/include/lwip/apps/lwiperf.\+h@{openmote-\/cc2538/lwip/src/include/lwip/apps/lwiperf.\+h}!L\+W\+I\+P\+E\+R\+F\+\_\+\+T\+C\+P\+\_\+\+D\+O\+N\+E\+\_\+\+S\+E\+R\+V\+ER@{L\+W\+I\+P\+E\+R\+F\+\_\+\+T\+C\+P\+\_\+\+D\+O\+N\+E\+\_\+\+S\+E\+R\+V\+ER}}}\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2apps_2lwiperf_8h_ab72a2d205e43d5243a291f937bbc24d6aa52255236ad2983346311ce7f28210e5}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2apps_2lwiperf_8h_ab72a2d205e43d5243a291f937bbc24d6aa52255236ad2983346311ce7f28210e5}} 
+L\+W\+I\+P\+E\+R\+F\+\_\+\+T\+C\+P\+\_\+\+D\+O\+N\+E\+\_\+\+S\+E\+R\+V\+ER&The server side test is done \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{L\+W\+I\+P\+E\+R\+F\+\_\+\+T\+C\+P\+\_\+\+D\+O\+N\+E\+\_\+\+C\+L\+I\+E\+NT@{L\+W\+I\+P\+E\+R\+F\+\_\+\+T\+C\+P\+\_\+\+D\+O\+N\+E\+\_\+\+C\+L\+I\+E\+NT}!openmote-\/cc2538/lwip/src/include/lwip/apps/lwiperf.\+h@{openmote-\/cc2538/lwip/src/include/lwip/apps/lwiperf.\+h}}\index{openmote-\/cc2538/lwip/src/include/lwip/apps/lwiperf.\+h@{openmote-\/cc2538/lwip/src/include/lwip/apps/lwiperf.\+h}!L\+W\+I\+P\+E\+R\+F\+\_\+\+T\+C\+P\+\_\+\+D\+O\+N\+E\+\_\+\+C\+L\+I\+E\+NT@{L\+W\+I\+P\+E\+R\+F\+\_\+\+T\+C\+P\+\_\+\+D\+O\+N\+E\+\_\+\+C\+L\+I\+E\+NT}}}\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2apps_2lwiperf_8h_ab72a2d205e43d5243a291f937bbc24d6a4f9bde0cad305eaab25d2c1d0196677b}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2apps_2lwiperf_8h_ab72a2d205e43d5243a291f937bbc24d6a4f9bde0cad305eaab25d2c1d0196677b}} 
+L\+W\+I\+P\+E\+R\+F\+\_\+\+T\+C\+P\+\_\+\+D\+O\+N\+E\+\_\+\+C\+L\+I\+E\+NT&The client side test is done \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{L\+W\+I\+P\+E\+R\+F\+\_\+\+T\+C\+P\+\_\+\+A\+B\+O\+R\+T\+E\+D\+\_\+\+L\+O\+C\+AL@{L\+W\+I\+P\+E\+R\+F\+\_\+\+T\+C\+P\+\_\+\+A\+B\+O\+R\+T\+E\+D\+\_\+\+L\+O\+C\+AL}!openmote-\/cc2538/lwip/src/include/lwip/apps/lwiperf.\+h@{openmote-\/cc2538/lwip/src/include/lwip/apps/lwiperf.\+h}}\index{openmote-\/cc2538/lwip/src/include/lwip/apps/lwiperf.\+h@{openmote-\/cc2538/lwip/src/include/lwip/apps/lwiperf.\+h}!L\+W\+I\+P\+E\+R\+F\+\_\+\+T\+C\+P\+\_\+\+A\+B\+O\+R\+T\+E\+D\+\_\+\+L\+O\+C\+AL@{L\+W\+I\+P\+E\+R\+F\+\_\+\+T\+C\+P\+\_\+\+A\+B\+O\+R\+T\+E\+D\+\_\+\+L\+O\+C\+AL}}}\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2apps_2lwiperf_8h_ab72a2d205e43d5243a291f937bbc24d6abee2bf6da51a0845c15ac52b280203cb}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2apps_2lwiperf_8h_ab72a2d205e43d5243a291f937bbc24d6abee2bf6da51a0845c15ac52b280203cb}} 
+L\+W\+I\+P\+E\+R\+F\+\_\+\+T\+C\+P\+\_\+\+A\+B\+O\+R\+T\+E\+D\+\_\+\+L\+O\+C\+AL&Local error lead to test abort \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{L\+W\+I\+P\+E\+R\+F\+\_\+\+T\+C\+P\+\_\+\+A\+B\+O\+R\+T\+E\+D\+\_\+\+L\+O\+C\+A\+L\+\_\+\+D\+A\+T\+A\+E\+R\+R\+OR@{L\+W\+I\+P\+E\+R\+F\+\_\+\+T\+C\+P\+\_\+\+A\+B\+O\+R\+T\+E\+D\+\_\+\+L\+O\+C\+A\+L\+\_\+\+D\+A\+T\+A\+E\+R\+R\+OR}!openmote-\/cc2538/lwip/src/include/lwip/apps/lwiperf.\+h@{openmote-\/cc2538/lwip/src/include/lwip/apps/lwiperf.\+h}}\index{openmote-\/cc2538/lwip/src/include/lwip/apps/lwiperf.\+h@{openmote-\/cc2538/lwip/src/include/lwip/apps/lwiperf.\+h}!L\+W\+I\+P\+E\+R\+F\+\_\+\+T\+C\+P\+\_\+\+A\+B\+O\+R\+T\+E\+D\+\_\+\+L\+O\+C\+A\+L\+\_\+\+D\+A\+T\+A\+E\+R\+R\+OR@{L\+W\+I\+P\+E\+R\+F\+\_\+\+T\+C\+P\+\_\+\+A\+B\+O\+R\+T\+E\+D\+\_\+\+L\+O\+C\+A\+L\+\_\+\+D\+A\+T\+A\+E\+R\+R\+OR}}}\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2apps_2lwiperf_8h_ab72a2d205e43d5243a291f937bbc24d6adda7e5dbaf1e04eb04ec0fd2b05584a5}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2apps_2lwiperf_8h_ab72a2d205e43d5243a291f937bbc24d6adda7e5dbaf1e04eb04ec0fd2b05584a5}} 
+L\+W\+I\+P\+E\+R\+F\+\_\+\+T\+C\+P\+\_\+\+A\+B\+O\+R\+T\+E\+D\+\_\+\+L\+O\+C\+A\+L\+\_\+\+D\+A\+T\+A\+E\+R\+R\+OR&Data check error lead to test abort \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{L\+W\+I\+P\+E\+R\+F\+\_\+\+T\+C\+P\+\_\+\+A\+B\+O\+R\+T\+E\+D\+\_\+\+L\+O\+C\+A\+L\+\_\+\+T\+X\+E\+R\+R\+OR@{L\+W\+I\+P\+E\+R\+F\+\_\+\+T\+C\+P\+\_\+\+A\+B\+O\+R\+T\+E\+D\+\_\+\+L\+O\+C\+A\+L\+\_\+\+T\+X\+E\+R\+R\+OR}!openmote-\/cc2538/lwip/src/include/lwip/apps/lwiperf.\+h@{openmote-\/cc2538/lwip/src/include/lwip/apps/lwiperf.\+h}}\index{openmote-\/cc2538/lwip/src/include/lwip/apps/lwiperf.\+h@{openmote-\/cc2538/lwip/src/include/lwip/apps/lwiperf.\+h}!L\+W\+I\+P\+E\+R\+F\+\_\+\+T\+C\+P\+\_\+\+A\+B\+O\+R\+T\+E\+D\+\_\+\+L\+O\+C\+A\+L\+\_\+\+T\+X\+E\+R\+R\+OR@{L\+W\+I\+P\+E\+R\+F\+\_\+\+T\+C\+P\+\_\+\+A\+B\+O\+R\+T\+E\+D\+\_\+\+L\+O\+C\+A\+L\+\_\+\+T\+X\+E\+R\+R\+OR}}}\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2apps_2lwiperf_8h_ab72a2d205e43d5243a291f937bbc24d6a3d4e1f5742d80aeafb6b22aa74d93e40}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2apps_2lwiperf_8h_ab72a2d205e43d5243a291f937bbc24d6a3d4e1f5742d80aeafb6b22aa74d93e40}} 
+L\+W\+I\+P\+E\+R\+F\+\_\+\+T\+C\+P\+\_\+\+A\+B\+O\+R\+T\+E\+D\+\_\+\+L\+O\+C\+A\+L\+\_\+\+T\+X\+E\+R\+R\+OR&Transmit error lead to test abort \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{L\+W\+I\+P\+E\+R\+F\+\_\+\+T\+C\+P\+\_\+\+A\+B\+O\+R\+T\+E\+D\+\_\+\+R\+E\+M\+O\+TE@{L\+W\+I\+P\+E\+R\+F\+\_\+\+T\+C\+P\+\_\+\+A\+B\+O\+R\+T\+E\+D\+\_\+\+R\+E\+M\+O\+TE}!openmote-\/cc2538/lwip/src/include/lwip/apps/lwiperf.\+h@{openmote-\/cc2538/lwip/src/include/lwip/apps/lwiperf.\+h}}\index{openmote-\/cc2538/lwip/src/include/lwip/apps/lwiperf.\+h@{openmote-\/cc2538/lwip/src/include/lwip/apps/lwiperf.\+h}!L\+W\+I\+P\+E\+R\+F\+\_\+\+T\+C\+P\+\_\+\+A\+B\+O\+R\+T\+E\+D\+\_\+\+R\+E\+M\+O\+TE@{L\+W\+I\+P\+E\+R\+F\+\_\+\+T\+C\+P\+\_\+\+A\+B\+O\+R\+T\+E\+D\+\_\+\+R\+E\+M\+O\+TE}}}\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2apps_2lwiperf_8h_ab72a2d205e43d5243a291f937bbc24d6ae664c0f987584f07fb0f6f8896aada0d}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2apps_2lwiperf_8h_ab72a2d205e43d5243a291f937bbc24d6ae664c0f987584f07fb0f6f8896aada0d}} 
+L\+W\+I\+P\+E\+R\+F\+\_\+\+T\+C\+P\+\_\+\+A\+B\+O\+R\+T\+E\+D\+\_\+\+R\+E\+M\+O\+TE&Remote side aborted the test \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{L\+W\+I\+P\+E\+R\+F\+\_\+\+T\+C\+P\+\_\+\+D\+O\+N\+E\+\_\+\+S\+E\+R\+V\+ER@{L\+W\+I\+P\+E\+R\+F\+\_\+\+T\+C\+P\+\_\+\+D\+O\+N\+E\+\_\+\+S\+E\+R\+V\+ER}!openmote-\/cc2538/lwip/src/include/lwip/apps/lwiperf.\+h@{openmote-\/cc2538/lwip/src/include/lwip/apps/lwiperf.\+h}}\index{openmote-\/cc2538/lwip/src/include/lwip/apps/lwiperf.\+h@{openmote-\/cc2538/lwip/src/include/lwip/apps/lwiperf.\+h}!L\+W\+I\+P\+E\+R\+F\+\_\+\+T\+C\+P\+\_\+\+D\+O\+N\+E\+\_\+\+S\+E\+R\+V\+ER@{L\+W\+I\+P\+E\+R\+F\+\_\+\+T\+C\+P\+\_\+\+D\+O\+N\+E\+\_\+\+S\+E\+R\+V\+ER}}}\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2apps_2lwiperf_8h_ab72a2d205e43d5243a291f937bbc24d6aa52255236ad2983346311ce7f28210e5}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2apps_2lwiperf_8h_ab72a2d205e43d5243a291f937bbc24d6aa52255236ad2983346311ce7f28210e5}} 
+L\+W\+I\+P\+E\+R\+F\+\_\+\+T\+C\+P\+\_\+\+D\+O\+N\+E\+\_\+\+S\+E\+R\+V\+ER&The server side test is done \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{L\+W\+I\+P\+E\+R\+F\+\_\+\+T\+C\+P\+\_\+\+D\+O\+N\+E\+\_\+\+C\+L\+I\+E\+NT@{L\+W\+I\+P\+E\+R\+F\+\_\+\+T\+C\+P\+\_\+\+D\+O\+N\+E\+\_\+\+C\+L\+I\+E\+NT}!openmote-\/cc2538/lwip/src/include/lwip/apps/lwiperf.\+h@{openmote-\/cc2538/lwip/src/include/lwip/apps/lwiperf.\+h}}\index{openmote-\/cc2538/lwip/src/include/lwip/apps/lwiperf.\+h@{openmote-\/cc2538/lwip/src/include/lwip/apps/lwiperf.\+h}!L\+W\+I\+P\+E\+R\+F\+\_\+\+T\+C\+P\+\_\+\+D\+O\+N\+E\+\_\+\+C\+L\+I\+E\+NT@{L\+W\+I\+P\+E\+R\+F\+\_\+\+T\+C\+P\+\_\+\+D\+O\+N\+E\+\_\+\+C\+L\+I\+E\+NT}}}\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2apps_2lwiperf_8h_ab72a2d205e43d5243a291f937bbc24d6a4f9bde0cad305eaab25d2c1d0196677b}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2apps_2lwiperf_8h_ab72a2d205e43d5243a291f937bbc24d6a4f9bde0cad305eaab25d2c1d0196677b}} 
+L\+W\+I\+P\+E\+R\+F\+\_\+\+T\+C\+P\+\_\+\+D\+O\+N\+E\+\_\+\+C\+L\+I\+E\+NT&The client side test is done \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{L\+W\+I\+P\+E\+R\+F\+\_\+\+T\+C\+P\+\_\+\+A\+B\+O\+R\+T\+E\+D\+\_\+\+L\+O\+C\+AL@{L\+W\+I\+P\+E\+R\+F\+\_\+\+T\+C\+P\+\_\+\+A\+B\+O\+R\+T\+E\+D\+\_\+\+L\+O\+C\+AL}!openmote-\/cc2538/lwip/src/include/lwip/apps/lwiperf.\+h@{openmote-\/cc2538/lwip/src/include/lwip/apps/lwiperf.\+h}}\index{openmote-\/cc2538/lwip/src/include/lwip/apps/lwiperf.\+h@{openmote-\/cc2538/lwip/src/include/lwip/apps/lwiperf.\+h}!L\+W\+I\+P\+E\+R\+F\+\_\+\+T\+C\+P\+\_\+\+A\+B\+O\+R\+T\+E\+D\+\_\+\+L\+O\+C\+AL@{L\+W\+I\+P\+E\+R\+F\+\_\+\+T\+C\+P\+\_\+\+A\+B\+O\+R\+T\+E\+D\+\_\+\+L\+O\+C\+AL}}}\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2apps_2lwiperf_8h_ab72a2d205e43d5243a291f937bbc24d6abee2bf6da51a0845c15ac52b280203cb}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2apps_2lwiperf_8h_ab72a2d205e43d5243a291f937bbc24d6abee2bf6da51a0845c15ac52b280203cb}} 
+L\+W\+I\+P\+E\+R\+F\+\_\+\+T\+C\+P\+\_\+\+A\+B\+O\+R\+T\+E\+D\+\_\+\+L\+O\+C\+AL&Local error lead to test abort \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{L\+W\+I\+P\+E\+R\+F\+\_\+\+T\+C\+P\+\_\+\+A\+B\+O\+R\+T\+E\+D\+\_\+\+L\+O\+C\+A\+L\+\_\+\+D\+A\+T\+A\+E\+R\+R\+OR@{L\+W\+I\+P\+E\+R\+F\+\_\+\+T\+C\+P\+\_\+\+A\+B\+O\+R\+T\+E\+D\+\_\+\+L\+O\+C\+A\+L\+\_\+\+D\+A\+T\+A\+E\+R\+R\+OR}!openmote-\/cc2538/lwip/src/include/lwip/apps/lwiperf.\+h@{openmote-\/cc2538/lwip/src/include/lwip/apps/lwiperf.\+h}}\index{openmote-\/cc2538/lwip/src/include/lwip/apps/lwiperf.\+h@{openmote-\/cc2538/lwip/src/include/lwip/apps/lwiperf.\+h}!L\+W\+I\+P\+E\+R\+F\+\_\+\+T\+C\+P\+\_\+\+A\+B\+O\+R\+T\+E\+D\+\_\+\+L\+O\+C\+A\+L\+\_\+\+D\+A\+T\+A\+E\+R\+R\+OR@{L\+W\+I\+P\+E\+R\+F\+\_\+\+T\+C\+P\+\_\+\+A\+B\+O\+R\+T\+E\+D\+\_\+\+L\+O\+C\+A\+L\+\_\+\+D\+A\+T\+A\+E\+R\+R\+OR}}}\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2apps_2lwiperf_8h_ab72a2d205e43d5243a291f937bbc24d6adda7e5dbaf1e04eb04ec0fd2b05584a5}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2apps_2lwiperf_8h_ab72a2d205e43d5243a291f937bbc24d6adda7e5dbaf1e04eb04ec0fd2b05584a5}} 
+L\+W\+I\+P\+E\+R\+F\+\_\+\+T\+C\+P\+\_\+\+A\+B\+O\+R\+T\+E\+D\+\_\+\+L\+O\+C\+A\+L\+\_\+\+D\+A\+T\+A\+E\+R\+R\+OR&Data check error lead to test abort \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{L\+W\+I\+P\+E\+R\+F\+\_\+\+T\+C\+P\+\_\+\+A\+B\+O\+R\+T\+E\+D\+\_\+\+L\+O\+C\+A\+L\+\_\+\+T\+X\+E\+R\+R\+OR@{L\+W\+I\+P\+E\+R\+F\+\_\+\+T\+C\+P\+\_\+\+A\+B\+O\+R\+T\+E\+D\+\_\+\+L\+O\+C\+A\+L\+\_\+\+T\+X\+E\+R\+R\+OR}!openmote-\/cc2538/lwip/src/include/lwip/apps/lwiperf.\+h@{openmote-\/cc2538/lwip/src/include/lwip/apps/lwiperf.\+h}}\index{openmote-\/cc2538/lwip/src/include/lwip/apps/lwiperf.\+h@{openmote-\/cc2538/lwip/src/include/lwip/apps/lwiperf.\+h}!L\+W\+I\+P\+E\+R\+F\+\_\+\+T\+C\+P\+\_\+\+A\+B\+O\+R\+T\+E\+D\+\_\+\+L\+O\+C\+A\+L\+\_\+\+T\+X\+E\+R\+R\+OR@{L\+W\+I\+P\+E\+R\+F\+\_\+\+T\+C\+P\+\_\+\+A\+B\+O\+R\+T\+E\+D\+\_\+\+L\+O\+C\+A\+L\+\_\+\+T\+X\+E\+R\+R\+OR}}}\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2apps_2lwiperf_8h_ab72a2d205e43d5243a291f937bbc24d6a3d4e1f5742d80aeafb6b22aa74d93e40}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2apps_2lwiperf_8h_ab72a2d205e43d5243a291f937bbc24d6a3d4e1f5742d80aeafb6b22aa74d93e40}} 
+L\+W\+I\+P\+E\+R\+F\+\_\+\+T\+C\+P\+\_\+\+A\+B\+O\+R\+T\+E\+D\+\_\+\+L\+O\+C\+A\+L\+\_\+\+T\+X\+E\+R\+R\+OR&Transmit error lead to test abort \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{L\+W\+I\+P\+E\+R\+F\+\_\+\+T\+C\+P\+\_\+\+A\+B\+O\+R\+T\+E\+D\+\_\+\+R\+E\+M\+O\+TE@{L\+W\+I\+P\+E\+R\+F\+\_\+\+T\+C\+P\+\_\+\+A\+B\+O\+R\+T\+E\+D\+\_\+\+R\+E\+M\+O\+TE}!openmote-\/cc2538/lwip/src/include/lwip/apps/lwiperf.\+h@{openmote-\/cc2538/lwip/src/include/lwip/apps/lwiperf.\+h}}\index{openmote-\/cc2538/lwip/src/include/lwip/apps/lwiperf.\+h@{openmote-\/cc2538/lwip/src/include/lwip/apps/lwiperf.\+h}!L\+W\+I\+P\+E\+R\+F\+\_\+\+T\+C\+P\+\_\+\+A\+B\+O\+R\+T\+E\+D\+\_\+\+R\+E\+M\+O\+TE@{L\+W\+I\+P\+E\+R\+F\+\_\+\+T\+C\+P\+\_\+\+A\+B\+O\+R\+T\+E\+D\+\_\+\+R\+E\+M\+O\+TE}}}\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2apps_2lwiperf_8h_ab72a2d205e43d5243a291f937bbc24d6ae664c0f987584f07fb0f6f8896aada0d}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2apps_2lwiperf_8h_ab72a2d205e43d5243a291f937bbc24d6ae664c0f987584f07fb0f6f8896aada0d}} 
+L\+W\+I\+P\+E\+R\+F\+\_\+\+T\+C\+P\+\_\+\+A\+B\+O\+R\+T\+E\+D\+\_\+\+R\+E\+M\+O\+TE&Remote side aborted the test \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2apps_2lwiperf_8h_ac51c9c44a38bfa1140bd44b793a0a004}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2apps_2lwiperf_8h_ac51c9c44a38bfa1140bd44b793a0a004}} 
+\index{openmote-\/cc2538/lwip/src/include/lwip/apps/lwiperf.\+h@{openmote-\/cc2538/lwip/src/include/lwip/apps/lwiperf.\+h}!lwiperf\+\_\+abort@{lwiperf\+\_\+abort}}
+\index{lwiperf\+\_\+abort@{lwiperf\+\_\+abort}!openmote-\/cc2538/lwip/src/include/lwip/apps/lwiperf.\+h@{openmote-\/cc2538/lwip/src/include/lwip/apps/lwiperf.\+h}}
+\subsubsection{\texorpdfstring{lwiperf\+\_\+abort()}{lwiperf\_abort()}}
+{\footnotesize\ttfamily void lwiperf\+\_\+abort (\begin{DoxyParamCaption}\item[{void $\ast$}]{lwiperf\+\_\+session }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2apps_2lwiperf_8h_ad97bf77057e7f96d6d8def812deea202}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2apps_2lwiperf_8h_ad97bf77057e7f96d6d8def812deea202}} 
+\index{openmote-\/cc2538/lwip/src/include/lwip/apps/lwiperf.\+h@{openmote-\/cc2538/lwip/src/include/lwip/apps/lwiperf.\+h}!lwiperf\+\_\+start\+\_\+tcp\+\_\+server@{lwiperf\+\_\+start\+\_\+tcp\+\_\+server}}
+\index{lwiperf\+\_\+start\+\_\+tcp\+\_\+server@{lwiperf\+\_\+start\+\_\+tcp\+\_\+server}!openmote-\/cc2538/lwip/src/include/lwip/apps/lwiperf.\+h@{openmote-\/cc2538/lwip/src/include/lwip/apps/lwiperf.\+h}}
+\subsubsection{\texorpdfstring{lwiperf\+\_\+start\+\_\+tcp\+\_\+server()}{lwiperf\_start\_tcp\_server()}}
+{\footnotesize\ttfamily void$\ast$ lwiperf\+\_\+start\+\_\+tcp\+\_\+server (\begin{DoxyParamCaption}\item[{const \hyperlink{native_2lwip_2src_2include_2lwip_2ip__addr_8h_a88b43639738c4de2d3cd22e3a1fd7696}{ip\+\_\+addr\+\_\+t} $\ast$}]{local\+\_\+addr,  }\item[{\hyperlink{group__compiler__abstraction_ga77570ac4fcab86864fa1916e55676da2}{u16\+\_\+t}}]{local\+\_\+port,  }\item[{\hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2apps_2lwiperf_8h_a248ea47a58a14c6aecf6525217a812fd}{lwiperf\+\_\+report\+\_\+fn}}]{report\+\_\+fn,  }\item[{void $\ast$}]{report\+\_\+arg }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2apps_2lwiperf_8h_ae1f30a02b86c4dd3d47810cd493baf26}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2apps_2lwiperf_8h_ae1f30a02b86c4dd3d47810cd493baf26}} 
+\index{openmote-\/cc2538/lwip/src/include/lwip/apps/lwiperf.\+h@{openmote-\/cc2538/lwip/src/include/lwip/apps/lwiperf.\+h}!lwiperf\+\_\+start\+\_\+tcp\+\_\+server\+\_\+default@{lwiperf\+\_\+start\+\_\+tcp\+\_\+server\+\_\+default}}
+\index{lwiperf\+\_\+start\+\_\+tcp\+\_\+server\+\_\+default@{lwiperf\+\_\+start\+\_\+tcp\+\_\+server\+\_\+default}!openmote-\/cc2538/lwip/src/include/lwip/apps/lwiperf.\+h@{openmote-\/cc2538/lwip/src/include/lwip/apps/lwiperf.\+h}}
+\subsubsection{\texorpdfstring{lwiperf\+\_\+start\+\_\+tcp\+\_\+server\+\_\+default()}{lwiperf\_start\_tcp\_server\_default()}}
+{\footnotesize\ttfamily void$\ast$ lwiperf\+\_\+start\+\_\+tcp\+\_\+server\+\_\+default (\begin{DoxyParamCaption}\item[{\hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2apps_2lwiperf_8h_a248ea47a58a14c6aecf6525217a812fd}{lwiperf\+\_\+report\+\_\+fn}}]{report\+\_\+fn,  }\item[{void $\ast$}]{report\+\_\+arg }\end{DoxyParamCaption})}
+

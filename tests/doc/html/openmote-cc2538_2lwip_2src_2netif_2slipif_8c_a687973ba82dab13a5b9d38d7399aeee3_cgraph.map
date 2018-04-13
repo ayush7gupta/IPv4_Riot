@@ -1,0 +1,6 @@
+<map id="slipif_init" name="slipif_init">
+<area shape="rect" id="node2" href="$native_2lwip_2src_2core_2mem_8c.html#a932aa40d85b14cb7331625e012d12335" title="mem_malloc" alt="" coords="137,5,233,32"/>
+<area shape="rect" id="node3" href="$native_2lwip_2src_2include_2lwip_2sio_8h.html#a127c33a3c36b7de915a9fe0e1223e063" title="sio_open" alt="" coords="148,56,223,83"/>
+<area shape="rect" id="node4" href="$native_2lwip_2src_2core_2mem_8c.html#a65169147c44e9db60d997819af9b455c" title="mem_free" alt="" coords="145,107,225,133"/>
+<area shape="rect" id="node5" href="$group__sys__misc.html#ga0d596afdd8dbcfad320172d39b0f607a" title="sys_thread_new" alt="" coords="127,157,244,184"/>
+</map>

@@ -1,0 +1,171 @@
+\subsection*{Building and running tests}
+
+Tests can be built by calling\+:
+
+
+\begin{DoxyCode}
+cd tests/unittests
+make
+\end{DoxyCode}
+
+
+If there are tests for a module you even can build tests specifically for this module\+:
+
+
+\begin{DoxyCode}
+make tests-<module>
+# e.g.
+make tests-core
+\end{DoxyCode}
+
+
+You then can run the tests by calling
+
+
+\begin{DoxyCode}
+make term
+\end{DoxyCode}
+
+
+or flash them to your board as you would flash any R\+I\+OT application to the board (see \href{https://github.com/RIOT-OS/RIOT/wiki/RIOT-Platforms}{\tt board documentation$\vert$\+R\+I\+O\+T-\/\+Platforms}).
+
+You can debug your tests by running
+
+
+\begin{DoxyCode}
+make debug
+\end{DoxyCode}
+ and using G\+DB as usual.
+
+\subsubsection*{Other output formats}
+
+Other output formats using \href{http://embunit.sourceforge.net/}{\tt {\itshape emb\+Unit}}\textquotesingle{}s {\ttfamily textui} library are available by setting the environment variable {\ttfamily O\+U\+T\+P\+UT}\+:
+
+
+\begin{DoxyItemize}
+\item Compiler\+: {\ttfamily O\+U\+T\+P\+UT=\char`\"{}\+C\+O\+M\+P\+I\+L\+E\+R\char`\"{}}
+\item Text\+: {\ttfamily O\+U\+T\+P\+UT=\char`\"{}\+T\+E\+X\+T\char`\"{}}
+\item X\+ML\+: {\ttfamily O\+U\+T\+P\+UT=\char`\"{}\+X\+M\+L\char`\"{}}
+\item Color\+: {\ttfamily O\+U\+T\+P\+UT=\char`\"{}\+C\+O\+L\+O\+R\char`\"{}} (like default, but with red/green output)
+\item Colored-\/\+Text\+: {\ttfamily O\+U\+T\+P\+UT=\char`\"{}\+C\+O\+L\+O\+R\+T\+E\+X\+T\char`\"{}} (like {\ttfamily T\+E\+XT}, but with red/green output)
+\end{DoxyItemize}
+
+\#\#\#\# Compile example 
+\begin{DoxyCode}
+OUTPUT="COMPILER" make tests-core
+make term
+\end{DoxyCode}
+
+
+(only outputs in case of test failures)
+
+\#\#\#\# Text example 
+\begin{DoxyCode}
+OUTPUT="TEXT" make tests-core
+make term
+\end{DoxyCode}
+
+
+
+\begin{DoxyCode}
+- core\_bitarithm\_tests
+1) OK test\_SETBIT\_null\_null
+2) OK test\_SETBIT\_null\_limit
+3) ...
+- core\_clist\_tests
+25) ...
+- ...
+
+OK (... tests)
+\end{DoxyCode}
+
+
+\#\#\#\# X\+ML example 
+\begin{DoxyCode}
+OUTPUT="XML" make tests-core
+make term
+\end{DoxyCode}
+
+
+
+\begin{DoxyCode}
+<?\textcolor{keyword}{xml} \textcolor{keyword}{version}=\textcolor{stringliteral}{"1.0"} \textcolor{keyword}{encoding}=\textcolor{stringliteral}{'shift\_jis'} \textcolor{keyword}{standalone}=\textcolor{stringliteral}{'yes'} ?>
+<\textcolor{keywordtype}{TestRun}>
+<\textcolor{keywordtype}{core\_bitarithm\_tests}>
+<\textcolor{keywordtype}{Test} \textcolor{keyword}{id}=\textcolor{stringliteral}{"1"}>
+<\textcolor{keywordtype}{Name}>\textcolor{keyword}{test\_SETBIT\_null\_null}</\textcolor{keywordtype}{Name}>
+</\textcolor{keywordtype}{Test}>
+<\textcolor{keywordtype}{Test} \textcolor{keyword}{id}=\textcolor{stringliteral}{"2"}>
+<\textcolor{keywordtype}{Name}>\textcolor{keyword}{test\_SETBIT\_null\_limit}</\textcolor{keywordtype}{Name}>
+</\textcolor{keywordtype}{Test}>
+...
+</\textcolor{keywordtype}{core\_bitarithm\_tests}>
+<\textcolor{keywordtype}{core\_clist\_tests}>
+<\textcolor{keywordtype}{Test} \textcolor{keyword}{id}=\textcolor{stringliteral}{"25"}>
+<\textcolor{keywordtype}{Name}>\textcolor{keyword}{test\_clist\_add\_one}</\textcolor{keywordtype}{Name}>
+</\textcolor{keywordtype}{Test}>
+...
+</\textcolor{keywordtype}{core\_clist\_tests}>
+<\textcolor{keywordtype}{Statistics}>
+<\textcolor{keywordtype}{Tests}>...</\textcolor{keywordtype}{Tests}>
+</\textcolor{keywordtype}{Statistics}>
+</\textcolor{keywordtype}{TestRun}>
+\end{DoxyCode}
+
+
+\subsection*{Writing unit tests}
+
+\subsubsection*{File struture}
+
+R\+I\+OT uses \href{http://embunit.sourceforge.net/}{\tt {\itshape emb\+Unit}} for unit testing. All unit tests are organized in {\ttfamily tests/unittests} and can be built module-\/wise, if needed. For each module there exists a {\ttfamily tests-\/$<$modulename$>$/tests-\/$<$modulename$>$.h} file, at least one C file in {\ttfamily tests-\/$<$modulename$>$/} and a {\ttfamily tests-\/$<$modulename$>$/\+Makefile}. It is recommended to add a C file named {\ttfamily tests-\/$<$modulename$>$/tests-\/$<$modulename$>$-\/$<$headername$>$.c} for every header file that defines functions (or macros) implemented in the module. If there is only one such header file {\ttfamily tests-\/$<$modulename$>$/tests-\/$<$modulename$>$.c} should suffice.
+
+Each {\ttfamily $\ast$.c} file should implement a function defined in {\ttfamily tests-\/$<$modulename$>$/tests-\/$<$modulename$>$.h}, named like
+
+
+\begin{DoxyCode}
+Test *tests\_<modulename>\_<headername>\_tests(\textcolor{keywordtype}{void});
+
+\textcolor{comment}{/* or respectively */}
+
+Test *tests\_<modulename>\_tests(\textcolor{keywordtype}{void});
+\end{DoxyCode}
+
+
+\subsubsection*{Testing a module}
+
+To write new tests for a module you need to do three things\+:
+
+
+\begin{DoxyEnumerate}
+\item {\bfseries \href{#create-a-makefile}{\tt Create a Makefile}}\+: add a file {\ttfamily tests-\/$<$modulename$>$/\+Makefile}
+\item {\bfseries \href{#define-a-test-header}{\tt Define a test header}}\+: add a file {\ttfamily tests-\/$<$modulename$>$/tests-\/$<$modulename$>$.h}
+\item {\bfseries \href{#implement-tests}{\tt Implement tests}}\+: for each header file, that defines a function or macro implemented or related to the module, add a file {\ttfamily tests-\/$<$modulename$>$/tests-\/$<$modulename$>$-\/$<$headername$>$.c} or {\ttfamily tests-\/$<$modulename$>$/tests-\/$<$modulename$>$.c} if there is only one header.
+\end{DoxyEnumerate}
+
+\paragraph*{Create a Makefile}
+
+The Makefile should have the following content\+:
+
+
+\begin{DoxyCode}
+include $(RIOTBASE)/Makefile.base
+\end{DoxyCode}
+
+
+\paragraph*{Define a test header.}
+
+The test header {\ttfamily tests-\/$<$modulename$>$/tests-\/$<$module$>$.h} of a module you add to {\ttfamily tests/unittests/} should have the following structure
+
+```C /$\ast$
+\begin{DoxyItemize}
+\item Copyright (C) $<$year$>$ $<$author$>$
+\item 
+\item This file is subject to the terms and conditions of the G\+NU Lesser
+\item General Public License v2.\+1. See the file L\+I\+C\+E\+N\+SE in the top level
+\item directory for more details. $\ast$/
+\end{DoxyItemize}
+
+/$\ast$$\ast$
+\begin{DoxyItemize}
+\item 
+\end{DoxyItemize}

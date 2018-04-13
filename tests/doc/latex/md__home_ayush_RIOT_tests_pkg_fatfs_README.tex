@@ -1,0 +1,17 @@
+To use this test on native you need a F\+AT image file. The following commands can be used to create such an image and mount it afterwards so you can add files to your virtual disk that can later be accessed from R\+I\+OT.
+
+
+\begin{DoxyEnumerate}
+\item create an enpty file with a size of 128\+MB {\ttfamily dd if=/dev/zero of=riot\+\_\+fatfs\+\_\+disk.\+img bs=1M count=128}
+\item create a F\+AT file system within the file {\ttfamily mkfs.\+fat riot\+\_\+fatfs\+\_\+disk.\+img}
+\item create a mount point which you can use later to add files with your file browser {\ttfamily sudo mkdir -\/p /media/riot\+\_\+fatfs\+\_\+disk}
+\item give all needed rights for that mountpoint to your user {\ttfamily sudo chown $<$your\+\_\+username$>$ /media/riot\+\_\+fatfs\+\_\+disk/}
+\item mount the image -\/$>$ the disk should now be accessible from any program {\ttfamily sudo mount -\/o loop,umask=000 riot\+\_\+fatfs\+\_\+disk.\+img /media/riot\+\_\+fatfs\+\_\+disk}
+\item When you are done -\/$>$ unmount the disk before you use it under R\+I\+OT {\ttfamily sudo umount /media/riot\+\_\+fatfs\+\_\+disk}
+\end{DoxyEnumerate}
+
+\subparagraph*{N\+O\+TE\+:}
+
+You shouldn\textquotesingle{}t leave the image mounted while you use it in R\+I\+OT, the abstraction layer between Fat\+Fs and the image file mimics a dumb block device (i.\+e. behaves much like the devices that are actually meant to be used with F\+AT) That implies it doesn\textquotesingle{}t show any modifications in R\+I\+OT that you perform on your OS and the other way round. So always remember to mount/unmount correctly or your FS will probably get damaged.
+
+To tell R\+I\+OT where your image file is located you can use the image\+\_\+path entry in the volume\+\_\+files array in fatfs\+\_\+diskio\+\_\+native/diskio.\+c. 

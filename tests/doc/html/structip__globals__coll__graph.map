@@ -1,0 +1,4 @@
+<map id="ip_globals" name="ip_globals">
+<area shape="rect" id="node2" href="$structnetif.html" title="netif" alt="" coords="22,96,69,123"/>
+<area shape="rect" id="node3" href="$structpbuf.html" title="pbuf" alt="" coords="22,5,69,32"/>
+</map>

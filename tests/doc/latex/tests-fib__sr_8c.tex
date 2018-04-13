@@ -1,0 +1,55 @@
+\hypertarget{tests-fib__sr_8c}{}\section{/home/ayush/\+R\+I\+O\+T/tests/unittests/tests-\/fib\+\_\+sr/tests-\/fib\+\_\+sr.c File Reference}
+\label{tests-fib__sr_8c}\index{/home/ayush/\+R\+I\+O\+T/tests/unittests/tests-\/fib\+\_\+sr/tests-\/fib\+\_\+sr.\+c@{/home/ayush/\+R\+I\+O\+T/tests/unittests/tests-\/fib\+\_\+sr/tests-\/fib\+\_\+sr.\+c}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$errno.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}emb\+Unit.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}tests-\/fib\+\_\+sr.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}thread.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}net/fib.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}universal\+\_\+address.\+h\char`\"{}}\newline
+Include dependency graph for tests-\/fib\+\_\+sr.c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{tests-fib__sr_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{tests-fib__sr_8c_aa8679d92c7fab6c82b146daa69821eef}{T\+E\+S\+T\+\_\+\+M\+A\+X\+\_\+\+F\+I\+B\+\_\+\+SR}~(20)
+\begin{DoxyCompactList}\small\item\em maximum number of source routes \end{DoxyCompactList}\item 
+\#define \hyperlink{tests-fib__sr_8c_a1206b7ee83ad53daf8b2a8fc1f07483c}{T\+E\+S\+T\+\_\+\+M\+A\+X\+\_\+\+F\+I\+B\+\_\+\+S\+R\+\_\+\+E\+N\+T\+R\+I\+ES}~(\hyperlink{tests-fib__sr_8c_aa8679d92c7fab6c82b146daa69821eef}{T\+E\+S\+T\+\_\+\+M\+A\+X\+\_\+\+F\+I\+B\+\_\+\+SR} $\ast$ 20)
+\begin{DoxyCompactList}\small\item\em maximum number of entries in all source routes \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+Test $\ast$ \hyperlink{group__unittests_ga61dfd0327d9f733fa863525f836b9c33}{tests\+\_\+fib\+\_\+sr\+\_\+tests} (void)
+\begin{DoxyCompactList}\small\item\em Generates tests for F\+IB source routing. \end{DoxyCompactList}\item 
+void \hyperlink{group__unittests_ga81367a9f08a307f54d685b422cf97f3d}{tests\+\_\+fib\+\_\+sr} (void)
+\begin{DoxyCompactList}\small\item\em The entry point of this test suite. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{tests-fib__sr_8c_aa8679d92c7fab6c82b146daa69821eef}\label{tests-fib__sr_8c_aa8679d92c7fab6c82b146daa69821eef}} 
+\index{tests-\/fib\+\_\+sr.\+c@{tests-\/fib\+\_\+sr.\+c}!T\+E\+S\+T\+\_\+\+M\+A\+X\+\_\+\+F\+I\+B\+\_\+\+SR@{T\+E\+S\+T\+\_\+\+M\+A\+X\+\_\+\+F\+I\+B\+\_\+\+SR}}
+\index{T\+E\+S\+T\+\_\+\+M\+A\+X\+\_\+\+F\+I\+B\+\_\+\+SR@{T\+E\+S\+T\+\_\+\+M\+A\+X\+\_\+\+F\+I\+B\+\_\+\+SR}!tests-\/fib\+\_\+sr.\+c@{tests-\/fib\+\_\+sr.\+c}}
+\subsubsection{\texorpdfstring{T\+E\+S\+T\+\_\+\+M\+A\+X\+\_\+\+F\+I\+B\+\_\+\+SR}{TEST\_MAX\_FIB\_SR}}
+{\footnotesize\ttfamily \#define T\+E\+S\+T\+\_\+\+M\+A\+X\+\_\+\+F\+I\+B\+\_\+\+SR~(20)}
+
+
+
+maximum number of source routes 
+
+$<$ required for snprintf() \mbox{\Hypertarget{tests-fib__sr_8c_a1206b7ee83ad53daf8b2a8fc1f07483c}\label{tests-fib__sr_8c_a1206b7ee83ad53daf8b2a8fc1f07483c}} 
+\index{tests-\/fib\+\_\+sr.\+c@{tests-\/fib\+\_\+sr.\+c}!T\+E\+S\+T\+\_\+\+M\+A\+X\+\_\+\+F\+I\+B\+\_\+\+S\+R\+\_\+\+E\+N\+T\+R\+I\+ES@{T\+E\+S\+T\+\_\+\+M\+A\+X\+\_\+\+F\+I\+B\+\_\+\+S\+R\+\_\+\+E\+N\+T\+R\+I\+ES}}
+\index{T\+E\+S\+T\+\_\+\+M\+A\+X\+\_\+\+F\+I\+B\+\_\+\+S\+R\+\_\+\+E\+N\+T\+R\+I\+ES@{T\+E\+S\+T\+\_\+\+M\+A\+X\+\_\+\+F\+I\+B\+\_\+\+S\+R\+\_\+\+E\+N\+T\+R\+I\+ES}!tests-\/fib\+\_\+sr.\+c@{tests-\/fib\+\_\+sr.\+c}}
+\subsubsection{\texorpdfstring{T\+E\+S\+T\+\_\+\+M\+A\+X\+\_\+\+F\+I\+B\+\_\+\+S\+R\+\_\+\+E\+N\+T\+R\+I\+ES}{TEST\_MAX\_FIB\_SR\_ENTRIES}}
+{\footnotesize\ttfamily \#define T\+E\+S\+T\+\_\+\+M\+A\+X\+\_\+\+F\+I\+B\+\_\+\+S\+R\+\_\+\+E\+N\+T\+R\+I\+ES~(\hyperlink{tests-fib__sr_8c_aa8679d92c7fab6c82b146daa69821eef}{T\+E\+S\+T\+\_\+\+M\+A\+X\+\_\+\+F\+I\+B\+\_\+\+SR} $\ast$ 20)}
+
+
+
+maximum number of entries in all source routes 
+

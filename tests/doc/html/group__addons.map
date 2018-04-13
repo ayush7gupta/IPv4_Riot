@@ -1,0 +1,5 @@
+<map id="Addons" name="Addons">
+<area shape="rect" id="node1" href="$group__ppp.html" title="PPP netif" alt="" coords="136,5,215,32"/>
+<area shape="rect" id="node2" href="$group__sixlowpan.html" title="6LowPAN netif" alt="" coords="120,56,231,83"/>
+<area shape="rect" id="node4" href="$group__slipif.html" title="SLIP netif" alt="" coords="135,107,215,133"/>
+</map>

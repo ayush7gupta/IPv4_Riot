@@ -1,0 +1,74 @@
+\hypertarget{native_2lwip_2src_2core_2def_8c}{}\section{/home/ayush/\+R\+I\+O\+T/tests/lwip/bin/pkg/native/lwip/src/core/def.c File Reference}
+\label{native_2lwip_2src_2core_2def_8c}\index{/home/ayush/\+R\+I\+O\+T/tests/lwip/bin/pkg/native/lwip/src/core/def.\+c@{/home/ayush/\+R\+I\+O\+T/tests/lwip/bin/pkg/native/lwip/src/core/def.\+c}}
+{\ttfamily \#include \char`\"{}lwip/opt.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}lwip/def.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+Include dependency graph for def.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=283pt]{native_2lwip_2src_2core_2def_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group__compiler__abstraction_ga77570ac4fcab86864fa1916e55676da2}{u16\+\_\+t} \hyperlink{native_2lwip_2src_2core_2def_8c_ad637280639de4066392e6b5614fa3e56}{lwip\+\_\+htons} (\hyperlink{group__compiler__abstraction_ga77570ac4fcab86864fa1916e55676da2}{u16\+\_\+t} n)
+\item 
+\hyperlink{group__compiler__abstraction_ga4c14294869aceba3ef9d4c0c302d0f33}{u32\+\_\+t} \hyperlink{native_2lwip_2src_2core_2def_8c_a14f94347a5b9b9e3602705b75b7ae524}{lwip\+\_\+htonl} (\hyperlink{group__compiler__abstraction_ga4c14294869aceba3ef9d4c0c302d0f33}{u32\+\_\+t} n)
+\item 
+char $\ast$ \hyperlink{group__sys__nonstandard_gaa2ba4b4e2dd7e1c856fedc6a6069813e}{lwip\+\_\+strnstr} (const char $\ast$\hyperlink{driver__sdcard__spi_2main_8c_a1870d2717147e1356f2eb4e5d5fa4a1c}{buffer}, const char $\ast$token, size\+\_\+t n)
+\item 
+int \hyperlink{group__sys__nonstandard_ga263cbafcb697eff964139a9998a6668a}{lwip\+\_\+stricmp} (const char $\ast$str1, const char $\ast$str2)
+\item 
+int \hyperlink{group__sys__nonstandard_ga997dcc49451121d4ed755b33bc7bd26a}{lwip\+\_\+strnicmp} (const char $\ast$str1, const char $\ast$str2, size\+\_\+t len)
+\item 
+void \hyperlink{group__sys__nonstandard_gaf15b4fbaaae5bb7f6da4301f3f979284}{lwip\+\_\+itoa} (char $\ast$result, size\+\_\+t bufsize, int number)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Common functions used throughout the stack.
+
+These are reference implementations of the byte swapping functions. Again with the aim of being simple, correct and fully portable. Byte swapping is the second thing you would want to optimize. You will need to port it to your architecture and in your cc.\+h\+:
+
+\#define \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2def_8h_a3cdda64857295e6661fb7962f66adfb9}{lwip\+\_\+htons(x)} your\+\_\+htons \#define \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2def_8h_a9c0cf5ec6af0664ca8cea5bcf6319a56}{lwip\+\_\+htonl(x)} your\+\_\+htonl
+
+Note \hyperlink{native_2lwip_2src_2include_2lwip_2def_8h_ac642bf6057869696d7807564d8309ffc}{lwip\+\_\+ntohs()} and \hyperlink{native_2lwip_2src_2include_2lwip_2def_8h_a56098407d66feb75806f655bafbee81d}{lwip\+\_\+ntohl()} are merely references to the htonx counterparts.
+
+If you \#define them to htons() and htonl(), you should \#define L\+W\+I\+P\+\_\+\+D\+O\+N\+T\+\_\+\+P\+R\+O\+V\+I\+D\+E\+\_\+\+B\+Y\+T\+E\+O\+R\+D\+E\+R\+\_\+\+F\+U\+N\+C\+T\+I\+O\+NS to prevent lw\+IP from defining htonx/ntohx compatibility macros. 
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{native_2lwip_2src_2core_2def_8c_a14f94347a5b9b9e3602705b75b7ae524}\label{native_2lwip_2src_2core_2def_8c_a14f94347a5b9b9e3602705b75b7ae524}} 
+\index{native/lwip/src/core/def.\+c@{native/lwip/src/core/def.\+c}!lwip\+\_\+htonl@{lwip\+\_\+htonl}}
+\index{lwip\+\_\+htonl@{lwip\+\_\+htonl}!native/lwip/src/core/def.\+c@{native/lwip/src/core/def.\+c}}
+\subsubsection{\texorpdfstring{lwip\+\_\+htonl()}{lwip\_htonl()}}
+{\footnotesize\ttfamily \hyperlink{group__compiler__abstraction_ga4c14294869aceba3ef9d4c0c302d0f33}{u32\+\_\+t} lwip\+\_\+htonl (\begin{DoxyParamCaption}\item[{\hyperlink{group__compiler__abstraction_ga4c14294869aceba3ef9d4c0c302d0f33}{u32\+\_\+t}}]{n }\end{DoxyParamCaption})}
+
+Convert an u32\+\_\+t from host-\/ to network byte order.
+
+
+\begin{DoxyParams}{Parameters}
+{\em n} & u32\+\_\+t in host byte order \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+n in network byte order 
+\end{DoxyReturn}
+\mbox{\Hypertarget{native_2lwip_2src_2core_2def_8c_ad637280639de4066392e6b5614fa3e56}\label{native_2lwip_2src_2core_2def_8c_ad637280639de4066392e6b5614fa3e56}} 
+\index{native/lwip/src/core/def.\+c@{native/lwip/src/core/def.\+c}!lwip\+\_\+htons@{lwip\+\_\+htons}}
+\index{lwip\+\_\+htons@{lwip\+\_\+htons}!native/lwip/src/core/def.\+c@{native/lwip/src/core/def.\+c}}
+\subsubsection{\texorpdfstring{lwip\+\_\+htons()}{lwip\_htons()}}
+{\footnotesize\ttfamily \hyperlink{group__compiler__abstraction_ga77570ac4fcab86864fa1916e55676da2}{u16\+\_\+t} lwip\+\_\+htons (\begin{DoxyParamCaption}\item[{\hyperlink{group__compiler__abstraction_ga77570ac4fcab86864fa1916e55676da2}{u16\+\_\+t}}]{n }\end{DoxyParamCaption})}
+
+Convert an u16\+\_\+t from host-\/ to network byte order.
+
+
+\begin{DoxyParams}{Parameters}
+{\em n} & u16\+\_\+t in host byte order \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+n in network byte order 
+\end{DoxyReturn}

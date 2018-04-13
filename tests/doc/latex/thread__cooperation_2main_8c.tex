@@ -1,0 +1,109 @@
+\hypertarget{thread__cooperation_2main_8c}{}\section{/home/ayush/\+R\+I\+O\+T/tests/thread\+\_\+cooperation/main.c File Reference}
+\label{thread__cooperation_2main_8c}\index{/home/ayush/\+R\+I\+O\+T/tests/thread\+\_\+cooperation/main.\+c@{/home/ayush/\+R\+I\+O\+T/tests/thread\+\_\+cooperation/main.\+c}}
+
+
+riot thread test application  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$inttypes.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}thread.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}mutex.\+h\char`\"{}}\newline
+Include dependency graph for main.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=344pt]{thread__cooperation_2main_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{thread__cooperation_2main_8c_a141d8c98ae1f6194969b6d5337ea1bfd}{P\+R\+O\+B\+L\+EM}~12
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void $\ast$ \hyperlink{thread__cooperation_2main_8c_a00d0ca614a30db319bf2e5d03ed1e601}{run} (void $\ast$arg)
+\item 
+int \hyperlink{thread__cooperation_2main_8c_a840291bc02cba5474a4cb46a9b9566fe}{main} (void)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+mutex\+\_\+t \hyperlink{thread__cooperation_2main_8c_a5f1394c1d77ba2f8c347dbf2785ec80e}{mtx} = M\+U\+T\+E\+X\+\_\+\+I\+N\+IT
+\item 
+volatile uint32\+\_\+t \hyperlink{thread__cooperation_2main_8c_a50b56ee485136fcad08b8dabe407f1a7}{storage} = 1
+\item 
+kernel\+\_\+pid\+\_\+t \hyperlink{thread__cooperation_2main_8c_aa9b582d6a6df70e7dceec6e425332df3}{main\+\_\+id} = K\+E\+R\+N\+E\+L\+\_\+\+P\+I\+D\+\_\+\+U\+N\+D\+EF
+\item 
+kernel\+\_\+pid\+\_\+t \hyperlink{thread__cooperation_2main_8c_a38033e8024cbc4b2cd6544351bb1a7dc}{ths} \mbox{[}\hyperlink{thread__cooperation_2main_8c_a141d8c98ae1f6194969b6d5337ea1bfd}{P\+R\+O\+B\+L\+EM}\mbox{]}
+\item 
+char \hyperlink{thread__cooperation_2main_8c_ae82050a46377c3b1d56a8bff5ffe89a1}{stacks} \mbox{[}\hyperlink{thread__cooperation_2main_8c_a141d8c98ae1f6194969b6d5337ea1bfd}{P\+R\+O\+B\+L\+EM}\mbox{]}\mbox{[}T\+H\+R\+E\+A\+D\+\_\+\+S\+T\+A\+C\+K\+S\+I\+Z\+E\+\_\+\+M\+A\+IN\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+riot thread test application 
+
+\begin{DoxyAuthor}{Author}
+Raphael Hiesgen \href{mailto:raphael.hiesgen@haw-hamburg.de}{\tt raphael.\+hiesgen@haw-\/hamburg.\+de} 
+\end{DoxyAuthor}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{thread__cooperation_2main_8c_a141d8c98ae1f6194969b6d5337ea1bfd}\label{thread__cooperation_2main_8c_a141d8c98ae1f6194969b6d5337ea1bfd}} 
+\index{thread\+\_\+cooperation/main.\+c@{thread\+\_\+cooperation/main.\+c}!P\+R\+O\+B\+L\+EM@{P\+R\+O\+B\+L\+EM}}
+\index{P\+R\+O\+B\+L\+EM@{P\+R\+O\+B\+L\+EM}!thread\+\_\+cooperation/main.\+c@{thread\+\_\+cooperation/main.\+c}}
+\subsubsection{\texorpdfstring{P\+R\+O\+B\+L\+EM}{PROBLEM}}
+{\footnotesize\ttfamily \#define P\+R\+O\+B\+L\+EM~12}
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{thread__cooperation_2main_8c_a840291bc02cba5474a4cb46a9b9566fe}\label{thread__cooperation_2main_8c_a840291bc02cba5474a4cb46a9b9566fe}} 
+\index{thread\+\_\+cooperation/main.\+c@{thread\+\_\+cooperation/main.\+c}!main@{main}}
+\index{main@{main}!thread\+\_\+cooperation/main.\+c@{thread\+\_\+cooperation/main.\+c}}
+\subsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{thread__cooperation_2main_8c_a00d0ca614a30db319bf2e5d03ed1e601}\label{thread__cooperation_2main_8c_a00d0ca614a30db319bf2e5d03ed1e601}} 
+\index{thread\+\_\+cooperation/main.\+c@{thread\+\_\+cooperation/main.\+c}!run@{run}}
+\index{run@{run}!thread\+\_\+cooperation/main.\+c@{thread\+\_\+cooperation/main.\+c}}
+\subsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily void$\ast$ run (\begin{DoxyParamCaption}\item[{void $\ast$}]{arg }\end{DoxyParamCaption})}
+
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{thread__cooperation_2main_8c_aa9b582d6a6df70e7dceec6e425332df3}\label{thread__cooperation_2main_8c_aa9b582d6a6df70e7dceec6e425332df3}} 
+\index{thread\+\_\+cooperation/main.\+c@{thread\+\_\+cooperation/main.\+c}!main\+\_\+id@{main\+\_\+id}}
+\index{main\+\_\+id@{main\+\_\+id}!thread\+\_\+cooperation/main.\+c@{thread\+\_\+cooperation/main.\+c}}
+\subsubsection{\texorpdfstring{main\+\_\+id}{main\_id}}
+{\footnotesize\ttfamily kernel\+\_\+pid\+\_\+t main\+\_\+id = K\+E\+R\+N\+E\+L\+\_\+\+P\+I\+D\+\_\+\+U\+N\+D\+EF}
+
+\mbox{\Hypertarget{thread__cooperation_2main_8c_a5f1394c1d77ba2f8c347dbf2785ec80e}\label{thread__cooperation_2main_8c_a5f1394c1d77ba2f8c347dbf2785ec80e}} 
+\index{thread\+\_\+cooperation/main.\+c@{thread\+\_\+cooperation/main.\+c}!mtx@{mtx}}
+\index{mtx@{mtx}!thread\+\_\+cooperation/main.\+c@{thread\+\_\+cooperation/main.\+c}}
+\subsubsection{\texorpdfstring{mtx}{mtx}}
+{\footnotesize\ttfamily mutex\+\_\+t mtx = M\+U\+T\+E\+X\+\_\+\+I\+N\+IT}
+
+\mbox{\Hypertarget{thread__cooperation_2main_8c_ae82050a46377c3b1d56a8bff5ffe89a1}\label{thread__cooperation_2main_8c_ae82050a46377c3b1d56a8bff5ffe89a1}} 
+\index{thread\+\_\+cooperation/main.\+c@{thread\+\_\+cooperation/main.\+c}!stacks@{stacks}}
+\index{stacks@{stacks}!thread\+\_\+cooperation/main.\+c@{thread\+\_\+cooperation/main.\+c}}
+\subsubsection{\texorpdfstring{stacks}{stacks}}
+{\footnotesize\ttfamily char stacks\mbox{[}\hyperlink{thread__cooperation_2main_8c_a141d8c98ae1f6194969b6d5337ea1bfd}{P\+R\+O\+B\+L\+EM}\mbox{]}\mbox{[}T\+H\+R\+E\+A\+D\+\_\+\+S\+T\+A\+C\+K\+S\+I\+Z\+E\+\_\+\+M\+A\+IN\mbox{]}}
+
+\mbox{\Hypertarget{thread__cooperation_2main_8c_a50b56ee485136fcad08b8dabe407f1a7}\label{thread__cooperation_2main_8c_a50b56ee485136fcad08b8dabe407f1a7}} 
+\index{thread\+\_\+cooperation/main.\+c@{thread\+\_\+cooperation/main.\+c}!storage@{storage}}
+\index{storage@{storage}!thread\+\_\+cooperation/main.\+c@{thread\+\_\+cooperation/main.\+c}}
+\subsubsection{\texorpdfstring{storage}{storage}}
+{\footnotesize\ttfamily volatile uint32\+\_\+t storage = 1}
+
+\mbox{\Hypertarget{thread__cooperation_2main_8c_a38033e8024cbc4b2cd6544351bb1a7dc}\label{thread__cooperation_2main_8c_a38033e8024cbc4b2cd6544351bb1a7dc}} 
+\index{thread\+\_\+cooperation/main.\+c@{thread\+\_\+cooperation/main.\+c}!ths@{ths}}
+\index{ths@{ths}!thread\+\_\+cooperation/main.\+c@{thread\+\_\+cooperation/main.\+c}}
+\subsubsection{\texorpdfstring{ths}{ths}}
+{\footnotesize\ttfamily kernel\+\_\+pid\+\_\+t ths\mbox{[}\hyperlink{thread__cooperation_2main_8c_a141d8c98ae1f6194969b6d5337ea1bfd}{P\+R\+O\+B\+L\+EM}\mbox{]}}
+

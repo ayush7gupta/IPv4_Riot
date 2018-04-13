@@ -1,0 +1,480 @@
+\hypertarget{native_2lwip_2src_2apps_2httpd_2makefsdata_2makefsdata_8c}{}\section{/home/ayush/\+R\+I\+O\+T/tests/lwip/bin/pkg/native/lwip/src/apps/httpd/makefsdata/makefsdata.c File Reference}
+\label{native_2lwip_2src_2apps_2httpd_2makefsdata_2makefsdata_8c}\index{/home/ayush/\+R\+I\+O\+T/tests/lwip/bin/pkg/native/lwip/src/apps/httpd/makefsdata/makefsdata.\+c@{/home/ayush/\+R\+I\+O\+T/tests/lwip/bin/pkg/native/lwip/src/apps/httpd/makefsdata/makefsdata.\+c}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$dir.\+h$>$}\newline
+{\ttfamily \#include $<$dos.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$time.\+h$>$}\newline
+{\ttfamily \#include $<$sys/stat.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}lwip/init.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../httpd\+\_\+structs.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}lwip/apps/fs.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../core/inet\+\_\+chksum.\+c\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../core/def.\+c\char`\"{}}\newline
+Include dependency graph for makefsdata.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{native_2lwip_2src_2apps_2httpd_2makefsdata_2makefsdata_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structfile__entry}{file\+\_\+entry}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{native_2lwip_2src_2apps_2httpd_2makefsdata_2makefsdata_8c_a9876b64c23e0e5cec59f0c72305b6695}{M\+A\+K\+E\+F\+S\+\_\+\+S\+U\+P\+P\+O\+R\+T\+\_\+\+D\+E\+F\+L\+A\+TE}~0
+\item 
+\#define \hyperlink{native_2lwip_2src_2apps_2httpd_2makefsdata_2makefsdata_8c_a3aaec558a3f7b79425a150b659a30622}{C\+O\+P\+Y\+\_\+\+B\+U\+F\+S\+I\+ZE}~(1024$\ast$1024) /$\ast$ 1 M\+Byte $\ast$/
+\item 
+\#define \hyperlink{native_2lwip_2src_2apps_2httpd_2makefsdata_2makefsdata_8c_a69b487446ca991fdde6e1dfe480f8740}{U\+S\+A\+G\+E\+\_\+\+A\+R\+G\+\_\+\+D\+E\+F\+L\+A\+TE}~\char`\"{}\char`\"{}
+\item 
+\#define \hyperlink{native_2lwip_2src_2apps_2httpd_2makefsdata_2makefsdata_8c_ab479138d23d7b1f49a3601f1e0a8855a}{F\+I\+N\+D\+\_\+T}~struct ffblk
+\item 
+\#define \hyperlink{native_2lwip_2src_2apps_2httpd_2makefsdata_2makefsdata_8c_a2104b9592c0bc44c4f3c8d101de12118}{F\+I\+N\+D\+\_\+\+T\+\_\+\+F\+I\+L\+E\+N\+A\+ME}(f\+Info)~(f\+Info.\+ff\+\_\+name)
+\item 
+\#define \hyperlink{native_2lwip_2src_2apps_2httpd_2makefsdata_2makefsdata_8c_adbae1d756930a83772f39015a804c91a}{F\+I\+N\+D\+\_\+\+T\+\_\+\+I\+S\+\_\+\+D\+IR}(f\+Info)~((f\+Info.\+ff\+\_\+attrib \& F\+A\+\_\+\+D\+I\+R\+EC) == F\+A\+\_\+\+D\+I\+R\+EC)
+\item 
+\#define \hyperlink{native_2lwip_2src_2apps_2httpd_2makefsdata_2makefsdata_8c_aea2a3fb6e791400f439995c8e0ddf914}{F\+I\+N\+D\+\_\+\+T\+\_\+\+I\+S\+\_\+\+F\+I\+LE}(f\+Info)~(1)
+\item 
+\#define \hyperlink{native_2lwip_2src_2apps_2httpd_2makefsdata_2makefsdata_8c_a8b99087e0b37e6631f2ff14b4f3258b0}{F\+I\+N\+D\+\_\+\+R\+E\+T\+\_\+T}~int
+\item 
+\#define \hyperlink{native_2lwip_2src_2apps_2httpd_2makefsdata_2makefsdata_8c_afc715543d140f05db178cb6380141dcd}{F\+I\+N\+D\+F\+I\+R\+S\+T\+\_\+\+F\+I\+LE}(path,  result)~findfirst(path, result, F\+A\+\_\+\+A\+R\+CH)
+\item 
+\#define \hyperlink{native_2lwip_2src_2apps_2httpd_2makefsdata_2makefsdata_8c_af3854d5a7bcc0af080e904053c004914}{F\+I\+N\+D\+F\+I\+R\+S\+T\+\_\+\+D\+IR}(path,  result)~findfirst(path, result, F\+A\+\_\+\+D\+I\+R\+EC)
+\item 
+\#define \hyperlink{native_2lwip_2src_2apps_2httpd_2makefsdata_2makefsdata_8c_a33515e2020161f0e3c67b3daff9e8e70}{F\+I\+N\+D\+N\+E\+XT}(ff\+\_\+res,  result)~Find\+Next\+FileA(ff\+\_\+res, result)
+\item 
+\#define \hyperlink{native_2lwip_2src_2apps_2httpd_2makefsdata_2makefsdata_8c_a99bd6347f90570a312fddf01c80c4203}{F\+I\+N\+D\+F\+I\+R\+S\+T\+\_\+\+S\+U\+C\+C\+E\+E\+D\+ED}(ret)~(ret == 0)
+\item 
+\#define \hyperlink{native_2lwip_2src_2apps_2httpd_2makefsdata_2makefsdata_8c_a1f01258f762bd46a73cbbadd7718650e}{F\+I\+N\+D\+N\+E\+X\+T\+\_\+\+S\+U\+C\+C\+E\+E\+D\+ED}(ret)~(ret == 0)
+\item 
+\#define \hyperlink{native_2lwip_2src_2apps_2httpd_2makefsdata_2makefsdata_8c_a2f45398870a9a2000b09f7cb5953cb34}{G\+E\+T\+C\+WD}(path,  len)~getcwd(path, len)
+\item 
+\#define \hyperlink{native_2lwip_2src_2apps_2httpd_2makefsdata_2makefsdata_8c_a61cb8a4a99cf0857f4f634add3a10c94}{C\+H\+D\+IR}(path)~chdir(path)
+\item 
+\#define \hyperlink{native_2lwip_2src_2apps_2httpd_2makefsdata_2makefsdata_8c_a5db5cead396d33a048b93e63b611fb6c}{C\+H\+D\+I\+R\+\_\+\+S\+U\+C\+C\+E\+E\+D\+ED}(ret)~(ret == 0)
+\item 
+\#define \hyperlink{native_2lwip_2src_2apps_2httpd_2makefsdata_2makefsdata_8c_a806511f4930171733227c99101dc0606}{N\+E\+W\+L\+I\+NE}~\char`\"{}\textbackslash{}r\textbackslash{}n\char`\"{}
+\item 
+\#define \hyperlink{native_2lwip_2src_2apps_2httpd_2makefsdata_2makefsdata_8c_ad5eda0710da3e422c27ad1d406a015d1}{N\+E\+W\+L\+I\+N\+E\+\_\+\+L\+EN}~2
+\item 
+\#define \hyperlink{native_2lwip_2src_2apps_2httpd_2makefsdata_2makefsdata_8c_a75932fc5eeb9abeddfdaf8413574c6d7}{L\+W\+I\+P\+\_\+\+H\+T\+T\+P\+D\+\_\+\+D\+Y\+N\+A\+M\+I\+C\+\_\+\+H\+E\+A\+D\+E\+RS}~1
+\item 
+\#define \hyperlink{native_2lwip_2src_2apps_2httpd_2makefsdata_2makefsdata_8c_acb70e0cdd30a940f8bce681c6cc63949}{L\+W\+I\+P\+\_\+\+H\+T\+T\+P\+D\+\_\+\+S\+SI}~1
+\item 
+\#define \hyperlink{native_2lwip_2src_2apps_2httpd_2makefsdata_2makefsdata_8c_a9f6c5880fb0c20de162f0908943e8e22}{P\+A\+Y\+L\+O\+A\+D\+\_\+\+A\+L\+I\+G\+N\+M\+E\+NT}~4
+\item 
+\#define \hyperlink{native_2lwip_2src_2apps_2httpd_2makefsdata_2makefsdata_8c_a49095bb77ea27d3ce2ad9eb687e01bb0}{A\+L\+I\+G\+N\+\_\+\+P\+A\+Y\+L\+O\+AD}~1
+\item 
+\#define \hyperlink{native_2lwip_2src_2apps_2httpd_2makefsdata_2makefsdata_8c_a473aff259445c51e8e17b19408eeeba9}{P\+A\+Y\+L\+O\+A\+D\+\_\+\+A\+L\+I\+G\+N\+\_\+\+T\+Y\+PE}~\char`\"{}unsigned int\char`\"{}
+\item 
+\#define \hyperlink{native_2lwip_2src_2apps_2httpd_2makefsdata_2makefsdata_8c_a0a82658f43a21101784829e722a5bbfe}{H\+E\+X\+\_\+\+B\+Y\+T\+E\+S\+\_\+\+P\+E\+R\+\_\+\+L\+I\+NE}~16
+\item 
+\#define \hyperlink{native_2lwip_2src_2apps_2httpd_2makefsdata_2makefsdata_8c_abdd33f362ae3bbdacb5de76473aa8a2f}{M\+A\+X\+\_\+\+P\+A\+T\+H\+\_\+\+L\+EN}~256
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{native_2lwip_2src_2apps_2httpd_2makefsdata_2makefsdata_8c_a42e541dd3738ab55217983a6882b4f2d}{process\+\_\+sub} (F\+I\+LE $\ast$data\+\_\+file, F\+I\+LE $\ast$struct\+\_\+file)
+\item 
+int \hyperlink{native_2lwip_2src_2apps_2httpd_2makefsdata_2makefsdata_8c_aebd14b6d3b49be243270b9cef5f4040c}{process\+\_\+file} (F\+I\+LE $\ast$data\+\_\+file, F\+I\+LE $\ast$struct\+\_\+file, const char $\ast$filename)
+\item 
+int \hyperlink{native_2lwip_2src_2apps_2httpd_2makefsdata_2makefsdata_8c_a7a7e2ed3ae3fb34cf5999ddb1efd55e8}{file\+\_\+write\+\_\+http\+\_\+header} (F\+I\+LE $\ast$data\+\_\+file, const char $\ast$filename, int file\+\_\+size, \hyperlink{group__compiler__abstraction_ga77570ac4fcab86864fa1916e55676da2}{u16\+\_\+t} $\ast$http\+\_\+hdr\+\_\+len, \hyperlink{group__compiler__abstraction_ga77570ac4fcab86864fa1916e55676da2}{u16\+\_\+t} $\ast$http\+\_\+hdr\+\_\+chksum, \hyperlink{group__compiler__abstraction_ga4caecabca98b43919dd11be1c0d4cd8e}{u8\+\_\+t} provide\+\_\+content\+\_\+len, int is\+\_\+compressed)
+\item 
+int \hyperlink{native_2lwip_2src_2apps_2httpd_2makefsdata_2makefsdata_8c_ae1515e6c1677553b47e37e4873249a42}{file\+\_\+put\+\_\+ascii} (F\+I\+LE $\ast$file, const char $\ast$ascii\+\_\+string, int len, int $\ast$i)
+\item 
+int \hyperlink{native_2lwip_2src_2apps_2httpd_2makefsdata_2makefsdata_8c_a0cfb02efa2b6ced8afac6e73eee1bcf2}{s\+\_\+put\+\_\+ascii} (char $\ast$buf, const char $\ast$ascii\+\_\+string, int len, int $\ast$i)
+\item 
+void \hyperlink{native_2lwip_2src_2apps_2httpd_2makefsdata_2makefsdata_8c_a9981150f1a5aa4aba1dea4469748c062}{concat\+\_\+files} (const char $\ast$file1, const char $\ast$file2, const char $\ast$targetfile)
+\item 
+int \hyperlink{native_2lwip_2src_2apps_2httpd_2makefsdata_2makefsdata_8c_a35c69278ed3486ac621f1dc4e8d8f83a}{check\+\_\+path} (char $\ast$path, size\+\_\+t size)
+\item 
+int \hyperlink{native_2lwip_2src_2apps_2httpd_2makefsdata_2makefsdata_8c_a0ddf1224851353fc92bfbff6f499fa97}{main} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]})
+\item 
+\hyperlink{group__compiler__abstraction_ga4caecabca98b43919dd11be1c0d4cd8e}{u8\+\_\+t} $\ast$ \hyperlink{native_2lwip_2src_2apps_2httpd_2makefsdata_2makefsdata_8c_a3ee04aa3dceb6f930c0d4a5834ef1377}{get\+\_\+file\+\_\+data} (const char $\ast$filename, int $\ast$file\+\_\+size, int can\+\_\+be\+\_\+compressed, int $\ast$is\+\_\+compressed)
+\item 
+void \hyperlink{native_2lwip_2src_2apps_2httpd_2makefsdata_2makefsdata_8c_accf3d8691b1a3e2731002b9feea7292c}{process\+\_\+file\+\_\+data} (F\+I\+LE $\ast$data\+\_\+file, \hyperlink{group__compiler__abstraction_ga4caecabca98b43919dd11be1c0d4cd8e}{u8\+\_\+t} $\ast$file\+\_\+data, size\+\_\+t file\+\_\+size)
+\item 
+int \hyperlink{native_2lwip_2src_2apps_2httpd_2makefsdata_2makefsdata_8c_a1d75016c940cbfa451c71e0cd896b513}{write\+\_\+checksums} (F\+I\+LE $\ast$struct\+\_\+file, const char $\ast$varname, \hyperlink{group__compiler__abstraction_ga77570ac4fcab86864fa1916e55676da2}{u16\+\_\+t} hdr\+\_\+len, \hyperlink{group__compiler__abstraction_ga77570ac4fcab86864fa1916e55676da2}{u16\+\_\+t} hdr\+\_\+chksum, const \hyperlink{group__compiler__abstraction_ga4caecabca98b43919dd11be1c0d4cd8e}{u8\+\_\+t} $\ast$file\+\_\+data, size\+\_\+t file\+\_\+size)
+\item 
+int \hyperlink{native_2lwip_2src_2apps_2httpd_2makefsdata_2makefsdata_8c_ab3b97b4b09364487a17d5513fc13657a}{is\+\_\+ssi\+\_\+file} (const char $\ast$filename)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const char $\ast$ \hyperlink{native_2lwip_2src_2apps_2httpd_2makefsdata_2makefsdata_8c_a0e5f2fe823606f3dbf64a81da7eda169}{server\+ID} = \char`\"{}Server\+: \char`\"{}H\+T\+T\+P\+D\+\_\+\+S\+E\+R\+V\+E\+R\+\_\+\+A\+G\+E\+NT\char`\"{}\textbackslash{}r\textbackslash{}n\char`\"{}
+\item 
+char \hyperlink{native_2lwip_2src_2apps_2httpd_2makefsdata_2makefsdata_8c_afefc123976dc48b1bf8f8cd9ec82433f}{server\+I\+D\+Buffer} \mbox{[}1024\mbox{]}
+\item 
+char \hyperlink{native_2lwip_2src_2apps_2httpd_2makefsdata_2makefsdata_8c_a2be0a7259555ec0e4940ebcdf489ff33}{cur\+Subdir} \mbox{[}\hyperlink{openmote-cc2538_2lwip_2src_2apps_2httpd_2makefsdata_2makefsdata_8c_abdd33f362ae3bbdacb5de76473aa8a2f}{M\+A\+X\+\_\+\+P\+A\+T\+H\+\_\+\+L\+EN}\mbox{]}
+\item 
+char \hyperlink{native_2lwip_2src_2apps_2httpd_2makefsdata_2makefsdata_8c_a9aee39ef514de02ab3eb29dd2ecb7e06}{last\+File\+Var} \mbox{[}\hyperlink{openmote-cc2538_2lwip_2src_2apps_2httpd_2makefsdata_2makefsdata_8c_abdd33f362ae3bbdacb5de76473aa8a2f}{M\+A\+X\+\_\+\+P\+A\+T\+H\+\_\+\+L\+EN}\mbox{]}
+\item 
+char \hyperlink{native_2lwip_2src_2apps_2httpd_2makefsdata_2makefsdata_8c_aa107ff217f88178d5055bb6cb2b9573e}{hdr\+\_\+buf} \mbox{[}4096\mbox{]}
+\item 
+unsigned char \hyperlink{native_2lwip_2src_2apps_2httpd_2makefsdata_2makefsdata_8c_a9bc2ffdcb3d51b83a841ce465fd1b482}{process\+Subs} = 1
+\item 
+unsigned char \hyperlink{native_2lwip_2src_2apps_2httpd_2makefsdata_2makefsdata_8c_ad7c4bce2651f43f83ca1e2e9bc8ead95}{include\+Http\+Header} = 1
+\item 
+unsigned char \hyperlink{native_2lwip_2src_2apps_2httpd_2makefsdata_2makefsdata_8c_ae3d870e59aa3875d90a6920575c768e5}{use\+Http11} = 0
+\item 
+unsigned char \hyperlink{native_2lwip_2src_2apps_2httpd_2makefsdata_2makefsdata_8c_afcd0057cc79bbc5c525a0d08a5014b9a}{support\+Ssi} = 1
+\item 
+unsigned char \hyperlink{native_2lwip_2src_2apps_2httpd_2makefsdata_2makefsdata_8c_a67eb0a6dc2f05ddd7be9f88c5e5a01df}{precalc\+Chksum} = 0
+\item 
+unsigned char \hyperlink{native_2lwip_2src_2apps_2httpd_2makefsdata_2makefsdata_8c_adc3655383e74eff4ad288d29371ea837}{include\+Last\+Modified} = 0
+\item 
+struct \hyperlink{structfile__entry}{file\+\_\+entry} $\ast$ \hyperlink{native_2lwip_2src_2apps_2httpd_2makefsdata_2makefsdata_8c_a7a300f76921019649ecfc31b3e646fb8}{first\+\_\+file} = \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2def_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}
+\item 
+struct \hyperlink{structfile__entry}{file\+\_\+entry} $\ast$ \hyperlink{native_2lwip_2src_2apps_2httpd_2makefsdata_2makefsdata_8c_ab0e8fa4179629c1e2e0ef0f0596b2865}{last\+\_\+file} = \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2def_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{native_2lwip_2src_2apps_2httpd_2makefsdata_2makefsdata_8c_a49095bb77ea27d3ce2ad9eb687e01bb0}\label{native_2lwip_2src_2apps_2httpd_2makefsdata_2makefsdata_8c_a49095bb77ea27d3ce2ad9eb687e01bb0}} 
+\index{native/lwip/src/apps/httpd/makefsdata/makefsdata.\+c@{native/lwip/src/apps/httpd/makefsdata/makefsdata.\+c}!A\+L\+I\+G\+N\+\_\+\+P\+A\+Y\+L\+O\+AD@{A\+L\+I\+G\+N\+\_\+\+P\+A\+Y\+L\+O\+AD}}
+\index{A\+L\+I\+G\+N\+\_\+\+P\+A\+Y\+L\+O\+AD@{A\+L\+I\+G\+N\+\_\+\+P\+A\+Y\+L\+O\+AD}!native/lwip/src/apps/httpd/makefsdata/makefsdata.\+c@{native/lwip/src/apps/httpd/makefsdata/makefsdata.\+c}}
+\subsubsection{\texorpdfstring{A\+L\+I\+G\+N\+\_\+\+P\+A\+Y\+L\+O\+AD}{ALIGN\_PAYLOAD}}
+{\footnotesize\ttfamily \#define A\+L\+I\+G\+N\+\_\+\+P\+A\+Y\+L\+O\+AD~1}
+
+\mbox{\Hypertarget{native_2lwip_2src_2apps_2httpd_2makefsdata_2makefsdata_8c_a61cb8a4a99cf0857f4f634add3a10c94}\label{native_2lwip_2src_2apps_2httpd_2makefsdata_2makefsdata_8c_a61cb8a4a99cf0857f4f634add3a10c94}} 
+\index{native/lwip/src/apps/httpd/makefsdata/makefsdata.\+c@{native/lwip/src/apps/httpd/makefsdata/makefsdata.\+c}!C\+H\+D\+IR@{C\+H\+D\+IR}}
+\index{C\+H\+D\+IR@{C\+H\+D\+IR}!native/lwip/src/apps/httpd/makefsdata/makefsdata.\+c@{native/lwip/src/apps/httpd/makefsdata/makefsdata.\+c}}
+\subsubsection{\texorpdfstring{C\+H\+D\+IR}{CHDIR}}
+{\footnotesize\ttfamily \#define C\+H\+D\+IR(\begin{DoxyParamCaption}\item[{}]{path }\end{DoxyParamCaption})~chdir(path)}
+
+\mbox{\Hypertarget{native_2lwip_2src_2apps_2httpd_2makefsdata_2makefsdata_8c_a5db5cead396d33a048b93e63b611fb6c}\label{native_2lwip_2src_2apps_2httpd_2makefsdata_2makefsdata_8c_a5db5cead396d33a048b93e63b611fb6c}} 
+\index{native/lwip/src/apps/httpd/makefsdata/makefsdata.\+c@{native/lwip/src/apps/httpd/makefsdata/makefsdata.\+c}!C\+H\+D\+I\+R\+\_\+\+S\+U\+C\+C\+E\+E\+D\+ED@{C\+H\+D\+I\+R\+\_\+\+S\+U\+C\+C\+E\+E\+D\+ED}}
+\index{C\+H\+D\+I\+R\+\_\+\+S\+U\+C\+C\+E\+E\+D\+ED@{C\+H\+D\+I\+R\+\_\+\+S\+U\+C\+C\+E\+E\+D\+ED}!native/lwip/src/apps/httpd/makefsdata/makefsdata.\+c@{native/lwip/src/apps/httpd/makefsdata/makefsdata.\+c}}
+\subsubsection{\texorpdfstring{C\+H\+D\+I\+R\+\_\+\+S\+U\+C\+C\+E\+E\+D\+ED}{CHDIR\_SUCCEEDED}}
+{\footnotesize\ttfamily \#define C\+H\+D\+I\+R\+\_\+\+S\+U\+C\+C\+E\+E\+D\+ED(\begin{DoxyParamCaption}\item[{}]{ret }\end{DoxyParamCaption})~(ret == 0)}
+
+\mbox{\Hypertarget{native_2lwip_2src_2apps_2httpd_2makefsdata_2makefsdata_8c_a3aaec558a3f7b79425a150b659a30622}\label{native_2lwip_2src_2apps_2httpd_2makefsdata_2makefsdata_8c_a3aaec558a3f7b79425a150b659a30622}} 
+\index{native/lwip/src/apps/httpd/makefsdata/makefsdata.\+c@{native/lwip/src/apps/httpd/makefsdata/makefsdata.\+c}!C\+O\+P\+Y\+\_\+\+B\+U\+F\+S\+I\+ZE@{C\+O\+P\+Y\+\_\+\+B\+U\+F\+S\+I\+ZE}}
+\index{C\+O\+P\+Y\+\_\+\+B\+U\+F\+S\+I\+ZE@{C\+O\+P\+Y\+\_\+\+B\+U\+F\+S\+I\+ZE}!native/lwip/src/apps/httpd/makefsdata/makefsdata.\+c@{native/lwip/src/apps/httpd/makefsdata/makefsdata.\+c}}
+\subsubsection{\texorpdfstring{C\+O\+P\+Y\+\_\+\+B\+U\+F\+S\+I\+ZE}{COPY\_BUFSIZE}}
+{\footnotesize\ttfamily \#define C\+O\+P\+Y\+\_\+\+B\+U\+F\+S\+I\+ZE~(1024$\ast$1024) /$\ast$ 1 M\+Byte $\ast$/}
+
+\mbox{\Hypertarget{native_2lwip_2src_2apps_2httpd_2makefsdata_2makefsdata_8c_a8b99087e0b37e6631f2ff14b4f3258b0}\label{native_2lwip_2src_2apps_2httpd_2makefsdata_2makefsdata_8c_a8b99087e0b37e6631f2ff14b4f3258b0}} 
+\index{native/lwip/src/apps/httpd/makefsdata/makefsdata.\+c@{native/lwip/src/apps/httpd/makefsdata/makefsdata.\+c}!F\+I\+N\+D\+\_\+\+R\+E\+T\+\_\+T@{F\+I\+N\+D\+\_\+\+R\+E\+T\+\_\+T}}
+\index{F\+I\+N\+D\+\_\+\+R\+E\+T\+\_\+T@{F\+I\+N\+D\+\_\+\+R\+E\+T\+\_\+T}!native/lwip/src/apps/httpd/makefsdata/makefsdata.\+c@{native/lwip/src/apps/httpd/makefsdata/makefsdata.\+c}}
+\subsubsection{\texorpdfstring{F\+I\+N\+D\+\_\+\+R\+E\+T\+\_\+T}{FIND\_RET\_T}}
+{\footnotesize\ttfamily \#define F\+I\+N\+D\+\_\+\+R\+E\+T\+\_\+T~int}
+
+\mbox{\Hypertarget{native_2lwip_2src_2apps_2httpd_2makefsdata_2makefsdata_8c_ab479138d23d7b1f49a3601f1e0a8855a}\label{native_2lwip_2src_2apps_2httpd_2makefsdata_2makefsdata_8c_ab479138d23d7b1f49a3601f1e0a8855a}} 
+\index{native/lwip/src/apps/httpd/makefsdata/makefsdata.\+c@{native/lwip/src/apps/httpd/makefsdata/makefsdata.\+c}!F\+I\+N\+D\+\_\+T@{F\+I\+N\+D\+\_\+T}}
+\index{F\+I\+N\+D\+\_\+T@{F\+I\+N\+D\+\_\+T}!native/lwip/src/apps/httpd/makefsdata/makefsdata.\+c@{native/lwip/src/apps/httpd/makefsdata/makefsdata.\+c}}
+\subsubsection{\texorpdfstring{F\+I\+N\+D\+\_\+T}{FIND\_T}}
+{\footnotesize\ttfamily \#define F\+I\+N\+D\+\_\+T~struct ffblk}
+
+\mbox{\Hypertarget{native_2lwip_2src_2apps_2httpd_2makefsdata_2makefsdata_8c_a2104b9592c0bc44c4f3c8d101de12118}\label{native_2lwip_2src_2apps_2httpd_2makefsdata_2makefsdata_8c_a2104b9592c0bc44c4f3c8d101de12118}} 
+\index{native/lwip/src/apps/httpd/makefsdata/makefsdata.\+c@{native/lwip/src/apps/httpd/makefsdata/makefsdata.\+c}!F\+I\+N\+D\+\_\+\+T\+\_\+\+F\+I\+L\+E\+N\+A\+ME@{F\+I\+N\+D\+\_\+\+T\+\_\+\+F\+I\+L\+E\+N\+A\+ME}}
+\index{F\+I\+N\+D\+\_\+\+T\+\_\+\+F\+I\+L\+E\+N\+A\+ME@{F\+I\+N\+D\+\_\+\+T\+\_\+\+F\+I\+L\+E\+N\+A\+ME}!native/lwip/src/apps/httpd/makefsdata/makefsdata.\+c@{native/lwip/src/apps/httpd/makefsdata/makefsdata.\+c}}
+\subsubsection{\texorpdfstring{F\+I\+N\+D\+\_\+\+T\+\_\+\+F\+I\+L\+E\+N\+A\+ME}{FIND\_T\_FILENAME}}
+{\footnotesize\ttfamily \#define F\+I\+N\+D\+\_\+\+T\+\_\+\+F\+I\+L\+E\+N\+A\+ME(\begin{DoxyParamCaption}\item[{}]{f\+Info }\end{DoxyParamCaption})~(f\+Info.\+ff\+\_\+name)}
+
+\mbox{\Hypertarget{native_2lwip_2src_2apps_2httpd_2makefsdata_2makefsdata_8c_adbae1d756930a83772f39015a804c91a}\label{native_2lwip_2src_2apps_2httpd_2makefsdata_2makefsdata_8c_adbae1d756930a83772f39015a804c91a}} 
+\index{native/lwip/src/apps/httpd/makefsdata/makefsdata.\+c@{native/lwip/src/apps/httpd/makefsdata/makefsdata.\+c}!F\+I\+N\+D\+\_\+\+T\+\_\+\+I\+S\+\_\+\+D\+IR@{F\+I\+N\+D\+\_\+\+T\+\_\+\+I\+S\+\_\+\+D\+IR}}
+\index{F\+I\+N\+D\+\_\+\+T\+\_\+\+I\+S\+\_\+\+D\+IR@{F\+I\+N\+D\+\_\+\+T\+\_\+\+I\+S\+\_\+\+D\+IR}!native/lwip/src/apps/httpd/makefsdata/makefsdata.\+c@{native/lwip/src/apps/httpd/makefsdata/makefsdata.\+c}}
+\subsubsection{\texorpdfstring{F\+I\+N\+D\+\_\+\+T\+\_\+\+I\+S\+\_\+\+D\+IR}{FIND\_T\_IS\_DIR}}
+{\footnotesize\ttfamily \#define F\+I\+N\+D\+\_\+\+T\+\_\+\+I\+S\+\_\+\+D\+IR(\begin{DoxyParamCaption}\item[{}]{f\+Info }\end{DoxyParamCaption})~((f\+Info.\+ff\+\_\+attrib \& F\+A\+\_\+\+D\+I\+R\+EC) == F\+A\+\_\+\+D\+I\+R\+EC)}
+
+\mbox{\Hypertarget{native_2lwip_2src_2apps_2httpd_2makefsdata_2makefsdata_8c_aea2a3fb6e791400f439995c8e0ddf914}\label{native_2lwip_2src_2apps_2httpd_2makefsdata_2makefsdata_8c_aea2a3fb6e791400f439995c8e0ddf914}} 
+\index{native/lwip/src/apps/httpd/makefsdata/makefsdata.\+c@{native/lwip/src/apps/httpd/makefsdata/makefsdata.\+c}!F\+I\+N\+D\+\_\+\+T\+\_\+\+I\+S\+\_\+\+F\+I\+LE@{F\+I\+N\+D\+\_\+\+T\+\_\+\+I\+S\+\_\+\+F\+I\+LE}}
+\index{F\+I\+N\+D\+\_\+\+T\+\_\+\+I\+S\+\_\+\+F\+I\+LE@{F\+I\+N\+D\+\_\+\+T\+\_\+\+I\+S\+\_\+\+F\+I\+LE}!native/lwip/src/apps/httpd/makefsdata/makefsdata.\+c@{native/lwip/src/apps/httpd/makefsdata/makefsdata.\+c}}
+\subsubsection{\texorpdfstring{F\+I\+N\+D\+\_\+\+T\+\_\+\+I\+S\+\_\+\+F\+I\+LE}{FIND\_T\_IS\_FILE}}
+{\footnotesize\ttfamily \#define F\+I\+N\+D\+\_\+\+T\+\_\+\+I\+S\+\_\+\+F\+I\+LE(\begin{DoxyParamCaption}\item[{}]{f\+Info }\end{DoxyParamCaption})~(1)}
+
+\mbox{\Hypertarget{native_2lwip_2src_2apps_2httpd_2makefsdata_2makefsdata_8c_af3854d5a7bcc0af080e904053c004914}\label{native_2lwip_2src_2apps_2httpd_2makefsdata_2makefsdata_8c_af3854d5a7bcc0af080e904053c004914}} 
+\index{native/lwip/src/apps/httpd/makefsdata/makefsdata.\+c@{native/lwip/src/apps/httpd/makefsdata/makefsdata.\+c}!F\+I\+N\+D\+F\+I\+R\+S\+T\+\_\+\+D\+IR@{F\+I\+N\+D\+F\+I\+R\+S\+T\+\_\+\+D\+IR}}
+\index{F\+I\+N\+D\+F\+I\+R\+S\+T\+\_\+\+D\+IR@{F\+I\+N\+D\+F\+I\+R\+S\+T\+\_\+\+D\+IR}!native/lwip/src/apps/httpd/makefsdata/makefsdata.\+c@{native/lwip/src/apps/httpd/makefsdata/makefsdata.\+c}}
+\subsubsection{\texorpdfstring{F\+I\+N\+D\+F\+I\+R\+S\+T\+\_\+\+D\+IR}{FINDFIRST\_DIR}}
+{\footnotesize\ttfamily \#define F\+I\+N\+D\+F\+I\+R\+S\+T\+\_\+\+D\+IR(\begin{DoxyParamCaption}\item[{}]{path,  }\item[{}]{result }\end{DoxyParamCaption})~findfirst(path, result, F\+A\+\_\+\+D\+I\+R\+EC)}
+
+\mbox{\Hypertarget{native_2lwip_2src_2apps_2httpd_2makefsdata_2makefsdata_8c_afc715543d140f05db178cb6380141dcd}\label{native_2lwip_2src_2apps_2httpd_2makefsdata_2makefsdata_8c_afc715543d140f05db178cb6380141dcd}} 
+\index{native/lwip/src/apps/httpd/makefsdata/makefsdata.\+c@{native/lwip/src/apps/httpd/makefsdata/makefsdata.\+c}!F\+I\+N\+D\+F\+I\+R\+S\+T\+\_\+\+F\+I\+LE@{F\+I\+N\+D\+F\+I\+R\+S\+T\+\_\+\+F\+I\+LE}}
+\index{F\+I\+N\+D\+F\+I\+R\+S\+T\+\_\+\+F\+I\+LE@{F\+I\+N\+D\+F\+I\+R\+S\+T\+\_\+\+F\+I\+LE}!native/lwip/src/apps/httpd/makefsdata/makefsdata.\+c@{native/lwip/src/apps/httpd/makefsdata/makefsdata.\+c}}
+\subsubsection{\texorpdfstring{F\+I\+N\+D\+F\+I\+R\+S\+T\+\_\+\+F\+I\+LE}{FINDFIRST\_FILE}}
+{\footnotesize\ttfamily \#define F\+I\+N\+D\+F\+I\+R\+S\+T\+\_\+\+F\+I\+LE(\begin{DoxyParamCaption}\item[{}]{path,  }\item[{}]{result }\end{DoxyParamCaption})~findfirst(path, result, F\+A\+\_\+\+A\+R\+CH)}
+
+\mbox{\Hypertarget{native_2lwip_2src_2apps_2httpd_2makefsdata_2makefsdata_8c_a99bd6347f90570a312fddf01c80c4203}\label{native_2lwip_2src_2apps_2httpd_2makefsdata_2makefsdata_8c_a99bd6347f90570a312fddf01c80c4203}} 
+\index{native/lwip/src/apps/httpd/makefsdata/makefsdata.\+c@{native/lwip/src/apps/httpd/makefsdata/makefsdata.\+c}!F\+I\+N\+D\+F\+I\+R\+S\+T\+\_\+\+S\+U\+C\+C\+E\+E\+D\+ED@{F\+I\+N\+D\+F\+I\+R\+S\+T\+\_\+\+S\+U\+C\+C\+E\+E\+D\+ED}}
+\index{F\+I\+N\+D\+F\+I\+R\+S\+T\+\_\+\+S\+U\+C\+C\+E\+E\+D\+ED@{F\+I\+N\+D\+F\+I\+R\+S\+T\+\_\+\+S\+U\+C\+C\+E\+E\+D\+ED}!native/lwip/src/apps/httpd/makefsdata/makefsdata.\+c@{native/lwip/src/apps/httpd/makefsdata/makefsdata.\+c}}
+\subsubsection{\texorpdfstring{F\+I\+N\+D\+F\+I\+R\+S\+T\+\_\+\+S\+U\+C\+C\+E\+E\+D\+ED}{FINDFIRST\_SUCCEEDED}}
+{\footnotesize\ttfamily \#define F\+I\+N\+D\+F\+I\+R\+S\+T\+\_\+\+S\+U\+C\+C\+E\+E\+D\+ED(\begin{DoxyParamCaption}\item[{}]{ret }\end{DoxyParamCaption})~(ret == 0)}
+
+\mbox{\Hypertarget{native_2lwip_2src_2apps_2httpd_2makefsdata_2makefsdata_8c_a33515e2020161f0e3c67b3daff9e8e70}\label{native_2lwip_2src_2apps_2httpd_2makefsdata_2makefsdata_8c_a33515e2020161f0e3c67b3daff9e8e70}} 
+\index{native/lwip/src/apps/httpd/makefsdata/makefsdata.\+c@{native/lwip/src/apps/httpd/makefsdata/makefsdata.\+c}!F\+I\+N\+D\+N\+E\+XT@{F\+I\+N\+D\+N\+E\+XT}}
+\index{F\+I\+N\+D\+N\+E\+XT@{F\+I\+N\+D\+N\+E\+XT}!native/lwip/src/apps/httpd/makefsdata/makefsdata.\+c@{native/lwip/src/apps/httpd/makefsdata/makefsdata.\+c}}
+\subsubsection{\texorpdfstring{F\+I\+N\+D\+N\+E\+XT}{FINDNEXT}}
+{\footnotesize\ttfamily \#define F\+I\+N\+D\+N\+E\+XT(\begin{DoxyParamCaption}\item[{}]{ff\+\_\+res,  }\item[{}]{result }\end{DoxyParamCaption})~Find\+Next\+FileA(ff\+\_\+res, result)}
+
+\mbox{\Hypertarget{native_2lwip_2src_2apps_2httpd_2makefsdata_2makefsdata_8c_a1f01258f762bd46a73cbbadd7718650e}\label{native_2lwip_2src_2apps_2httpd_2makefsdata_2makefsdata_8c_a1f01258f762bd46a73cbbadd7718650e}} 
+\index{native/lwip/src/apps/httpd/makefsdata/makefsdata.\+c@{native/lwip/src/apps/httpd/makefsdata/makefsdata.\+c}!F\+I\+N\+D\+N\+E\+X\+T\+\_\+\+S\+U\+C\+C\+E\+E\+D\+ED@{F\+I\+N\+D\+N\+E\+X\+T\+\_\+\+S\+U\+C\+C\+E\+E\+D\+ED}}
+\index{F\+I\+N\+D\+N\+E\+X\+T\+\_\+\+S\+U\+C\+C\+E\+E\+D\+ED@{F\+I\+N\+D\+N\+E\+X\+T\+\_\+\+S\+U\+C\+C\+E\+E\+D\+ED}!native/lwip/src/apps/httpd/makefsdata/makefsdata.\+c@{native/lwip/src/apps/httpd/makefsdata/makefsdata.\+c}}
+\subsubsection{\texorpdfstring{F\+I\+N\+D\+N\+E\+X\+T\+\_\+\+S\+U\+C\+C\+E\+E\+D\+ED}{FINDNEXT\_SUCCEEDED}}
+{\footnotesize\ttfamily \#define F\+I\+N\+D\+N\+E\+X\+T\+\_\+\+S\+U\+C\+C\+E\+E\+D\+ED(\begin{DoxyParamCaption}\item[{}]{ret }\end{DoxyParamCaption})~(ret == 0)}
+
+\mbox{\Hypertarget{native_2lwip_2src_2apps_2httpd_2makefsdata_2makefsdata_8c_a2f45398870a9a2000b09f7cb5953cb34}\label{native_2lwip_2src_2apps_2httpd_2makefsdata_2makefsdata_8c_a2f45398870a9a2000b09f7cb5953cb34}} 
+\index{native/lwip/src/apps/httpd/makefsdata/makefsdata.\+c@{native/lwip/src/apps/httpd/makefsdata/makefsdata.\+c}!G\+E\+T\+C\+WD@{G\+E\+T\+C\+WD}}
+\index{G\+E\+T\+C\+WD@{G\+E\+T\+C\+WD}!native/lwip/src/apps/httpd/makefsdata/makefsdata.\+c@{native/lwip/src/apps/httpd/makefsdata/makefsdata.\+c}}
+\subsubsection{\texorpdfstring{G\+E\+T\+C\+WD}{GETCWD}}
+{\footnotesize\ttfamily \#define G\+E\+T\+C\+WD(\begin{DoxyParamCaption}\item[{}]{path,  }\item[{}]{len }\end{DoxyParamCaption})~getcwd(path, len)}
+
+\mbox{\Hypertarget{native_2lwip_2src_2apps_2httpd_2makefsdata_2makefsdata_8c_a0a82658f43a21101784829e722a5bbfe}\label{native_2lwip_2src_2apps_2httpd_2makefsdata_2makefsdata_8c_a0a82658f43a21101784829e722a5bbfe}} 
+\index{native/lwip/src/apps/httpd/makefsdata/makefsdata.\+c@{native/lwip/src/apps/httpd/makefsdata/makefsdata.\+c}!H\+E\+X\+\_\+\+B\+Y\+T\+E\+S\+\_\+\+P\+E\+R\+\_\+\+L\+I\+NE@{H\+E\+X\+\_\+\+B\+Y\+T\+E\+S\+\_\+\+P\+E\+R\+\_\+\+L\+I\+NE}}
+\index{H\+E\+X\+\_\+\+B\+Y\+T\+E\+S\+\_\+\+P\+E\+R\+\_\+\+L\+I\+NE@{H\+E\+X\+\_\+\+B\+Y\+T\+E\+S\+\_\+\+P\+E\+R\+\_\+\+L\+I\+NE}!native/lwip/src/apps/httpd/makefsdata/makefsdata.\+c@{native/lwip/src/apps/httpd/makefsdata/makefsdata.\+c}}
+\subsubsection{\texorpdfstring{H\+E\+X\+\_\+\+B\+Y\+T\+E\+S\+\_\+\+P\+E\+R\+\_\+\+L\+I\+NE}{HEX\_BYTES\_PER\_LINE}}
+{\footnotesize\ttfamily \#define H\+E\+X\+\_\+\+B\+Y\+T\+E\+S\+\_\+\+P\+E\+R\+\_\+\+L\+I\+NE~16}
+
+\mbox{\Hypertarget{native_2lwip_2src_2apps_2httpd_2makefsdata_2makefsdata_8c_a75932fc5eeb9abeddfdaf8413574c6d7}\label{native_2lwip_2src_2apps_2httpd_2makefsdata_2makefsdata_8c_a75932fc5eeb9abeddfdaf8413574c6d7}} 
+\index{native/lwip/src/apps/httpd/makefsdata/makefsdata.\+c@{native/lwip/src/apps/httpd/makefsdata/makefsdata.\+c}!L\+W\+I\+P\+\_\+\+H\+T\+T\+P\+D\+\_\+\+D\+Y\+N\+A\+M\+I\+C\+\_\+\+H\+E\+A\+D\+E\+RS@{L\+W\+I\+P\+\_\+\+H\+T\+T\+P\+D\+\_\+\+D\+Y\+N\+A\+M\+I\+C\+\_\+\+H\+E\+A\+D\+E\+RS}}
+\index{L\+W\+I\+P\+\_\+\+H\+T\+T\+P\+D\+\_\+\+D\+Y\+N\+A\+M\+I\+C\+\_\+\+H\+E\+A\+D\+E\+RS@{L\+W\+I\+P\+\_\+\+H\+T\+T\+P\+D\+\_\+\+D\+Y\+N\+A\+M\+I\+C\+\_\+\+H\+E\+A\+D\+E\+RS}!native/lwip/src/apps/httpd/makefsdata/makefsdata.\+c@{native/lwip/src/apps/httpd/makefsdata/makefsdata.\+c}}
+\subsubsection{\texorpdfstring{L\+W\+I\+P\+\_\+\+H\+T\+T\+P\+D\+\_\+\+D\+Y\+N\+A\+M\+I\+C\+\_\+\+H\+E\+A\+D\+E\+RS}{LWIP\_HTTPD\_DYNAMIC\_HEADERS}}
+{\footnotesize\ttfamily \#define L\+W\+I\+P\+\_\+\+H\+T\+T\+P\+D\+\_\+\+D\+Y\+N\+A\+M\+I\+C\+\_\+\+H\+E\+A\+D\+E\+RS~1}
+
+\mbox{\Hypertarget{native_2lwip_2src_2apps_2httpd_2makefsdata_2makefsdata_8c_acb70e0cdd30a940f8bce681c6cc63949}\label{native_2lwip_2src_2apps_2httpd_2makefsdata_2makefsdata_8c_acb70e0cdd30a940f8bce681c6cc63949}} 
+\index{native/lwip/src/apps/httpd/makefsdata/makefsdata.\+c@{native/lwip/src/apps/httpd/makefsdata/makefsdata.\+c}!L\+W\+I\+P\+\_\+\+H\+T\+T\+P\+D\+\_\+\+S\+SI@{L\+W\+I\+P\+\_\+\+H\+T\+T\+P\+D\+\_\+\+S\+SI}}
+\index{L\+W\+I\+P\+\_\+\+H\+T\+T\+P\+D\+\_\+\+S\+SI@{L\+W\+I\+P\+\_\+\+H\+T\+T\+P\+D\+\_\+\+S\+SI}!native/lwip/src/apps/httpd/makefsdata/makefsdata.\+c@{native/lwip/src/apps/httpd/makefsdata/makefsdata.\+c}}
+\subsubsection{\texorpdfstring{L\+W\+I\+P\+\_\+\+H\+T\+T\+P\+D\+\_\+\+S\+SI}{LWIP\_HTTPD\_SSI}}
+{\footnotesize\ttfamily \#define L\+W\+I\+P\+\_\+\+H\+T\+T\+P\+D\+\_\+\+S\+SI~1}
+
+\mbox{\Hypertarget{native_2lwip_2src_2apps_2httpd_2makefsdata_2makefsdata_8c_a9876b64c23e0e5cec59f0c72305b6695}\label{native_2lwip_2src_2apps_2httpd_2makefsdata_2makefsdata_8c_a9876b64c23e0e5cec59f0c72305b6695}} 
+\index{native/lwip/src/apps/httpd/makefsdata/makefsdata.\+c@{native/lwip/src/apps/httpd/makefsdata/makefsdata.\+c}!M\+A\+K\+E\+F\+S\+\_\+\+S\+U\+P\+P\+O\+R\+T\+\_\+\+D\+E\+F\+L\+A\+TE@{M\+A\+K\+E\+F\+S\+\_\+\+S\+U\+P\+P\+O\+R\+T\+\_\+\+D\+E\+F\+L\+A\+TE}}
+\index{M\+A\+K\+E\+F\+S\+\_\+\+S\+U\+P\+P\+O\+R\+T\+\_\+\+D\+E\+F\+L\+A\+TE@{M\+A\+K\+E\+F\+S\+\_\+\+S\+U\+P\+P\+O\+R\+T\+\_\+\+D\+E\+F\+L\+A\+TE}!native/lwip/src/apps/httpd/makefsdata/makefsdata.\+c@{native/lwip/src/apps/httpd/makefsdata/makefsdata.\+c}}
+\subsubsection{\texorpdfstring{M\+A\+K\+E\+F\+S\+\_\+\+S\+U\+P\+P\+O\+R\+T\+\_\+\+D\+E\+F\+L\+A\+TE}{MAKEFS\_SUPPORT\_DEFLATE}}
+{\footnotesize\ttfamily \#define M\+A\+K\+E\+F\+S\+\_\+\+S\+U\+P\+P\+O\+R\+T\+\_\+\+D\+E\+F\+L\+A\+TE~0}
+
+makefsdata\+: Converts a directory structure for use with the lw\+IP httpd.
+
+This file is part of the lw\+IP T\+C\+P/\+IP stack.
+
+Author\+: Jim Pettinato Simon Goldschmidt
+
+\begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000001}{Todo}]\+:
+\begin{DoxyItemize}
+\item take T\+C\+P\+\_\+\+M\+SS, L\+W\+I\+P\+\_\+\+T\+C\+P\+\_\+\+T\+I\+M\+E\+S\+T\+A\+M\+PS and P\+A\+Y\+L\+O\+A\+D\+\_\+\+A\+L\+I\+G\+N\+\_\+\+T\+Y\+P\+E/\+P\+A\+Y\+L\+O\+A\+D\+\_\+\+A\+L\+I\+G\+N\+M\+E\+NT as arguments 
+\end{DoxyItemize}\end{DoxyRefDesc}
+Makefsdata can generate {\itshape all} files deflate-\/compressed (where file size shrinks). Since nearly all browsers support this, this is a good way to reduce R\+OM size. To compress the files, \char`\"{}miniz.\+c\char`\"{} must be downloaded seperately. \mbox{\Hypertarget{native_2lwip_2src_2apps_2httpd_2makefsdata_2makefsdata_8c_abdd33f362ae3bbdacb5de76473aa8a2f}\label{native_2lwip_2src_2apps_2httpd_2makefsdata_2makefsdata_8c_abdd33f362ae3bbdacb5de76473aa8a2f}} 
+\index{native/lwip/src/apps/httpd/makefsdata/makefsdata.\+c@{native/lwip/src/apps/httpd/makefsdata/makefsdata.\+c}!M\+A\+X\+\_\+\+P\+A\+T\+H\+\_\+\+L\+EN@{M\+A\+X\+\_\+\+P\+A\+T\+H\+\_\+\+L\+EN}}
+\index{M\+A\+X\+\_\+\+P\+A\+T\+H\+\_\+\+L\+EN@{M\+A\+X\+\_\+\+P\+A\+T\+H\+\_\+\+L\+EN}!native/lwip/src/apps/httpd/makefsdata/makefsdata.\+c@{native/lwip/src/apps/httpd/makefsdata/makefsdata.\+c}}
+\subsubsection{\texorpdfstring{M\+A\+X\+\_\+\+P\+A\+T\+H\+\_\+\+L\+EN}{MAX\_PATH\_LEN}}
+{\footnotesize\ttfamily \#define M\+A\+X\+\_\+\+P\+A\+T\+H\+\_\+\+L\+EN~256}
+
+\mbox{\Hypertarget{native_2lwip_2src_2apps_2httpd_2makefsdata_2makefsdata_8c_a806511f4930171733227c99101dc0606}\label{native_2lwip_2src_2apps_2httpd_2makefsdata_2makefsdata_8c_a806511f4930171733227c99101dc0606}} 
+\index{native/lwip/src/apps/httpd/makefsdata/makefsdata.\+c@{native/lwip/src/apps/httpd/makefsdata/makefsdata.\+c}!N\+E\+W\+L\+I\+NE@{N\+E\+W\+L\+I\+NE}}
+\index{N\+E\+W\+L\+I\+NE@{N\+E\+W\+L\+I\+NE}!native/lwip/src/apps/httpd/makefsdata/makefsdata.\+c@{native/lwip/src/apps/httpd/makefsdata/makefsdata.\+c}}
+\subsubsection{\texorpdfstring{N\+E\+W\+L\+I\+NE}{NEWLINE}}
+{\footnotesize\ttfamily \#define N\+E\+W\+L\+I\+NE~\char`\"{}\textbackslash{}r\textbackslash{}n\char`\"{}}
+
+\mbox{\Hypertarget{native_2lwip_2src_2apps_2httpd_2makefsdata_2makefsdata_8c_ad5eda0710da3e422c27ad1d406a015d1}\label{native_2lwip_2src_2apps_2httpd_2makefsdata_2makefsdata_8c_ad5eda0710da3e422c27ad1d406a015d1}} 
+\index{native/lwip/src/apps/httpd/makefsdata/makefsdata.\+c@{native/lwip/src/apps/httpd/makefsdata/makefsdata.\+c}!N\+E\+W\+L\+I\+N\+E\+\_\+\+L\+EN@{N\+E\+W\+L\+I\+N\+E\+\_\+\+L\+EN}}
+\index{N\+E\+W\+L\+I\+N\+E\+\_\+\+L\+EN@{N\+E\+W\+L\+I\+N\+E\+\_\+\+L\+EN}!native/lwip/src/apps/httpd/makefsdata/makefsdata.\+c@{native/lwip/src/apps/httpd/makefsdata/makefsdata.\+c}}
+\subsubsection{\texorpdfstring{N\+E\+W\+L\+I\+N\+E\+\_\+\+L\+EN}{NEWLINE\_LEN}}
+{\footnotesize\ttfamily \#define N\+E\+W\+L\+I\+N\+E\+\_\+\+L\+EN~2}
+
+\mbox{\Hypertarget{native_2lwip_2src_2apps_2httpd_2makefsdata_2makefsdata_8c_a473aff259445c51e8e17b19408eeeba9}\label{native_2lwip_2src_2apps_2httpd_2makefsdata_2makefsdata_8c_a473aff259445c51e8e17b19408eeeba9}} 
+\index{native/lwip/src/apps/httpd/makefsdata/makefsdata.\+c@{native/lwip/src/apps/httpd/makefsdata/makefsdata.\+c}!P\+A\+Y\+L\+O\+A\+D\+\_\+\+A\+L\+I\+G\+N\+\_\+\+T\+Y\+PE@{P\+A\+Y\+L\+O\+A\+D\+\_\+\+A\+L\+I\+G\+N\+\_\+\+T\+Y\+PE}}
+\index{P\+A\+Y\+L\+O\+A\+D\+\_\+\+A\+L\+I\+G\+N\+\_\+\+T\+Y\+PE@{P\+A\+Y\+L\+O\+A\+D\+\_\+\+A\+L\+I\+G\+N\+\_\+\+T\+Y\+PE}!native/lwip/src/apps/httpd/makefsdata/makefsdata.\+c@{native/lwip/src/apps/httpd/makefsdata/makefsdata.\+c}}
+\subsubsection{\texorpdfstring{P\+A\+Y\+L\+O\+A\+D\+\_\+\+A\+L\+I\+G\+N\+\_\+\+T\+Y\+PE}{PAYLOAD\_ALIGN\_TYPE}}
+{\footnotesize\ttfamily \#define P\+A\+Y\+L\+O\+A\+D\+\_\+\+A\+L\+I\+G\+N\+\_\+\+T\+Y\+PE~\char`\"{}unsigned int\char`\"{}}
+
+\mbox{\Hypertarget{native_2lwip_2src_2apps_2httpd_2makefsdata_2makefsdata_8c_a9f6c5880fb0c20de162f0908943e8e22}\label{native_2lwip_2src_2apps_2httpd_2makefsdata_2makefsdata_8c_a9f6c5880fb0c20de162f0908943e8e22}} 
+\index{native/lwip/src/apps/httpd/makefsdata/makefsdata.\+c@{native/lwip/src/apps/httpd/makefsdata/makefsdata.\+c}!P\+A\+Y\+L\+O\+A\+D\+\_\+\+A\+L\+I\+G\+N\+M\+E\+NT@{P\+A\+Y\+L\+O\+A\+D\+\_\+\+A\+L\+I\+G\+N\+M\+E\+NT}}
+\index{P\+A\+Y\+L\+O\+A\+D\+\_\+\+A\+L\+I\+G\+N\+M\+E\+NT@{P\+A\+Y\+L\+O\+A\+D\+\_\+\+A\+L\+I\+G\+N\+M\+E\+NT}!native/lwip/src/apps/httpd/makefsdata/makefsdata.\+c@{native/lwip/src/apps/httpd/makefsdata/makefsdata.\+c}}
+\subsubsection{\texorpdfstring{P\+A\+Y\+L\+O\+A\+D\+\_\+\+A\+L\+I\+G\+N\+M\+E\+NT}{PAYLOAD\_ALIGNMENT}}
+{\footnotesize\ttfamily \#define P\+A\+Y\+L\+O\+A\+D\+\_\+\+A\+L\+I\+G\+N\+M\+E\+NT~4}
+
+\mbox{\Hypertarget{native_2lwip_2src_2apps_2httpd_2makefsdata_2makefsdata_8c_a69b487446ca991fdde6e1dfe480f8740}\label{native_2lwip_2src_2apps_2httpd_2makefsdata_2makefsdata_8c_a69b487446ca991fdde6e1dfe480f8740}} 
+\index{native/lwip/src/apps/httpd/makefsdata/makefsdata.\+c@{native/lwip/src/apps/httpd/makefsdata/makefsdata.\+c}!U\+S\+A\+G\+E\+\_\+\+A\+R\+G\+\_\+\+D\+E\+F\+L\+A\+TE@{U\+S\+A\+G\+E\+\_\+\+A\+R\+G\+\_\+\+D\+E\+F\+L\+A\+TE}}
+\index{U\+S\+A\+G\+E\+\_\+\+A\+R\+G\+\_\+\+D\+E\+F\+L\+A\+TE@{U\+S\+A\+G\+E\+\_\+\+A\+R\+G\+\_\+\+D\+E\+F\+L\+A\+TE}!native/lwip/src/apps/httpd/makefsdata/makefsdata.\+c@{native/lwip/src/apps/httpd/makefsdata/makefsdata.\+c}}
+\subsubsection{\texorpdfstring{U\+S\+A\+G\+E\+\_\+\+A\+R\+G\+\_\+\+D\+E\+F\+L\+A\+TE}{USAGE\_ARG\_DEFLATE}}
+{\footnotesize\ttfamily \#define U\+S\+A\+G\+E\+\_\+\+A\+R\+G\+\_\+\+D\+E\+F\+L\+A\+TE~\char`\"{}\char`\"{}}
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{native_2lwip_2src_2apps_2httpd_2makefsdata_2makefsdata_8c_a35c69278ed3486ac621f1dc4e8d8f83a}\label{native_2lwip_2src_2apps_2httpd_2makefsdata_2makefsdata_8c_a35c69278ed3486ac621f1dc4e8d8f83a}} 
+\index{native/lwip/src/apps/httpd/makefsdata/makefsdata.\+c@{native/lwip/src/apps/httpd/makefsdata/makefsdata.\+c}!check\+\_\+path@{check\+\_\+path}}
+\index{check\+\_\+path@{check\+\_\+path}!native/lwip/src/apps/httpd/makefsdata/makefsdata.\+c@{native/lwip/src/apps/httpd/makefsdata/makefsdata.\+c}}
+\subsubsection{\texorpdfstring{check\+\_\+path()}{check\_path()}}
+{\footnotesize\ttfamily int check\+\_\+path (\begin{DoxyParamCaption}\item[{char $\ast$}]{path,  }\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{native_2lwip_2src_2apps_2httpd_2makefsdata_2makefsdata_8c_a9981150f1a5aa4aba1dea4469748c062}\label{native_2lwip_2src_2apps_2httpd_2makefsdata_2makefsdata_8c_a9981150f1a5aa4aba1dea4469748c062}} 
+\index{native/lwip/src/apps/httpd/makefsdata/makefsdata.\+c@{native/lwip/src/apps/httpd/makefsdata/makefsdata.\+c}!concat\+\_\+files@{concat\+\_\+files}}
+\index{concat\+\_\+files@{concat\+\_\+files}!native/lwip/src/apps/httpd/makefsdata/makefsdata.\+c@{native/lwip/src/apps/httpd/makefsdata/makefsdata.\+c}}
+\subsubsection{\texorpdfstring{concat\+\_\+files()}{concat\_files()}}
+{\footnotesize\ttfamily void concat\+\_\+files (\begin{DoxyParamCaption}\item[{const char $\ast$}]{file1,  }\item[{const char $\ast$}]{file2,  }\item[{const char $\ast$}]{targetfile }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{native_2lwip_2src_2apps_2httpd_2makefsdata_2makefsdata_8c_ae1515e6c1677553b47e37e4873249a42}\label{native_2lwip_2src_2apps_2httpd_2makefsdata_2makefsdata_8c_ae1515e6c1677553b47e37e4873249a42}} 
+\index{native/lwip/src/apps/httpd/makefsdata/makefsdata.\+c@{native/lwip/src/apps/httpd/makefsdata/makefsdata.\+c}!file\+\_\+put\+\_\+ascii@{file\+\_\+put\+\_\+ascii}}
+\index{file\+\_\+put\+\_\+ascii@{file\+\_\+put\+\_\+ascii}!native/lwip/src/apps/httpd/makefsdata/makefsdata.\+c@{native/lwip/src/apps/httpd/makefsdata/makefsdata.\+c}}
+\subsubsection{\texorpdfstring{file\+\_\+put\+\_\+ascii()}{file\_put\_ascii()}}
+{\footnotesize\ttfamily int file\+\_\+put\+\_\+ascii (\begin{DoxyParamCaption}\item[{F\+I\+LE $\ast$}]{file,  }\item[{const char $\ast$}]{ascii\+\_\+string,  }\item[{int}]{len,  }\item[{int $\ast$}]{i }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{native_2lwip_2src_2apps_2httpd_2makefsdata_2makefsdata_8c_a7a7e2ed3ae3fb34cf5999ddb1efd55e8}\label{native_2lwip_2src_2apps_2httpd_2makefsdata_2makefsdata_8c_a7a7e2ed3ae3fb34cf5999ddb1efd55e8}} 
+\index{native/lwip/src/apps/httpd/makefsdata/makefsdata.\+c@{native/lwip/src/apps/httpd/makefsdata/makefsdata.\+c}!file\+\_\+write\+\_\+http\+\_\+header@{file\+\_\+write\+\_\+http\+\_\+header}}
+\index{file\+\_\+write\+\_\+http\+\_\+header@{file\+\_\+write\+\_\+http\+\_\+header}!native/lwip/src/apps/httpd/makefsdata/makefsdata.\+c@{native/lwip/src/apps/httpd/makefsdata/makefsdata.\+c}}
+\subsubsection{\texorpdfstring{file\+\_\+write\+\_\+http\+\_\+header()}{file\_write\_http\_header()}}
+{\footnotesize\ttfamily int file\+\_\+write\+\_\+http\+\_\+header (\begin{DoxyParamCaption}\item[{F\+I\+LE $\ast$}]{data\+\_\+file,  }\item[{const char $\ast$}]{filename,  }\item[{int}]{file\+\_\+size,  }\item[{\hyperlink{group__compiler__abstraction_ga77570ac4fcab86864fa1916e55676da2}{u16\+\_\+t} $\ast$}]{http\+\_\+hdr\+\_\+len,  }\item[{\hyperlink{group__compiler__abstraction_ga77570ac4fcab86864fa1916e55676da2}{u16\+\_\+t} $\ast$}]{http\+\_\+hdr\+\_\+chksum,  }\item[{\hyperlink{group__compiler__abstraction_ga4caecabca98b43919dd11be1c0d4cd8e}{u8\+\_\+t}}]{provide\+\_\+content\+\_\+len,  }\item[{int}]{is\+\_\+compressed }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{native_2lwip_2src_2apps_2httpd_2makefsdata_2makefsdata_8c_a3ee04aa3dceb6f930c0d4a5834ef1377}\label{native_2lwip_2src_2apps_2httpd_2makefsdata_2makefsdata_8c_a3ee04aa3dceb6f930c0d4a5834ef1377}} 
+\index{native/lwip/src/apps/httpd/makefsdata/makefsdata.\+c@{native/lwip/src/apps/httpd/makefsdata/makefsdata.\+c}!get\+\_\+file\+\_\+data@{get\+\_\+file\+\_\+data}}
+\index{get\+\_\+file\+\_\+data@{get\+\_\+file\+\_\+data}!native/lwip/src/apps/httpd/makefsdata/makefsdata.\+c@{native/lwip/src/apps/httpd/makefsdata/makefsdata.\+c}}
+\subsubsection{\texorpdfstring{get\+\_\+file\+\_\+data()}{get\_file\_data()}}
+{\footnotesize\ttfamily \hyperlink{group__compiler__abstraction_ga4caecabca98b43919dd11be1c0d4cd8e}{u8\+\_\+t}$\ast$ get\+\_\+file\+\_\+data (\begin{DoxyParamCaption}\item[{const char $\ast$}]{filename,  }\item[{int $\ast$}]{file\+\_\+size,  }\item[{int}]{can\+\_\+be\+\_\+compressed,  }\item[{int $\ast$}]{is\+\_\+compressed }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{native_2lwip_2src_2apps_2httpd_2makefsdata_2makefsdata_8c_ab3b97b4b09364487a17d5513fc13657a}\label{native_2lwip_2src_2apps_2httpd_2makefsdata_2makefsdata_8c_ab3b97b4b09364487a17d5513fc13657a}} 
+\index{native/lwip/src/apps/httpd/makefsdata/makefsdata.\+c@{native/lwip/src/apps/httpd/makefsdata/makefsdata.\+c}!is\+\_\+ssi\+\_\+file@{is\+\_\+ssi\+\_\+file}}
+\index{is\+\_\+ssi\+\_\+file@{is\+\_\+ssi\+\_\+file}!native/lwip/src/apps/httpd/makefsdata/makefsdata.\+c@{native/lwip/src/apps/httpd/makefsdata/makefsdata.\+c}}
+\subsubsection{\texorpdfstring{is\+\_\+ssi\+\_\+file()}{is\_ssi\_file()}}
+{\footnotesize\ttfamily int is\+\_\+ssi\+\_\+file (\begin{DoxyParamCaption}\item[{const char $\ast$}]{filename }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{native_2lwip_2src_2apps_2httpd_2makefsdata_2makefsdata_8c_a0ddf1224851353fc92bfbff6f499fa97}\label{native_2lwip_2src_2apps_2httpd_2makefsdata_2makefsdata_8c_a0ddf1224851353fc92bfbff6f499fa97}} 
+\index{native/lwip/src/apps/httpd/makefsdata/makefsdata.\+c@{native/lwip/src/apps/httpd/makefsdata/makefsdata.\+c}!main@{main}}
+\index{main@{main}!native/lwip/src/apps/httpd/makefsdata/makefsdata.\+c@{native/lwip/src/apps/httpd/makefsdata/makefsdata.\+c}}
+\subsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$}]{argv\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{native_2lwip_2src_2apps_2httpd_2makefsdata_2makefsdata_8c_aebd14b6d3b49be243270b9cef5f4040c}\label{native_2lwip_2src_2apps_2httpd_2makefsdata_2makefsdata_8c_aebd14b6d3b49be243270b9cef5f4040c}} 
+\index{native/lwip/src/apps/httpd/makefsdata/makefsdata.\+c@{native/lwip/src/apps/httpd/makefsdata/makefsdata.\+c}!process\+\_\+file@{process\+\_\+file}}
+\index{process\+\_\+file@{process\+\_\+file}!native/lwip/src/apps/httpd/makefsdata/makefsdata.\+c@{native/lwip/src/apps/httpd/makefsdata/makefsdata.\+c}}
+\subsubsection{\texorpdfstring{process\+\_\+file()}{process\_file()}}
+{\footnotesize\ttfamily int process\+\_\+file (\begin{DoxyParamCaption}\item[{F\+I\+LE $\ast$}]{data\+\_\+file,  }\item[{F\+I\+LE $\ast$}]{struct\+\_\+file,  }\item[{const char $\ast$}]{filename }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{native_2lwip_2src_2apps_2httpd_2makefsdata_2makefsdata_8c_aebd14b6d3b49be243270b9cef5f4040c_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{native_2lwip_2src_2apps_2httpd_2makefsdata_2makefsdata_8c_accf3d8691b1a3e2731002b9feea7292c}\label{native_2lwip_2src_2apps_2httpd_2makefsdata_2makefsdata_8c_accf3d8691b1a3e2731002b9feea7292c}} 
+\index{native/lwip/src/apps/httpd/makefsdata/makefsdata.\+c@{native/lwip/src/apps/httpd/makefsdata/makefsdata.\+c}!process\+\_\+file\+\_\+data@{process\+\_\+file\+\_\+data}}
+\index{process\+\_\+file\+\_\+data@{process\+\_\+file\+\_\+data}!native/lwip/src/apps/httpd/makefsdata/makefsdata.\+c@{native/lwip/src/apps/httpd/makefsdata/makefsdata.\+c}}
+\subsubsection{\texorpdfstring{process\+\_\+file\+\_\+data()}{process\_file\_data()}}
+{\footnotesize\ttfamily void process\+\_\+file\+\_\+data (\begin{DoxyParamCaption}\item[{F\+I\+LE $\ast$}]{data\+\_\+file,  }\item[{\hyperlink{group__compiler__abstraction_ga4caecabca98b43919dd11be1c0d4cd8e}{u8\+\_\+t} $\ast$}]{file\+\_\+data,  }\item[{size\+\_\+t}]{file\+\_\+size }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{native_2lwip_2src_2apps_2httpd_2makefsdata_2makefsdata_8c_a42e541dd3738ab55217983a6882b4f2d}\label{native_2lwip_2src_2apps_2httpd_2makefsdata_2makefsdata_8c_a42e541dd3738ab55217983a6882b4f2d}} 
+\index{native/lwip/src/apps/httpd/makefsdata/makefsdata.\+c@{native/lwip/src/apps/httpd/makefsdata/makefsdata.\+c}!process\+\_\+sub@{process\+\_\+sub}}
+\index{process\+\_\+sub@{process\+\_\+sub}!native/lwip/src/apps/httpd/makefsdata/makefsdata.\+c@{native/lwip/src/apps/httpd/makefsdata/makefsdata.\+c}}
+\subsubsection{\texorpdfstring{process\+\_\+sub()}{process\_sub()}}
+{\footnotesize\ttfamily int process\+\_\+sub (\begin{DoxyParamCaption}\item[{F\+I\+LE $\ast$}]{data\+\_\+file,  }\item[{F\+I\+LE $\ast$}]{struct\+\_\+file }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=257pt]{native_2lwip_2src_2apps_2httpd_2makefsdata_2makefsdata_8c_a42e541dd3738ab55217983a6882b4f2d_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=260pt]{native_2lwip_2src_2apps_2httpd_2makefsdata_2makefsdata_8c_a42e541dd3738ab55217983a6882b4f2d_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{native_2lwip_2src_2apps_2httpd_2makefsdata_2makefsdata_8c_a0cfb02efa2b6ced8afac6e73eee1bcf2}\label{native_2lwip_2src_2apps_2httpd_2makefsdata_2makefsdata_8c_a0cfb02efa2b6ced8afac6e73eee1bcf2}} 
+\index{native/lwip/src/apps/httpd/makefsdata/makefsdata.\+c@{native/lwip/src/apps/httpd/makefsdata/makefsdata.\+c}!s\+\_\+put\+\_\+ascii@{s\+\_\+put\+\_\+ascii}}
+\index{s\+\_\+put\+\_\+ascii@{s\+\_\+put\+\_\+ascii}!native/lwip/src/apps/httpd/makefsdata/makefsdata.\+c@{native/lwip/src/apps/httpd/makefsdata/makefsdata.\+c}}
+\subsubsection{\texorpdfstring{s\+\_\+put\+\_\+ascii()}{s\_put\_ascii()}}
+{\footnotesize\ttfamily int s\+\_\+put\+\_\+ascii (\begin{DoxyParamCaption}\item[{char $\ast$}]{buf,  }\item[{const char $\ast$}]{ascii\+\_\+string,  }\item[{int}]{len,  }\item[{int $\ast$}]{i }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{native_2lwip_2src_2apps_2httpd_2makefsdata_2makefsdata_8c_a1d75016c940cbfa451c71e0cd896b513}\label{native_2lwip_2src_2apps_2httpd_2makefsdata_2makefsdata_8c_a1d75016c940cbfa451c71e0cd896b513}} 
+\index{native/lwip/src/apps/httpd/makefsdata/makefsdata.\+c@{native/lwip/src/apps/httpd/makefsdata/makefsdata.\+c}!write\+\_\+checksums@{write\+\_\+checksums}}
+\index{write\+\_\+checksums@{write\+\_\+checksums}!native/lwip/src/apps/httpd/makefsdata/makefsdata.\+c@{native/lwip/src/apps/httpd/makefsdata/makefsdata.\+c}}
+\subsubsection{\texorpdfstring{write\+\_\+checksums()}{write\_checksums()}}
+{\footnotesize\ttfamily int write\+\_\+checksums (\begin{DoxyParamCaption}\item[{F\+I\+LE $\ast$}]{struct\+\_\+file,  }\item[{const char $\ast$}]{varname,  }\item[{\hyperlink{group__compiler__abstraction_ga77570ac4fcab86864fa1916e55676da2}{u16\+\_\+t}}]{hdr\+\_\+len,  }\item[{\hyperlink{group__compiler__abstraction_ga77570ac4fcab86864fa1916e55676da2}{u16\+\_\+t}}]{hdr\+\_\+chksum,  }\item[{const \hyperlink{group__compiler__abstraction_ga4caecabca98b43919dd11be1c0d4cd8e}{u8\+\_\+t} $\ast$}]{file\+\_\+data,  }\item[{size\+\_\+t}]{file\+\_\+size }\end{DoxyParamCaption})}
+
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{native_2lwip_2src_2apps_2httpd_2makefsdata_2makefsdata_8c_a2be0a7259555ec0e4940ebcdf489ff33}\label{native_2lwip_2src_2apps_2httpd_2makefsdata_2makefsdata_8c_a2be0a7259555ec0e4940ebcdf489ff33}} 
+\index{native/lwip/src/apps/httpd/makefsdata/makefsdata.\+c@{native/lwip/src/apps/httpd/makefsdata/makefsdata.\+c}!cur\+Subdir@{cur\+Subdir}}
+\index{cur\+Subdir@{cur\+Subdir}!native/lwip/src/apps/httpd/makefsdata/makefsdata.\+c@{native/lwip/src/apps/httpd/makefsdata/makefsdata.\+c}}
+\subsubsection{\texorpdfstring{cur\+Subdir}{curSubdir}}
+{\footnotesize\ttfamily char cur\+Subdir\mbox{[}\hyperlink{openmote-cc2538_2lwip_2src_2apps_2httpd_2makefsdata_2makefsdata_8c_abdd33f362ae3bbdacb5de76473aa8a2f}{M\+A\+X\+\_\+\+P\+A\+T\+H\+\_\+\+L\+EN}\mbox{]}}
+
+\mbox{\Hypertarget{native_2lwip_2src_2apps_2httpd_2makefsdata_2makefsdata_8c_a7a300f76921019649ecfc31b3e646fb8}\label{native_2lwip_2src_2apps_2httpd_2makefsdata_2makefsdata_8c_a7a300f76921019649ecfc31b3e646fb8}} 
+\index{native/lwip/src/apps/httpd/makefsdata/makefsdata.\+c@{native/lwip/src/apps/httpd/makefsdata/makefsdata.\+c}!first\+\_\+file@{first\+\_\+file}}
+\index{first\+\_\+file@{first\+\_\+file}!native/lwip/src/apps/httpd/makefsdata/makefsdata.\+c@{native/lwip/src/apps/httpd/makefsdata/makefsdata.\+c}}
+\subsubsection{\texorpdfstring{first\+\_\+file}{first\_file}}
+{\footnotesize\ttfamily struct \hyperlink{structfile__entry}{file\+\_\+entry}$\ast$ first\+\_\+file = \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2def_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}}
+
+\mbox{\Hypertarget{native_2lwip_2src_2apps_2httpd_2makefsdata_2makefsdata_8c_aa107ff217f88178d5055bb6cb2b9573e}\label{native_2lwip_2src_2apps_2httpd_2makefsdata_2makefsdata_8c_aa107ff217f88178d5055bb6cb2b9573e}} 
+\index{native/lwip/src/apps/httpd/makefsdata/makefsdata.\+c@{native/lwip/src/apps/httpd/makefsdata/makefsdata.\+c}!hdr\+\_\+buf@{hdr\+\_\+buf}}
+\index{hdr\+\_\+buf@{hdr\+\_\+buf}!native/lwip/src/apps/httpd/makefsdata/makefsdata.\+c@{native/lwip/src/apps/httpd/makefsdata/makefsdata.\+c}}
+\subsubsection{\texorpdfstring{hdr\+\_\+buf}{hdr\_buf}}
+{\footnotesize\ttfamily char hdr\+\_\+buf\mbox{[}4096\mbox{]}}
+
+\mbox{\Hypertarget{native_2lwip_2src_2apps_2httpd_2makefsdata_2makefsdata_8c_ad7c4bce2651f43f83ca1e2e9bc8ead95}\label{native_2lwip_2src_2apps_2httpd_2makefsdata_2makefsdata_8c_ad7c4bce2651f43f83ca1e2e9bc8ead95}} 
+\index{native/lwip/src/apps/httpd/makefsdata/makefsdata.\+c@{native/lwip/src/apps/httpd/makefsdata/makefsdata.\+c}!include\+Http\+Header@{include\+Http\+Header}}
+\index{include\+Http\+Header@{include\+Http\+Header}!native/lwip/src/apps/httpd/makefsdata/makefsdata.\+c@{native/lwip/src/apps/httpd/makefsdata/makefsdata.\+c}}
+\subsubsection{\texorpdfstring{include\+Http\+Header}{includeHttpHeader}}
+{\footnotesize\ttfamily unsigned char include\+Http\+Header = 1}
+
+\mbox{\Hypertarget{native_2lwip_2src_2apps_2httpd_2makefsdata_2makefsdata_8c_adc3655383e74eff4ad288d29371ea837}\label{native_2lwip_2src_2apps_2httpd_2makefsdata_2makefsdata_8c_adc3655383e74eff4ad288d29371ea837}} 
+\index{native/lwip/src/apps/httpd/makefsdata/makefsdata.\+c@{native/lwip/src/apps/httpd/makefsdata/makefsdata.\+c}!include\+Last\+Modified@{include\+Last\+Modified}}
+\index{include\+Last\+Modified@{include\+Last\+Modified}!native/lwip/src/apps/httpd/makefsdata/makefsdata.\+c@{native/lwip/src/apps/httpd/makefsdata/makefsdata.\+c}}
+\subsubsection{\texorpdfstring{include\+Last\+Modified}{includeLastModified}}
+{\footnotesize\ttfamily unsigned char include\+Last\+Modified = 0}
+
+\mbox{\Hypertarget{native_2lwip_2src_2apps_2httpd_2makefsdata_2makefsdata_8c_ab0e8fa4179629c1e2e0ef0f0596b2865}\label{native_2lwip_2src_2apps_2httpd_2makefsdata_2makefsdata_8c_ab0e8fa4179629c1e2e0ef0f0596b2865}} 
+\index{native/lwip/src/apps/httpd/makefsdata/makefsdata.\+c@{native/lwip/src/apps/httpd/makefsdata/makefsdata.\+c}!last\+\_\+file@{last\+\_\+file}}
+\index{last\+\_\+file@{last\+\_\+file}!native/lwip/src/apps/httpd/makefsdata/makefsdata.\+c@{native/lwip/src/apps/httpd/makefsdata/makefsdata.\+c}}
+\subsubsection{\texorpdfstring{last\+\_\+file}{last\_file}}
+{\footnotesize\ttfamily struct \hyperlink{structfile__entry}{file\+\_\+entry}$\ast$ last\+\_\+file = \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2def_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}}
+
+\mbox{\Hypertarget{native_2lwip_2src_2apps_2httpd_2makefsdata_2makefsdata_8c_a9aee39ef514de02ab3eb29dd2ecb7e06}\label{native_2lwip_2src_2apps_2httpd_2makefsdata_2makefsdata_8c_a9aee39ef514de02ab3eb29dd2ecb7e06}} 
+\index{native/lwip/src/apps/httpd/makefsdata/makefsdata.\+c@{native/lwip/src/apps/httpd/makefsdata/makefsdata.\+c}!last\+File\+Var@{last\+File\+Var}}
+\index{last\+File\+Var@{last\+File\+Var}!native/lwip/src/apps/httpd/makefsdata/makefsdata.\+c@{native/lwip/src/apps/httpd/makefsdata/makefsdata.\+c}}
+\subsubsection{\texorpdfstring{last\+File\+Var}{lastFileVar}}
+{\footnotesize\ttfamily char last\+File\+Var\mbox{[}\hyperlink{openmote-cc2538_2lwip_2src_2apps_2httpd_2makefsdata_2makefsdata_8c_abdd33f362ae3bbdacb5de76473aa8a2f}{M\+A\+X\+\_\+\+P\+A\+T\+H\+\_\+\+L\+EN}\mbox{]}}
+
+\mbox{\Hypertarget{native_2lwip_2src_2apps_2httpd_2makefsdata_2makefsdata_8c_a67eb0a6dc2f05ddd7be9f88c5e5a01df}\label{native_2lwip_2src_2apps_2httpd_2makefsdata_2makefsdata_8c_a67eb0a6dc2f05ddd7be9f88c5e5a01df}} 
+\index{native/lwip/src/apps/httpd/makefsdata/makefsdata.\+c@{native/lwip/src/apps/httpd/makefsdata/makefsdata.\+c}!precalc\+Chksum@{precalc\+Chksum}}
+\index{precalc\+Chksum@{precalc\+Chksum}!native/lwip/src/apps/httpd/makefsdata/makefsdata.\+c@{native/lwip/src/apps/httpd/makefsdata/makefsdata.\+c}}
+\subsubsection{\texorpdfstring{precalc\+Chksum}{precalcChksum}}
+{\footnotesize\ttfamily unsigned char precalc\+Chksum = 0}
+
+\mbox{\Hypertarget{native_2lwip_2src_2apps_2httpd_2makefsdata_2makefsdata_8c_a9bc2ffdcb3d51b83a841ce465fd1b482}\label{native_2lwip_2src_2apps_2httpd_2makefsdata_2makefsdata_8c_a9bc2ffdcb3d51b83a841ce465fd1b482}} 
+\index{native/lwip/src/apps/httpd/makefsdata/makefsdata.\+c@{native/lwip/src/apps/httpd/makefsdata/makefsdata.\+c}!process\+Subs@{process\+Subs}}
+\index{process\+Subs@{process\+Subs}!native/lwip/src/apps/httpd/makefsdata/makefsdata.\+c@{native/lwip/src/apps/httpd/makefsdata/makefsdata.\+c}}
+\subsubsection{\texorpdfstring{process\+Subs}{processSubs}}
+{\footnotesize\ttfamily unsigned char process\+Subs = 1}
+
+\mbox{\Hypertarget{native_2lwip_2src_2apps_2httpd_2makefsdata_2makefsdata_8c_a0e5f2fe823606f3dbf64a81da7eda169}\label{native_2lwip_2src_2apps_2httpd_2makefsdata_2makefsdata_8c_a0e5f2fe823606f3dbf64a81da7eda169}} 
+\index{native/lwip/src/apps/httpd/makefsdata/makefsdata.\+c@{native/lwip/src/apps/httpd/makefsdata/makefsdata.\+c}!server\+ID@{server\+ID}}
+\index{server\+ID@{server\+ID}!native/lwip/src/apps/httpd/makefsdata/makefsdata.\+c@{native/lwip/src/apps/httpd/makefsdata/makefsdata.\+c}}
+\subsubsection{\texorpdfstring{server\+ID}{serverID}}
+{\footnotesize\ttfamily const char$\ast$ server\+ID = \char`\"{}Server\+: \char`\"{}H\+T\+T\+P\+D\+\_\+\+S\+E\+R\+V\+E\+R\+\_\+\+A\+G\+E\+NT\char`\"{}\textbackslash{}r\textbackslash{}n\char`\"{}}
+
+(Your server name here) \mbox{\Hypertarget{native_2lwip_2src_2apps_2httpd_2makefsdata_2makefsdata_8c_afefc123976dc48b1bf8f8cd9ec82433f}\label{native_2lwip_2src_2apps_2httpd_2makefsdata_2makefsdata_8c_afefc123976dc48b1bf8f8cd9ec82433f}} 
+\index{native/lwip/src/apps/httpd/makefsdata/makefsdata.\+c@{native/lwip/src/apps/httpd/makefsdata/makefsdata.\+c}!server\+I\+D\+Buffer@{server\+I\+D\+Buffer}}
+\index{server\+I\+D\+Buffer@{server\+I\+D\+Buffer}!native/lwip/src/apps/httpd/makefsdata/makefsdata.\+c@{native/lwip/src/apps/httpd/makefsdata/makefsdata.\+c}}
+\subsubsection{\texorpdfstring{server\+I\+D\+Buffer}{serverIDBuffer}}
+{\footnotesize\ttfamily char server\+I\+D\+Buffer\mbox{[}1024\mbox{]}}
+
+\mbox{\Hypertarget{native_2lwip_2src_2apps_2httpd_2makefsdata_2makefsdata_8c_afcd0057cc79bbc5c525a0d08a5014b9a}\label{native_2lwip_2src_2apps_2httpd_2makefsdata_2makefsdata_8c_afcd0057cc79bbc5c525a0d08a5014b9a}} 
+\index{native/lwip/src/apps/httpd/makefsdata/makefsdata.\+c@{native/lwip/src/apps/httpd/makefsdata/makefsdata.\+c}!support\+Ssi@{support\+Ssi}}
+\index{support\+Ssi@{support\+Ssi}!native/lwip/src/apps/httpd/makefsdata/makefsdata.\+c@{native/lwip/src/apps/httpd/makefsdata/makefsdata.\+c}}
+\subsubsection{\texorpdfstring{support\+Ssi}{supportSsi}}
+{\footnotesize\ttfamily unsigned char support\+Ssi = 1}
+
+\mbox{\Hypertarget{native_2lwip_2src_2apps_2httpd_2makefsdata_2makefsdata_8c_ae3d870e59aa3875d90a6920575c768e5}\label{native_2lwip_2src_2apps_2httpd_2makefsdata_2makefsdata_8c_ae3d870e59aa3875d90a6920575c768e5}} 
+\index{native/lwip/src/apps/httpd/makefsdata/makefsdata.\+c@{native/lwip/src/apps/httpd/makefsdata/makefsdata.\+c}!use\+Http11@{use\+Http11}}
+\index{use\+Http11@{use\+Http11}!native/lwip/src/apps/httpd/makefsdata/makefsdata.\+c@{native/lwip/src/apps/httpd/makefsdata/makefsdata.\+c}}
+\subsubsection{\texorpdfstring{use\+Http11}{useHttp11}}
+{\footnotesize\ttfamily unsigned char use\+Http11 = 0}
+

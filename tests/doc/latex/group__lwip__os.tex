@@ -1,0 +1,111 @@
+\hypertarget{group__lwip__os}{}\section{OS mode (T\+C\+P\+IP thread)}
+\label{group__lwip__os}\index{O\+S mode (\+T\+C\+P\+I\+P thread)@{O\+S mode (\+T\+C\+P\+I\+P thread)}}
+Collaboration diagram for OS mode (T\+C\+P\+IP thread)\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=279pt]{group__lwip__os}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group__lwip__os_ga7eb868a1215472ec38f3f2a04d442b9f}{tcpip\+\_\+callback}(f,  ctx)~\hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2tcpip_8h_ab1d3ef23817d7703fa75ed67bd45ea1d}{tcpip\+\_\+callback\+\_\+with\+\_\+block}(f, ctx, 1)
+\item 
+\#define \hyperlink{group__lwip__os_ga7eb868a1215472ec38f3f2a04d442b9f}{tcpip\+\_\+callback}(f,  ctx)~\hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2tcpip_8h_ab1d3ef23817d7703fa75ed67bd45ea1d}{tcpip\+\_\+callback\+\_\+with\+\_\+block}(f, ctx, 1)
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group__infrastructure__errors_gaf02d9da80fd66b4f986d2c53d7231ddb}{err\+\_\+t} \hyperlink{group__lwip__os_gae510f195171bed8499ae94e264a92717}{tcpip\+\_\+input} (struct \hyperlink{structpbuf}{pbuf} $\ast$p, struct \hyperlink{structnetif}{netif} $\ast$inp)
+\item 
+void \hyperlink{group__lwip__os_ga1f3a88b8df6ba3b9ed1c00e0a305e3db}{tcpip\+\_\+init} (\hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2tcpip_8h_a5fe07216c441e27c3028bcac60fa0992}{tcpip\+\_\+init\+\_\+done\+\_\+fn} initfunc, void $\ast$arg)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Use this mode if you run an OS on your system. It is recommended to use an R\+T\+OS that correctly handles priority inversion and to use \hyperlink{group__lwip__opts__lock_ga8e46232794349c209e8ed4e9e7e4f011}{L\+W\+I\+P\+\_\+\+T\+C\+P\+I\+P\+\_\+\+C\+O\+R\+E\+\_\+\+L\+O\+C\+K\+I\+NG}.~\newline
+Porting\+: implement all functions in \hyperlink{group__sys__layer}{Porting (system abstraction layer)}.~\newline
+You can use \hyperlink{group__callbackstyle__api}{Callback-\/style A\+P\+Is} together with \hyperlink{group__lwip__os_ga7eb868a1215472ec38f3f2a04d442b9f}{tcpip\+\_\+callback}, and all \hyperlink{group__sequential__api}{Sequential-\/style A\+P\+Is}. 
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{group__lwip__os_ga7eb868a1215472ec38f3f2a04d442b9f}\label{group__lwip__os_ga7eb868a1215472ec38f3f2a04d442b9f}} 
+\index{O\+S mode (\+T\+C\+P\+I\+P thread)@{O\+S mode (\+T\+C\+P\+I\+P thread)}!tcpip\+\_\+callback@{tcpip\+\_\+callback}}
+\index{tcpip\+\_\+callback@{tcpip\+\_\+callback}!O\+S mode (\+T\+C\+P\+I\+P thread)@{O\+S mode (\+T\+C\+P\+I\+P thread)}}
+\subsubsection{\texorpdfstring{tcpip\+\_\+callback}{tcpip\_callback}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \#define tcpip\+\_\+callback(\begin{DoxyParamCaption}\item[{}]{f,  }\item[{}]{ctx }\end{DoxyParamCaption})~\hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2tcpip_8h_ab1d3ef23817d7703fa75ed67bd45ea1d}{tcpip\+\_\+callback\+\_\+with\+\_\+block}(f, ctx, 1)}
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{native_2lwip_2src_2include_2lwip_2tcpip_8h_ab1d3ef23817d7703fa75ed67bd45ea1d}{tcpip\+\_\+callback\+\_\+with\+\_\+block} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{group__lwip__os_ga7eb868a1215472ec38f3f2a04d442b9f}\label{group__lwip__os_ga7eb868a1215472ec38f3f2a04d442b9f}} 
+\index{O\+S mode (\+T\+C\+P\+I\+P thread)@{O\+S mode (\+T\+C\+P\+I\+P thread)}!tcpip\+\_\+callback@{tcpip\+\_\+callback}}
+\index{tcpip\+\_\+callback@{tcpip\+\_\+callback}!O\+S mode (\+T\+C\+P\+I\+P thread)@{O\+S mode (\+T\+C\+P\+I\+P thread)}}
+\subsubsection{\texorpdfstring{tcpip\+\_\+callback}{tcpip\_callback}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \#define tcpip\+\_\+callback(\begin{DoxyParamCaption}\item[{}]{f,  }\item[{}]{ctx }\end{DoxyParamCaption})~\hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2tcpip_8h_ab1d3ef23817d7703fa75ed67bd45ea1d}{tcpip\+\_\+callback\+\_\+with\+\_\+block}(f, ctx, 1)}
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{native_2lwip_2src_2include_2lwip_2tcpip_8h_ab1d3ef23817d7703fa75ed67bd45ea1d}{tcpip\+\_\+callback\+\_\+with\+\_\+block} 
+\end{DoxySeeAlso}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{group__lwip__os_ga1f3a88b8df6ba3b9ed1c00e0a305e3db}\label{group__lwip__os_ga1f3a88b8df6ba3b9ed1c00e0a305e3db}} 
+\index{O\+S mode (\+T\+C\+P\+I\+P thread)@{O\+S mode (\+T\+C\+P\+I\+P thread)}!tcpip\+\_\+init@{tcpip\+\_\+init}}
+\index{tcpip\+\_\+init@{tcpip\+\_\+init}!O\+S mode (\+T\+C\+P\+I\+P thread)@{O\+S mode (\+T\+C\+P\+I\+P thread)}}
+\subsubsection{\texorpdfstring{tcpip\+\_\+init()}{tcpip\_init()}}
+{\footnotesize\ttfamily void tcpip\+\_\+init (\begin{DoxyParamCaption}\item[{\hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2tcpip_8h_a5fe07216c441e27c3028bcac60fa0992}{tcpip\+\_\+init\+\_\+done\+\_\+fn}}]{initfunc,  }\item[{void $\ast$}]{arg }\end{DoxyParamCaption})}
+
+Initialize this module\+:
+\begin{DoxyItemize}
+\item initialize all sub modules
+\item start the tcpip\+\_\+thread
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+{\em initfunc} & a function to call when tcpip\+\_\+thread is running and finished initializing \\
+\hline
+{\em arg} & argument to pass to initfunc \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=322pt]{group__lwip__os_ga1f3a88b8df6ba3b9ed1c00e0a305e3db_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{group__lwip__os_gae510f195171bed8499ae94e264a92717}\label{group__lwip__os_gae510f195171bed8499ae94e264a92717}} 
+\index{O\+S mode (\+T\+C\+P\+I\+P thread)@{O\+S mode (\+T\+C\+P\+I\+P thread)}!tcpip\+\_\+input@{tcpip\+\_\+input}}
+\index{tcpip\+\_\+input@{tcpip\+\_\+input}!O\+S mode (\+T\+C\+P\+I\+P thread)@{O\+S mode (\+T\+C\+P\+I\+P thread)}}
+\subsubsection{\texorpdfstring{tcpip\+\_\+input()}{tcpip\_input()}}
+{\footnotesize\ttfamily \hyperlink{group__infrastructure__errors_gaf02d9da80fd66b4f986d2c53d7231ddb}{err\+\_\+t} tcpip\+\_\+input (\begin{DoxyParamCaption}\item[{struct \hyperlink{structpbuf}{pbuf} $\ast$}]{p,  }\item[{struct \hyperlink{structnetif}{netif} $\ast$}]{inp }\end{DoxyParamCaption})}
+
+Pass a received packet to tcpip\+\_\+thread for input processing with ethernet\+\_\+input or ip\+\_\+input. Don\textquotesingle{}t call directly, pass to \hyperlink{group__netif_gabde72af134ae7047a46ad7719d2a1ee9}{netif\+\_\+add()} and call netif-\/$>$input().
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & the received packet, p-\/$>$payload pointing to the Ethernet header or to an IP header (if inp doesn\textquotesingle{}t have N\+E\+T\+I\+F\+\_\+\+F\+L\+A\+G\+\_\+\+E\+T\+H\+A\+RP or N\+E\+T\+I\+F\+\_\+\+F\+L\+A\+G\+\_\+\+E\+T\+H\+E\+R\+N\+ET flags) \\
+\hline
+{\em inp} & the network interface on which the packet was received \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=244pt]{group__lwip__os_gae510f195171bed8499ae94e264a92717_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=233pt]{group__lwip__os_gae510f195171bed8499ae94e264a92717_icgraph}
+\end{center}
+\end{figure}

@@ -1,0 +1,202 @@
+\hypertarget{native_2lwip_2src_2core_2memp_8c}{}\section{/home/ayush/\+R\+I\+O\+T/tests/lwip/bin/pkg/native/lwip/src/core/memp.c File Reference}
+\label{native_2lwip_2src_2core_2memp_8c}\index{/home/ayush/\+R\+I\+O\+T/tests/lwip/bin/pkg/native/lwip/src/core/memp.\+c@{/home/ayush/\+R\+I\+O\+T/tests/lwip/bin/pkg/native/lwip/src/core/memp.\+c}}
+{\ttfamily \#include \char`\"{}lwip/opt.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}lwip/memp.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}lwip/sys.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}lwip/stats.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}lwip/pbuf.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}lwip/raw.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}lwip/udp.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}lwip/tcp.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}lwip/priv/tcp\+\_\+priv.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}lwip/ip4\+\_\+frag.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}lwip/netbuf.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}lwip/api.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}lwip/priv/tcpip\+\_\+priv.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}lwip/priv/api\+\_\+msg.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}lwip/sockets.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}lwip/netifapi.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}lwip/etharp.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}lwip/igmp.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}lwip/timeouts.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}netif/ppp/ppp\+\_\+opts.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}lwip/netdb.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}lwip/dns.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}lwip/priv/nd6\+\_\+priv.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}lwip/ip6\+\_\+frag.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}lwip/mld6.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}lwip/priv/memp\+\_\+std.\+h\char`\"{}}\newline
+Include dependency graph for memp.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{native_2lwip_2src_2core_2memp_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{native_2lwip_2src_2core_2memp_8c_a5f75b6e9cf0c6df9e70b08b8e05a1835}{L\+W\+I\+P\+\_\+\+M\+E\+M\+P\+O\+OL}(name,  num,  size,  desc)~\hyperlink{group__mempool_ga5b1fb3ce7942432d87cc948b1c5ed6cb}{L\+W\+I\+P\+\_\+\+M\+E\+M\+P\+O\+O\+L\+\_\+\+D\+E\+C\+L\+A\+RE}(name,num,size,desc)
+\item 
+\#define \hyperlink{native_2lwip_2src_2core_2memp_8c_a5f75b6e9cf0c6df9e70b08b8e05a1835}{L\+W\+I\+P\+\_\+\+M\+E\+M\+P\+O\+OL}(name,  num,  size,  desc)~\&memp\+\_\+ \#\# name,
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{native_2lwip_2src_2core_2memp_8c_a6416303426d05526bed33f241fa6ecd7}{memp\+\_\+init\+\_\+pool} (const struct \hyperlink{structmemp__desc}{memp\+\_\+desc} $\ast$desc)
+\item 
+void \hyperlink{native_2lwip_2src_2core_2memp_8c_a9693e5b1ac2c6b9c0e7870522d45efa2}{memp\+\_\+init} (void)
+\item 
+void $\ast$ \hyperlink{native_2lwip_2src_2core_2memp_8c_a348c83ee972f1edf7296a1cdf1d75f22}{memp\+\_\+malloc\+\_\+pool} (const struct \hyperlink{structmemp__desc}{memp\+\_\+desc} $\ast$desc)
+\item 
+void $\ast$ \hyperlink{native_2lwip_2src_2core_2memp_8c_a2b00593d086313c267b54a976bf67aa5}{memp\+\_\+malloc} (\hyperlink{native_2lwip_2src_2include_2lwip_2memp_8h_a85a164b1f7764951cc685ea525114e57}{memp\+\_\+t} type)
+\item 
+void \hyperlink{native_2lwip_2src_2core_2memp_8c_a62f8c3c907743e34eee3cdac7fa1eaa5}{memp\+\_\+free\+\_\+pool} (const struct \hyperlink{structmemp__desc}{memp\+\_\+desc} $\ast$desc, void $\ast$\hyperlink{structmem}{mem})
+\item 
+void \hyperlink{native_2lwip_2src_2core_2memp_8c_aecd94926b7c2a0e23ae195f4ae97581f}{memp\+\_\+free} (\hyperlink{native_2lwip_2src_2include_2lwip_2memp_8h_a85a164b1f7764951cc685ea525114e57}{memp\+\_\+t} type, void $\ast$\hyperlink{structmem}{mem})
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const struct \hyperlink{structmemp__desc}{memp\+\_\+desc} $\ast$const \hyperlink{native_2lwip_2src_2core_2memp_8c_ad78a1f656a766f2c6341aa466762b883}{memp\+\_\+pools} \mbox{[}\hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2memp_8h_a85a164b1f7764951cc685ea525114e57a3387042084427642949f3223c7ddd321}{M\+E\+M\+P\+\_\+\+M\+AX}\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Dynamic pool memory manager
+
+lw\+IP has dedicated pools for many structures (netconn, protocol control blocks, packet buffers, ...). All these pools are managed here. 
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{native_2lwip_2src_2core_2memp_8c_a5f75b6e9cf0c6df9e70b08b8e05a1835}\label{native_2lwip_2src_2core_2memp_8c_a5f75b6e9cf0c6df9e70b08b8e05a1835}} 
+\index{native/lwip/src/core/memp.\+c@{native/lwip/src/core/memp.\+c}!L\+W\+I\+P\+\_\+\+M\+E\+M\+P\+O\+OL@{L\+W\+I\+P\+\_\+\+M\+E\+M\+P\+O\+OL}}
+\index{L\+W\+I\+P\+\_\+\+M\+E\+M\+P\+O\+OL@{L\+W\+I\+P\+\_\+\+M\+E\+M\+P\+O\+OL}!native/lwip/src/core/memp.\+c@{native/lwip/src/core/memp.\+c}}
+\subsubsection{\texorpdfstring{L\+W\+I\+P\+\_\+\+M\+E\+M\+P\+O\+OL}{LWIP\_MEMPOOL}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \#define L\+W\+I\+P\+\_\+\+M\+E\+M\+P\+O\+OL(\begin{DoxyParamCaption}\item[{}]{name,  }\item[{}]{num,  }\item[{}]{size,  }\item[{}]{desc }\end{DoxyParamCaption})~\hyperlink{group__mempool_ga5b1fb3ce7942432d87cc948b1c5ed6cb}{L\+W\+I\+P\+\_\+\+M\+E\+M\+P\+O\+O\+L\+\_\+\+D\+E\+C\+L\+A\+RE}(name,num,size,desc)}
+
+\mbox{\Hypertarget{native_2lwip_2src_2core_2memp_8c_a5f75b6e9cf0c6df9e70b08b8e05a1835}\label{native_2lwip_2src_2core_2memp_8c_a5f75b6e9cf0c6df9e70b08b8e05a1835}} 
+\index{native/lwip/src/core/memp.\+c@{native/lwip/src/core/memp.\+c}!L\+W\+I\+P\+\_\+\+M\+E\+M\+P\+O\+OL@{L\+W\+I\+P\+\_\+\+M\+E\+M\+P\+O\+OL}}
+\index{L\+W\+I\+P\+\_\+\+M\+E\+M\+P\+O\+OL@{L\+W\+I\+P\+\_\+\+M\+E\+M\+P\+O\+OL}!native/lwip/src/core/memp.\+c@{native/lwip/src/core/memp.\+c}}
+\subsubsection{\texorpdfstring{L\+W\+I\+P\+\_\+\+M\+E\+M\+P\+O\+OL}{LWIP\_MEMPOOL}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \#define L\+W\+I\+P\+\_\+\+M\+E\+M\+P\+O\+OL(\begin{DoxyParamCaption}\item[{}]{name,  }\item[{}]{num,  }\item[{}]{size,  }\item[{}]{desc }\end{DoxyParamCaption})~\&memp\+\_\+ \#\# name,}
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{native_2lwip_2src_2core_2memp_8c_aecd94926b7c2a0e23ae195f4ae97581f}\label{native_2lwip_2src_2core_2memp_8c_aecd94926b7c2a0e23ae195f4ae97581f}} 
+\index{native/lwip/src/core/memp.\+c@{native/lwip/src/core/memp.\+c}!memp\+\_\+free@{memp\+\_\+free}}
+\index{memp\+\_\+free@{memp\+\_\+free}!native/lwip/src/core/memp.\+c@{native/lwip/src/core/memp.\+c}}
+\subsubsection{\texorpdfstring{memp\+\_\+free()}{memp\_free()}}
+{\footnotesize\ttfamily void memp\+\_\+free (\begin{DoxyParamCaption}\item[{\hyperlink{native_2lwip_2src_2include_2lwip_2memp_8h_a85a164b1f7764951cc685ea525114e57}{memp\+\_\+t}}]{type,  }\item[{void $\ast$}]{mem }\end{DoxyParamCaption})}
+
+Put an element back into its pool.
+
+
+\begin{DoxyParams}{Parameters}
+{\em type} & the pool where to put mem \\
+\hline
+{\em mem} & the memp element to free \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=310pt]{native_2lwip_2src_2core_2memp_8c_aecd94926b7c2a0e23ae195f4ae97581f_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{native_2lwip_2src_2core_2memp_8c_a62f8c3c907743e34eee3cdac7fa1eaa5}\label{native_2lwip_2src_2core_2memp_8c_a62f8c3c907743e34eee3cdac7fa1eaa5}} 
+\index{native/lwip/src/core/memp.\+c@{native/lwip/src/core/memp.\+c}!memp\+\_\+free\+\_\+pool@{memp\+\_\+free\+\_\+pool}}
+\index{memp\+\_\+free\+\_\+pool@{memp\+\_\+free\+\_\+pool}!native/lwip/src/core/memp.\+c@{native/lwip/src/core/memp.\+c}}
+\subsubsection{\texorpdfstring{memp\+\_\+free\+\_\+pool()}{memp\_free\_pool()}}
+{\footnotesize\ttfamily void memp\+\_\+free\+\_\+pool (\begin{DoxyParamCaption}\item[{const struct \hyperlink{structmemp__desc}{memp\+\_\+desc} $\ast$}]{desc,  }\item[{void $\ast$}]{mem }\end{DoxyParamCaption})}
+
+Put a custom pool element back into its pool.
+
+
+\begin{DoxyParams}{Parameters}
+{\em desc} & the pool where to put mem \\
+\hline
+{\em mem} & the memp element to free \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{native_2lwip_2src_2core_2memp_8c_a9693e5b1ac2c6b9c0e7870522d45efa2}\label{native_2lwip_2src_2core_2memp_8c_a9693e5b1ac2c6b9c0e7870522d45efa2}} 
+\index{native/lwip/src/core/memp.\+c@{native/lwip/src/core/memp.\+c}!memp\+\_\+init@{memp\+\_\+init}}
+\index{memp\+\_\+init@{memp\+\_\+init}!native/lwip/src/core/memp.\+c@{native/lwip/src/core/memp.\+c}}
+\subsubsection{\texorpdfstring{memp\+\_\+init()}{memp\_init()}}
+{\footnotesize\ttfamily void memp\+\_\+init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Initializes lw\+IP built-\/in pools. Related functions\+: memp\+\_\+malloc, memp\+\_\+free
+
+Carves out memp\+\_\+memory into linked lists for each pool-\/type. Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=322pt]{native_2lwip_2src_2core_2memp_8c_a9693e5b1ac2c6b9c0e7870522d45efa2_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{native_2lwip_2src_2core_2memp_8c_a6416303426d05526bed33f241fa6ecd7}\label{native_2lwip_2src_2core_2memp_8c_a6416303426d05526bed33f241fa6ecd7}} 
+\index{native/lwip/src/core/memp.\+c@{native/lwip/src/core/memp.\+c}!memp\+\_\+init\+\_\+pool@{memp\+\_\+init\+\_\+pool}}
+\index{memp\+\_\+init\+\_\+pool@{memp\+\_\+init\+\_\+pool}!native/lwip/src/core/memp.\+c@{native/lwip/src/core/memp.\+c}}
+\subsubsection{\texorpdfstring{memp\+\_\+init\+\_\+pool()}{memp\_init\_pool()}}
+{\footnotesize\ttfamily void memp\+\_\+init\+\_\+pool (\begin{DoxyParamCaption}\item[{const struct \hyperlink{structmemp__desc}{memp\+\_\+desc} $\ast$}]{desc }\end{DoxyParamCaption})}
+
+Initialize custom memory pool. Related functions\+: memp\+\_\+malloc\+\_\+pool, memp\+\_\+free\+\_\+pool
+
+
+\begin{DoxyParams}{Parameters}
+{\em desc} & pool to initialize \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{native_2lwip_2src_2core_2memp_8c_a2b00593d086313c267b54a976bf67aa5}\label{native_2lwip_2src_2core_2memp_8c_a2b00593d086313c267b54a976bf67aa5}} 
+\index{native/lwip/src/core/memp.\+c@{native/lwip/src/core/memp.\+c}!memp\+\_\+malloc@{memp\+\_\+malloc}}
+\index{memp\+\_\+malloc@{memp\+\_\+malloc}!native/lwip/src/core/memp.\+c@{native/lwip/src/core/memp.\+c}}
+\subsubsection{\texorpdfstring{memp\+\_\+malloc()}{memp\_malloc()}}
+{\footnotesize\ttfamily void$\ast$ memp\+\_\+malloc (\begin{DoxyParamCaption}\item[{\hyperlink{native_2lwip_2src_2include_2lwip_2memp_8h_a85a164b1f7764951cc685ea525114e57}{memp\+\_\+t}}]{type }\end{DoxyParamCaption})}
+
+Get an element from a specific pool.
+
+
+\begin{DoxyParams}{Parameters}
+{\em type} & the pool to get an element from\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a pointer to the allocated memory or a N\+U\+LL pointer on error 
+\end{DoxyReturn}
+\mbox{\Hypertarget{native_2lwip_2src_2core_2memp_8c_a348c83ee972f1edf7296a1cdf1d75f22}\label{native_2lwip_2src_2core_2memp_8c_a348c83ee972f1edf7296a1cdf1d75f22}} 
+\index{native/lwip/src/core/memp.\+c@{native/lwip/src/core/memp.\+c}!memp\+\_\+malloc\+\_\+pool@{memp\+\_\+malloc\+\_\+pool}}
+\index{memp\+\_\+malloc\+\_\+pool@{memp\+\_\+malloc\+\_\+pool}!native/lwip/src/core/memp.\+c@{native/lwip/src/core/memp.\+c}}
+\subsubsection{\texorpdfstring{memp\+\_\+malloc\+\_\+pool()}{memp\_malloc\_pool()}}
+{\footnotesize\ttfamily void$\ast$ memp\+\_\+malloc\+\_\+pool (\begin{DoxyParamCaption}\item[{const struct \hyperlink{structmemp__desc}{memp\+\_\+desc} $\ast$}]{desc }\end{DoxyParamCaption})}
+
+Get an element from a custom pool.
+
+
+\begin{DoxyParams}{Parameters}
+{\em desc} & the pool to get an element from\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a pointer to the allocated memory or a N\+U\+LL pointer on error 
+\end{DoxyReturn}
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{native_2lwip_2src_2core_2memp_8c_ad78a1f656a766f2c6341aa466762b883}\label{native_2lwip_2src_2core_2memp_8c_ad78a1f656a766f2c6341aa466762b883}} 
+\index{native/lwip/src/core/memp.\+c@{native/lwip/src/core/memp.\+c}!memp\+\_\+pools@{memp\+\_\+pools}}
+\index{memp\+\_\+pools@{memp\+\_\+pools}!native/lwip/src/core/memp.\+c@{native/lwip/src/core/memp.\+c}}
+\subsubsection{\texorpdfstring{memp\+\_\+pools}{memp\_pools}}
+{\footnotesize\ttfamily const struct \hyperlink{structmemp__desc}{memp\+\_\+desc}$\ast$ const memp\+\_\+pools\mbox{[}\hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2memp_8h_a85a164b1f7764951cc685ea525114e57a3387042084427642949f3223c7ddd321}{M\+E\+M\+P\+\_\+\+M\+AX}\mbox{]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+= \{
+\textcolor{preprocessor}{#define LWIP\_MEMPOOL(name,num,size,desc) }
+
+\}
+\end{DoxyCode}

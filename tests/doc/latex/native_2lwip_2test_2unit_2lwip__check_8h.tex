@@ -1,0 +1,124 @@
+\hypertarget{native_2lwip_2test_2unit_2lwip__check_8h}{}\section{/home/ayush/\+R\+I\+O\+T/tests/lwip/bin/pkg/native/lwip/test/unit/lwip\+\_\+check.h File Reference}
+\label{native_2lwip_2test_2unit_2lwip__check_8h}\index{/home/ayush/\+R\+I\+O\+T/tests/lwip/bin/pkg/native/lwip/test/unit/lwip\+\_\+check.\+h@{/home/ayush/\+R\+I\+O\+T/tests/lwip/bin/pkg/native/lwip/test/unit/lwip\+\_\+check.\+h}}
+{\ttfamily \#include $<$config.\+h$>$}\newline
+{\ttfamily \#include $<$check.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+Include dependency graph for lwip\+\_\+check.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=267pt]{native_2lwip_2test_2unit_2lwip__check_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{native_2lwip_2test_2unit_2lwip__check_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structtestfunc}{testfunc}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{native_2lwip_2test_2unit_2lwip__check_8h_a6cdd9328a3d8ccf35c2044a2537ed188}{F\+A\+I\+L\+\_\+\+R\+ET}()~do \{ fail(); return; \} while(0)
+\item 
+\#define \hyperlink{native_2lwip_2test_2unit_2lwip__check_8h_a8939fc832773dcf2c81b93d8bbf88603}{E\+X\+P\+E\+CT}(x)~fail\+\_\+unless(x)
+\item 
+\#define \hyperlink{native_2lwip_2test_2unit_2lwip__check_8h_acf563e698c9e212be6e0506cc178964e}{E\+X\+P\+E\+C\+T\+\_\+\+R\+ET}(x)~do \{ fail\+\_\+unless(x); if(!(x)) \{ return; \}\} while(0)
+\item 
+\#define \hyperlink{native_2lwip_2test_2unit_2lwip__check_8h_a61ba45af020516f53b9e9af7b066574e}{E\+X\+P\+E\+C\+T\+\_\+\+R\+E\+TX}(x,  y)~do \{ fail\+\_\+unless(x); if(!(x)) \{ return y; \}\} while(0)
+\item 
+\#define \hyperlink{native_2lwip_2test_2unit_2lwip__check_8h_a937ec9da8ce7532d592ef5216e4173cd}{E\+X\+P\+E\+C\+T\+\_\+\+R\+E\+T\+N\+U\+LL}(x)~\hyperlink{openmote-cc2538_2lwip_2test_2unit_2lwip__check_8h_a61ba45af020516f53b9e9af7b066574e}{E\+X\+P\+E\+C\+T\+\_\+\+R\+E\+TX}(x, \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2def_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL})
+\item 
+\#define \hyperlink{native_2lwip_2test_2unit_2lwip__check_8h_ace3c4951143e45f20117e149d82f5a0b}{T\+E\+S\+T\+F\+U\+NC}(x)~\{(x), \char`\"{}\char`\"{} \# x \char`\"{}\char`\"{} \}
+\item 
+\#define \hyperlink{native_2lwip_2test_2unit_2lwip__check_8h_a7bd4b6b9688f47b14fdc5b5ca6bd97fa}{tcase\+\_\+add\+\_\+named\+\_\+test}(tc,  tf)~\+\_\+tcase\+\_\+add\+\_\+test((tc),(tf).func,(tf).name,0, 0, 0, 1)
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef Suite $\ast$() \hyperlink{native_2lwip_2test_2unit_2lwip__check_8h_a97cc40c58ced9677a9ecfc759dd79aaf}{suite\+\_\+getter\+\_\+fn}(void)
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+Suite $\ast$ \hyperlink{native_2lwip_2test_2unit_2lwip__check_8h_a1087412a73ffe1f50078f13baf82d55c}{create\+\_\+suite} (const char $\ast$name, \hyperlink{structtestfunc}{testfunc} $\ast$tests, size\+\_\+t num\+\_\+tests, S\+Fun setup, S\+Fun teardown)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{native_2lwip_2test_2unit_2lwip__check_8h_a8939fc832773dcf2c81b93d8bbf88603}\label{native_2lwip_2test_2unit_2lwip__check_8h_a8939fc832773dcf2c81b93d8bbf88603}} 
+\index{native/lwip/test/unit/lwip\+\_\+check.\+h@{native/lwip/test/unit/lwip\+\_\+check.\+h}!E\+X\+P\+E\+CT@{E\+X\+P\+E\+CT}}
+\index{E\+X\+P\+E\+CT@{E\+X\+P\+E\+CT}!native/lwip/test/unit/lwip\+\_\+check.\+h@{native/lwip/test/unit/lwip\+\_\+check.\+h}}
+\subsubsection{\texorpdfstring{E\+X\+P\+E\+CT}{EXPECT}}
+{\footnotesize\ttfamily \#define E\+X\+P\+E\+CT(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~fail\+\_\+unless(x)}
+
+\mbox{\Hypertarget{native_2lwip_2test_2unit_2lwip__check_8h_acf563e698c9e212be6e0506cc178964e}\label{native_2lwip_2test_2unit_2lwip__check_8h_acf563e698c9e212be6e0506cc178964e}} 
+\index{native/lwip/test/unit/lwip\+\_\+check.\+h@{native/lwip/test/unit/lwip\+\_\+check.\+h}!E\+X\+P\+E\+C\+T\+\_\+\+R\+ET@{E\+X\+P\+E\+C\+T\+\_\+\+R\+ET}}
+\index{E\+X\+P\+E\+C\+T\+\_\+\+R\+ET@{E\+X\+P\+E\+C\+T\+\_\+\+R\+ET}!native/lwip/test/unit/lwip\+\_\+check.\+h@{native/lwip/test/unit/lwip\+\_\+check.\+h}}
+\subsubsection{\texorpdfstring{E\+X\+P\+E\+C\+T\+\_\+\+R\+ET}{EXPECT\_RET}}
+{\footnotesize\ttfamily \#define E\+X\+P\+E\+C\+T\+\_\+\+R\+ET(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~do \{ fail\+\_\+unless(x); if(!(x)) \{ return; \}\} while(0)}
+
+\mbox{\Hypertarget{native_2lwip_2test_2unit_2lwip__check_8h_a937ec9da8ce7532d592ef5216e4173cd}\label{native_2lwip_2test_2unit_2lwip__check_8h_a937ec9da8ce7532d592ef5216e4173cd}} 
+\index{native/lwip/test/unit/lwip\+\_\+check.\+h@{native/lwip/test/unit/lwip\+\_\+check.\+h}!E\+X\+P\+E\+C\+T\+\_\+\+R\+E\+T\+N\+U\+LL@{E\+X\+P\+E\+C\+T\+\_\+\+R\+E\+T\+N\+U\+LL}}
+\index{E\+X\+P\+E\+C\+T\+\_\+\+R\+E\+T\+N\+U\+LL@{E\+X\+P\+E\+C\+T\+\_\+\+R\+E\+T\+N\+U\+LL}!native/lwip/test/unit/lwip\+\_\+check.\+h@{native/lwip/test/unit/lwip\+\_\+check.\+h}}
+\subsubsection{\texorpdfstring{E\+X\+P\+E\+C\+T\+\_\+\+R\+E\+T\+N\+U\+LL}{EXPECT\_RETNULL}}
+{\footnotesize\ttfamily \#define E\+X\+P\+E\+C\+T\+\_\+\+R\+E\+T\+N\+U\+LL(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~\hyperlink{openmote-cc2538_2lwip_2test_2unit_2lwip__check_8h_a61ba45af020516f53b9e9af7b066574e}{E\+X\+P\+E\+C\+T\+\_\+\+R\+E\+TX}(x, \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2def_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL})}
+
+\mbox{\Hypertarget{native_2lwip_2test_2unit_2lwip__check_8h_a61ba45af020516f53b9e9af7b066574e}\label{native_2lwip_2test_2unit_2lwip__check_8h_a61ba45af020516f53b9e9af7b066574e}} 
+\index{native/lwip/test/unit/lwip\+\_\+check.\+h@{native/lwip/test/unit/lwip\+\_\+check.\+h}!E\+X\+P\+E\+C\+T\+\_\+\+R\+E\+TX@{E\+X\+P\+E\+C\+T\+\_\+\+R\+E\+TX}}
+\index{E\+X\+P\+E\+C\+T\+\_\+\+R\+E\+TX@{E\+X\+P\+E\+C\+T\+\_\+\+R\+E\+TX}!native/lwip/test/unit/lwip\+\_\+check.\+h@{native/lwip/test/unit/lwip\+\_\+check.\+h}}
+\subsubsection{\texorpdfstring{E\+X\+P\+E\+C\+T\+\_\+\+R\+E\+TX}{EXPECT\_RETX}}
+{\footnotesize\ttfamily \#define E\+X\+P\+E\+C\+T\+\_\+\+R\+E\+TX(\begin{DoxyParamCaption}\item[{}]{x,  }\item[{}]{y }\end{DoxyParamCaption})~do \{ fail\+\_\+unless(x); if(!(x)) \{ return y; \}\} while(0)}
+
+\mbox{\Hypertarget{native_2lwip_2test_2unit_2lwip__check_8h_a6cdd9328a3d8ccf35c2044a2537ed188}\label{native_2lwip_2test_2unit_2lwip__check_8h_a6cdd9328a3d8ccf35c2044a2537ed188}} 
+\index{native/lwip/test/unit/lwip\+\_\+check.\+h@{native/lwip/test/unit/lwip\+\_\+check.\+h}!F\+A\+I\+L\+\_\+\+R\+ET@{F\+A\+I\+L\+\_\+\+R\+ET}}
+\index{F\+A\+I\+L\+\_\+\+R\+ET@{F\+A\+I\+L\+\_\+\+R\+ET}!native/lwip/test/unit/lwip\+\_\+check.\+h@{native/lwip/test/unit/lwip\+\_\+check.\+h}}
+\subsubsection{\texorpdfstring{F\+A\+I\+L\+\_\+\+R\+ET}{FAIL\_RET}}
+{\footnotesize\ttfamily \#define F\+A\+I\+L\+\_\+\+R\+ET(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~do \{ fail(); return; \} while(0)}
+
+\mbox{\Hypertarget{native_2lwip_2test_2unit_2lwip__check_8h_a7bd4b6b9688f47b14fdc5b5ca6bd97fa}\label{native_2lwip_2test_2unit_2lwip__check_8h_a7bd4b6b9688f47b14fdc5b5ca6bd97fa}} 
+\index{native/lwip/test/unit/lwip\+\_\+check.\+h@{native/lwip/test/unit/lwip\+\_\+check.\+h}!tcase\+\_\+add\+\_\+named\+\_\+test@{tcase\+\_\+add\+\_\+named\+\_\+test}}
+\index{tcase\+\_\+add\+\_\+named\+\_\+test@{tcase\+\_\+add\+\_\+named\+\_\+test}!native/lwip/test/unit/lwip\+\_\+check.\+h@{native/lwip/test/unit/lwip\+\_\+check.\+h}}
+\subsubsection{\texorpdfstring{tcase\+\_\+add\+\_\+named\+\_\+test}{tcase\_add\_named\_test}}
+{\footnotesize\ttfamily \#define tcase\+\_\+add\+\_\+named\+\_\+test(\begin{DoxyParamCaption}\item[{}]{tc,  }\item[{}]{tf }\end{DoxyParamCaption})~\+\_\+tcase\+\_\+add\+\_\+test((tc),(tf).func,(tf).name,0, 0, 0, 1)}
+
+\mbox{\Hypertarget{native_2lwip_2test_2unit_2lwip__check_8h_ace3c4951143e45f20117e149d82f5a0b}\label{native_2lwip_2test_2unit_2lwip__check_8h_ace3c4951143e45f20117e149d82f5a0b}} 
+\index{native/lwip/test/unit/lwip\+\_\+check.\+h@{native/lwip/test/unit/lwip\+\_\+check.\+h}!T\+E\+S\+T\+F\+U\+NC@{T\+E\+S\+T\+F\+U\+NC}}
+\index{T\+E\+S\+T\+F\+U\+NC@{T\+E\+S\+T\+F\+U\+NC}!native/lwip/test/unit/lwip\+\_\+check.\+h@{native/lwip/test/unit/lwip\+\_\+check.\+h}}
+\subsubsection{\texorpdfstring{T\+E\+S\+T\+F\+U\+NC}{TESTFUNC}}
+{\footnotesize\ttfamily \#define T\+E\+S\+T\+F\+U\+NC(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~\{(x), \char`\"{}\char`\"{} \# x \char`\"{}\char`\"{} \}}
+
+
+
+\subsection{Typedef Documentation}
+\mbox{\Hypertarget{native_2lwip_2test_2unit_2lwip__check_8h_a97cc40c58ced9677a9ecfc759dd79aaf}\label{native_2lwip_2test_2unit_2lwip__check_8h_a97cc40c58ced9677a9ecfc759dd79aaf}} 
+\index{native/lwip/test/unit/lwip\+\_\+check.\+h@{native/lwip/test/unit/lwip\+\_\+check.\+h}!suite\+\_\+getter\+\_\+fn@{suite\+\_\+getter\+\_\+fn}}
+\index{suite\+\_\+getter\+\_\+fn@{suite\+\_\+getter\+\_\+fn}!native/lwip/test/unit/lwip\+\_\+check.\+h@{native/lwip/test/unit/lwip\+\_\+check.\+h}}
+\subsubsection{\texorpdfstring{suite\+\_\+getter\+\_\+fn}{suite\_getter\_fn}}
+{\footnotesize\ttfamily typedef Suite$\ast$() suite\+\_\+getter\+\_\+fn(void)}
+
+typedef for a function returning a test suite 
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{native_2lwip_2test_2unit_2lwip__check_8h_a1087412a73ffe1f50078f13baf82d55c}\label{native_2lwip_2test_2unit_2lwip__check_8h_a1087412a73ffe1f50078f13baf82d55c}} 
+\index{native/lwip/test/unit/lwip\+\_\+check.\+h@{native/lwip/test/unit/lwip\+\_\+check.\+h}!create\+\_\+suite@{create\+\_\+suite}}
+\index{create\+\_\+suite@{create\+\_\+suite}!native/lwip/test/unit/lwip\+\_\+check.\+h@{native/lwip/test/unit/lwip\+\_\+check.\+h}}
+\subsubsection{\texorpdfstring{create\+\_\+suite()}{create\_suite()}}
+{\footnotesize\ttfamily Suite$\ast$ create\+\_\+suite (\begin{DoxyParamCaption}\item[{const char $\ast$}]{name,  }\item[{\hyperlink{structtestfunc}{testfunc} $\ast$}]{tests,  }\item[{size\+\_\+t}]{num\+\_\+tests,  }\item[{S\+Fun}]{setup,  }\item[{S\+Fun}]{teardown }\end{DoxyParamCaption})}
+
+Create a test suite Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=263pt]{native_2lwip_2test_2unit_2lwip__check_8h_a1087412a73ffe1f50078f13baf82d55c_icgraph}
+\end{center}
+\end{figure}

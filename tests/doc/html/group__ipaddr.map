@@ -1,0 +1,5 @@
+<map id="IP address handling" name="IP address handling">
+<area shape="rect" id="node1" href="$group__infrastructure.html" title="Infrastructure" alt="" coords="5,31,104,57"/>
+<area shape="rect" id="node2" href="$group__ip6addr.html" title="IPv6 only" alt="" coords="337,5,415,32"/>
+<area shape="rect" id="node3" href="$group__ip4addr.html" title="IPv4 only" alt="" coords="337,56,415,83"/>
+</map>

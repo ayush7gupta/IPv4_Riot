@@ -1,0 +1,129 @@
+This is a manual test application for the S\+X127X radio driver.
+
+This test application uses the default pin configuration provided by the driver implementation and that matches the ST Nucleo 64 pins layout. It is best to use \href{https://developer.mbed.org/components/SX1272MB2xAS/}{\tt S\+X1272} or \href{https://developer.mbed.org/components/SX1276MB1xAS/}{\tt S\+X1276} mbed modules with nucleo boards or the all-\/in-\/one \href{http://www.st.com/en/evaluation-tools/p-nucleo-lrwan1.html}{\tt ST P-\/\+N\+U\+C\+L\+E\+O-\/\+L\+R\+W\+A\+N1 Lo\+Ra kit}.
+
+If you have other hardware (boards, Semtech based Lo\+Ra module), you can adapt the configuration to your needs by copying an adapted version of {\ttfamily drivers/sx127x/include/sx127x\+\_\+params.\+h} file to your application directory.
+
+By default the application builds the S\+X1276 version of the driver. If you want to use this application with a S\+X1272 module, set the variable {\ttfamily D\+R\+I\+V\+ER} in the application \mbox{[}Makefile\mbox{]}(Makefile)\+: 
+\begin{DoxyCode}
+DRIVER = sx1272
+\end{DoxyCode}
+ instead of 
+\begin{DoxyCode}
+DRIVER = sx1276
+\end{DoxyCode}
+ You can also pass {\ttfamily D\+R\+I\+V\+ER} when building the application\+: 
+\begin{DoxyCode}
+$ make BOARD=nucleo-l073 DRIVER=sx1272 -C tests/drivers\_sx127x flash term
+\end{DoxyCode}
+
+
+\subsection*{Usage}
+
+This test application provides low level shell commands to interact with the S\+X1272/\+S\+X1276 modules.
+
+Once the board is flashed and you are connected via serial to the shell, use the {\ttfamily help} command to display the available commands\+: 
+\begin{DoxyCode}
+> help
+help
+Command              Description
+---------------------------------------
+setup                Initialize LoRa modulation settings
+random               Get random number from sx127x
+channel              Get/Set channel frequency (in Hz)
+register             Get/Set value(s) of registers of sx127x
+send                 Send raw payload string
+listen               Start raw payload listener
+reboot               Reboot the node
+ps                   Prints information about running threads.
+\end{DoxyCode}
+
+
+Once the board is booted, use {\ttfamily setup} to configure the basic Lo\+Ra settings\+:
+\begin{DoxyItemize}
+\item Bandwidth\+: 125k\+Hz, 250k\+Hz or 500k\+Hz
+\item Spreading factor\+: between 7 and 12
+\item Code rate\+: between 5 and 8
+\end{DoxyItemize}
+
+Example\+: 
+\begin{DoxyCode}
+> setup 125 12 5
+setup: setting 125KHz bandwidth
+[Info] setup: configuration set with success
+\end{DoxyCode}
+
+
+All values are supported by both S\+X1272 and S\+X1276.
+
+The {\ttfamily random} command use the Semtech to generate a random integer value.
+
+Example\+: 
+\begin{DoxyCode}
+> random
+random: number from sx127x: 2339536315
+> random
+random: number from sx127x: 863363442
+\end{DoxyCode}
+
+
+The {\ttfamily channel} command allows to change/query the RF frequency channel. The default is 868\+M\+Hz for Europe, change to 915\+M\+Hz for America. The frequency is given/returned in Hz.
+
+Example\+: 
+\begin{DoxyCode}
+> channel set 868000000
+New channel set
+> channel get
+Channel: 868000000
+\end{DoxyCode}
+
+
+The {\ttfamily register} command allows to get/set the content of the module registers. Example\+: 
+\begin{DoxyCode}
+> register get all
+- listing all registers -
+Reg   0  1  2  3  4  5  6  7  8  9  A  B  C  D  E  F
+0x00 00 80 1A 0B 00 52 D9 00 00 0F 08 2B 00 4D 80 00
+0x10 00 FF 00 00 00 00 00 00 00 00 00 00 00 72 C4 0A
+0x20 00 08 01 FF 00 00 08 00 00 00 00 00 00 50 14 40
+0x30 00 03 05 67 1C 0A 00 0A 42 12 64 19 01 A1 00 00
+0x40 00 10 22 13 0E 5B DB 24 0E 81 3A 2E 00 03 00 00
+0x50 00 00 04 23 01 24 3F B0 09 05 84 0B D0 0B D0 32
+0x60 2B 14 00 00 10 00 00 00 0F E0 00 0C F6 10 1D 07
+0x70 00 5C 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+- done -
+\end{DoxyCode}
+
+
+Use the {\ttfamily send} and {\ttfamily receive} commands in order to exchange messages between several modules. You need first to ensure that all modules are configured the same\+: use {\ttfamily setup} and {\ttfamily channel} commands to configure them correctly.
+
+Assuming you have 2 modules, one listening and one sending messages, do the following\+:
+\begin{DoxyItemize}
+\item On listening module\+: 
+\begin{DoxyCode}
+> setup 125 12 5
+setup: setting 125KHz bandwidth
+[Info] setup: configuration set with success
+> channel set 868000000
+New channel set
+> listen
+Listen mode set
+\end{DoxyCode}
+
+\item On sending module\+: 
+\begin{DoxyCode}
+> setup 125 12 5
+setup: setting 125KHz bandwidth
+[Info] setup: configuration set with success
+> channel set 868000000
+New channel set
+> send This\(\backslash\) is\(\backslash\) RIOT!
+\end{DoxyCode}
+
+\end{DoxyItemize}
+
+On the listening module, the message is captured\+: 
+\begin{DoxyCode}
+\{Payload: "This is RIOT!" (13 bytes), RSSI: 103, SNR: 240\}
+\end{DoxyCode}
+ 

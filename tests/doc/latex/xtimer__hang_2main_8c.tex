@@ -1,0 +1,131 @@
+\hypertarget{xtimer__hang_2main_8c}{}\section{/home/ayush/\+R\+I\+O\+T/tests/xtimer\+\_\+hang/main.c File Reference}
+\label{xtimer__hang_2main_8c}\index{/home/ayush/\+R\+I\+O\+T/tests/xtimer\+\_\+hang/main.\+c@{/home/ayush/\+R\+I\+O\+T/tests/xtimer\+\_\+hang/main.\+c}}
+
+
+xtimer test application  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}xtimer.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}thread.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}log.\+h\char`\"{}}\newline
+Include dependency graph for main.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=322pt]{xtimer__hang_2main_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{xtimer__hang_2main_8c_a1c35dce1a6dc8d21f9f5855f6e0d6fca}{T\+E\+S\+T\+\_\+\+S\+E\+C\+O\+N\+DS}~(10\+L\+U)
+\item 
+\#define \hyperlink{xtimer__hang_2main_8c_a9adcfa1dcb92dd0d8757264ae41d1710}{T\+E\+S\+T\+\_\+\+T\+I\+ME}~(\hyperlink{xtimer__hang_2main_8c_a1c35dce1a6dc8d21f9f5855f6e0d6fca}{T\+E\+S\+T\+\_\+\+S\+E\+C\+O\+N\+DS} $\ast$ U\+S\+\_\+\+P\+E\+R\+\_\+\+S\+EC)
+\item 
+\#define \hyperlink{xtimer__hang_2main_8c_a867ff7532d21a50198a88b603e668c05}{T\+E\+S\+T\+\_\+\+I\+N\+T\+E\+R\+V\+AL}~(100\+L\+U)
+\item 
+\#define \hyperlink{xtimer__hang_2main_8c_af00d46d699bb24971c3e03f4711c8d0c}{T\+E\+S\+T\+\_\+\+T\+I\+M\+E\+R\+\_\+\+S\+T\+A\+C\+K\+S\+I\+ZE}~(T\+H\+R\+E\+A\+D\+\_\+\+S\+T\+A\+C\+K\+S\+I\+Z\+E\+\_\+\+D\+E\+F\+A\+U\+LT)
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void $\ast$ \hyperlink{xtimer__hang_2main_8c_a1d74944368aaedaeccba30d887d84e30}{timer\+\_\+func} (void $\ast$arg)
+\item 
+int \hyperlink{xtimer__hang_2main_8c_a840291bc02cba5474a4cb46a9b9566fe}{main} (void)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+char \hyperlink{xtimer__hang_2main_8c_a648bfa07d6776f5d7a2037af8c09791d}{stack\+\_\+timer1} \mbox{[}\hyperlink{xtimer__hang_2main_8c_af00d46d699bb24971c3e03f4711c8d0c}{T\+E\+S\+T\+\_\+\+T\+I\+M\+E\+R\+\_\+\+S\+T\+A\+C\+K\+S\+I\+ZE}\mbox{]}
+\item 
+char \hyperlink{xtimer__hang_2main_8c_a9f6ba44042c0600106ee6fe935c12823}{stack\+\_\+timer2} \mbox{[}\hyperlink{xtimer__hang_2main_8c_af00d46d699bb24971c3e03f4711c8d0c}{T\+E\+S\+T\+\_\+\+T\+I\+M\+E\+R\+\_\+\+S\+T\+A\+C\+K\+S\+I\+ZE}\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+xtimer test application 
+
+This test used to hang many boards.
+
+\begin{DoxyAuthor}{Author}
+Daniel Krebs \href{mailto:github@daniel-krebs.net}{\tt github@daniel-\/krebs.\+net} 
+
+Kaspar Schleiser \href{mailto:kaspar@schleiser.de}{\tt kaspar@schleiser.\+de} 
+
+Sebastian Meiling \href{mailto:s@mlng.net}{\tt s@mlng.\+net} 
+\end{DoxyAuthor}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{xtimer__hang_2main_8c_a867ff7532d21a50198a88b603e668c05}\label{xtimer__hang_2main_8c_a867ff7532d21a50198a88b603e668c05}} 
+\index{xtimer\+\_\+hang/main.\+c@{xtimer\+\_\+hang/main.\+c}!T\+E\+S\+T\+\_\+\+I\+N\+T\+E\+R\+V\+AL@{T\+E\+S\+T\+\_\+\+I\+N\+T\+E\+R\+V\+AL}}
+\index{T\+E\+S\+T\+\_\+\+I\+N\+T\+E\+R\+V\+AL@{T\+E\+S\+T\+\_\+\+I\+N\+T\+E\+R\+V\+AL}!xtimer\+\_\+hang/main.\+c@{xtimer\+\_\+hang/main.\+c}}
+\subsubsection{\texorpdfstring{T\+E\+S\+T\+\_\+\+I\+N\+T\+E\+R\+V\+AL}{TEST\_INTERVAL}}
+{\footnotesize\ttfamily \#define T\+E\+S\+T\+\_\+\+I\+N\+T\+E\+R\+V\+AL~(100\+L\+U)}
+
+\mbox{\Hypertarget{xtimer__hang_2main_8c_a1c35dce1a6dc8d21f9f5855f6e0d6fca}\label{xtimer__hang_2main_8c_a1c35dce1a6dc8d21f9f5855f6e0d6fca}} 
+\index{xtimer\+\_\+hang/main.\+c@{xtimer\+\_\+hang/main.\+c}!T\+E\+S\+T\+\_\+\+S\+E\+C\+O\+N\+DS@{T\+E\+S\+T\+\_\+\+S\+E\+C\+O\+N\+DS}}
+\index{T\+E\+S\+T\+\_\+\+S\+E\+C\+O\+N\+DS@{T\+E\+S\+T\+\_\+\+S\+E\+C\+O\+N\+DS}!xtimer\+\_\+hang/main.\+c@{xtimer\+\_\+hang/main.\+c}}
+\subsubsection{\texorpdfstring{T\+E\+S\+T\+\_\+\+S\+E\+C\+O\+N\+DS}{TEST\_SECONDS}}
+{\footnotesize\ttfamily \#define T\+E\+S\+T\+\_\+\+S\+E\+C\+O\+N\+DS~(10\+L\+U)}
+
+\mbox{\Hypertarget{xtimer__hang_2main_8c_a9adcfa1dcb92dd0d8757264ae41d1710}\label{xtimer__hang_2main_8c_a9adcfa1dcb92dd0d8757264ae41d1710}} 
+\index{xtimer\+\_\+hang/main.\+c@{xtimer\+\_\+hang/main.\+c}!T\+E\+S\+T\+\_\+\+T\+I\+ME@{T\+E\+S\+T\+\_\+\+T\+I\+ME}}
+\index{T\+E\+S\+T\+\_\+\+T\+I\+ME@{T\+E\+S\+T\+\_\+\+T\+I\+ME}!xtimer\+\_\+hang/main.\+c@{xtimer\+\_\+hang/main.\+c}}
+\subsubsection{\texorpdfstring{T\+E\+S\+T\+\_\+\+T\+I\+ME}{TEST\_TIME}}
+{\footnotesize\ttfamily \#define T\+E\+S\+T\+\_\+\+T\+I\+ME~(\hyperlink{xtimer__hang_2main_8c_a1c35dce1a6dc8d21f9f5855f6e0d6fca}{T\+E\+S\+T\+\_\+\+S\+E\+C\+O\+N\+DS} $\ast$ U\+S\+\_\+\+P\+E\+R\+\_\+\+S\+EC)}
+
+\mbox{\Hypertarget{xtimer__hang_2main_8c_af00d46d699bb24971c3e03f4711c8d0c}\label{xtimer__hang_2main_8c_af00d46d699bb24971c3e03f4711c8d0c}} 
+\index{xtimer\+\_\+hang/main.\+c@{xtimer\+\_\+hang/main.\+c}!T\+E\+S\+T\+\_\+\+T\+I\+M\+E\+R\+\_\+\+S\+T\+A\+C\+K\+S\+I\+ZE@{T\+E\+S\+T\+\_\+\+T\+I\+M\+E\+R\+\_\+\+S\+T\+A\+C\+K\+S\+I\+ZE}}
+\index{T\+E\+S\+T\+\_\+\+T\+I\+M\+E\+R\+\_\+\+S\+T\+A\+C\+K\+S\+I\+ZE@{T\+E\+S\+T\+\_\+\+T\+I\+M\+E\+R\+\_\+\+S\+T\+A\+C\+K\+S\+I\+ZE}!xtimer\+\_\+hang/main.\+c@{xtimer\+\_\+hang/main.\+c}}
+\subsubsection{\texorpdfstring{T\+E\+S\+T\+\_\+\+T\+I\+M\+E\+R\+\_\+\+S\+T\+A\+C\+K\+S\+I\+ZE}{TEST\_TIMER\_STACKSIZE}}
+{\footnotesize\ttfamily \#define T\+E\+S\+T\+\_\+\+T\+I\+M\+E\+R\+\_\+\+S\+T\+A\+C\+K\+S\+I\+ZE~(T\+H\+R\+E\+A\+D\+\_\+\+S\+T\+A\+C\+K\+S\+I\+Z\+E\+\_\+\+D\+E\+F\+A\+U\+LT)}
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{xtimer__hang_2main_8c_a840291bc02cba5474a4cb46a9b9566fe}\label{xtimer__hang_2main_8c_a840291bc02cba5474a4cb46a9b9566fe}} 
+\index{xtimer\+\_\+hang/main.\+c@{xtimer\+\_\+hang/main.\+c}!main@{main}}
+\index{main@{main}!xtimer\+\_\+hang/main.\+c@{xtimer\+\_\+hang/main.\+c}}
+\subsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=216pt]{xtimer__hang_2main_8c_a840291bc02cba5474a4cb46a9b9566fe_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{xtimer__hang_2main_8c_a1d74944368aaedaeccba30d887d84e30}\label{xtimer__hang_2main_8c_a1d74944368aaedaeccba30d887d84e30}} 
+\index{xtimer\+\_\+hang/main.\+c@{xtimer\+\_\+hang/main.\+c}!timer\+\_\+func@{timer\+\_\+func}}
+\index{timer\+\_\+func@{timer\+\_\+func}!xtimer\+\_\+hang/main.\+c@{xtimer\+\_\+hang/main.\+c}}
+\subsubsection{\texorpdfstring{timer\+\_\+func()}{timer\_func()}}
+{\footnotesize\ttfamily void$\ast$ timer\+\_\+func (\begin{DoxyParamCaption}\item[{void $\ast$}]{arg }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=216pt]{xtimer__hang_2main_8c_a1d74944368aaedaeccba30d887d84e30_icgraph}
+\end{center}
+\end{figure}
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{xtimer__hang_2main_8c_a648bfa07d6776f5d7a2037af8c09791d}\label{xtimer__hang_2main_8c_a648bfa07d6776f5d7a2037af8c09791d}} 
+\index{xtimer\+\_\+hang/main.\+c@{xtimer\+\_\+hang/main.\+c}!stack\+\_\+timer1@{stack\+\_\+timer1}}
+\index{stack\+\_\+timer1@{stack\+\_\+timer1}!xtimer\+\_\+hang/main.\+c@{xtimer\+\_\+hang/main.\+c}}
+\subsubsection{\texorpdfstring{stack\+\_\+timer1}{stack\_timer1}}
+{\footnotesize\ttfamily char stack\+\_\+timer1\mbox{[}\hyperlink{xtimer__hang_2main_8c_af00d46d699bb24971c3e03f4711c8d0c}{T\+E\+S\+T\+\_\+\+T\+I\+M\+E\+R\+\_\+\+S\+T\+A\+C\+K\+S\+I\+ZE}\mbox{]}}
+
+\mbox{\Hypertarget{xtimer__hang_2main_8c_a9f6ba44042c0600106ee6fe935c12823}\label{xtimer__hang_2main_8c_a9f6ba44042c0600106ee6fe935c12823}} 
+\index{xtimer\+\_\+hang/main.\+c@{xtimer\+\_\+hang/main.\+c}!stack\+\_\+timer2@{stack\+\_\+timer2}}
+\index{stack\+\_\+timer2@{stack\+\_\+timer2}!xtimer\+\_\+hang/main.\+c@{xtimer\+\_\+hang/main.\+c}}
+\subsubsection{\texorpdfstring{stack\+\_\+timer2}{stack\_timer2}}
+{\footnotesize\ttfamily char stack\+\_\+timer2\mbox{[}\hyperlink{xtimer__hang_2main_8c_af00d46d699bb24971c3e03f4711c8d0c}{T\+E\+S\+T\+\_\+\+T\+I\+M\+E\+R\+\_\+\+S\+T\+A\+C\+K\+S\+I\+ZE}\mbox{]}}
+

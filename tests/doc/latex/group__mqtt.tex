@@ -1,0 +1,464 @@
+\hypertarget{group__mqtt}{}\section{M\+Q\+TT client}
+\label{group__mqtt}\index{M\+Q\+T\+T client@{M\+Q\+T\+T client}}
+Collaboration diagram for M\+Q\+TT client\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=343pt]{group__mqtt}
+\end{center}
+\end{figure}
+\subsection*{Modules}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group__mqtt__opts}{Options}
+\end{DoxyCompactItemize}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structmqtt__connect__client__info__t}{mqtt\+\_\+connect\+\_\+client\+\_\+info\+\_\+t}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group__mqtt_gaa8632baff6bbb5004385998918f1e6bd}{M\+Q\+T\+T\+\_\+\+P\+O\+RT}~1883
+\item 
+\#define \hyperlink{group__mqtt_ga83d6a6d811b201a74d793bc1b5d4e029}{mqtt\+\_\+subscribe}(client,  topic,  qos,  \hyperlink{periph__rtt_2main_8c_afd4145001d494db2ea612e1239724148}{cb},  arg)~\hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2apps_2mqtt_8h_afdb39d4a9758f98c02451aaa9a9b3103}{mqtt\+\_\+sub\+\_\+unsub}(client, topic, qos, \hyperlink{periph__rtt_2main_8c_afd4145001d494db2ea612e1239724148}{cb}, arg, 1)
+\item 
+\#define \hyperlink{group__mqtt_ga0f133ef09cbe56c46ebe2cc21afccf3f}{mqtt\+\_\+unsubscribe}(client,  topic,  \hyperlink{periph__rtt_2main_8c_afd4145001d494db2ea612e1239724148}{cb},  arg)~\hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2apps_2mqtt_8h_afdb39d4a9758f98c02451aaa9a9b3103}{mqtt\+\_\+sub\+\_\+unsub}(client, topic, 0, \hyperlink{periph__rtt_2main_8c_afd4145001d494db2ea612e1239724148}{cb}, arg, 0)
+\item 
+\#define \hyperlink{group__mqtt_gaa8632baff6bbb5004385998918f1e6bd}{M\+Q\+T\+T\+\_\+\+P\+O\+RT}~1883
+\item 
+\#define \hyperlink{group__mqtt_ga83d6a6d811b201a74d793bc1b5d4e029}{mqtt\+\_\+subscribe}(client,  topic,  qos,  \hyperlink{periph__rtt_2main_8c_afd4145001d494db2ea612e1239724148}{cb},  arg)~\hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2apps_2mqtt_8h_afdb39d4a9758f98c02451aaa9a9b3103}{mqtt\+\_\+sub\+\_\+unsub}(client, topic, qos, \hyperlink{periph__rtt_2main_8c_afd4145001d494db2ea612e1239724148}{cb}, arg, 1)
+\item 
+\#define \hyperlink{group__mqtt_ga0f133ef09cbe56c46ebe2cc21afccf3f}{mqtt\+\_\+unsubscribe}(client,  topic,  \hyperlink{periph__rtt_2main_8c_afd4145001d494db2ea612e1239724148}{cb},  arg)~\hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2apps_2mqtt_8h_afdb39d4a9758f98c02451aaa9a9b3103}{mqtt\+\_\+sub\+\_\+unsub}(client, topic, 0, \hyperlink{periph__rtt_2main_8c_afd4145001d494db2ea612e1239724148}{cb}, arg, 0)
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef void($\ast$ \hyperlink{group__mqtt_ga8558743bdb7d599a93844fbc56c9029f}{mqtt\+\_\+connection\+\_\+cb\+\_\+t}) (\hyperlink{structmqtt__client__t}{mqtt\+\_\+client\+\_\+t} $\ast$client, void $\ast$arg, \hyperlink{group__mqtt_ga8cf0f360ab20343af37e1d124395a77d}{mqtt\+\_\+connection\+\_\+status\+\_\+t} status)
+\item 
+typedef void($\ast$ \hyperlink{group__mqtt_gafec7e75fe6a746eef9ca411463446c81}{mqtt\+\_\+incoming\+\_\+data\+\_\+cb\+\_\+t}) (void $\ast$arg, const \hyperlink{group__compiler__abstraction_ga4caecabca98b43919dd11be1c0d4cd8e}{u8\+\_\+t} $\ast$data, \hyperlink{group__compiler__abstraction_ga77570ac4fcab86864fa1916e55676da2}{u16\+\_\+t} len, \hyperlink{group__compiler__abstraction_ga4caecabca98b43919dd11be1c0d4cd8e}{u8\+\_\+t} flags)
+\item 
+typedef void($\ast$ \hyperlink{group__mqtt_ga7116bb85255394cec4b1d9fa38842c29}{mqtt\+\_\+incoming\+\_\+publish\+\_\+cb\+\_\+t}) (void $\ast$arg, const char $\ast$topic, \hyperlink{group__compiler__abstraction_ga4c14294869aceba3ef9d4c0c302d0f33}{u32\+\_\+t} tot\+\_\+len)
+\item 
+typedef void($\ast$ \hyperlink{group__mqtt_gacad2bbe2cee76eaa120cc63e2f6094fd}{mqtt\+\_\+request\+\_\+cb\+\_\+t}) (void $\ast$arg, \hyperlink{group__infrastructure__errors_gaf02d9da80fd66b4f986d2c53d7231ddb}{err\+\_\+t} err)
+\item 
+typedef void($\ast$ \hyperlink{group__mqtt_ga8558743bdb7d599a93844fbc56c9029f}{mqtt\+\_\+connection\+\_\+cb\+\_\+t}) (\hyperlink{structmqtt__client__t}{mqtt\+\_\+client\+\_\+t} $\ast$client, void $\ast$arg, \hyperlink{group__mqtt_ga8cf0f360ab20343af37e1d124395a77d}{mqtt\+\_\+connection\+\_\+status\+\_\+t} status)
+\item 
+typedef void($\ast$ \hyperlink{group__mqtt_gafec7e75fe6a746eef9ca411463446c81}{mqtt\+\_\+incoming\+\_\+data\+\_\+cb\+\_\+t}) (void $\ast$arg, const \hyperlink{group__compiler__abstraction_ga4caecabca98b43919dd11be1c0d4cd8e}{u8\+\_\+t} $\ast$data, \hyperlink{group__compiler__abstraction_ga77570ac4fcab86864fa1916e55676da2}{u16\+\_\+t} len, \hyperlink{group__compiler__abstraction_ga4caecabca98b43919dd11be1c0d4cd8e}{u8\+\_\+t} flags)
+\item 
+typedef void($\ast$ \hyperlink{group__mqtt_ga7116bb85255394cec4b1d9fa38842c29}{mqtt\+\_\+incoming\+\_\+publish\+\_\+cb\+\_\+t}) (void $\ast$arg, const char $\ast$topic, \hyperlink{group__compiler__abstraction_ga4c14294869aceba3ef9d4c0c302d0f33}{u32\+\_\+t} tot\+\_\+len)
+\item 
+typedef void($\ast$ \hyperlink{group__mqtt_gacad2bbe2cee76eaa120cc63e2f6094fd}{mqtt\+\_\+request\+\_\+cb\+\_\+t}) (void $\ast$arg, \hyperlink{group__infrastructure__errors_gaf02d9da80fd66b4f986d2c53d7231ddb}{err\+\_\+t} err)
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{group__mqtt_ga8cf0f360ab20343af37e1d124395a77d}{mqtt\+\_\+connection\+\_\+status\+\_\+t} \{ \newline
+\hyperlink{group__mqtt_gga8cf0f360ab20343af37e1d124395a77da074dc1d289b8e8d4aad91f6a2cb93dc1}{M\+Q\+T\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+A\+C\+C\+E\+P\+T\+ED} = 0, 
+\hyperlink{group__mqtt_gga8cf0f360ab20343af37e1d124395a77da41f8aa97142be337cb639f94d9145190}{M\+Q\+T\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+R\+E\+F\+U\+S\+E\+D\+\_\+\+P\+R\+O\+T\+O\+C\+O\+L\+\_\+\+V\+E\+R\+S\+I\+ON} = 1, 
+\hyperlink{group__mqtt_gga8cf0f360ab20343af37e1d124395a77da28ffe49b0175adaa2b9a27cb4873224a}{M\+Q\+T\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+R\+E\+F\+U\+S\+E\+D\+\_\+\+I\+D\+E\+N\+T\+I\+F\+I\+ER} = 2, 
+\hyperlink{group__mqtt_gga8cf0f360ab20343af37e1d124395a77dade28ec1c2ce3d874e91251d683c92b2a}{M\+Q\+T\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+R\+E\+F\+U\+S\+E\+D\+\_\+\+S\+E\+R\+V\+ER} = 3, 
+\newline
+\hyperlink{group__mqtt_gga8cf0f360ab20343af37e1d124395a77da290cf9037054c42022cc864cfade896a}{M\+Q\+T\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+R\+E\+F\+U\+S\+E\+D\+\_\+\+U\+S\+E\+R\+N\+A\+M\+E\+\_\+\+P\+A\+SS} = 4, 
+\hyperlink{group__mqtt_gga8cf0f360ab20343af37e1d124395a77dafc4888158dd6ee84269a5f0bfdc12b17}{M\+Q\+T\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+R\+E\+F\+U\+S\+E\+D\+\_\+\+N\+O\+T\+\_\+\+A\+U\+T\+H\+O\+R\+I\+Z\+E\+D\+\_\+} = 5, 
+\hyperlink{group__mqtt_gga8cf0f360ab20343af37e1d124395a77da321f5ce31b173f235de1a517fcfd00dd}{M\+Q\+T\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+D\+I\+S\+C\+O\+N\+N\+E\+C\+T\+ED} = 256, 
+\hyperlink{group__mqtt_gga8cf0f360ab20343af37e1d124395a77da57153f2ab4331c6f76a9ee74e1bcfc62}{M\+Q\+T\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+T\+I\+M\+E\+O\+UT} = 257, 
+\newline
+\hyperlink{group__mqtt_gga8cf0f360ab20343af37e1d124395a77da074dc1d289b8e8d4aad91f6a2cb93dc1}{M\+Q\+T\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+A\+C\+C\+E\+P\+T\+ED} = 0, 
+\hyperlink{group__mqtt_gga8cf0f360ab20343af37e1d124395a77da41f8aa97142be337cb639f94d9145190}{M\+Q\+T\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+R\+E\+F\+U\+S\+E\+D\+\_\+\+P\+R\+O\+T\+O\+C\+O\+L\+\_\+\+V\+E\+R\+S\+I\+ON} = 1, 
+\hyperlink{group__mqtt_gga8cf0f360ab20343af37e1d124395a77da28ffe49b0175adaa2b9a27cb4873224a}{M\+Q\+T\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+R\+E\+F\+U\+S\+E\+D\+\_\+\+I\+D\+E\+N\+T\+I\+F\+I\+ER} = 2, 
+\hyperlink{group__mqtt_gga8cf0f360ab20343af37e1d124395a77dade28ec1c2ce3d874e91251d683c92b2a}{M\+Q\+T\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+R\+E\+F\+U\+S\+E\+D\+\_\+\+S\+E\+R\+V\+ER} = 3, 
+\newline
+\hyperlink{group__mqtt_gga8cf0f360ab20343af37e1d124395a77da290cf9037054c42022cc864cfade896a}{M\+Q\+T\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+R\+E\+F\+U\+S\+E\+D\+\_\+\+U\+S\+E\+R\+N\+A\+M\+E\+\_\+\+P\+A\+SS} = 4, 
+\hyperlink{group__mqtt_gga8cf0f360ab20343af37e1d124395a77dafc4888158dd6ee84269a5f0bfdc12b17}{M\+Q\+T\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+R\+E\+F\+U\+S\+E\+D\+\_\+\+N\+O\+T\+\_\+\+A\+U\+T\+H\+O\+R\+I\+Z\+E\+D\+\_\+} = 5, 
+\hyperlink{group__mqtt_gga8cf0f360ab20343af37e1d124395a77da321f5ce31b173f235de1a517fcfd00dd}{M\+Q\+T\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+D\+I\+S\+C\+O\+N\+N\+E\+C\+T\+ED} = 256, 
+\hyperlink{group__mqtt_gga8cf0f360ab20343af37e1d124395a77da57153f2ab4331c6f76a9ee74e1bcfc62}{M\+Q\+T\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+T\+I\+M\+E\+O\+UT} = 257
+ \}
+\item 
+enum \{ \hyperlink{group__mqtt_gga06fc87d81c62e9abb8790b6e5713c55ba79cd00d0a5a8df13207e0c49447df87f}{M\+Q\+T\+T\+\_\+\+D\+A\+T\+A\+\_\+\+F\+L\+A\+G\+\_\+\+L\+A\+ST} = 1
+ \}
+\item 
+enum \hyperlink{group__mqtt_ga8cf0f360ab20343af37e1d124395a77d}{mqtt\+\_\+connection\+\_\+status\+\_\+t} \{ \newline
+\hyperlink{group__mqtt_gga8cf0f360ab20343af37e1d124395a77da074dc1d289b8e8d4aad91f6a2cb93dc1}{M\+Q\+T\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+A\+C\+C\+E\+P\+T\+ED} = 0, 
+\hyperlink{group__mqtt_gga8cf0f360ab20343af37e1d124395a77da41f8aa97142be337cb639f94d9145190}{M\+Q\+T\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+R\+E\+F\+U\+S\+E\+D\+\_\+\+P\+R\+O\+T\+O\+C\+O\+L\+\_\+\+V\+E\+R\+S\+I\+ON} = 1, 
+\hyperlink{group__mqtt_gga8cf0f360ab20343af37e1d124395a77da28ffe49b0175adaa2b9a27cb4873224a}{M\+Q\+T\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+R\+E\+F\+U\+S\+E\+D\+\_\+\+I\+D\+E\+N\+T\+I\+F\+I\+ER} = 2, 
+\hyperlink{group__mqtt_gga8cf0f360ab20343af37e1d124395a77dade28ec1c2ce3d874e91251d683c92b2a}{M\+Q\+T\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+R\+E\+F\+U\+S\+E\+D\+\_\+\+S\+E\+R\+V\+ER} = 3, 
+\newline
+\hyperlink{group__mqtt_gga8cf0f360ab20343af37e1d124395a77da290cf9037054c42022cc864cfade896a}{M\+Q\+T\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+R\+E\+F\+U\+S\+E\+D\+\_\+\+U\+S\+E\+R\+N\+A\+M\+E\+\_\+\+P\+A\+SS} = 4, 
+\hyperlink{group__mqtt_gga8cf0f360ab20343af37e1d124395a77dafc4888158dd6ee84269a5f0bfdc12b17}{M\+Q\+T\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+R\+E\+F\+U\+S\+E\+D\+\_\+\+N\+O\+T\+\_\+\+A\+U\+T\+H\+O\+R\+I\+Z\+E\+D\+\_\+} = 5, 
+\hyperlink{group__mqtt_gga8cf0f360ab20343af37e1d124395a77da321f5ce31b173f235de1a517fcfd00dd}{M\+Q\+T\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+D\+I\+S\+C\+O\+N\+N\+E\+C\+T\+ED} = 256, 
+\hyperlink{group__mqtt_gga8cf0f360ab20343af37e1d124395a77da57153f2ab4331c6f76a9ee74e1bcfc62}{M\+Q\+T\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+T\+I\+M\+E\+O\+UT} = 257, 
+\newline
+\hyperlink{group__mqtt_gga8cf0f360ab20343af37e1d124395a77da074dc1d289b8e8d4aad91f6a2cb93dc1}{M\+Q\+T\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+A\+C\+C\+E\+P\+T\+ED} = 0, 
+\hyperlink{group__mqtt_gga8cf0f360ab20343af37e1d124395a77da41f8aa97142be337cb639f94d9145190}{M\+Q\+T\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+R\+E\+F\+U\+S\+E\+D\+\_\+\+P\+R\+O\+T\+O\+C\+O\+L\+\_\+\+V\+E\+R\+S\+I\+ON} = 1, 
+\hyperlink{group__mqtt_gga8cf0f360ab20343af37e1d124395a77da28ffe49b0175adaa2b9a27cb4873224a}{M\+Q\+T\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+R\+E\+F\+U\+S\+E\+D\+\_\+\+I\+D\+E\+N\+T\+I\+F\+I\+ER} = 2, 
+\hyperlink{group__mqtt_gga8cf0f360ab20343af37e1d124395a77dade28ec1c2ce3d874e91251d683c92b2a}{M\+Q\+T\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+R\+E\+F\+U\+S\+E\+D\+\_\+\+S\+E\+R\+V\+ER} = 3, 
+\newline
+\hyperlink{group__mqtt_gga8cf0f360ab20343af37e1d124395a77da290cf9037054c42022cc864cfade896a}{M\+Q\+T\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+R\+E\+F\+U\+S\+E\+D\+\_\+\+U\+S\+E\+R\+N\+A\+M\+E\+\_\+\+P\+A\+SS} = 4, 
+\hyperlink{group__mqtt_gga8cf0f360ab20343af37e1d124395a77dafc4888158dd6ee84269a5f0bfdc12b17}{M\+Q\+T\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+R\+E\+F\+U\+S\+E\+D\+\_\+\+N\+O\+T\+\_\+\+A\+U\+T\+H\+O\+R\+I\+Z\+E\+D\+\_\+} = 5, 
+\hyperlink{group__mqtt_gga8cf0f360ab20343af37e1d124395a77da321f5ce31b173f235de1a517fcfd00dd}{M\+Q\+T\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+D\+I\+S\+C\+O\+N\+N\+E\+C\+T\+ED} = 256, 
+\hyperlink{group__mqtt_gga8cf0f360ab20343af37e1d124395a77da57153f2ab4331c6f76a9ee74e1bcfc62}{M\+Q\+T\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+T\+I\+M\+E\+O\+UT} = 257
+ \}
+\item 
+enum \{ \hyperlink{group__mqtt_gga0411cd49bb5b71852cecd93bcbf0ca2da79cd00d0a5a8df13207e0c49447df87f}{M\+Q\+T\+T\+\_\+\+D\+A\+T\+A\+\_\+\+F\+L\+A\+G\+\_\+\+L\+A\+ST} = 1
+ \}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+\begin{DoxyVerbInclude}
+\end{DoxyVerbInclude}
+ 
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{group__mqtt_gaa8632baff6bbb5004385998918f1e6bd}\label{group__mqtt_gaa8632baff6bbb5004385998918f1e6bd}} 
+\index{M\+Q\+T\+T client@{M\+Q\+T\+T client}!M\+Q\+T\+T\+\_\+\+P\+O\+RT@{M\+Q\+T\+T\+\_\+\+P\+O\+RT}}
+\index{M\+Q\+T\+T\+\_\+\+P\+O\+RT@{M\+Q\+T\+T\+\_\+\+P\+O\+RT}!M\+Q\+T\+T client@{M\+Q\+T\+T client}}
+\subsubsection{\texorpdfstring{M\+Q\+T\+T\+\_\+\+P\+O\+RT}{MQTT\_PORT}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \#define M\+Q\+T\+T\+\_\+\+P\+O\+RT~1883}
+
+Default M\+Q\+TT port \mbox{\Hypertarget{group__mqtt_gaa8632baff6bbb5004385998918f1e6bd}\label{group__mqtt_gaa8632baff6bbb5004385998918f1e6bd}} 
+\index{M\+Q\+T\+T client@{M\+Q\+T\+T client}!M\+Q\+T\+T\+\_\+\+P\+O\+RT@{M\+Q\+T\+T\+\_\+\+P\+O\+RT}}
+\index{M\+Q\+T\+T\+\_\+\+P\+O\+RT@{M\+Q\+T\+T\+\_\+\+P\+O\+RT}!M\+Q\+T\+T client@{M\+Q\+T\+T client}}
+\subsubsection{\texorpdfstring{M\+Q\+T\+T\+\_\+\+P\+O\+RT}{MQTT\_PORT}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \#define M\+Q\+T\+T\+\_\+\+P\+O\+RT~1883}
+
+Default M\+Q\+TT port \mbox{\Hypertarget{group__mqtt_ga83d6a6d811b201a74d793bc1b5d4e029}\label{group__mqtt_ga83d6a6d811b201a74d793bc1b5d4e029}} 
+\index{M\+Q\+T\+T client@{M\+Q\+T\+T client}!mqtt\+\_\+subscribe@{mqtt\+\_\+subscribe}}
+\index{mqtt\+\_\+subscribe@{mqtt\+\_\+subscribe}!M\+Q\+T\+T client@{M\+Q\+T\+T client}}
+\subsubsection{\texorpdfstring{mqtt\+\_\+subscribe}{mqtt\_subscribe}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \#define mqtt\+\_\+subscribe(\begin{DoxyParamCaption}\item[{}]{client,  }\item[{}]{topic,  }\item[{}]{qos,  }\item[{}]{\hyperlink{periph__rtt_2main_8c_afd4145001d494db2ea612e1239724148}{cb},  }\item[{}]{arg }\end{DoxyParamCaption})~\hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2apps_2mqtt_8h_afdb39d4a9758f98c02451aaa9a9b3103}{mqtt\+\_\+sub\+\_\+unsub}(client, topic, qos, \hyperlink{periph__rtt_2main_8c_afd4145001d494db2ea612e1239724148}{cb}, arg, 1)}
+
+Subscribe to topic \mbox{\Hypertarget{group__mqtt_ga83d6a6d811b201a74d793bc1b5d4e029}\label{group__mqtt_ga83d6a6d811b201a74d793bc1b5d4e029}} 
+\index{M\+Q\+T\+T client@{M\+Q\+T\+T client}!mqtt\+\_\+subscribe@{mqtt\+\_\+subscribe}}
+\index{mqtt\+\_\+subscribe@{mqtt\+\_\+subscribe}!M\+Q\+T\+T client@{M\+Q\+T\+T client}}
+\subsubsection{\texorpdfstring{mqtt\+\_\+subscribe}{mqtt\_subscribe}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \#define mqtt\+\_\+subscribe(\begin{DoxyParamCaption}\item[{}]{client,  }\item[{}]{topic,  }\item[{}]{qos,  }\item[{}]{\hyperlink{periph__rtt_2main_8c_afd4145001d494db2ea612e1239724148}{cb},  }\item[{}]{arg }\end{DoxyParamCaption})~\hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2apps_2mqtt_8h_afdb39d4a9758f98c02451aaa9a9b3103}{mqtt\+\_\+sub\+\_\+unsub}(client, topic, qos, \hyperlink{periph__rtt_2main_8c_afd4145001d494db2ea612e1239724148}{cb}, arg, 1)}
+
+Subscribe to topic \mbox{\Hypertarget{group__mqtt_ga0f133ef09cbe56c46ebe2cc21afccf3f}\label{group__mqtt_ga0f133ef09cbe56c46ebe2cc21afccf3f}} 
+\index{M\+Q\+T\+T client@{M\+Q\+T\+T client}!mqtt\+\_\+unsubscribe@{mqtt\+\_\+unsubscribe}}
+\index{mqtt\+\_\+unsubscribe@{mqtt\+\_\+unsubscribe}!M\+Q\+T\+T client@{M\+Q\+T\+T client}}
+\subsubsection{\texorpdfstring{mqtt\+\_\+unsubscribe}{mqtt\_unsubscribe}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \#define mqtt\+\_\+unsubscribe(\begin{DoxyParamCaption}\item[{}]{client,  }\item[{}]{topic,  }\item[{}]{\hyperlink{periph__rtt_2main_8c_afd4145001d494db2ea612e1239724148}{cb},  }\item[{}]{arg }\end{DoxyParamCaption})~\hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2apps_2mqtt_8h_afdb39d4a9758f98c02451aaa9a9b3103}{mqtt\+\_\+sub\+\_\+unsub}(client, topic, 0, \hyperlink{periph__rtt_2main_8c_afd4145001d494db2ea612e1239724148}{cb}, arg, 0)}
+
+Unsubscribe to topic \mbox{\Hypertarget{group__mqtt_ga0f133ef09cbe56c46ebe2cc21afccf3f}\label{group__mqtt_ga0f133ef09cbe56c46ebe2cc21afccf3f}} 
+\index{M\+Q\+T\+T client@{M\+Q\+T\+T client}!mqtt\+\_\+unsubscribe@{mqtt\+\_\+unsubscribe}}
+\index{mqtt\+\_\+unsubscribe@{mqtt\+\_\+unsubscribe}!M\+Q\+T\+T client@{M\+Q\+T\+T client}}
+\subsubsection{\texorpdfstring{mqtt\+\_\+unsubscribe}{mqtt\_unsubscribe}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \#define mqtt\+\_\+unsubscribe(\begin{DoxyParamCaption}\item[{}]{client,  }\item[{}]{topic,  }\item[{}]{\hyperlink{periph__rtt_2main_8c_afd4145001d494db2ea612e1239724148}{cb},  }\item[{}]{arg }\end{DoxyParamCaption})~\hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2apps_2mqtt_8h_afdb39d4a9758f98c02451aaa9a9b3103}{mqtt\+\_\+sub\+\_\+unsub}(client, topic, 0, \hyperlink{periph__rtt_2main_8c_afd4145001d494db2ea612e1239724148}{cb}, arg, 0)}
+
+Unsubscribe to topic 
+
+\subsection{Typedef Documentation}
+\mbox{\Hypertarget{group__mqtt_ga8558743bdb7d599a93844fbc56c9029f}\label{group__mqtt_ga8558743bdb7d599a93844fbc56c9029f}} 
+\index{M\+Q\+T\+T client@{M\+Q\+T\+T client}!mqtt\+\_\+connection\+\_\+cb\+\_\+t@{mqtt\+\_\+connection\+\_\+cb\+\_\+t}}
+\index{mqtt\+\_\+connection\+\_\+cb\+\_\+t@{mqtt\+\_\+connection\+\_\+cb\+\_\+t}!M\+Q\+T\+T client@{M\+Q\+T\+T client}}
+\subsubsection{\texorpdfstring{mqtt\+\_\+connection\+\_\+cb\+\_\+t}{mqtt\_connection\_cb\_t}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily typedef void($\ast$ mqtt\+\_\+connection\+\_\+cb\+\_\+t) (\hyperlink{structmqtt__client__t}{mqtt\+\_\+client\+\_\+t} $\ast$client, void $\ast$arg, \hyperlink{group__mqtt_ga8cf0f360ab20343af37e1d124395a77d}{mqtt\+\_\+connection\+\_\+status\+\_\+t} status)}
+
+Function prototype for mqtt connection status callback. Called when client has connected to the server after initiating a mqtt connection attempt by calling mqtt\+\_\+connect() or when connection is closed by server or an error
+
+
+\begin{DoxyParams}{Parameters}
+{\em client} & M\+Q\+TT client itself \\
+\hline
+{\em arg} & Additional argument to pass to the callback function \\
+\hline
+{\em status} & Connect result code or disconnection notification \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__mqtt_ga8cf0f360ab20343af37e1d124395a77d}{mqtt\+\_\+connection\+\_\+status\+\_\+t} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{group__mqtt_ga8558743bdb7d599a93844fbc56c9029f}\label{group__mqtt_ga8558743bdb7d599a93844fbc56c9029f}} 
+\index{M\+Q\+T\+T client@{M\+Q\+T\+T client}!mqtt\+\_\+connection\+\_\+cb\+\_\+t@{mqtt\+\_\+connection\+\_\+cb\+\_\+t}}
+\index{mqtt\+\_\+connection\+\_\+cb\+\_\+t@{mqtt\+\_\+connection\+\_\+cb\+\_\+t}!M\+Q\+T\+T client@{M\+Q\+T\+T client}}
+\subsubsection{\texorpdfstring{mqtt\+\_\+connection\+\_\+cb\+\_\+t}{mqtt\_connection\_cb\_t}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily typedef void($\ast$ mqtt\+\_\+connection\+\_\+cb\+\_\+t) (\hyperlink{structmqtt__client__t}{mqtt\+\_\+client\+\_\+t} $\ast$client, void $\ast$arg, \hyperlink{group__mqtt_ga8cf0f360ab20343af37e1d124395a77d}{mqtt\+\_\+connection\+\_\+status\+\_\+t} status)}
+
+Function prototype for mqtt connection status callback. Called when client has connected to the server after initiating a mqtt connection attempt by calling mqtt\+\_\+connect() or when connection is closed by server or an error
+
+
+\begin{DoxyParams}{Parameters}
+{\em client} & M\+Q\+TT client itself \\
+\hline
+{\em arg} & Additional argument to pass to the callback function \\
+\hline
+{\em status} & Connect result code or disconnection notification \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__mqtt_ga8cf0f360ab20343af37e1d124395a77d}{mqtt\+\_\+connection\+\_\+status\+\_\+t} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{group__mqtt_gafec7e75fe6a746eef9ca411463446c81}\label{group__mqtt_gafec7e75fe6a746eef9ca411463446c81}} 
+\index{M\+Q\+T\+T client@{M\+Q\+T\+T client}!mqtt\+\_\+incoming\+\_\+data\+\_\+cb\+\_\+t@{mqtt\+\_\+incoming\+\_\+data\+\_\+cb\+\_\+t}}
+\index{mqtt\+\_\+incoming\+\_\+data\+\_\+cb\+\_\+t@{mqtt\+\_\+incoming\+\_\+data\+\_\+cb\+\_\+t}!M\+Q\+T\+T client@{M\+Q\+T\+T client}}
+\subsubsection{\texorpdfstring{mqtt\+\_\+incoming\+\_\+data\+\_\+cb\+\_\+t}{mqtt\_incoming\_data\_cb\_t}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily typedef void($\ast$ mqtt\+\_\+incoming\+\_\+data\+\_\+cb\+\_\+t) (void $\ast$arg, const \hyperlink{group__compiler__abstraction_ga4caecabca98b43919dd11be1c0d4cd8e}{u8\+\_\+t} $\ast$data, \hyperlink{group__compiler__abstraction_ga77570ac4fcab86864fa1916e55676da2}{u16\+\_\+t} len, \hyperlink{group__compiler__abstraction_ga4caecabca98b43919dd11be1c0d4cd8e}{u8\+\_\+t} flags)}
+
+Function prototype for M\+Q\+TT incoming publish data callback function. Called when data arrives to a subscribed topic \begin{DoxySeeAlso}{See also}
+\hyperlink{group__mqtt_ga83d6a6d811b201a74d793bc1b5d4e029}{mqtt\+\_\+subscribe}
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em arg} & Additional argument to pass to the callback function \\
+\hline
+{\em data} & User data, pointed object, data may not be referenced after callback return, N\+U\+LL is passed when all publish data are delivered \\
+\hline
+{\em len} & Length of publish data fragment \\
+\hline
+{\em flags} & M\+Q\+T\+T\+\_\+\+D\+A\+T\+A\+\_\+\+F\+L\+A\+G\+\_\+\+L\+A\+ST set when this call contains the last part of data from publish message \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__mqtt_gafec7e75fe6a746eef9ca411463446c81}\label{group__mqtt_gafec7e75fe6a746eef9ca411463446c81}} 
+\index{M\+Q\+T\+T client@{M\+Q\+T\+T client}!mqtt\+\_\+incoming\+\_\+data\+\_\+cb\+\_\+t@{mqtt\+\_\+incoming\+\_\+data\+\_\+cb\+\_\+t}}
+\index{mqtt\+\_\+incoming\+\_\+data\+\_\+cb\+\_\+t@{mqtt\+\_\+incoming\+\_\+data\+\_\+cb\+\_\+t}!M\+Q\+T\+T client@{M\+Q\+T\+T client}}
+\subsubsection{\texorpdfstring{mqtt\+\_\+incoming\+\_\+data\+\_\+cb\+\_\+t}{mqtt\_incoming\_data\_cb\_t}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily typedef void($\ast$ mqtt\+\_\+incoming\+\_\+data\+\_\+cb\+\_\+t) (void $\ast$arg, const \hyperlink{group__compiler__abstraction_ga4caecabca98b43919dd11be1c0d4cd8e}{u8\+\_\+t} $\ast$data, \hyperlink{group__compiler__abstraction_ga77570ac4fcab86864fa1916e55676da2}{u16\+\_\+t} len, \hyperlink{group__compiler__abstraction_ga4caecabca98b43919dd11be1c0d4cd8e}{u8\+\_\+t} flags)}
+
+Function prototype for M\+Q\+TT incoming publish data callback function. Called when data arrives to a subscribed topic \begin{DoxySeeAlso}{See also}
+\hyperlink{group__mqtt_ga83d6a6d811b201a74d793bc1b5d4e029}{mqtt\+\_\+subscribe}
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em arg} & Additional argument to pass to the callback function \\
+\hline
+{\em data} & User data, pointed object, data may not be referenced after callback return, N\+U\+LL is passed when all publish data are delivered \\
+\hline
+{\em len} & Length of publish data fragment \\
+\hline
+{\em flags} & M\+Q\+T\+T\+\_\+\+D\+A\+T\+A\+\_\+\+F\+L\+A\+G\+\_\+\+L\+A\+ST set when this call contains the last part of data from publish message \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__mqtt_ga7116bb85255394cec4b1d9fa38842c29}\label{group__mqtt_ga7116bb85255394cec4b1d9fa38842c29}} 
+\index{M\+Q\+T\+T client@{M\+Q\+T\+T client}!mqtt\+\_\+incoming\+\_\+publish\+\_\+cb\+\_\+t@{mqtt\+\_\+incoming\+\_\+publish\+\_\+cb\+\_\+t}}
+\index{mqtt\+\_\+incoming\+\_\+publish\+\_\+cb\+\_\+t@{mqtt\+\_\+incoming\+\_\+publish\+\_\+cb\+\_\+t}!M\+Q\+T\+T client@{M\+Q\+T\+T client}}
+\subsubsection{\texorpdfstring{mqtt\+\_\+incoming\+\_\+publish\+\_\+cb\+\_\+t}{mqtt\_incoming\_publish\_cb\_t}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily typedef void($\ast$ mqtt\+\_\+incoming\+\_\+publish\+\_\+cb\+\_\+t) (void $\ast$arg, const char $\ast$topic, \hyperlink{group__compiler__abstraction_ga4c14294869aceba3ef9d4c0c302d0f33}{u32\+\_\+t} tot\+\_\+len)}
+
+Function prototype for M\+Q\+TT incoming publish function. Called when an incoming publish arrives to a subscribed topic \begin{DoxySeeAlso}{See also}
+\hyperlink{group__mqtt_ga83d6a6d811b201a74d793bc1b5d4e029}{mqtt\+\_\+subscribe}
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em arg} & Additional argument to pass to the callback function \\
+\hline
+{\em topic} & Zero terminated Topic text string, topic may not be referenced after callback return \\
+\hline
+{\em tot\+\_\+len} & Total length of publish data, if set to 0 (no publish payload) data callback will not be invoked \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__mqtt_ga7116bb85255394cec4b1d9fa38842c29}\label{group__mqtt_ga7116bb85255394cec4b1d9fa38842c29}} 
+\index{M\+Q\+T\+T client@{M\+Q\+T\+T client}!mqtt\+\_\+incoming\+\_\+publish\+\_\+cb\+\_\+t@{mqtt\+\_\+incoming\+\_\+publish\+\_\+cb\+\_\+t}}
+\index{mqtt\+\_\+incoming\+\_\+publish\+\_\+cb\+\_\+t@{mqtt\+\_\+incoming\+\_\+publish\+\_\+cb\+\_\+t}!M\+Q\+T\+T client@{M\+Q\+T\+T client}}
+\subsubsection{\texorpdfstring{mqtt\+\_\+incoming\+\_\+publish\+\_\+cb\+\_\+t}{mqtt\_incoming\_publish\_cb\_t}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily typedef void($\ast$ mqtt\+\_\+incoming\+\_\+publish\+\_\+cb\+\_\+t) (void $\ast$arg, const char $\ast$topic, \hyperlink{group__compiler__abstraction_ga4c14294869aceba3ef9d4c0c302d0f33}{u32\+\_\+t} tot\+\_\+len)}
+
+Function prototype for M\+Q\+TT incoming publish function. Called when an incoming publish arrives to a subscribed topic \begin{DoxySeeAlso}{See also}
+\hyperlink{group__mqtt_ga83d6a6d811b201a74d793bc1b5d4e029}{mqtt\+\_\+subscribe}
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em arg} & Additional argument to pass to the callback function \\
+\hline
+{\em topic} & Zero terminated Topic text string, topic may not be referenced after callback return \\
+\hline
+{\em tot\+\_\+len} & Total length of publish data, if set to 0 (no publish payload) data callback will not be invoked \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__mqtt_gacad2bbe2cee76eaa120cc63e2f6094fd}\label{group__mqtt_gacad2bbe2cee76eaa120cc63e2f6094fd}} 
+\index{M\+Q\+T\+T client@{M\+Q\+T\+T client}!mqtt\+\_\+request\+\_\+cb\+\_\+t@{mqtt\+\_\+request\+\_\+cb\+\_\+t}}
+\index{mqtt\+\_\+request\+\_\+cb\+\_\+t@{mqtt\+\_\+request\+\_\+cb\+\_\+t}!M\+Q\+T\+T client@{M\+Q\+T\+T client}}
+\subsubsection{\texorpdfstring{mqtt\+\_\+request\+\_\+cb\+\_\+t}{mqtt\_request\_cb\_t}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily typedef void($\ast$ mqtt\+\_\+request\+\_\+cb\+\_\+t) (void $\ast$arg, \hyperlink{group__infrastructure__errors_gaf02d9da80fd66b4f986d2c53d7231ddb}{err\+\_\+t} err)}
+
+Function prototype for mqtt request callback. Called when a subscribe, unsubscribe or publish request has completed 
+\begin{DoxyParams}{Parameters}
+{\em arg} & Pointer to user data supplied when invoking request \\
+\hline
+{\em err} & E\+R\+R\+\_\+\+OK on success E\+R\+R\+\_\+\+T\+I\+M\+E\+O\+UT if no response was received within timeout, E\+R\+R\+\_\+\+A\+B\+RT if (un)subscribe was denied \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__mqtt_gacad2bbe2cee76eaa120cc63e2f6094fd}\label{group__mqtt_gacad2bbe2cee76eaa120cc63e2f6094fd}} 
+\index{M\+Q\+T\+T client@{M\+Q\+T\+T client}!mqtt\+\_\+request\+\_\+cb\+\_\+t@{mqtt\+\_\+request\+\_\+cb\+\_\+t}}
+\index{mqtt\+\_\+request\+\_\+cb\+\_\+t@{mqtt\+\_\+request\+\_\+cb\+\_\+t}!M\+Q\+T\+T client@{M\+Q\+T\+T client}}
+\subsubsection{\texorpdfstring{mqtt\+\_\+request\+\_\+cb\+\_\+t}{mqtt\_request\_cb\_t}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily typedef void($\ast$ mqtt\+\_\+request\+\_\+cb\+\_\+t) (void $\ast$arg, \hyperlink{group__infrastructure__errors_gaf02d9da80fd66b4f986d2c53d7231ddb}{err\+\_\+t} err)}
+
+Function prototype for mqtt request callback. Called when a subscribe, unsubscribe or publish request has completed 
+\begin{DoxyParams}{Parameters}
+{\em arg} & Pointer to user data supplied when invoking request \\
+\hline
+{\em err} & E\+R\+R\+\_\+\+OK on success E\+R\+R\+\_\+\+T\+I\+M\+E\+O\+UT if no response was received within timeout, E\+R\+R\+\_\+\+A\+B\+RT if (un)subscribe was denied \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{group__mqtt_ga06fc87d81c62e9abb8790b6e5713c55b}\label{group__mqtt_ga06fc87d81c62e9abb8790b6e5713c55b}} 
+\subsubsection{\texorpdfstring{anonymous enum}{anonymous enum}}
+{\footnotesize\ttfamily anonymous enum}
+
+Data callback flags \begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\+Q\+T\+T\+\_\+\+D\+A\+T\+A\+\_\+\+F\+L\+A\+G\+\_\+\+L\+A\+ST@{M\+Q\+T\+T\+\_\+\+D\+A\+T\+A\+\_\+\+F\+L\+A\+G\+\_\+\+L\+A\+ST}!M\+Q\+T\+T client@{M\+Q\+T\+T client}}\index{M\+Q\+T\+T client@{M\+Q\+T\+T client}!M\+Q\+T\+T\+\_\+\+D\+A\+T\+A\+\_\+\+F\+L\+A\+G\+\_\+\+L\+A\+ST@{M\+Q\+T\+T\+\_\+\+D\+A\+T\+A\+\_\+\+F\+L\+A\+G\+\_\+\+L\+A\+ST}}}\mbox{\Hypertarget{group__mqtt_gga06fc87d81c62e9abb8790b6e5713c55ba79cd00d0a5a8df13207e0c49447df87f}\label{group__mqtt_gga06fc87d81c62e9abb8790b6e5713c55ba79cd00d0a5a8df13207e0c49447df87f}} 
+M\+Q\+T\+T\+\_\+\+D\+A\+T\+A\+\_\+\+F\+L\+A\+G\+\_\+\+L\+A\+ST&Flag set when last fragment of data arrives in data callback \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{group__mqtt_ga0411cd49bb5b71852cecd93bcbf0ca2d}\label{group__mqtt_ga0411cd49bb5b71852cecd93bcbf0ca2d}} 
+\subsubsection{\texorpdfstring{anonymous enum}{anonymous enum}}
+{\footnotesize\ttfamily anonymous enum}
+
+Data callback flags \begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\+Q\+T\+T\+\_\+\+D\+A\+T\+A\+\_\+\+F\+L\+A\+G\+\_\+\+L\+A\+ST@{M\+Q\+T\+T\+\_\+\+D\+A\+T\+A\+\_\+\+F\+L\+A\+G\+\_\+\+L\+A\+ST}!M\+Q\+T\+T client@{M\+Q\+T\+T client}}\index{M\+Q\+T\+T client@{M\+Q\+T\+T client}!M\+Q\+T\+T\+\_\+\+D\+A\+T\+A\+\_\+\+F\+L\+A\+G\+\_\+\+L\+A\+ST@{M\+Q\+T\+T\+\_\+\+D\+A\+T\+A\+\_\+\+F\+L\+A\+G\+\_\+\+L\+A\+ST}}}\mbox{\Hypertarget{group__mqtt_gga0411cd49bb5b71852cecd93bcbf0ca2da79cd00d0a5a8df13207e0c49447df87f}\label{group__mqtt_gga0411cd49bb5b71852cecd93bcbf0ca2da79cd00d0a5a8df13207e0c49447df87f}} 
+M\+Q\+T\+T\+\_\+\+D\+A\+T\+A\+\_\+\+F\+L\+A\+G\+\_\+\+L\+A\+ST&Flag set when last fragment of data arrives in data callback \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{group__mqtt_ga8cf0f360ab20343af37e1d124395a77d}\label{group__mqtt_ga8cf0f360ab20343af37e1d124395a77d}} 
+\index{M\+Q\+T\+T client@{M\+Q\+T\+T client}!mqtt\+\_\+connection\+\_\+status\+\_\+t@{mqtt\+\_\+connection\+\_\+status\+\_\+t}}
+\index{mqtt\+\_\+connection\+\_\+status\+\_\+t@{mqtt\+\_\+connection\+\_\+status\+\_\+t}!M\+Q\+T\+T client@{M\+Q\+T\+T client}}
+\subsubsection{\texorpdfstring{mqtt\+\_\+connection\+\_\+status\+\_\+t}{mqtt\_connection\_status\_t}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily enum \hyperlink{group__mqtt_ga8cf0f360ab20343af37e1d124395a77d}{mqtt\+\_\+connection\+\_\+status\+\_\+t}}
+
+Connection status codes \begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\+Q\+T\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+A\+C\+C\+E\+P\+T\+ED@{M\+Q\+T\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+A\+C\+C\+E\+P\+T\+ED}!M\+Q\+T\+T client@{M\+Q\+T\+T client}}\index{M\+Q\+T\+T client@{M\+Q\+T\+T client}!M\+Q\+T\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+A\+C\+C\+E\+P\+T\+ED@{M\+Q\+T\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+A\+C\+C\+E\+P\+T\+ED}}}\mbox{\Hypertarget{group__mqtt_gga8cf0f360ab20343af37e1d124395a77da074dc1d289b8e8d4aad91f6a2cb93dc1}\label{group__mqtt_gga8cf0f360ab20343af37e1d124395a77da074dc1d289b8e8d4aad91f6a2cb93dc1}} 
+M\+Q\+T\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+A\+C\+C\+E\+P\+T\+ED&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\+Q\+T\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+R\+E\+F\+U\+S\+E\+D\+\_\+\+P\+R\+O\+T\+O\+C\+O\+L\+\_\+\+V\+E\+R\+S\+I\+ON@{M\+Q\+T\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+R\+E\+F\+U\+S\+E\+D\+\_\+\+P\+R\+O\+T\+O\+C\+O\+L\+\_\+\+V\+E\+R\+S\+I\+ON}!M\+Q\+T\+T client@{M\+Q\+T\+T client}}\index{M\+Q\+T\+T client@{M\+Q\+T\+T client}!M\+Q\+T\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+R\+E\+F\+U\+S\+E\+D\+\_\+\+P\+R\+O\+T\+O\+C\+O\+L\+\_\+\+V\+E\+R\+S\+I\+ON@{M\+Q\+T\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+R\+E\+F\+U\+S\+E\+D\+\_\+\+P\+R\+O\+T\+O\+C\+O\+L\+\_\+\+V\+E\+R\+S\+I\+ON}}}\mbox{\Hypertarget{group__mqtt_gga8cf0f360ab20343af37e1d124395a77da41f8aa97142be337cb639f94d9145190}\label{group__mqtt_gga8cf0f360ab20343af37e1d124395a77da41f8aa97142be337cb639f94d9145190}} 
+M\+Q\+T\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+R\+E\+F\+U\+S\+E\+D\+\_\+\+P\+R\+O\+T\+O\+C\+O\+L\+\_\+\+V\+E\+R\+S\+I\+ON&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\+Q\+T\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+R\+E\+F\+U\+S\+E\+D\+\_\+\+I\+D\+E\+N\+T\+I\+F\+I\+ER@{M\+Q\+T\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+R\+E\+F\+U\+S\+E\+D\+\_\+\+I\+D\+E\+N\+T\+I\+F\+I\+ER}!M\+Q\+T\+T client@{M\+Q\+T\+T client}}\index{M\+Q\+T\+T client@{M\+Q\+T\+T client}!M\+Q\+T\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+R\+E\+F\+U\+S\+E\+D\+\_\+\+I\+D\+E\+N\+T\+I\+F\+I\+ER@{M\+Q\+T\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+R\+E\+F\+U\+S\+E\+D\+\_\+\+I\+D\+E\+N\+T\+I\+F\+I\+ER}}}\mbox{\Hypertarget{group__mqtt_gga8cf0f360ab20343af37e1d124395a77da28ffe49b0175adaa2b9a27cb4873224a}\label{group__mqtt_gga8cf0f360ab20343af37e1d124395a77da28ffe49b0175adaa2b9a27cb4873224a}} 
+M\+Q\+T\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+R\+E\+F\+U\+S\+E\+D\+\_\+\+I\+D\+E\+N\+T\+I\+F\+I\+ER&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\+Q\+T\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+R\+E\+F\+U\+S\+E\+D\+\_\+\+S\+E\+R\+V\+ER@{M\+Q\+T\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+R\+E\+F\+U\+S\+E\+D\+\_\+\+S\+E\+R\+V\+ER}!M\+Q\+T\+T client@{M\+Q\+T\+T client}}\index{M\+Q\+T\+T client@{M\+Q\+T\+T client}!M\+Q\+T\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+R\+E\+F\+U\+S\+E\+D\+\_\+\+S\+E\+R\+V\+ER@{M\+Q\+T\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+R\+E\+F\+U\+S\+E\+D\+\_\+\+S\+E\+R\+V\+ER}}}\mbox{\Hypertarget{group__mqtt_gga8cf0f360ab20343af37e1d124395a77dade28ec1c2ce3d874e91251d683c92b2a}\label{group__mqtt_gga8cf0f360ab20343af37e1d124395a77dade28ec1c2ce3d874e91251d683c92b2a}} 
+M\+Q\+T\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+R\+E\+F\+U\+S\+E\+D\+\_\+\+S\+E\+R\+V\+ER&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\+Q\+T\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+R\+E\+F\+U\+S\+E\+D\+\_\+\+U\+S\+E\+R\+N\+A\+M\+E\+\_\+\+P\+A\+SS@{M\+Q\+T\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+R\+E\+F\+U\+S\+E\+D\+\_\+\+U\+S\+E\+R\+N\+A\+M\+E\+\_\+\+P\+A\+SS}!M\+Q\+T\+T client@{M\+Q\+T\+T client}}\index{M\+Q\+T\+T client@{M\+Q\+T\+T client}!M\+Q\+T\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+R\+E\+F\+U\+S\+E\+D\+\_\+\+U\+S\+E\+R\+N\+A\+M\+E\+\_\+\+P\+A\+SS@{M\+Q\+T\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+R\+E\+F\+U\+S\+E\+D\+\_\+\+U\+S\+E\+R\+N\+A\+M\+E\+\_\+\+P\+A\+SS}}}\mbox{\Hypertarget{group__mqtt_gga8cf0f360ab20343af37e1d124395a77da290cf9037054c42022cc864cfade896a}\label{group__mqtt_gga8cf0f360ab20343af37e1d124395a77da290cf9037054c42022cc864cfade896a}} 
+M\+Q\+T\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+R\+E\+F\+U\+S\+E\+D\+\_\+\+U\+S\+E\+R\+N\+A\+M\+E\+\_\+\+P\+A\+SS&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\+Q\+T\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+R\+E\+F\+U\+S\+E\+D\+\_\+\+N\+O\+T\+\_\+\+A\+U\+T\+H\+O\+R\+I\+Z\+E\+D\+\_\+@{M\+Q\+T\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+R\+E\+F\+U\+S\+E\+D\+\_\+\+N\+O\+T\+\_\+\+A\+U\+T\+H\+O\+R\+I\+Z\+E\+D\+\_\+}!M\+Q\+T\+T client@{M\+Q\+T\+T client}}\index{M\+Q\+T\+T client@{M\+Q\+T\+T client}!M\+Q\+T\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+R\+E\+F\+U\+S\+E\+D\+\_\+\+N\+O\+T\+\_\+\+A\+U\+T\+H\+O\+R\+I\+Z\+E\+D\+\_\+@{M\+Q\+T\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+R\+E\+F\+U\+S\+E\+D\+\_\+\+N\+O\+T\+\_\+\+A\+U\+T\+H\+O\+R\+I\+Z\+E\+D\+\_\+}}}\mbox{\Hypertarget{group__mqtt_gga8cf0f360ab20343af37e1d124395a77dafc4888158dd6ee84269a5f0bfdc12b17}\label{group__mqtt_gga8cf0f360ab20343af37e1d124395a77dafc4888158dd6ee84269a5f0bfdc12b17}} 
+M\+Q\+T\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+R\+E\+F\+U\+S\+E\+D\+\_\+\+N\+O\+T\+\_\+\+A\+U\+T\+H\+O\+R\+I\+Z\+E\+D\+\_\+&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\+Q\+T\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+D\+I\+S\+C\+O\+N\+N\+E\+C\+T\+ED@{M\+Q\+T\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+D\+I\+S\+C\+O\+N\+N\+E\+C\+T\+ED}!M\+Q\+T\+T client@{M\+Q\+T\+T client}}\index{M\+Q\+T\+T client@{M\+Q\+T\+T client}!M\+Q\+T\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+D\+I\+S\+C\+O\+N\+N\+E\+C\+T\+ED@{M\+Q\+T\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+D\+I\+S\+C\+O\+N\+N\+E\+C\+T\+ED}}}\mbox{\Hypertarget{group__mqtt_gga8cf0f360ab20343af37e1d124395a77da321f5ce31b173f235de1a517fcfd00dd}\label{group__mqtt_gga8cf0f360ab20343af37e1d124395a77da321f5ce31b173f235de1a517fcfd00dd}} 
+M\+Q\+T\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+D\+I\+S\+C\+O\+N\+N\+E\+C\+T\+ED&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\+Q\+T\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+T\+I\+M\+E\+O\+UT@{M\+Q\+T\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+T\+I\+M\+E\+O\+UT}!M\+Q\+T\+T client@{M\+Q\+T\+T client}}\index{M\+Q\+T\+T client@{M\+Q\+T\+T client}!M\+Q\+T\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+T\+I\+M\+E\+O\+UT@{M\+Q\+T\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+T\+I\+M\+E\+O\+UT}}}\mbox{\Hypertarget{group__mqtt_gga8cf0f360ab20343af37e1d124395a77da57153f2ab4331c6f76a9ee74e1bcfc62}\label{group__mqtt_gga8cf0f360ab20343af37e1d124395a77da57153f2ab4331c6f76a9ee74e1bcfc62}} 
+M\+Q\+T\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+T\+I\+M\+E\+O\+UT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\+Q\+T\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+A\+C\+C\+E\+P\+T\+ED@{M\+Q\+T\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+A\+C\+C\+E\+P\+T\+ED}!M\+Q\+T\+T client@{M\+Q\+T\+T client}}\index{M\+Q\+T\+T client@{M\+Q\+T\+T client}!M\+Q\+T\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+A\+C\+C\+E\+P\+T\+ED@{M\+Q\+T\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+A\+C\+C\+E\+P\+T\+ED}}}\mbox{\Hypertarget{group__mqtt_gga8cf0f360ab20343af37e1d124395a77da074dc1d289b8e8d4aad91f6a2cb93dc1}\label{group__mqtt_gga8cf0f360ab20343af37e1d124395a77da074dc1d289b8e8d4aad91f6a2cb93dc1}} 
+M\+Q\+T\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+A\+C\+C\+E\+P\+T\+ED&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\+Q\+T\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+R\+E\+F\+U\+S\+E\+D\+\_\+\+P\+R\+O\+T\+O\+C\+O\+L\+\_\+\+V\+E\+R\+S\+I\+ON@{M\+Q\+T\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+R\+E\+F\+U\+S\+E\+D\+\_\+\+P\+R\+O\+T\+O\+C\+O\+L\+\_\+\+V\+E\+R\+S\+I\+ON}!M\+Q\+T\+T client@{M\+Q\+T\+T client}}\index{M\+Q\+T\+T client@{M\+Q\+T\+T client}!M\+Q\+T\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+R\+E\+F\+U\+S\+E\+D\+\_\+\+P\+R\+O\+T\+O\+C\+O\+L\+\_\+\+V\+E\+R\+S\+I\+ON@{M\+Q\+T\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+R\+E\+F\+U\+S\+E\+D\+\_\+\+P\+R\+O\+T\+O\+C\+O\+L\+\_\+\+V\+E\+R\+S\+I\+ON}}}\mbox{\Hypertarget{group__mqtt_gga8cf0f360ab20343af37e1d124395a77da41f8aa97142be337cb639f94d9145190}\label{group__mqtt_gga8cf0f360ab20343af37e1d124395a77da41f8aa97142be337cb639f94d9145190}} 
+M\+Q\+T\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+R\+E\+F\+U\+S\+E\+D\+\_\+\+P\+R\+O\+T\+O\+C\+O\+L\+\_\+\+V\+E\+R\+S\+I\+ON&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\+Q\+T\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+R\+E\+F\+U\+S\+E\+D\+\_\+\+I\+D\+E\+N\+T\+I\+F\+I\+ER@{M\+Q\+T\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+R\+E\+F\+U\+S\+E\+D\+\_\+\+I\+D\+E\+N\+T\+I\+F\+I\+ER}!M\+Q\+T\+T client@{M\+Q\+T\+T client}}\index{M\+Q\+T\+T client@{M\+Q\+T\+T client}!M\+Q\+T\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+R\+E\+F\+U\+S\+E\+D\+\_\+\+I\+D\+E\+N\+T\+I\+F\+I\+ER@{M\+Q\+T\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+R\+E\+F\+U\+S\+E\+D\+\_\+\+I\+D\+E\+N\+T\+I\+F\+I\+ER}}}\mbox{\Hypertarget{group__mqtt_gga8cf0f360ab20343af37e1d124395a77da28ffe49b0175adaa2b9a27cb4873224a}\label{group__mqtt_gga8cf0f360ab20343af37e1d124395a77da28ffe49b0175adaa2b9a27cb4873224a}} 
+M\+Q\+T\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+R\+E\+F\+U\+S\+E\+D\+\_\+\+I\+D\+E\+N\+T\+I\+F\+I\+ER&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\+Q\+T\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+R\+E\+F\+U\+S\+E\+D\+\_\+\+S\+E\+R\+V\+ER@{M\+Q\+T\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+R\+E\+F\+U\+S\+E\+D\+\_\+\+S\+E\+R\+V\+ER}!M\+Q\+T\+T client@{M\+Q\+T\+T client}}\index{M\+Q\+T\+T client@{M\+Q\+T\+T client}!M\+Q\+T\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+R\+E\+F\+U\+S\+E\+D\+\_\+\+S\+E\+R\+V\+ER@{M\+Q\+T\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+R\+E\+F\+U\+S\+E\+D\+\_\+\+S\+E\+R\+V\+ER}}}\mbox{\Hypertarget{group__mqtt_gga8cf0f360ab20343af37e1d124395a77dade28ec1c2ce3d874e91251d683c92b2a}\label{group__mqtt_gga8cf0f360ab20343af37e1d124395a77dade28ec1c2ce3d874e91251d683c92b2a}} 
+M\+Q\+T\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+R\+E\+F\+U\+S\+E\+D\+\_\+\+S\+E\+R\+V\+ER&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\+Q\+T\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+R\+E\+F\+U\+S\+E\+D\+\_\+\+U\+S\+E\+R\+N\+A\+M\+E\+\_\+\+P\+A\+SS@{M\+Q\+T\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+R\+E\+F\+U\+S\+E\+D\+\_\+\+U\+S\+E\+R\+N\+A\+M\+E\+\_\+\+P\+A\+SS}!M\+Q\+T\+T client@{M\+Q\+T\+T client}}\index{M\+Q\+T\+T client@{M\+Q\+T\+T client}!M\+Q\+T\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+R\+E\+F\+U\+S\+E\+D\+\_\+\+U\+S\+E\+R\+N\+A\+M\+E\+\_\+\+P\+A\+SS@{M\+Q\+T\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+R\+E\+F\+U\+S\+E\+D\+\_\+\+U\+S\+E\+R\+N\+A\+M\+E\+\_\+\+P\+A\+SS}}}\mbox{\Hypertarget{group__mqtt_gga8cf0f360ab20343af37e1d124395a77da290cf9037054c42022cc864cfade896a}\label{group__mqtt_gga8cf0f360ab20343af37e1d124395a77da290cf9037054c42022cc864cfade896a}} 
+M\+Q\+T\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+R\+E\+F\+U\+S\+E\+D\+\_\+\+U\+S\+E\+R\+N\+A\+M\+E\+\_\+\+P\+A\+SS&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\+Q\+T\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+R\+E\+F\+U\+S\+E\+D\+\_\+\+N\+O\+T\+\_\+\+A\+U\+T\+H\+O\+R\+I\+Z\+E\+D\+\_\+@{M\+Q\+T\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+R\+E\+F\+U\+S\+E\+D\+\_\+\+N\+O\+T\+\_\+\+A\+U\+T\+H\+O\+R\+I\+Z\+E\+D\+\_\+}!M\+Q\+T\+T client@{M\+Q\+T\+T client}}\index{M\+Q\+T\+T client@{M\+Q\+T\+T client}!M\+Q\+T\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+R\+E\+F\+U\+S\+E\+D\+\_\+\+N\+O\+T\+\_\+\+A\+U\+T\+H\+O\+R\+I\+Z\+E\+D\+\_\+@{M\+Q\+T\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+R\+E\+F\+U\+S\+E\+D\+\_\+\+N\+O\+T\+\_\+\+A\+U\+T\+H\+O\+R\+I\+Z\+E\+D\+\_\+}}}\mbox{\Hypertarget{group__mqtt_gga8cf0f360ab20343af37e1d124395a77dafc4888158dd6ee84269a5f0bfdc12b17}\label{group__mqtt_gga8cf0f360ab20343af37e1d124395a77dafc4888158dd6ee84269a5f0bfdc12b17}} 
+M\+Q\+T\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+R\+E\+F\+U\+S\+E\+D\+\_\+\+N\+O\+T\+\_\+\+A\+U\+T\+H\+O\+R\+I\+Z\+E\+D\+\_\+&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\+Q\+T\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+D\+I\+S\+C\+O\+N\+N\+E\+C\+T\+ED@{M\+Q\+T\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+D\+I\+S\+C\+O\+N\+N\+E\+C\+T\+ED}!M\+Q\+T\+T client@{M\+Q\+T\+T client}}\index{M\+Q\+T\+T client@{M\+Q\+T\+T client}!M\+Q\+T\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+D\+I\+S\+C\+O\+N\+N\+E\+C\+T\+ED@{M\+Q\+T\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+D\+I\+S\+C\+O\+N\+N\+E\+C\+T\+ED}}}\mbox{\Hypertarget{group__mqtt_gga8cf0f360ab20343af37e1d124395a77da321f5ce31b173f235de1a517fcfd00dd}\label{group__mqtt_gga8cf0f360ab20343af37e1d124395a77da321f5ce31b173f235de1a517fcfd00dd}} 
+M\+Q\+T\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+D\+I\+S\+C\+O\+N\+N\+E\+C\+T\+ED&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\+Q\+T\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+T\+I\+M\+E\+O\+UT@{M\+Q\+T\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+T\+I\+M\+E\+O\+UT}!M\+Q\+T\+T client@{M\+Q\+T\+T client}}\index{M\+Q\+T\+T client@{M\+Q\+T\+T client}!M\+Q\+T\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+T\+I\+M\+E\+O\+UT@{M\+Q\+T\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+T\+I\+M\+E\+O\+UT}}}\mbox{\Hypertarget{group__mqtt_gga8cf0f360ab20343af37e1d124395a77da57153f2ab4331c6f76a9ee74e1bcfc62}\label{group__mqtt_gga8cf0f360ab20343af37e1d124395a77da57153f2ab4331c6f76a9ee74e1bcfc62}} 
+M\+Q\+T\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+T\+I\+M\+E\+O\+UT&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{group__mqtt_ga8cf0f360ab20343af37e1d124395a77d}\label{group__mqtt_ga8cf0f360ab20343af37e1d124395a77d}} 
+\index{M\+Q\+T\+T client@{M\+Q\+T\+T client}!mqtt\+\_\+connection\+\_\+status\+\_\+t@{mqtt\+\_\+connection\+\_\+status\+\_\+t}}
+\index{mqtt\+\_\+connection\+\_\+status\+\_\+t@{mqtt\+\_\+connection\+\_\+status\+\_\+t}!M\+Q\+T\+T client@{M\+Q\+T\+T client}}
+\subsubsection{\texorpdfstring{mqtt\+\_\+connection\+\_\+status\+\_\+t}{mqtt\_connection\_status\_t}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily enum \hyperlink{group__mqtt_ga8cf0f360ab20343af37e1d124395a77d}{mqtt\+\_\+connection\+\_\+status\+\_\+t}}
+
+Connection status codes \begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\+Q\+T\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+A\+C\+C\+E\+P\+T\+ED@{M\+Q\+T\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+A\+C\+C\+E\+P\+T\+ED}!M\+Q\+T\+T client@{M\+Q\+T\+T client}}\index{M\+Q\+T\+T client@{M\+Q\+T\+T client}!M\+Q\+T\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+A\+C\+C\+E\+P\+T\+ED@{M\+Q\+T\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+A\+C\+C\+E\+P\+T\+ED}}}\mbox{\Hypertarget{group__mqtt_gga8cf0f360ab20343af37e1d124395a77da074dc1d289b8e8d4aad91f6a2cb93dc1}\label{group__mqtt_gga8cf0f360ab20343af37e1d124395a77da074dc1d289b8e8d4aad91f6a2cb93dc1}} 
+M\+Q\+T\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+A\+C\+C\+E\+P\+T\+ED&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\+Q\+T\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+R\+E\+F\+U\+S\+E\+D\+\_\+\+P\+R\+O\+T\+O\+C\+O\+L\+\_\+\+V\+E\+R\+S\+I\+ON@{M\+Q\+T\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+R\+E\+F\+U\+S\+E\+D\+\_\+\+P\+R\+O\+T\+O\+C\+O\+L\+\_\+\+V\+E\+R\+S\+I\+ON}!M\+Q\+T\+T client@{M\+Q\+T\+T client}}\index{M\+Q\+T\+T client@{M\+Q\+T\+T client}!M\+Q\+T\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+R\+E\+F\+U\+S\+E\+D\+\_\+\+P\+R\+O\+T\+O\+C\+O\+L\+\_\+\+V\+E\+R\+S\+I\+ON@{M\+Q\+T\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+R\+E\+F\+U\+S\+E\+D\+\_\+\+P\+R\+O\+T\+O\+C\+O\+L\+\_\+\+V\+E\+R\+S\+I\+ON}}}\mbox{\Hypertarget{group__mqtt_gga8cf0f360ab20343af37e1d124395a77da41f8aa97142be337cb639f94d9145190}\label{group__mqtt_gga8cf0f360ab20343af37e1d124395a77da41f8aa97142be337cb639f94d9145190}} 
+M\+Q\+T\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+R\+E\+F\+U\+S\+E\+D\+\_\+\+P\+R\+O\+T\+O\+C\+O\+L\+\_\+\+V\+E\+R\+S\+I\+ON&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\+Q\+T\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+R\+E\+F\+U\+S\+E\+D\+\_\+\+I\+D\+E\+N\+T\+I\+F\+I\+ER@{M\+Q\+T\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+R\+E\+F\+U\+S\+E\+D\+\_\+\+I\+D\+E\+N\+T\+I\+F\+I\+ER}!M\+Q\+T\+T client@{M\+Q\+T\+T client}}\index{M\+Q\+T\+T client@{M\+Q\+T\+T client}!M\+Q\+T\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+R\+E\+F\+U\+S\+E\+D\+\_\+\+I\+D\+E\+N\+T\+I\+F\+I\+ER@{M\+Q\+T\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+R\+E\+F\+U\+S\+E\+D\+\_\+\+I\+D\+E\+N\+T\+I\+F\+I\+ER}}}\mbox{\Hypertarget{group__mqtt_gga8cf0f360ab20343af37e1d124395a77da28ffe49b0175adaa2b9a27cb4873224a}\label{group__mqtt_gga8cf0f360ab20343af37e1d124395a77da28ffe49b0175adaa2b9a27cb4873224a}} 
+M\+Q\+T\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+R\+E\+F\+U\+S\+E\+D\+\_\+\+I\+D\+E\+N\+T\+I\+F\+I\+ER&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\+Q\+T\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+R\+E\+F\+U\+S\+E\+D\+\_\+\+S\+E\+R\+V\+ER@{M\+Q\+T\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+R\+E\+F\+U\+S\+E\+D\+\_\+\+S\+E\+R\+V\+ER}!M\+Q\+T\+T client@{M\+Q\+T\+T client}}\index{M\+Q\+T\+T client@{M\+Q\+T\+T client}!M\+Q\+T\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+R\+E\+F\+U\+S\+E\+D\+\_\+\+S\+E\+R\+V\+ER@{M\+Q\+T\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+R\+E\+F\+U\+S\+E\+D\+\_\+\+S\+E\+R\+V\+ER}}}\mbox{\Hypertarget{group__mqtt_gga8cf0f360ab20343af37e1d124395a77dade28ec1c2ce3d874e91251d683c92b2a}\label{group__mqtt_gga8cf0f360ab20343af37e1d124395a77dade28ec1c2ce3d874e91251d683c92b2a}} 
+M\+Q\+T\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+R\+E\+F\+U\+S\+E\+D\+\_\+\+S\+E\+R\+V\+ER&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\+Q\+T\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+R\+E\+F\+U\+S\+E\+D\+\_\+\+U\+S\+E\+R\+N\+A\+M\+E\+\_\+\+P\+A\+SS@{M\+Q\+T\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+R\+E\+F\+U\+S\+E\+D\+\_\+\+U\+S\+E\+R\+N\+A\+M\+E\+\_\+\+P\+A\+SS}!M\+Q\+T\+T client@{M\+Q\+T\+T client}}\index{M\+Q\+T\+T client@{M\+Q\+T\+T client}!M\+Q\+T\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+R\+E\+F\+U\+S\+E\+D\+\_\+\+U\+S\+E\+R\+N\+A\+M\+E\+\_\+\+P\+A\+SS@{M\+Q\+T\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+R\+E\+F\+U\+S\+E\+D\+\_\+\+U\+S\+E\+R\+N\+A\+M\+E\+\_\+\+P\+A\+SS}}}\mbox{\Hypertarget{group__mqtt_gga8cf0f360ab20343af37e1d124395a77da290cf9037054c42022cc864cfade896a}\label{group__mqtt_gga8cf0f360ab20343af37e1d124395a77da290cf9037054c42022cc864cfade896a}} 
+M\+Q\+T\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+R\+E\+F\+U\+S\+E\+D\+\_\+\+U\+S\+E\+R\+N\+A\+M\+E\+\_\+\+P\+A\+SS&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\+Q\+T\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+R\+E\+F\+U\+S\+E\+D\+\_\+\+N\+O\+T\+\_\+\+A\+U\+T\+H\+O\+R\+I\+Z\+E\+D\+\_\+@{M\+Q\+T\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+R\+E\+F\+U\+S\+E\+D\+\_\+\+N\+O\+T\+\_\+\+A\+U\+T\+H\+O\+R\+I\+Z\+E\+D\+\_\+}!M\+Q\+T\+T client@{M\+Q\+T\+T client}}\index{M\+Q\+T\+T client@{M\+Q\+T\+T client}!M\+Q\+T\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+R\+E\+F\+U\+S\+E\+D\+\_\+\+N\+O\+T\+\_\+\+A\+U\+T\+H\+O\+R\+I\+Z\+E\+D\+\_\+@{M\+Q\+T\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+R\+E\+F\+U\+S\+E\+D\+\_\+\+N\+O\+T\+\_\+\+A\+U\+T\+H\+O\+R\+I\+Z\+E\+D\+\_\+}}}\mbox{\Hypertarget{group__mqtt_gga8cf0f360ab20343af37e1d124395a77dafc4888158dd6ee84269a5f0bfdc12b17}\label{group__mqtt_gga8cf0f360ab20343af37e1d124395a77dafc4888158dd6ee84269a5f0bfdc12b17}} 
+M\+Q\+T\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+R\+E\+F\+U\+S\+E\+D\+\_\+\+N\+O\+T\+\_\+\+A\+U\+T\+H\+O\+R\+I\+Z\+E\+D\+\_\+&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\+Q\+T\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+D\+I\+S\+C\+O\+N\+N\+E\+C\+T\+ED@{M\+Q\+T\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+D\+I\+S\+C\+O\+N\+N\+E\+C\+T\+ED}!M\+Q\+T\+T client@{M\+Q\+T\+T client}}\index{M\+Q\+T\+T client@{M\+Q\+T\+T client}!M\+Q\+T\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+D\+I\+S\+C\+O\+N\+N\+E\+C\+T\+ED@{M\+Q\+T\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+D\+I\+S\+C\+O\+N\+N\+E\+C\+T\+ED}}}\mbox{\Hypertarget{group__mqtt_gga8cf0f360ab20343af37e1d124395a77da321f5ce31b173f235de1a517fcfd00dd}\label{group__mqtt_gga8cf0f360ab20343af37e1d124395a77da321f5ce31b173f235de1a517fcfd00dd}} 
+M\+Q\+T\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+D\+I\+S\+C\+O\+N\+N\+E\+C\+T\+ED&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\+Q\+T\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+T\+I\+M\+E\+O\+UT@{M\+Q\+T\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+T\+I\+M\+E\+O\+UT}!M\+Q\+T\+T client@{M\+Q\+T\+T client}}\index{M\+Q\+T\+T client@{M\+Q\+T\+T client}!M\+Q\+T\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+T\+I\+M\+E\+O\+UT@{M\+Q\+T\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+T\+I\+M\+E\+O\+UT}}}\mbox{\Hypertarget{group__mqtt_gga8cf0f360ab20343af37e1d124395a77da57153f2ab4331c6f76a9ee74e1bcfc62}\label{group__mqtt_gga8cf0f360ab20343af37e1d124395a77da57153f2ab4331c6f76a9ee74e1bcfc62}} 
+M\+Q\+T\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+T\+I\+M\+E\+O\+UT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\+Q\+T\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+A\+C\+C\+E\+P\+T\+ED@{M\+Q\+T\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+A\+C\+C\+E\+P\+T\+ED}!M\+Q\+T\+T client@{M\+Q\+T\+T client}}\index{M\+Q\+T\+T client@{M\+Q\+T\+T client}!M\+Q\+T\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+A\+C\+C\+E\+P\+T\+ED@{M\+Q\+T\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+A\+C\+C\+E\+P\+T\+ED}}}\mbox{\Hypertarget{group__mqtt_gga8cf0f360ab20343af37e1d124395a77da074dc1d289b8e8d4aad91f6a2cb93dc1}\label{group__mqtt_gga8cf0f360ab20343af37e1d124395a77da074dc1d289b8e8d4aad91f6a2cb93dc1}} 
+M\+Q\+T\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+A\+C\+C\+E\+P\+T\+ED&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\+Q\+T\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+R\+E\+F\+U\+S\+E\+D\+\_\+\+P\+R\+O\+T\+O\+C\+O\+L\+\_\+\+V\+E\+R\+S\+I\+ON@{M\+Q\+T\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+R\+E\+F\+U\+S\+E\+D\+\_\+\+P\+R\+O\+T\+O\+C\+O\+L\+\_\+\+V\+E\+R\+S\+I\+ON}!M\+Q\+T\+T client@{M\+Q\+T\+T client}}\index{M\+Q\+T\+T client@{M\+Q\+T\+T client}!M\+Q\+T\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+R\+E\+F\+U\+S\+E\+D\+\_\+\+P\+R\+O\+T\+O\+C\+O\+L\+\_\+\+V\+E\+R\+S\+I\+ON@{M\+Q\+T\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+R\+E\+F\+U\+S\+E\+D\+\_\+\+P\+R\+O\+T\+O\+C\+O\+L\+\_\+\+V\+E\+R\+S\+I\+ON}}}\mbox{\Hypertarget{group__mqtt_gga8cf0f360ab20343af37e1d124395a77da41f8aa97142be337cb639f94d9145190}\label{group__mqtt_gga8cf0f360ab20343af37e1d124395a77da41f8aa97142be337cb639f94d9145190}} 
+M\+Q\+T\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+R\+E\+F\+U\+S\+E\+D\+\_\+\+P\+R\+O\+T\+O\+C\+O\+L\+\_\+\+V\+E\+R\+S\+I\+ON&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\+Q\+T\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+R\+E\+F\+U\+S\+E\+D\+\_\+\+I\+D\+E\+N\+T\+I\+F\+I\+ER@{M\+Q\+T\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+R\+E\+F\+U\+S\+E\+D\+\_\+\+I\+D\+E\+N\+T\+I\+F\+I\+ER}!M\+Q\+T\+T client@{M\+Q\+T\+T client}}\index{M\+Q\+T\+T client@{M\+Q\+T\+T client}!M\+Q\+T\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+R\+E\+F\+U\+S\+E\+D\+\_\+\+I\+D\+E\+N\+T\+I\+F\+I\+ER@{M\+Q\+T\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+R\+E\+F\+U\+S\+E\+D\+\_\+\+I\+D\+E\+N\+T\+I\+F\+I\+ER}}}\mbox{\Hypertarget{group__mqtt_gga8cf0f360ab20343af37e1d124395a77da28ffe49b0175adaa2b9a27cb4873224a}\label{group__mqtt_gga8cf0f360ab20343af37e1d124395a77da28ffe49b0175adaa2b9a27cb4873224a}} 
+M\+Q\+T\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+R\+E\+F\+U\+S\+E\+D\+\_\+\+I\+D\+E\+N\+T\+I\+F\+I\+ER&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\+Q\+T\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+R\+E\+F\+U\+S\+E\+D\+\_\+\+S\+E\+R\+V\+ER@{M\+Q\+T\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+R\+E\+F\+U\+S\+E\+D\+\_\+\+S\+E\+R\+V\+ER}!M\+Q\+T\+T client@{M\+Q\+T\+T client}}\index{M\+Q\+T\+T client@{M\+Q\+T\+T client}!M\+Q\+T\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+R\+E\+F\+U\+S\+E\+D\+\_\+\+S\+E\+R\+V\+ER@{M\+Q\+T\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+R\+E\+F\+U\+S\+E\+D\+\_\+\+S\+E\+R\+V\+ER}}}\mbox{\Hypertarget{group__mqtt_gga8cf0f360ab20343af37e1d124395a77dade28ec1c2ce3d874e91251d683c92b2a}\label{group__mqtt_gga8cf0f360ab20343af37e1d124395a77dade28ec1c2ce3d874e91251d683c92b2a}} 
+M\+Q\+T\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+R\+E\+F\+U\+S\+E\+D\+\_\+\+S\+E\+R\+V\+ER&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\+Q\+T\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+R\+E\+F\+U\+S\+E\+D\+\_\+\+U\+S\+E\+R\+N\+A\+M\+E\+\_\+\+P\+A\+SS@{M\+Q\+T\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+R\+E\+F\+U\+S\+E\+D\+\_\+\+U\+S\+E\+R\+N\+A\+M\+E\+\_\+\+P\+A\+SS}!M\+Q\+T\+T client@{M\+Q\+T\+T client}}\index{M\+Q\+T\+T client@{M\+Q\+T\+T client}!M\+Q\+T\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+R\+E\+F\+U\+S\+E\+D\+\_\+\+U\+S\+E\+R\+N\+A\+M\+E\+\_\+\+P\+A\+SS@{M\+Q\+T\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+R\+E\+F\+U\+S\+E\+D\+\_\+\+U\+S\+E\+R\+N\+A\+M\+E\+\_\+\+P\+A\+SS}}}\mbox{\Hypertarget{group__mqtt_gga8cf0f360ab20343af37e1d124395a77da290cf9037054c42022cc864cfade896a}\label{group__mqtt_gga8cf0f360ab20343af37e1d124395a77da290cf9037054c42022cc864cfade896a}} 
+M\+Q\+T\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+R\+E\+F\+U\+S\+E\+D\+\_\+\+U\+S\+E\+R\+N\+A\+M\+E\+\_\+\+P\+A\+SS&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\+Q\+T\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+R\+E\+F\+U\+S\+E\+D\+\_\+\+N\+O\+T\+\_\+\+A\+U\+T\+H\+O\+R\+I\+Z\+E\+D\+\_\+@{M\+Q\+T\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+R\+E\+F\+U\+S\+E\+D\+\_\+\+N\+O\+T\+\_\+\+A\+U\+T\+H\+O\+R\+I\+Z\+E\+D\+\_\+}!M\+Q\+T\+T client@{M\+Q\+T\+T client}}\index{M\+Q\+T\+T client@{M\+Q\+T\+T client}!M\+Q\+T\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+R\+E\+F\+U\+S\+E\+D\+\_\+\+N\+O\+T\+\_\+\+A\+U\+T\+H\+O\+R\+I\+Z\+E\+D\+\_\+@{M\+Q\+T\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+R\+E\+F\+U\+S\+E\+D\+\_\+\+N\+O\+T\+\_\+\+A\+U\+T\+H\+O\+R\+I\+Z\+E\+D\+\_\+}}}\mbox{\Hypertarget{group__mqtt_gga8cf0f360ab20343af37e1d124395a77dafc4888158dd6ee84269a5f0bfdc12b17}\label{group__mqtt_gga8cf0f360ab20343af37e1d124395a77dafc4888158dd6ee84269a5f0bfdc12b17}} 
+M\+Q\+T\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+R\+E\+F\+U\+S\+E\+D\+\_\+\+N\+O\+T\+\_\+\+A\+U\+T\+H\+O\+R\+I\+Z\+E\+D\+\_\+&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\+Q\+T\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+D\+I\+S\+C\+O\+N\+N\+E\+C\+T\+ED@{M\+Q\+T\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+D\+I\+S\+C\+O\+N\+N\+E\+C\+T\+ED}!M\+Q\+T\+T client@{M\+Q\+T\+T client}}\index{M\+Q\+T\+T client@{M\+Q\+T\+T client}!M\+Q\+T\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+D\+I\+S\+C\+O\+N\+N\+E\+C\+T\+ED@{M\+Q\+T\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+D\+I\+S\+C\+O\+N\+N\+E\+C\+T\+ED}}}\mbox{\Hypertarget{group__mqtt_gga8cf0f360ab20343af37e1d124395a77da321f5ce31b173f235de1a517fcfd00dd}\label{group__mqtt_gga8cf0f360ab20343af37e1d124395a77da321f5ce31b173f235de1a517fcfd00dd}} 
+M\+Q\+T\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+D\+I\+S\+C\+O\+N\+N\+E\+C\+T\+ED&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\+Q\+T\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+T\+I\+M\+E\+O\+UT@{M\+Q\+T\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+T\+I\+M\+E\+O\+UT}!M\+Q\+T\+T client@{M\+Q\+T\+T client}}\index{M\+Q\+T\+T client@{M\+Q\+T\+T client}!M\+Q\+T\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+T\+I\+M\+E\+O\+UT@{M\+Q\+T\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+T\+I\+M\+E\+O\+UT}}}\mbox{\Hypertarget{group__mqtt_gga8cf0f360ab20343af37e1d124395a77da57153f2ab4331c6f76a9ee74e1bcfc62}\label{group__mqtt_gga8cf0f360ab20343af37e1d124395a77da57153f2ab4331c6f76a9ee74e1bcfc62}} 
+M\+Q\+T\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+T\+I\+M\+E\+O\+UT&\\
+\hline
+
+\end{DoxyEnumFields}

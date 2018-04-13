@@ -1,0 +1,284 @@
+\hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2netif_8h}{}\section{/home/ayush/\+R\+I\+O\+T/tests/lwip/bin/pkg/openmote-\/cc2538/lwip/src/include/lwip/netif.h File Reference}
+\label{openmote-cc2538_2lwip_2src_2include_2lwip_2netif_8h}\index{/home/ayush/\+R\+I\+O\+T/tests/lwip/bin/pkg/openmote-\/cc2538/lwip/src/include/lwip/netif.\+h@{/home/ayush/\+R\+I\+O\+T/tests/lwip/bin/pkg/openmote-\/cc2538/lwip/src/include/lwip/netif.\+h}}
+{\ttfamily \#include \char`\"{}lwip/opt.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}lwip/err.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}lwip/ip\+\_\+addr.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}lwip/def.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}lwip/pbuf.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}lwip/stats.\+h\char`\"{}}\newline
+Include dependency graph for netif.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{openmote-cc2538_2lwip_2src_2include_2lwip_2netif_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{openmote-cc2538_2lwip_2src_2include_2lwip_2netif_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structnetif}{netif}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2netif_8h_a53a4d9ad0bbe679841b5ff3f6906076c}{E\+N\+A\+B\+L\+E\+\_\+\+L\+O\+O\+P\+B\+A\+CK}~(\hyperlink{group__lwip__opts__loop_ga724a0ea765d5a47d026d529725f31c01}{L\+W\+I\+P\+\_\+\+N\+E\+T\+I\+F\+\_\+\+L\+O\+O\+P\+B\+A\+CK} $\vert$$\vert$ \hyperlink{group__lwip__opts__loop_gaa2b1f736373cd896e212644aa453fbaf}{L\+W\+I\+P\+\_\+\+H\+A\+V\+E\+\_\+\+L\+O\+O\+P\+IF})
+\item 
+\#define \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2netif_8h_ab887a8ec553de1be1d04cf2961c63c41}{N\+E\+T\+I\+F\+\_\+\+M\+A\+X\+\_\+\+H\+W\+A\+D\+D\+R\+\_\+\+L\+EN}~6U
+\item 
+\#define \hyperlink{group__netif__flags_gab47d7d130693dc155f480a5bf447725e}{N\+E\+T\+I\+F\+\_\+\+F\+L\+A\+G\+\_\+\+UP}~0x01U
+\item 
+\#define \hyperlink{group__netif__flags_gaef64fe15c82bc7b235366923e517104e}{N\+E\+T\+I\+F\+\_\+\+F\+L\+A\+G\+\_\+\+B\+R\+O\+A\+D\+C\+A\+ST}~0x02U
+\item 
+\#define \hyperlink{group__netif__flags_ga75f5a2b9276c93e3bd18a568459fd2d8}{N\+E\+T\+I\+F\+\_\+\+F\+L\+A\+G\+\_\+\+L\+I\+N\+K\+\_\+\+UP}~0x04U
+\item 
+\#define \hyperlink{group__netif__flags_ga92448dc510bc8d700c09e5c971ef0676}{N\+E\+T\+I\+F\+\_\+\+F\+L\+A\+G\+\_\+\+E\+T\+H\+A\+RP}~0x08U
+\item 
+\#define \hyperlink{group__netif__flags_ga76ad9d0cf9f029df0ab2a998c64040dc}{N\+E\+T\+I\+F\+\_\+\+F\+L\+A\+G\+\_\+\+E\+T\+H\+E\+R\+N\+ET}~0x10U
+\item 
+\#define \hyperlink{group__netif__flags_gac9493b923d733c73f6006d9714826558}{N\+E\+T\+I\+F\+\_\+\+F\+L\+A\+G\+\_\+\+I\+G\+MP}~0x20U
+\item 
+\#define \hyperlink{group__netif__flags_gab14fbe1447d2fdbdf5abc87f51eb6508}{N\+E\+T\+I\+F\+\_\+\+F\+L\+A\+G\+\_\+\+M\+L\+D6}~0x40U
+\item 
+\#define \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2netif_8h_ac0aca2a2d3c7d7095939d818acf4dbd2}{N\+E\+T\+I\+F\+\_\+\+S\+E\+T\+\_\+\+C\+H\+E\+C\+K\+S\+U\+M\+\_\+\+C\+T\+RL}(\hyperlink{structnetif}{netif},  chksumflags)
+\item 
+\#define \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2netif_8h_ad968df1b35c2fae368e087966e3bc677}{I\+F\+\_\+\+\_\+\+N\+E\+T\+I\+F\+\_\+\+C\+H\+E\+C\+K\+S\+U\+M\+\_\+\+E\+N\+A\+B\+L\+ED}(\hyperlink{structnetif}{netif},  chksumflag)
+\item 
+\#define \hyperlink{group__netif_ga94a4c24c988afc0a577387730f303b19}{netif\+\_\+is\+\_\+up}(\hyperlink{structnetif}{netif})~(((\hyperlink{structnetif}{netif})-\/$>$flags \& \hyperlink{group__netif__flags_gab47d7d130693dc155f480a5bf447725e}{N\+E\+T\+I\+F\+\_\+\+F\+L\+A\+G\+\_\+\+UP}) ? (\hyperlink{group__compiler__abstraction_ga4caecabca98b43919dd11be1c0d4cd8e}{u8\+\_\+t})1 \+: (\hyperlink{group__compiler__abstraction_ga4caecabca98b43919dd11be1c0d4cd8e}{u8\+\_\+t})0)
+\item 
+\#define \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2netif_8h_a780be4c3fa9f7f2534f7865666c3a1b8}{netif\+\_\+is\+\_\+link\+\_\+up}(\hyperlink{structnetif}{netif})~(((\hyperlink{structnetif}{netif})-\/$>$flags \& \hyperlink{group__netif__flags_ga75f5a2b9276c93e3bd18a568459fd2d8}{N\+E\+T\+I\+F\+\_\+\+F\+L\+A\+G\+\_\+\+L\+I\+N\+K\+\_\+\+UP}) ? (\hyperlink{group__compiler__abstraction_ga4caecabca98b43919dd11be1c0d4cd8e}{u8\+\_\+t})1 \+: (\hyperlink{group__compiler__abstraction_ga4caecabca98b43919dd11be1c0d4cd8e}{u8\+\_\+t})0)
+\item 
+\#define \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2netif_8h_ae1c22f1dab74a84d9e31316fd5fdfa11}{N\+E\+T\+I\+F\+\_\+\+S\+E\+T\+\_\+\+H\+W\+A\+D\+D\+R\+H\+I\+NT}(\hyperlink{structnetif}{netif},  hint)
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef \hyperlink{group__infrastructure__errors_gaf02d9da80fd66b4f986d2c53d7231ddb}{err\+\_\+t}($\ast$ \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2netif_8h_a2b02a78a8769925ff8e4f83d34e5e1f5}{netif\+\_\+init\+\_\+fn}) (struct \hyperlink{structnetif}{netif} $\ast$\hyperlink{structnetif}{netif})
+\item 
+typedef \hyperlink{group__infrastructure__errors_gaf02d9da80fd66b4f986d2c53d7231ddb}{err\+\_\+t}($\ast$ \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2netif_8h_ab2302b1b64ac7b95f24c6bab754a575e}{netif\+\_\+input\+\_\+fn}) (struct \hyperlink{structpbuf}{pbuf} $\ast$p, struct \hyperlink{structnetif}{netif} $\ast$inp)
+\item 
+typedef \hyperlink{group__infrastructure__errors_gaf02d9da80fd66b4f986d2c53d7231ddb}{err\+\_\+t}($\ast$ \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2netif_8h_ab75e9d808bc1b788bea84213e6a111ed}{netif\+\_\+linkoutput\+\_\+fn}) (struct \hyperlink{structnetif}{netif} $\ast$\hyperlink{structnetif}{netif}, struct \hyperlink{structpbuf}{pbuf} $\ast$p)
+\item 
+typedef void($\ast$ \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2netif_8h_a447d0a7e7c6e2396557c287b8b8c9436}{netif\+\_\+status\+\_\+callback\+\_\+fn}) (struct \hyperlink{structnetif}{netif} $\ast$\hyperlink{structnetif}{netif})
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2netif_8h_a528ae27498af778f808a930469d98308}{lwip\+\_\+internal\+\_\+netif\+\_\+client\+\_\+data\+\_\+index} \{ \hyperlink{native_2lwip_2src_2include_2lwip_2netif_8h_a528ae27498af778f808a930469d98308a07e3221acd5d0c9890a999dbe7e03d38}{L\+W\+I\+P\+\_\+\+N\+E\+T\+I\+F\+\_\+\+C\+L\+I\+E\+N\+T\+\_\+\+D\+A\+T\+A\+\_\+\+I\+N\+D\+E\+X\+\_\+\+M\+AX}, 
+\hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2netif_8h_a528ae27498af778f808a930469d98308a07e3221acd5d0c9890a999dbe7e03d38}{L\+W\+I\+P\+\_\+\+N\+E\+T\+I\+F\+\_\+\+C\+L\+I\+E\+N\+T\+\_\+\+D\+A\+T\+A\+\_\+\+I\+N\+D\+E\+X\+\_\+\+M\+AX}
+ \}
+\item 
+enum \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2netif_8h_ab194ec4241fad8b6e9aac51e3ec23de0}{netif\+\_\+mac\+\_\+filter\+\_\+action} \{ \hyperlink{native_2lwip_2src_2include_2lwip_2netif_8h_ab194ec4241fad8b6e9aac51e3ec23de0a7ad3406353906deb4e64ebeed349e07e}{N\+E\+T\+I\+F\+\_\+\+D\+E\+L\+\_\+\+M\+A\+C\+\_\+\+F\+I\+L\+T\+ER} = 0, 
+\hyperlink{native_2lwip_2src_2include_2lwip_2netif_8h_ab194ec4241fad8b6e9aac51e3ec23de0a4186fbaf94be956ea1a3b02cd1cccb1f}{N\+E\+T\+I\+F\+\_\+\+A\+D\+D\+\_\+\+M\+A\+C\+\_\+\+F\+I\+L\+T\+ER} = 1, 
+\hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2netif_8h_ab194ec4241fad8b6e9aac51e3ec23de0a7ad3406353906deb4e64ebeed349e07e}{N\+E\+T\+I\+F\+\_\+\+D\+E\+L\+\_\+\+M\+A\+C\+\_\+\+F\+I\+L\+T\+ER} = 0, 
+\hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2netif_8h_ab194ec4241fad8b6e9aac51e3ec23de0a4186fbaf94be956ea1a3b02cd1cccb1f}{N\+E\+T\+I\+F\+\_\+\+A\+D\+D\+\_\+\+M\+A\+C\+\_\+\+F\+I\+L\+T\+ER} = 1
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2netif_8h_a0f4a53e47c840904f824a2a1c0d4ebf4}{netif\+\_\+init} (void)
+\item 
+struct \hyperlink{structnetif}{netif} $\ast$ \hyperlink{group__netif_gabde72af134ae7047a46ad7719d2a1ee9}{netif\+\_\+add} (struct \hyperlink{structnetif}{netif} $\ast$\hyperlink{structnetif}{netif}, void $\ast$state, \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2netif_8h_a2b02a78a8769925ff8e4f83d34e5e1f5}{netif\+\_\+init\+\_\+fn} init, \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2netif_8h_ab2302b1b64ac7b95f24c6bab754a575e}{netif\+\_\+input\+\_\+fn} input)
+\item 
+void \hyperlink{group__netif_ga9c6e541f0c184e1ea61a5cd8afe3e979}{netif\+\_\+remove} (struct \hyperlink{structnetif}{netif} $\ast$\hyperlink{structnetif}{netif})
+\item 
+struct \hyperlink{structnetif}{netif} $\ast$ \hyperlink{group__netif_ga3c82d1c742338828b2f4349a75bb84de}{netif\+\_\+find} (const char $\ast$name)
+\item 
+void \hyperlink{group__netif_gac90f290edd005238d62aa94c4ac9dea3}{netif\+\_\+set\+\_\+default} (struct \hyperlink{structnetif}{netif} $\ast$\hyperlink{structnetif}{netif})
+\item 
+void \hyperlink{group__netif_gaf19693be401a265a52d2a56c65753121}{netif\+\_\+set\+\_\+up} (struct \hyperlink{structnetif}{netif} $\ast$\hyperlink{structnetif}{netif})
+\item 
+void \hyperlink{group__netif_ga641d07ed8c31fe5306bc01605a6790cf}{netif\+\_\+set\+\_\+down} (struct \hyperlink{structnetif}{netif} $\ast$\hyperlink{structnetif}{netif})
+\item 
+void \hyperlink{group__netif_gae0d2975f189277990e9d5276fdd9e9ea}{netif\+\_\+set\+\_\+link\+\_\+up} (struct \hyperlink{structnetif}{netif} $\ast$\hyperlink{structnetif}{netif})
+\item 
+void \hyperlink{group__netif_ga34e37a1e8e358760dc1c43887922c7db}{netif\+\_\+set\+\_\+link\+\_\+down} (struct \hyperlink{structnetif}{netif} $\ast$\hyperlink{structnetif}{netif})
+\item 
+\hyperlink{group__infrastructure__errors_gaf02d9da80fd66b4f986d2c53d7231ddb}{err\+\_\+t} \hyperlink{group__lwip__nosys_ga5532f93d68c874fb99c681bff2165385}{netif\+\_\+input} (struct \hyperlink{structpbuf}{pbuf} $\ast$p, struct \hyperlink{structnetif}{netif} $\ast$inp)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structnetif}{netif} $\ast$ \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2netif_8h_a1c8141eaa98f6dc6dfddbb23a706656c}{netif\+\_\+list}
+\item 
+struct \hyperlink{structnetif}{netif} $\ast$ \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2netif_8h_a3d0925cbce550ed461907aee816713ba}{netif\+\_\+default}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+netif A\+PI (to be used from T\+C\+P\+IP thread) 
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2netif_8h_a53a4d9ad0bbe679841b5ff3f6906076c}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2netif_8h_a53a4d9ad0bbe679841b5ff3f6906076c}} 
+\index{openmote-\/cc2538/lwip/src/include/lwip/netif.\+h@{openmote-\/cc2538/lwip/src/include/lwip/netif.\+h}!E\+N\+A\+B\+L\+E\+\_\+\+L\+O\+O\+P\+B\+A\+CK@{E\+N\+A\+B\+L\+E\+\_\+\+L\+O\+O\+P\+B\+A\+CK}}
+\index{E\+N\+A\+B\+L\+E\+\_\+\+L\+O\+O\+P\+B\+A\+CK@{E\+N\+A\+B\+L\+E\+\_\+\+L\+O\+O\+P\+B\+A\+CK}!openmote-\/cc2538/lwip/src/include/lwip/netif.\+h@{openmote-\/cc2538/lwip/src/include/lwip/netif.\+h}}
+\subsubsection{\texorpdfstring{E\+N\+A\+B\+L\+E\+\_\+\+L\+O\+O\+P\+B\+A\+CK}{ENABLE\_LOOPBACK}}
+{\footnotesize\ttfamily \#define E\+N\+A\+B\+L\+E\+\_\+\+L\+O\+O\+P\+B\+A\+CK~(\hyperlink{group__lwip__opts__loop_ga724a0ea765d5a47d026d529725f31c01}{L\+W\+I\+P\+\_\+\+N\+E\+T\+I\+F\+\_\+\+L\+O\+O\+P\+B\+A\+CK} $\vert$$\vert$ \hyperlink{group__lwip__opts__loop_gaa2b1f736373cd896e212644aa453fbaf}{L\+W\+I\+P\+\_\+\+H\+A\+V\+E\+\_\+\+L\+O\+O\+P\+IF})}
+
+\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2netif_8h_ad968df1b35c2fae368e087966e3bc677}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2netif_8h_ad968df1b35c2fae368e087966e3bc677}} 
+\index{openmote-\/cc2538/lwip/src/include/lwip/netif.\+h@{openmote-\/cc2538/lwip/src/include/lwip/netif.\+h}!I\+F\+\_\+\+\_\+\+N\+E\+T\+I\+F\+\_\+\+C\+H\+E\+C\+K\+S\+U\+M\+\_\+\+E\+N\+A\+B\+L\+ED@{I\+F\+\_\+\+\_\+\+N\+E\+T\+I\+F\+\_\+\+C\+H\+E\+C\+K\+S\+U\+M\+\_\+\+E\+N\+A\+B\+L\+ED}}
+\index{I\+F\+\_\+\+\_\+\+N\+E\+T\+I\+F\+\_\+\+C\+H\+E\+C\+K\+S\+U\+M\+\_\+\+E\+N\+A\+B\+L\+ED@{I\+F\+\_\+\+\_\+\+N\+E\+T\+I\+F\+\_\+\+C\+H\+E\+C\+K\+S\+U\+M\+\_\+\+E\+N\+A\+B\+L\+ED}!openmote-\/cc2538/lwip/src/include/lwip/netif.\+h@{openmote-\/cc2538/lwip/src/include/lwip/netif.\+h}}
+\subsubsection{\texorpdfstring{I\+F\+\_\+\+\_\+\+N\+E\+T\+I\+F\+\_\+\+C\+H\+E\+C\+K\+S\+U\+M\+\_\+\+E\+N\+A\+B\+L\+ED}{IF\_\_NETIF\_CHECKSUM\_ENABLED}}
+{\footnotesize\ttfamily \#define I\+F\+\_\+\+\_\+\+N\+E\+T\+I\+F\+\_\+\+C\+H\+E\+C\+K\+S\+U\+M\+\_\+\+E\+N\+A\+B\+L\+ED(\begin{DoxyParamCaption}\item[{}]{\hyperlink{structnetif}{netif},  }\item[{}]{chksumflag }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2netif_8h_a780be4c3fa9f7f2534f7865666c3a1b8}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2netif_8h_a780be4c3fa9f7f2534f7865666c3a1b8}} 
+\index{openmote-\/cc2538/lwip/src/include/lwip/netif.\+h@{openmote-\/cc2538/lwip/src/include/lwip/netif.\+h}!netif\+\_\+is\+\_\+link\+\_\+up@{netif\+\_\+is\+\_\+link\+\_\+up}}
+\index{netif\+\_\+is\+\_\+link\+\_\+up@{netif\+\_\+is\+\_\+link\+\_\+up}!openmote-\/cc2538/lwip/src/include/lwip/netif.\+h@{openmote-\/cc2538/lwip/src/include/lwip/netif.\+h}}
+\subsubsection{\texorpdfstring{netif\+\_\+is\+\_\+link\+\_\+up}{netif\_is\_link\_up}}
+{\footnotesize\ttfamily \#define netif\+\_\+is\+\_\+link\+\_\+up(\begin{DoxyParamCaption}\item[{}]{\hyperlink{structnetif}{netif} }\end{DoxyParamCaption})~(((\hyperlink{structnetif}{netif})-\/$>$flags \& \hyperlink{group__netif__flags_ga75f5a2b9276c93e3bd18a568459fd2d8}{N\+E\+T\+I\+F\+\_\+\+F\+L\+A\+G\+\_\+\+L\+I\+N\+K\+\_\+\+UP}) ? (\hyperlink{group__compiler__abstraction_ga4caecabca98b43919dd11be1c0d4cd8e}{u8\+\_\+t})1 \+: (\hyperlink{group__compiler__abstraction_ga4caecabca98b43919dd11be1c0d4cd8e}{u8\+\_\+t})0)}
+
+Ask if a link is up \mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2netif_8h_ab887a8ec553de1be1d04cf2961c63c41}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2netif_8h_ab887a8ec553de1be1d04cf2961c63c41}} 
+\index{openmote-\/cc2538/lwip/src/include/lwip/netif.\+h@{openmote-\/cc2538/lwip/src/include/lwip/netif.\+h}!N\+E\+T\+I\+F\+\_\+\+M\+A\+X\+\_\+\+H\+W\+A\+D\+D\+R\+\_\+\+L\+EN@{N\+E\+T\+I\+F\+\_\+\+M\+A\+X\+\_\+\+H\+W\+A\+D\+D\+R\+\_\+\+L\+EN}}
+\index{N\+E\+T\+I\+F\+\_\+\+M\+A\+X\+\_\+\+H\+W\+A\+D\+D\+R\+\_\+\+L\+EN@{N\+E\+T\+I\+F\+\_\+\+M\+A\+X\+\_\+\+H\+W\+A\+D\+D\+R\+\_\+\+L\+EN}!openmote-\/cc2538/lwip/src/include/lwip/netif.\+h@{openmote-\/cc2538/lwip/src/include/lwip/netif.\+h}}
+\subsubsection{\texorpdfstring{N\+E\+T\+I\+F\+\_\+\+M\+A\+X\+\_\+\+H\+W\+A\+D\+D\+R\+\_\+\+L\+EN}{NETIF\_MAX\_HWADDR\_LEN}}
+{\footnotesize\ttfamily \#define N\+E\+T\+I\+F\+\_\+\+M\+A\+X\+\_\+\+H\+W\+A\+D\+D\+R\+\_\+\+L\+EN~6U}
+
+Must be the maximum of all used hardware address lengths across all types of interfaces in use. This does not have to be changed, normally. \mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2netif_8h_ac0aca2a2d3c7d7095939d818acf4dbd2}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2netif_8h_ac0aca2a2d3c7d7095939d818acf4dbd2}} 
+\index{openmote-\/cc2538/lwip/src/include/lwip/netif.\+h@{openmote-\/cc2538/lwip/src/include/lwip/netif.\+h}!N\+E\+T\+I\+F\+\_\+\+S\+E\+T\+\_\+\+C\+H\+E\+C\+K\+S\+U\+M\+\_\+\+C\+T\+RL@{N\+E\+T\+I\+F\+\_\+\+S\+E\+T\+\_\+\+C\+H\+E\+C\+K\+S\+U\+M\+\_\+\+C\+T\+RL}}
+\index{N\+E\+T\+I\+F\+\_\+\+S\+E\+T\+\_\+\+C\+H\+E\+C\+K\+S\+U\+M\+\_\+\+C\+T\+RL@{N\+E\+T\+I\+F\+\_\+\+S\+E\+T\+\_\+\+C\+H\+E\+C\+K\+S\+U\+M\+\_\+\+C\+T\+RL}!openmote-\/cc2538/lwip/src/include/lwip/netif.\+h@{openmote-\/cc2538/lwip/src/include/lwip/netif.\+h}}
+\subsubsection{\texorpdfstring{N\+E\+T\+I\+F\+\_\+\+S\+E\+T\+\_\+\+C\+H\+E\+C\+K\+S\+U\+M\+\_\+\+C\+T\+RL}{NETIF\_SET\_CHECKSUM\_CTRL}}
+{\footnotesize\ttfamily \#define N\+E\+T\+I\+F\+\_\+\+S\+E\+T\+\_\+\+C\+H\+E\+C\+K\+S\+U\+M\+\_\+\+C\+T\+RL(\begin{DoxyParamCaption}\item[{}]{\hyperlink{structnetif}{netif},  }\item[{}]{chksumflags }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2netif_8h_ae1c22f1dab74a84d9e31316fd5fdfa11}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2netif_8h_ae1c22f1dab74a84d9e31316fd5fdfa11}} 
+\index{openmote-\/cc2538/lwip/src/include/lwip/netif.\+h@{openmote-\/cc2538/lwip/src/include/lwip/netif.\+h}!N\+E\+T\+I\+F\+\_\+\+S\+E\+T\+\_\+\+H\+W\+A\+D\+D\+R\+H\+I\+NT@{N\+E\+T\+I\+F\+\_\+\+S\+E\+T\+\_\+\+H\+W\+A\+D\+D\+R\+H\+I\+NT}}
+\index{N\+E\+T\+I\+F\+\_\+\+S\+E\+T\+\_\+\+H\+W\+A\+D\+D\+R\+H\+I\+NT@{N\+E\+T\+I\+F\+\_\+\+S\+E\+T\+\_\+\+H\+W\+A\+D\+D\+R\+H\+I\+NT}!openmote-\/cc2538/lwip/src/include/lwip/netif.\+h@{openmote-\/cc2538/lwip/src/include/lwip/netif.\+h}}
+\subsubsection{\texorpdfstring{N\+E\+T\+I\+F\+\_\+\+S\+E\+T\+\_\+\+H\+W\+A\+D\+D\+R\+H\+I\+NT}{NETIF\_SET\_HWADDRHINT}}
+{\footnotesize\ttfamily \#define N\+E\+T\+I\+F\+\_\+\+S\+E\+T\+\_\+\+H\+W\+A\+D\+D\+R\+H\+I\+NT(\begin{DoxyParamCaption}\item[{}]{\hyperlink{structnetif}{netif},  }\item[{}]{hint }\end{DoxyParamCaption})}
+
+
+
+\subsection{Typedef Documentation}
+\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2netif_8h_a2b02a78a8769925ff8e4f83d34e5e1f5}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2netif_8h_a2b02a78a8769925ff8e4f83d34e5e1f5}} 
+\index{openmote-\/cc2538/lwip/src/include/lwip/netif.\+h@{openmote-\/cc2538/lwip/src/include/lwip/netif.\+h}!netif\+\_\+init\+\_\+fn@{netif\+\_\+init\+\_\+fn}}
+\index{netif\+\_\+init\+\_\+fn@{netif\+\_\+init\+\_\+fn}!openmote-\/cc2538/lwip/src/include/lwip/netif.\+h@{openmote-\/cc2538/lwip/src/include/lwip/netif.\+h}}
+\subsubsection{\texorpdfstring{netif\+\_\+init\+\_\+fn}{netif\_init\_fn}}
+{\footnotesize\ttfamily typedef \hyperlink{group__infrastructure__errors_gaf02d9da80fd66b4f986d2c53d7231ddb}{err\+\_\+t}($\ast$ netif\+\_\+init\+\_\+fn) (struct \hyperlink{structnetif}{netif} $\ast$\hyperlink{structnetif}{netif})}
+
+Function prototype for netif init functions. Set up flags and output/linkoutput callback functions in this function.
+
+
+\begin{DoxyParams}{Parameters}
+{\em netif} & The netif to initialize \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2netif_8h_ab2302b1b64ac7b95f24c6bab754a575e}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2netif_8h_ab2302b1b64ac7b95f24c6bab754a575e}} 
+\index{openmote-\/cc2538/lwip/src/include/lwip/netif.\+h@{openmote-\/cc2538/lwip/src/include/lwip/netif.\+h}!netif\+\_\+input\+\_\+fn@{netif\+\_\+input\+\_\+fn}}
+\index{netif\+\_\+input\+\_\+fn@{netif\+\_\+input\+\_\+fn}!openmote-\/cc2538/lwip/src/include/lwip/netif.\+h@{openmote-\/cc2538/lwip/src/include/lwip/netif.\+h}}
+\subsubsection{\texorpdfstring{netif\+\_\+input\+\_\+fn}{netif\_input\_fn}}
+{\footnotesize\ttfamily typedef \hyperlink{group__infrastructure__errors_gaf02d9da80fd66b4f986d2c53d7231ddb}{err\+\_\+t}($\ast$ netif\+\_\+input\+\_\+fn) (struct \hyperlink{structpbuf}{pbuf} $\ast$p, struct \hyperlink{structnetif}{netif} $\ast$inp)}
+
+Function prototype for netif-\/$>$input functions. This function is saved as \textquotesingle{}input\textquotesingle{} callback function in the netif struct. Call it when a packet has been received.
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & The received packet, copied into a pbuf \\
+\hline
+{\em inp} & The netif which received the packet \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2netif_8h_ab75e9d808bc1b788bea84213e6a111ed}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2netif_8h_ab75e9d808bc1b788bea84213e6a111ed}} 
+\index{openmote-\/cc2538/lwip/src/include/lwip/netif.\+h@{openmote-\/cc2538/lwip/src/include/lwip/netif.\+h}!netif\+\_\+linkoutput\+\_\+fn@{netif\+\_\+linkoutput\+\_\+fn}}
+\index{netif\+\_\+linkoutput\+\_\+fn@{netif\+\_\+linkoutput\+\_\+fn}!openmote-\/cc2538/lwip/src/include/lwip/netif.\+h@{openmote-\/cc2538/lwip/src/include/lwip/netif.\+h}}
+\subsubsection{\texorpdfstring{netif\+\_\+linkoutput\+\_\+fn}{netif\_linkoutput\_fn}}
+{\footnotesize\ttfamily typedef \hyperlink{group__infrastructure__errors_gaf02d9da80fd66b4f986d2c53d7231ddb}{err\+\_\+t}($\ast$ netif\+\_\+linkoutput\+\_\+fn) (struct \hyperlink{structnetif}{netif} $\ast$\hyperlink{structnetif}{netif}, struct \hyperlink{structpbuf}{pbuf} $\ast$p)}
+
+Function prototype for netif-\/$>$linkoutput functions. Only used for ethernet netifs. This function is called by A\+RP when a packet shall be sent.
+
+
+\begin{DoxyParams}{Parameters}
+{\em netif} & The netif which shall send a packet \\
+\hline
+{\em p} & The packet to send (raw ethernet packet) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2netif_8h_a447d0a7e7c6e2396557c287b8b8c9436}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2netif_8h_a447d0a7e7c6e2396557c287b8b8c9436}} 
+\index{openmote-\/cc2538/lwip/src/include/lwip/netif.\+h@{openmote-\/cc2538/lwip/src/include/lwip/netif.\+h}!netif\+\_\+status\+\_\+callback\+\_\+fn@{netif\+\_\+status\+\_\+callback\+\_\+fn}}
+\index{netif\+\_\+status\+\_\+callback\+\_\+fn@{netif\+\_\+status\+\_\+callback\+\_\+fn}!openmote-\/cc2538/lwip/src/include/lwip/netif.\+h@{openmote-\/cc2538/lwip/src/include/lwip/netif.\+h}}
+\subsubsection{\texorpdfstring{netif\+\_\+status\+\_\+callback\+\_\+fn}{netif\_status\_callback\_fn}}
+{\footnotesize\ttfamily typedef void($\ast$ netif\+\_\+status\+\_\+callback\+\_\+fn) (struct \hyperlink{structnetif}{netif} $\ast$\hyperlink{structnetif}{netif})}
+
+Function prototype for netif status-\/ or link-\/callback functions. 
+
+\subsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2netif_8h_a528ae27498af778f808a930469d98308}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2netif_8h_a528ae27498af778f808a930469d98308}} 
+\index{openmote-\/cc2538/lwip/src/include/lwip/netif.\+h@{openmote-\/cc2538/lwip/src/include/lwip/netif.\+h}!lwip\+\_\+internal\+\_\+netif\+\_\+client\+\_\+data\+\_\+index@{lwip\+\_\+internal\+\_\+netif\+\_\+client\+\_\+data\+\_\+index}}
+\index{lwip\+\_\+internal\+\_\+netif\+\_\+client\+\_\+data\+\_\+index@{lwip\+\_\+internal\+\_\+netif\+\_\+client\+\_\+data\+\_\+index}!openmote-\/cc2538/lwip/src/include/lwip/netif.\+h@{openmote-\/cc2538/lwip/src/include/lwip/netif.\+h}}
+\subsubsection{\texorpdfstring{lwip\+\_\+internal\+\_\+netif\+\_\+client\+\_\+data\+\_\+index}{lwip\_internal\_netif\_client\_data\_index}}
+{\footnotesize\ttfamily enum \hyperlink{native_2lwip_2src_2include_2lwip_2netif_8h_a528ae27498af778f808a930469d98308}{lwip\+\_\+internal\+\_\+netif\+\_\+client\+\_\+data\+\_\+index}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{L\+W\+I\+P\+\_\+\+N\+E\+T\+I\+F\+\_\+\+C\+L\+I\+E\+N\+T\+\_\+\+D\+A\+T\+A\+\_\+\+I\+N\+D\+E\+X\+\_\+\+M\+AX@{L\+W\+I\+P\+\_\+\+N\+E\+T\+I\+F\+\_\+\+C\+L\+I\+E\+N\+T\+\_\+\+D\+A\+T\+A\+\_\+\+I\+N\+D\+E\+X\+\_\+\+M\+AX}!openmote-\/cc2538/lwip/src/include/lwip/netif.\+h@{openmote-\/cc2538/lwip/src/include/lwip/netif.\+h}}\index{openmote-\/cc2538/lwip/src/include/lwip/netif.\+h@{openmote-\/cc2538/lwip/src/include/lwip/netif.\+h}!L\+W\+I\+P\+\_\+\+N\+E\+T\+I\+F\+\_\+\+C\+L\+I\+E\+N\+T\+\_\+\+D\+A\+T\+A\+\_\+\+I\+N\+D\+E\+X\+\_\+\+M\+AX@{L\+W\+I\+P\+\_\+\+N\+E\+T\+I\+F\+\_\+\+C\+L\+I\+E\+N\+T\+\_\+\+D\+A\+T\+A\+\_\+\+I\+N\+D\+E\+X\+\_\+\+M\+AX}}}\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2netif_8h_a528ae27498af778f808a930469d98308a07e3221acd5d0c9890a999dbe7e03d38}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2netif_8h_a528ae27498af778f808a930469d98308a07e3221acd5d0c9890a999dbe7e03d38}} 
+L\+W\+I\+P\+\_\+\+N\+E\+T\+I\+F\+\_\+\+C\+L\+I\+E\+N\+T\+\_\+\+D\+A\+T\+A\+\_\+\+I\+N\+D\+E\+X\+\_\+\+M\+AX&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{L\+W\+I\+P\+\_\+\+N\+E\+T\+I\+F\+\_\+\+C\+L\+I\+E\+N\+T\+\_\+\+D\+A\+T\+A\+\_\+\+I\+N\+D\+E\+X\+\_\+\+M\+AX@{L\+W\+I\+P\+\_\+\+N\+E\+T\+I\+F\+\_\+\+C\+L\+I\+E\+N\+T\+\_\+\+D\+A\+T\+A\+\_\+\+I\+N\+D\+E\+X\+\_\+\+M\+AX}!openmote-\/cc2538/lwip/src/include/lwip/netif.\+h@{openmote-\/cc2538/lwip/src/include/lwip/netif.\+h}}\index{openmote-\/cc2538/lwip/src/include/lwip/netif.\+h@{openmote-\/cc2538/lwip/src/include/lwip/netif.\+h}!L\+W\+I\+P\+\_\+\+N\+E\+T\+I\+F\+\_\+\+C\+L\+I\+E\+N\+T\+\_\+\+D\+A\+T\+A\+\_\+\+I\+N\+D\+E\+X\+\_\+\+M\+AX@{L\+W\+I\+P\+\_\+\+N\+E\+T\+I\+F\+\_\+\+C\+L\+I\+E\+N\+T\+\_\+\+D\+A\+T\+A\+\_\+\+I\+N\+D\+E\+X\+\_\+\+M\+AX}}}\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2netif_8h_a528ae27498af778f808a930469d98308a07e3221acd5d0c9890a999dbe7e03d38}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2netif_8h_a528ae27498af778f808a930469d98308a07e3221acd5d0c9890a999dbe7e03d38}} 
+L\+W\+I\+P\+\_\+\+N\+E\+T\+I\+F\+\_\+\+C\+L\+I\+E\+N\+T\+\_\+\+D\+A\+T\+A\+\_\+\+I\+N\+D\+E\+X\+\_\+\+M\+AX&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2netif_8h_ab194ec4241fad8b6e9aac51e3ec23de0}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2netif_8h_ab194ec4241fad8b6e9aac51e3ec23de0}} 
+\index{openmote-\/cc2538/lwip/src/include/lwip/netif.\+h@{openmote-\/cc2538/lwip/src/include/lwip/netif.\+h}!netif\+\_\+mac\+\_\+filter\+\_\+action@{netif\+\_\+mac\+\_\+filter\+\_\+action}}
+\index{netif\+\_\+mac\+\_\+filter\+\_\+action@{netif\+\_\+mac\+\_\+filter\+\_\+action}!openmote-\/cc2538/lwip/src/include/lwip/netif.\+h@{openmote-\/cc2538/lwip/src/include/lwip/netif.\+h}}
+\subsubsection{\texorpdfstring{netif\+\_\+mac\+\_\+filter\+\_\+action}{netif\_mac\_filter\_action}}
+{\footnotesize\ttfamily enum \hyperlink{native_2lwip_2src_2include_2lwip_2netif_8h_ab194ec4241fad8b6e9aac51e3ec23de0}{netif\+\_\+mac\+\_\+filter\+\_\+action}}
+
+M\+AC Filter Actions, these are passed to a netif\textquotesingle{}s igmp\+\_\+mac\+\_\+filter or mld\+\_\+mac\+\_\+filter callback function. \begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{N\+E\+T\+I\+F\+\_\+\+D\+E\+L\+\_\+\+M\+A\+C\+\_\+\+F\+I\+L\+T\+ER@{N\+E\+T\+I\+F\+\_\+\+D\+E\+L\+\_\+\+M\+A\+C\+\_\+\+F\+I\+L\+T\+ER}!openmote-\/cc2538/lwip/src/include/lwip/netif.\+h@{openmote-\/cc2538/lwip/src/include/lwip/netif.\+h}}\index{openmote-\/cc2538/lwip/src/include/lwip/netif.\+h@{openmote-\/cc2538/lwip/src/include/lwip/netif.\+h}!N\+E\+T\+I\+F\+\_\+\+D\+E\+L\+\_\+\+M\+A\+C\+\_\+\+F\+I\+L\+T\+ER@{N\+E\+T\+I\+F\+\_\+\+D\+E\+L\+\_\+\+M\+A\+C\+\_\+\+F\+I\+L\+T\+ER}}}\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2netif_8h_ab194ec4241fad8b6e9aac51e3ec23de0a7ad3406353906deb4e64ebeed349e07e}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2netif_8h_ab194ec4241fad8b6e9aac51e3ec23de0a7ad3406353906deb4e64ebeed349e07e}} 
+N\+E\+T\+I\+F\+\_\+\+D\+E\+L\+\_\+\+M\+A\+C\+\_\+\+F\+I\+L\+T\+ER&Delete a filter entry \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{N\+E\+T\+I\+F\+\_\+\+A\+D\+D\+\_\+\+M\+A\+C\+\_\+\+F\+I\+L\+T\+ER@{N\+E\+T\+I\+F\+\_\+\+A\+D\+D\+\_\+\+M\+A\+C\+\_\+\+F\+I\+L\+T\+ER}!openmote-\/cc2538/lwip/src/include/lwip/netif.\+h@{openmote-\/cc2538/lwip/src/include/lwip/netif.\+h}}\index{openmote-\/cc2538/lwip/src/include/lwip/netif.\+h@{openmote-\/cc2538/lwip/src/include/lwip/netif.\+h}!N\+E\+T\+I\+F\+\_\+\+A\+D\+D\+\_\+\+M\+A\+C\+\_\+\+F\+I\+L\+T\+ER@{N\+E\+T\+I\+F\+\_\+\+A\+D\+D\+\_\+\+M\+A\+C\+\_\+\+F\+I\+L\+T\+ER}}}\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2netif_8h_ab194ec4241fad8b6e9aac51e3ec23de0a4186fbaf94be956ea1a3b02cd1cccb1f}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2netif_8h_ab194ec4241fad8b6e9aac51e3ec23de0a4186fbaf94be956ea1a3b02cd1cccb1f}} 
+N\+E\+T\+I\+F\+\_\+\+A\+D\+D\+\_\+\+M\+A\+C\+\_\+\+F\+I\+L\+T\+ER&Add a filter entry \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{N\+E\+T\+I\+F\+\_\+\+D\+E\+L\+\_\+\+M\+A\+C\+\_\+\+F\+I\+L\+T\+ER@{N\+E\+T\+I\+F\+\_\+\+D\+E\+L\+\_\+\+M\+A\+C\+\_\+\+F\+I\+L\+T\+ER}!openmote-\/cc2538/lwip/src/include/lwip/netif.\+h@{openmote-\/cc2538/lwip/src/include/lwip/netif.\+h}}\index{openmote-\/cc2538/lwip/src/include/lwip/netif.\+h@{openmote-\/cc2538/lwip/src/include/lwip/netif.\+h}!N\+E\+T\+I\+F\+\_\+\+D\+E\+L\+\_\+\+M\+A\+C\+\_\+\+F\+I\+L\+T\+ER@{N\+E\+T\+I\+F\+\_\+\+D\+E\+L\+\_\+\+M\+A\+C\+\_\+\+F\+I\+L\+T\+ER}}}\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2netif_8h_ab194ec4241fad8b6e9aac51e3ec23de0a7ad3406353906deb4e64ebeed349e07e}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2netif_8h_ab194ec4241fad8b6e9aac51e3ec23de0a7ad3406353906deb4e64ebeed349e07e}} 
+N\+E\+T\+I\+F\+\_\+\+D\+E\+L\+\_\+\+M\+A\+C\+\_\+\+F\+I\+L\+T\+ER&Delete a filter entry \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{N\+E\+T\+I\+F\+\_\+\+A\+D\+D\+\_\+\+M\+A\+C\+\_\+\+F\+I\+L\+T\+ER@{N\+E\+T\+I\+F\+\_\+\+A\+D\+D\+\_\+\+M\+A\+C\+\_\+\+F\+I\+L\+T\+ER}!openmote-\/cc2538/lwip/src/include/lwip/netif.\+h@{openmote-\/cc2538/lwip/src/include/lwip/netif.\+h}}\index{openmote-\/cc2538/lwip/src/include/lwip/netif.\+h@{openmote-\/cc2538/lwip/src/include/lwip/netif.\+h}!N\+E\+T\+I\+F\+\_\+\+A\+D\+D\+\_\+\+M\+A\+C\+\_\+\+F\+I\+L\+T\+ER@{N\+E\+T\+I\+F\+\_\+\+A\+D\+D\+\_\+\+M\+A\+C\+\_\+\+F\+I\+L\+T\+ER}}}\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2netif_8h_ab194ec4241fad8b6e9aac51e3ec23de0a4186fbaf94be956ea1a3b02cd1cccb1f}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2netif_8h_ab194ec4241fad8b6e9aac51e3ec23de0a4186fbaf94be956ea1a3b02cd1cccb1f}} 
+N\+E\+T\+I\+F\+\_\+\+A\+D\+D\+\_\+\+M\+A\+C\+\_\+\+F\+I\+L\+T\+ER&Add a filter entry \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2netif_8h_a0f4a53e47c840904f824a2a1c0d4ebf4}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2netif_8h_a0f4a53e47c840904f824a2a1c0d4ebf4}} 
+\index{openmote-\/cc2538/lwip/src/include/lwip/netif.\+h@{openmote-\/cc2538/lwip/src/include/lwip/netif.\+h}!netif\+\_\+init@{netif\+\_\+init}}
+\index{netif\+\_\+init@{netif\+\_\+init}!openmote-\/cc2538/lwip/src/include/lwip/netif.\+h@{openmote-\/cc2538/lwip/src/include/lwip/netif.\+h}}
+\subsubsection{\texorpdfstring{netif\+\_\+init()}{netif\_init()}}
+{\footnotesize\ttfamily void netif\+\_\+init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{openmote-cc2538_2lwip_2src_2include_2lwip_2netif_8h_a0f4a53e47c840904f824a2a1c0d4ebf4_cgraph}
+\end{center}
+\end{figure}
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2netif_8h_a3d0925cbce550ed461907aee816713ba}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2netif_8h_a3d0925cbce550ed461907aee816713ba}} 
+\index{openmote-\/cc2538/lwip/src/include/lwip/netif.\+h@{openmote-\/cc2538/lwip/src/include/lwip/netif.\+h}!netif\+\_\+default@{netif\+\_\+default}}
+\index{netif\+\_\+default@{netif\+\_\+default}!openmote-\/cc2538/lwip/src/include/lwip/netif.\+h@{openmote-\/cc2538/lwip/src/include/lwip/netif.\+h}}
+\subsubsection{\texorpdfstring{netif\+\_\+default}{netif\_default}}
+{\footnotesize\ttfamily struct \hyperlink{structnetif}{netif}$\ast$ netif\+\_\+default}
+
+The default network interface. \mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2netif_8h_a1c8141eaa98f6dc6dfddbb23a706656c}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2netif_8h_a1c8141eaa98f6dc6dfddbb23a706656c}} 
+\index{openmote-\/cc2538/lwip/src/include/lwip/netif.\+h@{openmote-\/cc2538/lwip/src/include/lwip/netif.\+h}!netif\+\_\+list@{netif\+\_\+list}}
+\index{netif\+\_\+list@{netif\+\_\+list}!openmote-\/cc2538/lwip/src/include/lwip/netif.\+h@{openmote-\/cc2538/lwip/src/include/lwip/netif.\+h}}
+\subsubsection{\texorpdfstring{netif\+\_\+list}{netif\_list}}
+{\footnotesize\ttfamily struct \hyperlink{structnetif}{netif}$\ast$ netif\+\_\+list}
+
+The list of network interfaces. 

@@ -1,0 +1,58 @@
+\subsection*{About}
+
+This is a test application for the U8g2 package. This package is a graphical display library, including display drivers.
+
+\subsection*{Usage}
+
+This test application will initialize the U8g2 to output on one of the following\+:
+
+
+\begin{DoxyItemize}
+\item output to terminal virtual screen.
+\item output to S\+DL virtual screen.
+\item output to I2C graphics screen.
+\item output to S\+PI graphics screen.
+\end{DoxyItemize}
+
+Note\+: you may have to run {\ttfamily make clean} between different output modes.
+
+\subsubsection*{Output to terminal}
+
+To output to this virtual screen, supply {\ttfamily T\+E\+S\+T\+\_\+\+O\+U\+T\+P\+UT=1} to the {\ttfamily make} command.
+
+\subsubsection*{Output to S\+DL}
+
+To output to this virtual screen, supply {\ttfamily T\+E\+S\+T\+\_\+\+O\+U\+T\+P\+UT=2} to the {\ttfamily make} command.
+
+This is a native-\/only option and requires S\+DL (32-\/bits) to be installed.
+
+\subsubsection*{Output to S\+PI}
+
+To output to screen, supply {\ttfamily T\+E\+S\+T\+\_\+\+O\+U\+T\+P\+UT=3} to the {\ttfamily make} command.
+
+
+\begin{DoxyItemize}
+\item {\ttfamily T\+E\+S\+T\+\_\+\+S\+PI} --- The S\+PI device.
+\item {\ttfamily T\+E\+S\+T\+\_\+\+P\+I\+N\+\_\+\+CS} --- If applicable, the CS pin.
+\item {\ttfamily T\+E\+S\+T\+\_\+\+P\+I\+N\+\_\+\+DC} --- If applicable, the Command/\+Data pin.
+\item {\ttfamily T\+E\+S\+T\+\_\+\+P\+I\+N\+\_\+\+R\+E\+S\+ET} --- If applicable, the reset pin.
+\item {\ttfamily T\+E\+S\+T\+\_\+\+D\+I\+S\+P\+L\+AY} --- The used display driver (see \href{https://github.com/olikraus/u8g2/wiki/u8g2setupc}{\tt https\+://github.\+com/olikraus/u8g2/wiki/u8g2setupc}). Make sure you select a S\+PI compatible display.
+\end{DoxyItemize}
+
+\subsubsection*{Output to I2C}
+
+To output to screen, supply {\ttfamily T\+E\+S\+T\+\_\+\+O\+U\+T\+P\+UT=4} to the {\ttfamily make} command.
+
+Furthermore, you can configure the following\+:
+
+
+\begin{DoxyItemize}
+\item {\ttfamily T\+E\+S\+T\+\_\+\+I2C} --- The I2C device.
+\item {\ttfamily T\+E\+S\+T\+\_\+\+A\+D\+DR} --- The address to write commands to.
+\item {\ttfamily T\+E\+S\+T\+\_\+\+P\+I\+N\+\_\+\+R\+E\+S\+ET} --- If applicable, the reset pin.
+\item {\ttfamily T\+E\+S\+T\+\_\+\+D\+I\+S\+P\+L\+AY} --- The used display driver (see \href{https://github.com/olikraus/u8g2/wiki/u8g2setupc}{\tt https\+://github.\+com/olikraus/u8g2/wiki/u8g2setupc}). Make sure you select an I2C compatible display.
+\end{DoxyItemize}
+
+\subsection*{Expected result}
+
+The output of this test depends on the output mode and used hardware. If it works, the application cycles through three screens with the text\+: \textquotesingle{}This is R\+I\+O\+T-\/\+OS\textquotesingle{}. 

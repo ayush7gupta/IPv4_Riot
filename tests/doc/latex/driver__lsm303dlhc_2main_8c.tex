@@ -1,0 +1,86 @@
+\hypertarget{driver__lsm303dlhc_2main_8c}{}\section{/home/ayush/\+R\+I\+O\+T/tests/driver\+\_\+lsm303dlhc/main.c File Reference}
+\label{driver__lsm303dlhc_2main_8c}\index{/home/ayush/\+R\+I\+O\+T/tests/driver\+\_\+lsm303dlhc/main.\+c@{/home/ayush/\+R\+I\+O\+T/tests/driver\+\_\+lsm303dlhc/main.\+c}}
+
+
+Test application for the L\+S\+M303\+D\+L\+HC accelerometer/magnetometer.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}xtimer.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}lsm303dlhc.\+h\char`\"{}}\newline
+Include dependency graph for main.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=288pt]{driver__lsm303dlhc_2main_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{driver__lsm303dlhc_2main_8c_a44e89d523436fcbbf2c56e4fb335d509}{S\+L\+E\+EP}~(100 $\ast$ 1000\+U)
+\item 
+\#define \hyperlink{driver__lsm303dlhc_2main_8c_a5e722183b25f4decbcebb2946ab20e8b}{A\+C\+C\+\_\+\+S\+\_\+\+R\+A\+TE}~L\+S\+M303\+D\+L\+H\+C\+\_\+\+A\+C\+C\+\_\+\+S\+A\+M\+P\+L\+E\+\_\+\+R\+A\+T\+E\+\_\+10\+HZ
+\item 
+\#define \hyperlink{driver__lsm303dlhc_2main_8c_a12c7b17bb03dc66dac226cdfe74f3c2d}{A\+C\+C\+\_\+\+S\+C\+A\+LE}~L\+S\+M303\+D\+L\+H\+C\+\_\+\+A\+C\+C\+\_\+\+S\+C\+A\+L\+E\+\_\+2G
+\item 
+\#define \hyperlink{driver__lsm303dlhc_2main_8c_a37f68f9bd6d68bb6546551b368d5567e}{M\+A\+G\+\_\+\+S\+\_\+\+R\+A\+TE}~L\+S\+M303\+D\+L\+H\+C\+\_\+\+M\+A\+G\+\_\+\+S\+A\+M\+P\+L\+E\+\_\+\+R\+A\+T\+E\+\_\+75\+HZ
+\item 
+\#define \hyperlink{driver__lsm303dlhc_2main_8c_a6981acd242474d60b648a5f14e3ad35f}{M\+A\+G\+\_\+\+G\+A\+IN}~L\+S\+M303\+D\+L\+H\+C\+\_\+\+M\+A\+G\+\_\+\+G\+A\+I\+N\+\_\+400\+\_\+355\+\_\+\+G\+A\+U\+SS
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{driver__lsm303dlhc_2main_8c_a840291bc02cba5474a4cb46a9b9566fe}{main} (void)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Test application for the L\+S\+M303\+D\+L\+HC accelerometer/magnetometer. 
+
+\begin{DoxyAuthor}{Author}
+Thomas Eichinger \href{mailto:thomas.eichinger@fu-berlin.de}{\tt thomas.\+eichinger@fu-\/berlin.\+de} 
+\end{DoxyAuthor}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{driver__lsm303dlhc_2main_8c_a5e722183b25f4decbcebb2946ab20e8b}\label{driver__lsm303dlhc_2main_8c_a5e722183b25f4decbcebb2946ab20e8b}} 
+\index{driver\+\_\+lsm303dlhc/main.\+c@{driver\+\_\+lsm303dlhc/main.\+c}!A\+C\+C\+\_\+\+S\+\_\+\+R\+A\+TE@{A\+C\+C\+\_\+\+S\+\_\+\+R\+A\+TE}}
+\index{A\+C\+C\+\_\+\+S\+\_\+\+R\+A\+TE@{A\+C\+C\+\_\+\+S\+\_\+\+R\+A\+TE}!driver\+\_\+lsm303dlhc/main.\+c@{driver\+\_\+lsm303dlhc/main.\+c}}
+\subsubsection{\texorpdfstring{A\+C\+C\+\_\+\+S\+\_\+\+R\+A\+TE}{ACC\_S\_RATE}}
+{\footnotesize\ttfamily \#define A\+C\+C\+\_\+\+S\+\_\+\+R\+A\+TE~L\+S\+M303\+D\+L\+H\+C\+\_\+\+A\+C\+C\+\_\+\+S\+A\+M\+P\+L\+E\+\_\+\+R\+A\+T\+E\+\_\+10\+HZ}
+
+\mbox{\Hypertarget{driver__lsm303dlhc_2main_8c_a12c7b17bb03dc66dac226cdfe74f3c2d}\label{driver__lsm303dlhc_2main_8c_a12c7b17bb03dc66dac226cdfe74f3c2d}} 
+\index{driver\+\_\+lsm303dlhc/main.\+c@{driver\+\_\+lsm303dlhc/main.\+c}!A\+C\+C\+\_\+\+S\+C\+A\+LE@{A\+C\+C\+\_\+\+S\+C\+A\+LE}}
+\index{A\+C\+C\+\_\+\+S\+C\+A\+LE@{A\+C\+C\+\_\+\+S\+C\+A\+LE}!driver\+\_\+lsm303dlhc/main.\+c@{driver\+\_\+lsm303dlhc/main.\+c}}
+\subsubsection{\texorpdfstring{A\+C\+C\+\_\+\+S\+C\+A\+LE}{ACC\_SCALE}}
+{\footnotesize\ttfamily \#define A\+C\+C\+\_\+\+S\+C\+A\+LE~L\+S\+M303\+D\+L\+H\+C\+\_\+\+A\+C\+C\+\_\+\+S\+C\+A\+L\+E\+\_\+2G}
+
+\mbox{\Hypertarget{driver__lsm303dlhc_2main_8c_a6981acd242474d60b648a5f14e3ad35f}\label{driver__lsm303dlhc_2main_8c_a6981acd242474d60b648a5f14e3ad35f}} 
+\index{driver\+\_\+lsm303dlhc/main.\+c@{driver\+\_\+lsm303dlhc/main.\+c}!M\+A\+G\+\_\+\+G\+A\+IN@{M\+A\+G\+\_\+\+G\+A\+IN}}
+\index{M\+A\+G\+\_\+\+G\+A\+IN@{M\+A\+G\+\_\+\+G\+A\+IN}!driver\+\_\+lsm303dlhc/main.\+c@{driver\+\_\+lsm303dlhc/main.\+c}}
+\subsubsection{\texorpdfstring{M\+A\+G\+\_\+\+G\+A\+IN}{MAG\_GAIN}}
+{\footnotesize\ttfamily \#define M\+A\+G\+\_\+\+G\+A\+IN~L\+S\+M303\+D\+L\+H\+C\+\_\+\+M\+A\+G\+\_\+\+G\+A\+I\+N\+\_\+400\+\_\+355\+\_\+\+G\+A\+U\+SS}
+
+\mbox{\Hypertarget{driver__lsm303dlhc_2main_8c_a37f68f9bd6d68bb6546551b368d5567e}\label{driver__lsm303dlhc_2main_8c_a37f68f9bd6d68bb6546551b368d5567e}} 
+\index{driver\+\_\+lsm303dlhc/main.\+c@{driver\+\_\+lsm303dlhc/main.\+c}!M\+A\+G\+\_\+\+S\+\_\+\+R\+A\+TE@{M\+A\+G\+\_\+\+S\+\_\+\+R\+A\+TE}}
+\index{M\+A\+G\+\_\+\+S\+\_\+\+R\+A\+TE@{M\+A\+G\+\_\+\+S\+\_\+\+R\+A\+TE}!driver\+\_\+lsm303dlhc/main.\+c@{driver\+\_\+lsm303dlhc/main.\+c}}
+\subsubsection{\texorpdfstring{M\+A\+G\+\_\+\+S\+\_\+\+R\+A\+TE}{MAG\_S\_RATE}}
+{\footnotesize\ttfamily \#define M\+A\+G\+\_\+\+S\+\_\+\+R\+A\+TE~L\+S\+M303\+D\+L\+H\+C\+\_\+\+M\+A\+G\+\_\+\+S\+A\+M\+P\+L\+E\+\_\+\+R\+A\+T\+E\+\_\+75\+HZ}
+
+\mbox{\Hypertarget{driver__lsm303dlhc_2main_8c_a44e89d523436fcbbf2c56e4fb335d509}\label{driver__lsm303dlhc_2main_8c_a44e89d523436fcbbf2c56e4fb335d509}} 
+\index{driver\+\_\+lsm303dlhc/main.\+c@{driver\+\_\+lsm303dlhc/main.\+c}!S\+L\+E\+EP@{S\+L\+E\+EP}}
+\index{S\+L\+E\+EP@{S\+L\+E\+EP}!driver\+\_\+lsm303dlhc/main.\+c@{driver\+\_\+lsm303dlhc/main.\+c}}
+\subsubsection{\texorpdfstring{S\+L\+E\+EP}{SLEEP}}
+{\footnotesize\ttfamily \#define S\+L\+E\+EP~(100 $\ast$ 1000\+U)}
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{driver__lsm303dlhc_2main_8c_a840291bc02cba5474a4cb46a9b9566fe}\label{driver__lsm303dlhc_2main_8c_a840291bc02cba5474a4cb46a9b9566fe}} 
+\index{driver\+\_\+lsm303dlhc/main.\+c@{driver\+\_\+lsm303dlhc/main.\+c}!main@{main}}
+\index{main@{main}!driver\+\_\+lsm303dlhc/main.\+c@{driver\+\_\+lsm303dlhc/main.\+c}}
+\subsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+

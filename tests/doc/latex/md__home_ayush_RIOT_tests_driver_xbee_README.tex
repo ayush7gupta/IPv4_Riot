@@ -1,0 +1,15 @@
+This is a manual test application for testing the Xbee S1 network device driver.
+
+For running this test, you need to connect the following pins of a Xbee S1 module to your board\+:
+\begin{DoxyItemize}
+\item U\+A\+RT RX
+\item U\+A\+RT TX
+\item V\+CC (3\+V3)
+\item G\+ND
+\end{DoxyItemize}
+
+N\+O\+TE\+: when you use an Arduino Xbee shield, the Xbee module is connected to the same U\+A\+RT as R\+I\+O\+Ts standard out. In this case you must redefine U\+A\+R\+T\+\_\+\+S\+T\+D\+I\+O\+\_\+\+D\+EV to another U\+A\+RT interface in the board.\+h and connect a U\+A\+R\+T-\/to-\/\+U\+SB adapter to that U\+A\+RT.
+
+\section*{Usage}
+
+For testing the Xbee driver you can use the netif shell commands that are included in this application. 

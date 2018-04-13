@@ -1,0 +1,9 @@
+Make note of the PC clock when starting this test. Let it run for a while, and compare the printed time against the expected time from the PC clock. The difference is the R\+I\+OT timer drift, this is likely caused by either\+:
+
+
+\begin{DoxyItemize}
+\item an inaccurate hardware timer, or
+\item bugs in the software (xtimer or periph/timer)
+\end{DoxyItemize}
+
+This test will run a periodic timer every {\ttfamily T\+E\+S\+T\+\_\+\+I\+N\+T\+E\+R\+V\+AL} microseconds ({\ttfamily T\+E\+S\+T\+\_\+\+HZ}). The current time will be printed once per second, along with the difference between the actual and expected {\ttfamily xtimer\+\_\+now} value. The first output variable {\ttfamily drift}, represents the total offset since start between {\ttfamily xtimer\+\_\+now} and the expected time. The second output variable {\ttfamily jitter}, represents the difference in drift from the last printout. Two other threads are also running only to cause C\+PU load with extra interrupts and context switches. 

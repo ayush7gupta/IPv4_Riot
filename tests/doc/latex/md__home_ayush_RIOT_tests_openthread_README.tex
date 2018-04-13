@@ -1,0 +1,36 @@
+This test demonstrates the \href{https://github.com/openthread/openthread}{\tt Open\+Thread} stack running on R\+I\+OT. When flashed, it will initialize the Open\+Thread Command Line Interface for interacting with the stack.
+
+\subsection*{Quick usage}
+
+To test Open\+Thread on R\+I\+OT, you can do the following\+:
+
+
+\begin{DoxyEnumerate}
+\item Flash nodes with {\ttfamily make B\+O\+A\+RD=$<$target$>$ clean all flash}
+\item Write {\ttfamily panid 0x1234}, {\ttfamily ifconfig up} then {\ttfamily thread start} on one node.
+\item Check the state of the node with {\ttfamily state}. In the beggining should be {\ttfamily detached}, but after some seconds it should become {\ttfamily leader}
+\item Write {\ttfamily panid 0x1234}, {\ttfamily ifconfig up} then {\ttfamily thread start} on another node. The second node should become {\ttfamily child} or {\ttfamily router} if there\textquotesingle{}s a leader.
+\item Get the mesh IP address of a node with {\ttfamily ipaddr}.
+\end{DoxyEnumerate}
+
+
+\begin{DoxyCode}
+ ipaddr
+fdde:ad00:beef::ff:fe00:8000
+fe80::ff:fe00:8000
+fdde:ad00:beef:0:946a:c722:a5d9:8481
+fe80::3984:f4eb:d182:5dae
+\end{DoxyCode}
+
+
+Addresses starting with {\ttfamily fd} are mesh-\/local, and addresses starting with {\ttfamily fe80} are link-\/local. Mesh-\/local address types that contain {\ttfamily ff\+:fe00} are classified as Router Locator (R\+L\+OC). Mesh-\/local address types that don\textquotesingle{}t contain {\ttfamily ff\+:fe00} are Endpoint Identifies (E\+ID).
+\begin{DoxyEnumerate}
+\item Ping from another node to a mesh-\/local address with {\ttfamily ping fdde\+:ad00\+:beef\+:0\+:946a\+:c722\+:a5d9\+:8481}.
+\item You can try I\+E\+E\+E802.\+15.\+4 scan with {\ttfamily scan} command
+\item You can also check other commands with {\ttfamily help}
+\item Enjoy!
+\end{DoxyEnumerate}
+
+\subsection*{Note}
+
+See the https\+://github.com/openthread/openthread/blob/master/src/cli/\+R\+E\+A\+D\+M\+E.\+md \char`\"{}\+Open\+Thread C\+L\+I Reference\char`\"{} for more information about Open\+Thread C\+LI commands 

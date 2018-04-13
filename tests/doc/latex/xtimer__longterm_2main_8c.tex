@@ -1,0 +1,160 @@
+\hypertarget{xtimer__longterm_2main_8c}{}\section{/home/ayush/\+R\+I\+O\+T/tests/xtimer\+\_\+longterm/main.c File Reference}
+\label{xtimer__longterm_2main_8c}\index{/home/ayush/\+R\+I\+O\+T/tests/xtimer\+\_\+longterm/main.\+c@{/home/ayush/\+R\+I\+O\+T/tests/xtimer\+\_\+longterm/main.\+c}}
+
+
+xtimer\+\_\+msg test application  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$time.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}xtimer.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}thread.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}msg.\+h\char`\"{}}\newline
+Include dependency graph for main.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{xtimer__longterm_2main_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{xtimer__longterm_2main_8c_ad80564cb18d59ef35cc3dde3c05fd58d}{M\+S\+G\+\_\+\+L\+O\+NG}~(0xcafe)
+\item 
+\#define \hyperlink{xtimer__longterm_2main_8c_adaf297cd5ef19ef942d10509f9851c4e}{M\+S\+G\+\_\+\+M\+ID}~(0xe5e1)
+\item 
+\#define \hyperlink{xtimer__longterm_2main_8c_a280693dd5126a438edd1e58f85c7878d}{M\+S\+G\+\_\+\+T\+I\+CK}~(0xaffe)
+\item 
+\#define \hyperlink{xtimer__longterm_2main_8c_a1f07f7fd7ce2791bc6d1f71b0a2772ea}{M\+I\+N\+\_\+\+T\+O\+\_\+\+U\+S\+EC}(min)~(60\+U\+L $\ast$ min $\ast$ U\+S\+\_\+\+P\+E\+R\+\_\+\+S\+E\+C)
+\item 
+\#define \hyperlink{xtimer__longterm_2main_8c_aff24ce2b5374c8f46652dde4e1bbc924}{I\+N\+T\+\_\+\+L\+O\+N\+G\+\_\+\+M\+SG}~(\hyperlink{xtimer__longterm_2main_8c_a1f07f7fd7ce2791bc6d1f71b0a2772ea}{M\+I\+N\+\_\+\+T\+O\+\_\+\+U\+S\+EC}(14))
+\item 
+\#define \hyperlink{xtimer__longterm_2main_8c_a3fcd20682afe40b99e0ecc90e80254e6}{I\+N\+T\+\_\+\+L\+O\+N\+G\+\_\+\+S\+L\+E\+EP}~(\hyperlink{xtimer__longterm_2main_8c_a1f07f7fd7ce2791bc6d1f71b0a2772ea}{M\+I\+N\+\_\+\+T\+O\+\_\+\+U\+S\+EC}(18))
+\item 
+\#define \hyperlink{xtimer__longterm_2main_8c_ae4d8a08fd291b9d970f20d99cec3da5a}{I\+N\+T\+\_\+\+M\+I\+D\+\_\+\+M\+SG}~(\hyperlink{xtimer__longterm_2main_8c_a1f07f7fd7ce2791bc6d1f71b0a2772ea}{M\+I\+N\+\_\+\+T\+O\+\_\+\+U\+S\+EC}(3))
+\item 
+\#define \hyperlink{xtimer__longterm_2main_8c_a26a66001b49b3721d6651f0e3f821c64}{I\+N\+T\+\_\+\+M\+I\+D\+\_\+\+S\+L\+E\+EP}~(\hyperlink{xtimer__longterm_2main_8c_a1f07f7fd7ce2791bc6d1f71b0a2772ea}{M\+I\+N\+\_\+\+T\+O\+\_\+\+U\+S\+EC}(5))
+\item 
+\#define \hyperlink{xtimer__longterm_2main_8c_aa72ff959f4e897e85011686d9c8c73dc}{I\+N\+T\+\_\+\+S\+H\+O\+RT}~(50\+U\+L $\ast$ U\+S\+\_\+\+P\+E\+R\+\_\+\+M\+S)
+\item 
+\#define \hyperlink{xtimer__longterm_2main_8c_ab84e417af2310871bb771163786190c4}{S\+H\+O\+R\+T\+\_\+\+M\+I\+N\+\_\+\+R\+E\+A\+C\+H\+ED}~(60 $\ast$ 20)    /$\ast$ 60 $\ast$ 20 $\ast$ 50ms = 1min $\ast$/
+\item 
+\#define \hyperlink{xtimer__longterm_2main_8c_ad26bfccbdcf95b9f58ac00c02999c2ea}{M\+S\+G\+\_\+\+Q\+\_\+\+S\+I\+ZE}~(8\+U)
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void $\ast$ \hyperlink{xtimer__longterm_2main_8c_a019dca1b60f7501c24cb51f0dff8c76e}{long\+\_\+sleep} (void $\ast$arg)
+\item 
+void $\ast$ \hyperlink{xtimer__longterm_2main_8c_ae1c82d0d8f9902a6a581d5a645156e1f}{mid\+\_\+sleep} (void $\ast$arg)
+\item 
+void $\ast$ \hyperlink{xtimer__longterm_2main_8c_ae5e581c99b3699f4b103b71b88d5b6b1}{ticker} (void $\ast$arg)
+\item 
+int \hyperlink{xtimer__longterm_2main_8c_a840291bc02cba5474a4cb46a9b9566fe}{main} (void)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+xtimer\+\_\+msg test application 
+
+\begin{DoxyAuthor}{Author}
+Hauke Petersen \href{mailto:hauke.petersen@fu-berlin.de}{\tt hauke.\+petersen@fu-\/berlin.\+de} 
+\end{DoxyAuthor}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{xtimer__longterm_2main_8c_aff24ce2b5374c8f46652dde4e1bbc924}\label{xtimer__longterm_2main_8c_aff24ce2b5374c8f46652dde4e1bbc924}} 
+\index{xtimer\+\_\+longterm/main.\+c@{xtimer\+\_\+longterm/main.\+c}!I\+N\+T\+\_\+\+L\+O\+N\+G\+\_\+\+M\+SG@{I\+N\+T\+\_\+\+L\+O\+N\+G\+\_\+\+M\+SG}}
+\index{I\+N\+T\+\_\+\+L\+O\+N\+G\+\_\+\+M\+SG@{I\+N\+T\+\_\+\+L\+O\+N\+G\+\_\+\+M\+SG}!xtimer\+\_\+longterm/main.\+c@{xtimer\+\_\+longterm/main.\+c}}
+\subsubsection{\texorpdfstring{I\+N\+T\+\_\+\+L\+O\+N\+G\+\_\+\+M\+SG}{INT\_LONG\_MSG}}
+{\footnotesize\ttfamily \#define I\+N\+T\+\_\+\+L\+O\+N\+G\+\_\+\+M\+SG~(\hyperlink{xtimer__longterm_2main_8c_a1f07f7fd7ce2791bc6d1f71b0a2772ea}{M\+I\+N\+\_\+\+T\+O\+\_\+\+U\+S\+EC}(14))}
+
+\mbox{\Hypertarget{xtimer__longterm_2main_8c_a3fcd20682afe40b99e0ecc90e80254e6}\label{xtimer__longterm_2main_8c_a3fcd20682afe40b99e0ecc90e80254e6}} 
+\index{xtimer\+\_\+longterm/main.\+c@{xtimer\+\_\+longterm/main.\+c}!I\+N\+T\+\_\+\+L\+O\+N\+G\+\_\+\+S\+L\+E\+EP@{I\+N\+T\+\_\+\+L\+O\+N\+G\+\_\+\+S\+L\+E\+EP}}
+\index{I\+N\+T\+\_\+\+L\+O\+N\+G\+\_\+\+S\+L\+E\+EP@{I\+N\+T\+\_\+\+L\+O\+N\+G\+\_\+\+S\+L\+E\+EP}!xtimer\+\_\+longterm/main.\+c@{xtimer\+\_\+longterm/main.\+c}}
+\subsubsection{\texorpdfstring{I\+N\+T\+\_\+\+L\+O\+N\+G\+\_\+\+S\+L\+E\+EP}{INT\_LONG\_SLEEP}}
+{\footnotesize\ttfamily \#define I\+N\+T\+\_\+\+L\+O\+N\+G\+\_\+\+S\+L\+E\+EP~(\hyperlink{xtimer__longterm_2main_8c_a1f07f7fd7ce2791bc6d1f71b0a2772ea}{M\+I\+N\+\_\+\+T\+O\+\_\+\+U\+S\+EC}(18))}
+
+\mbox{\Hypertarget{xtimer__longterm_2main_8c_ae4d8a08fd291b9d970f20d99cec3da5a}\label{xtimer__longterm_2main_8c_ae4d8a08fd291b9d970f20d99cec3da5a}} 
+\index{xtimer\+\_\+longterm/main.\+c@{xtimer\+\_\+longterm/main.\+c}!I\+N\+T\+\_\+\+M\+I\+D\+\_\+\+M\+SG@{I\+N\+T\+\_\+\+M\+I\+D\+\_\+\+M\+SG}}
+\index{I\+N\+T\+\_\+\+M\+I\+D\+\_\+\+M\+SG@{I\+N\+T\+\_\+\+M\+I\+D\+\_\+\+M\+SG}!xtimer\+\_\+longterm/main.\+c@{xtimer\+\_\+longterm/main.\+c}}
+\subsubsection{\texorpdfstring{I\+N\+T\+\_\+\+M\+I\+D\+\_\+\+M\+SG}{INT\_MID\_MSG}}
+{\footnotesize\ttfamily \#define I\+N\+T\+\_\+\+M\+I\+D\+\_\+\+M\+SG~(\hyperlink{xtimer__longterm_2main_8c_a1f07f7fd7ce2791bc6d1f71b0a2772ea}{M\+I\+N\+\_\+\+T\+O\+\_\+\+U\+S\+EC}(3))}
+
+\mbox{\Hypertarget{xtimer__longterm_2main_8c_a26a66001b49b3721d6651f0e3f821c64}\label{xtimer__longterm_2main_8c_a26a66001b49b3721d6651f0e3f821c64}} 
+\index{xtimer\+\_\+longterm/main.\+c@{xtimer\+\_\+longterm/main.\+c}!I\+N\+T\+\_\+\+M\+I\+D\+\_\+\+S\+L\+E\+EP@{I\+N\+T\+\_\+\+M\+I\+D\+\_\+\+S\+L\+E\+EP}}
+\index{I\+N\+T\+\_\+\+M\+I\+D\+\_\+\+S\+L\+E\+EP@{I\+N\+T\+\_\+\+M\+I\+D\+\_\+\+S\+L\+E\+EP}!xtimer\+\_\+longterm/main.\+c@{xtimer\+\_\+longterm/main.\+c}}
+\subsubsection{\texorpdfstring{I\+N\+T\+\_\+\+M\+I\+D\+\_\+\+S\+L\+E\+EP}{INT\_MID\_SLEEP}}
+{\footnotesize\ttfamily \#define I\+N\+T\+\_\+\+M\+I\+D\+\_\+\+S\+L\+E\+EP~(\hyperlink{xtimer__longterm_2main_8c_a1f07f7fd7ce2791bc6d1f71b0a2772ea}{M\+I\+N\+\_\+\+T\+O\+\_\+\+U\+S\+EC}(5))}
+
+\mbox{\Hypertarget{xtimer__longterm_2main_8c_aa72ff959f4e897e85011686d9c8c73dc}\label{xtimer__longterm_2main_8c_aa72ff959f4e897e85011686d9c8c73dc}} 
+\index{xtimer\+\_\+longterm/main.\+c@{xtimer\+\_\+longterm/main.\+c}!I\+N\+T\+\_\+\+S\+H\+O\+RT@{I\+N\+T\+\_\+\+S\+H\+O\+RT}}
+\index{I\+N\+T\+\_\+\+S\+H\+O\+RT@{I\+N\+T\+\_\+\+S\+H\+O\+RT}!xtimer\+\_\+longterm/main.\+c@{xtimer\+\_\+longterm/main.\+c}}
+\subsubsection{\texorpdfstring{I\+N\+T\+\_\+\+S\+H\+O\+RT}{INT\_SHORT}}
+{\footnotesize\ttfamily \#define I\+N\+T\+\_\+\+S\+H\+O\+RT~(50\+U\+L $\ast$ U\+S\+\_\+\+P\+E\+R\+\_\+\+M\+S)}
+
+\mbox{\Hypertarget{xtimer__longterm_2main_8c_a1f07f7fd7ce2791bc6d1f71b0a2772ea}\label{xtimer__longterm_2main_8c_a1f07f7fd7ce2791bc6d1f71b0a2772ea}} 
+\index{xtimer\+\_\+longterm/main.\+c@{xtimer\+\_\+longterm/main.\+c}!M\+I\+N\+\_\+\+T\+O\+\_\+\+U\+S\+EC@{M\+I\+N\+\_\+\+T\+O\+\_\+\+U\+S\+EC}}
+\index{M\+I\+N\+\_\+\+T\+O\+\_\+\+U\+S\+EC@{M\+I\+N\+\_\+\+T\+O\+\_\+\+U\+S\+EC}!xtimer\+\_\+longterm/main.\+c@{xtimer\+\_\+longterm/main.\+c}}
+\subsubsection{\texorpdfstring{M\+I\+N\+\_\+\+T\+O\+\_\+\+U\+S\+EC}{MIN\_TO\_USEC}}
+{\footnotesize\ttfamily \#define M\+I\+N\+\_\+\+T\+O\+\_\+\+U\+S\+EC(\begin{DoxyParamCaption}\item[{}]{min }\end{DoxyParamCaption})~(60\+U\+L $\ast$ min $\ast$ U\+S\+\_\+\+P\+E\+R\+\_\+\+S\+E\+C)}
+
+\mbox{\Hypertarget{xtimer__longterm_2main_8c_ad80564cb18d59ef35cc3dde3c05fd58d}\label{xtimer__longterm_2main_8c_ad80564cb18d59ef35cc3dde3c05fd58d}} 
+\index{xtimer\+\_\+longterm/main.\+c@{xtimer\+\_\+longterm/main.\+c}!M\+S\+G\+\_\+\+L\+O\+NG@{M\+S\+G\+\_\+\+L\+O\+NG}}
+\index{M\+S\+G\+\_\+\+L\+O\+NG@{M\+S\+G\+\_\+\+L\+O\+NG}!xtimer\+\_\+longterm/main.\+c@{xtimer\+\_\+longterm/main.\+c}}
+\subsubsection{\texorpdfstring{M\+S\+G\+\_\+\+L\+O\+NG}{MSG\_LONG}}
+{\footnotesize\ttfamily \#define M\+S\+G\+\_\+\+L\+O\+NG~(0xcafe)}
+
+\mbox{\Hypertarget{xtimer__longterm_2main_8c_adaf297cd5ef19ef942d10509f9851c4e}\label{xtimer__longterm_2main_8c_adaf297cd5ef19ef942d10509f9851c4e}} 
+\index{xtimer\+\_\+longterm/main.\+c@{xtimer\+\_\+longterm/main.\+c}!M\+S\+G\+\_\+\+M\+ID@{M\+S\+G\+\_\+\+M\+ID}}
+\index{M\+S\+G\+\_\+\+M\+ID@{M\+S\+G\+\_\+\+M\+ID}!xtimer\+\_\+longterm/main.\+c@{xtimer\+\_\+longterm/main.\+c}}
+\subsubsection{\texorpdfstring{M\+S\+G\+\_\+\+M\+ID}{MSG\_MID}}
+{\footnotesize\ttfamily \#define M\+S\+G\+\_\+\+M\+ID~(0xe5e1)}
+
+\mbox{\Hypertarget{xtimer__longterm_2main_8c_ad26bfccbdcf95b9f58ac00c02999c2ea}\label{xtimer__longterm_2main_8c_ad26bfccbdcf95b9f58ac00c02999c2ea}} 
+\index{xtimer\+\_\+longterm/main.\+c@{xtimer\+\_\+longterm/main.\+c}!M\+S\+G\+\_\+\+Q\+\_\+\+S\+I\+ZE@{M\+S\+G\+\_\+\+Q\+\_\+\+S\+I\+ZE}}
+\index{M\+S\+G\+\_\+\+Q\+\_\+\+S\+I\+ZE@{M\+S\+G\+\_\+\+Q\+\_\+\+S\+I\+ZE}!xtimer\+\_\+longterm/main.\+c@{xtimer\+\_\+longterm/main.\+c}}
+\subsubsection{\texorpdfstring{M\+S\+G\+\_\+\+Q\+\_\+\+S\+I\+ZE}{MSG\_Q\_SIZE}}
+{\footnotesize\ttfamily \#define M\+S\+G\+\_\+\+Q\+\_\+\+S\+I\+ZE~(8\+U)}
+
+\mbox{\Hypertarget{xtimer__longterm_2main_8c_a280693dd5126a438edd1e58f85c7878d}\label{xtimer__longterm_2main_8c_a280693dd5126a438edd1e58f85c7878d}} 
+\index{xtimer\+\_\+longterm/main.\+c@{xtimer\+\_\+longterm/main.\+c}!M\+S\+G\+\_\+\+T\+I\+CK@{M\+S\+G\+\_\+\+T\+I\+CK}}
+\index{M\+S\+G\+\_\+\+T\+I\+CK@{M\+S\+G\+\_\+\+T\+I\+CK}!xtimer\+\_\+longterm/main.\+c@{xtimer\+\_\+longterm/main.\+c}}
+\subsubsection{\texorpdfstring{M\+S\+G\+\_\+\+T\+I\+CK}{MSG\_TICK}}
+{\footnotesize\ttfamily \#define M\+S\+G\+\_\+\+T\+I\+CK~(0xaffe)}
+
+\mbox{\Hypertarget{xtimer__longterm_2main_8c_ab84e417af2310871bb771163786190c4}\label{xtimer__longterm_2main_8c_ab84e417af2310871bb771163786190c4}} 
+\index{xtimer\+\_\+longterm/main.\+c@{xtimer\+\_\+longterm/main.\+c}!S\+H\+O\+R\+T\+\_\+\+M\+I\+N\+\_\+\+R\+E\+A\+C\+H\+ED@{S\+H\+O\+R\+T\+\_\+\+M\+I\+N\+\_\+\+R\+E\+A\+C\+H\+ED}}
+\index{S\+H\+O\+R\+T\+\_\+\+M\+I\+N\+\_\+\+R\+E\+A\+C\+H\+ED@{S\+H\+O\+R\+T\+\_\+\+M\+I\+N\+\_\+\+R\+E\+A\+C\+H\+ED}!xtimer\+\_\+longterm/main.\+c@{xtimer\+\_\+longterm/main.\+c}}
+\subsubsection{\texorpdfstring{S\+H\+O\+R\+T\+\_\+\+M\+I\+N\+\_\+\+R\+E\+A\+C\+H\+ED}{SHORT\_MIN\_REACHED}}
+{\footnotesize\ttfamily \#define S\+H\+O\+R\+T\+\_\+\+M\+I\+N\+\_\+\+R\+E\+A\+C\+H\+ED~(60 $\ast$ 20)    /$\ast$ 60 $\ast$ 20 $\ast$ 50ms = 1min $\ast$/}
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{xtimer__longterm_2main_8c_a019dca1b60f7501c24cb51f0dff8c76e}\label{xtimer__longterm_2main_8c_a019dca1b60f7501c24cb51f0dff8c76e}} 
+\index{xtimer\+\_\+longterm/main.\+c@{xtimer\+\_\+longterm/main.\+c}!long\+\_\+sleep@{long\+\_\+sleep}}
+\index{long\+\_\+sleep@{long\+\_\+sleep}!xtimer\+\_\+longterm/main.\+c@{xtimer\+\_\+longterm/main.\+c}}
+\subsubsection{\texorpdfstring{long\+\_\+sleep()}{long\_sleep()}}
+{\footnotesize\ttfamily void$\ast$ long\+\_\+sleep (\begin{DoxyParamCaption}\item[{void $\ast$}]{arg }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{xtimer__longterm_2main_8c_a840291bc02cba5474a4cb46a9b9566fe}\label{xtimer__longterm_2main_8c_a840291bc02cba5474a4cb46a9b9566fe}} 
+\index{xtimer\+\_\+longterm/main.\+c@{xtimer\+\_\+longterm/main.\+c}!main@{main}}
+\index{main@{main}!xtimer\+\_\+longterm/main.\+c@{xtimer\+\_\+longterm/main.\+c}}
+\subsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{xtimer__longterm_2main_8c_ae1c82d0d8f9902a6a581d5a645156e1f}\label{xtimer__longterm_2main_8c_ae1c82d0d8f9902a6a581d5a645156e1f}} 
+\index{xtimer\+\_\+longterm/main.\+c@{xtimer\+\_\+longterm/main.\+c}!mid\+\_\+sleep@{mid\+\_\+sleep}}
+\index{mid\+\_\+sleep@{mid\+\_\+sleep}!xtimer\+\_\+longterm/main.\+c@{xtimer\+\_\+longterm/main.\+c}}
+\subsubsection{\texorpdfstring{mid\+\_\+sleep()}{mid\_sleep()}}
+{\footnotesize\ttfamily void$\ast$ mid\+\_\+sleep (\begin{DoxyParamCaption}\item[{void $\ast$}]{arg }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{xtimer__longterm_2main_8c_ae5e581c99b3699f4b103b71b88d5b6b1}\label{xtimer__longterm_2main_8c_ae5e581c99b3699f4b103b71b88d5b6b1}} 
+\index{xtimer\+\_\+longterm/main.\+c@{xtimer\+\_\+longterm/main.\+c}!ticker@{ticker}}
+\index{ticker@{ticker}!xtimer\+\_\+longterm/main.\+c@{xtimer\+\_\+longterm/main.\+c}}
+\subsubsection{\texorpdfstring{ticker()}{ticker()}}
+{\footnotesize\ttfamily void$\ast$ ticker (\begin{DoxyParamCaption}\item[{void $\ast$}]{arg }\end{DoxyParamCaption})}
+

@@ -1,0 +1,5 @@
+<map id="lwip_init" name="lwip_init">
+<area shape="rect" id="node2" href="$native_2lwip_2src_2include_2lwip_2sys_8h.html#af411a8bc6b7ed4b0af9114e10c959448" title="sys_init" alt="" coords="131,5,197,32"/>
+<area shape="rect" id="node3" href="$native_2lwip_2src_2core_2mem_8c.html#a44a136e3b70c36abb6f8dc060c778113" title="mem_init" alt="" coords="127,56,201,83"/>
+<area shape="rect" id="node4" href="$native_2lwip_2src_2core_2memp_8c.html#a9693e5b1ac2c6b9c0e7870522d45efa2" title="memp_init" alt="" coords="123,107,205,133"/>
+</map>

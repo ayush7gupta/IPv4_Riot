@@ -1,0 +1,114 @@
+\hypertarget{driver__at86rf2xx_2common_8h}{}\section{/home/ayush/\+R\+I\+O\+T/tests/driver\+\_\+at86rf2xx/common.h File Reference}
+\label{driver__at86rf2xx_2common_8h}\index{/home/ayush/\+R\+I\+O\+T/tests/driver\+\_\+at86rf2xx/common.\+h@{/home/ayush/\+R\+I\+O\+T/tests/driver\+\_\+at86rf2xx/common.\+h}}
+
+
+Common header for at86rf2xx tests.  
+
+
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}at86rf2xx.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}at86rf2xx\+\_\+params.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}net/netdev.\+h\char`\"{}}\newline
+Include dependency graph for common.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{driver__at86rf2xx_2common_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{driver__at86rf2xx_2common_8h__dep__incl}
+\end{center}
+\end{figure}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{driver__at86rf2xx_2common_8h_a7289817d00e4398ab5a655eceacd0bbe}{A\+T86\+R\+F2\+X\+X\+\_\+\+N\+UM}~(sizeof(at86rf2xx\+\_\+params) / sizeof(at86rf2xx\+\_\+params\mbox{[}0\mbox{]}))
+\begin{DoxyCompactList}\small\item\em Application-\/internal functions and variables for at86rf2xx tests. \end{DoxyCompactList}\item 
+at86rf2xx\+\_\+t \hyperlink{driver__at86rf2xx_2common_8h_a2d0ac37e3cf6c0fde2bbacf0d57759d0}{devs} \mbox{[}\hyperlink{driver__at86rf2xx_2common_8h_a7289817d00e4398ab5a655eceacd0bbe}{A\+T86\+R\+F2\+X\+X\+\_\+\+N\+UM}\mbox{]}
+\item 
+void \hyperlink{driver__at86rf2xx_2common_8h_ad9ee6ecd79d6c993397de669ab277ce8}{recv} (netdev\+\_\+t $\ast$\hyperlink{periph__spi_2main_8c_ad55ecfacc43495fef791d8c2eec7a002}{dev})
+\item 
+int \hyperlink{driver__at86rf2xx_2common_8h_a20532b4c8d0b1ac431810b555c6c315a}{ifconfig} (int argc, char $\ast$$\ast$argv)
+\item 
+int \hyperlink{driver__at86rf2xx_2common_8h_a57ade080a00c13d9dafb017a9d013ebf}{txtsnd} (int argc, char $\ast$$\ast$argv)
+\item 
+void \hyperlink{driver__at86rf2xx_2common_8h_a182a9d3d43582dd8ffb7ae29318e5710}{print\+\_\+addr} (uint8\+\_\+t $\ast$addr, size\+\_\+t addr\+\_\+len)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Common header for at86rf2xx tests. 
+
+\begin{DoxyAuthor}{Author}
+Martine Lenders \href{mailto:mlenders@inf.fu-berlin.de}{\tt mlenders@inf.\+fu-\/berlin.\+de} 
+\end{DoxyAuthor}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{driver__at86rf2xx_2common_8h_a7289817d00e4398ab5a655eceacd0bbe}\label{driver__at86rf2xx_2common_8h_a7289817d00e4398ab5a655eceacd0bbe}} 
+\index{driver\+\_\+at86rf2xx/common.\+h@{driver\+\_\+at86rf2xx/common.\+h}!A\+T86\+R\+F2\+X\+X\+\_\+\+N\+UM@{A\+T86\+R\+F2\+X\+X\+\_\+\+N\+UM}}
+\index{A\+T86\+R\+F2\+X\+X\+\_\+\+N\+UM@{A\+T86\+R\+F2\+X\+X\+\_\+\+N\+UM}!driver\+\_\+at86rf2xx/common.\+h@{driver\+\_\+at86rf2xx/common.\+h}}
+\subsubsection{\texorpdfstring{A\+T86\+R\+F2\+X\+X\+\_\+\+N\+UM}{AT86RF2XX\_NUM}}
+{\footnotesize\ttfamily \#define A\+T86\+R\+F2\+X\+X\+\_\+\+N\+UM~(sizeof(at86rf2xx\+\_\+params) / sizeof(at86rf2xx\+\_\+params\mbox{[}0\mbox{]}))}
+
+
+
+Application-\/internal functions and variables for at86rf2xx tests. 
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{driver__at86rf2xx_2common_8h_a20532b4c8d0b1ac431810b555c6c315a}\label{driver__at86rf2xx_2common_8h_a20532b4c8d0b1ac431810b555c6c315a}} 
+\index{driver\+\_\+at86rf2xx/common.\+h@{driver\+\_\+at86rf2xx/common.\+h}!ifconfig@{ifconfig}}
+\index{ifconfig@{ifconfig}!driver\+\_\+at86rf2xx/common.\+h@{driver\+\_\+at86rf2xx/common.\+h}}
+\subsubsection{\texorpdfstring{ifconfig()}{ifconfig()}}
+{\footnotesize\ttfamily int ifconfig (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$$\ast$}]{argv }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{driver__at86rf2xx_2common_8h_a182a9d3d43582dd8ffb7ae29318e5710}\label{driver__at86rf2xx_2common_8h_a182a9d3d43582dd8ffb7ae29318e5710}} 
+\index{driver\+\_\+at86rf2xx/common.\+h@{driver\+\_\+at86rf2xx/common.\+h}!print\+\_\+addr@{print\+\_\+addr}}
+\index{print\+\_\+addr@{print\+\_\+addr}!driver\+\_\+at86rf2xx/common.\+h@{driver\+\_\+at86rf2xx/common.\+h}}
+\subsubsection{\texorpdfstring{print\+\_\+addr()}{print\_addr()}}
+{\footnotesize\ttfamily void print\+\_\+addr (\begin{DoxyParamCaption}\item[{uint8\+\_\+t $\ast$}]{addr,  }\item[{size\+\_\+t}]{addr\+\_\+len }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=241pt]{driver__at86rf2xx_2common_8h_a182a9d3d43582dd8ffb7ae29318e5710_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{driver__at86rf2xx_2common_8h_ad9ee6ecd79d6c993397de669ab277ce8}\label{driver__at86rf2xx_2common_8h_ad9ee6ecd79d6c993397de669ab277ce8}} 
+\index{driver\+\_\+at86rf2xx/common.\+h@{driver\+\_\+at86rf2xx/common.\+h}!recv@{recv}}
+\index{recv@{recv}!driver\+\_\+at86rf2xx/common.\+h@{driver\+\_\+at86rf2xx/common.\+h}}
+\subsubsection{\texorpdfstring{recv()}{recv()}}
+{\footnotesize\ttfamily void recv (\begin{DoxyParamCaption}\item[{netdev\+\_\+t $\ast$}]{dev }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=210pt]{driver__at86rf2xx_2common_8h_ad9ee6ecd79d6c993397de669ab277ce8_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{driver__at86rf2xx_2common_8h_a57ade080a00c13d9dafb017a9d013ebf}\label{driver__at86rf2xx_2common_8h_a57ade080a00c13d9dafb017a9d013ebf}} 
+\index{driver\+\_\+at86rf2xx/common.\+h@{driver\+\_\+at86rf2xx/common.\+h}!txtsnd@{txtsnd}}
+\index{txtsnd@{txtsnd}!driver\+\_\+at86rf2xx/common.\+h@{driver\+\_\+at86rf2xx/common.\+h}}
+\subsubsection{\texorpdfstring{txtsnd()}{txtsnd()}}
+{\footnotesize\ttfamily int txtsnd (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$$\ast$}]{argv }\end{DoxyParamCaption})}
+
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{driver__at86rf2xx_2common_8h_a2d0ac37e3cf6c0fde2bbacf0d57759d0}\label{driver__at86rf2xx_2common_8h_a2d0ac37e3cf6c0fde2bbacf0d57759d0}} 
+\index{driver\+\_\+at86rf2xx/common.\+h@{driver\+\_\+at86rf2xx/common.\+h}!devs@{devs}}
+\index{devs@{devs}!driver\+\_\+at86rf2xx/common.\+h@{driver\+\_\+at86rf2xx/common.\+h}}
+\subsubsection{\texorpdfstring{devs}{devs}}
+{\footnotesize\ttfamily at86rf2xx\+\_\+t devs\mbox{[}\hyperlink{driver__at86rf2xx_2common_8h_a7289817d00e4398ab5a655eceacd0bbe}{A\+T86\+R\+F2\+X\+X\+\_\+\+N\+UM}\mbox{]}}
+

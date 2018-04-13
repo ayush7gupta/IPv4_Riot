@@ -1,0 +1,151 @@
+\hypertarget{thread__msg_2main_8c}{}\section{/home/ayush/\+R\+I\+O\+T/tests/thread\+\_\+msg/main.c File Reference}
+\label{thread__msg_2main_8c}\index{/home/ayush/\+R\+I\+O\+T/tests/thread\+\_\+msg/main.\+c@{/home/ayush/\+R\+I\+O\+T/tests/thread\+\_\+msg/main.\+c}}
+
+
+Thread test application.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$inttypes.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}thread.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}msg.\+h\char`\"{}}\newline
+Include dependency graph for main.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=336pt]{thread__msg_2main_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void $\ast$ \hyperlink{thread__msg_2main_8c_a3c66b03d719e75d5075e97a98a57ced0}{thread1} (void $\ast$arg)
+\item 
+void $\ast$ \hyperlink{thread__msg_2main_8c_a38de53ad287311001025efb6b4e55651}{thread2} (void $\ast$arg)
+\item 
+void $\ast$ \hyperlink{thread__msg_2main_8c_a3ad39f2ab9c03c16f7748d33b07a836e}{thread3} (void $\ast$arg)
+\item 
+int \hyperlink{thread__msg_2main_8c_a840291bc02cba5474a4cb46a9b9566fe}{main} (void)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+char \hyperlink{thread__msg_2main_8c_a52d6dfc7b9523823b2df310120281b9b}{t1\+\_\+stack} \mbox{[}T\+H\+R\+E\+A\+D\+\_\+\+S\+T\+A\+C\+K\+S\+I\+Z\+E\+\_\+\+M\+A\+IN\mbox{]}
+\item 
+char \hyperlink{thread__msg_2main_8c_a11ec22beff4605a3188e1b21620605ba}{t2\+\_\+stack} \mbox{[}T\+H\+R\+E\+A\+D\+\_\+\+S\+T\+A\+C\+K\+S\+I\+Z\+E\+\_\+\+M\+A\+IN\mbox{]}
+\item 
+char \hyperlink{thread__msg_2main_8c_a4c6d0bde307dd71ad6999f437d0766e8}{t3\+\_\+stack} \mbox{[}T\+H\+R\+E\+A\+D\+\_\+\+S\+T\+A\+C\+K\+S\+I\+Z\+E\+\_\+\+M\+A\+IN\mbox{]}
+\item 
+kernel\+\_\+pid\+\_\+t \hyperlink{thread__msg_2main_8c_a61b6864b7226411fae33dfd70ed1df65}{p1}
+\item 
+kernel\+\_\+pid\+\_\+t \hyperlink{thread__msg_2main_8c_a36fc3cbc23a49b972bca434ec8adb056}{p2}
+\item 
+kernel\+\_\+pid\+\_\+t \hyperlink{thread__msg_2main_8c_af38fe8235adaeae0a0bea6d054cce077}{p3}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Thread test application. 
+
+\begin{DoxyAuthor}{Author}
+Christian Mehlis \href{mailto:mehlis@inf.fu-berlin.de}{\tt mehlis@inf.\+fu-\/berlin.\+de} 
+\end{DoxyAuthor}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{thread__msg_2main_8c_a840291bc02cba5474a4cb46a9b9566fe}\label{thread__msg_2main_8c_a840291bc02cba5474a4cb46a9b9566fe}} 
+\index{thread\+\_\+msg/main.\+c@{thread\+\_\+msg/main.\+c}!main@{main}}
+\index{main@{main}!thread\+\_\+msg/main.\+c@{thread\+\_\+msg/main.\+c}}
+\subsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=203pt]{thread__msg_2main_8c_a840291bc02cba5474a4cb46a9b9566fe_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{thread__msg_2main_8c_a3c66b03d719e75d5075e97a98a57ced0}\label{thread__msg_2main_8c_a3c66b03d719e75d5075e97a98a57ced0}} 
+\index{thread\+\_\+msg/main.\+c@{thread\+\_\+msg/main.\+c}!thread1@{thread1}}
+\index{thread1@{thread1}!thread\+\_\+msg/main.\+c@{thread\+\_\+msg/main.\+c}}
+\subsubsection{\texorpdfstring{thread1()}{thread1()}}
+{\footnotesize\ttfamily void$\ast$ thread1 (\begin{DoxyParamCaption}\item[{void $\ast$}]{arg }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=203pt]{thread__msg_2main_8c_a3c66b03d719e75d5075e97a98a57ced0_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{thread__msg_2main_8c_a38de53ad287311001025efb6b4e55651}\label{thread__msg_2main_8c_a38de53ad287311001025efb6b4e55651}} 
+\index{thread\+\_\+msg/main.\+c@{thread\+\_\+msg/main.\+c}!thread2@{thread2}}
+\index{thread2@{thread2}!thread\+\_\+msg/main.\+c@{thread\+\_\+msg/main.\+c}}
+\subsubsection{\texorpdfstring{thread2()}{thread2()}}
+{\footnotesize\ttfamily void$\ast$ thread2 (\begin{DoxyParamCaption}\item[{void $\ast$}]{arg }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=203pt]{thread__msg_2main_8c_a38de53ad287311001025efb6b4e55651_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{thread__msg_2main_8c_a3ad39f2ab9c03c16f7748d33b07a836e}\label{thread__msg_2main_8c_a3ad39f2ab9c03c16f7748d33b07a836e}} 
+\index{thread\+\_\+msg/main.\+c@{thread\+\_\+msg/main.\+c}!thread3@{thread3}}
+\index{thread3@{thread3}!thread\+\_\+msg/main.\+c@{thread\+\_\+msg/main.\+c}}
+\subsubsection{\texorpdfstring{thread3()}{thread3()}}
+{\footnotesize\ttfamily void$\ast$ thread3 (\begin{DoxyParamCaption}\item[{void $\ast$}]{arg }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=203pt]{thread__msg_2main_8c_a3ad39f2ab9c03c16f7748d33b07a836e_icgraph}
+\end{center}
+\end{figure}
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{thread__msg_2main_8c_a61b6864b7226411fae33dfd70ed1df65}\label{thread__msg_2main_8c_a61b6864b7226411fae33dfd70ed1df65}} 
+\index{thread\+\_\+msg/main.\+c@{thread\+\_\+msg/main.\+c}!p1@{p1}}
+\index{p1@{p1}!thread\+\_\+msg/main.\+c@{thread\+\_\+msg/main.\+c}}
+\subsubsection{\texorpdfstring{p1}{p1}}
+{\footnotesize\ttfamily kernel\+\_\+pid\+\_\+t p1}
+
+\mbox{\Hypertarget{thread__msg_2main_8c_a36fc3cbc23a49b972bca434ec8adb056}\label{thread__msg_2main_8c_a36fc3cbc23a49b972bca434ec8adb056}} 
+\index{thread\+\_\+msg/main.\+c@{thread\+\_\+msg/main.\+c}!p2@{p2}}
+\index{p2@{p2}!thread\+\_\+msg/main.\+c@{thread\+\_\+msg/main.\+c}}
+\subsubsection{\texorpdfstring{p2}{p2}}
+{\footnotesize\ttfamily kernel\+\_\+pid\+\_\+t p2}
+
+\mbox{\Hypertarget{thread__msg_2main_8c_af38fe8235adaeae0a0bea6d054cce077}\label{thread__msg_2main_8c_af38fe8235adaeae0a0bea6d054cce077}} 
+\index{thread\+\_\+msg/main.\+c@{thread\+\_\+msg/main.\+c}!p3@{p3}}
+\index{p3@{p3}!thread\+\_\+msg/main.\+c@{thread\+\_\+msg/main.\+c}}
+\subsubsection{\texorpdfstring{p3}{p3}}
+{\footnotesize\ttfamily kernel\+\_\+pid\+\_\+t p3}
+
+\mbox{\Hypertarget{thread__msg_2main_8c_a52d6dfc7b9523823b2df310120281b9b}\label{thread__msg_2main_8c_a52d6dfc7b9523823b2df310120281b9b}} 
+\index{thread\+\_\+msg/main.\+c@{thread\+\_\+msg/main.\+c}!t1\+\_\+stack@{t1\+\_\+stack}}
+\index{t1\+\_\+stack@{t1\+\_\+stack}!thread\+\_\+msg/main.\+c@{thread\+\_\+msg/main.\+c}}
+\subsubsection{\texorpdfstring{t1\+\_\+stack}{t1\_stack}}
+{\footnotesize\ttfamily char t1\+\_\+stack\mbox{[}T\+H\+R\+E\+A\+D\+\_\+\+S\+T\+A\+C\+K\+S\+I\+Z\+E\+\_\+\+M\+A\+IN\mbox{]}}
+
+\mbox{\Hypertarget{thread__msg_2main_8c_a11ec22beff4605a3188e1b21620605ba}\label{thread__msg_2main_8c_a11ec22beff4605a3188e1b21620605ba}} 
+\index{thread\+\_\+msg/main.\+c@{thread\+\_\+msg/main.\+c}!t2\+\_\+stack@{t2\+\_\+stack}}
+\index{t2\+\_\+stack@{t2\+\_\+stack}!thread\+\_\+msg/main.\+c@{thread\+\_\+msg/main.\+c}}
+\subsubsection{\texorpdfstring{t2\+\_\+stack}{t2\_stack}}
+{\footnotesize\ttfamily char t2\+\_\+stack\mbox{[}T\+H\+R\+E\+A\+D\+\_\+\+S\+T\+A\+C\+K\+S\+I\+Z\+E\+\_\+\+M\+A\+IN\mbox{]}}
+
+\mbox{\Hypertarget{thread__msg_2main_8c_a4c6d0bde307dd71ad6999f437d0766e8}\label{thread__msg_2main_8c_a4c6d0bde307dd71ad6999f437d0766e8}} 
+\index{thread\+\_\+msg/main.\+c@{thread\+\_\+msg/main.\+c}!t3\+\_\+stack@{t3\+\_\+stack}}
+\index{t3\+\_\+stack@{t3\+\_\+stack}!thread\+\_\+msg/main.\+c@{thread\+\_\+msg/main.\+c}}
+\subsubsection{\texorpdfstring{t3\+\_\+stack}{t3\_stack}}
+{\footnotesize\ttfamily char t3\+\_\+stack\mbox{[}T\+H\+R\+E\+A\+D\+\_\+\+S\+T\+A\+C\+K\+S\+I\+Z\+E\+\_\+\+M\+A\+IN\mbox{]}}
+

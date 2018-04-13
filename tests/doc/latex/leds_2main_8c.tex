@@ -1,0 +1,87 @@
+\hypertarget{leds_2main_8c}{}\section{/home/ayush/\+R\+I\+O\+T/tests/leds/main.c File Reference}
+\label{leds_2main_8c}\index{/home/ayush/\+R\+I\+O\+T/tests/leds/main.\+c@{/home/ayush/\+R\+I\+O\+T/tests/leds/main.\+c}}
+
+
+Test for the on-\/board L\+ED macros.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}board.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}periph\+\_\+conf.\+h\char`\"{}}\newline
+Include dependency graph for main.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{leds_2main_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{leds_2main_8c_a6da11f025f157645ac3bb333415980d1}{D\+E\+L\+A\+Y\+\_\+\+S\+H\+O\+RT}~(500000\+U\+L)
+\item 
+\#define \hyperlink{leds_2main_8c_a74a1511454b99f7b9c356777484104ce}{D\+E\+L\+A\+Y\+\_\+\+L\+O\+NG}~(\hyperlink{leds_2main_8c_a6da11f025f157645ac3bb333415980d1}{D\+E\+L\+A\+Y\+\_\+\+S\+H\+O\+RT} $\ast$ 4)
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{leds_2main_8c_adb3079de9985dce8116a120e6740b328}{dumb\+\_\+delay} (uint32\+\_\+t delay)
+\item 
+int \hyperlink{leds_2main_8c_a840291bc02cba5474a4cb46a9b9566fe}{main} (void)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Test for the on-\/board L\+ED macros. 
+
+\begin{DoxyAuthor}{Author}
+Hauke Petersen \href{mailto:hauke.petersen@fu-berlin.de}{\tt hauke.\+petersen@fu-\/berlin.\+de} 
+\end{DoxyAuthor}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{leds_2main_8c_a74a1511454b99f7b9c356777484104ce}\label{leds_2main_8c_a74a1511454b99f7b9c356777484104ce}} 
+\index{leds/main.\+c@{leds/main.\+c}!D\+E\+L\+A\+Y\+\_\+\+L\+O\+NG@{D\+E\+L\+A\+Y\+\_\+\+L\+O\+NG}}
+\index{D\+E\+L\+A\+Y\+\_\+\+L\+O\+NG@{D\+E\+L\+A\+Y\+\_\+\+L\+O\+NG}!leds/main.\+c@{leds/main.\+c}}
+\subsubsection{\texorpdfstring{D\+E\+L\+A\+Y\+\_\+\+L\+O\+NG}{DELAY\_LONG}}
+{\footnotesize\ttfamily \#define D\+E\+L\+A\+Y\+\_\+\+L\+O\+NG~(\hyperlink{leds_2main_8c_a6da11f025f157645ac3bb333415980d1}{D\+E\+L\+A\+Y\+\_\+\+S\+H\+O\+RT} $\ast$ 4)}
+
+\mbox{\Hypertarget{leds_2main_8c_a6da11f025f157645ac3bb333415980d1}\label{leds_2main_8c_a6da11f025f157645ac3bb333415980d1}} 
+\index{leds/main.\+c@{leds/main.\+c}!D\+E\+L\+A\+Y\+\_\+\+S\+H\+O\+RT@{D\+E\+L\+A\+Y\+\_\+\+S\+H\+O\+RT}}
+\index{D\+E\+L\+A\+Y\+\_\+\+S\+H\+O\+RT@{D\+E\+L\+A\+Y\+\_\+\+S\+H\+O\+RT}!leds/main.\+c@{leds/main.\+c}}
+\subsubsection{\texorpdfstring{D\+E\+L\+A\+Y\+\_\+\+S\+H\+O\+RT}{DELAY\_SHORT}}
+{\footnotesize\ttfamily \#define D\+E\+L\+A\+Y\+\_\+\+S\+H\+O\+RT~(500000\+U\+L)}
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{leds_2main_8c_adb3079de9985dce8116a120e6740b328}\label{leds_2main_8c_adb3079de9985dce8116a120e6740b328}} 
+\index{leds/main.\+c@{leds/main.\+c}!dumb\+\_\+delay@{dumb\+\_\+delay}}
+\index{dumb\+\_\+delay@{dumb\+\_\+delay}!leds/main.\+c@{leds/main.\+c}}
+\subsubsection{\texorpdfstring{dumb\+\_\+delay()}{dumb\_delay()}}
+{\footnotesize\ttfamily void dumb\+\_\+delay (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{delay }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=223pt]{leds_2main_8c_adb3079de9985dce8116a120e6740b328_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{leds_2main_8c_a840291bc02cba5474a4cb46a9b9566fe}\label{leds_2main_8c_a840291bc02cba5474a4cb46a9b9566fe}} 
+\index{leds/main.\+c@{leds/main.\+c}!main@{main}}
+\index{main@{main}!leds/main.\+c@{leds/main.\+c}}
+\subsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=223pt]{leds_2main_8c_a840291bc02cba5474a4cb46a9b9566fe_cgraph}
+\end{center}
+\end{figure}

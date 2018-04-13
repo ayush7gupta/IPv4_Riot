@@ -1,0 +1,655 @@
+\hypertarget{group__compiler__abstraction}{}\section{Compiler/platform abstraction}
+\label{group__compiler__abstraction}\index{Compiler/platform abstraction@{Compiler/platform abstraction}}
+Collaboration diagram for Compiler/platform abstraction\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{group__compiler__abstraction}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group__compiler__abstraction_ga1771b7fb65ee640524d0052f229768c3}{B\+Y\+T\+E\+\_\+\+O\+R\+D\+ER}~\hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2arch_8h_a8782a401fbf55261460863fc2f8df1ce}{L\+I\+T\+T\+L\+E\+\_\+\+E\+N\+D\+I\+AN}
+\item 
+\#define \hyperlink{group__compiler__abstraction_gaccef167be13a500ce30036030a9b142b}{L\+W\+I\+P\+\_\+\+P\+L\+A\+T\+F\+O\+R\+M\+\_\+\+D\+I\+AG}(x)~do \{printf x;\} while(0)
+\item 
+\#define \hyperlink{group__compiler__abstraction_ga7e8bcd0282525704d6dd596bdd1b47d0}{L\+W\+I\+P\+\_\+\+P\+L\+A\+T\+F\+O\+R\+M\+\_\+\+A\+S\+S\+E\+RT}(x)
+\item 
+\#define \hyperlink{group__compiler__abstraction_ga53954d507c09e521ec0d44a2450bb89d}{L\+W\+I\+P\+\_\+\+N\+O\+\_\+\+S\+T\+D\+D\+E\+F\+\_\+H}~0
+\item 
+\#define \hyperlink{group__compiler__abstraction_ga122c754db96ecad23bc6f4541d6360c1}{L\+W\+I\+P\+\_\+\+N\+O\+\_\+\+S\+T\+D\+I\+N\+T\+\_\+H}~0
+\item 
+\#define \hyperlink{group__compiler__abstraction_ga5bf52d6f2729d0c8afd365f69d7d4373}{L\+W\+I\+P\+\_\+\+N\+O\+\_\+\+I\+N\+T\+T\+Y\+P\+E\+S\+\_\+H}~0
+\item 
+\#define \hyperlink{group__compiler__abstraction_ga90c130a97711a9d7e5015c610f2dfe8f}{X8\+\_\+F}~\char`\"{}02\char`\"{} P\+R\+Ix8
+\item 
+\#define \hyperlink{group__compiler__abstraction_gaa9d7f6eb2ee9fcc5eda3545dbb1886e0}{U16\+\_\+F}~P\+R\+Iu16
+\item 
+\#define \hyperlink{group__compiler__abstraction_gac05a82d37afb251470f5e17ca15ab6e9}{S16\+\_\+F}~P\+R\+Id16
+\item 
+\#define \hyperlink{group__compiler__abstraction_ga1418f92673e54a36b6e376109e526382}{X16\+\_\+F}~P\+R\+Ix16
+\item 
+\#define \hyperlink{group__compiler__abstraction_gad8b0a364e95b07cb0c47709fdc6037d6}{U32\+\_\+F}~P\+R\+Iu32
+\item 
+\#define \hyperlink{group__compiler__abstraction_ga4b1eca99bc81e248c7074ea87fc9ca63}{S32\+\_\+F}~P\+R\+Id32
+\item 
+\#define \hyperlink{group__compiler__abstraction_gac219830a93d05c5f18f64ce87a34be14}{X32\+\_\+F}~P\+R\+Ix32
+\item 
+\#define \hyperlink{group__compiler__abstraction_ga4cd359b6110f318ef71814587e1df029}{S\+Z\+T\+\_\+F}~P\+R\+Iu\+P\+TR
+\item 
+\#define \hyperlink{group__compiler__abstraction_gade9c8513419a799cd78a07ae894bb805}{L\+W\+I\+P\+\_\+\+N\+O\+\_\+\+L\+I\+M\+I\+T\+S\+\_\+H}~0
+\item 
+\#define \hyperlink{group__compiler__abstraction_gaa0dd3f76dd9a837feaac61fedc0dbe72}{L\+W\+I\+P\+\_\+\+C\+O\+N\+S\+T\+\_\+\+C\+A\+ST}(target\+\_\+type,  val)~((target\+\_\+type)((ptrdiff\+\_\+t)val))
+\item 
+\#define \hyperlink{group__compiler__abstraction_gaade87973d72135b0b3afccfff4f62eb8}{L\+W\+I\+P\+\_\+\+A\+L\+I\+G\+N\+M\+E\+N\+T\+\_\+\+C\+A\+ST}(target\+\_\+type,  val)~\hyperlink{group__compiler__abstraction_gaa0dd3f76dd9a837feaac61fedc0dbe72}{L\+W\+I\+P\+\_\+\+C\+O\+N\+S\+T\+\_\+\+C\+A\+ST}(target\+\_\+type, val)
+\item 
+\#define \hyperlink{group__compiler__abstraction_ga683e5c35d3263fe3145e6a6bc546604a}{L\+W\+I\+P\+\_\+\+P\+T\+R\+\_\+\+N\+U\+M\+E\+R\+I\+C\+\_\+\+C\+A\+ST}(target\+\_\+type,  val)~\hyperlink{group__compiler__abstraction_gaa0dd3f76dd9a837feaac61fedc0dbe72}{L\+W\+I\+P\+\_\+\+C\+O\+N\+S\+T\+\_\+\+C\+A\+ST}(target\+\_\+type, val)
+\item 
+\#define \hyperlink{group__compiler__abstraction_ga651bb349041669fe717b19f127ef16c0}{L\+W\+I\+P\+\_\+\+D\+E\+C\+L\+A\+R\+E\+\_\+\+M\+E\+M\+O\+R\+Y\+\_\+\+A\+L\+I\+G\+N\+ED}(variable\+\_\+name,  size)~\hyperlink{group__compiler__abstraction_ga4caecabca98b43919dd11be1c0d4cd8e}{u8\+\_\+t} variable\+\_\+name\mbox{[}\hyperlink{group__compiler__abstraction_ga25591dcb72fccc7b5dc46fbc1959694e}{L\+W\+I\+P\+\_\+\+M\+E\+M\+\_\+\+A\+L\+I\+G\+N\+\_\+\+B\+U\+F\+F\+ER}(size)\mbox{]}
+\item 
+\#define \hyperlink{group__compiler__abstraction_gaef204be511fd32f681b55abc08e9ae18}{L\+W\+I\+P\+\_\+\+M\+E\+M\+\_\+\+A\+L\+I\+G\+N\+\_\+\+S\+I\+ZE}(size)~(((size) + \hyperlink{group__lwip__opts__mem_ga97343214666ee6dcb18c0bd77b441ea7}{M\+E\+M\+\_\+\+A\+L\+I\+G\+N\+M\+E\+NT} -\/ 1\+U) \& $\sim$(\+M\+E\+M\+\_\+\+A\+L\+I\+G\+N\+M\+E\+N\+T-\/1\+U))
+\item 
+\#define \hyperlink{group__compiler__abstraction_ga25591dcb72fccc7b5dc46fbc1959694e}{L\+W\+I\+P\+\_\+\+M\+E\+M\+\_\+\+A\+L\+I\+G\+N\+\_\+\+B\+U\+F\+F\+ER}(size)~(((size) + \hyperlink{group__lwip__opts__mem_ga97343214666ee6dcb18c0bd77b441ea7}{M\+E\+M\+\_\+\+A\+L\+I\+G\+N\+M\+E\+NT} -\/ 1\+U))
+\item 
+\#define \hyperlink{group__compiler__abstraction_gaa8e8724eb1c220cbbb90de9e175ce1dc}{L\+W\+I\+P\+\_\+\+M\+E\+M\+\_\+\+A\+L\+I\+GN}(addr)~((void $\ast$)(((\hyperlink{group__compiler__abstraction_gaf019cbb71af10dcfda7758b21e655307}{mem\+\_\+ptr\+\_\+t})(addr) + \hyperlink{group__lwip__opts__mem_ga97343214666ee6dcb18c0bd77b441ea7}{M\+E\+M\+\_\+\+A\+L\+I\+G\+N\+M\+E\+NT} -\/ 1) \& $\sim$(\hyperlink{group__compiler__abstraction_gaf019cbb71af10dcfda7758b21e655307}{mem\+\_\+ptr\+\_\+t})(\hyperlink{group__lwip__opts__mem_ga97343214666ee6dcb18c0bd77b441ea7}{M\+E\+M\+\_\+\+A\+L\+I\+G\+N\+M\+E\+NT}-\/1)))
+\item 
+\#define \hyperlink{group__compiler__abstraction_ga73199061891adf1b912d20835c7d5e96}{P\+A\+C\+K\+\_\+\+S\+T\+R\+U\+C\+T\+\_\+\+B\+E\+G\+IN}
+\item 
+\#define \hyperlink{group__compiler__abstraction_ga465fef70f294e21cbf4ea51fc342f20e}{P\+A\+C\+K\+\_\+\+S\+T\+R\+U\+C\+T\+\_\+\+E\+ND}
+\item 
+\#define \hyperlink{group__compiler__abstraction_ga9ebc500530d0d9e6cd0b81969f48bbc8}{P\+A\+C\+K\+\_\+\+S\+T\+R\+U\+C\+T\+\_\+\+S\+T\+R\+U\+CT}
+\item 
+\#define \hyperlink{group__compiler__abstraction_gaab0b988124e37a978d9a88e7c1c778e0}{P\+A\+C\+K\+\_\+\+S\+T\+R\+U\+C\+T\+\_\+\+F\+I\+E\+LD}(x)~x
+\item 
+\#define \hyperlink{group__compiler__abstraction_gaa8f75e4117374c2d09fbda5566e40b62}{P\+A\+C\+K\+\_\+\+S\+T\+R\+U\+C\+T\+\_\+\+F\+L\+D\+\_\+8}(x)~\hyperlink{group__compiler__abstraction_gaab0b988124e37a978d9a88e7c1c778e0}{P\+A\+C\+K\+\_\+\+S\+T\+R\+U\+C\+T\+\_\+\+F\+I\+E\+LD}(x)
+\item 
+\#define \hyperlink{group__compiler__abstraction_gacc89e224363eb0ebca24b64d925c3cb7}{P\+A\+C\+K\+\_\+\+S\+T\+R\+U\+C\+T\+\_\+\+F\+L\+D\+\_\+S}(x)~\hyperlink{group__compiler__abstraction_gaab0b988124e37a978d9a88e7c1c778e0}{P\+A\+C\+K\+\_\+\+S\+T\+R\+U\+C\+T\+\_\+\+F\+I\+E\+LD}(x)
+\item 
+\#define \hyperlink{group__compiler__abstraction_ga70624a5deb8b9199406372a7f3603ecf}{L\+W\+I\+P\+\_\+\+U\+N\+U\+S\+E\+D\+\_\+\+A\+RG}(x)~(void)x
+\item 
+\#define \hyperlink{group__compiler__abstraction_ga1771b7fb65ee640524d0052f229768c3}{B\+Y\+T\+E\+\_\+\+O\+R\+D\+ER}~\hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2arch_8h_a8782a401fbf55261460863fc2f8df1ce}{L\+I\+T\+T\+L\+E\+\_\+\+E\+N\+D\+I\+AN}
+\item 
+\#define \hyperlink{group__compiler__abstraction_gaccef167be13a500ce30036030a9b142b}{L\+W\+I\+P\+\_\+\+P\+L\+A\+T\+F\+O\+R\+M\+\_\+\+D\+I\+AG}(x)~do \{printf x;\} while(0)
+\item 
+\#define \hyperlink{group__compiler__abstraction_ga7e8bcd0282525704d6dd596bdd1b47d0}{L\+W\+I\+P\+\_\+\+P\+L\+A\+T\+F\+O\+R\+M\+\_\+\+A\+S\+S\+E\+RT}(x)
+\item 
+\#define \hyperlink{group__compiler__abstraction_ga53954d507c09e521ec0d44a2450bb89d}{L\+W\+I\+P\+\_\+\+N\+O\+\_\+\+S\+T\+D\+D\+E\+F\+\_\+H}~0
+\item 
+\#define \hyperlink{group__compiler__abstraction_ga122c754db96ecad23bc6f4541d6360c1}{L\+W\+I\+P\+\_\+\+N\+O\+\_\+\+S\+T\+D\+I\+N\+T\+\_\+H}~0
+\item 
+\#define \hyperlink{group__compiler__abstraction_ga5bf52d6f2729d0c8afd365f69d7d4373}{L\+W\+I\+P\+\_\+\+N\+O\+\_\+\+I\+N\+T\+T\+Y\+P\+E\+S\+\_\+H}~0
+\item 
+\#define \hyperlink{group__compiler__abstraction_ga90c130a97711a9d7e5015c610f2dfe8f}{X8\+\_\+F}~\char`\"{}02\char`\"{} P\+R\+Ix8
+\item 
+\#define \hyperlink{group__compiler__abstraction_gaa9d7f6eb2ee9fcc5eda3545dbb1886e0}{U16\+\_\+F}~P\+R\+Iu16
+\item 
+\#define \hyperlink{group__compiler__abstraction_gac05a82d37afb251470f5e17ca15ab6e9}{S16\+\_\+F}~P\+R\+Id16
+\item 
+\#define \hyperlink{group__compiler__abstraction_ga1418f92673e54a36b6e376109e526382}{X16\+\_\+F}~P\+R\+Ix16
+\item 
+\#define \hyperlink{group__compiler__abstraction_gad8b0a364e95b07cb0c47709fdc6037d6}{U32\+\_\+F}~P\+R\+Iu32
+\item 
+\#define \hyperlink{group__compiler__abstraction_ga4b1eca99bc81e248c7074ea87fc9ca63}{S32\+\_\+F}~P\+R\+Id32
+\item 
+\#define \hyperlink{group__compiler__abstraction_gac219830a93d05c5f18f64ce87a34be14}{X32\+\_\+F}~P\+R\+Ix32
+\item 
+\#define \hyperlink{group__compiler__abstraction_ga4cd359b6110f318ef71814587e1df029}{S\+Z\+T\+\_\+F}~P\+R\+Iu\+P\+TR
+\item 
+\#define \hyperlink{group__compiler__abstraction_gade9c8513419a799cd78a07ae894bb805}{L\+W\+I\+P\+\_\+\+N\+O\+\_\+\+L\+I\+M\+I\+T\+S\+\_\+H}~0
+\item 
+\#define \hyperlink{group__compiler__abstraction_gaa0dd3f76dd9a837feaac61fedc0dbe72}{L\+W\+I\+P\+\_\+\+C\+O\+N\+S\+T\+\_\+\+C\+A\+ST}(target\+\_\+type,  val)~((target\+\_\+type)((ptrdiff\+\_\+t)val))
+\item 
+\#define \hyperlink{group__compiler__abstraction_gaade87973d72135b0b3afccfff4f62eb8}{L\+W\+I\+P\+\_\+\+A\+L\+I\+G\+N\+M\+E\+N\+T\+\_\+\+C\+A\+ST}(target\+\_\+type,  val)~\hyperlink{group__compiler__abstraction_gaa0dd3f76dd9a837feaac61fedc0dbe72}{L\+W\+I\+P\+\_\+\+C\+O\+N\+S\+T\+\_\+\+C\+A\+ST}(target\+\_\+type, val)
+\item 
+\#define \hyperlink{group__compiler__abstraction_ga683e5c35d3263fe3145e6a6bc546604a}{L\+W\+I\+P\+\_\+\+P\+T\+R\+\_\+\+N\+U\+M\+E\+R\+I\+C\+\_\+\+C\+A\+ST}(target\+\_\+type,  val)~\hyperlink{group__compiler__abstraction_gaa0dd3f76dd9a837feaac61fedc0dbe72}{L\+W\+I\+P\+\_\+\+C\+O\+N\+S\+T\+\_\+\+C\+A\+ST}(target\+\_\+type, val)
+\item 
+\#define \hyperlink{group__compiler__abstraction_ga651bb349041669fe717b19f127ef16c0}{L\+W\+I\+P\+\_\+\+D\+E\+C\+L\+A\+R\+E\+\_\+\+M\+E\+M\+O\+R\+Y\+\_\+\+A\+L\+I\+G\+N\+ED}(variable\+\_\+name,  size)~\hyperlink{group__compiler__abstraction_ga4caecabca98b43919dd11be1c0d4cd8e}{u8\+\_\+t} variable\+\_\+name\mbox{[}\hyperlink{group__compiler__abstraction_ga25591dcb72fccc7b5dc46fbc1959694e}{L\+W\+I\+P\+\_\+\+M\+E\+M\+\_\+\+A\+L\+I\+G\+N\+\_\+\+B\+U\+F\+F\+ER}(size)\mbox{]}
+\item 
+\#define \hyperlink{group__compiler__abstraction_gaef204be511fd32f681b55abc08e9ae18}{L\+W\+I\+P\+\_\+\+M\+E\+M\+\_\+\+A\+L\+I\+G\+N\+\_\+\+S\+I\+ZE}(size)~(((size) + \hyperlink{group__lwip__opts__mem_ga97343214666ee6dcb18c0bd77b441ea7}{M\+E\+M\+\_\+\+A\+L\+I\+G\+N\+M\+E\+NT} -\/ 1\+U) \& $\sim$(\+M\+E\+M\+\_\+\+A\+L\+I\+G\+N\+M\+E\+N\+T-\/1\+U))
+\item 
+\#define \hyperlink{group__compiler__abstraction_ga25591dcb72fccc7b5dc46fbc1959694e}{L\+W\+I\+P\+\_\+\+M\+E\+M\+\_\+\+A\+L\+I\+G\+N\+\_\+\+B\+U\+F\+F\+ER}(size)~(((size) + \hyperlink{group__lwip__opts__mem_ga97343214666ee6dcb18c0bd77b441ea7}{M\+E\+M\+\_\+\+A\+L\+I\+G\+N\+M\+E\+NT} -\/ 1\+U))
+\item 
+\#define \hyperlink{group__compiler__abstraction_gaa8e8724eb1c220cbbb90de9e175ce1dc}{L\+W\+I\+P\+\_\+\+M\+E\+M\+\_\+\+A\+L\+I\+GN}(addr)~((void $\ast$)(((\hyperlink{group__compiler__abstraction_gaf019cbb71af10dcfda7758b21e655307}{mem\+\_\+ptr\+\_\+t})(addr) + \hyperlink{group__lwip__opts__mem_ga97343214666ee6dcb18c0bd77b441ea7}{M\+E\+M\+\_\+\+A\+L\+I\+G\+N\+M\+E\+NT} -\/ 1) \& $\sim$(\hyperlink{group__compiler__abstraction_gaf019cbb71af10dcfda7758b21e655307}{mem\+\_\+ptr\+\_\+t})(\hyperlink{group__lwip__opts__mem_ga97343214666ee6dcb18c0bd77b441ea7}{M\+E\+M\+\_\+\+A\+L\+I\+G\+N\+M\+E\+NT}-\/1)))
+\item 
+\#define \hyperlink{group__compiler__abstraction_ga73199061891adf1b912d20835c7d5e96}{P\+A\+C\+K\+\_\+\+S\+T\+R\+U\+C\+T\+\_\+\+B\+E\+G\+IN}
+\item 
+\#define \hyperlink{group__compiler__abstraction_ga465fef70f294e21cbf4ea51fc342f20e}{P\+A\+C\+K\+\_\+\+S\+T\+R\+U\+C\+T\+\_\+\+E\+ND}
+\item 
+\#define \hyperlink{group__compiler__abstraction_ga33623da05bb55497534c3dc26ebebeb2}{P\+A\+C\+K\+\_\+\+S\+T\+R\+U\+C\+T\+\_\+\+S\+T\+R\+U\+CT}
+\item 
+\#define \hyperlink{group__compiler__abstraction_gaab0b988124e37a978d9a88e7c1c778e0}{P\+A\+C\+K\+\_\+\+S\+T\+R\+U\+C\+T\+\_\+\+F\+I\+E\+LD}(x)~x
+\item 
+\#define \hyperlink{group__compiler__abstraction_gaa8f75e4117374c2d09fbda5566e40b62}{P\+A\+C\+K\+\_\+\+S\+T\+R\+U\+C\+T\+\_\+\+F\+L\+D\+\_\+8}(x)~\hyperlink{group__compiler__abstraction_gaab0b988124e37a978d9a88e7c1c778e0}{P\+A\+C\+K\+\_\+\+S\+T\+R\+U\+C\+T\+\_\+\+F\+I\+E\+LD}(x)
+\item 
+\#define \hyperlink{group__compiler__abstraction_gacc89e224363eb0ebca24b64d925c3cb7}{P\+A\+C\+K\+\_\+\+S\+T\+R\+U\+C\+T\+\_\+\+F\+L\+D\+\_\+S}(x)~\hyperlink{group__compiler__abstraction_gaab0b988124e37a978d9a88e7c1c778e0}{P\+A\+C\+K\+\_\+\+S\+T\+R\+U\+C\+T\+\_\+\+F\+I\+E\+LD}(x)
+\item 
+\#define \hyperlink{group__compiler__abstraction_ga70624a5deb8b9199406372a7f3603ecf}{L\+W\+I\+P\+\_\+\+U\+N\+U\+S\+E\+D\+\_\+\+A\+RG}(x)~(void)x
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef uint8\+\_\+t \hyperlink{group__compiler__abstraction_ga4caecabca98b43919dd11be1c0d4cd8e}{u8\+\_\+t}
+\item 
+typedef int8\+\_\+t \hyperlink{group__compiler__abstraction_ga9cd1d7891fe315de1201e2c6e45f4f57}{s8\+\_\+t}
+\item 
+typedef uint16\+\_\+t \hyperlink{group__compiler__abstraction_ga77570ac4fcab86864fa1916e55676da2}{u16\+\_\+t}
+\item 
+typedef int16\+\_\+t \hyperlink{group__compiler__abstraction_gacf46f4df0ebab84edebcb69967fdf86b}{s16\+\_\+t}
+\item 
+typedef uint32\+\_\+t \hyperlink{group__compiler__abstraction_ga4c14294869aceba3ef9d4c0c302d0f33}{u32\+\_\+t}
+\item 
+typedef int32\+\_\+t \hyperlink{group__compiler__abstraction_ga10f9a3d7baef58ccc23228c3bd29c1fb}{s32\+\_\+t}
+\item 
+typedef uintptr\+\_\+t \hyperlink{group__compiler__abstraction_gaf019cbb71af10dcfda7758b21e655307}{mem\+\_\+ptr\+\_\+t}
+\item 
+typedef uint8\+\_\+t \hyperlink{group__compiler__abstraction_ga4caecabca98b43919dd11be1c0d4cd8e}{u8\+\_\+t}
+\item 
+typedef int8\+\_\+t \hyperlink{group__compiler__abstraction_ga9cd1d7891fe315de1201e2c6e45f4f57}{s8\+\_\+t}
+\item 
+typedef uint16\+\_\+t \hyperlink{group__compiler__abstraction_ga77570ac4fcab86864fa1916e55676da2}{u16\+\_\+t}
+\item 
+typedef int16\+\_\+t \hyperlink{group__compiler__abstraction_gacf46f4df0ebab84edebcb69967fdf86b}{s16\+\_\+t}
+\item 
+typedef uint32\+\_\+t \hyperlink{group__compiler__abstraction_ga4c14294869aceba3ef9d4c0c302d0f33}{u32\+\_\+t}
+\item 
+typedef int32\+\_\+t \hyperlink{group__compiler__abstraction_ga10f9a3d7baef58ccc23228c3bd29c1fb}{s32\+\_\+t}
+\item 
+typedef uintptr\+\_\+t \hyperlink{group__compiler__abstraction_gaf019cbb71af10dcfda7758b21e655307}{mem\+\_\+ptr\+\_\+t}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+All defines related to this section must not be placed in lwipopts.\+h, but in arch/cc.\+h! These options cannot be \#defined in lwipopts.\+h since they are not options of lw\+IP itself, but options of the lw\+IP port to your system. 
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{group__compiler__abstraction_ga1771b7fb65ee640524d0052f229768c3}\label{group__compiler__abstraction_ga1771b7fb65ee640524d0052f229768c3}} 
+\index{Compiler/platform abstraction@{Compiler/platform abstraction}!B\+Y\+T\+E\+\_\+\+O\+R\+D\+ER@{B\+Y\+T\+E\+\_\+\+O\+R\+D\+ER}}
+\index{B\+Y\+T\+E\+\_\+\+O\+R\+D\+ER@{B\+Y\+T\+E\+\_\+\+O\+R\+D\+ER}!Compiler/platform abstraction@{Compiler/platform abstraction}}
+\subsubsection{\texorpdfstring{B\+Y\+T\+E\+\_\+\+O\+R\+D\+ER}{BYTE\_ORDER}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \#define B\+Y\+T\+E\+\_\+\+O\+R\+D\+ER~\hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2arch_8h_a8782a401fbf55261460863fc2f8df1ce}{L\+I\+T\+T\+L\+E\+\_\+\+E\+N\+D\+I\+AN}}
+
+Define the byte order of the system. Needed for conversion of network data to host byte order. Allowed values\+: L\+I\+T\+T\+L\+E\+\_\+\+E\+N\+D\+I\+AN and B\+I\+G\+\_\+\+E\+N\+D\+I\+AN \mbox{\Hypertarget{group__compiler__abstraction_ga1771b7fb65ee640524d0052f229768c3}\label{group__compiler__abstraction_ga1771b7fb65ee640524d0052f229768c3}} 
+\index{Compiler/platform abstraction@{Compiler/platform abstraction}!B\+Y\+T\+E\+\_\+\+O\+R\+D\+ER@{B\+Y\+T\+E\+\_\+\+O\+R\+D\+ER}}
+\index{B\+Y\+T\+E\+\_\+\+O\+R\+D\+ER@{B\+Y\+T\+E\+\_\+\+O\+R\+D\+ER}!Compiler/platform abstraction@{Compiler/platform abstraction}}
+\subsubsection{\texorpdfstring{B\+Y\+T\+E\+\_\+\+O\+R\+D\+ER}{BYTE\_ORDER}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \#define B\+Y\+T\+E\+\_\+\+O\+R\+D\+ER~\hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2arch_8h_a8782a401fbf55261460863fc2f8df1ce}{L\+I\+T\+T\+L\+E\+\_\+\+E\+N\+D\+I\+AN}}
+
+Define the byte order of the system. Needed for conversion of network data to host byte order. Allowed values\+: L\+I\+T\+T\+L\+E\+\_\+\+E\+N\+D\+I\+AN and B\+I\+G\+\_\+\+E\+N\+D\+I\+AN \mbox{\Hypertarget{group__compiler__abstraction_gaade87973d72135b0b3afccfff4f62eb8}\label{group__compiler__abstraction_gaade87973d72135b0b3afccfff4f62eb8}} 
+\index{Compiler/platform abstraction@{Compiler/platform abstraction}!L\+W\+I\+P\+\_\+\+A\+L\+I\+G\+N\+M\+E\+N\+T\+\_\+\+C\+A\+ST@{L\+W\+I\+P\+\_\+\+A\+L\+I\+G\+N\+M\+E\+N\+T\+\_\+\+C\+A\+ST}}
+\index{L\+W\+I\+P\+\_\+\+A\+L\+I\+G\+N\+M\+E\+N\+T\+\_\+\+C\+A\+ST@{L\+W\+I\+P\+\_\+\+A\+L\+I\+G\+N\+M\+E\+N\+T\+\_\+\+C\+A\+ST}!Compiler/platform abstraction@{Compiler/platform abstraction}}
+\subsubsection{\texorpdfstring{L\+W\+I\+P\+\_\+\+A\+L\+I\+G\+N\+M\+E\+N\+T\+\_\+\+C\+A\+ST}{LWIP\_ALIGNMENT\_CAST}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \#define L\+W\+I\+P\+\_\+\+A\+L\+I\+G\+N\+M\+E\+N\+T\+\_\+\+C\+A\+ST(\begin{DoxyParamCaption}\item[{}]{target\+\_\+type,  }\item[{}]{val }\end{DoxyParamCaption})~\hyperlink{group__compiler__abstraction_gaa0dd3f76dd9a837feaac61fedc0dbe72}{L\+W\+I\+P\+\_\+\+C\+O\+N\+S\+T\+\_\+\+C\+A\+ST}(target\+\_\+type, val)}
+
+Get rid of alignment cast warnings (G\+CC -\/\+Wcast-\/align) \mbox{\Hypertarget{group__compiler__abstraction_gaade87973d72135b0b3afccfff4f62eb8}\label{group__compiler__abstraction_gaade87973d72135b0b3afccfff4f62eb8}} 
+\index{Compiler/platform abstraction@{Compiler/platform abstraction}!L\+W\+I\+P\+\_\+\+A\+L\+I\+G\+N\+M\+E\+N\+T\+\_\+\+C\+A\+ST@{L\+W\+I\+P\+\_\+\+A\+L\+I\+G\+N\+M\+E\+N\+T\+\_\+\+C\+A\+ST}}
+\index{L\+W\+I\+P\+\_\+\+A\+L\+I\+G\+N\+M\+E\+N\+T\+\_\+\+C\+A\+ST@{L\+W\+I\+P\+\_\+\+A\+L\+I\+G\+N\+M\+E\+N\+T\+\_\+\+C\+A\+ST}!Compiler/platform abstraction@{Compiler/platform abstraction}}
+\subsubsection{\texorpdfstring{L\+W\+I\+P\+\_\+\+A\+L\+I\+G\+N\+M\+E\+N\+T\+\_\+\+C\+A\+ST}{LWIP\_ALIGNMENT\_CAST}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \#define L\+W\+I\+P\+\_\+\+A\+L\+I\+G\+N\+M\+E\+N\+T\+\_\+\+C\+A\+ST(\begin{DoxyParamCaption}\item[{}]{target\+\_\+type,  }\item[{}]{val }\end{DoxyParamCaption})~\hyperlink{group__compiler__abstraction_gaa0dd3f76dd9a837feaac61fedc0dbe72}{L\+W\+I\+P\+\_\+\+C\+O\+N\+S\+T\+\_\+\+C\+A\+ST}(target\+\_\+type, val)}
+
+Get rid of alignment cast warnings (G\+CC -\/\+Wcast-\/align) \mbox{\Hypertarget{group__compiler__abstraction_gaa0dd3f76dd9a837feaac61fedc0dbe72}\label{group__compiler__abstraction_gaa0dd3f76dd9a837feaac61fedc0dbe72}} 
+\index{Compiler/platform abstraction@{Compiler/platform abstraction}!L\+W\+I\+P\+\_\+\+C\+O\+N\+S\+T\+\_\+\+C\+A\+ST@{L\+W\+I\+P\+\_\+\+C\+O\+N\+S\+T\+\_\+\+C\+A\+ST}}
+\index{L\+W\+I\+P\+\_\+\+C\+O\+N\+S\+T\+\_\+\+C\+A\+ST@{L\+W\+I\+P\+\_\+\+C\+O\+N\+S\+T\+\_\+\+C\+A\+ST}!Compiler/platform abstraction@{Compiler/platform abstraction}}
+\subsubsection{\texorpdfstring{L\+W\+I\+P\+\_\+\+C\+O\+N\+S\+T\+\_\+\+C\+A\+ST}{LWIP\_CONST\_CAST}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \#define L\+W\+I\+P\+\_\+\+C\+O\+N\+S\+T\+\_\+\+C\+A\+ST(\begin{DoxyParamCaption}\item[{}]{target\+\_\+type,  }\item[{}]{val }\end{DoxyParamCaption})~((target\+\_\+type)((ptrdiff\+\_\+t)val))}
+
+C++ const\+\_\+cast$<$target\+\_\+type$>$(val) equivalent to remove constness from a value (G\+CC -\/\+Wcast-\/qual) \mbox{\Hypertarget{group__compiler__abstraction_gaa0dd3f76dd9a837feaac61fedc0dbe72}\label{group__compiler__abstraction_gaa0dd3f76dd9a837feaac61fedc0dbe72}} 
+\index{Compiler/platform abstraction@{Compiler/platform abstraction}!L\+W\+I\+P\+\_\+\+C\+O\+N\+S\+T\+\_\+\+C\+A\+ST@{L\+W\+I\+P\+\_\+\+C\+O\+N\+S\+T\+\_\+\+C\+A\+ST}}
+\index{L\+W\+I\+P\+\_\+\+C\+O\+N\+S\+T\+\_\+\+C\+A\+ST@{L\+W\+I\+P\+\_\+\+C\+O\+N\+S\+T\+\_\+\+C\+A\+ST}!Compiler/platform abstraction@{Compiler/platform abstraction}}
+\subsubsection{\texorpdfstring{L\+W\+I\+P\+\_\+\+C\+O\+N\+S\+T\+\_\+\+C\+A\+ST}{LWIP\_CONST\_CAST}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \#define L\+W\+I\+P\+\_\+\+C\+O\+N\+S\+T\+\_\+\+C\+A\+ST(\begin{DoxyParamCaption}\item[{}]{target\+\_\+type,  }\item[{}]{val }\end{DoxyParamCaption})~((target\+\_\+type)((ptrdiff\+\_\+t)val))}
+
+C++ const\+\_\+cast$<$target\+\_\+type$>$(val) equivalent to remove constness from a value (G\+CC -\/\+Wcast-\/qual) \mbox{\Hypertarget{group__compiler__abstraction_ga651bb349041669fe717b19f127ef16c0}\label{group__compiler__abstraction_ga651bb349041669fe717b19f127ef16c0}} 
+\index{Compiler/platform abstraction@{Compiler/platform abstraction}!L\+W\+I\+P\+\_\+\+D\+E\+C\+L\+A\+R\+E\+\_\+\+M\+E\+M\+O\+R\+Y\+\_\+\+A\+L\+I\+G\+N\+ED@{L\+W\+I\+P\+\_\+\+D\+E\+C\+L\+A\+R\+E\+\_\+\+M\+E\+M\+O\+R\+Y\+\_\+\+A\+L\+I\+G\+N\+ED}}
+\index{L\+W\+I\+P\+\_\+\+D\+E\+C\+L\+A\+R\+E\+\_\+\+M\+E\+M\+O\+R\+Y\+\_\+\+A\+L\+I\+G\+N\+ED@{L\+W\+I\+P\+\_\+\+D\+E\+C\+L\+A\+R\+E\+\_\+\+M\+E\+M\+O\+R\+Y\+\_\+\+A\+L\+I\+G\+N\+ED}!Compiler/platform abstraction@{Compiler/platform abstraction}}
+\subsubsection{\texorpdfstring{L\+W\+I\+P\+\_\+\+D\+E\+C\+L\+A\+R\+E\+\_\+\+M\+E\+M\+O\+R\+Y\+\_\+\+A\+L\+I\+G\+N\+ED}{LWIP\_DECLARE\_MEMORY\_ALIGNED}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \#define L\+W\+I\+P\+\_\+\+D\+E\+C\+L\+A\+R\+E\+\_\+\+M\+E\+M\+O\+R\+Y\+\_\+\+A\+L\+I\+G\+N\+ED(\begin{DoxyParamCaption}\item[{}]{variable\+\_\+name,  }\item[{}]{size }\end{DoxyParamCaption})~\hyperlink{group__compiler__abstraction_ga4caecabca98b43919dd11be1c0d4cd8e}{u8\+\_\+t} variable\+\_\+name\mbox{[}\hyperlink{group__compiler__abstraction_ga25591dcb72fccc7b5dc46fbc1959694e}{L\+W\+I\+P\+\_\+\+M\+E\+M\+\_\+\+A\+L\+I\+G\+N\+\_\+\+B\+U\+F\+F\+ER}(size)\mbox{]}}
+
+Allocates a memory buffer of specified size that is of sufficient size to align its start address using L\+W\+I\+P\+\_\+\+M\+E\+M\+\_\+\+A\+L\+I\+GN. You can declare your own version here e.\+g. to enforce alignment without adding trailing padding bytes (see L\+W\+I\+P\+\_\+\+M\+E\+M\+\_\+\+A\+L\+I\+G\+N\+\_\+\+B\+U\+F\+F\+ER) or your own section placement requirements.~\newline
+e.\+g. if you use gcc and need 32 bit alignment\+:~\newline
+\#define \hyperlink{group__compiler__abstraction_ga651bb349041669fe717b19f127ef16c0}{L\+W\+I\+P\+\_\+\+D\+E\+C\+L\+A\+R\+E\+\_\+\+M\+E\+M\+O\+R\+Y\+\_\+\+A\+L\+I\+G\+N\+E\+D(variable\+\_\+name, size)} u8\+\_\+t variable\+\_\+name\mbox{[}size\mbox{]} \+\_\+\+\_\+attribute\+\_\+\+\_\+((aligned(4)))~\newline
+or more portable\+:~\newline
+\#define \hyperlink{group__compiler__abstraction_ga651bb349041669fe717b19f127ef16c0}{L\+W\+I\+P\+\_\+\+D\+E\+C\+L\+A\+R\+E\+\_\+\+M\+E\+M\+O\+R\+Y\+\_\+\+A\+L\+I\+G\+N\+E\+D(variable\+\_\+name, size)} u32\+\_\+t variable\+\_\+name\mbox{[}(size + sizeof(u32\+\_\+t) -\/ 1) / sizeof(u32\+\_\+t)\mbox{]} \mbox{\Hypertarget{group__compiler__abstraction_ga651bb349041669fe717b19f127ef16c0}\label{group__compiler__abstraction_ga651bb349041669fe717b19f127ef16c0}} 
+\index{Compiler/platform abstraction@{Compiler/platform abstraction}!L\+W\+I\+P\+\_\+\+D\+E\+C\+L\+A\+R\+E\+\_\+\+M\+E\+M\+O\+R\+Y\+\_\+\+A\+L\+I\+G\+N\+ED@{L\+W\+I\+P\+\_\+\+D\+E\+C\+L\+A\+R\+E\+\_\+\+M\+E\+M\+O\+R\+Y\+\_\+\+A\+L\+I\+G\+N\+ED}}
+\index{L\+W\+I\+P\+\_\+\+D\+E\+C\+L\+A\+R\+E\+\_\+\+M\+E\+M\+O\+R\+Y\+\_\+\+A\+L\+I\+G\+N\+ED@{L\+W\+I\+P\+\_\+\+D\+E\+C\+L\+A\+R\+E\+\_\+\+M\+E\+M\+O\+R\+Y\+\_\+\+A\+L\+I\+G\+N\+ED}!Compiler/platform abstraction@{Compiler/platform abstraction}}
+\subsubsection{\texorpdfstring{L\+W\+I\+P\+\_\+\+D\+E\+C\+L\+A\+R\+E\+\_\+\+M\+E\+M\+O\+R\+Y\+\_\+\+A\+L\+I\+G\+N\+ED}{LWIP\_DECLARE\_MEMORY\_ALIGNED}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \#define L\+W\+I\+P\+\_\+\+D\+E\+C\+L\+A\+R\+E\+\_\+\+M\+E\+M\+O\+R\+Y\+\_\+\+A\+L\+I\+G\+N\+ED(\begin{DoxyParamCaption}\item[{}]{variable\+\_\+name,  }\item[{}]{size }\end{DoxyParamCaption})~\hyperlink{group__compiler__abstraction_ga4caecabca98b43919dd11be1c0d4cd8e}{u8\+\_\+t} variable\+\_\+name\mbox{[}\hyperlink{group__compiler__abstraction_ga25591dcb72fccc7b5dc46fbc1959694e}{L\+W\+I\+P\+\_\+\+M\+E\+M\+\_\+\+A\+L\+I\+G\+N\+\_\+\+B\+U\+F\+F\+ER}(size)\mbox{]}}
+
+Allocates a memory buffer of specified size that is of sufficient size to align its start address using L\+W\+I\+P\+\_\+\+M\+E\+M\+\_\+\+A\+L\+I\+GN. You can declare your own version here e.\+g. to enforce alignment without adding trailing padding bytes (see L\+W\+I\+P\+\_\+\+M\+E\+M\+\_\+\+A\+L\+I\+G\+N\+\_\+\+B\+U\+F\+F\+ER) or your own section placement requirements.~\newline
+e.\+g. if you use gcc and need 32 bit alignment\+:~\newline
+\#define \hyperlink{group__compiler__abstraction_ga651bb349041669fe717b19f127ef16c0}{L\+W\+I\+P\+\_\+\+D\+E\+C\+L\+A\+R\+E\+\_\+\+M\+E\+M\+O\+R\+Y\+\_\+\+A\+L\+I\+G\+N\+E\+D(variable\+\_\+name, size)} u8\+\_\+t variable\+\_\+name\mbox{[}size\mbox{]} \+\_\+\+\_\+attribute\+\_\+\+\_\+((aligned(4)))~\newline
+or more portable\+:~\newline
+\#define \hyperlink{group__compiler__abstraction_ga651bb349041669fe717b19f127ef16c0}{L\+W\+I\+P\+\_\+\+D\+E\+C\+L\+A\+R\+E\+\_\+\+M\+E\+M\+O\+R\+Y\+\_\+\+A\+L\+I\+G\+N\+E\+D(variable\+\_\+name, size)} u32\+\_\+t variable\+\_\+name\mbox{[}(size + sizeof(u32\+\_\+t) -\/ 1) / sizeof(u32\+\_\+t)\mbox{]} \mbox{\Hypertarget{group__compiler__abstraction_gaa8e8724eb1c220cbbb90de9e175ce1dc}\label{group__compiler__abstraction_gaa8e8724eb1c220cbbb90de9e175ce1dc}} 
+\index{Compiler/platform abstraction@{Compiler/platform abstraction}!L\+W\+I\+P\+\_\+\+M\+E\+M\+\_\+\+A\+L\+I\+GN@{L\+W\+I\+P\+\_\+\+M\+E\+M\+\_\+\+A\+L\+I\+GN}}
+\index{L\+W\+I\+P\+\_\+\+M\+E\+M\+\_\+\+A\+L\+I\+GN@{L\+W\+I\+P\+\_\+\+M\+E\+M\+\_\+\+A\+L\+I\+GN}!Compiler/platform abstraction@{Compiler/platform abstraction}}
+\subsubsection{\texorpdfstring{L\+W\+I\+P\+\_\+\+M\+E\+M\+\_\+\+A\+L\+I\+GN}{LWIP\_MEM\_ALIGN}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \#define L\+W\+I\+P\+\_\+\+M\+E\+M\+\_\+\+A\+L\+I\+GN(\begin{DoxyParamCaption}\item[{}]{addr }\end{DoxyParamCaption})~((void $\ast$)(((\hyperlink{group__compiler__abstraction_gaf019cbb71af10dcfda7758b21e655307}{mem\+\_\+ptr\+\_\+t})(addr) + \hyperlink{group__lwip__opts__mem_ga97343214666ee6dcb18c0bd77b441ea7}{M\+E\+M\+\_\+\+A\+L\+I\+G\+N\+M\+E\+NT} -\/ 1) \& $\sim$(\hyperlink{group__compiler__abstraction_gaf019cbb71af10dcfda7758b21e655307}{mem\+\_\+ptr\+\_\+t})(\hyperlink{group__lwip__opts__mem_ga97343214666ee6dcb18c0bd77b441ea7}{M\+E\+M\+\_\+\+A\+L\+I\+G\+N\+M\+E\+NT}-\/1)))}
+
+Align a memory pointer to the alignment defined by M\+E\+M\+\_\+\+A\+L\+I\+G\+N\+M\+E\+NT so that A\+D\+DR \% M\+E\+M\+\_\+\+A\+L\+I\+G\+N\+M\+E\+NT == 0 \mbox{\Hypertarget{group__compiler__abstraction_gaa8e8724eb1c220cbbb90de9e175ce1dc}\label{group__compiler__abstraction_gaa8e8724eb1c220cbbb90de9e175ce1dc}} 
+\index{Compiler/platform abstraction@{Compiler/platform abstraction}!L\+W\+I\+P\+\_\+\+M\+E\+M\+\_\+\+A\+L\+I\+GN@{L\+W\+I\+P\+\_\+\+M\+E\+M\+\_\+\+A\+L\+I\+GN}}
+\index{L\+W\+I\+P\+\_\+\+M\+E\+M\+\_\+\+A\+L\+I\+GN@{L\+W\+I\+P\+\_\+\+M\+E\+M\+\_\+\+A\+L\+I\+GN}!Compiler/platform abstraction@{Compiler/platform abstraction}}
+\subsubsection{\texorpdfstring{L\+W\+I\+P\+\_\+\+M\+E\+M\+\_\+\+A\+L\+I\+GN}{LWIP\_MEM\_ALIGN}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \#define L\+W\+I\+P\+\_\+\+M\+E\+M\+\_\+\+A\+L\+I\+GN(\begin{DoxyParamCaption}\item[{}]{addr }\end{DoxyParamCaption})~((void $\ast$)(((\hyperlink{group__compiler__abstraction_gaf019cbb71af10dcfda7758b21e655307}{mem\+\_\+ptr\+\_\+t})(addr) + \hyperlink{group__lwip__opts__mem_ga97343214666ee6dcb18c0bd77b441ea7}{M\+E\+M\+\_\+\+A\+L\+I\+G\+N\+M\+E\+NT} -\/ 1) \& $\sim$(\hyperlink{group__compiler__abstraction_gaf019cbb71af10dcfda7758b21e655307}{mem\+\_\+ptr\+\_\+t})(\hyperlink{group__lwip__opts__mem_ga97343214666ee6dcb18c0bd77b441ea7}{M\+E\+M\+\_\+\+A\+L\+I\+G\+N\+M\+E\+NT}-\/1)))}
+
+Align a memory pointer to the alignment defined by M\+E\+M\+\_\+\+A\+L\+I\+G\+N\+M\+E\+NT so that A\+D\+DR \% M\+E\+M\+\_\+\+A\+L\+I\+G\+N\+M\+E\+NT == 0 \mbox{\Hypertarget{group__compiler__abstraction_ga25591dcb72fccc7b5dc46fbc1959694e}\label{group__compiler__abstraction_ga25591dcb72fccc7b5dc46fbc1959694e}} 
+\index{Compiler/platform abstraction@{Compiler/platform abstraction}!L\+W\+I\+P\+\_\+\+M\+E\+M\+\_\+\+A\+L\+I\+G\+N\+\_\+\+B\+U\+F\+F\+ER@{L\+W\+I\+P\+\_\+\+M\+E\+M\+\_\+\+A\+L\+I\+G\+N\+\_\+\+B\+U\+F\+F\+ER}}
+\index{L\+W\+I\+P\+\_\+\+M\+E\+M\+\_\+\+A\+L\+I\+G\+N\+\_\+\+B\+U\+F\+F\+ER@{L\+W\+I\+P\+\_\+\+M\+E\+M\+\_\+\+A\+L\+I\+G\+N\+\_\+\+B\+U\+F\+F\+ER}!Compiler/platform abstraction@{Compiler/platform abstraction}}
+\subsubsection{\texorpdfstring{L\+W\+I\+P\+\_\+\+M\+E\+M\+\_\+\+A\+L\+I\+G\+N\+\_\+\+B\+U\+F\+F\+ER}{LWIP\_MEM\_ALIGN\_BUFFER}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \#define L\+W\+I\+P\+\_\+\+M\+E\+M\+\_\+\+A\+L\+I\+G\+N\+\_\+\+B\+U\+F\+F\+ER(\begin{DoxyParamCaption}\item[{}]{size }\end{DoxyParamCaption})~(((size) + \hyperlink{group__lwip__opts__mem_ga97343214666ee6dcb18c0bd77b441ea7}{M\+E\+M\+\_\+\+A\+L\+I\+G\+N\+M\+E\+NT} -\/ 1\+U))}
+
+Calculate safe memory size for an aligned buffer when using an unaligned type as storage. This includes a safety-\/margin on (M\+E\+M\+\_\+\+A\+L\+I\+G\+N\+M\+E\+NT -\/ 1) at the start (e.\+g. if buffer is u8\+\_\+t\mbox{[}\mbox{]} and actual data will be u32\+\_\+t$\ast$) \mbox{\Hypertarget{group__compiler__abstraction_ga25591dcb72fccc7b5dc46fbc1959694e}\label{group__compiler__abstraction_ga25591dcb72fccc7b5dc46fbc1959694e}} 
+\index{Compiler/platform abstraction@{Compiler/platform abstraction}!L\+W\+I\+P\+\_\+\+M\+E\+M\+\_\+\+A\+L\+I\+G\+N\+\_\+\+B\+U\+F\+F\+ER@{L\+W\+I\+P\+\_\+\+M\+E\+M\+\_\+\+A\+L\+I\+G\+N\+\_\+\+B\+U\+F\+F\+ER}}
+\index{L\+W\+I\+P\+\_\+\+M\+E\+M\+\_\+\+A\+L\+I\+G\+N\+\_\+\+B\+U\+F\+F\+ER@{L\+W\+I\+P\+\_\+\+M\+E\+M\+\_\+\+A\+L\+I\+G\+N\+\_\+\+B\+U\+F\+F\+ER}!Compiler/platform abstraction@{Compiler/platform abstraction}}
+\subsubsection{\texorpdfstring{L\+W\+I\+P\+\_\+\+M\+E\+M\+\_\+\+A\+L\+I\+G\+N\+\_\+\+B\+U\+F\+F\+ER}{LWIP\_MEM\_ALIGN\_BUFFER}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \#define L\+W\+I\+P\+\_\+\+M\+E\+M\+\_\+\+A\+L\+I\+G\+N\+\_\+\+B\+U\+F\+F\+ER(\begin{DoxyParamCaption}\item[{}]{size }\end{DoxyParamCaption})~(((size) + \hyperlink{group__lwip__opts__mem_ga97343214666ee6dcb18c0bd77b441ea7}{M\+E\+M\+\_\+\+A\+L\+I\+G\+N\+M\+E\+NT} -\/ 1\+U))}
+
+Calculate safe memory size for an aligned buffer when using an unaligned type as storage. This includes a safety-\/margin on (M\+E\+M\+\_\+\+A\+L\+I\+G\+N\+M\+E\+NT -\/ 1) at the start (e.\+g. if buffer is u8\+\_\+t\mbox{[}\mbox{]} and actual data will be u32\+\_\+t$\ast$) \mbox{\Hypertarget{group__compiler__abstraction_gaef204be511fd32f681b55abc08e9ae18}\label{group__compiler__abstraction_gaef204be511fd32f681b55abc08e9ae18}} 
+\index{Compiler/platform abstraction@{Compiler/platform abstraction}!L\+W\+I\+P\+\_\+\+M\+E\+M\+\_\+\+A\+L\+I\+G\+N\+\_\+\+S\+I\+ZE@{L\+W\+I\+P\+\_\+\+M\+E\+M\+\_\+\+A\+L\+I\+G\+N\+\_\+\+S\+I\+ZE}}
+\index{L\+W\+I\+P\+\_\+\+M\+E\+M\+\_\+\+A\+L\+I\+G\+N\+\_\+\+S\+I\+ZE@{L\+W\+I\+P\+\_\+\+M\+E\+M\+\_\+\+A\+L\+I\+G\+N\+\_\+\+S\+I\+ZE}!Compiler/platform abstraction@{Compiler/platform abstraction}}
+\subsubsection{\texorpdfstring{L\+W\+I\+P\+\_\+\+M\+E\+M\+\_\+\+A\+L\+I\+G\+N\+\_\+\+S\+I\+ZE}{LWIP\_MEM\_ALIGN\_SIZE}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \#define L\+W\+I\+P\+\_\+\+M\+E\+M\+\_\+\+A\+L\+I\+G\+N\+\_\+\+S\+I\+ZE(\begin{DoxyParamCaption}\item[{}]{size }\end{DoxyParamCaption})~(((size) + \hyperlink{group__lwip__opts__mem_ga97343214666ee6dcb18c0bd77b441ea7}{M\+E\+M\+\_\+\+A\+L\+I\+G\+N\+M\+E\+NT} -\/ 1\+U) \& $\sim$(\+M\+E\+M\+\_\+\+A\+L\+I\+G\+N\+M\+E\+N\+T-\/1\+U))}
+
+Calculate memory size for an aligned buffer -\/ returns the next highest multiple of M\+E\+M\+\_\+\+A\+L\+I\+G\+N\+M\+E\+NT (e.\+g. \hyperlink{group__compiler__abstraction_gaef204be511fd32f681b55abc08e9ae18}{L\+W\+I\+P\+\_\+\+M\+E\+M\+\_\+\+A\+L\+I\+G\+N\+\_\+\+S\+I\+Z\+E(3)} and \hyperlink{group__compiler__abstraction_gaef204be511fd32f681b55abc08e9ae18}{L\+W\+I\+P\+\_\+\+M\+E\+M\+\_\+\+A\+L\+I\+G\+N\+\_\+\+S\+I\+Z\+E(4)} will both yield 4 for M\+E\+M\+\_\+\+A\+L\+I\+G\+N\+M\+E\+NT == 4). \mbox{\Hypertarget{group__compiler__abstraction_gaef204be511fd32f681b55abc08e9ae18}\label{group__compiler__abstraction_gaef204be511fd32f681b55abc08e9ae18}} 
+\index{Compiler/platform abstraction@{Compiler/platform abstraction}!L\+W\+I\+P\+\_\+\+M\+E\+M\+\_\+\+A\+L\+I\+G\+N\+\_\+\+S\+I\+ZE@{L\+W\+I\+P\+\_\+\+M\+E\+M\+\_\+\+A\+L\+I\+G\+N\+\_\+\+S\+I\+ZE}}
+\index{L\+W\+I\+P\+\_\+\+M\+E\+M\+\_\+\+A\+L\+I\+G\+N\+\_\+\+S\+I\+ZE@{L\+W\+I\+P\+\_\+\+M\+E\+M\+\_\+\+A\+L\+I\+G\+N\+\_\+\+S\+I\+ZE}!Compiler/platform abstraction@{Compiler/platform abstraction}}
+\subsubsection{\texorpdfstring{L\+W\+I\+P\+\_\+\+M\+E\+M\+\_\+\+A\+L\+I\+G\+N\+\_\+\+S\+I\+ZE}{LWIP\_MEM\_ALIGN\_SIZE}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \#define L\+W\+I\+P\+\_\+\+M\+E\+M\+\_\+\+A\+L\+I\+G\+N\+\_\+\+S\+I\+ZE(\begin{DoxyParamCaption}\item[{}]{size }\end{DoxyParamCaption})~(((size) + \hyperlink{group__lwip__opts__mem_ga97343214666ee6dcb18c0bd77b441ea7}{M\+E\+M\+\_\+\+A\+L\+I\+G\+N\+M\+E\+NT} -\/ 1\+U) \& $\sim$(\+M\+E\+M\+\_\+\+A\+L\+I\+G\+N\+M\+E\+N\+T-\/1\+U))}
+
+Calculate memory size for an aligned buffer -\/ returns the next highest multiple of M\+E\+M\+\_\+\+A\+L\+I\+G\+N\+M\+E\+NT (e.\+g. \hyperlink{group__compiler__abstraction_gaef204be511fd32f681b55abc08e9ae18}{L\+W\+I\+P\+\_\+\+M\+E\+M\+\_\+\+A\+L\+I\+G\+N\+\_\+\+S\+I\+Z\+E(3)} and \hyperlink{group__compiler__abstraction_gaef204be511fd32f681b55abc08e9ae18}{L\+W\+I\+P\+\_\+\+M\+E\+M\+\_\+\+A\+L\+I\+G\+N\+\_\+\+S\+I\+Z\+E(4)} will both yield 4 for M\+E\+M\+\_\+\+A\+L\+I\+G\+N\+M\+E\+NT == 4). \mbox{\Hypertarget{group__compiler__abstraction_ga5bf52d6f2729d0c8afd365f69d7d4373}\label{group__compiler__abstraction_ga5bf52d6f2729d0c8afd365f69d7d4373}} 
+\index{Compiler/platform abstraction@{Compiler/platform abstraction}!L\+W\+I\+P\+\_\+\+N\+O\+\_\+\+I\+N\+T\+T\+Y\+P\+E\+S\+\_\+H@{L\+W\+I\+P\+\_\+\+N\+O\+\_\+\+I\+N\+T\+T\+Y\+P\+E\+S\+\_\+H}}
+\index{L\+W\+I\+P\+\_\+\+N\+O\+\_\+\+I\+N\+T\+T\+Y\+P\+E\+S\+\_\+H@{L\+W\+I\+P\+\_\+\+N\+O\+\_\+\+I\+N\+T\+T\+Y\+P\+E\+S\+\_\+H}!Compiler/platform abstraction@{Compiler/platform abstraction}}
+\subsubsection{\texorpdfstring{L\+W\+I\+P\+\_\+\+N\+O\+\_\+\+I\+N\+T\+T\+Y\+P\+E\+S\+\_\+H}{LWIP\_NO\_INTTYPES\_H}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \#define L\+W\+I\+P\+\_\+\+N\+O\+\_\+\+I\+N\+T\+T\+Y\+P\+E\+S\+\_\+H~0}
+
+Define this to 1 in arch/cc.\+h of your port if your compiler does not provide the inttypes.\+h header. You need to define the format strings listed in lwip/arch.\+h yourself in this case (X8\+\_\+F, U16\+\_\+F...). \mbox{\Hypertarget{group__compiler__abstraction_ga5bf52d6f2729d0c8afd365f69d7d4373}\label{group__compiler__abstraction_ga5bf52d6f2729d0c8afd365f69d7d4373}} 
+\index{Compiler/platform abstraction@{Compiler/platform abstraction}!L\+W\+I\+P\+\_\+\+N\+O\+\_\+\+I\+N\+T\+T\+Y\+P\+E\+S\+\_\+H@{L\+W\+I\+P\+\_\+\+N\+O\+\_\+\+I\+N\+T\+T\+Y\+P\+E\+S\+\_\+H}}
+\index{L\+W\+I\+P\+\_\+\+N\+O\+\_\+\+I\+N\+T\+T\+Y\+P\+E\+S\+\_\+H@{L\+W\+I\+P\+\_\+\+N\+O\+\_\+\+I\+N\+T\+T\+Y\+P\+E\+S\+\_\+H}!Compiler/platform abstraction@{Compiler/platform abstraction}}
+\subsubsection{\texorpdfstring{L\+W\+I\+P\+\_\+\+N\+O\+\_\+\+I\+N\+T\+T\+Y\+P\+E\+S\+\_\+H}{LWIP\_NO\_INTTYPES\_H}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \#define L\+W\+I\+P\+\_\+\+N\+O\+\_\+\+I\+N\+T\+T\+Y\+P\+E\+S\+\_\+H~0}
+
+Define this to 1 in arch/cc.\+h of your port if your compiler does not provide the inttypes.\+h header. You need to define the format strings listed in lwip/arch.\+h yourself in this case (X8\+\_\+F, U16\+\_\+F...). \mbox{\Hypertarget{group__compiler__abstraction_gade9c8513419a799cd78a07ae894bb805}\label{group__compiler__abstraction_gade9c8513419a799cd78a07ae894bb805}} 
+\index{Compiler/platform abstraction@{Compiler/platform abstraction}!L\+W\+I\+P\+\_\+\+N\+O\+\_\+\+L\+I\+M\+I\+T\+S\+\_\+H@{L\+W\+I\+P\+\_\+\+N\+O\+\_\+\+L\+I\+M\+I\+T\+S\+\_\+H}}
+\index{L\+W\+I\+P\+\_\+\+N\+O\+\_\+\+L\+I\+M\+I\+T\+S\+\_\+H@{L\+W\+I\+P\+\_\+\+N\+O\+\_\+\+L\+I\+M\+I\+T\+S\+\_\+H}!Compiler/platform abstraction@{Compiler/platform abstraction}}
+\subsubsection{\texorpdfstring{L\+W\+I\+P\+\_\+\+N\+O\+\_\+\+L\+I\+M\+I\+T\+S\+\_\+H}{LWIP\_NO\_LIMITS\_H}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \#define L\+W\+I\+P\+\_\+\+N\+O\+\_\+\+L\+I\+M\+I\+T\+S\+\_\+H~0}
+
+Define this to 1 in arch/cc.\+h of your port if your compiler does not provide the limits.\+h header. You need to define the type limits yourself in this case (e.\+g. I\+N\+T\+\_\+\+M\+AX). \mbox{\Hypertarget{group__compiler__abstraction_gade9c8513419a799cd78a07ae894bb805}\label{group__compiler__abstraction_gade9c8513419a799cd78a07ae894bb805}} 
+\index{Compiler/platform abstraction@{Compiler/platform abstraction}!L\+W\+I\+P\+\_\+\+N\+O\+\_\+\+L\+I\+M\+I\+T\+S\+\_\+H@{L\+W\+I\+P\+\_\+\+N\+O\+\_\+\+L\+I\+M\+I\+T\+S\+\_\+H}}
+\index{L\+W\+I\+P\+\_\+\+N\+O\+\_\+\+L\+I\+M\+I\+T\+S\+\_\+H@{L\+W\+I\+P\+\_\+\+N\+O\+\_\+\+L\+I\+M\+I\+T\+S\+\_\+H}!Compiler/platform abstraction@{Compiler/platform abstraction}}
+\subsubsection{\texorpdfstring{L\+W\+I\+P\+\_\+\+N\+O\+\_\+\+L\+I\+M\+I\+T\+S\+\_\+H}{LWIP\_NO\_LIMITS\_H}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \#define L\+W\+I\+P\+\_\+\+N\+O\+\_\+\+L\+I\+M\+I\+T\+S\+\_\+H~0}
+
+Define this to 1 in arch/cc.\+h of your port if your compiler does not provide the limits.\+h header. You need to define the type limits yourself in this case (e.\+g. I\+N\+T\+\_\+\+M\+AX). \mbox{\Hypertarget{group__compiler__abstraction_ga53954d507c09e521ec0d44a2450bb89d}\label{group__compiler__abstraction_ga53954d507c09e521ec0d44a2450bb89d}} 
+\index{Compiler/platform abstraction@{Compiler/platform abstraction}!L\+W\+I\+P\+\_\+\+N\+O\+\_\+\+S\+T\+D\+D\+E\+F\+\_\+H@{L\+W\+I\+P\+\_\+\+N\+O\+\_\+\+S\+T\+D\+D\+E\+F\+\_\+H}}
+\index{L\+W\+I\+P\+\_\+\+N\+O\+\_\+\+S\+T\+D\+D\+E\+F\+\_\+H@{L\+W\+I\+P\+\_\+\+N\+O\+\_\+\+S\+T\+D\+D\+E\+F\+\_\+H}!Compiler/platform abstraction@{Compiler/platform abstraction}}
+\subsubsection{\texorpdfstring{L\+W\+I\+P\+\_\+\+N\+O\+\_\+\+S\+T\+D\+D\+E\+F\+\_\+H}{LWIP\_NO\_STDDEF\_H}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \#define L\+W\+I\+P\+\_\+\+N\+O\+\_\+\+S\+T\+D\+D\+E\+F\+\_\+H~0}
+
+Define this to 1 in arch/cc.\+h of your port if you do not want to include stddef.\+h header to get size\+\_\+t. You need to typedef size\+\_\+t by yourself in this case. \mbox{\Hypertarget{group__compiler__abstraction_ga53954d507c09e521ec0d44a2450bb89d}\label{group__compiler__abstraction_ga53954d507c09e521ec0d44a2450bb89d}} 
+\index{Compiler/platform abstraction@{Compiler/platform abstraction}!L\+W\+I\+P\+\_\+\+N\+O\+\_\+\+S\+T\+D\+D\+E\+F\+\_\+H@{L\+W\+I\+P\+\_\+\+N\+O\+\_\+\+S\+T\+D\+D\+E\+F\+\_\+H}}
+\index{L\+W\+I\+P\+\_\+\+N\+O\+\_\+\+S\+T\+D\+D\+E\+F\+\_\+H@{L\+W\+I\+P\+\_\+\+N\+O\+\_\+\+S\+T\+D\+D\+E\+F\+\_\+H}!Compiler/platform abstraction@{Compiler/platform abstraction}}
+\subsubsection{\texorpdfstring{L\+W\+I\+P\+\_\+\+N\+O\+\_\+\+S\+T\+D\+D\+E\+F\+\_\+H}{LWIP\_NO\_STDDEF\_H}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \#define L\+W\+I\+P\+\_\+\+N\+O\+\_\+\+S\+T\+D\+D\+E\+F\+\_\+H~0}
+
+Define this to 1 in arch/cc.\+h of your port if you do not want to include stddef.\+h header to get size\+\_\+t. You need to typedef size\+\_\+t by yourself in this case. \mbox{\Hypertarget{group__compiler__abstraction_ga122c754db96ecad23bc6f4541d6360c1}\label{group__compiler__abstraction_ga122c754db96ecad23bc6f4541d6360c1}} 
+\index{Compiler/platform abstraction@{Compiler/platform abstraction}!L\+W\+I\+P\+\_\+\+N\+O\+\_\+\+S\+T\+D\+I\+N\+T\+\_\+H@{L\+W\+I\+P\+\_\+\+N\+O\+\_\+\+S\+T\+D\+I\+N\+T\+\_\+H}}
+\index{L\+W\+I\+P\+\_\+\+N\+O\+\_\+\+S\+T\+D\+I\+N\+T\+\_\+H@{L\+W\+I\+P\+\_\+\+N\+O\+\_\+\+S\+T\+D\+I\+N\+T\+\_\+H}!Compiler/platform abstraction@{Compiler/platform abstraction}}
+\subsubsection{\texorpdfstring{L\+W\+I\+P\+\_\+\+N\+O\+\_\+\+S\+T\+D\+I\+N\+T\+\_\+H}{LWIP\_NO\_STDINT\_H}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \#define L\+W\+I\+P\+\_\+\+N\+O\+\_\+\+S\+T\+D\+I\+N\+T\+\_\+H~0}
+
+Define this to 1 in arch/cc.\+h of your port if your compiler does not provide the stdint.\+h header. You need to typedef the generic types listed in lwip/arch.\+h yourself in this case (u8\+\_\+t, u16\+\_\+t...). \mbox{\Hypertarget{group__compiler__abstraction_ga122c754db96ecad23bc6f4541d6360c1}\label{group__compiler__abstraction_ga122c754db96ecad23bc6f4541d6360c1}} 
+\index{Compiler/platform abstraction@{Compiler/platform abstraction}!L\+W\+I\+P\+\_\+\+N\+O\+\_\+\+S\+T\+D\+I\+N\+T\+\_\+H@{L\+W\+I\+P\+\_\+\+N\+O\+\_\+\+S\+T\+D\+I\+N\+T\+\_\+H}}
+\index{L\+W\+I\+P\+\_\+\+N\+O\+\_\+\+S\+T\+D\+I\+N\+T\+\_\+H@{L\+W\+I\+P\+\_\+\+N\+O\+\_\+\+S\+T\+D\+I\+N\+T\+\_\+H}!Compiler/platform abstraction@{Compiler/platform abstraction}}
+\subsubsection{\texorpdfstring{L\+W\+I\+P\+\_\+\+N\+O\+\_\+\+S\+T\+D\+I\+N\+T\+\_\+H}{LWIP\_NO\_STDINT\_H}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \#define L\+W\+I\+P\+\_\+\+N\+O\+\_\+\+S\+T\+D\+I\+N\+T\+\_\+H~0}
+
+Define this to 1 in arch/cc.\+h of your port if your compiler does not provide the stdint.\+h header. You need to typedef the generic types listed in lwip/arch.\+h yourself in this case (u8\+\_\+t, u16\+\_\+t...). \mbox{\Hypertarget{group__compiler__abstraction_ga7e8bcd0282525704d6dd596bdd1b47d0}\label{group__compiler__abstraction_ga7e8bcd0282525704d6dd596bdd1b47d0}} 
+\index{Compiler/platform abstraction@{Compiler/platform abstraction}!L\+W\+I\+P\+\_\+\+P\+L\+A\+T\+F\+O\+R\+M\+\_\+\+A\+S\+S\+E\+RT@{L\+W\+I\+P\+\_\+\+P\+L\+A\+T\+F\+O\+R\+M\+\_\+\+A\+S\+S\+E\+RT}}
+\index{L\+W\+I\+P\+\_\+\+P\+L\+A\+T\+F\+O\+R\+M\+\_\+\+A\+S\+S\+E\+RT@{L\+W\+I\+P\+\_\+\+P\+L\+A\+T\+F\+O\+R\+M\+\_\+\+A\+S\+S\+E\+RT}!Compiler/platform abstraction@{Compiler/platform abstraction}}
+\subsubsection{\texorpdfstring{L\+W\+I\+P\+\_\+\+P\+L\+A\+T\+F\+O\+R\+M\+\_\+\+A\+S\+S\+E\+RT}{LWIP\_PLATFORM\_ASSERT}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \#define L\+W\+I\+P\+\_\+\+P\+L\+A\+T\+F\+O\+R\+M\+\_\+\+A\+S\+S\+E\+RT(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\textcolor{keywordflow}{do} \{printf(\textcolor{stringliteral}{"Assertion \(\backslash\)"%s\(\backslash\)" failed at line %d in %s\(\backslash\)n"}, \(\backslash\)
+                                     x, \_\_LINE\_\_, \_\_FILE\_\_); fflush(\hyperlink{native_2lwip_2src_2include_2lwip_2def_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}); abort();\} \textcolor{keywordflow}{while}(0)
+\end{DoxyCode}
+Platform specific assertion handling.~\newline
+Note the default implementation pulls in printf, fflush and abort, which may in turn pull in a lot of standard libary code. In resource-\/constrained systems, this should be defined to something less resource-\/consuming. \mbox{\Hypertarget{group__compiler__abstraction_ga7e8bcd0282525704d6dd596bdd1b47d0}\label{group__compiler__abstraction_ga7e8bcd0282525704d6dd596bdd1b47d0}} 
+\index{Compiler/platform abstraction@{Compiler/platform abstraction}!L\+W\+I\+P\+\_\+\+P\+L\+A\+T\+F\+O\+R\+M\+\_\+\+A\+S\+S\+E\+RT@{L\+W\+I\+P\+\_\+\+P\+L\+A\+T\+F\+O\+R\+M\+\_\+\+A\+S\+S\+E\+RT}}
+\index{L\+W\+I\+P\+\_\+\+P\+L\+A\+T\+F\+O\+R\+M\+\_\+\+A\+S\+S\+E\+RT@{L\+W\+I\+P\+\_\+\+P\+L\+A\+T\+F\+O\+R\+M\+\_\+\+A\+S\+S\+E\+RT}!Compiler/platform abstraction@{Compiler/platform abstraction}}
+\subsubsection{\texorpdfstring{L\+W\+I\+P\+\_\+\+P\+L\+A\+T\+F\+O\+R\+M\+\_\+\+A\+S\+S\+E\+RT}{LWIP\_PLATFORM\_ASSERT}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \#define L\+W\+I\+P\+\_\+\+P\+L\+A\+T\+F\+O\+R\+M\+\_\+\+A\+S\+S\+E\+RT(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\textcolor{keywordflow}{do} \{printf(\textcolor{stringliteral}{"Assertion \(\backslash\)"%s\(\backslash\)" failed at line %d in %s\(\backslash\)n"}, \(\backslash\)
+                                     x, \_\_LINE\_\_, \_\_FILE\_\_); fflush(\hyperlink{native_2lwip_2src_2include_2lwip_2def_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}); abort();\} \textcolor{keywordflow}{while}(0)
+\end{DoxyCode}
+Platform specific assertion handling.~\newline
+Note the default implementation pulls in printf, fflush and abort, which may in turn pull in a lot of standard libary code. In resource-\/constrained systems, this should be defined to something less resource-\/consuming. \mbox{\Hypertarget{group__compiler__abstraction_gaccef167be13a500ce30036030a9b142b}\label{group__compiler__abstraction_gaccef167be13a500ce30036030a9b142b}} 
+\index{Compiler/platform abstraction@{Compiler/platform abstraction}!L\+W\+I\+P\+\_\+\+P\+L\+A\+T\+F\+O\+R\+M\+\_\+\+D\+I\+AG@{L\+W\+I\+P\+\_\+\+P\+L\+A\+T\+F\+O\+R\+M\+\_\+\+D\+I\+AG}}
+\index{L\+W\+I\+P\+\_\+\+P\+L\+A\+T\+F\+O\+R\+M\+\_\+\+D\+I\+AG@{L\+W\+I\+P\+\_\+\+P\+L\+A\+T\+F\+O\+R\+M\+\_\+\+D\+I\+AG}!Compiler/platform abstraction@{Compiler/platform abstraction}}
+\subsubsection{\texorpdfstring{L\+W\+I\+P\+\_\+\+P\+L\+A\+T\+F\+O\+R\+M\+\_\+\+D\+I\+AG}{LWIP\_PLATFORM\_DIAG}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \#define L\+W\+I\+P\+\_\+\+P\+L\+A\+T\+F\+O\+R\+M\+\_\+\+D\+I\+AG(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~do \{printf x;\} while(0)}
+
+Define random number generator function of your system Platform specific diagnostic output.~\newline
+Note the default implementation pulls in printf, which may in turn pull in a lot of standard libary code. In resource-\/constrained systems, this should be defined to something less resource-\/consuming. \mbox{\Hypertarget{group__compiler__abstraction_gaccef167be13a500ce30036030a9b142b}\label{group__compiler__abstraction_gaccef167be13a500ce30036030a9b142b}} 
+\index{Compiler/platform abstraction@{Compiler/platform abstraction}!L\+W\+I\+P\+\_\+\+P\+L\+A\+T\+F\+O\+R\+M\+\_\+\+D\+I\+AG@{L\+W\+I\+P\+\_\+\+P\+L\+A\+T\+F\+O\+R\+M\+\_\+\+D\+I\+AG}}
+\index{L\+W\+I\+P\+\_\+\+P\+L\+A\+T\+F\+O\+R\+M\+\_\+\+D\+I\+AG@{L\+W\+I\+P\+\_\+\+P\+L\+A\+T\+F\+O\+R\+M\+\_\+\+D\+I\+AG}!Compiler/platform abstraction@{Compiler/platform abstraction}}
+\subsubsection{\texorpdfstring{L\+W\+I\+P\+\_\+\+P\+L\+A\+T\+F\+O\+R\+M\+\_\+\+D\+I\+AG}{LWIP\_PLATFORM\_DIAG}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \#define L\+W\+I\+P\+\_\+\+P\+L\+A\+T\+F\+O\+R\+M\+\_\+\+D\+I\+AG(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~do \{printf x;\} while(0)}
+
+Define random number generator function of your system Platform specific diagnostic output.~\newline
+Note the default implementation pulls in printf, which may in turn pull in a lot of standard libary code. In resource-\/constrained systems, this should be defined to something less resource-\/consuming. \mbox{\Hypertarget{group__compiler__abstraction_ga683e5c35d3263fe3145e6a6bc546604a}\label{group__compiler__abstraction_ga683e5c35d3263fe3145e6a6bc546604a}} 
+\index{Compiler/platform abstraction@{Compiler/platform abstraction}!L\+W\+I\+P\+\_\+\+P\+T\+R\+\_\+\+N\+U\+M\+E\+R\+I\+C\+\_\+\+C\+A\+ST@{L\+W\+I\+P\+\_\+\+P\+T\+R\+\_\+\+N\+U\+M\+E\+R\+I\+C\+\_\+\+C\+A\+ST}}
+\index{L\+W\+I\+P\+\_\+\+P\+T\+R\+\_\+\+N\+U\+M\+E\+R\+I\+C\+\_\+\+C\+A\+ST@{L\+W\+I\+P\+\_\+\+P\+T\+R\+\_\+\+N\+U\+M\+E\+R\+I\+C\+\_\+\+C\+A\+ST}!Compiler/platform abstraction@{Compiler/platform abstraction}}
+\subsubsection{\texorpdfstring{L\+W\+I\+P\+\_\+\+P\+T\+R\+\_\+\+N\+U\+M\+E\+R\+I\+C\+\_\+\+C\+A\+ST}{LWIP\_PTR\_NUMERIC\_CAST}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \#define L\+W\+I\+P\+\_\+\+P\+T\+R\+\_\+\+N\+U\+M\+E\+R\+I\+C\+\_\+\+C\+A\+ST(\begin{DoxyParamCaption}\item[{}]{target\+\_\+type,  }\item[{}]{val }\end{DoxyParamCaption})~\hyperlink{group__compiler__abstraction_gaa0dd3f76dd9a837feaac61fedc0dbe72}{L\+W\+I\+P\+\_\+\+C\+O\+N\+S\+T\+\_\+\+C\+A\+ST}(target\+\_\+type, val)}
+
+Get rid of warnings related to pointer-\/to-\/numeric and vice-\/versa casts, e.\+g. \char`\"{}conversion from \textquotesingle{}u8\+\_\+t\textquotesingle{} to \textquotesingle{}void $\ast$\textquotesingle{} of greater size\char`\"{} \mbox{\Hypertarget{group__compiler__abstraction_ga683e5c35d3263fe3145e6a6bc546604a}\label{group__compiler__abstraction_ga683e5c35d3263fe3145e6a6bc546604a}} 
+\index{Compiler/platform abstraction@{Compiler/platform abstraction}!L\+W\+I\+P\+\_\+\+P\+T\+R\+\_\+\+N\+U\+M\+E\+R\+I\+C\+\_\+\+C\+A\+ST@{L\+W\+I\+P\+\_\+\+P\+T\+R\+\_\+\+N\+U\+M\+E\+R\+I\+C\+\_\+\+C\+A\+ST}}
+\index{L\+W\+I\+P\+\_\+\+P\+T\+R\+\_\+\+N\+U\+M\+E\+R\+I\+C\+\_\+\+C\+A\+ST@{L\+W\+I\+P\+\_\+\+P\+T\+R\+\_\+\+N\+U\+M\+E\+R\+I\+C\+\_\+\+C\+A\+ST}!Compiler/platform abstraction@{Compiler/platform abstraction}}
+\subsubsection{\texorpdfstring{L\+W\+I\+P\+\_\+\+P\+T\+R\+\_\+\+N\+U\+M\+E\+R\+I\+C\+\_\+\+C\+A\+ST}{LWIP\_PTR\_NUMERIC\_CAST}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \#define L\+W\+I\+P\+\_\+\+P\+T\+R\+\_\+\+N\+U\+M\+E\+R\+I\+C\+\_\+\+C\+A\+ST(\begin{DoxyParamCaption}\item[{}]{target\+\_\+type,  }\item[{}]{val }\end{DoxyParamCaption})~\hyperlink{group__compiler__abstraction_gaa0dd3f76dd9a837feaac61fedc0dbe72}{L\+W\+I\+P\+\_\+\+C\+O\+N\+S\+T\+\_\+\+C\+A\+ST}(target\+\_\+type, val)}
+
+Get rid of warnings related to pointer-\/to-\/numeric and vice-\/versa casts, e.\+g. \char`\"{}conversion from \textquotesingle{}u8\+\_\+t\textquotesingle{} to \textquotesingle{}void $\ast$\textquotesingle{} of greater size\char`\"{} \mbox{\Hypertarget{group__compiler__abstraction_ga70624a5deb8b9199406372a7f3603ecf}\label{group__compiler__abstraction_ga70624a5deb8b9199406372a7f3603ecf}} 
+\index{Compiler/platform abstraction@{Compiler/platform abstraction}!L\+W\+I\+P\+\_\+\+U\+N\+U\+S\+E\+D\+\_\+\+A\+RG@{L\+W\+I\+P\+\_\+\+U\+N\+U\+S\+E\+D\+\_\+\+A\+RG}}
+\index{L\+W\+I\+P\+\_\+\+U\+N\+U\+S\+E\+D\+\_\+\+A\+RG@{L\+W\+I\+P\+\_\+\+U\+N\+U\+S\+E\+D\+\_\+\+A\+RG}!Compiler/platform abstraction@{Compiler/platform abstraction}}
+\subsubsection{\texorpdfstring{L\+W\+I\+P\+\_\+\+U\+N\+U\+S\+E\+D\+\_\+\+A\+RG}{LWIP\_UNUSED\_ARG}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \#define L\+W\+I\+P\+\_\+\+U\+N\+U\+S\+E\+D\+\_\+\+A\+RG(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~(void)x}
+
+Packed structs support using \#include files before and after struct to be packed.~\newline
+The file included B\+E\+F\+O\+RE the struct is \char`\"{}arch/bpstruct.\+h\char`\"{}.~\newline
+The file included A\+F\+T\+ER the struct is \char`\"{}arch/epstruct.\+h\char`\"{}.~\newline
+This can be used to implement struct packing on MS Visual C compilers, see the Win32 port in the lw\+IP contrib repository for reference. For examples of packed struct declarations, see include/lwip/prot/ subfolder.~\newline
+A port to G\+C\+C/clang is included in lw\+IP, if you use these compilers there is nothing to do here.\+Eliminates compiler warning about unused arguments (G\+CC -\/\+Wextra -\/\+Wunused). \mbox{\Hypertarget{group__compiler__abstraction_ga70624a5deb8b9199406372a7f3603ecf}\label{group__compiler__abstraction_ga70624a5deb8b9199406372a7f3603ecf}} 
+\index{Compiler/platform abstraction@{Compiler/platform abstraction}!L\+W\+I\+P\+\_\+\+U\+N\+U\+S\+E\+D\+\_\+\+A\+RG@{L\+W\+I\+P\+\_\+\+U\+N\+U\+S\+E\+D\+\_\+\+A\+RG}}
+\index{L\+W\+I\+P\+\_\+\+U\+N\+U\+S\+E\+D\+\_\+\+A\+RG@{L\+W\+I\+P\+\_\+\+U\+N\+U\+S\+E\+D\+\_\+\+A\+RG}!Compiler/platform abstraction@{Compiler/platform abstraction}}
+\subsubsection{\texorpdfstring{L\+W\+I\+P\+\_\+\+U\+N\+U\+S\+E\+D\+\_\+\+A\+RG}{LWIP\_UNUSED\_ARG}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \#define L\+W\+I\+P\+\_\+\+U\+N\+U\+S\+E\+D\+\_\+\+A\+RG(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~(void)x}
+
+Packed structs support using \#include files before and after struct to be packed.~\newline
+The file included B\+E\+F\+O\+RE the struct is \char`\"{}arch/bpstruct.\+h\char`\"{}.~\newline
+The file included A\+F\+T\+ER the struct is \char`\"{}arch/epstruct.\+h\char`\"{}.~\newline
+This can be used to implement struct packing on MS Visual C compilers, see the Win32 port in the lw\+IP contrib repository for reference. For examples of packed struct declarations, see include/lwip/prot/ subfolder.~\newline
+A port to G\+C\+C/clang is included in lw\+IP, if you use these compilers there is nothing to do here.\+Eliminates compiler warning about unused arguments (G\+CC -\/\+Wextra -\/\+Wunused). \mbox{\Hypertarget{group__compiler__abstraction_ga73199061891adf1b912d20835c7d5e96}\label{group__compiler__abstraction_ga73199061891adf1b912d20835c7d5e96}} 
+\index{Compiler/platform abstraction@{Compiler/platform abstraction}!P\+A\+C\+K\+\_\+\+S\+T\+R\+U\+C\+T\+\_\+\+B\+E\+G\+IN@{P\+A\+C\+K\+\_\+\+S\+T\+R\+U\+C\+T\+\_\+\+B\+E\+G\+IN}}
+\index{P\+A\+C\+K\+\_\+\+S\+T\+R\+U\+C\+T\+\_\+\+B\+E\+G\+IN@{P\+A\+C\+K\+\_\+\+S\+T\+R\+U\+C\+T\+\_\+\+B\+E\+G\+IN}!Compiler/platform abstraction@{Compiler/platform abstraction}}
+\subsubsection{\texorpdfstring{P\+A\+C\+K\+\_\+\+S\+T\+R\+U\+C\+T\+\_\+\+B\+E\+G\+IN}{PACK\_STRUCT\_BEGIN}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \#define P\+A\+C\+K\+\_\+\+S\+T\+R\+U\+C\+T\+\_\+\+B\+E\+G\+IN}
+
+Packed structs support. Placed B\+E\+F\+O\+RE declaration of a packed struct.~\newline
+For examples of packed struct declarations, see include/lwip/prot/ subfolder.~\newline
+A port to G\+C\+C/clang is included in lw\+IP, if you use these compilers there is nothing to do here. \mbox{\Hypertarget{group__compiler__abstraction_ga73199061891adf1b912d20835c7d5e96}\label{group__compiler__abstraction_ga73199061891adf1b912d20835c7d5e96}} 
+\index{Compiler/platform abstraction@{Compiler/platform abstraction}!P\+A\+C\+K\+\_\+\+S\+T\+R\+U\+C\+T\+\_\+\+B\+E\+G\+IN@{P\+A\+C\+K\+\_\+\+S\+T\+R\+U\+C\+T\+\_\+\+B\+E\+G\+IN}}
+\index{P\+A\+C\+K\+\_\+\+S\+T\+R\+U\+C\+T\+\_\+\+B\+E\+G\+IN@{P\+A\+C\+K\+\_\+\+S\+T\+R\+U\+C\+T\+\_\+\+B\+E\+G\+IN}!Compiler/platform abstraction@{Compiler/platform abstraction}}
+\subsubsection{\texorpdfstring{P\+A\+C\+K\+\_\+\+S\+T\+R\+U\+C\+T\+\_\+\+B\+E\+G\+IN}{PACK\_STRUCT\_BEGIN}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \#define P\+A\+C\+K\+\_\+\+S\+T\+R\+U\+C\+T\+\_\+\+B\+E\+G\+IN}
+
+Packed structs support. Placed B\+E\+F\+O\+RE declaration of a packed struct.~\newline
+For examples of packed struct declarations, see include/lwip/prot/ subfolder.~\newline
+A port to G\+C\+C/clang is included in lw\+IP, if you use these compilers there is nothing to do here. \mbox{\Hypertarget{group__compiler__abstraction_ga465fef70f294e21cbf4ea51fc342f20e}\label{group__compiler__abstraction_ga465fef70f294e21cbf4ea51fc342f20e}} 
+\index{Compiler/platform abstraction@{Compiler/platform abstraction}!P\+A\+C\+K\+\_\+\+S\+T\+R\+U\+C\+T\+\_\+\+E\+ND@{P\+A\+C\+K\+\_\+\+S\+T\+R\+U\+C\+T\+\_\+\+E\+ND}}
+\index{P\+A\+C\+K\+\_\+\+S\+T\+R\+U\+C\+T\+\_\+\+E\+ND@{P\+A\+C\+K\+\_\+\+S\+T\+R\+U\+C\+T\+\_\+\+E\+ND}!Compiler/platform abstraction@{Compiler/platform abstraction}}
+\subsubsection{\texorpdfstring{P\+A\+C\+K\+\_\+\+S\+T\+R\+U\+C\+T\+\_\+\+E\+ND}{PACK\_STRUCT\_END}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \#define P\+A\+C\+K\+\_\+\+S\+T\+R\+U\+C\+T\+\_\+\+E\+ND}
+
+Packed structs support. Placed A\+F\+T\+ER declaration of a packed struct.~\newline
+For examples of packed struct declarations, see include/lwip/prot/ subfolder.~\newline
+A port to G\+C\+C/clang is included in lw\+IP, if you use these compilers there is nothing to do here. \mbox{\Hypertarget{group__compiler__abstraction_ga465fef70f294e21cbf4ea51fc342f20e}\label{group__compiler__abstraction_ga465fef70f294e21cbf4ea51fc342f20e}} 
+\index{Compiler/platform abstraction@{Compiler/platform abstraction}!P\+A\+C\+K\+\_\+\+S\+T\+R\+U\+C\+T\+\_\+\+E\+ND@{P\+A\+C\+K\+\_\+\+S\+T\+R\+U\+C\+T\+\_\+\+E\+ND}}
+\index{P\+A\+C\+K\+\_\+\+S\+T\+R\+U\+C\+T\+\_\+\+E\+ND@{P\+A\+C\+K\+\_\+\+S\+T\+R\+U\+C\+T\+\_\+\+E\+ND}!Compiler/platform abstraction@{Compiler/platform abstraction}}
+\subsubsection{\texorpdfstring{P\+A\+C\+K\+\_\+\+S\+T\+R\+U\+C\+T\+\_\+\+E\+ND}{PACK\_STRUCT\_END}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \#define P\+A\+C\+K\+\_\+\+S\+T\+R\+U\+C\+T\+\_\+\+E\+ND}
+
+Packed structs support. Placed A\+F\+T\+ER declaration of a packed struct.~\newline
+For examples of packed struct declarations, see include/lwip/prot/ subfolder.~\newline
+A port to G\+C\+C/clang is included in lw\+IP, if you use these compilers there is nothing to do here. \mbox{\Hypertarget{group__compiler__abstraction_gaab0b988124e37a978d9a88e7c1c778e0}\label{group__compiler__abstraction_gaab0b988124e37a978d9a88e7c1c778e0}} 
+\index{Compiler/platform abstraction@{Compiler/platform abstraction}!P\+A\+C\+K\+\_\+\+S\+T\+R\+U\+C\+T\+\_\+\+F\+I\+E\+LD@{P\+A\+C\+K\+\_\+\+S\+T\+R\+U\+C\+T\+\_\+\+F\+I\+E\+LD}}
+\index{P\+A\+C\+K\+\_\+\+S\+T\+R\+U\+C\+T\+\_\+\+F\+I\+E\+LD@{P\+A\+C\+K\+\_\+\+S\+T\+R\+U\+C\+T\+\_\+\+F\+I\+E\+LD}!Compiler/platform abstraction@{Compiler/platform abstraction}}
+\subsubsection{\texorpdfstring{P\+A\+C\+K\+\_\+\+S\+T\+R\+U\+C\+T\+\_\+\+F\+I\+E\+LD}{PACK\_STRUCT\_FIELD}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \#define P\+A\+C\+K\+\_\+\+S\+T\+R\+U\+C\+T\+\_\+\+F\+I\+E\+LD(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~x}
+
+Packed structs support. Wraps u32\+\_\+t and u16\+\_\+t members.~\newline
+For examples of packed struct declarations, see include/lwip/prot/ subfolder.~\newline
+A port to G\+C\+C/clang is included in lw\+IP, if you use these compilers there is nothing to do here. \mbox{\Hypertarget{group__compiler__abstraction_gaab0b988124e37a978d9a88e7c1c778e0}\label{group__compiler__abstraction_gaab0b988124e37a978d9a88e7c1c778e0}} 
+\index{Compiler/platform abstraction@{Compiler/platform abstraction}!P\+A\+C\+K\+\_\+\+S\+T\+R\+U\+C\+T\+\_\+\+F\+I\+E\+LD@{P\+A\+C\+K\+\_\+\+S\+T\+R\+U\+C\+T\+\_\+\+F\+I\+E\+LD}}
+\index{P\+A\+C\+K\+\_\+\+S\+T\+R\+U\+C\+T\+\_\+\+F\+I\+E\+LD@{P\+A\+C\+K\+\_\+\+S\+T\+R\+U\+C\+T\+\_\+\+F\+I\+E\+LD}!Compiler/platform abstraction@{Compiler/platform abstraction}}
+\subsubsection{\texorpdfstring{P\+A\+C\+K\+\_\+\+S\+T\+R\+U\+C\+T\+\_\+\+F\+I\+E\+LD}{PACK\_STRUCT\_FIELD}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \#define P\+A\+C\+K\+\_\+\+S\+T\+R\+U\+C\+T\+\_\+\+F\+I\+E\+LD(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~x}
+
+Packed structs support. Wraps u32\+\_\+t and u16\+\_\+t members.~\newline
+For examples of packed struct declarations, see include/lwip/prot/ subfolder.~\newline
+A port to G\+C\+C/clang is included in lw\+IP, if you use these compilers there is nothing to do here. \mbox{\Hypertarget{group__compiler__abstraction_gaa8f75e4117374c2d09fbda5566e40b62}\label{group__compiler__abstraction_gaa8f75e4117374c2d09fbda5566e40b62}} 
+\index{Compiler/platform abstraction@{Compiler/platform abstraction}!P\+A\+C\+K\+\_\+\+S\+T\+R\+U\+C\+T\+\_\+\+F\+L\+D\+\_\+8@{P\+A\+C\+K\+\_\+\+S\+T\+R\+U\+C\+T\+\_\+\+F\+L\+D\+\_\+8}}
+\index{P\+A\+C\+K\+\_\+\+S\+T\+R\+U\+C\+T\+\_\+\+F\+L\+D\+\_\+8@{P\+A\+C\+K\+\_\+\+S\+T\+R\+U\+C\+T\+\_\+\+F\+L\+D\+\_\+8}!Compiler/platform abstraction@{Compiler/platform abstraction}}
+\subsubsection{\texorpdfstring{P\+A\+C\+K\+\_\+\+S\+T\+R\+U\+C\+T\+\_\+\+F\+L\+D\+\_\+8}{PACK\_STRUCT\_FLD\_8}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \#define P\+A\+C\+K\+\_\+\+S\+T\+R\+U\+C\+T\+\_\+\+F\+L\+D\+\_\+8(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~\hyperlink{group__compiler__abstraction_gaab0b988124e37a978d9a88e7c1c778e0}{P\+A\+C\+K\+\_\+\+S\+T\+R\+U\+C\+T\+\_\+\+F\+I\+E\+LD}(x)}
+
+Packed structs support. Wraps u8\+\_\+t members, where some compilers warn that packing is not necessary.~\newline
+For examples of packed struct declarations, see include/lwip/prot/ subfolder.~\newline
+A port to G\+C\+C/clang is included in lw\+IP, if you use these compilers there is nothing to do here. \mbox{\Hypertarget{group__compiler__abstraction_gaa8f75e4117374c2d09fbda5566e40b62}\label{group__compiler__abstraction_gaa8f75e4117374c2d09fbda5566e40b62}} 
+\index{Compiler/platform abstraction@{Compiler/platform abstraction}!P\+A\+C\+K\+\_\+\+S\+T\+R\+U\+C\+T\+\_\+\+F\+L\+D\+\_\+8@{P\+A\+C\+K\+\_\+\+S\+T\+R\+U\+C\+T\+\_\+\+F\+L\+D\+\_\+8}}
+\index{P\+A\+C\+K\+\_\+\+S\+T\+R\+U\+C\+T\+\_\+\+F\+L\+D\+\_\+8@{P\+A\+C\+K\+\_\+\+S\+T\+R\+U\+C\+T\+\_\+\+F\+L\+D\+\_\+8}!Compiler/platform abstraction@{Compiler/platform abstraction}}
+\subsubsection{\texorpdfstring{P\+A\+C\+K\+\_\+\+S\+T\+R\+U\+C\+T\+\_\+\+F\+L\+D\+\_\+8}{PACK\_STRUCT\_FLD\_8}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \#define P\+A\+C\+K\+\_\+\+S\+T\+R\+U\+C\+T\+\_\+\+F\+L\+D\+\_\+8(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~\hyperlink{group__compiler__abstraction_gaab0b988124e37a978d9a88e7c1c778e0}{P\+A\+C\+K\+\_\+\+S\+T\+R\+U\+C\+T\+\_\+\+F\+I\+E\+LD}(x)}
+
+Packed structs support. Wraps u8\+\_\+t members, where some compilers warn that packing is not necessary.~\newline
+For examples of packed struct declarations, see include/lwip/prot/ subfolder.~\newline
+A port to G\+C\+C/clang is included in lw\+IP, if you use these compilers there is nothing to do here. \mbox{\Hypertarget{group__compiler__abstraction_gacc89e224363eb0ebca24b64d925c3cb7}\label{group__compiler__abstraction_gacc89e224363eb0ebca24b64d925c3cb7}} 
+\index{Compiler/platform abstraction@{Compiler/platform abstraction}!P\+A\+C\+K\+\_\+\+S\+T\+R\+U\+C\+T\+\_\+\+F\+L\+D\+\_\+S@{P\+A\+C\+K\+\_\+\+S\+T\+R\+U\+C\+T\+\_\+\+F\+L\+D\+\_\+S}}
+\index{P\+A\+C\+K\+\_\+\+S\+T\+R\+U\+C\+T\+\_\+\+F\+L\+D\+\_\+S@{P\+A\+C\+K\+\_\+\+S\+T\+R\+U\+C\+T\+\_\+\+F\+L\+D\+\_\+S}!Compiler/platform abstraction@{Compiler/platform abstraction}}
+\subsubsection{\texorpdfstring{P\+A\+C\+K\+\_\+\+S\+T\+R\+U\+C\+T\+\_\+\+F\+L\+D\+\_\+S}{PACK\_STRUCT\_FLD\_S}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \#define P\+A\+C\+K\+\_\+\+S\+T\+R\+U\+C\+T\+\_\+\+F\+L\+D\+\_\+S(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~\hyperlink{group__compiler__abstraction_gaab0b988124e37a978d9a88e7c1c778e0}{P\+A\+C\+K\+\_\+\+S\+T\+R\+U\+C\+T\+\_\+\+F\+I\+E\+LD}(x)}
+
+Packed structs support. Wraps members that are packed structs themselves, where some compilers warn that packing is not necessary.~\newline
+For examples of packed struct declarations, see include/lwip/prot/ subfolder.~\newline
+A port to G\+C\+C/clang is included in lw\+IP, if you use these compilers there is nothing to do here. \mbox{\Hypertarget{group__compiler__abstraction_gacc89e224363eb0ebca24b64d925c3cb7}\label{group__compiler__abstraction_gacc89e224363eb0ebca24b64d925c3cb7}} 
+\index{Compiler/platform abstraction@{Compiler/platform abstraction}!P\+A\+C\+K\+\_\+\+S\+T\+R\+U\+C\+T\+\_\+\+F\+L\+D\+\_\+S@{P\+A\+C\+K\+\_\+\+S\+T\+R\+U\+C\+T\+\_\+\+F\+L\+D\+\_\+S}}
+\index{P\+A\+C\+K\+\_\+\+S\+T\+R\+U\+C\+T\+\_\+\+F\+L\+D\+\_\+S@{P\+A\+C\+K\+\_\+\+S\+T\+R\+U\+C\+T\+\_\+\+F\+L\+D\+\_\+S}!Compiler/platform abstraction@{Compiler/platform abstraction}}
+\subsubsection{\texorpdfstring{P\+A\+C\+K\+\_\+\+S\+T\+R\+U\+C\+T\+\_\+\+F\+L\+D\+\_\+S}{PACK\_STRUCT\_FLD\_S}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \#define P\+A\+C\+K\+\_\+\+S\+T\+R\+U\+C\+T\+\_\+\+F\+L\+D\+\_\+S(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~\hyperlink{group__compiler__abstraction_gaab0b988124e37a978d9a88e7c1c778e0}{P\+A\+C\+K\+\_\+\+S\+T\+R\+U\+C\+T\+\_\+\+F\+I\+E\+LD}(x)}
+
+Packed structs support. Wraps members that are packed structs themselves, where some compilers warn that packing is not necessary.~\newline
+For examples of packed struct declarations, see include/lwip/prot/ subfolder.~\newline
+A port to G\+C\+C/clang is included in lw\+IP, if you use these compilers there is nothing to do here. \mbox{\Hypertarget{group__compiler__abstraction_ga33623da05bb55497534c3dc26ebebeb2}\label{group__compiler__abstraction_ga33623da05bb55497534c3dc26ebebeb2}} 
+\index{Compiler/platform abstraction@{Compiler/platform abstraction}!P\+A\+C\+K\+\_\+\+S\+T\+R\+U\+C\+T\+\_\+\+S\+T\+R\+U\+CT@{P\+A\+C\+K\+\_\+\+S\+T\+R\+U\+C\+T\+\_\+\+S\+T\+R\+U\+CT}}
+\index{P\+A\+C\+K\+\_\+\+S\+T\+R\+U\+C\+T\+\_\+\+S\+T\+R\+U\+CT@{P\+A\+C\+K\+\_\+\+S\+T\+R\+U\+C\+T\+\_\+\+S\+T\+R\+U\+CT}!Compiler/platform abstraction@{Compiler/platform abstraction}}
+\subsubsection{\texorpdfstring{P\+A\+C\+K\+\_\+\+S\+T\+R\+U\+C\+T\+\_\+\+S\+T\+R\+U\+CT}{PACK\_STRUCT\_STRUCT}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \#define P\+A\+C\+K\+\_\+\+S\+T\+R\+U\+C\+T\+\_\+\+S\+T\+R\+U\+CT}
+
+Packed structs support. Placed between end of declaration of a packed struct and trailing semicolon.~\newline
+For examples of packed struct declarations, see include/lwip/prot/ subfolder.~\newline
+A port to G\+C\+C/clang is included in lw\+IP, if you use these compilers there is nothing to do here. \mbox{\Hypertarget{group__compiler__abstraction_ga9ebc500530d0d9e6cd0b81969f48bbc8}\label{group__compiler__abstraction_ga9ebc500530d0d9e6cd0b81969f48bbc8}} 
+\index{Compiler/platform abstraction@{Compiler/platform abstraction}!P\+A\+C\+K\+\_\+\+S\+T\+R\+U\+C\+T\+\_\+\+S\+T\+R\+U\+CT@{P\+A\+C\+K\+\_\+\+S\+T\+R\+U\+C\+T\+\_\+\+S\+T\+R\+U\+CT}}
+\index{P\+A\+C\+K\+\_\+\+S\+T\+R\+U\+C\+T\+\_\+\+S\+T\+R\+U\+CT@{P\+A\+C\+K\+\_\+\+S\+T\+R\+U\+C\+T\+\_\+\+S\+T\+R\+U\+CT}!Compiler/platform abstraction@{Compiler/platform abstraction}}
+\subsubsection{\texorpdfstring{P\+A\+C\+K\+\_\+\+S\+T\+R\+U\+C\+T\+\_\+\+S\+T\+R\+U\+CT}{PACK\_STRUCT\_STRUCT}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \hyperlink{group__compiler__abstraction_ga73199061891adf1b912d20835c7d5e96}{P\+A\+C\+K\+\_\+\+S\+T\+R\+U\+C\+T\+\_\+\+B\+E\+G\+IN} struct \hyperlink{structrdnss__option}{rdnss\+\_\+option} P\+A\+C\+K\+\_\+\+S\+T\+R\+U\+C\+T\+\_\+\+S\+T\+R\+U\+CT}
+
+Packed structs support. Placed between end of declaration of a packed struct and trailing semicolon.~\newline
+For examples of packed struct declarations, see include/lwip/prot/ subfolder.~\newline
+A port to G\+C\+C/clang is included in lw\+IP, if you use these compilers there is nothing to do here. \mbox{\Hypertarget{group__compiler__abstraction_gac05a82d37afb251470f5e17ca15ab6e9}\label{group__compiler__abstraction_gac05a82d37afb251470f5e17ca15ab6e9}} 
+\index{Compiler/platform abstraction@{Compiler/platform abstraction}!S16\+\_\+F@{S16\+\_\+F}}
+\index{S16\+\_\+F@{S16\+\_\+F}!Compiler/platform abstraction@{Compiler/platform abstraction}}
+\subsubsection{\texorpdfstring{S16\+\_\+F}{S16\_F}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \#define S16\+\_\+F~P\+R\+Id16}
+
+\mbox{\Hypertarget{group__compiler__abstraction_gac05a82d37afb251470f5e17ca15ab6e9}\label{group__compiler__abstraction_gac05a82d37afb251470f5e17ca15ab6e9}} 
+\index{Compiler/platform abstraction@{Compiler/platform abstraction}!S16\+\_\+F@{S16\+\_\+F}}
+\index{S16\+\_\+F@{S16\+\_\+F}!Compiler/platform abstraction@{Compiler/platform abstraction}}
+\subsubsection{\texorpdfstring{S16\+\_\+F}{S16\_F}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \#define S16\+\_\+F~P\+R\+Id16}
+
+\mbox{\Hypertarget{group__compiler__abstraction_ga4b1eca99bc81e248c7074ea87fc9ca63}\label{group__compiler__abstraction_ga4b1eca99bc81e248c7074ea87fc9ca63}} 
+\index{Compiler/platform abstraction@{Compiler/platform abstraction}!S32\+\_\+F@{S32\+\_\+F}}
+\index{S32\+\_\+F@{S32\+\_\+F}!Compiler/platform abstraction@{Compiler/platform abstraction}}
+\subsubsection{\texorpdfstring{S32\+\_\+F}{S32\_F}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \#define S32\+\_\+F~P\+R\+Id32}
+
+\mbox{\Hypertarget{group__compiler__abstraction_ga4b1eca99bc81e248c7074ea87fc9ca63}\label{group__compiler__abstraction_ga4b1eca99bc81e248c7074ea87fc9ca63}} 
+\index{Compiler/platform abstraction@{Compiler/platform abstraction}!S32\+\_\+F@{S32\+\_\+F}}
+\index{S32\+\_\+F@{S32\+\_\+F}!Compiler/platform abstraction@{Compiler/platform abstraction}}
+\subsubsection{\texorpdfstring{S32\+\_\+F}{S32\_F}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \#define S32\+\_\+F~P\+R\+Id32}
+
+\mbox{\Hypertarget{group__compiler__abstraction_ga4cd359b6110f318ef71814587e1df029}\label{group__compiler__abstraction_ga4cd359b6110f318ef71814587e1df029}} 
+\index{Compiler/platform abstraction@{Compiler/platform abstraction}!S\+Z\+T\+\_\+F@{S\+Z\+T\+\_\+F}}
+\index{S\+Z\+T\+\_\+F@{S\+Z\+T\+\_\+F}!Compiler/platform abstraction@{Compiler/platform abstraction}}
+\subsubsection{\texorpdfstring{S\+Z\+T\+\_\+F}{SZT\_F}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \#define S\+Z\+T\+\_\+F~P\+R\+Iu\+P\+TR}
+
+\mbox{\Hypertarget{group__compiler__abstraction_ga4cd359b6110f318ef71814587e1df029}\label{group__compiler__abstraction_ga4cd359b6110f318ef71814587e1df029}} 
+\index{Compiler/platform abstraction@{Compiler/platform abstraction}!S\+Z\+T\+\_\+F@{S\+Z\+T\+\_\+F}}
+\index{S\+Z\+T\+\_\+F@{S\+Z\+T\+\_\+F}!Compiler/platform abstraction@{Compiler/platform abstraction}}
+\subsubsection{\texorpdfstring{S\+Z\+T\+\_\+F}{SZT\_F}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \#define S\+Z\+T\+\_\+F~P\+R\+Iu\+P\+TR}
+
+\mbox{\Hypertarget{group__compiler__abstraction_gaa9d7f6eb2ee9fcc5eda3545dbb1886e0}\label{group__compiler__abstraction_gaa9d7f6eb2ee9fcc5eda3545dbb1886e0}} 
+\index{Compiler/platform abstraction@{Compiler/platform abstraction}!U16\+\_\+F@{U16\+\_\+F}}
+\index{U16\+\_\+F@{U16\+\_\+F}!Compiler/platform abstraction@{Compiler/platform abstraction}}
+\subsubsection{\texorpdfstring{U16\+\_\+F}{U16\_F}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \#define U16\+\_\+F~P\+R\+Iu16}
+
+\mbox{\Hypertarget{group__compiler__abstraction_gaa9d7f6eb2ee9fcc5eda3545dbb1886e0}\label{group__compiler__abstraction_gaa9d7f6eb2ee9fcc5eda3545dbb1886e0}} 
+\index{Compiler/platform abstraction@{Compiler/platform abstraction}!U16\+\_\+F@{U16\+\_\+F}}
+\index{U16\+\_\+F@{U16\+\_\+F}!Compiler/platform abstraction@{Compiler/platform abstraction}}
+\subsubsection{\texorpdfstring{U16\+\_\+F}{U16\_F}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \#define U16\+\_\+F~P\+R\+Iu16}
+
+\mbox{\Hypertarget{group__compiler__abstraction_gad8b0a364e95b07cb0c47709fdc6037d6}\label{group__compiler__abstraction_gad8b0a364e95b07cb0c47709fdc6037d6}} 
+\index{Compiler/platform abstraction@{Compiler/platform abstraction}!U32\+\_\+F@{U32\+\_\+F}}
+\index{U32\+\_\+F@{U32\+\_\+F}!Compiler/platform abstraction@{Compiler/platform abstraction}}
+\subsubsection{\texorpdfstring{U32\+\_\+F}{U32\_F}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \#define U32\+\_\+F~P\+R\+Iu32}
+
+\mbox{\Hypertarget{group__compiler__abstraction_gad8b0a364e95b07cb0c47709fdc6037d6}\label{group__compiler__abstraction_gad8b0a364e95b07cb0c47709fdc6037d6}} 
+\index{Compiler/platform abstraction@{Compiler/platform abstraction}!U32\+\_\+F@{U32\+\_\+F}}
+\index{U32\+\_\+F@{U32\+\_\+F}!Compiler/platform abstraction@{Compiler/platform abstraction}}
+\subsubsection{\texorpdfstring{U32\+\_\+F}{U32\_F}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \#define U32\+\_\+F~P\+R\+Iu32}
+
+\mbox{\Hypertarget{group__compiler__abstraction_ga1418f92673e54a36b6e376109e526382}\label{group__compiler__abstraction_ga1418f92673e54a36b6e376109e526382}} 
+\index{Compiler/platform abstraction@{Compiler/platform abstraction}!X16\+\_\+F@{X16\+\_\+F}}
+\index{X16\+\_\+F@{X16\+\_\+F}!Compiler/platform abstraction@{Compiler/platform abstraction}}
+\subsubsection{\texorpdfstring{X16\+\_\+F}{X16\_F}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \#define X16\+\_\+F~P\+R\+Ix16}
+
+\mbox{\Hypertarget{group__compiler__abstraction_ga1418f92673e54a36b6e376109e526382}\label{group__compiler__abstraction_ga1418f92673e54a36b6e376109e526382}} 
+\index{Compiler/platform abstraction@{Compiler/platform abstraction}!X16\+\_\+F@{X16\+\_\+F}}
+\index{X16\+\_\+F@{X16\+\_\+F}!Compiler/platform abstraction@{Compiler/platform abstraction}}
+\subsubsection{\texorpdfstring{X16\+\_\+F}{X16\_F}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \#define X16\+\_\+F~P\+R\+Ix16}
+
+\mbox{\Hypertarget{group__compiler__abstraction_gac219830a93d05c5f18f64ce87a34be14}\label{group__compiler__abstraction_gac219830a93d05c5f18f64ce87a34be14}} 
+\index{Compiler/platform abstraction@{Compiler/platform abstraction}!X32\+\_\+F@{X32\+\_\+F}}
+\index{X32\+\_\+F@{X32\+\_\+F}!Compiler/platform abstraction@{Compiler/platform abstraction}}
+\subsubsection{\texorpdfstring{X32\+\_\+F}{X32\_F}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \#define X32\+\_\+F~P\+R\+Ix32}
+
+\mbox{\Hypertarget{group__compiler__abstraction_gac219830a93d05c5f18f64ce87a34be14}\label{group__compiler__abstraction_gac219830a93d05c5f18f64ce87a34be14}} 
+\index{Compiler/platform abstraction@{Compiler/platform abstraction}!X32\+\_\+F@{X32\+\_\+F}}
+\index{X32\+\_\+F@{X32\+\_\+F}!Compiler/platform abstraction@{Compiler/platform abstraction}}
+\subsubsection{\texorpdfstring{X32\+\_\+F}{X32\_F}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \#define X32\+\_\+F~P\+R\+Ix32}
+
+\mbox{\Hypertarget{group__compiler__abstraction_ga90c130a97711a9d7e5015c610f2dfe8f}\label{group__compiler__abstraction_ga90c130a97711a9d7e5015c610f2dfe8f}} 
+\index{Compiler/platform abstraction@{Compiler/platform abstraction}!X8\+\_\+F@{X8\+\_\+F}}
+\index{X8\+\_\+F@{X8\+\_\+F}!Compiler/platform abstraction@{Compiler/platform abstraction}}
+\subsubsection{\texorpdfstring{X8\+\_\+F}{X8\_F}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \#define X8\+\_\+F~\char`\"{}02\char`\"{} P\+R\+Ix8}
+
+\mbox{\Hypertarget{group__compiler__abstraction_ga90c130a97711a9d7e5015c610f2dfe8f}\label{group__compiler__abstraction_ga90c130a97711a9d7e5015c610f2dfe8f}} 
+\index{Compiler/platform abstraction@{Compiler/platform abstraction}!X8\+\_\+F@{X8\+\_\+F}}
+\index{X8\+\_\+F@{X8\+\_\+F}!Compiler/platform abstraction@{Compiler/platform abstraction}}
+\subsubsection{\texorpdfstring{X8\+\_\+F}{X8\_F}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \#define X8\+\_\+F~\char`\"{}02\char`\"{} P\+R\+Ix8}
+
+
+
+\subsection{Typedef Documentation}
+\mbox{\Hypertarget{group__compiler__abstraction_gaf019cbb71af10dcfda7758b21e655307}\label{group__compiler__abstraction_gaf019cbb71af10dcfda7758b21e655307}} 
+\index{Compiler/platform abstraction@{Compiler/platform abstraction}!mem\+\_\+ptr\+\_\+t@{mem\+\_\+ptr\+\_\+t}}
+\index{mem\+\_\+ptr\+\_\+t@{mem\+\_\+ptr\+\_\+t}!Compiler/platform abstraction@{Compiler/platform abstraction}}
+\subsubsection{\texorpdfstring{mem\+\_\+ptr\+\_\+t}{mem\_ptr\_t}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily typedef uintptr\+\_\+t \hyperlink{group__compiler__abstraction_gaf019cbb71af10dcfda7758b21e655307}{mem\+\_\+ptr\+\_\+t}}
+
+\mbox{\Hypertarget{group__compiler__abstraction_gaf019cbb71af10dcfda7758b21e655307}\label{group__compiler__abstraction_gaf019cbb71af10dcfda7758b21e655307}} 
+\index{Compiler/platform abstraction@{Compiler/platform abstraction}!mem\+\_\+ptr\+\_\+t@{mem\+\_\+ptr\+\_\+t}}
+\index{mem\+\_\+ptr\+\_\+t@{mem\+\_\+ptr\+\_\+t}!Compiler/platform abstraction@{Compiler/platform abstraction}}
+\subsubsection{\texorpdfstring{mem\+\_\+ptr\+\_\+t}{mem\_ptr\_t}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily typedef uintptr\+\_\+t \hyperlink{group__compiler__abstraction_gaf019cbb71af10dcfda7758b21e655307}{mem\+\_\+ptr\+\_\+t}}
+
+\mbox{\Hypertarget{group__compiler__abstraction_gacf46f4df0ebab84edebcb69967fdf86b}\label{group__compiler__abstraction_gacf46f4df0ebab84edebcb69967fdf86b}} 
+\index{Compiler/platform abstraction@{Compiler/platform abstraction}!s16\+\_\+t@{s16\+\_\+t}}
+\index{s16\+\_\+t@{s16\+\_\+t}!Compiler/platform abstraction@{Compiler/platform abstraction}}
+\subsubsection{\texorpdfstring{s16\+\_\+t}{s16\_t}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily typedef int16\+\_\+t \hyperlink{group__compiler__abstraction_gacf46f4df0ebab84edebcb69967fdf86b}{s16\+\_\+t}}
+
+\mbox{\Hypertarget{group__compiler__abstraction_gacf46f4df0ebab84edebcb69967fdf86b}\label{group__compiler__abstraction_gacf46f4df0ebab84edebcb69967fdf86b}} 
+\index{Compiler/platform abstraction@{Compiler/platform abstraction}!s16\+\_\+t@{s16\+\_\+t}}
+\index{s16\+\_\+t@{s16\+\_\+t}!Compiler/platform abstraction@{Compiler/platform abstraction}}
+\subsubsection{\texorpdfstring{s16\+\_\+t}{s16\_t}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily typedef int16\+\_\+t \hyperlink{group__compiler__abstraction_gacf46f4df0ebab84edebcb69967fdf86b}{s16\+\_\+t}}
+
+\mbox{\Hypertarget{group__compiler__abstraction_ga10f9a3d7baef58ccc23228c3bd29c1fb}\label{group__compiler__abstraction_ga10f9a3d7baef58ccc23228c3bd29c1fb}} 
+\index{Compiler/platform abstraction@{Compiler/platform abstraction}!s32\+\_\+t@{s32\+\_\+t}}
+\index{s32\+\_\+t@{s32\+\_\+t}!Compiler/platform abstraction@{Compiler/platform abstraction}}
+\subsubsection{\texorpdfstring{s32\+\_\+t}{s32\_t}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily typedef int32\+\_\+t \hyperlink{group__compiler__abstraction_ga10f9a3d7baef58ccc23228c3bd29c1fb}{s32\+\_\+t}}
+
+\mbox{\Hypertarget{group__compiler__abstraction_ga10f9a3d7baef58ccc23228c3bd29c1fb}\label{group__compiler__abstraction_ga10f9a3d7baef58ccc23228c3bd29c1fb}} 
+\index{Compiler/platform abstraction@{Compiler/platform abstraction}!s32\+\_\+t@{s32\+\_\+t}}
+\index{s32\+\_\+t@{s32\+\_\+t}!Compiler/platform abstraction@{Compiler/platform abstraction}}
+\subsubsection{\texorpdfstring{s32\+\_\+t}{s32\_t}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily typedef int32\+\_\+t \hyperlink{group__compiler__abstraction_ga10f9a3d7baef58ccc23228c3bd29c1fb}{s32\+\_\+t}}
+
+\mbox{\Hypertarget{group__compiler__abstraction_ga9cd1d7891fe315de1201e2c6e45f4f57}\label{group__compiler__abstraction_ga9cd1d7891fe315de1201e2c6e45f4f57}} 
+\index{Compiler/platform abstraction@{Compiler/platform abstraction}!s8\+\_\+t@{s8\+\_\+t}}
+\index{s8\+\_\+t@{s8\+\_\+t}!Compiler/platform abstraction@{Compiler/platform abstraction}}
+\subsubsection{\texorpdfstring{s8\+\_\+t}{s8\_t}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily typedef int8\+\_\+t \hyperlink{group__compiler__abstraction_ga9cd1d7891fe315de1201e2c6e45f4f57}{s8\+\_\+t}}
+
+\mbox{\Hypertarget{group__compiler__abstraction_ga9cd1d7891fe315de1201e2c6e45f4f57}\label{group__compiler__abstraction_ga9cd1d7891fe315de1201e2c6e45f4f57}} 
+\index{Compiler/platform abstraction@{Compiler/platform abstraction}!s8\+\_\+t@{s8\+\_\+t}}
+\index{s8\+\_\+t@{s8\+\_\+t}!Compiler/platform abstraction@{Compiler/platform abstraction}}
+\subsubsection{\texorpdfstring{s8\+\_\+t}{s8\_t}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily typedef int8\+\_\+t \hyperlink{group__compiler__abstraction_ga9cd1d7891fe315de1201e2c6e45f4f57}{s8\+\_\+t}}
+
+\mbox{\Hypertarget{group__compiler__abstraction_ga77570ac4fcab86864fa1916e55676da2}\label{group__compiler__abstraction_ga77570ac4fcab86864fa1916e55676da2}} 
+\index{Compiler/platform abstraction@{Compiler/platform abstraction}!u16\+\_\+t@{u16\+\_\+t}}
+\index{u16\+\_\+t@{u16\+\_\+t}!Compiler/platform abstraction@{Compiler/platform abstraction}}
+\subsubsection{\texorpdfstring{u16\+\_\+t}{u16\_t}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily typedef uint16\+\_\+t \hyperlink{group__compiler__abstraction_ga77570ac4fcab86864fa1916e55676da2}{u16\+\_\+t}}
+
+\mbox{\Hypertarget{group__compiler__abstraction_ga77570ac4fcab86864fa1916e55676da2}\label{group__compiler__abstraction_ga77570ac4fcab86864fa1916e55676da2}} 
+\index{Compiler/platform abstraction@{Compiler/platform abstraction}!u16\+\_\+t@{u16\+\_\+t}}
+\index{u16\+\_\+t@{u16\+\_\+t}!Compiler/platform abstraction@{Compiler/platform abstraction}}
+\subsubsection{\texorpdfstring{u16\+\_\+t}{u16\_t}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily typedef uint16\+\_\+t \hyperlink{group__compiler__abstraction_ga77570ac4fcab86864fa1916e55676da2}{u16\+\_\+t}}
+
+\mbox{\Hypertarget{group__compiler__abstraction_ga4c14294869aceba3ef9d4c0c302d0f33}\label{group__compiler__abstraction_ga4c14294869aceba3ef9d4c0c302d0f33}} 
+\index{Compiler/platform abstraction@{Compiler/platform abstraction}!u32\+\_\+t@{u32\+\_\+t}}
+\index{u32\+\_\+t@{u32\+\_\+t}!Compiler/platform abstraction@{Compiler/platform abstraction}}
+\subsubsection{\texorpdfstring{u32\+\_\+t}{u32\_t}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily typedef uint32\+\_\+t \hyperlink{group__compiler__abstraction_ga4c14294869aceba3ef9d4c0c302d0f33}{u32\+\_\+t}}
+
+\mbox{\Hypertarget{group__compiler__abstraction_ga4c14294869aceba3ef9d4c0c302d0f33}\label{group__compiler__abstraction_ga4c14294869aceba3ef9d4c0c302d0f33}} 
+\index{Compiler/platform abstraction@{Compiler/platform abstraction}!u32\+\_\+t@{u32\+\_\+t}}
+\index{u32\+\_\+t@{u32\+\_\+t}!Compiler/platform abstraction@{Compiler/platform abstraction}}
+\subsubsection{\texorpdfstring{u32\+\_\+t}{u32\_t}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily typedef uint32\+\_\+t \hyperlink{group__compiler__abstraction_ga4c14294869aceba3ef9d4c0c302d0f33}{u32\+\_\+t}}
+
+\mbox{\Hypertarget{group__compiler__abstraction_ga4caecabca98b43919dd11be1c0d4cd8e}\label{group__compiler__abstraction_ga4caecabca98b43919dd11be1c0d4cd8e}} 
+\index{Compiler/platform abstraction@{Compiler/platform abstraction}!u8\+\_\+t@{u8\+\_\+t}}
+\index{u8\+\_\+t@{u8\+\_\+t}!Compiler/platform abstraction@{Compiler/platform abstraction}}
+\subsubsection{\texorpdfstring{u8\+\_\+t}{u8\_t}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily typedef uint8\+\_\+t \hyperlink{group__compiler__abstraction_ga4caecabca98b43919dd11be1c0d4cd8e}{u8\+\_\+t}}
+
+\mbox{\Hypertarget{group__compiler__abstraction_ga4caecabca98b43919dd11be1c0d4cd8e}\label{group__compiler__abstraction_ga4caecabca98b43919dd11be1c0d4cd8e}} 
+\index{Compiler/platform abstraction@{Compiler/platform abstraction}!u8\+\_\+t@{u8\+\_\+t}}
+\index{u8\+\_\+t@{u8\+\_\+t}!Compiler/platform abstraction@{Compiler/platform abstraction}}
+\subsubsection{\texorpdfstring{u8\+\_\+t}{u8\_t}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily typedef uint8\+\_\+t \hyperlink{group__compiler__abstraction_ga4caecabca98b43919dd11be1c0d4cd8e}{u8\+\_\+t}}
+

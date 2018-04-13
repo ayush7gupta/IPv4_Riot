@@ -1,0 +1,163 @@
+\hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2memp_8h}{}\section{/home/ayush/\+R\+I\+O\+T/tests/lwip/bin/pkg/openmote-\/cc2538/lwip/src/include/lwip/memp.h File Reference}
+\label{openmote-cc2538_2lwip_2src_2include_2lwip_2memp_8h}\index{/home/ayush/\+R\+I\+O\+T/tests/lwip/bin/pkg/openmote-\/cc2538/lwip/src/include/lwip/memp.\+h@{/home/ayush/\+R\+I\+O\+T/tests/lwip/bin/pkg/openmote-\/cc2538/lwip/src/include/lwip/memp.\+h}}
+{\ttfamily \#include \char`\"{}lwip/priv/memp\+\_\+std.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}lwip/priv/memp\+\_\+priv.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}lwip/stats.\+h\char`\"{}}\newline
+Include dependency graph for memp.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{openmote-cc2538_2lwip_2src_2include_2lwip_2memp_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{openmote-cc2538_2lwip_2src_2include_2lwip_2memp_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2memp_8h_a5f75b6e9cf0c6df9e70b08b8e05a1835}{L\+W\+I\+P\+\_\+\+M\+E\+M\+P\+O\+OL}(name,  num,  size,  desc)
+\item 
+\#define \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2memp_8h_a5f75b6e9cf0c6df9e70b08b8e05a1835}{L\+W\+I\+P\+\_\+\+M\+E\+M\+P\+O\+OL}(name,  num,  size,  desc)~M\+E\+M\+P\+\_\+\#\#name,
+\item 
+\#define \hyperlink{group__mempool_ga92fc8c29d0e2654f2a2ecc43b2b7fb13}{L\+W\+I\+P\+\_\+\+M\+E\+M\+P\+O\+O\+L\+\_\+\+P\+R\+O\+T\+O\+T\+Y\+PE}(name)~extern const struct \hyperlink{structmemp__desc}{memp\+\_\+desc} memp\+\_\+ \#\# name
+\item 
+\#define \hyperlink{group__mempool_ga5b1fb3ce7942432d87cc948b1c5ed6cb}{L\+W\+I\+P\+\_\+\+M\+E\+M\+P\+O\+O\+L\+\_\+\+D\+E\+C\+L\+A\+RE}(name,  num,  size,  desc)
+\item 
+\#define \hyperlink{group__mempool_ga60b51c06d276f525b35d8b7abd4dcb41}{L\+W\+I\+P\+\_\+\+M\+E\+M\+P\+O\+O\+L\+\_\+\+I\+N\+IT}(name)~\hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2priv_2memp__priv_8h_a6416303426d05526bed33f241fa6ecd7}{memp\+\_\+init\+\_\+pool}(\&memp\+\_\+ \#\# name)
+\item 
+\#define \hyperlink{group__mempool_ga5e2498f6c17746c1fe7153de5f7f275a}{L\+W\+I\+P\+\_\+\+M\+E\+M\+P\+O\+O\+L\+\_\+\+A\+L\+L\+OC}(name)~\hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2priv_2memp__priv_8h_a348c83ee972f1edf7296a1cdf1d75f22}{memp\+\_\+malloc\+\_\+pool}(\&memp\+\_\+ \#\# name)
+\item 
+\#define \hyperlink{group__mempool_gaa43d114dd702fbd8f1db18474ea93a04}{L\+W\+I\+P\+\_\+\+M\+E\+M\+P\+O\+O\+L\+\_\+\+F\+R\+EE}(name,  x)~\hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2priv_2memp__priv_8h_a62f8c3c907743e34eee3cdac7fa1eaa5}{memp\+\_\+free\+\_\+pool}(\&memp\+\_\+ \#\# name, (x))
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2memp_8h_a85a164b1f7764951cc685ea525114e57}{memp\+\_\+t} \{ \hyperlink{native_2lwip_2src_2include_2lwip_2memp_8h_a85a164b1f7764951cc685ea525114e57a3387042084427642949f3223c7ddd321}{M\+E\+M\+P\+\_\+\+M\+AX}, 
+\hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2memp_8h_a85a164b1f7764951cc685ea525114e57a3387042084427642949f3223c7ddd321}{M\+E\+M\+P\+\_\+\+M\+AX}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2memp_8h_a9693e5b1ac2c6b9c0e7870522d45efa2}{memp\+\_\+init} (void)
+\item 
+void $\ast$ \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2memp_8h_a2b00593d086313c267b54a976bf67aa5}{memp\+\_\+malloc} (\hyperlink{native_2lwip_2src_2include_2lwip_2memp_8h_a85a164b1f7764951cc685ea525114e57}{memp\+\_\+t} type)
+\item 
+void \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2memp_8h_aecd94926b7c2a0e23ae195f4ae97581f}{memp\+\_\+free} (\hyperlink{native_2lwip_2src_2include_2lwip_2memp_8h_a85a164b1f7764951cc685ea525114e57}{memp\+\_\+t} type, void $\ast$\hyperlink{structmem}{mem})
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const struct \hyperlink{structmemp__desc}{memp\+\_\+desc} $\ast$const \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2memp_8h_ad78a1f656a766f2c6341aa466762b883}{memp\+\_\+pools} \mbox{[}\hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2memp_8h_a85a164b1f7764951cc685ea525114e57a3387042084427642949f3223c7ddd321}{M\+E\+M\+P\+\_\+\+M\+AX}\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Memory pool A\+PI 
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2memp_8h_a5f75b6e9cf0c6df9e70b08b8e05a1835}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2memp_8h_a5f75b6e9cf0c6df9e70b08b8e05a1835}} 
+\index{openmote-\/cc2538/lwip/src/include/lwip/memp.\+h@{openmote-\/cc2538/lwip/src/include/lwip/memp.\+h}!L\+W\+I\+P\+\_\+\+M\+E\+M\+P\+O\+OL@{L\+W\+I\+P\+\_\+\+M\+E\+M\+P\+O\+OL}}
+\index{L\+W\+I\+P\+\_\+\+M\+E\+M\+P\+O\+OL@{L\+W\+I\+P\+\_\+\+M\+E\+M\+P\+O\+OL}!openmote-\/cc2538/lwip/src/include/lwip/memp.\+h@{openmote-\/cc2538/lwip/src/include/lwip/memp.\+h}}
+\subsubsection{\texorpdfstring{L\+W\+I\+P\+\_\+\+M\+E\+M\+P\+O\+OL}{LWIP\_MEMPOOL}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \#define L\+W\+I\+P\+\_\+\+M\+E\+M\+P\+O\+OL(\begin{DoxyParamCaption}\item[{}]{name,  }\item[{}]{num,  }\item[{}]{size,  }\item[{}]{desc }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2memp_8h_a5f75b6e9cf0c6df9e70b08b8e05a1835}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2memp_8h_a5f75b6e9cf0c6df9e70b08b8e05a1835}} 
+\index{openmote-\/cc2538/lwip/src/include/lwip/memp.\+h@{openmote-\/cc2538/lwip/src/include/lwip/memp.\+h}!L\+W\+I\+P\+\_\+\+M\+E\+M\+P\+O\+OL@{L\+W\+I\+P\+\_\+\+M\+E\+M\+P\+O\+OL}}
+\index{L\+W\+I\+P\+\_\+\+M\+E\+M\+P\+O\+OL@{L\+W\+I\+P\+\_\+\+M\+E\+M\+P\+O\+OL}!openmote-\/cc2538/lwip/src/include/lwip/memp.\+h@{openmote-\/cc2538/lwip/src/include/lwip/memp.\+h}}
+\subsubsection{\texorpdfstring{L\+W\+I\+P\+\_\+\+M\+E\+M\+P\+O\+OL}{LWIP\_MEMPOOL}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \#define L\+W\+I\+P\+\_\+\+M\+E\+M\+P\+O\+OL(\begin{DoxyParamCaption}\item[{}]{name,  }\item[{}]{num,  }\item[{}]{size,  }\item[{}]{desc }\end{DoxyParamCaption})~M\+E\+M\+P\+\_\+\#\#name,}
+
+
+
+\subsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2memp_8h_a85a164b1f7764951cc685ea525114e57}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2memp_8h_a85a164b1f7764951cc685ea525114e57}} 
+\index{openmote-\/cc2538/lwip/src/include/lwip/memp.\+h@{openmote-\/cc2538/lwip/src/include/lwip/memp.\+h}!memp\+\_\+t@{memp\+\_\+t}}
+\index{memp\+\_\+t@{memp\+\_\+t}!openmote-\/cc2538/lwip/src/include/lwip/memp.\+h@{openmote-\/cc2538/lwip/src/include/lwip/memp.\+h}}
+\subsubsection{\texorpdfstring{memp\+\_\+t}{memp\_t}}
+{\footnotesize\ttfamily enum \hyperlink{native_2lwip_2src_2include_2lwip_2memp_8h_a85a164b1f7764951cc685ea525114e57}{memp\+\_\+t}}
+
+Create the list of all memory pools managed by memp. M\+E\+M\+P\+\_\+\+M\+AX represents a N\+U\+LL pool at the end \begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\+E\+M\+P\+\_\+\+M\+AX@{M\+E\+M\+P\+\_\+\+M\+AX}!openmote-\/cc2538/lwip/src/include/lwip/memp.\+h@{openmote-\/cc2538/lwip/src/include/lwip/memp.\+h}}\index{openmote-\/cc2538/lwip/src/include/lwip/memp.\+h@{openmote-\/cc2538/lwip/src/include/lwip/memp.\+h}!M\+E\+M\+P\+\_\+\+M\+AX@{M\+E\+M\+P\+\_\+\+M\+AX}}}\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2memp_8h_a85a164b1f7764951cc685ea525114e57a3387042084427642949f3223c7ddd321}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2memp_8h_a85a164b1f7764951cc685ea525114e57a3387042084427642949f3223c7ddd321}} 
+M\+E\+M\+P\+\_\+\+M\+AX&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\+E\+M\+P\+\_\+\+M\+AX@{M\+E\+M\+P\+\_\+\+M\+AX}!openmote-\/cc2538/lwip/src/include/lwip/memp.\+h@{openmote-\/cc2538/lwip/src/include/lwip/memp.\+h}}\index{openmote-\/cc2538/lwip/src/include/lwip/memp.\+h@{openmote-\/cc2538/lwip/src/include/lwip/memp.\+h}!M\+E\+M\+P\+\_\+\+M\+AX@{M\+E\+M\+P\+\_\+\+M\+AX}}}\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2memp_8h_a85a164b1f7764951cc685ea525114e57a3387042084427642949f3223c7ddd321}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2memp_8h_a85a164b1f7764951cc685ea525114e57a3387042084427642949f3223c7ddd321}} 
+M\+E\+M\+P\+\_\+\+M\+AX&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2memp_8h_aecd94926b7c2a0e23ae195f4ae97581f}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2memp_8h_aecd94926b7c2a0e23ae195f4ae97581f}} 
+\index{openmote-\/cc2538/lwip/src/include/lwip/memp.\+h@{openmote-\/cc2538/lwip/src/include/lwip/memp.\+h}!memp\+\_\+free@{memp\+\_\+free}}
+\index{memp\+\_\+free@{memp\+\_\+free}!openmote-\/cc2538/lwip/src/include/lwip/memp.\+h@{openmote-\/cc2538/lwip/src/include/lwip/memp.\+h}}
+\subsubsection{\texorpdfstring{memp\+\_\+free()}{memp\_free()}}
+{\footnotesize\ttfamily void memp\+\_\+free (\begin{DoxyParamCaption}\item[{\hyperlink{native_2lwip_2src_2include_2lwip_2memp_8h_a85a164b1f7764951cc685ea525114e57}{memp\+\_\+t}}]{type,  }\item[{void $\ast$}]{mem }\end{DoxyParamCaption})}
+
+Put an element back into its pool.
+
+
+\begin{DoxyParams}{Parameters}
+{\em type} & the pool where to put mem \\
+\hline
+{\em mem} & the memp element to free \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=310pt]{openmote-cc2538_2lwip_2src_2include_2lwip_2memp_8h_aecd94926b7c2a0e23ae195f4ae97581f_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2memp_8h_a9693e5b1ac2c6b9c0e7870522d45efa2}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2memp_8h_a9693e5b1ac2c6b9c0e7870522d45efa2}} 
+\index{openmote-\/cc2538/lwip/src/include/lwip/memp.\+h@{openmote-\/cc2538/lwip/src/include/lwip/memp.\+h}!memp\+\_\+init@{memp\+\_\+init}}
+\index{memp\+\_\+init@{memp\+\_\+init}!openmote-\/cc2538/lwip/src/include/lwip/memp.\+h@{openmote-\/cc2538/lwip/src/include/lwip/memp.\+h}}
+\subsubsection{\texorpdfstring{memp\+\_\+init()}{memp\_init()}}
+{\footnotesize\ttfamily void memp\+\_\+init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Initializes lw\+IP built-\/in pools. Related functions\+: memp\+\_\+malloc, memp\+\_\+free
+
+Carves out memp\+\_\+memory into linked lists for each pool-\/type. Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=322pt]{openmote-cc2538_2lwip_2src_2include_2lwip_2memp_8h_a9693e5b1ac2c6b9c0e7870522d45efa2_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2memp_8h_a2b00593d086313c267b54a976bf67aa5}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2memp_8h_a2b00593d086313c267b54a976bf67aa5}} 
+\index{openmote-\/cc2538/lwip/src/include/lwip/memp.\+h@{openmote-\/cc2538/lwip/src/include/lwip/memp.\+h}!memp\+\_\+malloc@{memp\+\_\+malloc}}
+\index{memp\+\_\+malloc@{memp\+\_\+malloc}!openmote-\/cc2538/lwip/src/include/lwip/memp.\+h@{openmote-\/cc2538/lwip/src/include/lwip/memp.\+h}}
+\subsubsection{\texorpdfstring{memp\+\_\+malloc()}{memp\_malloc()}}
+{\footnotesize\ttfamily void$\ast$ memp\+\_\+malloc (\begin{DoxyParamCaption}\item[{\hyperlink{native_2lwip_2src_2include_2lwip_2memp_8h_a85a164b1f7764951cc685ea525114e57}{memp\+\_\+t}}]{type }\end{DoxyParamCaption})}
+
+Get an element from a specific pool.
+
+
+\begin{DoxyParams}{Parameters}
+{\em type} & the pool to get an element from\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a pointer to the allocated memory or a N\+U\+LL pointer on error 
+\end{DoxyReturn}
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2memp_8h_ad78a1f656a766f2c6341aa466762b883}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2memp_8h_ad78a1f656a766f2c6341aa466762b883}} 
+\index{openmote-\/cc2538/lwip/src/include/lwip/memp.\+h@{openmote-\/cc2538/lwip/src/include/lwip/memp.\+h}!memp\+\_\+pools@{memp\+\_\+pools}}
+\index{memp\+\_\+pools@{memp\+\_\+pools}!openmote-\/cc2538/lwip/src/include/lwip/memp.\+h@{openmote-\/cc2538/lwip/src/include/lwip/memp.\+h}}
+\subsubsection{\texorpdfstring{memp\+\_\+pools}{memp\_pools}}
+{\footnotesize\ttfamily const struct \hyperlink{structmemp__desc}{memp\+\_\+desc}$\ast$ const memp\+\_\+pools\mbox{[}\hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2memp_8h_a85a164b1f7764951cc685ea525114e57a3387042084427642949f3223c7ddd321}{M\+E\+M\+P\+\_\+\+M\+AX}\mbox{]}}
+

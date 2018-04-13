@@ -1,0 +1,129 @@
+\hypertarget{emb6_2common_8h}{}\section{/home/ayush/\+R\+I\+O\+T/tests/emb6/common.h File Reference}
+\label{emb6_2common_8h}\index{/home/ayush/\+R\+I\+O\+T/tests/emb6/common.\+h@{/home/ayush/\+R\+I\+O\+T/tests/emb6/common.\+h}}
+
+
+Definitions for tests/emb6/.  
+
+
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include $<$sys/types.\+h$>$}\newline
+Include dependency graph for common.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=216pt]{emb6_2common_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{emb6_2common_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\textbf{ }\par
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{emb6_2common_8h_ae975767f0bbea968e125831fdbf0eb41}{S\+O\+C\+K\+\_\+\+I\+N\+B\+U\+F\+\_\+\+S\+I\+ZE}~(256)
+\begin{DoxyCompactList}\small\item\em Application configuration. \end{DoxyCompactList}\item 
+\#define \hyperlink{emb6_2common_8h_a86d5c8dd36c31389fc7ba39c0b1707c7}{S\+E\+R\+V\+E\+R\+\_\+\+M\+S\+G\+\_\+\+Q\+U\+E\+U\+E\+\_\+\+S\+I\+ZE}~(8)
+\item 
+\#define \hyperlink{emb6_2common_8h_aea0b7e006e64e919a5d1afe283449a59}{S\+E\+R\+V\+E\+R\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+I\+ZE}~(64)
+\end{DoxyCompactItemize}
+
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+size\+\_\+t \hyperlink{emb6_2common_8h_a328f2e45985b192ee5917d7351ec6226}{hex2ints} (uint8\+\_\+t $\ast$out, const char $\ast$in)
+\begin{DoxyCompactList}\small\item\em Converts hex string to byte array. \end{DoxyCompactList}\item 
+int \hyperlink{emb6_2common_8h_a1abc49b0428b1da3c108319585e77be0}{ping\+\_\+cmd} (int argc, char $\ast$$\ast$argv)
+\begin{DoxyCompactList}\small\item\em Ping shell command. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Definitions for tests/emb6/. 
+
+\begin{DoxyAuthor}{Author}
+Martine Lenders \href{mailto:mlenders@inf.fu-berlin.de}{\tt mlenders@inf.\+fu-\/berlin.\+de} 
+\end{DoxyAuthor}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{emb6_2common_8h_aea0b7e006e64e919a5d1afe283449a59}\label{emb6_2common_8h_aea0b7e006e64e919a5d1afe283449a59}} 
+\index{emb6/common.\+h@{emb6/common.\+h}!S\+E\+R\+V\+E\+R\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+I\+ZE@{S\+E\+R\+V\+E\+R\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+I\+ZE}}
+\index{S\+E\+R\+V\+E\+R\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+I\+ZE@{S\+E\+R\+V\+E\+R\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+I\+ZE}!emb6/common.\+h@{emb6/common.\+h}}
+\subsubsection{\texorpdfstring{S\+E\+R\+V\+E\+R\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+I\+ZE}{SERVER\_BUFFER\_SIZE}}
+{\footnotesize\ttfamily \#define S\+E\+R\+V\+E\+R\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+I\+ZE~(64)}
+
+\mbox{\Hypertarget{emb6_2common_8h_a86d5c8dd36c31389fc7ba39c0b1707c7}\label{emb6_2common_8h_a86d5c8dd36c31389fc7ba39c0b1707c7}} 
+\index{emb6/common.\+h@{emb6/common.\+h}!S\+E\+R\+V\+E\+R\+\_\+\+M\+S\+G\+\_\+\+Q\+U\+E\+U\+E\+\_\+\+S\+I\+ZE@{S\+E\+R\+V\+E\+R\+\_\+\+M\+S\+G\+\_\+\+Q\+U\+E\+U\+E\+\_\+\+S\+I\+ZE}}
+\index{S\+E\+R\+V\+E\+R\+\_\+\+M\+S\+G\+\_\+\+Q\+U\+E\+U\+E\+\_\+\+S\+I\+ZE@{S\+E\+R\+V\+E\+R\+\_\+\+M\+S\+G\+\_\+\+Q\+U\+E\+U\+E\+\_\+\+S\+I\+ZE}!emb6/common.\+h@{emb6/common.\+h}}
+\subsubsection{\texorpdfstring{S\+E\+R\+V\+E\+R\+\_\+\+M\+S\+G\+\_\+\+Q\+U\+E\+U\+E\+\_\+\+S\+I\+ZE}{SERVER\_MSG\_QUEUE\_SIZE}}
+{\footnotesize\ttfamily \#define S\+E\+R\+V\+E\+R\+\_\+\+M\+S\+G\+\_\+\+Q\+U\+E\+U\+E\+\_\+\+S\+I\+ZE~(8)}
+
+\mbox{\Hypertarget{emb6_2common_8h_ae975767f0bbea968e125831fdbf0eb41}\label{emb6_2common_8h_ae975767f0bbea968e125831fdbf0eb41}} 
+\index{emb6/common.\+h@{emb6/common.\+h}!S\+O\+C\+K\+\_\+\+I\+N\+B\+U\+F\+\_\+\+S\+I\+ZE@{S\+O\+C\+K\+\_\+\+I\+N\+B\+U\+F\+\_\+\+S\+I\+ZE}}
+\index{S\+O\+C\+K\+\_\+\+I\+N\+B\+U\+F\+\_\+\+S\+I\+ZE@{S\+O\+C\+K\+\_\+\+I\+N\+B\+U\+F\+\_\+\+S\+I\+ZE}!emb6/common.\+h@{emb6/common.\+h}}
+\subsubsection{\texorpdfstring{S\+O\+C\+K\+\_\+\+I\+N\+B\+U\+F\+\_\+\+S\+I\+ZE}{SOCK\_INBUF\_SIZE}}
+{\footnotesize\ttfamily \#define S\+O\+C\+K\+\_\+\+I\+N\+B\+U\+F\+\_\+\+S\+I\+ZE~(256)}
+
+
+
+Application configuration. 
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{emb6_2common_8h_a328f2e45985b192ee5917d7351ec6226}\label{emb6_2common_8h_a328f2e45985b192ee5917d7351ec6226}} 
+\index{emb6/common.\+h@{emb6/common.\+h}!hex2ints@{hex2ints}}
+\index{hex2ints@{hex2ints}!emb6/common.\+h@{emb6/common.\+h}}
+\subsubsection{\texorpdfstring{hex2ints()}{hex2ints()}}
+{\footnotesize\ttfamily size\+\_\+t hex2ints (\begin{DoxyParamCaption}\item[{uint8\+\_\+t $\ast$}]{out,  }\item[{const char $\ast$}]{in }\end{DoxyParamCaption})}
+
+
+
+Converts hex string to byte array. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt out}  & {\em out} & Resulting byte array \\
+\hline
+\mbox{\tt in}  & {\em in} & {\ttfamily \textbackslash{}0} terminated string. Non-\/hex characters (all except 0-\/9, a-\/f, A-\/F) will be ignored.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Length of {\ttfamily out}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{emb6_2common_8h_a1abc49b0428b1da3c108319585e77be0}\label{emb6_2common_8h_a1abc49b0428b1da3c108319585e77be0}} 
+\index{emb6/common.\+h@{emb6/common.\+h}!ping\+\_\+cmd@{ping\+\_\+cmd}}
+\index{ping\+\_\+cmd@{ping\+\_\+cmd}!emb6/common.\+h@{emb6/common.\+h}}
+\subsubsection{\texorpdfstring{ping\+\_\+cmd()}{ping\_cmd()}}
+{\footnotesize\ttfamily int ping\+\_\+cmd (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$$\ast$}]{argv }\end{DoxyParamCaption})}
+
+
+
+Ping shell command. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em argc} & number of arguments \\
+\hline
+\mbox{\tt in}  & {\em argv} & array of arguments\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on success 
+
+other on error 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=218pt]{emb6_2common_8h_a1abc49b0428b1da3c108319585e77be0_cgraph}
+\end{center}
+\end{figure}

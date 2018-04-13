@@ -1,0 +1,42 @@
+\hypertarget{group__httpd}{}\section{H\+T\+TP server}
+\label{group__httpd}\index{H\+T\+T\+P server@{H\+T\+T\+P server}}
+Collaboration diagram for H\+T\+TP server\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=345pt]{group__httpd}
+\end{center}
+\end{figure}
+\subsection*{Modules}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group__httpd__opts}{Options}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This httpd supports for a rudimentary server-\/side-\/include facility which will replace tags of the form in any file whose extension is .shtml, .shtm or .ssi with strings provided by an include handler whose pointer is provided to the module via function http\+\_\+set\+\_\+ssi\+\_\+handler(). Additionally, a simple common gateway interface (C\+GI) handling mechanism has been added to allow clients to hook functions to particular request U\+R\+Is.
+
+To enable S\+SI support, define label L\+W\+I\+P\+\_\+\+H\+T\+T\+P\+D\+\_\+\+S\+SI in lwipopts.\+h. To enable C\+GI support, define label L\+W\+I\+P\+\_\+\+H\+T\+T\+P\+D\+\_\+\+C\+GI in lwipopts.\+h.
+
+By default, the server assumes that H\+T\+TP headers are already present in each file stored in the file system. By defining L\+W\+I\+P\+\_\+\+H\+T\+T\+P\+D\+\_\+\+D\+Y\+N\+A\+M\+I\+C\+\_\+\+H\+E\+A\+D\+E\+RS in lwipopts.\+h, this behavior can be changed such that the server inserts the headers automatically based on the extension of the file being served. If this mode is used, be careful to ensure that the file system image used does not already contain the header information.
+
+File system images without headers can be created using the makefsfile tool with the -\/h command line option.
+
+\subsubsection*{Notes about valid S\+SI tags }
+
+The following assumptions are made about tags used in S\+SI markers\+:
+
+
+\begin{DoxyEnumerate}
+\item No tag may contain \textquotesingle{}-\/\textquotesingle{} or whitespace characters within the tag name.
+\item Whitespace is allowed between the tag leadin \char`\"{}$<$!-\/-\/\#\char`\"{} and the start of the tag name and between the tag name and the leadout string \char`\"{}-\/-\/$>$\char`\"{}.
+\item The maximum tag name length is L\+W\+I\+P\+\_\+\+H\+T\+T\+P\+D\+\_\+\+M\+A\+X\+\_\+\+T\+A\+G\+\_\+\+N\+A\+M\+E\+\_\+\+L\+EN, currently 8 characters.
+\end{DoxyEnumerate}
+
+\subsubsection*{Notes on C\+GI usage }
+
+The simple C\+GI support offered here works with G\+ET method requests only and can handle up to 16 parameters encoded into the U\+RI. The handler function may not write directly to the H\+T\+TP output but must return a filename that the H\+T\+TP server will send to the browser as a response to the incoming C\+GI request.
+
+The list of supported file types is quite short, so if makefsdata complains about an unknown extension, make sure to add it (and its doctype) to the \textquotesingle{}g\+\_\+ps\+H\+T\+T\+P\+Headers\textquotesingle{} list. 

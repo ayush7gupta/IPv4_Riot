@@ -1,0 +1,372 @@
+\hypertarget{group__lwip__opts__memp}{}\section{Internal memory pools}
+\label{group__lwip__opts__memp}\index{Internal memory pools@{Internal memory pools}}
+Collaboration diagram for Internal memory pools\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=303pt]{group__lwip__opts__memp}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group__lwip__opts__memp_ga92b30aed958ec59334d936d4ca725418}{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+P\+B\+UF}~16
+\item 
+\#define \hyperlink{group__lwip__opts__memp_ga379bf92ed322cda54cb701337421e0d3}{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+R\+A\+W\+\_\+\+P\+CB}~4
+\item 
+\#define \hyperlink{group__lwip__opts__memp_ga2c416da481ab09bd1ba257b75a0707eb}{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+U\+D\+P\+\_\+\+P\+CB}~4
+\item 
+\#define \hyperlink{group__lwip__opts__memp_ga73beecc19cfbc3114768f9b32b2cd70e}{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+T\+C\+P\+\_\+\+P\+CB}~5
+\item 
+\#define \hyperlink{group__lwip__opts__memp_ga04fba6a249123513271dccb4ec26aa5a}{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+T\+C\+P\+\_\+\+P\+C\+B\+\_\+\+L\+I\+S\+T\+EN}~8
+\item 
+\#define \hyperlink{group__lwip__opts__memp_gaa35fb3a1a76661e3ffb9722a57092de3}{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+T\+C\+P\+\_\+\+S\+EG}~16
+\item 
+\#define \hyperlink{group__lwip__opts__memp_ga169436c5860253b90e25bdba9fdcac86}{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+R\+E\+A\+S\+S\+D\+A\+TA}~5
+\item 
+\#define \hyperlink{group__lwip__opts__memp_ga1f66051a654dcd7a4e19bc6aff240630}{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+F\+R\+A\+G\+\_\+\+P\+B\+UF}~15
+\item 
+\#define \hyperlink{group__lwip__opts__memp_ga087b00ea20a7edebcad33a1a1353a5d7}{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+A\+R\+P\+\_\+\+Q\+U\+E\+UE}~30
+\item 
+\#define \hyperlink{group__lwip__opts__memp_gab648ff95d8ffa4216b95f82a568a5d9a}{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+I\+G\+M\+P\+\_\+\+G\+R\+O\+UP}~8
+\item 
+\#define \hyperlink{group__lwip__opts__memp_ga4afbdca581a58d57bc7a81118a95327e}{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+S\+Y\+S\+\_\+\+T\+I\+M\+E\+O\+UT}~(\hyperlink{group__lwip__opts__tcp_gaa4ed98deb97b77c633cb8870f34c71e9}{L\+W\+I\+P\+\_\+\+T\+CP} + \hyperlink{group__lwip__opts__ipv4_ga1a31ab0e0f37b17d40fa7c35bc2c4f69}{I\+P\+\_\+\+R\+E\+A\+S\+S\+E\+M\+B\+LY} + \hyperlink{group__lwip__opts__arp_ga9609a014bba4638cc191d6a8f9556c87}{L\+W\+I\+P\+\_\+\+A\+RP} + (2$\ast$\hyperlink{openmote-cc2538_2lwip_2test_2unit_2lwipopts_8h_a8a6ec62dc121064ac591b1fd8567bee9}{L\+W\+I\+P\+\_\+\+D\+H\+CP}) + \hyperlink{group__lwip__opts__autoip_gaaf1b3a089827223589baf1b7f4f57069}{L\+W\+I\+P\+\_\+\+A\+U\+T\+O\+IP} + \hyperlink{openmote-cc2538_2lwip_2test_2unit_2lwipopts_8h_adaf25915ae1fd69c0943ef68cbb38923}{L\+W\+I\+P\+\_\+\+I\+G\+MP} + \hyperlink{group__lwip__opts__dns_ga98710dd81446b7cb2daac736bae6f646}{L\+W\+I\+P\+\_\+\+D\+NS} + (\hyperlink{openmote-cc2538_2lwip_2src_2include_2netif_2ppp_2ppp__opts_8h_a746c0ebaef5399987d53a1426eba6273}{P\+P\+P\+\_\+\+S\+U\+P\+P\+O\+RT}$\ast$6$\ast$\hyperlink{openmote-cc2538_2lwip_2src_2include_2netif_2ppp_2ppp__opts_8h_a6721ea95cbd6afd6968470c2423b6482}{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+P\+P\+P\+\_\+\+P\+CB}) + (\hyperlink{openmote-cc2538_2lwip_2test_2fuzz_2lwipopts_8h_a872e3bb3fe2212156d66b18fccc9643f}{L\+W\+I\+P\+\_\+\+I\+P\+V6} ? (1 + \hyperlink{group__lwip__opts__ipv6_gad0ef160d72e63b02c5e875b06ec53864}{L\+W\+I\+P\+\_\+\+I\+P\+V6\+\_\+\+R\+E\+A\+SS} + \hyperlink{group__lwip__opts__mld6_ga44d8f24eaebbc50221ac1336212a3528}{L\+W\+I\+P\+\_\+\+I\+P\+V6\+\_\+\+M\+LD}) \+: 0))
+\item 
+\#define \hyperlink{group__lwip__opts__memp_ga5d99df65869ac101ed6a611fc85016be}{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+N\+E\+T\+B\+UF}~2
+\item 
+\#define \hyperlink{group__lwip__opts__memp_gacb40bd726b7e15593b20a628d298f456}{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+N\+E\+T\+C\+O\+NN}~4
+\item 
+\#define \hyperlink{group__lwip__opts__memp_gafbbfd6ce8536038cd00fa85bebae987c}{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+T\+C\+P\+I\+P\+\_\+\+M\+S\+G\+\_\+\+A\+PI}~8
+\item 
+\#define \hyperlink{group__lwip__opts__memp_gab089a7088439e726c3801ba9e249d831}{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+T\+C\+P\+I\+P\+\_\+\+M\+S\+G\+\_\+\+I\+N\+P\+KT}~8
+\item 
+\#define \hyperlink{group__lwip__opts__memp_ga293bc22b60bf3f8e2520f60a88370e7a}{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+N\+E\+T\+DB}~1
+\item 
+\#define \hyperlink{group__lwip__opts__memp_gaa9b0f949da12cbe8fe5f7aefc30290e0}{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+L\+O\+C\+A\+L\+H\+O\+S\+T\+L\+I\+ST}~1
+\item 
+\#define \hyperlink{group__lwip__opts__memp_ga50eaadc4cad0716410332691e382c38a}{P\+B\+U\+F\+\_\+\+P\+O\+O\+L\+\_\+\+S\+I\+ZE}~16
+\item 
+\#define \hyperlink{group__lwip__opts__memp_ga5a95abf3610c56e7c23cb035eb9c3444}{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+A\+P\+I\+\_\+\+M\+SG}~\hyperlink{group__lwip__opts__memp_gafbbfd6ce8536038cd00fa85bebae987c}{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+T\+C\+P\+I\+P\+\_\+\+M\+S\+G\+\_\+\+A\+PI}
+\item 
+\#define \hyperlink{group__lwip__opts__memp_ga3b1f228c598529c62895ad04ff294980}{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+D\+N\+S\+\_\+\+A\+P\+I\+\_\+\+M\+SG}~\hyperlink{group__lwip__opts__memp_gafbbfd6ce8536038cd00fa85bebae987c}{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+T\+C\+P\+I\+P\+\_\+\+M\+S\+G\+\_\+\+A\+PI}
+\item 
+\#define \hyperlink{group__lwip__opts__memp_gacf9782dd26bf8a655044dc041a9de948}{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+S\+O\+C\+K\+E\+T\+\_\+\+S\+E\+T\+G\+E\+T\+S\+O\+C\+K\+O\+P\+T\+\_\+\+D\+A\+TA}~\hyperlink{group__lwip__opts__memp_gafbbfd6ce8536038cd00fa85bebae987c}{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+T\+C\+P\+I\+P\+\_\+\+M\+S\+G\+\_\+\+A\+PI}
+\item 
+\#define \hyperlink{group__lwip__opts__memp_gadd5a973b98068ce9318ea2f96b5fa14c}{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+N\+E\+T\+I\+F\+A\+P\+I\+\_\+\+M\+SG}~\hyperlink{group__lwip__opts__memp_gafbbfd6ce8536038cd00fa85bebae987c}{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+T\+C\+P\+I\+P\+\_\+\+M\+S\+G\+\_\+\+A\+PI}
+\item 
+\#define \hyperlink{group__lwip__opts__memp_ga92b30aed958ec59334d936d4ca725418}{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+P\+B\+UF}~16
+\item 
+\#define \hyperlink{group__lwip__opts__memp_ga379bf92ed322cda54cb701337421e0d3}{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+R\+A\+W\+\_\+\+P\+CB}~4
+\item 
+\#define \hyperlink{group__lwip__opts__memp_ga2c416da481ab09bd1ba257b75a0707eb}{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+U\+D\+P\+\_\+\+P\+CB}~4
+\item 
+\#define \hyperlink{group__lwip__opts__memp_ga73beecc19cfbc3114768f9b32b2cd70e}{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+T\+C\+P\+\_\+\+P\+CB}~5
+\item 
+\#define \hyperlink{group__lwip__opts__memp_ga04fba6a249123513271dccb4ec26aa5a}{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+T\+C\+P\+\_\+\+P\+C\+B\+\_\+\+L\+I\+S\+T\+EN}~8
+\item 
+\#define \hyperlink{group__lwip__opts__memp_gaa35fb3a1a76661e3ffb9722a57092de3}{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+T\+C\+P\+\_\+\+S\+EG}~16
+\item 
+\#define \hyperlink{group__lwip__opts__memp_ga169436c5860253b90e25bdba9fdcac86}{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+R\+E\+A\+S\+S\+D\+A\+TA}~5
+\item 
+\#define \hyperlink{group__lwip__opts__memp_ga1f66051a654dcd7a4e19bc6aff240630}{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+F\+R\+A\+G\+\_\+\+P\+B\+UF}~15
+\item 
+\#define \hyperlink{group__lwip__opts__memp_ga087b00ea20a7edebcad33a1a1353a5d7}{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+A\+R\+P\+\_\+\+Q\+U\+E\+UE}~30
+\item 
+\#define \hyperlink{group__lwip__opts__memp_gab648ff95d8ffa4216b95f82a568a5d9a}{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+I\+G\+M\+P\+\_\+\+G\+R\+O\+UP}~8
+\item 
+\#define \hyperlink{group__lwip__opts__memp_ga4afbdca581a58d57bc7a81118a95327e}{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+S\+Y\+S\+\_\+\+T\+I\+M\+E\+O\+UT}~(\hyperlink{group__lwip__opts__tcp_gaa4ed98deb97b77c633cb8870f34c71e9}{L\+W\+I\+P\+\_\+\+T\+CP} + \hyperlink{group__lwip__opts__ipv4_ga1a31ab0e0f37b17d40fa7c35bc2c4f69}{I\+P\+\_\+\+R\+E\+A\+S\+S\+E\+M\+B\+LY} + \hyperlink{group__lwip__opts__arp_ga9609a014bba4638cc191d6a8f9556c87}{L\+W\+I\+P\+\_\+\+A\+RP} + (2$\ast$\hyperlink{openmote-cc2538_2lwip_2test_2unit_2lwipopts_8h_a8a6ec62dc121064ac591b1fd8567bee9}{L\+W\+I\+P\+\_\+\+D\+H\+CP}) + \hyperlink{group__lwip__opts__autoip_gaaf1b3a089827223589baf1b7f4f57069}{L\+W\+I\+P\+\_\+\+A\+U\+T\+O\+IP} + \hyperlink{openmote-cc2538_2lwip_2test_2unit_2lwipopts_8h_adaf25915ae1fd69c0943ef68cbb38923}{L\+W\+I\+P\+\_\+\+I\+G\+MP} + \hyperlink{group__lwip__opts__dns_ga98710dd81446b7cb2daac736bae6f646}{L\+W\+I\+P\+\_\+\+D\+NS} + (\hyperlink{openmote-cc2538_2lwip_2src_2include_2netif_2ppp_2ppp__opts_8h_a746c0ebaef5399987d53a1426eba6273}{P\+P\+P\+\_\+\+S\+U\+P\+P\+O\+RT}$\ast$6$\ast$\hyperlink{openmote-cc2538_2lwip_2src_2include_2netif_2ppp_2ppp__opts_8h_a6721ea95cbd6afd6968470c2423b6482}{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+P\+P\+P\+\_\+\+P\+CB}) + (\hyperlink{openmote-cc2538_2lwip_2test_2fuzz_2lwipopts_8h_a872e3bb3fe2212156d66b18fccc9643f}{L\+W\+I\+P\+\_\+\+I\+P\+V6} ? (1 + \hyperlink{group__lwip__opts__ipv6_gad0ef160d72e63b02c5e875b06ec53864}{L\+W\+I\+P\+\_\+\+I\+P\+V6\+\_\+\+R\+E\+A\+SS} + \hyperlink{group__lwip__opts__mld6_ga44d8f24eaebbc50221ac1336212a3528}{L\+W\+I\+P\+\_\+\+I\+P\+V6\+\_\+\+M\+LD}) \+: 0))
+\item 
+\#define \hyperlink{group__lwip__opts__memp_ga5d99df65869ac101ed6a611fc85016be}{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+N\+E\+T\+B\+UF}~2
+\item 
+\#define \hyperlink{group__lwip__opts__memp_gacb40bd726b7e15593b20a628d298f456}{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+N\+E\+T\+C\+O\+NN}~4
+\item 
+\#define \hyperlink{group__lwip__opts__memp_gafbbfd6ce8536038cd00fa85bebae987c}{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+T\+C\+P\+I\+P\+\_\+\+M\+S\+G\+\_\+\+A\+PI}~8
+\item 
+\#define \hyperlink{group__lwip__opts__memp_gab089a7088439e726c3801ba9e249d831}{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+T\+C\+P\+I\+P\+\_\+\+M\+S\+G\+\_\+\+I\+N\+P\+KT}~8
+\item 
+\#define \hyperlink{group__lwip__opts__memp_ga293bc22b60bf3f8e2520f60a88370e7a}{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+N\+E\+T\+DB}~1
+\item 
+\#define \hyperlink{group__lwip__opts__memp_gaa9b0f949da12cbe8fe5f7aefc30290e0}{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+L\+O\+C\+A\+L\+H\+O\+S\+T\+L\+I\+ST}~1
+\item 
+\#define \hyperlink{group__lwip__opts__memp_ga50eaadc4cad0716410332691e382c38a}{P\+B\+U\+F\+\_\+\+P\+O\+O\+L\+\_\+\+S\+I\+ZE}~16
+\item 
+\#define \hyperlink{group__lwip__opts__memp_ga5a95abf3610c56e7c23cb035eb9c3444}{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+A\+P\+I\+\_\+\+M\+SG}~\hyperlink{group__lwip__opts__memp_gafbbfd6ce8536038cd00fa85bebae987c}{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+T\+C\+P\+I\+P\+\_\+\+M\+S\+G\+\_\+\+A\+PI}
+\item 
+\#define \hyperlink{group__lwip__opts__memp_ga3b1f228c598529c62895ad04ff294980}{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+D\+N\+S\+\_\+\+A\+P\+I\+\_\+\+M\+SG}~\hyperlink{group__lwip__opts__memp_gafbbfd6ce8536038cd00fa85bebae987c}{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+T\+C\+P\+I\+P\+\_\+\+M\+S\+G\+\_\+\+A\+PI}
+\item 
+\#define \hyperlink{group__lwip__opts__memp_gacf9782dd26bf8a655044dc041a9de948}{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+S\+O\+C\+K\+E\+T\+\_\+\+S\+E\+T\+G\+E\+T\+S\+O\+C\+K\+O\+P\+T\+\_\+\+D\+A\+TA}~\hyperlink{group__lwip__opts__memp_gafbbfd6ce8536038cd00fa85bebae987c}{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+T\+C\+P\+I\+P\+\_\+\+M\+S\+G\+\_\+\+A\+PI}
+\item 
+\#define \hyperlink{group__lwip__opts__memp_gadd5a973b98068ce9318ea2f96b5fa14c}{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+N\+E\+T\+I\+F\+A\+P\+I\+\_\+\+M\+SG}~\hyperlink{group__lwip__opts__memp_gafbbfd6ce8536038cd00fa85bebae987c}{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+T\+C\+P\+I\+P\+\_\+\+M\+S\+G\+\_\+\+A\+PI}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{group__lwip__opts__memp_ga5a95abf3610c56e7c23cb035eb9c3444}\label{group__lwip__opts__memp_ga5a95abf3610c56e7c23cb035eb9c3444}} 
+\index{Internal memory pools@{Internal memory pools}!M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+A\+P\+I\+\_\+\+M\+SG@{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+A\+P\+I\+\_\+\+M\+SG}}
+\index{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+A\+P\+I\+\_\+\+M\+SG@{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+A\+P\+I\+\_\+\+M\+SG}!Internal memory pools@{Internal memory pools}}
+\subsubsection{\texorpdfstring{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+A\+P\+I\+\_\+\+M\+SG}{MEMP\_NUM\_API\_MSG}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \#define M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+A\+P\+I\+\_\+\+M\+SG~\hyperlink{group__lwip__opts__memp_gafbbfd6ce8536038cd00fa85bebae987c}{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+T\+C\+P\+I\+P\+\_\+\+M\+S\+G\+\_\+\+A\+PI}}
+
+M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+A\+P\+I\+\_\+\+M\+SG\+: the number of concurrently active calls to various socket, netconn, and tcpip functions \mbox{\Hypertarget{group__lwip__opts__memp_ga5a95abf3610c56e7c23cb035eb9c3444}\label{group__lwip__opts__memp_ga5a95abf3610c56e7c23cb035eb9c3444}} 
+\index{Internal memory pools@{Internal memory pools}!M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+A\+P\+I\+\_\+\+M\+SG@{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+A\+P\+I\+\_\+\+M\+SG}}
+\index{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+A\+P\+I\+\_\+\+M\+SG@{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+A\+P\+I\+\_\+\+M\+SG}!Internal memory pools@{Internal memory pools}}
+\subsubsection{\texorpdfstring{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+A\+P\+I\+\_\+\+M\+SG}{MEMP\_NUM\_API\_MSG}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \#define M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+A\+P\+I\+\_\+\+M\+SG~\hyperlink{group__lwip__opts__memp_gafbbfd6ce8536038cd00fa85bebae987c}{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+T\+C\+P\+I\+P\+\_\+\+M\+S\+G\+\_\+\+A\+PI}}
+
+M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+A\+P\+I\+\_\+\+M\+SG\+: the number of concurrently active calls to various socket, netconn, and tcpip functions \mbox{\Hypertarget{group__lwip__opts__memp_ga087b00ea20a7edebcad33a1a1353a5d7}\label{group__lwip__opts__memp_ga087b00ea20a7edebcad33a1a1353a5d7}} 
+\index{Internal memory pools@{Internal memory pools}!M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+A\+R\+P\+\_\+\+Q\+U\+E\+UE@{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+A\+R\+P\+\_\+\+Q\+U\+E\+UE}}
+\index{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+A\+R\+P\+\_\+\+Q\+U\+E\+UE@{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+A\+R\+P\+\_\+\+Q\+U\+E\+UE}!Internal memory pools@{Internal memory pools}}
+\subsubsection{\texorpdfstring{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+A\+R\+P\+\_\+\+Q\+U\+E\+UE}{MEMP\_NUM\_ARP\_QUEUE}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \#define M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+A\+R\+P\+\_\+\+Q\+U\+E\+UE~30}
+
+M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+A\+R\+P\+\_\+\+Q\+U\+E\+UE\+: the number of simultaneously queued outgoing packets (pbufs) that are waiting for an A\+RP request (to resolve their destination address) to finish. (requires the A\+R\+P\+\_\+\+Q\+U\+E\+U\+E\+I\+NG option) \mbox{\Hypertarget{group__lwip__opts__memp_ga087b00ea20a7edebcad33a1a1353a5d7}\label{group__lwip__opts__memp_ga087b00ea20a7edebcad33a1a1353a5d7}} 
+\index{Internal memory pools@{Internal memory pools}!M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+A\+R\+P\+\_\+\+Q\+U\+E\+UE@{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+A\+R\+P\+\_\+\+Q\+U\+E\+UE}}
+\index{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+A\+R\+P\+\_\+\+Q\+U\+E\+UE@{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+A\+R\+P\+\_\+\+Q\+U\+E\+UE}!Internal memory pools@{Internal memory pools}}
+\subsubsection{\texorpdfstring{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+A\+R\+P\+\_\+\+Q\+U\+E\+UE}{MEMP\_NUM\_ARP\_QUEUE}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \#define M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+A\+R\+P\+\_\+\+Q\+U\+E\+UE~30}
+
+M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+A\+R\+P\+\_\+\+Q\+U\+E\+UE\+: the number of simultaneously queued outgoing packets (pbufs) that are waiting for an A\+RP request (to resolve their destination address) to finish. (requires the A\+R\+P\+\_\+\+Q\+U\+E\+U\+E\+I\+NG option) \mbox{\Hypertarget{group__lwip__opts__memp_ga3b1f228c598529c62895ad04ff294980}\label{group__lwip__opts__memp_ga3b1f228c598529c62895ad04ff294980}} 
+\index{Internal memory pools@{Internal memory pools}!M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+D\+N\+S\+\_\+\+A\+P\+I\+\_\+\+M\+SG@{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+D\+N\+S\+\_\+\+A\+P\+I\+\_\+\+M\+SG}}
+\index{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+D\+N\+S\+\_\+\+A\+P\+I\+\_\+\+M\+SG@{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+D\+N\+S\+\_\+\+A\+P\+I\+\_\+\+M\+SG}!Internal memory pools@{Internal memory pools}}
+\subsubsection{\texorpdfstring{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+D\+N\+S\+\_\+\+A\+P\+I\+\_\+\+M\+SG}{MEMP\_NUM\_DNS\_API\_MSG}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \#define M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+D\+N\+S\+\_\+\+A\+P\+I\+\_\+\+M\+SG~\hyperlink{group__lwip__opts__memp_gafbbfd6ce8536038cd00fa85bebae987c}{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+T\+C\+P\+I\+P\+\_\+\+M\+S\+G\+\_\+\+A\+PI}}
+
+M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+D\+N\+S\+\_\+\+A\+P\+I\+\_\+\+M\+SG\+: the number of concurrently active calls to netconn\+\_\+gethostbyname \mbox{\Hypertarget{group__lwip__opts__memp_ga3b1f228c598529c62895ad04ff294980}\label{group__lwip__opts__memp_ga3b1f228c598529c62895ad04ff294980}} 
+\index{Internal memory pools@{Internal memory pools}!M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+D\+N\+S\+\_\+\+A\+P\+I\+\_\+\+M\+SG@{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+D\+N\+S\+\_\+\+A\+P\+I\+\_\+\+M\+SG}}
+\index{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+D\+N\+S\+\_\+\+A\+P\+I\+\_\+\+M\+SG@{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+D\+N\+S\+\_\+\+A\+P\+I\+\_\+\+M\+SG}!Internal memory pools@{Internal memory pools}}
+\subsubsection{\texorpdfstring{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+D\+N\+S\+\_\+\+A\+P\+I\+\_\+\+M\+SG}{MEMP\_NUM\_DNS\_API\_MSG}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \#define M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+D\+N\+S\+\_\+\+A\+P\+I\+\_\+\+M\+SG~\hyperlink{group__lwip__opts__memp_gafbbfd6ce8536038cd00fa85bebae987c}{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+T\+C\+P\+I\+P\+\_\+\+M\+S\+G\+\_\+\+A\+PI}}
+
+M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+D\+N\+S\+\_\+\+A\+P\+I\+\_\+\+M\+SG\+: the number of concurrently active calls to netconn\+\_\+gethostbyname \mbox{\Hypertarget{group__lwip__opts__memp_ga1f66051a654dcd7a4e19bc6aff240630}\label{group__lwip__opts__memp_ga1f66051a654dcd7a4e19bc6aff240630}} 
+\index{Internal memory pools@{Internal memory pools}!M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+F\+R\+A\+G\+\_\+\+P\+B\+UF@{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+F\+R\+A\+G\+\_\+\+P\+B\+UF}}
+\index{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+F\+R\+A\+G\+\_\+\+P\+B\+UF@{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+F\+R\+A\+G\+\_\+\+P\+B\+UF}!Internal memory pools@{Internal memory pools}}
+\subsubsection{\texorpdfstring{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+F\+R\+A\+G\+\_\+\+P\+B\+UF}{MEMP\_NUM\_FRAG\_PBUF}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \#define M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+F\+R\+A\+G\+\_\+\+P\+B\+UF~15}
+
+M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+F\+R\+A\+G\+\_\+\+P\+B\+UF\+: the number of IP fragments simultaneously sent (fragments, not whole packets!). This is only used with L\+W\+I\+P\+\_\+\+N\+E\+T\+I\+F\+\_\+\+T\+X\+\_\+\+S\+I\+N\+G\+L\+E\+\_\+\+P\+B\+UF==0 and only has to be $>$ 1 with D\+M\+A-\/enabled M\+A\+Cs where the packet is not yet sent when netif-\/$>$output returns. \mbox{\Hypertarget{group__lwip__opts__memp_ga1f66051a654dcd7a4e19bc6aff240630}\label{group__lwip__opts__memp_ga1f66051a654dcd7a4e19bc6aff240630}} 
+\index{Internal memory pools@{Internal memory pools}!M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+F\+R\+A\+G\+\_\+\+P\+B\+UF@{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+F\+R\+A\+G\+\_\+\+P\+B\+UF}}
+\index{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+F\+R\+A\+G\+\_\+\+P\+B\+UF@{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+F\+R\+A\+G\+\_\+\+P\+B\+UF}!Internal memory pools@{Internal memory pools}}
+\subsubsection{\texorpdfstring{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+F\+R\+A\+G\+\_\+\+P\+B\+UF}{MEMP\_NUM\_FRAG\_PBUF}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \#define M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+F\+R\+A\+G\+\_\+\+P\+B\+UF~15}
+
+M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+F\+R\+A\+G\+\_\+\+P\+B\+UF\+: the number of IP fragments simultaneously sent (fragments, not whole packets!). This is only used with L\+W\+I\+P\+\_\+\+N\+E\+T\+I\+F\+\_\+\+T\+X\+\_\+\+S\+I\+N\+G\+L\+E\+\_\+\+P\+B\+UF==0 and only has to be $>$ 1 with D\+M\+A-\/enabled M\+A\+Cs where the packet is not yet sent when netif-\/$>$output returns. \mbox{\Hypertarget{group__lwip__opts__memp_gab648ff95d8ffa4216b95f82a568a5d9a}\label{group__lwip__opts__memp_gab648ff95d8ffa4216b95f82a568a5d9a}} 
+\index{Internal memory pools@{Internal memory pools}!M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+I\+G\+M\+P\+\_\+\+G\+R\+O\+UP@{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+I\+G\+M\+P\+\_\+\+G\+R\+O\+UP}}
+\index{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+I\+G\+M\+P\+\_\+\+G\+R\+O\+UP@{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+I\+G\+M\+P\+\_\+\+G\+R\+O\+UP}!Internal memory pools@{Internal memory pools}}
+\subsubsection{\texorpdfstring{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+I\+G\+M\+P\+\_\+\+G\+R\+O\+UP}{MEMP\_NUM\_IGMP\_GROUP}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \#define M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+I\+G\+M\+P\+\_\+\+G\+R\+O\+UP~8}
+
+M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+I\+G\+M\+P\+\_\+\+G\+R\+O\+UP\+: The number of multicast groups whose network interfaces can be members at the same time (one per netif -\/ allsystems group -\/, plus one per netif membership). (requires the L\+W\+I\+P\+\_\+\+I\+G\+MP option) \mbox{\Hypertarget{group__lwip__opts__memp_gab648ff95d8ffa4216b95f82a568a5d9a}\label{group__lwip__opts__memp_gab648ff95d8ffa4216b95f82a568a5d9a}} 
+\index{Internal memory pools@{Internal memory pools}!M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+I\+G\+M\+P\+\_\+\+G\+R\+O\+UP@{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+I\+G\+M\+P\+\_\+\+G\+R\+O\+UP}}
+\index{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+I\+G\+M\+P\+\_\+\+G\+R\+O\+UP@{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+I\+G\+M\+P\+\_\+\+G\+R\+O\+UP}!Internal memory pools@{Internal memory pools}}
+\subsubsection{\texorpdfstring{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+I\+G\+M\+P\+\_\+\+G\+R\+O\+UP}{MEMP\_NUM\_IGMP\_GROUP}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \#define M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+I\+G\+M\+P\+\_\+\+G\+R\+O\+UP~8}
+
+M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+I\+G\+M\+P\+\_\+\+G\+R\+O\+UP\+: The number of multicast groups whose network interfaces can be members at the same time (one per netif -\/ allsystems group -\/, plus one per netif membership). (requires the L\+W\+I\+P\+\_\+\+I\+G\+MP option) \mbox{\Hypertarget{group__lwip__opts__memp_gaa9b0f949da12cbe8fe5f7aefc30290e0}\label{group__lwip__opts__memp_gaa9b0f949da12cbe8fe5f7aefc30290e0}} 
+\index{Internal memory pools@{Internal memory pools}!M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+L\+O\+C\+A\+L\+H\+O\+S\+T\+L\+I\+ST@{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+L\+O\+C\+A\+L\+H\+O\+S\+T\+L\+I\+ST}}
+\index{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+L\+O\+C\+A\+L\+H\+O\+S\+T\+L\+I\+ST@{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+L\+O\+C\+A\+L\+H\+O\+S\+T\+L\+I\+ST}!Internal memory pools@{Internal memory pools}}
+\subsubsection{\texorpdfstring{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+L\+O\+C\+A\+L\+H\+O\+S\+T\+L\+I\+ST}{MEMP\_NUM\_LOCALHOSTLIST}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \#define M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+L\+O\+C\+A\+L\+H\+O\+S\+T\+L\+I\+ST~1}
+
+M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+L\+O\+C\+A\+L\+H\+O\+S\+T\+L\+I\+ST\+: the number of host entries in the local host list if D\+N\+S\+\_\+\+L\+O\+C\+A\+L\+\_\+\+H\+O\+S\+T\+L\+I\+S\+T\+\_\+\+I\+S\+\_\+\+D\+Y\+N\+A\+M\+IC==1. \mbox{\Hypertarget{group__lwip__opts__memp_gaa9b0f949da12cbe8fe5f7aefc30290e0}\label{group__lwip__opts__memp_gaa9b0f949da12cbe8fe5f7aefc30290e0}} 
+\index{Internal memory pools@{Internal memory pools}!M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+L\+O\+C\+A\+L\+H\+O\+S\+T\+L\+I\+ST@{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+L\+O\+C\+A\+L\+H\+O\+S\+T\+L\+I\+ST}}
+\index{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+L\+O\+C\+A\+L\+H\+O\+S\+T\+L\+I\+ST@{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+L\+O\+C\+A\+L\+H\+O\+S\+T\+L\+I\+ST}!Internal memory pools@{Internal memory pools}}
+\subsubsection{\texorpdfstring{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+L\+O\+C\+A\+L\+H\+O\+S\+T\+L\+I\+ST}{MEMP\_NUM\_LOCALHOSTLIST}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \#define M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+L\+O\+C\+A\+L\+H\+O\+S\+T\+L\+I\+ST~1}
+
+M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+L\+O\+C\+A\+L\+H\+O\+S\+T\+L\+I\+ST\+: the number of host entries in the local host list if D\+N\+S\+\_\+\+L\+O\+C\+A\+L\+\_\+\+H\+O\+S\+T\+L\+I\+S\+T\+\_\+\+I\+S\+\_\+\+D\+Y\+N\+A\+M\+IC==1. \mbox{\Hypertarget{group__lwip__opts__memp_ga5d99df65869ac101ed6a611fc85016be}\label{group__lwip__opts__memp_ga5d99df65869ac101ed6a611fc85016be}} 
+\index{Internal memory pools@{Internal memory pools}!M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+N\+E\+T\+B\+UF@{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+N\+E\+T\+B\+UF}}
+\index{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+N\+E\+T\+B\+UF@{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+N\+E\+T\+B\+UF}!Internal memory pools@{Internal memory pools}}
+\subsubsection{\texorpdfstring{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+N\+E\+T\+B\+UF}{MEMP\_NUM\_NETBUF}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \#define M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+N\+E\+T\+B\+UF~2}
+
+M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+N\+E\+T\+B\+UF\+: the number of struct netbufs. (only needed if you use the sequential A\+PI, like api\+\_\+lib.\+c) \mbox{\Hypertarget{group__lwip__opts__memp_ga5d99df65869ac101ed6a611fc85016be}\label{group__lwip__opts__memp_ga5d99df65869ac101ed6a611fc85016be}} 
+\index{Internal memory pools@{Internal memory pools}!M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+N\+E\+T\+B\+UF@{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+N\+E\+T\+B\+UF}}
+\index{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+N\+E\+T\+B\+UF@{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+N\+E\+T\+B\+UF}!Internal memory pools@{Internal memory pools}}
+\subsubsection{\texorpdfstring{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+N\+E\+T\+B\+UF}{MEMP\_NUM\_NETBUF}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \#define M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+N\+E\+T\+B\+UF~2}
+
+M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+N\+E\+T\+B\+UF\+: the number of struct netbufs. (only needed if you use the sequential A\+PI, like api\+\_\+lib.\+c) \mbox{\Hypertarget{group__lwip__opts__memp_gacb40bd726b7e15593b20a628d298f456}\label{group__lwip__opts__memp_gacb40bd726b7e15593b20a628d298f456}} 
+\index{Internal memory pools@{Internal memory pools}!M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+N\+E\+T\+C\+O\+NN@{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+N\+E\+T\+C\+O\+NN}}
+\index{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+N\+E\+T\+C\+O\+NN@{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+N\+E\+T\+C\+O\+NN}!Internal memory pools@{Internal memory pools}}
+\subsubsection{\texorpdfstring{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+N\+E\+T\+C\+O\+NN}{MEMP\_NUM\_NETCONN}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \#define M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+N\+E\+T\+C\+O\+NN~4}
+
+M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+N\+E\+T\+C\+O\+NN\+: the number of struct netconns. (only needed if you use the sequential A\+PI, like api\+\_\+lib.\+c) \mbox{\Hypertarget{group__lwip__opts__memp_gacb40bd726b7e15593b20a628d298f456}\label{group__lwip__opts__memp_gacb40bd726b7e15593b20a628d298f456}} 
+\index{Internal memory pools@{Internal memory pools}!M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+N\+E\+T\+C\+O\+NN@{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+N\+E\+T\+C\+O\+NN}}
+\index{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+N\+E\+T\+C\+O\+NN@{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+N\+E\+T\+C\+O\+NN}!Internal memory pools@{Internal memory pools}}
+\subsubsection{\texorpdfstring{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+N\+E\+T\+C\+O\+NN}{MEMP\_NUM\_NETCONN}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \#define M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+N\+E\+T\+C\+O\+NN~4}
+
+M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+N\+E\+T\+C\+O\+NN\+: the number of struct netconns. (only needed if you use the sequential A\+PI, like api\+\_\+lib.\+c) \mbox{\Hypertarget{group__lwip__opts__memp_ga293bc22b60bf3f8e2520f60a88370e7a}\label{group__lwip__opts__memp_ga293bc22b60bf3f8e2520f60a88370e7a}} 
+\index{Internal memory pools@{Internal memory pools}!M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+N\+E\+T\+DB@{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+N\+E\+T\+DB}}
+\index{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+N\+E\+T\+DB@{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+N\+E\+T\+DB}!Internal memory pools@{Internal memory pools}}
+\subsubsection{\texorpdfstring{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+N\+E\+T\+DB}{MEMP\_NUM\_NETDB}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \#define M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+N\+E\+T\+DB~1}
+
+M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+N\+E\+T\+DB\+: the number of concurrently running lwip\+\_\+addrinfo() calls (before freeing the corresponding memory using lwip\+\_\+freeaddrinfo()). \mbox{\Hypertarget{group__lwip__opts__memp_ga293bc22b60bf3f8e2520f60a88370e7a}\label{group__lwip__opts__memp_ga293bc22b60bf3f8e2520f60a88370e7a}} 
+\index{Internal memory pools@{Internal memory pools}!M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+N\+E\+T\+DB@{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+N\+E\+T\+DB}}
+\index{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+N\+E\+T\+DB@{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+N\+E\+T\+DB}!Internal memory pools@{Internal memory pools}}
+\subsubsection{\texorpdfstring{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+N\+E\+T\+DB}{MEMP\_NUM\_NETDB}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \#define M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+N\+E\+T\+DB~1}
+
+M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+N\+E\+T\+DB\+: the number of concurrently running lwip\+\_\+addrinfo() calls (before freeing the corresponding memory using lwip\+\_\+freeaddrinfo()). \mbox{\Hypertarget{group__lwip__opts__memp_gadd5a973b98068ce9318ea2f96b5fa14c}\label{group__lwip__opts__memp_gadd5a973b98068ce9318ea2f96b5fa14c}} 
+\index{Internal memory pools@{Internal memory pools}!M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+N\+E\+T\+I\+F\+A\+P\+I\+\_\+\+M\+SG@{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+N\+E\+T\+I\+F\+A\+P\+I\+\_\+\+M\+SG}}
+\index{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+N\+E\+T\+I\+F\+A\+P\+I\+\_\+\+M\+SG@{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+N\+E\+T\+I\+F\+A\+P\+I\+\_\+\+M\+SG}!Internal memory pools@{Internal memory pools}}
+\subsubsection{\texorpdfstring{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+N\+E\+T\+I\+F\+A\+P\+I\+\_\+\+M\+SG}{MEMP\_NUM\_NETIFAPI\_MSG}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \#define M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+N\+E\+T\+I\+F\+A\+P\+I\+\_\+\+M\+SG~\hyperlink{group__lwip__opts__memp_gafbbfd6ce8536038cd00fa85bebae987c}{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+T\+C\+P\+I\+P\+\_\+\+M\+S\+G\+\_\+\+A\+PI}}
+
+M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+N\+E\+T\+I\+F\+A\+P\+I\+\_\+\+M\+SG\+: the number of concurrently active calls to the netifapi functions \mbox{\Hypertarget{group__lwip__opts__memp_gadd5a973b98068ce9318ea2f96b5fa14c}\label{group__lwip__opts__memp_gadd5a973b98068ce9318ea2f96b5fa14c}} 
+\index{Internal memory pools@{Internal memory pools}!M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+N\+E\+T\+I\+F\+A\+P\+I\+\_\+\+M\+SG@{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+N\+E\+T\+I\+F\+A\+P\+I\+\_\+\+M\+SG}}
+\index{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+N\+E\+T\+I\+F\+A\+P\+I\+\_\+\+M\+SG@{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+N\+E\+T\+I\+F\+A\+P\+I\+\_\+\+M\+SG}!Internal memory pools@{Internal memory pools}}
+\subsubsection{\texorpdfstring{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+N\+E\+T\+I\+F\+A\+P\+I\+\_\+\+M\+SG}{MEMP\_NUM\_NETIFAPI\_MSG}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \#define M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+N\+E\+T\+I\+F\+A\+P\+I\+\_\+\+M\+SG~\hyperlink{group__lwip__opts__memp_gafbbfd6ce8536038cd00fa85bebae987c}{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+T\+C\+P\+I\+P\+\_\+\+M\+S\+G\+\_\+\+A\+PI}}
+
+M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+N\+E\+T\+I\+F\+A\+P\+I\+\_\+\+M\+SG\+: the number of concurrently active calls to the netifapi functions \mbox{\Hypertarget{group__lwip__opts__memp_ga92b30aed958ec59334d936d4ca725418}\label{group__lwip__opts__memp_ga92b30aed958ec59334d936d4ca725418}} 
+\index{Internal memory pools@{Internal memory pools}!M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+P\+B\+UF@{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+P\+B\+UF}}
+\index{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+P\+B\+UF@{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+P\+B\+UF}!Internal memory pools@{Internal memory pools}}
+\subsubsection{\texorpdfstring{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+P\+B\+UF}{MEMP\_NUM\_PBUF}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \#define M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+P\+B\+UF~16}
+
+M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+P\+B\+UF\+: the number of memp struct pbufs (used for P\+B\+U\+F\+\_\+\+R\+OM and P\+B\+U\+F\+\_\+\+R\+EF). If the application sends a lot of data out of R\+OM (or other static memory), this should be set high. \mbox{\Hypertarget{group__lwip__opts__memp_ga92b30aed958ec59334d936d4ca725418}\label{group__lwip__opts__memp_ga92b30aed958ec59334d936d4ca725418}} 
+\index{Internal memory pools@{Internal memory pools}!M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+P\+B\+UF@{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+P\+B\+UF}}
+\index{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+P\+B\+UF@{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+P\+B\+UF}!Internal memory pools@{Internal memory pools}}
+\subsubsection{\texorpdfstring{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+P\+B\+UF}{MEMP\_NUM\_PBUF}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \#define M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+P\+B\+UF~16}
+
+M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+P\+B\+UF\+: the number of memp struct pbufs (used for P\+B\+U\+F\+\_\+\+R\+OM and P\+B\+U\+F\+\_\+\+R\+EF). If the application sends a lot of data out of R\+OM (or other static memory), this should be set high. \mbox{\Hypertarget{group__lwip__opts__memp_ga379bf92ed322cda54cb701337421e0d3}\label{group__lwip__opts__memp_ga379bf92ed322cda54cb701337421e0d3}} 
+\index{Internal memory pools@{Internal memory pools}!M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+R\+A\+W\+\_\+\+P\+CB@{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+R\+A\+W\+\_\+\+P\+CB}}
+\index{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+R\+A\+W\+\_\+\+P\+CB@{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+R\+A\+W\+\_\+\+P\+CB}!Internal memory pools@{Internal memory pools}}
+\subsubsection{\texorpdfstring{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+R\+A\+W\+\_\+\+P\+CB}{MEMP\_NUM\_RAW\_PCB}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \#define M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+R\+A\+W\+\_\+\+P\+CB~4}
+
+M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+R\+A\+W\+\_\+\+P\+CB\+: Number of raw connection P\+C\+Bs (requires the L\+W\+I\+P\+\_\+\+R\+AW option) \mbox{\Hypertarget{group__lwip__opts__memp_ga379bf92ed322cda54cb701337421e0d3}\label{group__lwip__opts__memp_ga379bf92ed322cda54cb701337421e0d3}} 
+\index{Internal memory pools@{Internal memory pools}!M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+R\+A\+W\+\_\+\+P\+CB@{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+R\+A\+W\+\_\+\+P\+CB}}
+\index{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+R\+A\+W\+\_\+\+P\+CB@{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+R\+A\+W\+\_\+\+P\+CB}!Internal memory pools@{Internal memory pools}}
+\subsubsection{\texorpdfstring{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+R\+A\+W\+\_\+\+P\+CB}{MEMP\_NUM\_RAW\_PCB}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \#define M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+R\+A\+W\+\_\+\+P\+CB~4}
+
+M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+R\+A\+W\+\_\+\+P\+CB\+: Number of raw connection P\+C\+Bs (requires the L\+W\+I\+P\+\_\+\+R\+AW option) \mbox{\Hypertarget{group__lwip__opts__memp_ga169436c5860253b90e25bdba9fdcac86}\label{group__lwip__opts__memp_ga169436c5860253b90e25bdba9fdcac86}} 
+\index{Internal memory pools@{Internal memory pools}!M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+R\+E\+A\+S\+S\+D\+A\+TA@{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+R\+E\+A\+S\+S\+D\+A\+TA}}
+\index{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+R\+E\+A\+S\+S\+D\+A\+TA@{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+R\+E\+A\+S\+S\+D\+A\+TA}!Internal memory pools@{Internal memory pools}}
+\subsubsection{\texorpdfstring{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+R\+E\+A\+S\+S\+D\+A\+TA}{MEMP\_NUM\_REASSDATA}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \#define M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+R\+E\+A\+S\+S\+D\+A\+TA~5}
+
+M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+R\+E\+A\+S\+S\+D\+A\+TA\+: the number of IP packets simultaneously queued for reassembly (whole packets, not fragments!) \mbox{\Hypertarget{group__lwip__opts__memp_ga169436c5860253b90e25bdba9fdcac86}\label{group__lwip__opts__memp_ga169436c5860253b90e25bdba9fdcac86}} 
+\index{Internal memory pools@{Internal memory pools}!M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+R\+E\+A\+S\+S\+D\+A\+TA@{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+R\+E\+A\+S\+S\+D\+A\+TA}}
+\index{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+R\+E\+A\+S\+S\+D\+A\+TA@{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+R\+E\+A\+S\+S\+D\+A\+TA}!Internal memory pools@{Internal memory pools}}
+\subsubsection{\texorpdfstring{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+R\+E\+A\+S\+S\+D\+A\+TA}{MEMP\_NUM\_REASSDATA}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \#define M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+R\+E\+A\+S\+S\+D\+A\+TA~5}
+
+M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+R\+E\+A\+S\+S\+D\+A\+TA\+: the number of IP packets simultaneously queued for reassembly (whole packets, not fragments!) \mbox{\Hypertarget{group__lwip__opts__memp_gacf9782dd26bf8a655044dc041a9de948}\label{group__lwip__opts__memp_gacf9782dd26bf8a655044dc041a9de948}} 
+\index{Internal memory pools@{Internal memory pools}!M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+S\+O\+C\+K\+E\+T\+\_\+\+S\+E\+T\+G\+E\+T\+S\+O\+C\+K\+O\+P\+T\+\_\+\+D\+A\+TA@{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+S\+O\+C\+K\+E\+T\+\_\+\+S\+E\+T\+G\+E\+T\+S\+O\+C\+K\+O\+P\+T\+\_\+\+D\+A\+TA}}
+\index{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+S\+O\+C\+K\+E\+T\+\_\+\+S\+E\+T\+G\+E\+T\+S\+O\+C\+K\+O\+P\+T\+\_\+\+D\+A\+TA@{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+S\+O\+C\+K\+E\+T\+\_\+\+S\+E\+T\+G\+E\+T\+S\+O\+C\+K\+O\+P\+T\+\_\+\+D\+A\+TA}!Internal memory pools@{Internal memory pools}}
+\subsubsection{\texorpdfstring{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+S\+O\+C\+K\+E\+T\+\_\+\+S\+E\+T\+G\+E\+T\+S\+O\+C\+K\+O\+P\+T\+\_\+\+D\+A\+TA}{MEMP\_NUM\_SOCKET\_SETGETSOCKOPT\_DATA}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \#define M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+S\+O\+C\+K\+E\+T\+\_\+\+S\+E\+T\+G\+E\+T\+S\+O\+C\+K\+O\+P\+T\+\_\+\+D\+A\+TA~\hyperlink{group__lwip__opts__memp_gafbbfd6ce8536038cd00fa85bebae987c}{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+T\+C\+P\+I\+P\+\_\+\+M\+S\+G\+\_\+\+A\+PI}}
+
+M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+S\+O\+C\+K\+E\+T\+\_\+\+S\+E\+T\+G\+E\+T\+S\+O\+C\+K\+O\+P\+T\+\_\+\+D\+A\+TA\+: the number of concurrently active calls to getsockopt/setsockopt \mbox{\Hypertarget{group__lwip__opts__memp_gacf9782dd26bf8a655044dc041a9de948}\label{group__lwip__opts__memp_gacf9782dd26bf8a655044dc041a9de948}} 
+\index{Internal memory pools@{Internal memory pools}!M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+S\+O\+C\+K\+E\+T\+\_\+\+S\+E\+T\+G\+E\+T\+S\+O\+C\+K\+O\+P\+T\+\_\+\+D\+A\+TA@{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+S\+O\+C\+K\+E\+T\+\_\+\+S\+E\+T\+G\+E\+T\+S\+O\+C\+K\+O\+P\+T\+\_\+\+D\+A\+TA}}
+\index{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+S\+O\+C\+K\+E\+T\+\_\+\+S\+E\+T\+G\+E\+T\+S\+O\+C\+K\+O\+P\+T\+\_\+\+D\+A\+TA@{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+S\+O\+C\+K\+E\+T\+\_\+\+S\+E\+T\+G\+E\+T\+S\+O\+C\+K\+O\+P\+T\+\_\+\+D\+A\+TA}!Internal memory pools@{Internal memory pools}}
+\subsubsection{\texorpdfstring{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+S\+O\+C\+K\+E\+T\+\_\+\+S\+E\+T\+G\+E\+T\+S\+O\+C\+K\+O\+P\+T\+\_\+\+D\+A\+TA}{MEMP\_NUM\_SOCKET\_SETGETSOCKOPT\_DATA}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \#define M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+S\+O\+C\+K\+E\+T\+\_\+\+S\+E\+T\+G\+E\+T\+S\+O\+C\+K\+O\+P\+T\+\_\+\+D\+A\+TA~\hyperlink{group__lwip__opts__memp_gafbbfd6ce8536038cd00fa85bebae987c}{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+T\+C\+P\+I\+P\+\_\+\+M\+S\+G\+\_\+\+A\+PI}}
+
+M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+S\+O\+C\+K\+E\+T\+\_\+\+S\+E\+T\+G\+E\+T\+S\+O\+C\+K\+O\+P\+T\+\_\+\+D\+A\+TA\+: the number of concurrently active calls to getsockopt/setsockopt \mbox{\Hypertarget{group__lwip__opts__memp_ga4afbdca581a58d57bc7a81118a95327e}\label{group__lwip__opts__memp_ga4afbdca581a58d57bc7a81118a95327e}} 
+\index{Internal memory pools@{Internal memory pools}!M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+S\+Y\+S\+\_\+\+T\+I\+M\+E\+O\+UT@{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+S\+Y\+S\+\_\+\+T\+I\+M\+E\+O\+UT}}
+\index{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+S\+Y\+S\+\_\+\+T\+I\+M\+E\+O\+UT@{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+S\+Y\+S\+\_\+\+T\+I\+M\+E\+O\+UT}!Internal memory pools@{Internal memory pools}}
+\subsubsection{\texorpdfstring{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+S\+Y\+S\+\_\+\+T\+I\+M\+E\+O\+UT}{MEMP\_NUM\_SYS\_TIMEOUT}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \#define M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+S\+Y\+S\+\_\+\+T\+I\+M\+E\+O\+UT~(\hyperlink{group__lwip__opts__tcp_gaa4ed98deb97b77c633cb8870f34c71e9}{L\+W\+I\+P\+\_\+\+T\+CP} + \hyperlink{group__lwip__opts__ipv4_ga1a31ab0e0f37b17d40fa7c35bc2c4f69}{I\+P\+\_\+\+R\+E\+A\+S\+S\+E\+M\+B\+LY} + \hyperlink{group__lwip__opts__arp_ga9609a014bba4638cc191d6a8f9556c87}{L\+W\+I\+P\+\_\+\+A\+RP} + (2$\ast$\hyperlink{openmote-cc2538_2lwip_2test_2unit_2lwipopts_8h_a8a6ec62dc121064ac591b1fd8567bee9}{L\+W\+I\+P\+\_\+\+D\+H\+CP}) + \hyperlink{group__lwip__opts__autoip_gaaf1b3a089827223589baf1b7f4f57069}{L\+W\+I\+P\+\_\+\+A\+U\+T\+O\+IP} + \hyperlink{openmote-cc2538_2lwip_2test_2unit_2lwipopts_8h_adaf25915ae1fd69c0943ef68cbb38923}{L\+W\+I\+P\+\_\+\+I\+G\+MP} + \hyperlink{group__lwip__opts__dns_ga98710dd81446b7cb2daac736bae6f646}{L\+W\+I\+P\+\_\+\+D\+NS} + (\hyperlink{openmote-cc2538_2lwip_2src_2include_2netif_2ppp_2ppp__opts_8h_a746c0ebaef5399987d53a1426eba6273}{P\+P\+P\+\_\+\+S\+U\+P\+P\+O\+RT}$\ast$6$\ast$\hyperlink{openmote-cc2538_2lwip_2src_2include_2netif_2ppp_2ppp__opts_8h_a6721ea95cbd6afd6968470c2423b6482}{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+P\+P\+P\+\_\+\+P\+CB}) + (\hyperlink{openmote-cc2538_2lwip_2test_2fuzz_2lwipopts_8h_a872e3bb3fe2212156d66b18fccc9643f}{L\+W\+I\+P\+\_\+\+I\+P\+V6} ? (1 + \hyperlink{group__lwip__opts__ipv6_gad0ef160d72e63b02c5e875b06ec53864}{L\+W\+I\+P\+\_\+\+I\+P\+V6\+\_\+\+R\+E\+A\+SS} + \hyperlink{group__lwip__opts__mld6_ga44d8f24eaebbc50221ac1336212a3528}{L\+W\+I\+P\+\_\+\+I\+P\+V6\+\_\+\+M\+LD}) \+: 0))}
+
+M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+S\+Y\+S\+\_\+\+T\+I\+M\+E\+O\+UT\+: the number of simultaneously active timeouts. The default number of timeouts is calculated here for all enabled modules. The formula expects settings to be either \textquotesingle{}0\textquotesingle{} or \textquotesingle{}1\textquotesingle{}. \mbox{\Hypertarget{group__lwip__opts__memp_ga4afbdca581a58d57bc7a81118a95327e}\label{group__lwip__opts__memp_ga4afbdca581a58d57bc7a81118a95327e}} 
+\index{Internal memory pools@{Internal memory pools}!M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+S\+Y\+S\+\_\+\+T\+I\+M\+E\+O\+UT@{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+S\+Y\+S\+\_\+\+T\+I\+M\+E\+O\+UT}}
+\index{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+S\+Y\+S\+\_\+\+T\+I\+M\+E\+O\+UT@{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+S\+Y\+S\+\_\+\+T\+I\+M\+E\+O\+UT}!Internal memory pools@{Internal memory pools}}
+\subsubsection{\texorpdfstring{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+S\+Y\+S\+\_\+\+T\+I\+M\+E\+O\+UT}{MEMP\_NUM\_SYS\_TIMEOUT}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \#define M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+S\+Y\+S\+\_\+\+T\+I\+M\+E\+O\+UT~(\hyperlink{group__lwip__opts__tcp_gaa4ed98deb97b77c633cb8870f34c71e9}{L\+W\+I\+P\+\_\+\+T\+CP} + \hyperlink{group__lwip__opts__ipv4_ga1a31ab0e0f37b17d40fa7c35bc2c4f69}{I\+P\+\_\+\+R\+E\+A\+S\+S\+E\+M\+B\+LY} + \hyperlink{group__lwip__opts__arp_ga9609a014bba4638cc191d6a8f9556c87}{L\+W\+I\+P\+\_\+\+A\+RP} + (2$\ast$\hyperlink{openmote-cc2538_2lwip_2test_2unit_2lwipopts_8h_a8a6ec62dc121064ac591b1fd8567bee9}{L\+W\+I\+P\+\_\+\+D\+H\+CP}) + \hyperlink{group__lwip__opts__autoip_gaaf1b3a089827223589baf1b7f4f57069}{L\+W\+I\+P\+\_\+\+A\+U\+T\+O\+IP} + \hyperlink{openmote-cc2538_2lwip_2test_2unit_2lwipopts_8h_adaf25915ae1fd69c0943ef68cbb38923}{L\+W\+I\+P\+\_\+\+I\+G\+MP} + \hyperlink{group__lwip__opts__dns_ga98710dd81446b7cb2daac736bae6f646}{L\+W\+I\+P\+\_\+\+D\+NS} + (\hyperlink{openmote-cc2538_2lwip_2src_2include_2netif_2ppp_2ppp__opts_8h_a746c0ebaef5399987d53a1426eba6273}{P\+P\+P\+\_\+\+S\+U\+P\+P\+O\+RT}$\ast$6$\ast$\hyperlink{openmote-cc2538_2lwip_2src_2include_2netif_2ppp_2ppp__opts_8h_a6721ea95cbd6afd6968470c2423b6482}{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+P\+P\+P\+\_\+\+P\+CB}) + (\hyperlink{openmote-cc2538_2lwip_2test_2fuzz_2lwipopts_8h_a872e3bb3fe2212156d66b18fccc9643f}{L\+W\+I\+P\+\_\+\+I\+P\+V6} ? (1 + \hyperlink{group__lwip__opts__ipv6_gad0ef160d72e63b02c5e875b06ec53864}{L\+W\+I\+P\+\_\+\+I\+P\+V6\+\_\+\+R\+E\+A\+SS} + \hyperlink{group__lwip__opts__mld6_ga44d8f24eaebbc50221ac1336212a3528}{L\+W\+I\+P\+\_\+\+I\+P\+V6\+\_\+\+M\+LD}) \+: 0))}
+
+M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+S\+Y\+S\+\_\+\+T\+I\+M\+E\+O\+UT\+: the number of simultaneously active timeouts. The default number of timeouts is calculated here for all enabled modules. The formula expects settings to be either \textquotesingle{}0\textquotesingle{} or \textquotesingle{}1\textquotesingle{}. \mbox{\Hypertarget{group__lwip__opts__memp_ga73beecc19cfbc3114768f9b32b2cd70e}\label{group__lwip__opts__memp_ga73beecc19cfbc3114768f9b32b2cd70e}} 
+\index{Internal memory pools@{Internal memory pools}!M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+T\+C\+P\+\_\+\+P\+CB@{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+T\+C\+P\+\_\+\+P\+CB}}
+\index{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+T\+C\+P\+\_\+\+P\+CB@{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+T\+C\+P\+\_\+\+P\+CB}!Internal memory pools@{Internal memory pools}}
+\subsubsection{\texorpdfstring{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+T\+C\+P\+\_\+\+P\+CB}{MEMP\_NUM\_TCP\_PCB}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \#define M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+T\+C\+P\+\_\+\+P\+CB~5}
+
+M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+T\+C\+P\+\_\+\+P\+CB\+: the number of simultaneously active T\+CP connections. (requires the L\+W\+I\+P\+\_\+\+T\+CP option) \mbox{\Hypertarget{group__lwip__opts__memp_ga73beecc19cfbc3114768f9b32b2cd70e}\label{group__lwip__opts__memp_ga73beecc19cfbc3114768f9b32b2cd70e}} 
+\index{Internal memory pools@{Internal memory pools}!M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+T\+C\+P\+\_\+\+P\+CB@{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+T\+C\+P\+\_\+\+P\+CB}}
+\index{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+T\+C\+P\+\_\+\+P\+CB@{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+T\+C\+P\+\_\+\+P\+CB}!Internal memory pools@{Internal memory pools}}
+\subsubsection{\texorpdfstring{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+T\+C\+P\+\_\+\+P\+CB}{MEMP\_NUM\_TCP\_PCB}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \#define M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+T\+C\+P\+\_\+\+P\+CB~5}
+
+M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+T\+C\+P\+\_\+\+P\+CB\+: the number of simultaneously active T\+CP connections. (requires the L\+W\+I\+P\+\_\+\+T\+CP option) \mbox{\Hypertarget{group__lwip__opts__memp_ga04fba6a249123513271dccb4ec26aa5a}\label{group__lwip__opts__memp_ga04fba6a249123513271dccb4ec26aa5a}} 
+\index{Internal memory pools@{Internal memory pools}!M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+T\+C\+P\+\_\+\+P\+C\+B\+\_\+\+L\+I\+S\+T\+EN@{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+T\+C\+P\+\_\+\+P\+C\+B\+\_\+\+L\+I\+S\+T\+EN}}
+\index{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+T\+C\+P\+\_\+\+P\+C\+B\+\_\+\+L\+I\+S\+T\+EN@{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+T\+C\+P\+\_\+\+P\+C\+B\+\_\+\+L\+I\+S\+T\+EN}!Internal memory pools@{Internal memory pools}}
+\subsubsection{\texorpdfstring{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+T\+C\+P\+\_\+\+P\+C\+B\+\_\+\+L\+I\+S\+T\+EN}{MEMP\_NUM\_TCP\_PCB\_LISTEN}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \#define M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+T\+C\+P\+\_\+\+P\+C\+B\+\_\+\+L\+I\+S\+T\+EN~8}
+
+M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+T\+C\+P\+\_\+\+P\+C\+B\+\_\+\+L\+I\+S\+T\+EN\+: the number of listening T\+CP connections. (requires the L\+W\+I\+P\+\_\+\+T\+CP option) \mbox{\Hypertarget{group__lwip__opts__memp_ga04fba6a249123513271dccb4ec26aa5a}\label{group__lwip__opts__memp_ga04fba6a249123513271dccb4ec26aa5a}} 
+\index{Internal memory pools@{Internal memory pools}!M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+T\+C\+P\+\_\+\+P\+C\+B\+\_\+\+L\+I\+S\+T\+EN@{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+T\+C\+P\+\_\+\+P\+C\+B\+\_\+\+L\+I\+S\+T\+EN}}
+\index{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+T\+C\+P\+\_\+\+P\+C\+B\+\_\+\+L\+I\+S\+T\+EN@{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+T\+C\+P\+\_\+\+P\+C\+B\+\_\+\+L\+I\+S\+T\+EN}!Internal memory pools@{Internal memory pools}}
+\subsubsection{\texorpdfstring{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+T\+C\+P\+\_\+\+P\+C\+B\+\_\+\+L\+I\+S\+T\+EN}{MEMP\_NUM\_TCP\_PCB\_LISTEN}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \#define M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+T\+C\+P\+\_\+\+P\+C\+B\+\_\+\+L\+I\+S\+T\+EN~8}
+
+M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+T\+C\+P\+\_\+\+P\+C\+B\+\_\+\+L\+I\+S\+T\+EN\+: the number of listening T\+CP connections. (requires the L\+W\+I\+P\+\_\+\+T\+CP option) \mbox{\Hypertarget{group__lwip__opts__memp_gaa35fb3a1a76661e3ffb9722a57092de3}\label{group__lwip__opts__memp_gaa35fb3a1a76661e3ffb9722a57092de3}} 
+\index{Internal memory pools@{Internal memory pools}!M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+T\+C\+P\+\_\+\+S\+EG@{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+T\+C\+P\+\_\+\+S\+EG}}
+\index{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+T\+C\+P\+\_\+\+S\+EG@{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+T\+C\+P\+\_\+\+S\+EG}!Internal memory pools@{Internal memory pools}}
+\subsubsection{\texorpdfstring{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+T\+C\+P\+\_\+\+S\+EG}{MEMP\_NUM\_TCP\_SEG}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \#define M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+T\+C\+P\+\_\+\+S\+EG~16}
+
+M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+T\+C\+P\+\_\+\+S\+EG\+: the number of simultaneously queued T\+CP segments. (requires the L\+W\+I\+P\+\_\+\+T\+CP option) \mbox{\Hypertarget{group__lwip__opts__memp_gaa35fb3a1a76661e3ffb9722a57092de3}\label{group__lwip__opts__memp_gaa35fb3a1a76661e3ffb9722a57092de3}} 
+\index{Internal memory pools@{Internal memory pools}!M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+T\+C\+P\+\_\+\+S\+EG@{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+T\+C\+P\+\_\+\+S\+EG}}
+\index{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+T\+C\+P\+\_\+\+S\+EG@{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+T\+C\+P\+\_\+\+S\+EG}!Internal memory pools@{Internal memory pools}}
+\subsubsection{\texorpdfstring{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+T\+C\+P\+\_\+\+S\+EG}{MEMP\_NUM\_TCP\_SEG}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \#define M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+T\+C\+P\+\_\+\+S\+EG~16}
+
+M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+T\+C\+P\+\_\+\+S\+EG\+: the number of simultaneously queued T\+CP segments. (requires the L\+W\+I\+P\+\_\+\+T\+CP option) \mbox{\Hypertarget{group__lwip__opts__memp_gafbbfd6ce8536038cd00fa85bebae987c}\label{group__lwip__opts__memp_gafbbfd6ce8536038cd00fa85bebae987c}} 
+\index{Internal memory pools@{Internal memory pools}!M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+T\+C\+P\+I\+P\+\_\+\+M\+S\+G\+\_\+\+A\+PI@{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+T\+C\+P\+I\+P\+\_\+\+M\+S\+G\+\_\+\+A\+PI}}
+\index{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+T\+C\+P\+I\+P\+\_\+\+M\+S\+G\+\_\+\+A\+PI@{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+T\+C\+P\+I\+P\+\_\+\+M\+S\+G\+\_\+\+A\+PI}!Internal memory pools@{Internal memory pools}}
+\subsubsection{\texorpdfstring{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+T\+C\+P\+I\+P\+\_\+\+M\+S\+G\+\_\+\+A\+PI}{MEMP\_NUM\_TCPIP\_MSG\_API}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \#define M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+T\+C\+P\+I\+P\+\_\+\+M\+S\+G\+\_\+\+A\+PI~8}
+
+M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+T\+C\+P\+I\+P\+\_\+\+M\+S\+G\+\_\+\+A\+PI\+: the number of struct \hyperlink{structtcpip__msg}{tcpip\+\_\+msg}, which are used for callback/timeout A\+PI communication. (only needed if you use tcpip.\+c) \mbox{\Hypertarget{group__lwip__opts__memp_gafbbfd6ce8536038cd00fa85bebae987c}\label{group__lwip__opts__memp_gafbbfd6ce8536038cd00fa85bebae987c}} 
+\index{Internal memory pools@{Internal memory pools}!M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+T\+C\+P\+I\+P\+\_\+\+M\+S\+G\+\_\+\+A\+PI@{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+T\+C\+P\+I\+P\+\_\+\+M\+S\+G\+\_\+\+A\+PI}}
+\index{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+T\+C\+P\+I\+P\+\_\+\+M\+S\+G\+\_\+\+A\+PI@{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+T\+C\+P\+I\+P\+\_\+\+M\+S\+G\+\_\+\+A\+PI}!Internal memory pools@{Internal memory pools}}
+\subsubsection{\texorpdfstring{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+T\+C\+P\+I\+P\+\_\+\+M\+S\+G\+\_\+\+A\+PI}{MEMP\_NUM\_TCPIP\_MSG\_API}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \#define M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+T\+C\+P\+I\+P\+\_\+\+M\+S\+G\+\_\+\+A\+PI~8}
+
+M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+T\+C\+P\+I\+P\+\_\+\+M\+S\+G\+\_\+\+A\+PI\+: the number of struct \hyperlink{structtcpip__msg}{tcpip\+\_\+msg}, which are used for callback/timeout A\+PI communication. (only needed if you use tcpip.\+c) \mbox{\Hypertarget{group__lwip__opts__memp_gab089a7088439e726c3801ba9e249d831}\label{group__lwip__opts__memp_gab089a7088439e726c3801ba9e249d831}} 
+\index{Internal memory pools@{Internal memory pools}!M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+T\+C\+P\+I\+P\+\_\+\+M\+S\+G\+\_\+\+I\+N\+P\+KT@{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+T\+C\+P\+I\+P\+\_\+\+M\+S\+G\+\_\+\+I\+N\+P\+KT}}
+\index{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+T\+C\+P\+I\+P\+\_\+\+M\+S\+G\+\_\+\+I\+N\+P\+KT@{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+T\+C\+P\+I\+P\+\_\+\+M\+S\+G\+\_\+\+I\+N\+P\+KT}!Internal memory pools@{Internal memory pools}}
+\subsubsection{\texorpdfstring{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+T\+C\+P\+I\+P\+\_\+\+M\+S\+G\+\_\+\+I\+N\+P\+KT}{MEMP\_NUM\_TCPIP\_MSG\_INPKT}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \#define M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+T\+C\+P\+I\+P\+\_\+\+M\+S\+G\+\_\+\+I\+N\+P\+KT~8}
+
+M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+T\+C\+P\+I\+P\+\_\+\+M\+S\+G\+\_\+\+I\+N\+P\+KT\+: the number of struct \hyperlink{structtcpip__msg}{tcpip\+\_\+msg}, which are used for incoming packets. (only needed if you use tcpip.\+c) \mbox{\Hypertarget{group__lwip__opts__memp_gab089a7088439e726c3801ba9e249d831}\label{group__lwip__opts__memp_gab089a7088439e726c3801ba9e249d831}} 
+\index{Internal memory pools@{Internal memory pools}!M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+T\+C\+P\+I\+P\+\_\+\+M\+S\+G\+\_\+\+I\+N\+P\+KT@{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+T\+C\+P\+I\+P\+\_\+\+M\+S\+G\+\_\+\+I\+N\+P\+KT}}
+\index{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+T\+C\+P\+I\+P\+\_\+\+M\+S\+G\+\_\+\+I\+N\+P\+KT@{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+T\+C\+P\+I\+P\+\_\+\+M\+S\+G\+\_\+\+I\+N\+P\+KT}!Internal memory pools@{Internal memory pools}}
+\subsubsection{\texorpdfstring{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+T\+C\+P\+I\+P\+\_\+\+M\+S\+G\+\_\+\+I\+N\+P\+KT}{MEMP\_NUM\_TCPIP\_MSG\_INPKT}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \#define M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+T\+C\+P\+I\+P\+\_\+\+M\+S\+G\+\_\+\+I\+N\+P\+KT~8}
+
+M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+T\+C\+P\+I\+P\+\_\+\+M\+S\+G\+\_\+\+I\+N\+P\+KT\+: the number of struct \hyperlink{structtcpip__msg}{tcpip\+\_\+msg}, which are used for incoming packets. (only needed if you use tcpip.\+c) \mbox{\Hypertarget{group__lwip__opts__memp_ga2c416da481ab09bd1ba257b75a0707eb}\label{group__lwip__opts__memp_ga2c416da481ab09bd1ba257b75a0707eb}} 
+\index{Internal memory pools@{Internal memory pools}!M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+U\+D\+P\+\_\+\+P\+CB@{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+U\+D\+P\+\_\+\+P\+CB}}
+\index{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+U\+D\+P\+\_\+\+P\+CB@{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+U\+D\+P\+\_\+\+P\+CB}!Internal memory pools@{Internal memory pools}}
+\subsubsection{\texorpdfstring{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+U\+D\+P\+\_\+\+P\+CB}{MEMP\_NUM\_UDP\_PCB}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \#define M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+U\+D\+P\+\_\+\+P\+CB~4}
+
+M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+U\+D\+P\+\_\+\+P\+CB\+: the number of U\+DP protocol control blocks. One per active U\+DP \char`\"{}connection\char`\"{}. (requires the L\+W\+I\+P\+\_\+\+U\+DP option) \mbox{\Hypertarget{group__lwip__opts__memp_ga2c416da481ab09bd1ba257b75a0707eb}\label{group__lwip__opts__memp_ga2c416da481ab09bd1ba257b75a0707eb}} 
+\index{Internal memory pools@{Internal memory pools}!M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+U\+D\+P\+\_\+\+P\+CB@{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+U\+D\+P\+\_\+\+P\+CB}}
+\index{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+U\+D\+P\+\_\+\+P\+CB@{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+U\+D\+P\+\_\+\+P\+CB}!Internal memory pools@{Internal memory pools}}
+\subsubsection{\texorpdfstring{M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+U\+D\+P\+\_\+\+P\+CB}{MEMP\_NUM\_UDP\_PCB}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \#define M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+U\+D\+P\+\_\+\+P\+CB~4}
+
+M\+E\+M\+P\+\_\+\+N\+U\+M\+\_\+\+U\+D\+P\+\_\+\+P\+CB\+: the number of U\+DP protocol control blocks. One per active U\+DP \char`\"{}connection\char`\"{}. (requires the L\+W\+I\+P\+\_\+\+U\+DP option) \mbox{\Hypertarget{group__lwip__opts__memp_ga50eaadc4cad0716410332691e382c38a}\label{group__lwip__opts__memp_ga50eaadc4cad0716410332691e382c38a}} 
+\index{Internal memory pools@{Internal memory pools}!P\+B\+U\+F\+\_\+\+P\+O\+O\+L\+\_\+\+S\+I\+ZE@{P\+B\+U\+F\+\_\+\+P\+O\+O\+L\+\_\+\+S\+I\+ZE}}
+\index{P\+B\+U\+F\+\_\+\+P\+O\+O\+L\+\_\+\+S\+I\+ZE@{P\+B\+U\+F\+\_\+\+P\+O\+O\+L\+\_\+\+S\+I\+ZE}!Internal memory pools@{Internal memory pools}}
+\subsubsection{\texorpdfstring{P\+B\+U\+F\+\_\+\+P\+O\+O\+L\+\_\+\+S\+I\+ZE}{PBUF\_POOL\_SIZE}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \#define P\+B\+U\+F\+\_\+\+P\+O\+O\+L\+\_\+\+S\+I\+ZE~16}
+
+P\+B\+U\+F\+\_\+\+P\+O\+O\+L\+\_\+\+S\+I\+ZE\+: the number of buffers in the pbuf pool. \mbox{\Hypertarget{group__lwip__opts__memp_ga50eaadc4cad0716410332691e382c38a}\label{group__lwip__opts__memp_ga50eaadc4cad0716410332691e382c38a}} 
+\index{Internal memory pools@{Internal memory pools}!P\+B\+U\+F\+\_\+\+P\+O\+O\+L\+\_\+\+S\+I\+ZE@{P\+B\+U\+F\+\_\+\+P\+O\+O\+L\+\_\+\+S\+I\+ZE}}
+\index{P\+B\+U\+F\+\_\+\+P\+O\+O\+L\+\_\+\+S\+I\+ZE@{P\+B\+U\+F\+\_\+\+P\+O\+O\+L\+\_\+\+S\+I\+ZE}!Internal memory pools@{Internal memory pools}}
+\subsubsection{\texorpdfstring{P\+B\+U\+F\+\_\+\+P\+O\+O\+L\+\_\+\+S\+I\+ZE}{PBUF\_POOL\_SIZE}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \#define P\+B\+U\+F\+\_\+\+P\+O\+O\+L\+\_\+\+S\+I\+ZE~16}
+
+P\+B\+U\+F\+\_\+\+P\+O\+O\+L\+\_\+\+S\+I\+ZE\+: the number of buffers in the pbuf pool. 

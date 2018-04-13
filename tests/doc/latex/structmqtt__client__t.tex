@@ -1,0 +1,166 @@
+\hypertarget{structmqtt__client__t}{}\section{mqtt\+\_\+client\+\_\+t Struct Reference}
+\label{structmqtt__client__t}\index{mqtt\+\_\+client\+\_\+t@{mqtt\+\_\+client\+\_\+t}}
+
+
+{\ttfamily \#include $<$mqtt.\+h$>$}
+
+
+
+Collaboration diagram for mqtt\+\_\+client\+\_\+t\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=321pt]{structmqtt__client__t__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group__compiler__abstraction_ga77570ac4fcab86864fa1916e55676da2}{u16\+\_\+t} \hyperlink{structmqtt__client__t_a7faa0bf23ea59555ac197e92373eb5af}{cyclic\+\_\+tick}
+\item 
+\hyperlink{group__compiler__abstraction_ga77570ac4fcab86864fa1916e55676da2}{u16\+\_\+t} \hyperlink{structmqtt__client__t_a5d4e782a5ebce7f42909690a245e39cb}{keep\+\_\+alive}
+\item 
+\hyperlink{group__compiler__abstraction_ga77570ac4fcab86864fa1916e55676da2}{u16\+\_\+t} \hyperlink{structmqtt__client__t_aa0e3555ddd793ead6f731aa76c0eea6d}{server\+\_\+watchdog}
+\item 
+\hyperlink{group__compiler__abstraction_ga77570ac4fcab86864fa1916e55676da2}{u16\+\_\+t} \hyperlink{structmqtt__client__t_a0dcc0d539bc0418f3a5eb559a7f0bb1f}{pkt\+\_\+id\+\_\+seq}
+\item 
+\hyperlink{group__compiler__abstraction_ga77570ac4fcab86864fa1916e55676da2}{u16\+\_\+t} \hyperlink{structmqtt__client__t_aca6ec3ce9a992facc4f1e94492cff459}{inpub\+\_\+pkt\+\_\+id}
+\item 
+\hyperlink{group__compiler__abstraction_ga4caecabca98b43919dd11be1c0d4cd8e}{u8\+\_\+t} \hyperlink{structmqtt__client__t_a5823d082e96704fd7f6dac15cbeceb3b}{conn\+\_\+state}
+\item 
+struct tcp\+\_\+pcb $\ast$ \hyperlink{structmqtt__client__t_a1533a9954f57379bd378866ee0f01198}{conn}
+\item 
+void $\ast$ \hyperlink{structmqtt__client__t_a9ef6ed77466e88aad9cb465824d1c115}{connect\+\_\+arg}
+\item 
+\hyperlink{group__mqtt_ga8558743bdb7d599a93844fbc56c9029f}{mqtt\+\_\+connection\+\_\+cb\+\_\+t} \hyperlink{structmqtt__client__t_aefe3a47f733efa1219d1b9e234a39815}{connect\+\_\+cb}
+\item 
+struct \hyperlink{structmqtt__request__t}{mqtt\+\_\+request\+\_\+t} $\ast$ \hyperlink{structmqtt__client__t_a0a9d32364175d04db989c99f8e91f982}{pend\+\_\+req\+\_\+queue}
+\item 
+struct \hyperlink{structmqtt__request__t}{mqtt\+\_\+request\+\_\+t} \hyperlink{structmqtt__client__t_a5141cdf6c476c92ad21b5afa7e77ef99}{req\+\_\+list} \mbox{[}\hyperlink{group__mqtt__opts_gae82460b35de2291e9661e440c3458e8f}{M\+Q\+T\+T\+\_\+\+R\+E\+Q\+\_\+\+M\+A\+X\+\_\+\+I\+N\+\_\+\+F\+L\+I\+G\+HT}\mbox{]}
+\item 
+void $\ast$ \hyperlink{structmqtt__client__t_a0bf99bf60c31c84f32f618394a569fc1}{inpub\+\_\+arg}
+\item 
+\hyperlink{group__mqtt_gafec7e75fe6a746eef9ca411463446c81}{mqtt\+\_\+incoming\+\_\+data\+\_\+cb\+\_\+t} \hyperlink{structmqtt__client__t_a3dc93a43df32d297cc5ab677c2d7fcb0}{data\+\_\+cb}
+\item 
+\hyperlink{group__mqtt_ga7116bb85255394cec4b1d9fa38842c29}{mqtt\+\_\+incoming\+\_\+publish\+\_\+cb\+\_\+t} \hyperlink{structmqtt__client__t_afb1500ccfda7f232274c97c717901331}{pub\+\_\+cb}
+\item 
+\hyperlink{group__compiler__abstraction_ga4c14294869aceba3ef9d4c0c302d0f33}{u32\+\_\+t} \hyperlink{structmqtt__client__t_a88fdc82ad31ecb15e4adaeb5363c3ca1}{msg\+\_\+idx}
+\item 
+\hyperlink{group__compiler__abstraction_ga4caecabca98b43919dd11be1c0d4cd8e}{u8\+\_\+t} \hyperlink{structmqtt__client__t_ae09f1a0f2d78fcbe0ce1ad9139847192}{rx\+\_\+buffer} \mbox{[}\hyperlink{group__mqtt__opts_ga8275ef78a85fb14c3ac1423c70e45805}{M\+Q\+T\+T\+\_\+\+V\+A\+R\+\_\+\+H\+E\+A\+D\+E\+R\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+L\+EN}\mbox{]}
+\item 
+struct \hyperlink{structmqtt__ringbuf__t}{mqtt\+\_\+ringbuf\+\_\+t} \hyperlink{structmqtt__client__t_a99a47e18b78a99284ec7a568172093e2}{output}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+M\+Q\+TT client 
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{structmqtt__client__t_a1533a9954f57379bd378866ee0f01198}\label{structmqtt__client__t_a1533a9954f57379bd378866ee0f01198}} 
+\index{mqtt\+\_\+client\+\_\+t@{mqtt\+\_\+client\+\_\+t}!conn@{conn}}
+\index{conn@{conn}!mqtt\+\_\+client\+\_\+t@{mqtt\+\_\+client\+\_\+t}}
+\subsubsection{\texorpdfstring{conn}{conn}}
+{\footnotesize\ttfamily struct tcp\+\_\+pcb $\ast$ mqtt\+\_\+client\+\_\+t\+::conn}
+
+\mbox{\Hypertarget{structmqtt__client__t_a5823d082e96704fd7f6dac15cbeceb3b}\label{structmqtt__client__t_a5823d082e96704fd7f6dac15cbeceb3b}} 
+\index{mqtt\+\_\+client\+\_\+t@{mqtt\+\_\+client\+\_\+t}!conn\+\_\+state@{conn\+\_\+state}}
+\index{conn\+\_\+state@{conn\+\_\+state}!mqtt\+\_\+client\+\_\+t@{mqtt\+\_\+client\+\_\+t}}
+\subsubsection{\texorpdfstring{conn\+\_\+state}{conn\_state}}
+{\footnotesize\ttfamily \hyperlink{group__compiler__abstraction_ga4caecabca98b43919dd11be1c0d4cd8e}{u8\+\_\+t} mqtt\+\_\+client\+\_\+t\+::conn\+\_\+state}
+
+Connection state \mbox{\Hypertarget{structmqtt__client__t_a9ef6ed77466e88aad9cb465824d1c115}\label{structmqtt__client__t_a9ef6ed77466e88aad9cb465824d1c115}} 
+\index{mqtt\+\_\+client\+\_\+t@{mqtt\+\_\+client\+\_\+t}!connect\+\_\+arg@{connect\+\_\+arg}}
+\index{connect\+\_\+arg@{connect\+\_\+arg}!mqtt\+\_\+client\+\_\+t@{mqtt\+\_\+client\+\_\+t}}
+\subsubsection{\texorpdfstring{connect\+\_\+arg}{connect\_arg}}
+{\footnotesize\ttfamily void $\ast$ mqtt\+\_\+client\+\_\+t\+::connect\+\_\+arg}
+
+Connection callback \mbox{\Hypertarget{structmqtt__client__t_aefe3a47f733efa1219d1b9e234a39815}\label{structmqtt__client__t_aefe3a47f733efa1219d1b9e234a39815}} 
+\index{mqtt\+\_\+client\+\_\+t@{mqtt\+\_\+client\+\_\+t}!connect\+\_\+cb@{connect\+\_\+cb}}
+\index{connect\+\_\+cb@{connect\+\_\+cb}!mqtt\+\_\+client\+\_\+t@{mqtt\+\_\+client\+\_\+t}}
+\subsubsection{\texorpdfstring{connect\+\_\+cb}{connect\_cb}}
+{\footnotesize\ttfamily \hyperlink{group__mqtt_ga8558743bdb7d599a93844fbc56c9029f}{mqtt\+\_\+connection\+\_\+cb\+\_\+t} mqtt\+\_\+client\+\_\+t\+::connect\+\_\+cb}
+
+\mbox{\Hypertarget{structmqtt__client__t_a7faa0bf23ea59555ac197e92373eb5af}\label{structmqtt__client__t_a7faa0bf23ea59555ac197e92373eb5af}} 
+\index{mqtt\+\_\+client\+\_\+t@{mqtt\+\_\+client\+\_\+t}!cyclic\+\_\+tick@{cyclic\+\_\+tick}}
+\index{cyclic\+\_\+tick@{cyclic\+\_\+tick}!mqtt\+\_\+client\+\_\+t@{mqtt\+\_\+client\+\_\+t}}
+\subsubsection{\texorpdfstring{cyclic\+\_\+tick}{cyclic\_tick}}
+{\footnotesize\ttfamily \hyperlink{group__compiler__abstraction_ga77570ac4fcab86864fa1916e55676da2}{u16\+\_\+t} mqtt\+\_\+client\+\_\+t\+::cyclic\+\_\+tick}
+
+Timers and timeouts \mbox{\Hypertarget{structmqtt__client__t_a3dc93a43df32d297cc5ab677c2d7fcb0}\label{structmqtt__client__t_a3dc93a43df32d297cc5ab677c2d7fcb0}} 
+\index{mqtt\+\_\+client\+\_\+t@{mqtt\+\_\+client\+\_\+t}!data\+\_\+cb@{data\+\_\+cb}}
+\index{data\+\_\+cb@{data\+\_\+cb}!mqtt\+\_\+client\+\_\+t@{mqtt\+\_\+client\+\_\+t}}
+\subsubsection{\texorpdfstring{data\+\_\+cb}{data\_cb}}
+{\footnotesize\ttfamily \hyperlink{group__mqtt_gafec7e75fe6a746eef9ca411463446c81}{mqtt\+\_\+incoming\+\_\+data\+\_\+cb\+\_\+t} mqtt\+\_\+client\+\_\+t\+::data\+\_\+cb}
+
+Incoming data callback \mbox{\Hypertarget{structmqtt__client__t_a0bf99bf60c31c84f32f618394a569fc1}\label{structmqtt__client__t_a0bf99bf60c31c84f32f618394a569fc1}} 
+\index{mqtt\+\_\+client\+\_\+t@{mqtt\+\_\+client\+\_\+t}!inpub\+\_\+arg@{inpub\+\_\+arg}}
+\index{inpub\+\_\+arg@{inpub\+\_\+arg}!mqtt\+\_\+client\+\_\+t@{mqtt\+\_\+client\+\_\+t}}
+\subsubsection{\texorpdfstring{inpub\+\_\+arg}{inpub\_arg}}
+{\footnotesize\ttfamily void $\ast$ mqtt\+\_\+client\+\_\+t\+::inpub\+\_\+arg}
+
+\mbox{\Hypertarget{structmqtt__client__t_aca6ec3ce9a992facc4f1e94492cff459}\label{structmqtt__client__t_aca6ec3ce9a992facc4f1e94492cff459}} 
+\index{mqtt\+\_\+client\+\_\+t@{mqtt\+\_\+client\+\_\+t}!inpub\+\_\+pkt\+\_\+id@{inpub\+\_\+pkt\+\_\+id}}
+\index{inpub\+\_\+pkt\+\_\+id@{inpub\+\_\+pkt\+\_\+id}!mqtt\+\_\+client\+\_\+t@{mqtt\+\_\+client\+\_\+t}}
+\subsubsection{\texorpdfstring{inpub\+\_\+pkt\+\_\+id}{inpub\_pkt\_id}}
+{\footnotesize\ttfamily \hyperlink{group__compiler__abstraction_ga77570ac4fcab86864fa1916e55676da2}{u16\+\_\+t} mqtt\+\_\+client\+\_\+t\+::inpub\+\_\+pkt\+\_\+id}
+
+Packet identifier of pending incoming publish \mbox{\Hypertarget{structmqtt__client__t_a5d4e782a5ebce7f42909690a245e39cb}\label{structmqtt__client__t_a5d4e782a5ebce7f42909690a245e39cb}} 
+\index{mqtt\+\_\+client\+\_\+t@{mqtt\+\_\+client\+\_\+t}!keep\+\_\+alive@{keep\+\_\+alive}}
+\index{keep\+\_\+alive@{keep\+\_\+alive}!mqtt\+\_\+client\+\_\+t@{mqtt\+\_\+client\+\_\+t}}
+\subsubsection{\texorpdfstring{keep\+\_\+alive}{keep\_alive}}
+{\footnotesize\ttfamily \hyperlink{group__compiler__abstraction_ga77570ac4fcab86864fa1916e55676da2}{u16\+\_\+t} mqtt\+\_\+client\+\_\+t\+::keep\+\_\+alive}
+
+\mbox{\Hypertarget{structmqtt__client__t_a88fdc82ad31ecb15e4adaeb5363c3ca1}\label{structmqtt__client__t_a88fdc82ad31ecb15e4adaeb5363c3ca1}} 
+\index{mqtt\+\_\+client\+\_\+t@{mqtt\+\_\+client\+\_\+t}!msg\+\_\+idx@{msg\+\_\+idx}}
+\index{msg\+\_\+idx@{msg\+\_\+idx}!mqtt\+\_\+client\+\_\+t@{mqtt\+\_\+client\+\_\+t}}
+\subsubsection{\texorpdfstring{msg\+\_\+idx}{msg\_idx}}
+{\footnotesize\ttfamily \hyperlink{group__compiler__abstraction_ga4c14294869aceba3ef9d4c0c302d0f33}{u32\+\_\+t} mqtt\+\_\+client\+\_\+t\+::msg\+\_\+idx}
+
+Input \mbox{\Hypertarget{structmqtt__client__t_a99a47e18b78a99284ec7a568172093e2}\label{structmqtt__client__t_a99a47e18b78a99284ec7a568172093e2}} 
+\index{mqtt\+\_\+client\+\_\+t@{mqtt\+\_\+client\+\_\+t}!output@{output}}
+\index{output@{output}!mqtt\+\_\+client\+\_\+t@{mqtt\+\_\+client\+\_\+t}}
+\subsubsection{\texorpdfstring{output}{output}}
+{\footnotesize\ttfamily struct \hyperlink{structmqtt__ringbuf__t}{mqtt\+\_\+ringbuf\+\_\+t} mqtt\+\_\+client\+\_\+t\+::output}
+
+Output ring-\/buffer \mbox{\Hypertarget{structmqtt__client__t_a0a9d32364175d04db989c99f8e91f982}\label{structmqtt__client__t_a0a9d32364175d04db989c99f8e91f982}} 
+\index{mqtt\+\_\+client\+\_\+t@{mqtt\+\_\+client\+\_\+t}!pend\+\_\+req\+\_\+queue@{pend\+\_\+req\+\_\+queue}}
+\index{pend\+\_\+req\+\_\+queue@{pend\+\_\+req\+\_\+queue}!mqtt\+\_\+client\+\_\+t@{mqtt\+\_\+client\+\_\+t}}
+\subsubsection{\texorpdfstring{pend\+\_\+req\+\_\+queue}{pend\_req\_queue}}
+{\footnotesize\ttfamily struct \hyperlink{structmqtt__request__t}{mqtt\+\_\+request\+\_\+t} $\ast$ mqtt\+\_\+client\+\_\+t\+::pend\+\_\+req\+\_\+queue}
+
+Pending requests to server \mbox{\Hypertarget{structmqtt__client__t_a0dcc0d539bc0418f3a5eb559a7f0bb1f}\label{structmqtt__client__t_a0dcc0d539bc0418f3a5eb559a7f0bb1f}} 
+\index{mqtt\+\_\+client\+\_\+t@{mqtt\+\_\+client\+\_\+t}!pkt\+\_\+id\+\_\+seq@{pkt\+\_\+id\+\_\+seq}}
+\index{pkt\+\_\+id\+\_\+seq@{pkt\+\_\+id\+\_\+seq}!mqtt\+\_\+client\+\_\+t@{mqtt\+\_\+client\+\_\+t}}
+\subsubsection{\texorpdfstring{pkt\+\_\+id\+\_\+seq}{pkt\_id\_seq}}
+{\footnotesize\ttfamily \hyperlink{group__compiler__abstraction_ga77570ac4fcab86864fa1916e55676da2}{u16\+\_\+t} mqtt\+\_\+client\+\_\+t\+::pkt\+\_\+id\+\_\+seq}
+
+Packet identifier generator \mbox{\Hypertarget{structmqtt__client__t_afb1500ccfda7f232274c97c717901331}\label{structmqtt__client__t_afb1500ccfda7f232274c97c717901331}} 
+\index{mqtt\+\_\+client\+\_\+t@{mqtt\+\_\+client\+\_\+t}!pub\+\_\+cb@{pub\+\_\+cb}}
+\index{pub\+\_\+cb@{pub\+\_\+cb}!mqtt\+\_\+client\+\_\+t@{mqtt\+\_\+client\+\_\+t}}
+\subsubsection{\texorpdfstring{pub\+\_\+cb}{pub\_cb}}
+{\footnotesize\ttfamily \hyperlink{group__mqtt_ga7116bb85255394cec4b1d9fa38842c29}{mqtt\+\_\+incoming\+\_\+publish\+\_\+cb\+\_\+t} mqtt\+\_\+client\+\_\+t\+::pub\+\_\+cb}
+
+\mbox{\Hypertarget{structmqtt__client__t_a5141cdf6c476c92ad21b5afa7e77ef99}\label{structmqtt__client__t_a5141cdf6c476c92ad21b5afa7e77ef99}} 
+\index{mqtt\+\_\+client\+\_\+t@{mqtt\+\_\+client\+\_\+t}!req\+\_\+list@{req\+\_\+list}}
+\index{req\+\_\+list@{req\+\_\+list}!mqtt\+\_\+client\+\_\+t@{mqtt\+\_\+client\+\_\+t}}
+\subsubsection{\texorpdfstring{req\+\_\+list}{req\_list}}
+{\footnotesize\ttfamily struct \hyperlink{structmqtt__request__t}{mqtt\+\_\+request\+\_\+t} mqtt\+\_\+client\+\_\+t\+::req\+\_\+list}
+
+\mbox{\Hypertarget{structmqtt__client__t_ae09f1a0f2d78fcbe0ce1ad9139847192}\label{structmqtt__client__t_ae09f1a0f2d78fcbe0ce1ad9139847192}} 
+\index{mqtt\+\_\+client\+\_\+t@{mqtt\+\_\+client\+\_\+t}!rx\+\_\+buffer@{rx\+\_\+buffer}}
+\index{rx\+\_\+buffer@{rx\+\_\+buffer}!mqtt\+\_\+client\+\_\+t@{mqtt\+\_\+client\+\_\+t}}
+\subsubsection{\texorpdfstring{rx\+\_\+buffer}{rx\_buffer}}
+{\footnotesize\ttfamily \hyperlink{group__compiler__abstraction_ga4caecabca98b43919dd11be1c0d4cd8e}{u8\+\_\+t} mqtt\+\_\+client\+\_\+t\+::rx\+\_\+buffer}
+
+\mbox{\Hypertarget{structmqtt__client__t_aa0e3555ddd793ead6f731aa76c0eea6d}\label{structmqtt__client__t_aa0e3555ddd793ead6f731aa76c0eea6d}} 
+\index{mqtt\+\_\+client\+\_\+t@{mqtt\+\_\+client\+\_\+t}!server\+\_\+watchdog@{server\+\_\+watchdog}}
+\index{server\+\_\+watchdog@{server\+\_\+watchdog}!mqtt\+\_\+client\+\_\+t@{mqtt\+\_\+client\+\_\+t}}
+\subsubsection{\texorpdfstring{server\+\_\+watchdog}{server\_watchdog}}
+{\footnotesize\ttfamily \hyperlink{group__compiler__abstraction_ga77570ac4fcab86864fa1916e55676da2}{u16\+\_\+t} mqtt\+\_\+client\+\_\+t\+::server\+\_\+watchdog}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/ayush/\+R\+I\+O\+T/tests/lwip/bin/pkg/native/lwip/src/include/lwip/apps/\hyperlink{native_2lwip_2src_2include_2lwip_2apps_2mqtt_8h}{mqtt.\+h}\end{DoxyCompactItemize}

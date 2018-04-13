@@ -1,0 +1,13 @@
+This is a manual test application for the H\+D\+C1000 driver.
+
+\section*{Usage}
+
+This test application will initialize the H\+D\+C1000 sensor with the configuration as specified in the default {\ttfamily hdc1000\+\_\+params.\+h} file (i.\+e. 14-\/bit resolution).
+
+If you want to use this test application with different parameters, you can simply override the default settings on the command line like this\+: 
+\begin{DoxyCode}
+CFLAGS="-DHDC1000\_PARAM\_I2C=I2C\_DEV\(\backslash\)(1\(\backslash\)) -DHDC1000\_PARAM\_RES=HDC1000\_11BIT" make
+\end{DoxyCode}
+
+
+After initialization, the sensor reads the temperature and humidity values every second and prints them to S\+T\+D\+O\+UT. 

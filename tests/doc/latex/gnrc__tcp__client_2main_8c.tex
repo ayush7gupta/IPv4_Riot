@@ -1,0 +1,107 @@
+\hypertarget{gnrc__tcp__client_2main_8c}{}\section{/home/ayush/\+R\+I\+O\+T/tests/gnrc\+\_\+tcp\+\_\+client/main.c File Reference}
+\label{gnrc__tcp__client_2main_8c}\index{/home/ayush/\+R\+I\+O\+T/tests/gnrc\+\_\+tcp\+\_\+client/main.\+c@{/home/ayush/\+R\+I\+O\+T/tests/gnrc\+\_\+tcp\+\_\+client/main.\+c}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$errno.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}thread.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}net/af.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}net/gnrc/ipv6.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}net/gnrc/tcp.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}debug.\+h\char`\"{}}\newline
+Include dependency graph for main.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{gnrc__tcp__client_2main_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{gnrc__tcp__client_2main_8c_a432138093c53d7580af9ec5c5dca387f}{E\+N\+A\+B\+L\+E\+\_\+\+D\+E\+B\+UG}~(0)
+\item 
+\#define \hyperlink{gnrc__tcp__client_2main_8c_ab9dd5d37b8f4bc21a9d86f1b52aa60ad}{C\+O\+N\+NS}~(1)
+\item 
+\#define \hyperlink{gnrc__tcp__client_2main_8c_a88d02d8f807d622a0f67291fefe9c227}{N\+B\+Y\+TE}~(2048)
+\item 
+\#define \hyperlink{gnrc__tcp__client_2main_8c_a3eb7755159869a7d5a058f04b1aac372}{T\+E\+S\+T\+\_\+\+P\+A\+T\+E\+R\+N\+\_\+\+C\+LI}~(0x\+F0)
+\item 
+\#define \hyperlink{gnrc__tcp__client_2main_8c_a56d03f2642d8821f613f779e509a1af3}{T\+E\+S\+T\+\_\+\+P\+A\+T\+E\+R\+N\+\_\+\+S\+RV}~(0x\+A7)
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void $\ast$ \hyperlink{gnrc__tcp__client_2main_8c_ab434f44609df6d2a1f872a49896c8dfb}{cli\+\_\+thread} (void $\ast$arg)
+\item 
+int \hyperlink{gnrc__tcp__client_2main_8c_a840291bc02cba5474a4cb46a9b9566fe}{main} (void)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+uint8\+\_\+t \hyperlink{gnrc__tcp__client_2main_8c_a808cb7e3f600a756fbdb0683cea3a3b7}{bufs} \mbox{[}\hyperlink{gnrc__tcp__server_2main_8c_ab9dd5d37b8f4bc21a9d86f1b52aa60ad}{C\+O\+N\+NS}\mbox{]}\mbox{[}\hyperlink{gnrc__tcp__server_2main_8c_a88d02d8f807d622a0f67291fefe9c227}{N\+B\+Y\+TE}\mbox{]}
+\item 
+uint8\+\_\+t \hyperlink{gnrc__tcp__client_2main_8c_ad3a6c88b4c5cf1c34d9be9682a648aa1}{stacks} \mbox{[}\hyperlink{gnrc__tcp__server_2main_8c_ab9dd5d37b8f4bc21a9d86f1b52aa60ad}{C\+O\+N\+NS}\mbox{]}\mbox{[}T\+H\+R\+E\+A\+D\+\_\+\+S\+T\+A\+C\+K\+S\+I\+Z\+E\+\_\+\+D\+E\+F\+A\+U\+LT+T\+H\+R\+E\+A\+D\+\_\+\+E\+X\+T\+R\+A\+\_\+\+S\+T\+A\+C\+K\+S\+I\+Z\+E\+\_\+\+P\+R\+I\+N\+TF\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{gnrc__tcp__client_2main_8c_ab9dd5d37b8f4bc21a9d86f1b52aa60ad}\label{gnrc__tcp__client_2main_8c_ab9dd5d37b8f4bc21a9d86f1b52aa60ad}} 
+\index{gnrc\+\_\+tcp\+\_\+client/main.\+c@{gnrc\+\_\+tcp\+\_\+client/main.\+c}!C\+O\+N\+NS@{C\+O\+N\+NS}}
+\index{C\+O\+N\+NS@{C\+O\+N\+NS}!gnrc\+\_\+tcp\+\_\+client/main.\+c@{gnrc\+\_\+tcp\+\_\+client/main.\+c}}
+\subsubsection{\texorpdfstring{C\+O\+N\+NS}{CONNS}}
+{\footnotesize\ttfamily \#define C\+O\+N\+NS~(1)}
+
+\mbox{\Hypertarget{gnrc__tcp__client_2main_8c_a432138093c53d7580af9ec5c5dca387f}\label{gnrc__tcp__client_2main_8c_a432138093c53d7580af9ec5c5dca387f}} 
+\index{gnrc\+\_\+tcp\+\_\+client/main.\+c@{gnrc\+\_\+tcp\+\_\+client/main.\+c}!E\+N\+A\+B\+L\+E\+\_\+\+D\+E\+B\+UG@{E\+N\+A\+B\+L\+E\+\_\+\+D\+E\+B\+UG}}
+\index{E\+N\+A\+B\+L\+E\+\_\+\+D\+E\+B\+UG@{E\+N\+A\+B\+L\+E\+\_\+\+D\+E\+B\+UG}!gnrc\+\_\+tcp\+\_\+client/main.\+c@{gnrc\+\_\+tcp\+\_\+client/main.\+c}}
+\subsubsection{\texorpdfstring{E\+N\+A\+B\+L\+E\+\_\+\+D\+E\+B\+UG}{ENABLE\_DEBUG}}
+{\footnotesize\ttfamily \#define E\+N\+A\+B\+L\+E\+\_\+\+D\+E\+B\+UG~(0)}
+
+\mbox{\Hypertarget{gnrc__tcp__client_2main_8c_a88d02d8f807d622a0f67291fefe9c227}\label{gnrc__tcp__client_2main_8c_a88d02d8f807d622a0f67291fefe9c227}} 
+\index{gnrc\+\_\+tcp\+\_\+client/main.\+c@{gnrc\+\_\+tcp\+\_\+client/main.\+c}!N\+B\+Y\+TE@{N\+B\+Y\+TE}}
+\index{N\+B\+Y\+TE@{N\+B\+Y\+TE}!gnrc\+\_\+tcp\+\_\+client/main.\+c@{gnrc\+\_\+tcp\+\_\+client/main.\+c}}
+\subsubsection{\texorpdfstring{N\+B\+Y\+TE}{NBYTE}}
+{\footnotesize\ttfamily \#define N\+B\+Y\+TE~(2048)}
+
+\mbox{\Hypertarget{gnrc__tcp__client_2main_8c_a3eb7755159869a7d5a058f04b1aac372}\label{gnrc__tcp__client_2main_8c_a3eb7755159869a7d5a058f04b1aac372}} 
+\index{gnrc\+\_\+tcp\+\_\+client/main.\+c@{gnrc\+\_\+tcp\+\_\+client/main.\+c}!T\+E\+S\+T\+\_\+\+P\+A\+T\+E\+R\+N\+\_\+\+C\+LI@{T\+E\+S\+T\+\_\+\+P\+A\+T\+E\+R\+N\+\_\+\+C\+LI}}
+\index{T\+E\+S\+T\+\_\+\+P\+A\+T\+E\+R\+N\+\_\+\+C\+LI@{T\+E\+S\+T\+\_\+\+P\+A\+T\+E\+R\+N\+\_\+\+C\+LI}!gnrc\+\_\+tcp\+\_\+client/main.\+c@{gnrc\+\_\+tcp\+\_\+client/main.\+c}}
+\subsubsection{\texorpdfstring{T\+E\+S\+T\+\_\+\+P\+A\+T\+E\+R\+N\+\_\+\+C\+LI}{TEST\_PATERN\_CLI}}
+{\footnotesize\ttfamily \#define T\+E\+S\+T\+\_\+\+P\+A\+T\+E\+R\+N\+\_\+\+C\+LI~(0x\+F0)}
+
+\mbox{\Hypertarget{gnrc__tcp__client_2main_8c_a56d03f2642d8821f613f779e509a1af3}\label{gnrc__tcp__client_2main_8c_a56d03f2642d8821f613f779e509a1af3}} 
+\index{gnrc\+\_\+tcp\+\_\+client/main.\+c@{gnrc\+\_\+tcp\+\_\+client/main.\+c}!T\+E\+S\+T\+\_\+\+P\+A\+T\+E\+R\+N\+\_\+\+S\+RV@{T\+E\+S\+T\+\_\+\+P\+A\+T\+E\+R\+N\+\_\+\+S\+RV}}
+\index{T\+E\+S\+T\+\_\+\+P\+A\+T\+E\+R\+N\+\_\+\+S\+RV@{T\+E\+S\+T\+\_\+\+P\+A\+T\+E\+R\+N\+\_\+\+S\+RV}!gnrc\+\_\+tcp\+\_\+client/main.\+c@{gnrc\+\_\+tcp\+\_\+client/main.\+c}}
+\subsubsection{\texorpdfstring{T\+E\+S\+T\+\_\+\+P\+A\+T\+E\+R\+N\+\_\+\+S\+RV}{TEST\_PATERN\_SRV}}
+{\footnotesize\ttfamily \#define T\+E\+S\+T\+\_\+\+P\+A\+T\+E\+R\+N\+\_\+\+S\+RV~(0x\+A7)}
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{gnrc__tcp__client_2main_8c_ab434f44609df6d2a1f872a49896c8dfb}\label{gnrc__tcp__client_2main_8c_ab434f44609df6d2a1f872a49896c8dfb}} 
+\index{gnrc\+\_\+tcp\+\_\+client/main.\+c@{gnrc\+\_\+tcp\+\_\+client/main.\+c}!cli\+\_\+thread@{cli\+\_\+thread}}
+\index{cli\+\_\+thread@{cli\+\_\+thread}!gnrc\+\_\+tcp\+\_\+client/main.\+c@{gnrc\+\_\+tcp\+\_\+client/main.\+c}}
+\subsubsection{\texorpdfstring{cli\+\_\+thread()}{cli\_thread()}}
+{\footnotesize\ttfamily void $\ast$ cli\+\_\+thread (\begin{DoxyParamCaption}\item[{void $\ast$}]{arg }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{gnrc__tcp__client_2main_8c_a840291bc02cba5474a4cb46a9b9566fe}\label{gnrc__tcp__client_2main_8c_a840291bc02cba5474a4cb46a9b9566fe}} 
+\index{gnrc\+\_\+tcp\+\_\+client/main.\+c@{gnrc\+\_\+tcp\+\_\+client/main.\+c}!main@{main}}
+\index{main@{main}!gnrc\+\_\+tcp\+\_\+client/main.\+c@{gnrc\+\_\+tcp\+\_\+client/main.\+c}}
+\subsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{gnrc__tcp__client_2main_8c_a808cb7e3f600a756fbdb0683cea3a3b7}\label{gnrc__tcp__client_2main_8c_a808cb7e3f600a756fbdb0683cea3a3b7}} 
+\index{gnrc\+\_\+tcp\+\_\+client/main.\+c@{gnrc\+\_\+tcp\+\_\+client/main.\+c}!bufs@{bufs}}
+\index{bufs@{bufs}!gnrc\+\_\+tcp\+\_\+client/main.\+c@{gnrc\+\_\+tcp\+\_\+client/main.\+c}}
+\subsubsection{\texorpdfstring{bufs}{bufs}}
+{\footnotesize\ttfamily uint8\+\_\+t bufs\mbox{[}\hyperlink{gnrc__tcp__server_2main_8c_ab9dd5d37b8f4bc21a9d86f1b52aa60ad}{C\+O\+N\+NS}\mbox{]}\mbox{[}\hyperlink{gnrc__tcp__server_2main_8c_a88d02d8f807d622a0f67291fefe9c227}{N\+B\+Y\+TE}\mbox{]}}
+
+\mbox{\Hypertarget{gnrc__tcp__client_2main_8c_ad3a6c88b4c5cf1c34d9be9682a648aa1}\label{gnrc__tcp__client_2main_8c_ad3a6c88b4c5cf1c34d9be9682a648aa1}} 
+\index{gnrc\+\_\+tcp\+\_\+client/main.\+c@{gnrc\+\_\+tcp\+\_\+client/main.\+c}!stacks@{stacks}}
+\index{stacks@{stacks}!gnrc\+\_\+tcp\+\_\+client/main.\+c@{gnrc\+\_\+tcp\+\_\+client/main.\+c}}
+\subsubsection{\texorpdfstring{stacks}{stacks}}
+{\footnotesize\ttfamily uint8\+\_\+t stacks\mbox{[}\hyperlink{gnrc__tcp__server_2main_8c_ab9dd5d37b8f4bc21a9d86f1b52aa60ad}{C\+O\+N\+NS}\mbox{]}\mbox{[}T\+H\+R\+E\+A\+D\+\_\+\+S\+T\+A\+C\+K\+S\+I\+Z\+E\+\_\+\+D\+E\+F\+A\+U\+LT+T\+H\+R\+E\+A\+D\+\_\+\+E\+X\+T\+R\+A\+\_\+\+S\+T\+A\+C\+K\+S\+I\+Z\+E\+\_\+\+P\+R\+I\+N\+TF\mbox{]}}
+

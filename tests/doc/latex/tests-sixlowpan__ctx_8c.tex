@@ -1,0 +1,116 @@
+\hypertarget{tests-sixlowpan__ctx_8c}{}\section{/home/ayush/\+R\+I\+O\+T/tests/unittests/tests-\/sixlowpan\+\_\+ctx/tests-\/sixlowpan\+\_\+ctx.c File Reference}
+\label{tests-sixlowpan__ctx_8c}\index{/home/ayush/\+R\+I\+O\+T/tests/unittests/tests-\/sixlowpan\+\_\+ctx/tests-\/sixlowpan\+\_\+ctx.\+c@{/home/ayush/\+R\+I\+O\+T/tests/unittests/tests-\/sixlowpan\+\_\+ctx/tests-\/sixlowpan\+\_\+ctx.\+c}}
+{\ttfamily \#include $<$inttypes.\+h$>$}\newline
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}emb\+Unit.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}net/ipv6/addr.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}net/gnrc/sixlowpan/ctx.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}unittests-\/constants.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}tests-\/sixlowpan\+\_\+ctx.\+h\char`\"{}}\newline
+Include dependency graph for tests-\/sixlowpan\+\_\+ctx.c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{tests-sixlowpan__ctx_8c__incl}
+\end{center}
+\end{figure}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{tests-sixlowpan__ctx_8c_affce6de3bcc3c13b063477064aff4c4b}{D\+E\+F\+A\+U\+L\+T\+\_\+\+T\+E\+S\+T\+\_\+\+ID}~(5)
+\item 
+\#define \hyperlink{tests-sixlowpan__ctx_8c_a7fe2d3d422d0aa0e034014d99c2417cb}{D\+E\+F\+A\+U\+L\+T\+\_\+\+T\+E\+S\+T\+\_\+\+P\+R\+E\+F\+IX}
+\item 
+\#define \hyperlink{tests-sixlowpan__ctx_8c_a277f9b189575eb484042d73562e0fb81}{D\+E\+F\+A\+U\+L\+T\+\_\+\+T\+E\+S\+T\+\_\+\+P\+R\+E\+F\+I\+X\+\_\+\+L\+EN}~(63)
+\item 
+\#define \hyperlink{tests-sixlowpan__ctx_8c_a79c72e56063586e96a4e9248d80c8c46}{O\+T\+H\+E\+R\+\_\+\+T\+E\+S\+T\+\_\+\+ID}~(12)
+\item 
+\#define \hyperlink{tests-sixlowpan__ctx_8c_a348aa4ae6b70240601231dec6416d95f}{O\+T\+H\+E\+R\+\_\+\+T\+E\+S\+T\+\_\+\+P\+R\+E\+F\+IX}
+\item 
+\#define \hyperlink{tests-sixlowpan__ctx_8c_a2c8be2af9e1a6f9321a0e6c8fcbe162d}{W\+R\+O\+N\+G\+\_\+\+T\+E\+S\+T\+\_\+\+P\+R\+E\+F\+IX}
+\item 
+Test $\ast$ \hyperlink{tests-sixlowpan__ctx_8c_a968c464332df2177e1f80e679648ebf9}{tests\+\_\+sixlowpan\+\_\+ctx\+\_\+tests} (void)
+\item 
+void \hyperlink{group__unittests_gaf9311b39cb1410823a35205c822900d9}{tests\+\_\+sixlowpan\+\_\+ctx} (void)
+\begin{DoxyCompactList}\small\item\em The entry point of this test suite. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{tests-sixlowpan__ctx_8c_affce6de3bcc3c13b063477064aff4c4b}\label{tests-sixlowpan__ctx_8c_affce6de3bcc3c13b063477064aff4c4b}} 
+\index{tests-\/sixlowpan\+\_\+ctx.\+c@{tests-\/sixlowpan\+\_\+ctx.\+c}!D\+E\+F\+A\+U\+L\+T\+\_\+\+T\+E\+S\+T\+\_\+\+ID@{D\+E\+F\+A\+U\+L\+T\+\_\+\+T\+E\+S\+T\+\_\+\+ID}}
+\index{D\+E\+F\+A\+U\+L\+T\+\_\+\+T\+E\+S\+T\+\_\+\+ID@{D\+E\+F\+A\+U\+L\+T\+\_\+\+T\+E\+S\+T\+\_\+\+ID}!tests-\/sixlowpan\+\_\+ctx.\+c@{tests-\/sixlowpan\+\_\+ctx.\+c}}
+\subsubsection{\texorpdfstring{D\+E\+F\+A\+U\+L\+T\+\_\+\+T\+E\+S\+T\+\_\+\+ID}{DEFAULT\_TEST\_ID}}
+{\footnotesize\ttfamily \#define D\+E\+F\+A\+U\+L\+T\+\_\+\+T\+E\+S\+T\+\_\+\+ID~(5)}
+
+\mbox{\Hypertarget{tests-sixlowpan__ctx_8c_a7fe2d3d422d0aa0e034014d99c2417cb}\label{tests-sixlowpan__ctx_8c_a7fe2d3d422d0aa0e034014d99c2417cb}} 
+\index{tests-\/sixlowpan\+\_\+ctx.\+c@{tests-\/sixlowpan\+\_\+ctx.\+c}!D\+E\+F\+A\+U\+L\+T\+\_\+\+T\+E\+S\+T\+\_\+\+P\+R\+E\+F\+IX@{D\+E\+F\+A\+U\+L\+T\+\_\+\+T\+E\+S\+T\+\_\+\+P\+R\+E\+F\+IX}}
+\index{D\+E\+F\+A\+U\+L\+T\+\_\+\+T\+E\+S\+T\+\_\+\+P\+R\+E\+F\+IX@{D\+E\+F\+A\+U\+L\+T\+\_\+\+T\+E\+S\+T\+\_\+\+P\+R\+E\+F\+IX}!tests-\/sixlowpan\+\_\+ctx.\+c@{tests-\/sixlowpan\+\_\+ctx.\+c}}
+\subsubsection{\texorpdfstring{D\+E\+F\+A\+U\+L\+T\+\_\+\+T\+E\+S\+T\+\_\+\+P\+R\+E\+F\+IX}{DEFAULT\_TEST\_PREFIX}}
+{\footnotesize\ttfamily \#define D\+E\+F\+A\+U\+L\+T\+\_\+\+T\+E\+S\+T\+\_\+\+P\+R\+E\+F\+IX}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\{ \{ \(\backslash\)
+            0x00, 0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07, \(\backslash\)
+            0x08, 0x09, 0x0a, 0x0b, 0x0c, 0x0d, 0x0e, 0x0f \(\backslash\)
+        \} \(\backslash\)
+    \}
+\end{DoxyCode}
+\mbox{\Hypertarget{tests-sixlowpan__ctx_8c_a277f9b189575eb484042d73562e0fb81}\label{tests-sixlowpan__ctx_8c_a277f9b189575eb484042d73562e0fb81}} 
+\index{tests-\/sixlowpan\+\_\+ctx.\+c@{tests-\/sixlowpan\+\_\+ctx.\+c}!D\+E\+F\+A\+U\+L\+T\+\_\+\+T\+E\+S\+T\+\_\+\+P\+R\+E\+F\+I\+X\+\_\+\+L\+EN@{D\+E\+F\+A\+U\+L\+T\+\_\+\+T\+E\+S\+T\+\_\+\+P\+R\+E\+F\+I\+X\+\_\+\+L\+EN}}
+\index{D\+E\+F\+A\+U\+L\+T\+\_\+\+T\+E\+S\+T\+\_\+\+P\+R\+E\+F\+I\+X\+\_\+\+L\+EN@{D\+E\+F\+A\+U\+L\+T\+\_\+\+T\+E\+S\+T\+\_\+\+P\+R\+E\+F\+I\+X\+\_\+\+L\+EN}!tests-\/sixlowpan\+\_\+ctx.\+c@{tests-\/sixlowpan\+\_\+ctx.\+c}}
+\subsubsection{\texorpdfstring{D\+E\+F\+A\+U\+L\+T\+\_\+\+T\+E\+S\+T\+\_\+\+P\+R\+E\+F\+I\+X\+\_\+\+L\+EN}{DEFAULT\_TEST\_PREFIX\_LEN}}
+{\footnotesize\ttfamily \#define D\+E\+F\+A\+U\+L\+T\+\_\+\+T\+E\+S\+T\+\_\+\+P\+R\+E\+F\+I\+X\+\_\+\+L\+EN~(63)}
+
+\mbox{\Hypertarget{tests-sixlowpan__ctx_8c_a79c72e56063586e96a4e9248d80c8c46}\label{tests-sixlowpan__ctx_8c_a79c72e56063586e96a4e9248d80c8c46}} 
+\index{tests-\/sixlowpan\+\_\+ctx.\+c@{tests-\/sixlowpan\+\_\+ctx.\+c}!O\+T\+H\+E\+R\+\_\+\+T\+E\+S\+T\+\_\+\+ID@{O\+T\+H\+E\+R\+\_\+\+T\+E\+S\+T\+\_\+\+ID}}
+\index{O\+T\+H\+E\+R\+\_\+\+T\+E\+S\+T\+\_\+\+ID@{O\+T\+H\+E\+R\+\_\+\+T\+E\+S\+T\+\_\+\+ID}!tests-\/sixlowpan\+\_\+ctx.\+c@{tests-\/sixlowpan\+\_\+ctx.\+c}}
+\subsubsection{\texorpdfstring{O\+T\+H\+E\+R\+\_\+\+T\+E\+S\+T\+\_\+\+ID}{OTHER\_TEST\_ID}}
+{\footnotesize\ttfamily \#define O\+T\+H\+E\+R\+\_\+\+T\+E\+S\+T\+\_\+\+ID~(12)}
+
+\mbox{\Hypertarget{tests-sixlowpan__ctx_8c_a348aa4ae6b70240601231dec6416d95f}\label{tests-sixlowpan__ctx_8c_a348aa4ae6b70240601231dec6416d95f}} 
+\index{tests-\/sixlowpan\+\_\+ctx.\+c@{tests-\/sixlowpan\+\_\+ctx.\+c}!O\+T\+H\+E\+R\+\_\+\+T\+E\+S\+T\+\_\+\+P\+R\+E\+F\+IX@{O\+T\+H\+E\+R\+\_\+\+T\+E\+S\+T\+\_\+\+P\+R\+E\+F\+IX}}
+\index{O\+T\+H\+E\+R\+\_\+\+T\+E\+S\+T\+\_\+\+P\+R\+E\+F\+IX@{O\+T\+H\+E\+R\+\_\+\+T\+E\+S\+T\+\_\+\+P\+R\+E\+F\+IX}!tests-\/sixlowpan\+\_\+ctx.\+c@{tests-\/sixlowpan\+\_\+ctx.\+c}}
+\subsubsection{\texorpdfstring{O\+T\+H\+E\+R\+\_\+\+T\+E\+S\+T\+\_\+\+P\+R\+E\+F\+IX}{OTHER\_TEST\_PREFIX}}
+{\footnotesize\ttfamily \#define O\+T\+H\+E\+R\+\_\+\+T\+E\+S\+T\+\_\+\+P\+R\+E\+F\+IX}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\{ \{ \(\backslash\)
+            0x00, 0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x06, \(\backslash\)
+            0x18, 0x19, 0x1a, 0x1b, 0x1c, 0x1d, 0x1e, 0x1f \(\backslash\)
+        \} \(\backslash\)
+    \}
+\end{DoxyCode}
+\mbox{\Hypertarget{tests-sixlowpan__ctx_8c_a2c8be2af9e1a6f9321a0e6c8fcbe162d}\label{tests-sixlowpan__ctx_8c_a2c8be2af9e1a6f9321a0e6c8fcbe162d}} 
+\index{tests-\/sixlowpan\+\_\+ctx.\+c@{tests-\/sixlowpan\+\_\+ctx.\+c}!W\+R\+O\+N\+G\+\_\+\+T\+E\+S\+T\+\_\+\+P\+R\+E\+F\+IX@{W\+R\+O\+N\+G\+\_\+\+T\+E\+S\+T\+\_\+\+P\+R\+E\+F\+IX}}
+\index{W\+R\+O\+N\+G\+\_\+\+T\+E\+S\+T\+\_\+\+P\+R\+E\+F\+IX@{W\+R\+O\+N\+G\+\_\+\+T\+E\+S\+T\+\_\+\+P\+R\+E\+F\+IX}!tests-\/sixlowpan\+\_\+ctx.\+c@{tests-\/sixlowpan\+\_\+ctx.\+c}}
+\subsubsection{\texorpdfstring{W\+R\+O\+N\+G\+\_\+\+T\+E\+S\+T\+\_\+\+P\+R\+E\+F\+IX}{WRONG\_TEST\_PREFIX}}
+{\footnotesize\ttfamily \#define W\+R\+O\+N\+G\+\_\+\+T\+E\+S\+T\+\_\+\+P\+R\+E\+F\+IX}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\{ \{ \(\backslash\)
+            0x00, 0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x05, \(\backslash\)
+            0x18, 0x19, 0x1a, 0x1b, 0x1c, 0x1d, 0x1e, 0x1f \(\backslash\)
+        \} \(\backslash\)
+    \}
+\end{DoxyCode}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{tests-sixlowpan__ctx_8c_a968c464332df2177e1f80e679648ebf9}\label{tests-sixlowpan__ctx_8c_a968c464332df2177e1f80e679648ebf9}} 
+\index{tests-\/sixlowpan\+\_\+ctx.\+c@{tests-\/sixlowpan\+\_\+ctx.\+c}!tests\+\_\+sixlowpan\+\_\+ctx\+\_\+tests@{tests\+\_\+sixlowpan\+\_\+ctx\+\_\+tests}}
+\index{tests\+\_\+sixlowpan\+\_\+ctx\+\_\+tests@{tests\+\_\+sixlowpan\+\_\+ctx\+\_\+tests}!tests-\/sixlowpan\+\_\+ctx.\+c@{tests-\/sixlowpan\+\_\+ctx.\+c}}
+\subsubsection{\texorpdfstring{tests\+\_\+sixlowpan\+\_\+ctx\+\_\+tests()}{tests\_sixlowpan\_ctx\_tests()}}
+{\footnotesize\ttfamily Test$\ast$ tests\+\_\+sixlowpan\+\_\+ctx\+\_\+tests (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=328pt]{tests-sixlowpan__ctx_8c_a968c464332df2177e1f80e679648ebf9_icgraph}
+\end{center}
+\end{figure}

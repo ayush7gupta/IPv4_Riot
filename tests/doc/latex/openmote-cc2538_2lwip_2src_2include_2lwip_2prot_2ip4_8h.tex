@@ -1,0 +1,232 @@
+\hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2ip4_8h}{}\section{/home/ayush/\+R\+I\+O\+T/tests/lwip/bin/pkg/openmote-\/cc2538/lwip/src/include/lwip/prot/ip4.h File Reference}
+\label{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2ip4_8h}\index{/home/ayush/\+R\+I\+O\+T/tests/lwip/bin/pkg/openmote-\/cc2538/lwip/src/include/lwip/prot/ip4.\+h@{/home/ayush/\+R\+I\+O\+T/tests/lwip/bin/pkg/openmote-\/cc2538/lwip/src/include/lwip/prot/ip4.\+h}}
+{\ttfamily \#include \char`\"{}lwip/arch.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}lwip/ip4\+\_\+addr.\+h\char`\"{}}\newline
+Include dependency graph for ip4.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=244pt]{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2ip4_8h__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structip4__addr__packed}{ip4\+\_\+addr\+\_\+packed}
+\item 
+struct \hyperlink{structip__hdr}{ip\+\_\+hdr}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2ip4_8h_ad76777d4d34f33ab5f715f9ca15503c3}{I\+P\+\_\+\+H\+L\+EN}~20
+\item 
+\#define \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2ip4_8h_a895709708f8f909cf7b7459491d549e7}{I\+P\+\_\+\+RF}~0x8000\+U        /$\ast$ reserved fragment flag $\ast$/
+\item 
+\#define \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2ip4_8h_ae2473f4a88d141d5298f92a4335b714a}{I\+P\+\_\+\+DF}~0x4000\+U        /$\ast$ don\textquotesingle{}t fragment flag $\ast$/
+\item 
+\#define \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2ip4_8h_ae8afe1e04bb9bad791443556c3b2cd73}{I\+P\+\_\+\+MF}~0x2000\+U        /$\ast$ more fragments flag $\ast$/
+\item 
+\#define \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2ip4_8h_ad059798b16d1f615b5af8770175121ba}{I\+P\+\_\+\+O\+F\+F\+M\+A\+SK}~0x1fff\+U   /$\ast$ mask for fragmenting bits $\ast$/
+\item 
+\#define \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2ip4_8h_a05a9e8ecf4eff38244b4c13c7e70094c}{I\+P\+H\+\_\+V}(hdr)~((hdr)-\/$>$\+\_\+v\+\_\+hl $>$$>$ 4)
+\item 
+\#define \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2ip4_8h_a7c60caeb708571a07a44309c10ec3a01}{I\+P\+H\+\_\+\+HL}(hdr)~((hdr)-\/$>$\+\_\+v\+\_\+hl \& 0x0f)
+\item 
+\#define \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2ip4_8h_a13fb5476ab97db9c5de6c1f5ca0d82e6}{I\+P\+H\+\_\+\+T\+OS}(hdr)~((hdr)-\/$>$\+\_\+tos)
+\item 
+\#define \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2ip4_8h_aec0328fe4711b8c1ef4dd6709e4fd6d5}{I\+P\+H\+\_\+\+L\+EN}(hdr)~((hdr)-\/$>$\+\_\+len)
+\item 
+\#define \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2ip4_8h_ae79eaecc0bf9e4dbb9e47ea56ad2157a}{I\+P\+H\+\_\+\+ID}(hdr)~((hdr)-\/$>$\+\_\+id)
+\item 
+\#define \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2ip4_8h_a559dce3878f1d6a46bcb4cb312962397}{I\+P\+H\+\_\+\+O\+F\+F\+S\+ET}(hdr)~((hdr)-\/$>$\+\_\+offset)
+\item 
+\#define \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2ip4_8h_a0d8238411ce35a007170f652e62209b3}{I\+P\+H\+\_\+\+T\+TL}(hdr)~((hdr)-\/$>$\+\_\+ttl)
+\item 
+\#define \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2ip4_8h_aa2de6f9d35337b4be67d799805665e11}{I\+P\+H\+\_\+\+P\+R\+O\+TO}(hdr)~((hdr)-\/$>$\+\_\+proto)
+\item 
+\#define \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2ip4_8h_a773b96f54c75b35bcd24e7f857fcf988}{I\+P\+H\+\_\+\+C\+H\+K\+S\+UM}(hdr)~((hdr)-\/$>$\+\_\+chksum)
+\item 
+\#define \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2ip4_8h_a037908f4291c62a7336362506cea01af}{I\+P\+H\+\_\+\+V\+H\+L\+\_\+\+S\+ET}(hdr,  v,  hl)~(hdr)-\/$>$\+\_\+v\+\_\+hl = (\hyperlink{group__compiler__abstraction_ga4caecabca98b43919dd11be1c0d4cd8e}{u8\+\_\+t})((((v) $<$$<$ 4) $\vert$ (hl)))
+\item 
+\#define \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2ip4_8h_af4e4d0cbbb1de541eea2b53b91e8b172}{I\+P\+H\+\_\+\+T\+O\+S\+\_\+\+S\+ET}(hdr,  tos)~(hdr)-\/$>$\+\_\+tos = (tos)
+\item 
+\#define \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2ip4_8h_a069cb9b3765c4bdd63d13efb2df0206e}{I\+P\+H\+\_\+\+L\+E\+N\+\_\+\+S\+ET}(hdr,  len)~(hdr)-\/$>$\+\_\+len = (len)
+\item 
+\#define \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2ip4_8h_a3b2c57b6a9dc9cc32fc2f145a96bbf8f}{I\+P\+H\+\_\+\+I\+D\+\_\+\+S\+ET}(hdr,  id)~(hdr)-\/$>$\+\_\+id = (id)
+\item 
+\#define \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2ip4_8h_a4c2189e1400dca1c0f785de96ceda2b6}{I\+P\+H\+\_\+\+O\+F\+F\+S\+E\+T\+\_\+\+S\+ET}(hdr,  off)~(hdr)-\/$>$\+\_\+offset = (off)
+\item 
+\#define \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2ip4_8h_aa0e49f03bd4c3144e3548a0db72d1deb}{I\+P\+H\+\_\+\+T\+T\+L\+\_\+\+S\+ET}(hdr,  ttl)~(hdr)-\/$>$\+\_\+ttl = (\hyperlink{group__compiler__abstraction_ga4caecabca98b43919dd11be1c0d4cd8e}{u8\+\_\+t})(ttl)
+\item 
+\#define \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2ip4_8h_a49753f7668f741b1877340bff6fb97c3}{I\+P\+H\+\_\+\+P\+R\+O\+T\+O\+\_\+\+S\+ET}(hdr,  proto)~(hdr)-\/$>$\+\_\+proto = (\hyperlink{group__compiler__abstraction_ga4caecabca98b43919dd11be1c0d4cd8e}{u8\+\_\+t})(proto)
+\item 
+\#define \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2ip4_8h_aec30403fb98b013bd094688de55cdaef}{I\+P\+H\+\_\+\+C\+H\+K\+S\+U\+M\+\_\+\+S\+ET}(hdr,  chksum)~(hdr)-\/$>$\+\_\+chksum = (chksum)
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef typedef\+P\+A\+C\+K\+\_\+\+S\+T\+R\+U\+C\+T\+\_\+\+E\+ND struct \hyperlink{structip4__addr__packed}{ip4\+\_\+addr\+\_\+packed} \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2ip4_8h_ae5011654fcbadf6b6582b8d49446107f}{ip4\+\_\+addr\+\_\+p\+\_\+t}
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group__compiler__abstraction_ga73199061891adf1b912d20835c7d5e96}{P\+A\+C\+K\+\_\+\+S\+T\+R\+U\+C\+T\+\_\+\+B\+E\+G\+IN} struct \hyperlink{structip4__addr__packed}{ip4\+\_\+addr\+\_\+packed} \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2ip4_8h_a7082e3ecbecbf496df63fda29a1e0f06}{P\+A\+C\+K\+\_\+\+S\+T\+R\+U\+C\+T\+\_\+\+S\+T\+R\+U\+CT}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+I\+Pv4 protocol definitions 
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2ip4_8h_ae2473f4a88d141d5298f92a4335b714a}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2ip4_8h_ae2473f4a88d141d5298f92a4335b714a}} 
+\index{openmote-\/cc2538/lwip/src/include/lwip/prot/ip4.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/ip4.\+h}!I\+P\+\_\+\+DF@{I\+P\+\_\+\+DF}}
+\index{I\+P\+\_\+\+DF@{I\+P\+\_\+\+DF}!openmote-\/cc2538/lwip/src/include/lwip/prot/ip4.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/ip4.\+h}}
+\subsubsection{\texorpdfstring{I\+P\+\_\+\+DF}{IP\_DF}}
+{\footnotesize\ttfamily \#define I\+P\+\_\+\+DF~0x4000\+U        /$\ast$ don\textquotesingle{}t fragment flag $\ast$/}
+
+\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2ip4_8h_ad76777d4d34f33ab5f715f9ca15503c3}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2ip4_8h_ad76777d4d34f33ab5f715f9ca15503c3}} 
+\index{openmote-\/cc2538/lwip/src/include/lwip/prot/ip4.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/ip4.\+h}!I\+P\+\_\+\+H\+L\+EN@{I\+P\+\_\+\+H\+L\+EN}}
+\index{I\+P\+\_\+\+H\+L\+EN@{I\+P\+\_\+\+H\+L\+EN}!openmote-\/cc2538/lwip/src/include/lwip/prot/ip4.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/ip4.\+h}}
+\subsubsection{\texorpdfstring{I\+P\+\_\+\+H\+L\+EN}{IP\_HLEN}}
+{\footnotesize\ttfamily \#define I\+P\+\_\+\+H\+L\+EN~20}
+
+\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2ip4_8h_ae8afe1e04bb9bad791443556c3b2cd73}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2ip4_8h_ae8afe1e04bb9bad791443556c3b2cd73}} 
+\index{openmote-\/cc2538/lwip/src/include/lwip/prot/ip4.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/ip4.\+h}!I\+P\+\_\+\+MF@{I\+P\+\_\+\+MF}}
+\index{I\+P\+\_\+\+MF@{I\+P\+\_\+\+MF}!openmote-\/cc2538/lwip/src/include/lwip/prot/ip4.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/ip4.\+h}}
+\subsubsection{\texorpdfstring{I\+P\+\_\+\+MF}{IP\_MF}}
+{\footnotesize\ttfamily \#define I\+P\+\_\+\+MF~0x2000\+U        /$\ast$ more fragments flag $\ast$/}
+
+\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2ip4_8h_ad059798b16d1f615b5af8770175121ba}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2ip4_8h_ad059798b16d1f615b5af8770175121ba}} 
+\index{openmote-\/cc2538/lwip/src/include/lwip/prot/ip4.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/ip4.\+h}!I\+P\+\_\+\+O\+F\+F\+M\+A\+SK@{I\+P\+\_\+\+O\+F\+F\+M\+A\+SK}}
+\index{I\+P\+\_\+\+O\+F\+F\+M\+A\+SK@{I\+P\+\_\+\+O\+F\+F\+M\+A\+SK}!openmote-\/cc2538/lwip/src/include/lwip/prot/ip4.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/ip4.\+h}}
+\subsubsection{\texorpdfstring{I\+P\+\_\+\+O\+F\+F\+M\+A\+SK}{IP\_OFFMASK}}
+{\footnotesize\ttfamily \#define I\+P\+\_\+\+O\+F\+F\+M\+A\+SK~0x1fff\+U   /$\ast$ mask for fragmenting bits $\ast$/}
+
+\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2ip4_8h_a895709708f8f909cf7b7459491d549e7}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2ip4_8h_a895709708f8f909cf7b7459491d549e7}} 
+\index{openmote-\/cc2538/lwip/src/include/lwip/prot/ip4.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/ip4.\+h}!I\+P\+\_\+\+RF@{I\+P\+\_\+\+RF}}
+\index{I\+P\+\_\+\+RF@{I\+P\+\_\+\+RF}!openmote-\/cc2538/lwip/src/include/lwip/prot/ip4.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/ip4.\+h}}
+\subsubsection{\texorpdfstring{I\+P\+\_\+\+RF}{IP\_RF}}
+{\footnotesize\ttfamily \#define I\+P\+\_\+\+RF~0x8000\+U        /$\ast$ reserved fragment flag $\ast$/}
+
+\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2ip4_8h_a773b96f54c75b35bcd24e7f857fcf988}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2ip4_8h_a773b96f54c75b35bcd24e7f857fcf988}} 
+\index{openmote-\/cc2538/lwip/src/include/lwip/prot/ip4.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/ip4.\+h}!I\+P\+H\+\_\+\+C\+H\+K\+S\+UM@{I\+P\+H\+\_\+\+C\+H\+K\+S\+UM}}
+\index{I\+P\+H\+\_\+\+C\+H\+K\+S\+UM@{I\+P\+H\+\_\+\+C\+H\+K\+S\+UM}!openmote-\/cc2538/lwip/src/include/lwip/prot/ip4.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/ip4.\+h}}
+\subsubsection{\texorpdfstring{I\+P\+H\+\_\+\+C\+H\+K\+S\+UM}{IPH\_CHKSUM}}
+{\footnotesize\ttfamily \#define I\+P\+H\+\_\+\+C\+H\+K\+S\+UM(\begin{DoxyParamCaption}\item[{}]{hdr }\end{DoxyParamCaption})~((hdr)-\/$>$\+\_\+chksum)}
+
+\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2ip4_8h_aec30403fb98b013bd094688de55cdaef}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2ip4_8h_aec30403fb98b013bd094688de55cdaef}} 
+\index{openmote-\/cc2538/lwip/src/include/lwip/prot/ip4.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/ip4.\+h}!I\+P\+H\+\_\+\+C\+H\+K\+S\+U\+M\+\_\+\+S\+ET@{I\+P\+H\+\_\+\+C\+H\+K\+S\+U\+M\+\_\+\+S\+ET}}
+\index{I\+P\+H\+\_\+\+C\+H\+K\+S\+U\+M\+\_\+\+S\+ET@{I\+P\+H\+\_\+\+C\+H\+K\+S\+U\+M\+\_\+\+S\+ET}!openmote-\/cc2538/lwip/src/include/lwip/prot/ip4.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/ip4.\+h}}
+\subsubsection{\texorpdfstring{I\+P\+H\+\_\+\+C\+H\+K\+S\+U\+M\+\_\+\+S\+ET}{IPH\_CHKSUM\_SET}}
+{\footnotesize\ttfamily \#define I\+P\+H\+\_\+\+C\+H\+K\+S\+U\+M\+\_\+\+S\+ET(\begin{DoxyParamCaption}\item[{}]{hdr,  }\item[{}]{chksum }\end{DoxyParamCaption})~(hdr)-\/$>$\+\_\+chksum = (chksum)}
+
+\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2ip4_8h_a7c60caeb708571a07a44309c10ec3a01}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2ip4_8h_a7c60caeb708571a07a44309c10ec3a01}} 
+\index{openmote-\/cc2538/lwip/src/include/lwip/prot/ip4.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/ip4.\+h}!I\+P\+H\+\_\+\+HL@{I\+P\+H\+\_\+\+HL}}
+\index{I\+P\+H\+\_\+\+HL@{I\+P\+H\+\_\+\+HL}!openmote-\/cc2538/lwip/src/include/lwip/prot/ip4.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/ip4.\+h}}
+\subsubsection{\texorpdfstring{I\+P\+H\+\_\+\+HL}{IPH\_HL}}
+{\footnotesize\ttfamily \#define I\+P\+H\+\_\+\+HL(\begin{DoxyParamCaption}\item[{}]{hdr }\end{DoxyParamCaption})~((hdr)-\/$>$\+\_\+v\+\_\+hl \& 0x0f)}
+
+\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2ip4_8h_ae79eaecc0bf9e4dbb9e47ea56ad2157a}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2ip4_8h_ae79eaecc0bf9e4dbb9e47ea56ad2157a}} 
+\index{openmote-\/cc2538/lwip/src/include/lwip/prot/ip4.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/ip4.\+h}!I\+P\+H\+\_\+\+ID@{I\+P\+H\+\_\+\+ID}}
+\index{I\+P\+H\+\_\+\+ID@{I\+P\+H\+\_\+\+ID}!openmote-\/cc2538/lwip/src/include/lwip/prot/ip4.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/ip4.\+h}}
+\subsubsection{\texorpdfstring{I\+P\+H\+\_\+\+ID}{IPH\_ID}}
+{\footnotesize\ttfamily \#define I\+P\+H\+\_\+\+ID(\begin{DoxyParamCaption}\item[{}]{hdr }\end{DoxyParamCaption})~((hdr)-\/$>$\+\_\+id)}
+
+\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2ip4_8h_a3b2c57b6a9dc9cc32fc2f145a96bbf8f}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2ip4_8h_a3b2c57b6a9dc9cc32fc2f145a96bbf8f}} 
+\index{openmote-\/cc2538/lwip/src/include/lwip/prot/ip4.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/ip4.\+h}!I\+P\+H\+\_\+\+I\+D\+\_\+\+S\+ET@{I\+P\+H\+\_\+\+I\+D\+\_\+\+S\+ET}}
+\index{I\+P\+H\+\_\+\+I\+D\+\_\+\+S\+ET@{I\+P\+H\+\_\+\+I\+D\+\_\+\+S\+ET}!openmote-\/cc2538/lwip/src/include/lwip/prot/ip4.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/ip4.\+h}}
+\subsubsection{\texorpdfstring{I\+P\+H\+\_\+\+I\+D\+\_\+\+S\+ET}{IPH\_ID\_SET}}
+{\footnotesize\ttfamily \#define I\+P\+H\+\_\+\+I\+D\+\_\+\+S\+ET(\begin{DoxyParamCaption}\item[{}]{hdr,  }\item[{}]{id }\end{DoxyParamCaption})~(hdr)-\/$>$\+\_\+id = (id)}
+
+\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2ip4_8h_aec0328fe4711b8c1ef4dd6709e4fd6d5}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2ip4_8h_aec0328fe4711b8c1ef4dd6709e4fd6d5}} 
+\index{openmote-\/cc2538/lwip/src/include/lwip/prot/ip4.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/ip4.\+h}!I\+P\+H\+\_\+\+L\+EN@{I\+P\+H\+\_\+\+L\+EN}}
+\index{I\+P\+H\+\_\+\+L\+EN@{I\+P\+H\+\_\+\+L\+EN}!openmote-\/cc2538/lwip/src/include/lwip/prot/ip4.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/ip4.\+h}}
+\subsubsection{\texorpdfstring{I\+P\+H\+\_\+\+L\+EN}{IPH\_LEN}}
+{\footnotesize\ttfamily \#define I\+P\+H\+\_\+\+L\+EN(\begin{DoxyParamCaption}\item[{}]{hdr }\end{DoxyParamCaption})~((hdr)-\/$>$\+\_\+len)}
+
+\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2ip4_8h_a069cb9b3765c4bdd63d13efb2df0206e}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2ip4_8h_a069cb9b3765c4bdd63d13efb2df0206e}} 
+\index{openmote-\/cc2538/lwip/src/include/lwip/prot/ip4.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/ip4.\+h}!I\+P\+H\+\_\+\+L\+E\+N\+\_\+\+S\+ET@{I\+P\+H\+\_\+\+L\+E\+N\+\_\+\+S\+ET}}
+\index{I\+P\+H\+\_\+\+L\+E\+N\+\_\+\+S\+ET@{I\+P\+H\+\_\+\+L\+E\+N\+\_\+\+S\+ET}!openmote-\/cc2538/lwip/src/include/lwip/prot/ip4.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/ip4.\+h}}
+\subsubsection{\texorpdfstring{I\+P\+H\+\_\+\+L\+E\+N\+\_\+\+S\+ET}{IPH\_LEN\_SET}}
+{\footnotesize\ttfamily \#define I\+P\+H\+\_\+\+L\+E\+N\+\_\+\+S\+ET(\begin{DoxyParamCaption}\item[{}]{hdr,  }\item[{}]{len }\end{DoxyParamCaption})~(hdr)-\/$>$\+\_\+len = (len)}
+
+\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2ip4_8h_a559dce3878f1d6a46bcb4cb312962397}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2ip4_8h_a559dce3878f1d6a46bcb4cb312962397}} 
+\index{openmote-\/cc2538/lwip/src/include/lwip/prot/ip4.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/ip4.\+h}!I\+P\+H\+\_\+\+O\+F\+F\+S\+ET@{I\+P\+H\+\_\+\+O\+F\+F\+S\+ET}}
+\index{I\+P\+H\+\_\+\+O\+F\+F\+S\+ET@{I\+P\+H\+\_\+\+O\+F\+F\+S\+ET}!openmote-\/cc2538/lwip/src/include/lwip/prot/ip4.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/ip4.\+h}}
+\subsubsection{\texorpdfstring{I\+P\+H\+\_\+\+O\+F\+F\+S\+ET}{IPH\_OFFSET}}
+{\footnotesize\ttfamily \#define I\+P\+H\+\_\+\+O\+F\+F\+S\+ET(\begin{DoxyParamCaption}\item[{}]{hdr }\end{DoxyParamCaption})~((hdr)-\/$>$\+\_\+offset)}
+
+\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2ip4_8h_a4c2189e1400dca1c0f785de96ceda2b6}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2ip4_8h_a4c2189e1400dca1c0f785de96ceda2b6}} 
+\index{openmote-\/cc2538/lwip/src/include/lwip/prot/ip4.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/ip4.\+h}!I\+P\+H\+\_\+\+O\+F\+F\+S\+E\+T\+\_\+\+S\+ET@{I\+P\+H\+\_\+\+O\+F\+F\+S\+E\+T\+\_\+\+S\+ET}}
+\index{I\+P\+H\+\_\+\+O\+F\+F\+S\+E\+T\+\_\+\+S\+ET@{I\+P\+H\+\_\+\+O\+F\+F\+S\+E\+T\+\_\+\+S\+ET}!openmote-\/cc2538/lwip/src/include/lwip/prot/ip4.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/ip4.\+h}}
+\subsubsection{\texorpdfstring{I\+P\+H\+\_\+\+O\+F\+F\+S\+E\+T\+\_\+\+S\+ET}{IPH\_OFFSET\_SET}}
+{\footnotesize\ttfamily \#define I\+P\+H\+\_\+\+O\+F\+F\+S\+E\+T\+\_\+\+S\+ET(\begin{DoxyParamCaption}\item[{}]{hdr,  }\item[{}]{off }\end{DoxyParamCaption})~(hdr)-\/$>$\+\_\+offset = (off)}
+
+\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2ip4_8h_aa2de6f9d35337b4be67d799805665e11}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2ip4_8h_aa2de6f9d35337b4be67d799805665e11}} 
+\index{openmote-\/cc2538/lwip/src/include/lwip/prot/ip4.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/ip4.\+h}!I\+P\+H\+\_\+\+P\+R\+O\+TO@{I\+P\+H\+\_\+\+P\+R\+O\+TO}}
+\index{I\+P\+H\+\_\+\+P\+R\+O\+TO@{I\+P\+H\+\_\+\+P\+R\+O\+TO}!openmote-\/cc2538/lwip/src/include/lwip/prot/ip4.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/ip4.\+h}}
+\subsubsection{\texorpdfstring{I\+P\+H\+\_\+\+P\+R\+O\+TO}{IPH\_PROTO}}
+{\footnotesize\ttfamily \#define I\+P\+H\+\_\+\+P\+R\+O\+TO(\begin{DoxyParamCaption}\item[{}]{hdr }\end{DoxyParamCaption})~((hdr)-\/$>$\+\_\+proto)}
+
+\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2ip4_8h_a49753f7668f741b1877340bff6fb97c3}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2ip4_8h_a49753f7668f741b1877340bff6fb97c3}} 
+\index{openmote-\/cc2538/lwip/src/include/lwip/prot/ip4.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/ip4.\+h}!I\+P\+H\+\_\+\+P\+R\+O\+T\+O\+\_\+\+S\+ET@{I\+P\+H\+\_\+\+P\+R\+O\+T\+O\+\_\+\+S\+ET}}
+\index{I\+P\+H\+\_\+\+P\+R\+O\+T\+O\+\_\+\+S\+ET@{I\+P\+H\+\_\+\+P\+R\+O\+T\+O\+\_\+\+S\+ET}!openmote-\/cc2538/lwip/src/include/lwip/prot/ip4.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/ip4.\+h}}
+\subsubsection{\texorpdfstring{I\+P\+H\+\_\+\+P\+R\+O\+T\+O\+\_\+\+S\+ET}{IPH\_PROTO\_SET}}
+{\footnotesize\ttfamily \#define I\+P\+H\+\_\+\+P\+R\+O\+T\+O\+\_\+\+S\+ET(\begin{DoxyParamCaption}\item[{}]{hdr,  }\item[{}]{proto }\end{DoxyParamCaption})~(hdr)-\/$>$\+\_\+proto = (\hyperlink{group__compiler__abstraction_ga4caecabca98b43919dd11be1c0d4cd8e}{u8\+\_\+t})(proto)}
+
+\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2ip4_8h_a13fb5476ab97db9c5de6c1f5ca0d82e6}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2ip4_8h_a13fb5476ab97db9c5de6c1f5ca0d82e6}} 
+\index{openmote-\/cc2538/lwip/src/include/lwip/prot/ip4.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/ip4.\+h}!I\+P\+H\+\_\+\+T\+OS@{I\+P\+H\+\_\+\+T\+OS}}
+\index{I\+P\+H\+\_\+\+T\+OS@{I\+P\+H\+\_\+\+T\+OS}!openmote-\/cc2538/lwip/src/include/lwip/prot/ip4.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/ip4.\+h}}
+\subsubsection{\texorpdfstring{I\+P\+H\+\_\+\+T\+OS}{IPH\_TOS}}
+{\footnotesize\ttfamily \#define I\+P\+H\+\_\+\+T\+OS(\begin{DoxyParamCaption}\item[{}]{hdr }\end{DoxyParamCaption})~((hdr)-\/$>$\+\_\+tos)}
+
+\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2ip4_8h_af4e4d0cbbb1de541eea2b53b91e8b172}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2ip4_8h_af4e4d0cbbb1de541eea2b53b91e8b172}} 
+\index{openmote-\/cc2538/lwip/src/include/lwip/prot/ip4.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/ip4.\+h}!I\+P\+H\+\_\+\+T\+O\+S\+\_\+\+S\+ET@{I\+P\+H\+\_\+\+T\+O\+S\+\_\+\+S\+ET}}
+\index{I\+P\+H\+\_\+\+T\+O\+S\+\_\+\+S\+ET@{I\+P\+H\+\_\+\+T\+O\+S\+\_\+\+S\+ET}!openmote-\/cc2538/lwip/src/include/lwip/prot/ip4.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/ip4.\+h}}
+\subsubsection{\texorpdfstring{I\+P\+H\+\_\+\+T\+O\+S\+\_\+\+S\+ET}{IPH\_TOS\_SET}}
+{\footnotesize\ttfamily \#define I\+P\+H\+\_\+\+T\+O\+S\+\_\+\+S\+ET(\begin{DoxyParamCaption}\item[{}]{hdr,  }\item[{}]{tos }\end{DoxyParamCaption})~(hdr)-\/$>$\+\_\+tos = (tos)}
+
+\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2ip4_8h_a0d8238411ce35a007170f652e62209b3}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2ip4_8h_a0d8238411ce35a007170f652e62209b3}} 
+\index{openmote-\/cc2538/lwip/src/include/lwip/prot/ip4.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/ip4.\+h}!I\+P\+H\+\_\+\+T\+TL@{I\+P\+H\+\_\+\+T\+TL}}
+\index{I\+P\+H\+\_\+\+T\+TL@{I\+P\+H\+\_\+\+T\+TL}!openmote-\/cc2538/lwip/src/include/lwip/prot/ip4.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/ip4.\+h}}
+\subsubsection{\texorpdfstring{I\+P\+H\+\_\+\+T\+TL}{IPH\_TTL}}
+{\footnotesize\ttfamily \#define I\+P\+H\+\_\+\+T\+TL(\begin{DoxyParamCaption}\item[{}]{hdr }\end{DoxyParamCaption})~((hdr)-\/$>$\+\_\+ttl)}
+
+\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2ip4_8h_aa0e49f03bd4c3144e3548a0db72d1deb}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2ip4_8h_aa0e49f03bd4c3144e3548a0db72d1deb}} 
+\index{openmote-\/cc2538/lwip/src/include/lwip/prot/ip4.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/ip4.\+h}!I\+P\+H\+\_\+\+T\+T\+L\+\_\+\+S\+ET@{I\+P\+H\+\_\+\+T\+T\+L\+\_\+\+S\+ET}}
+\index{I\+P\+H\+\_\+\+T\+T\+L\+\_\+\+S\+ET@{I\+P\+H\+\_\+\+T\+T\+L\+\_\+\+S\+ET}!openmote-\/cc2538/lwip/src/include/lwip/prot/ip4.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/ip4.\+h}}
+\subsubsection{\texorpdfstring{I\+P\+H\+\_\+\+T\+T\+L\+\_\+\+S\+ET}{IPH\_TTL\_SET}}
+{\footnotesize\ttfamily \#define I\+P\+H\+\_\+\+T\+T\+L\+\_\+\+S\+ET(\begin{DoxyParamCaption}\item[{}]{hdr,  }\item[{}]{ttl }\end{DoxyParamCaption})~(hdr)-\/$>$\+\_\+ttl = (\hyperlink{group__compiler__abstraction_ga4caecabca98b43919dd11be1c0d4cd8e}{u8\+\_\+t})(ttl)}
+
+\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2ip4_8h_a05a9e8ecf4eff38244b4c13c7e70094c}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2ip4_8h_a05a9e8ecf4eff38244b4c13c7e70094c}} 
+\index{openmote-\/cc2538/lwip/src/include/lwip/prot/ip4.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/ip4.\+h}!I\+P\+H\+\_\+V@{I\+P\+H\+\_\+V}}
+\index{I\+P\+H\+\_\+V@{I\+P\+H\+\_\+V}!openmote-\/cc2538/lwip/src/include/lwip/prot/ip4.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/ip4.\+h}}
+\subsubsection{\texorpdfstring{I\+P\+H\+\_\+V}{IPH\_V}}
+{\footnotesize\ttfamily \#define I\+P\+H\+\_\+V(\begin{DoxyParamCaption}\item[{}]{hdr }\end{DoxyParamCaption})~((hdr)-\/$>$\+\_\+v\+\_\+hl $>$$>$ 4)}
+
+\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2ip4_8h_a037908f4291c62a7336362506cea01af}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2ip4_8h_a037908f4291c62a7336362506cea01af}} 
+\index{openmote-\/cc2538/lwip/src/include/lwip/prot/ip4.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/ip4.\+h}!I\+P\+H\+\_\+\+V\+H\+L\+\_\+\+S\+ET@{I\+P\+H\+\_\+\+V\+H\+L\+\_\+\+S\+ET}}
+\index{I\+P\+H\+\_\+\+V\+H\+L\+\_\+\+S\+ET@{I\+P\+H\+\_\+\+V\+H\+L\+\_\+\+S\+ET}!openmote-\/cc2538/lwip/src/include/lwip/prot/ip4.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/ip4.\+h}}
+\subsubsection{\texorpdfstring{I\+P\+H\+\_\+\+V\+H\+L\+\_\+\+S\+ET}{IPH\_VHL\_SET}}
+{\footnotesize\ttfamily \#define I\+P\+H\+\_\+\+V\+H\+L\+\_\+\+S\+ET(\begin{DoxyParamCaption}\item[{}]{hdr,  }\item[{}]{v,  }\item[{}]{hl }\end{DoxyParamCaption})~(hdr)-\/$>$\+\_\+v\+\_\+hl = (\hyperlink{group__compiler__abstraction_ga4caecabca98b43919dd11be1c0d4cd8e}{u8\+\_\+t})((((v) $<$$<$ 4) $\vert$ (hl)))}
+
+
+
+\subsection{Typedef Documentation}
+\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2ip4_8h_ae5011654fcbadf6b6582b8d49446107f}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2ip4_8h_ae5011654fcbadf6b6582b8d49446107f}} 
+\index{openmote-\/cc2538/lwip/src/include/lwip/prot/ip4.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/ip4.\+h}!ip4\+\_\+addr\+\_\+p\+\_\+t@{ip4\+\_\+addr\+\_\+p\+\_\+t}}
+\index{ip4\+\_\+addr\+\_\+p\+\_\+t@{ip4\+\_\+addr\+\_\+p\+\_\+t}!openmote-\/cc2538/lwip/src/include/lwip/prot/ip4.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/ip4.\+h}}
+\subsubsection{\texorpdfstring{ip4\+\_\+addr\+\_\+p\+\_\+t}{ip4\_addr\_p\_t}}
+{\footnotesize\ttfamily typedef typedef\+P\+A\+C\+K\+\_\+\+S\+T\+R\+U\+C\+T\+\_\+\+E\+ND struct \hyperlink{structip4__addr__packed}{ip4\+\_\+addr\+\_\+packed} \hyperlink{native_2lwip_2src_2include_2lwip_2prot_2ip4_8h_ae5011654fcbadf6b6582b8d49446107f}{ip4\+\_\+addr\+\_\+p\+\_\+t}}
+
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2ip4_8h_a7082e3ecbecbf496df63fda29a1e0f06}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2ip4_8h_a7082e3ecbecbf496df63fda29a1e0f06}} 
+\index{openmote-\/cc2538/lwip/src/include/lwip/prot/ip4.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/ip4.\+h}!P\+A\+C\+K\+\_\+\+S\+T\+R\+U\+C\+T\+\_\+\+S\+T\+R\+U\+CT@{P\+A\+C\+K\+\_\+\+S\+T\+R\+U\+C\+T\+\_\+\+S\+T\+R\+U\+CT}}
+\index{P\+A\+C\+K\+\_\+\+S\+T\+R\+U\+C\+T\+\_\+\+S\+T\+R\+U\+CT@{P\+A\+C\+K\+\_\+\+S\+T\+R\+U\+C\+T\+\_\+\+S\+T\+R\+U\+CT}!openmote-\/cc2538/lwip/src/include/lwip/prot/ip4.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/ip4.\+h}}
+\subsubsection{\texorpdfstring{P\+A\+C\+K\+\_\+\+S\+T\+R\+U\+C\+T\+\_\+\+S\+T\+R\+U\+CT}{PACK\_STRUCT\_STRUCT}}
+{\footnotesize\ttfamily \hyperlink{group__compiler__abstraction_ga73199061891adf1b912d20835c7d5e96}{P\+A\+C\+K\+\_\+\+S\+T\+R\+U\+C\+T\+\_\+\+B\+E\+G\+IN} struct \hyperlink{structip__hdr}{ip\+\_\+hdr}  P\+A\+C\+K\+\_\+\+S\+T\+R\+U\+C\+T\+\_\+\+S\+T\+R\+U\+CT}
+

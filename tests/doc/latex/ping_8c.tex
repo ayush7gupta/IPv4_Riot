@@ -1,0 +1,103 @@
+\hypertarget{ping_8c}{}\section{/home/ayush/\+R\+I\+O\+T/tests/emb6/ping.c File Reference}
+\label{ping_8c}\index{/home/ayush/\+R\+I\+O\+T/tests/emb6/ping.\+c@{/home/ayush/\+R\+I\+O\+T/tests/emb6/ping.\+c}}
+
+
+Demonstrating the sending and receiving of U\+DP data over P\+O\+S\+IX sockets.  
+
+
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include $<$inttypes.\+h$>$}\newline
+{\ttfamily \#include $<$stdatomic.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}byteorder.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}net/icmpv6.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}net/ipv6.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}xtimer.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}uip.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}uip-\/icmp6.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}common.\+h\char`\"{}}\newline
+Include dependency graph for ping.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ping_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{ping_8c_abc00d3957cb2c06dcc2581e55a5a3962}{E\+C\+H\+O\+\_\+\+ID}~(0xd1e9)
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{ping_8c_aa8f7f6ce8f14343dc01a8f21dfae961b}{usage} (char $\ast$cmd)
+\item 
+int \hyperlink{ping_8c_a1abc49b0428b1da3c108319585e77be0}{ping\+\_\+cmd} (int argc, char $\ast$$\ast$argv)
+\begin{DoxyCompactList}\small\item\em Ping shell command. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Demonstrating the sending and receiving of U\+DP data over P\+O\+S\+IX sockets. 
+
+\begin{DoxyAuthor}{Author}
+Martine Lenders \href{mailto:mlenders@inf.fu-berlin.de}{\tt mlenders@inf.\+fu-\/berlin.\+de} 
+\end{DoxyAuthor}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{ping_8c_abc00d3957cb2c06dcc2581e55a5a3962}\label{ping_8c_abc00d3957cb2c06dcc2581e55a5a3962}} 
+\index{ping.\+c@{ping.\+c}!E\+C\+H\+O\+\_\+\+ID@{E\+C\+H\+O\+\_\+\+ID}}
+\index{E\+C\+H\+O\+\_\+\+ID@{E\+C\+H\+O\+\_\+\+ID}!ping.\+c@{ping.\+c}}
+\subsubsection{\texorpdfstring{E\+C\+H\+O\+\_\+\+ID}{ECHO\_ID}}
+{\footnotesize\ttfamily \#define E\+C\+H\+O\+\_\+\+ID~(0xd1e9)}
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{ping_8c_a1abc49b0428b1da3c108319585e77be0}\label{ping_8c_a1abc49b0428b1da3c108319585e77be0}} 
+\index{ping.\+c@{ping.\+c}!ping\+\_\+cmd@{ping\+\_\+cmd}}
+\index{ping\+\_\+cmd@{ping\+\_\+cmd}!ping.\+c@{ping.\+c}}
+\subsubsection{\texorpdfstring{ping\+\_\+cmd()}{ping\_cmd()}}
+{\footnotesize\ttfamily int ping\+\_\+cmd (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$$\ast$}]{argv }\end{DoxyParamCaption})}
+
+
+
+Ping shell command. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em argc} & number of arguments \\
+\hline
+\mbox{\tt in}  & {\em argv} & array of arguments\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on success 
+
+other on error 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=218pt]{ping_8c_a1abc49b0428b1da3c108319585e77be0_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{ping_8c_aa8f7f6ce8f14343dc01a8f21dfae961b}\label{ping_8c_aa8f7f6ce8f14343dc01a8f21dfae961b}} 
+\index{ping.\+c@{ping.\+c}!usage@{usage}}
+\index{usage@{usage}!ping.\+c@{ping.\+c}}
+\subsubsection{\texorpdfstring{usage()}{usage()}}
+{\footnotesize\ttfamily void usage (\begin{DoxyParamCaption}\item[{char $\ast$}]{cmd }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=218pt]{ping_8c_aa8f7f6ce8f14343dc01a8f21dfae961b_icgraph}
+\end{center}
+\end{figure}

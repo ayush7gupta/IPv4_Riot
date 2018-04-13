@@ -1,0 +1,10 @@
+<map id="Applications" name="Applications">
+<area shape="rect" id="node2" href="$group__iperf.html" title="Iperf server" alt="" coords="174,5,262,32"/>
+<area shape="rect" id="node3" href="$group__mqtt.html" title="MQTT client" alt="" coords="171,56,265,83"/>
+<area shape="rect" id="node4" href="$group__httpd.html" title="HTTP server" alt="" coords="169,107,267,133"/>
+<area shape="rect" id="node5" href="$group__netbiosns.html" title="NETBIOS responder" alt="" coords="147,157,289,184"/>
+<area shape="rect" id="node6" href="$group__snmp.html" title="SNMPv2c agent" alt="" coords="159,208,277,235"/>
+<area shape="rect" id="node7" href="$group__sntp.html" title="SNTP" alt="" coords="189,259,247,285"/>
+<area shape="rect" id="node8" href="$group__mdns.html" title="MDNS" alt="" coords="187,309,249,336"/>
+<area shape="rect" id="node9" href="$group__tftp.html" title="TFTP server" alt="" coords="171,360,265,387"/>
+</map>

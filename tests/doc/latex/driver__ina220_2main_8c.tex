@@ -1,0 +1,75 @@
+\hypertarget{driver__ina220_2main_8c}{}\section{/home/ayush/\+R\+I\+O\+T/tests/driver\+\_\+ina220/main.c File Reference}
+\label{driver__ina220_2main_8c}\index{/home/ayush/\+R\+I\+O\+T/tests/driver\+\_\+ina220/main.\+c@{/home/ayush/\+R\+I\+O\+T/tests/driver\+\_\+ina220/main.\+c}}
+
+
+Test application for the I\+N\+A220 sensor driver.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}xtimer.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}ina220.\+h\char`\"{}}\newline
+Include dependency graph for main.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=268pt]{driver__ina220_2main_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{driver__ina220_2main_8c_a76ea3cf49247a07c54b3db005a3c7f57}{C\+O\+N\+F\+IG}
+\item 
+\#define \hyperlink{driver__ina220_2main_8c_a4ddd570ad03298cdcf6728dcc3b82985}{C\+A\+L\+I\+B\+R\+A\+T\+I\+ON}~(4096)
+\item 
+\#define \hyperlink{driver__ina220_2main_8c_a44e89d523436fcbbf2c56e4fb335d509}{S\+L\+E\+EP}~(100 $\ast$ 1000\+U)
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{driver__ina220_2main_8c_a840291bc02cba5474a4cb46a9b9566fe}{main} (void)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Test application for the I\+N\+A220 sensor driver. 
+
+\begin{DoxyAuthor}{Author}
+Joakim Nohlgård \href{mailto:joakim.nohlgard@eistec.se}{\tt joakim.\+nohlgard@eistec.\+se} 
+\end{DoxyAuthor}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{driver__ina220_2main_8c_a4ddd570ad03298cdcf6728dcc3b82985}\label{driver__ina220_2main_8c_a4ddd570ad03298cdcf6728dcc3b82985}} 
+\index{driver\+\_\+ina220/main.\+c@{driver\+\_\+ina220/main.\+c}!C\+A\+L\+I\+B\+R\+A\+T\+I\+ON@{C\+A\+L\+I\+B\+R\+A\+T\+I\+ON}}
+\index{C\+A\+L\+I\+B\+R\+A\+T\+I\+ON@{C\+A\+L\+I\+B\+R\+A\+T\+I\+ON}!driver\+\_\+ina220/main.\+c@{driver\+\_\+ina220/main.\+c}}
+\subsubsection{\texorpdfstring{C\+A\+L\+I\+B\+R\+A\+T\+I\+ON}{CALIBRATION}}
+{\footnotesize\ttfamily \#define C\+A\+L\+I\+B\+R\+A\+T\+I\+ON~(4096)}
+
+\mbox{\Hypertarget{driver__ina220_2main_8c_a76ea3cf49247a07c54b3db005a3c7f57}\label{driver__ina220_2main_8c_a76ea3cf49247a07c54b3db005a3c7f57}} 
+\index{driver\+\_\+ina220/main.\+c@{driver\+\_\+ina220/main.\+c}!C\+O\+N\+F\+IG@{C\+O\+N\+F\+IG}}
+\index{C\+O\+N\+F\+IG@{C\+O\+N\+F\+IG}!driver\+\_\+ina220/main.\+c@{driver\+\_\+ina220/main.\+c}}
+\subsubsection{\texorpdfstring{C\+O\+N\+F\+IG}{CONFIG}}
+{\footnotesize\ttfamily \#define C\+O\+N\+F\+IG}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+(INA220\_MODE\_CONTINUOUS\_SHUNT\_BUS | INA220\_RANGE\_320MV | \(\backslash\)
+                  INA220\_BRNG\_32V\_FSR | INA220\_SADC\_12BIT | INA220\_BADC\_12BIT)
+\end{DoxyCode}
+\mbox{\Hypertarget{driver__ina220_2main_8c_a44e89d523436fcbbf2c56e4fb335d509}\label{driver__ina220_2main_8c_a44e89d523436fcbbf2c56e4fb335d509}} 
+\index{driver\+\_\+ina220/main.\+c@{driver\+\_\+ina220/main.\+c}!S\+L\+E\+EP@{S\+L\+E\+EP}}
+\index{S\+L\+E\+EP@{S\+L\+E\+EP}!driver\+\_\+ina220/main.\+c@{driver\+\_\+ina220/main.\+c}}
+\subsubsection{\texorpdfstring{S\+L\+E\+EP}{SLEEP}}
+{\footnotesize\ttfamily \#define S\+L\+E\+EP~(100 $\ast$ 1000\+U)}
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{driver__ina220_2main_8c_a840291bc02cba5474a4cb46a9b9566fe}\label{driver__ina220_2main_8c_a840291bc02cba5474a4cb46a9b9566fe}} 
+\index{driver\+\_\+ina220/main.\+c@{driver\+\_\+ina220/main.\+c}!main@{main}}
+\index{main@{main}!driver\+\_\+ina220/main.\+c@{driver\+\_\+ina220/main.\+c}}
+\subsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+

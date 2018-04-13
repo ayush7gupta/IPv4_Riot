@@ -1,0 +1,6 @@
+<map id="Infrastructure" name="Infrastructure">
+<area shape="rect" id="node2" href="$group__mempool.html" title="Memory pools" alt="" coords="177,5,281,32"/>
+<area shape="rect" id="node3" href="$group__infrastructure__errors.html" title="Error codes" alt="" coords="185,56,274,83"/>
+<area shape="rect" id="node4" href="$group__pbuf.html" title="Packet buffers (PBUF)" alt="" coords="152,107,307,133"/>
+<area shape="rect" id="node5" href="$group__ipaddr.html" title="IP address handling" alt="" coords="161,157,298,184"/>
+</map>

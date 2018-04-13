@@ -1,0 +1,60 @@
+\hypertarget{sizeof__tcb_2main_8c}{}\section{/home/ayush/\+R\+I\+O\+T/tests/sizeof\+\_\+tcb/main.c File Reference}
+\label{sizeof__tcb_2main_8c}\index{/home/ayush/\+R\+I\+O\+T/tests/sizeof\+\_\+tcb/main.\+c@{/home/ayush/\+R\+I\+O\+T/tests/sizeof\+\_\+tcb/main.\+c}}
+
+
+Print the size of thread\+\_\+t.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stddef.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}thread.\+h\char`\"{}}\newline
+Include dependency graph for main.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=266pt]{sizeof__tcb_2main_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{sizeof__tcb_2main_8c_a0d33009b4278e4accd8308ac06f70615}{P}(N\+A\+ME)
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{sizeof__tcb_2main_8c_a840291bc02cba5474a4cb46a9b9566fe}{main} (void)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Print the size of thread\+\_\+t. 
+
+\begin{DoxyAuthor}{Author}
+René Kijewski \href{mailto:rene.kijewski@fu-berlin.de}{\tt rene.\+kijewski@fu-\/berlin.\+de} 
+\end{DoxyAuthor}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{sizeof__tcb_2main_8c_a0d33009b4278e4accd8308ac06f70615}\label{sizeof__tcb_2main_8c_a0d33009b4278e4accd8308ac06f70615}} 
+\index{sizeof\+\_\+tcb/main.\+c@{sizeof\+\_\+tcb/main.\+c}!P@{P}}
+\index{P@{P}!sizeof\+\_\+tcb/main.\+c@{sizeof\+\_\+tcb/main.\+c}}
+\subsubsection{\texorpdfstring{P}{P}}
+{\footnotesize\ttfamily \#define P(\begin{DoxyParamCaption}\item[{}]{N\+A\+ME }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+printf(\textcolor{stringliteral}{"\(\backslash\)t%-*s%4u%4u\(\backslash\)n"}, 11, #NAME, \(\backslash\)
+                       (\textcolor{keywordtype}{unsigned})\textcolor{keyword}{sizeof}(((thread\_t *) 0)->NAME), \(\backslash\)
+                       (\textcolor{keywordtype}{unsigned})offsetof(thread\_t, NAME));
+\end{DoxyCode}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{sizeof__tcb_2main_8c_a840291bc02cba5474a4cb46a9b9566fe}\label{sizeof__tcb_2main_8c_a840291bc02cba5474a4cb46a9b9566fe}} 
+\index{sizeof\+\_\+tcb/main.\+c@{sizeof\+\_\+tcb/main.\+c}!main@{main}}
+\index{main@{main}!sizeof\+\_\+tcb/main.\+c@{sizeof\+\_\+tcb/main.\+c}}
+\subsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+

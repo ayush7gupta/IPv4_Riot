@@ -1,0 +1,173 @@
+\hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2autoip_8h}{}\section{/home/ayush/\+R\+I\+O\+T/tests/lwip/bin/pkg/openmote-\/cc2538/lwip/src/include/lwip/prot/autoip.h File Reference}
+\label{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2autoip_8h}\index{/home/ayush/\+R\+I\+O\+T/tests/lwip/bin/pkg/openmote-\/cc2538/lwip/src/include/lwip/prot/autoip.\+h@{/home/ayush/\+R\+I\+O\+T/tests/lwip/bin/pkg/openmote-\/cc2538/lwip/src/include/lwip/prot/autoip.\+h}}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2autoip_8h_ac19d92e0bfcb52079adbe92fb569d468}{A\+U\+T\+O\+I\+P\+\_\+\+N\+ET}~0x\+A9\+F\+E0000
+\item 
+\#define \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2autoip_8h_a8b4506c8e0ab7631f49567f9b81779c6}{A\+U\+T\+O\+I\+P\+\_\+\+R\+A\+N\+G\+E\+\_\+\+S\+T\+A\+RT}~(\hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2autoip_8h_ac19d92e0bfcb52079adbe92fb569d468}{A\+U\+T\+O\+I\+P\+\_\+\+N\+ET} $\vert$ 0x0100)
+\item 
+\#define \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2autoip_8h_a84dec606d57f40eed1cdc782f702f161}{A\+U\+T\+O\+I\+P\+\_\+\+R\+A\+N\+G\+E\+\_\+\+E\+ND}~(\hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2autoip_8h_ac19d92e0bfcb52079adbe92fb569d468}{A\+U\+T\+O\+I\+P\+\_\+\+N\+ET} $\vert$ 0x\+F\+E\+F\+F)
+\item 
+\#define \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2autoip_8h_aecea6220ab7fcd0910262d5929eb5d95}{P\+R\+O\+B\+E\+\_\+\+W\+A\+IT}~1   /$\ast$ second   (initial random delay)                 $\ast$/
+\item 
+\#define \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2autoip_8h_a959b454f842224af595205645244f946}{P\+R\+O\+B\+E\+\_\+\+M\+IN}~1   /$\ast$ second   (minimum delay till repeated probe)    $\ast$/
+\item 
+\#define \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2autoip_8h_ad408cf94a71b848cff8108dc5c1558e6}{P\+R\+O\+B\+E\+\_\+\+M\+AX}~2   /$\ast$ seconds  (maximum delay till repeated probe)    $\ast$/
+\item 
+\#define \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2autoip_8h_a3a610440fbb8d2c6abb4aa9702f904ef}{P\+R\+O\+B\+E\+\_\+\+N\+UM}~3   /$\ast$          (number of probe packets)              $\ast$/
+\item 
+\#define \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2autoip_8h_a29141f41d1391d34730b75539000f9ea}{A\+N\+N\+O\+U\+N\+C\+E\+\_\+\+N\+UM}~2   /$\ast$          (number of announcement packets)       $\ast$/
+\item 
+\#define \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2autoip_8h_a7ed8f0b9d3330a2967142e0e48b28521}{A\+N\+N\+O\+U\+N\+C\+E\+\_\+\+I\+N\+T\+E\+R\+V\+AL}~2   /$\ast$ seconds  (time between announcement packets)    $\ast$/
+\item 
+\#define \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2autoip_8h_a1a9b374b5e2e6da152f3a1556d09e6b3}{A\+N\+N\+O\+U\+N\+C\+E\+\_\+\+W\+A\+IT}~2   /$\ast$ seconds  (delay before announcing)              $\ast$/
+\item 
+\#define \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2autoip_8h_a14d30da6b838f3d718c0d92a9f3f3816}{M\+A\+X\+\_\+\+C\+O\+N\+F\+L\+I\+C\+TS}~10  /$\ast$          (max conflicts before rate limiting)   $\ast$/
+\item 
+\#define \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2autoip_8h_a420da51b5955d94c44d285638b3931bf}{R\+A\+T\+E\+\_\+\+L\+I\+M\+I\+T\+\_\+\+I\+N\+T\+E\+R\+V\+AL}~60  /$\ast$ seconds  (delay between successive attempts)    $\ast$/
+\item 
+\#define \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2autoip_8h_a5c21e0d4d66eb7056ba4d515d36f0a20}{D\+E\+F\+E\+N\+D\+\_\+\+I\+N\+T\+E\+R\+V\+AL}~10  /$\ast$ seconds  (min. wait between defensive A\+R\+Ps)     $\ast$/
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2autoip_8h_a1a27a030b740b1577f95d5aeb54a1a0c}{autoip\+\_\+state\+\_\+enum\+\_\+t} \{ \newline
+\hyperlink{native_2lwip_2src_2include_2lwip_2prot_2autoip_8h_a1a27a030b740b1577f95d5aeb54a1a0ca11fa34497b2b043e2a5e7a43323374af}{A\+U\+T\+O\+I\+P\+\_\+\+S\+T\+A\+T\+E\+\_\+\+O\+FF} = 0, 
+\hyperlink{native_2lwip_2src_2include_2lwip_2prot_2autoip_8h_a1a27a030b740b1577f95d5aeb54a1a0ca0926fae84a811e23d48115263b8744a3}{A\+U\+T\+O\+I\+P\+\_\+\+S\+T\+A\+T\+E\+\_\+\+P\+R\+O\+B\+I\+NG} = 1, 
+\hyperlink{native_2lwip_2src_2include_2lwip_2prot_2autoip_8h_a1a27a030b740b1577f95d5aeb54a1a0cad35142124e3ef9875cb3a9b16209157b}{A\+U\+T\+O\+I\+P\+\_\+\+S\+T\+A\+T\+E\+\_\+\+A\+N\+N\+O\+U\+N\+C\+I\+NG} = 2, 
+\hyperlink{native_2lwip_2src_2include_2lwip_2prot_2autoip_8h_a1a27a030b740b1577f95d5aeb54a1a0caa2c50906623e140882d3654c149cca45}{A\+U\+T\+O\+I\+P\+\_\+\+S\+T\+A\+T\+E\+\_\+\+B\+O\+U\+ND} = 3, 
+\newline
+\hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2autoip_8h_a1a27a030b740b1577f95d5aeb54a1a0ca11fa34497b2b043e2a5e7a43323374af}{A\+U\+T\+O\+I\+P\+\_\+\+S\+T\+A\+T\+E\+\_\+\+O\+FF} = 0, 
+\hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2autoip_8h_a1a27a030b740b1577f95d5aeb54a1a0ca0926fae84a811e23d48115263b8744a3}{A\+U\+T\+O\+I\+P\+\_\+\+S\+T\+A\+T\+E\+\_\+\+P\+R\+O\+B\+I\+NG} = 1, 
+\hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2autoip_8h_a1a27a030b740b1577f95d5aeb54a1a0cad35142124e3ef9875cb3a9b16209157b}{A\+U\+T\+O\+I\+P\+\_\+\+S\+T\+A\+T\+E\+\_\+\+A\+N\+N\+O\+U\+N\+C\+I\+NG} = 2, 
+\hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2autoip_8h_a1a27a030b740b1577f95d5aeb54a1a0caa2c50906623e140882d3654c149cca45}{A\+U\+T\+O\+I\+P\+\_\+\+S\+T\+A\+T\+E\+\_\+\+B\+O\+U\+ND} = 3
+ \}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Auto\+IP protocol definitions 
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2autoip_8h_a7ed8f0b9d3330a2967142e0e48b28521}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2autoip_8h_a7ed8f0b9d3330a2967142e0e48b28521}} 
+\index{openmote-\/cc2538/lwip/src/include/lwip/prot/autoip.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/autoip.\+h}!A\+N\+N\+O\+U\+N\+C\+E\+\_\+\+I\+N\+T\+E\+R\+V\+AL@{A\+N\+N\+O\+U\+N\+C\+E\+\_\+\+I\+N\+T\+E\+R\+V\+AL}}
+\index{A\+N\+N\+O\+U\+N\+C\+E\+\_\+\+I\+N\+T\+E\+R\+V\+AL@{A\+N\+N\+O\+U\+N\+C\+E\+\_\+\+I\+N\+T\+E\+R\+V\+AL}!openmote-\/cc2538/lwip/src/include/lwip/prot/autoip.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/autoip.\+h}}
+\subsubsection{\texorpdfstring{A\+N\+N\+O\+U\+N\+C\+E\+\_\+\+I\+N\+T\+E\+R\+V\+AL}{ANNOUNCE\_INTERVAL}}
+{\footnotesize\ttfamily \#define A\+N\+N\+O\+U\+N\+C\+E\+\_\+\+I\+N\+T\+E\+R\+V\+AL~2   /$\ast$ seconds  (time between announcement packets)    $\ast$/}
+
+\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2autoip_8h_a29141f41d1391d34730b75539000f9ea}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2autoip_8h_a29141f41d1391d34730b75539000f9ea}} 
+\index{openmote-\/cc2538/lwip/src/include/lwip/prot/autoip.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/autoip.\+h}!A\+N\+N\+O\+U\+N\+C\+E\+\_\+\+N\+UM@{A\+N\+N\+O\+U\+N\+C\+E\+\_\+\+N\+UM}}
+\index{A\+N\+N\+O\+U\+N\+C\+E\+\_\+\+N\+UM@{A\+N\+N\+O\+U\+N\+C\+E\+\_\+\+N\+UM}!openmote-\/cc2538/lwip/src/include/lwip/prot/autoip.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/autoip.\+h}}
+\subsubsection{\texorpdfstring{A\+N\+N\+O\+U\+N\+C\+E\+\_\+\+N\+UM}{ANNOUNCE\_NUM}}
+{\footnotesize\ttfamily \#define A\+N\+N\+O\+U\+N\+C\+E\+\_\+\+N\+UM~2   /$\ast$          (number of announcement packets)       $\ast$/}
+
+\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2autoip_8h_a1a9b374b5e2e6da152f3a1556d09e6b3}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2autoip_8h_a1a9b374b5e2e6da152f3a1556d09e6b3}} 
+\index{openmote-\/cc2538/lwip/src/include/lwip/prot/autoip.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/autoip.\+h}!A\+N\+N\+O\+U\+N\+C\+E\+\_\+\+W\+A\+IT@{A\+N\+N\+O\+U\+N\+C\+E\+\_\+\+W\+A\+IT}}
+\index{A\+N\+N\+O\+U\+N\+C\+E\+\_\+\+W\+A\+IT@{A\+N\+N\+O\+U\+N\+C\+E\+\_\+\+W\+A\+IT}!openmote-\/cc2538/lwip/src/include/lwip/prot/autoip.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/autoip.\+h}}
+\subsubsection{\texorpdfstring{A\+N\+N\+O\+U\+N\+C\+E\+\_\+\+W\+A\+IT}{ANNOUNCE\_WAIT}}
+{\footnotesize\ttfamily \#define A\+N\+N\+O\+U\+N\+C\+E\+\_\+\+W\+A\+IT~2   /$\ast$ seconds  (delay before announcing)              $\ast$/}
+
+\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2autoip_8h_ac19d92e0bfcb52079adbe92fb569d468}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2autoip_8h_ac19d92e0bfcb52079adbe92fb569d468}} 
+\index{openmote-\/cc2538/lwip/src/include/lwip/prot/autoip.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/autoip.\+h}!A\+U\+T\+O\+I\+P\+\_\+\+N\+ET@{A\+U\+T\+O\+I\+P\+\_\+\+N\+ET}}
+\index{A\+U\+T\+O\+I\+P\+\_\+\+N\+ET@{A\+U\+T\+O\+I\+P\+\_\+\+N\+ET}!openmote-\/cc2538/lwip/src/include/lwip/prot/autoip.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/autoip.\+h}}
+\subsubsection{\texorpdfstring{A\+U\+T\+O\+I\+P\+\_\+\+N\+ET}{AUTOIP\_NET}}
+{\footnotesize\ttfamily \#define A\+U\+T\+O\+I\+P\+\_\+\+N\+ET~0x\+A9\+F\+E0000}
+
+\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2autoip_8h_a84dec606d57f40eed1cdc782f702f161}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2autoip_8h_a84dec606d57f40eed1cdc782f702f161}} 
+\index{openmote-\/cc2538/lwip/src/include/lwip/prot/autoip.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/autoip.\+h}!A\+U\+T\+O\+I\+P\+\_\+\+R\+A\+N\+G\+E\+\_\+\+E\+ND@{A\+U\+T\+O\+I\+P\+\_\+\+R\+A\+N\+G\+E\+\_\+\+E\+ND}}
+\index{A\+U\+T\+O\+I\+P\+\_\+\+R\+A\+N\+G\+E\+\_\+\+E\+ND@{A\+U\+T\+O\+I\+P\+\_\+\+R\+A\+N\+G\+E\+\_\+\+E\+ND}!openmote-\/cc2538/lwip/src/include/lwip/prot/autoip.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/autoip.\+h}}
+\subsubsection{\texorpdfstring{A\+U\+T\+O\+I\+P\+\_\+\+R\+A\+N\+G\+E\+\_\+\+E\+ND}{AUTOIP\_RANGE\_END}}
+{\footnotesize\ttfamily \#define A\+U\+T\+O\+I\+P\+\_\+\+R\+A\+N\+G\+E\+\_\+\+E\+ND~(\hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2autoip_8h_ac19d92e0bfcb52079adbe92fb569d468}{A\+U\+T\+O\+I\+P\+\_\+\+N\+ET} $\vert$ 0x\+F\+E\+F\+F)}
+
+\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2autoip_8h_a8b4506c8e0ab7631f49567f9b81779c6}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2autoip_8h_a8b4506c8e0ab7631f49567f9b81779c6}} 
+\index{openmote-\/cc2538/lwip/src/include/lwip/prot/autoip.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/autoip.\+h}!A\+U\+T\+O\+I\+P\+\_\+\+R\+A\+N\+G\+E\+\_\+\+S\+T\+A\+RT@{A\+U\+T\+O\+I\+P\+\_\+\+R\+A\+N\+G\+E\+\_\+\+S\+T\+A\+RT}}
+\index{A\+U\+T\+O\+I\+P\+\_\+\+R\+A\+N\+G\+E\+\_\+\+S\+T\+A\+RT@{A\+U\+T\+O\+I\+P\+\_\+\+R\+A\+N\+G\+E\+\_\+\+S\+T\+A\+RT}!openmote-\/cc2538/lwip/src/include/lwip/prot/autoip.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/autoip.\+h}}
+\subsubsection{\texorpdfstring{A\+U\+T\+O\+I\+P\+\_\+\+R\+A\+N\+G\+E\+\_\+\+S\+T\+A\+RT}{AUTOIP\_RANGE\_START}}
+{\footnotesize\ttfamily \#define A\+U\+T\+O\+I\+P\+\_\+\+R\+A\+N\+G\+E\+\_\+\+S\+T\+A\+RT~(\hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2autoip_8h_ac19d92e0bfcb52079adbe92fb569d468}{A\+U\+T\+O\+I\+P\+\_\+\+N\+ET} $\vert$ 0x0100)}
+
+\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2autoip_8h_a5c21e0d4d66eb7056ba4d515d36f0a20}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2autoip_8h_a5c21e0d4d66eb7056ba4d515d36f0a20}} 
+\index{openmote-\/cc2538/lwip/src/include/lwip/prot/autoip.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/autoip.\+h}!D\+E\+F\+E\+N\+D\+\_\+\+I\+N\+T\+E\+R\+V\+AL@{D\+E\+F\+E\+N\+D\+\_\+\+I\+N\+T\+E\+R\+V\+AL}}
+\index{D\+E\+F\+E\+N\+D\+\_\+\+I\+N\+T\+E\+R\+V\+AL@{D\+E\+F\+E\+N\+D\+\_\+\+I\+N\+T\+E\+R\+V\+AL}!openmote-\/cc2538/lwip/src/include/lwip/prot/autoip.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/autoip.\+h}}
+\subsubsection{\texorpdfstring{D\+E\+F\+E\+N\+D\+\_\+\+I\+N\+T\+E\+R\+V\+AL}{DEFEND\_INTERVAL}}
+{\footnotesize\ttfamily \#define D\+E\+F\+E\+N\+D\+\_\+\+I\+N\+T\+E\+R\+V\+AL~10  /$\ast$ seconds  (min. wait between defensive A\+R\+Ps)     $\ast$/}
+
+\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2autoip_8h_a14d30da6b838f3d718c0d92a9f3f3816}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2autoip_8h_a14d30da6b838f3d718c0d92a9f3f3816}} 
+\index{openmote-\/cc2538/lwip/src/include/lwip/prot/autoip.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/autoip.\+h}!M\+A\+X\+\_\+\+C\+O\+N\+F\+L\+I\+C\+TS@{M\+A\+X\+\_\+\+C\+O\+N\+F\+L\+I\+C\+TS}}
+\index{M\+A\+X\+\_\+\+C\+O\+N\+F\+L\+I\+C\+TS@{M\+A\+X\+\_\+\+C\+O\+N\+F\+L\+I\+C\+TS}!openmote-\/cc2538/lwip/src/include/lwip/prot/autoip.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/autoip.\+h}}
+\subsubsection{\texorpdfstring{M\+A\+X\+\_\+\+C\+O\+N\+F\+L\+I\+C\+TS}{MAX\_CONFLICTS}}
+{\footnotesize\ttfamily \#define M\+A\+X\+\_\+\+C\+O\+N\+F\+L\+I\+C\+TS~10  /$\ast$          (max conflicts before rate limiting)   $\ast$/}
+
+\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2autoip_8h_ad408cf94a71b848cff8108dc5c1558e6}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2autoip_8h_ad408cf94a71b848cff8108dc5c1558e6}} 
+\index{openmote-\/cc2538/lwip/src/include/lwip/prot/autoip.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/autoip.\+h}!P\+R\+O\+B\+E\+\_\+\+M\+AX@{P\+R\+O\+B\+E\+\_\+\+M\+AX}}
+\index{P\+R\+O\+B\+E\+\_\+\+M\+AX@{P\+R\+O\+B\+E\+\_\+\+M\+AX}!openmote-\/cc2538/lwip/src/include/lwip/prot/autoip.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/autoip.\+h}}
+\subsubsection{\texorpdfstring{P\+R\+O\+B\+E\+\_\+\+M\+AX}{PROBE\_MAX}}
+{\footnotesize\ttfamily \#define P\+R\+O\+B\+E\+\_\+\+M\+AX~2   /$\ast$ seconds  (maximum delay till repeated probe)    $\ast$/}
+
+\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2autoip_8h_a959b454f842224af595205645244f946}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2autoip_8h_a959b454f842224af595205645244f946}} 
+\index{openmote-\/cc2538/lwip/src/include/lwip/prot/autoip.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/autoip.\+h}!P\+R\+O\+B\+E\+\_\+\+M\+IN@{P\+R\+O\+B\+E\+\_\+\+M\+IN}}
+\index{P\+R\+O\+B\+E\+\_\+\+M\+IN@{P\+R\+O\+B\+E\+\_\+\+M\+IN}!openmote-\/cc2538/lwip/src/include/lwip/prot/autoip.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/autoip.\+h}}
+\subsubsection{\texorpdfstring{P\+R\+O\+B\+E\+\_\+\+M\+IN}{PROBE\_MIN}}
+{\footnotesize\ttfamily \#define P\+R\+O\+B\+E\+\_\+\+M\+IN~1   /$\ast$ second   (minimum delay till repeated probe)    $\ast$/}
+
+\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2autoip_8h_a3a610440fbb8d2c6abb4aa9702f904ef}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2autoip_8h_a3a610440fbb8d2c6abb4aa9702f904ef}} 
+\index{openmote-\/cc2538/lwip/src/include/lwip/prot/autoip.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/autoip.\+h}!P\+R\+O\+B\+E\+\_\+\+N\+UM@{P\+R\+O\+B\+E\+\_\+\+N\+UM}}
+\index{P\+R\+O\+B\+E\+\_\+\+N\+UM@{P\+R\+O\+B\+E\+\_\+\+N\+UM}!openmote-\/cc2538/lwip/src/include/lwip/prot/autoip.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/autoip.\+h}}
+\subsubsection{\texorpdfstring{P\+R\+O\+B\+E\+\_\+\+N\+UM}{PROBE\_NUM}}
+{\footnotesize\ttfamily \#define P\+R\+O\+B\+E\+\_\+\+N\+UM~3   /$\ast$          (number of probe packets)              $\ast$/}
+
+\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2autoip_8h_aecea6220ab7fcd0910262d5929eb5d95}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2autoip_8h_aecea6220ab7fcd0910262d5929eb5d95}} 
+\index{openmote-\/cc2538/lwip/src/include/lwip/prot/autoip.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/autoip.\+h}!P\+R\+O\+B\+E\+\_\+\+W\+A\+IT@{P\+R\+O\+B\+E\+\_\+\+W\+A\+IT}}
+\index{P\+R\+O\+B\+E\+\_\+\+W\+A\+IT@{P\+R\+O\+B\+E\+\_\+\+W\+A\+IT}!openmote-\/cc2538/lwip/src/include/lwip/prot/autoip.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/autoip.\+h}}
+\subsubsection{\texorpdfstring{P\+R\+O\+B\+E\+\_\+\+W\+A\+IT}{PROBE\_WAIT}}
+{\footnotesize\ttfamily \#define P\+R\+O\+B\+E\+\_\+\+W\+A\+IT~1   /$\ast$ second   (initial random delay)                 $\ast$/}
+
+\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2autoip_8h_a420da51b5955d94c44d285638b3931bf}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2autoip_8h_a420da51b5955d94c44d285638b3931bf}} 
+\index{openmote-\/cc2538/lwip/src/include/lwip/prot/autoip.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/autoip.\+h}!R\+A\+T\+E\+\_\+\+L\+I\+M\+I\+T\+\_\+\+I\+N\+T\+E\+R\+V\+AL@{R\+A\+T\+E\+\_\+\+L\+I\+M\+I\+T\+\_\+\+I\+N\+T\+E\+R\+V\+AL}}
+\index{R\+A\+T\+E\+\_\+\+L\+I\+M\+I\+T\+\_\+\+I\+N\+T\+E\+R\+V\+AL@{R\+A\+T\+E\+\_\+\+L\+I\+M\+I\+T\+\_\+\+I\+N\+T\+E\+R\+V\+AL}!openmote-\/cc2538/lwip/src/include/lwip/prot/autoip.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/autoip.\+h}}
+\subsubsection{\texorpdfstring{R\+A\+T\+E\+\_\+\+L\+I\+M\+I\+T\+\_\+\+I\+N\+T\+E\+R\+V\+AL}{RATE\_LIMIT\_INTERVAL}}
+{\footnotesize\ttfamily \#define R\+A\+T\+E\+\_\+\+L\+I\+M\+I\+T\+\_\+\+I\+N\+T\+E\+R\+V\+AL~60  /$\ast$ seconds  (delay between successive attempts)    $\ast$/}
+
+
+
+\subsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2autoip_8h_a1a27a030b740b1577f95d5aeb54a1a0c}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2autoip_8h_a1a27a030b740b1577f95d5aeb54a1a0c}} 
+\index{openmote-\/cc2538/lwip/src/include/lwip/prot/autoip.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/autoip.\+h}!autoip\+\_\+state\+\_\+enum\+\_\+t@{autoip\+\_\+state\+\_\+enum\+\_\+t}}
+\index{autoip\+\_\+state\+\_\+enum\+\_\+t@{autoip\+\_\+state\+\_\+enum\+\_\+t}!openmote-\/cc2538/lwip/src/include/lwip/prot/autoip.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/autoip.\+h}}
+\subsubsection{\texorpdfstring{autoip\+\_\+state\+\_\+enum\+\_\+t}{autoip\_state\_enum\_t}}
+{\footnotesize\ttfamily enum \hyperlink{native_2lwip_2src_2include_2lwip_2prot_2autoip_8h_a1a27a030b740b1577f95d5aeb54a1a0c}{autoip\+\_\+state\+\_\+enum\+\_\+t}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{A\+U\+T\+O\+I\+P\+\_\+\+S\+T\+A\+T\+E\+\_\+\+O\+FF@{A\+U\+T\+O\+I\+P\+\_\+\+S\+T\+A\+T\+E\+\_\+\+O\+FF}!openmote-\/cc2538/lwip/src/include/lwip/prot/autoip.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/autoip.\+h}}\index{openmote-\/cc2538/lwip/src/include/lwip/prot/autoip.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/autoip.\+h}!A\+U\+T\+O\+I\+P\+\_\+\+S\+T\+A\+T\+E\+\_\+\+O\+FF@{A\+U\+T\+O\+I\+P\+\_\+\+S\+T\+A\+T\+E\+\_\+\+O\+FF}}}\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2autoip_8h_a1a27a030b740b1577f95d5aeb54a1a0ca11fa34497b2b043e2a5e7a43323374af}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2autoip_8h_a1a27a030b740b1577f95d5aeb54a1a0ca11fa34497b2b043e2a5e7a43323374af}} 
+A\+U\+T\+O\+I\+P\+\_\+\+S\+T\+A\+T\+E\+\_\+\+O\+FF&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{A\+U\+T\+O\+I\+P\+\_\+\+S\+T\+A\+T\+E\+\_\+\+P\+R\+O\+B\+I\+NG@{A\+U\+T\+O\+I\+P\+\_\+\+S\+T\+A\+T\+E\+\_\+\+P\+R\+O\+B\+I\+NG}!openmote-\/cc2538/lwip/src/include/lwip/prot/autoip.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/autoip.\+h}}\index{openmote-\/cc2538/lwip/src/include/lwip/prot/autoip.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/autoip.\+h}!A\+U\+T\+O\+I\+P\+\_\+\+S\+T\+A\+T\+E\+\_\+\+P\+R\+O\+B\+I\+NG@{A\+U\+T\+O\+I\+P\+\_\+\+S\+T\+A\+T\+E\+\_\+\+P\+R\+O\+B\+I\+NG}}}\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2autoip_8h_a1a27a030b740b1577f95d5aeb54a1a0ca0926fae84a811e23d48115263b8744a3}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2autoip_8h_a1a27a030b740b1577f95d5aeb54a1a0ca0926fae84a811e23d48115263b8744a3}} 
+A\+U\+T\+O\+I\+P\+\_\+\+S\+T\+A\+T\+E\+\_\+\+P\+R\+O\+B\+I\+NG&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{A\+U\+T\+O\+I\+P\+\_\+\+S\+T\+A\+T\+E\+\_\+\+A\+N\+N\+O\+U\+N\+C\+I\+NG@{A\+U\+T\+O\+I\+P\+\_\+\+S\+T\+A\+T\+E\+\_\+\+A\+N\+N\+O\+U\+N\+C\+I\+NG}!openmote-\/cc2538/lwip/src/include/lwip/prot/autoip.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/autoip.\+h}}\index{openmote-\/cc2538/lwip/src/include/lwip/prot/autoip.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/autoip.\+h}!A\+U\+T\+O\+I\+P\+\_\+\+S\+T\+A\+T\+E\+\_\+\+A\+N\+N\+O\+U\+N\+C\+I\+NG@{A\+U\+T\+O\+I\+P\+\_\+\+S\+T\+A\+T\+E\+\_\+\+A\+N\+N\+O\+U\+N\+C\+I\+NG}}}\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2autoip_8h_a1a27a030b740b1577f95d5aeb54a1a0cad35142124e3ef9875cb3a9b16209157b}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2autoip_8h_a1a27a030b740b1577f95d5aeb54a1a0cad35142124e3ef9875cb3a9b16209157b}} 
+A\+U\+T\+O\+I\+P\+\_\+\+S\+T\+A\+T\+E\+\_\+\+A\+N\+N\+O\+U\+N\+C\+I\+NG&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{A\+U\+T\+O\+I\+P\+\_\+\+S\+T\+A\+T\+E\+\_\+\+B\+O\+U\+ND@{A\+U\+T\+O\+I\+P\+\_\+\+S\+T\+A\+T\+E\+\_\+\+B\+O\+U\+ND}!openmote-\/cc2538/lwip/src/include/lwip/prot/autoip.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/autoip.\+h}}\index{openmote-\/cc2538/lwip/src/include/lwip/prot/autoip.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/autoip.\+h}!A\+U\+T\+O\+I\+P\+\_\+\+S\+T\+A\+T\+E\+\_\+\+B\+O\+U\+ND@{A\+U\+T\+O\+I\+P\+\_\+\+S\+T\+A\+T\+E\+\_\+\+B\+O\+U\+ND}}}\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2autoip_8h_a1a27a030b740b1577f95d5aeb54a1a0caa2c50906623e140882d3654c149cca45}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2autoip_8h_a1a27a030b740b1577f95d5aeb54a1a0caa2c50906623e140882d3654c149cca45}} 
+A\+U\+T\+O\+I\+P\+\_\+\+S\+T\+A\+T\+E\+\_\+\+B\+O\+U\+ND&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{A\+U\+T\+O\+I\+P\+\_\+\+S\+T\+A\+T\+E\+\_\+\+O\+FF@{A\+U\+T\+O\+I\+P\+\_\+\+S\+T\+A\+T\+E\+\_\+\+O\+FF}!openmote-\/cc2538/lwip/src/include/lwip/prot/autoip.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/autoip.\+h}}\index{openmote-\/cc2538/lwip/src/include/lwip/prot/autoip.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/autoip.\+h}!A\+U\+T\+O\+I\+P\+\_\+\+S\+T\+A\+T\+E\+\_\+\+O\+FF@{A\+U\+T\+O\+I\+P\+\_\+\+S\+T\+A\+T\+E\+\_\+\+O\+FF}}}\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2autoip_8h_a1a27a030b740b1577f95d5aeb54a1a0ca11fa34497b2b043e2a5e7a43323374af}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2autoip_8h_a1a27a030b740b1577f95d5aeb54a1a0ca11fa34497b2b043e2a5e7a43323374af}} 
+A\+U\+T\+O\+I\+P\+\_\+\+S\+T\+A\+T\+E\+\_\+\+O\+FF&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{A\+U\+T\+O\+I\+P\+\_\+\+S\+T\+A\+T\+E\+\_\+\+P\+R\+O\+B\+I\+NG@{A\+U\+T\+O\+I\+P\+\_\+\+S\+T\+A\+T\+E\+\_\+\+P\+R\+O\+B\+I\+NG}!openmote-\/cc2538/lwip/src/include/lwip/prot/autoip.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/autoip.\+h}}\index{openmote-\/cc2538/lwip/src/include/lwip/prot/autoip.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/autoip.\+h}!A\+U\+T\+O\+I\+P\+\_\+\+S\+T\+A\+T\+E\+\_\+\+P\+R\+O\+B\+I\+NG@{A\+U\+T\+O\+I\+P\+\_\+\+S\+T\+A\+T\+E\+\_\+\+P\+R\+O\+B\+I\+NG}}}\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2autoip_8h_a1a27a030b740b1577f95d5aeb54a1a0ca0926fae84a811e23d48115263b8744a3}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2autoip_8h_a1a27a030b740b1577f95d5aeb54a1a0ca0926fae84a811e23d48115263b8744a3}} 
+A\+U\+T\+O\+I\+P\+\_\+\+S\+T\+A\+T\+E\+\_\+\+P\+R\+O\+B\+I\+NG&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{A\+U\+T\+O\+I\+P\+\_\+\+S\+T\+A\+T\+E\+\_\+\+A\+N\+N\+O\+U\+N\+C\+I\+NG@{A\+U\+T\+O\+I\+P\+\_\+\+S\+T\+A\+T\+E\+\_\+\+A\+N\+N\+O\+U\+N\+C\+I\+NG}!openmote-\/cc2538/lwip/src/include/lwip/prot/autoip.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/autoip.\+h}}\index{openmote-\/cc2538/lwip/src/include/lwip/prot/autoip.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/autoip.\+h}!A\+U\+T\+O\+I\+P\+\_\+\+S\+T\+A\+T\+E\+\_\+\+A\+N\+N\+O\+U\+N\+C\+I\+NG@{A\+U\+T\+O\+I\+P\+\_\+\+S\+T\+A\+T\+E\+\_\+\+A\+N\+N\+O\+U\+N\+C\+I\+NG}}}\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2autoip_8h_a1a27a030b740b1577f95d5aeb54a1a0cad35142124e3ef9875cb3a9b16209157b}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2autoip_8h_a1a27a030b740b1577f95d5aeb54a1a0cad35142124e3ef9875cb3a9b16209157b}} 
+A\+U\+T\+O\+I\+P\+\_\+\+S\+T\+A\+T\+E\+\_\+\+A\+N\+N\+O\+U\+N\+C\+I\+NG&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{A\+U\+T\+O\+I\+P\+\_\+\+S\+T\+A\+T\+E\+\_\+\+B\+O\+U\+ND@{A\+U\+T\+O\+I\+P\+\_\+\+S\+T\+A\+T\+E\+\_\+\+B\+O\+U\+ND}!openmote-\/cc2538/lwip/src/include/lwip/prot/autoip.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/autoip.\+h}}\index{openmote-\/cc2538/lwip/src/include/lwip/prot/autoip.\+h@{openmote-\/cc2538/lwip/src/include/lwip/prot/autoip.\+h}!A\+U\+T\+O\+I\+P\+\_\+\+S\+T\+A\+T\+E\+\_\+\+B\+O\+U\+ND@{A\+U\+T\+O\+I\+P\+\_\+\+S\+T\+A\+T\+E\+\_\+\+B\+O\+U\+ND}}}\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2autoip_8h_a1a27a030b740b1577f95d5aeb54a1a0caa2c50906623e140882d3654c149cca45}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2autoip_8h_a1a27a030b740b1577f95d5aeb54a1a0caa2c50906623e140882d3654c149cca45}} 
+A\+U\+T\+O\+I\+P\+\_\+\+S\+T\+A\+T\+E\+\_\+\+B\+O\+U\+ND&\\
+\hline
+
+\end{DoxyEnumFields}

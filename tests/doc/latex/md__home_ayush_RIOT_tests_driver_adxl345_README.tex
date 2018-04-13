@@ -1,0 +1,18 @@
+This is a test application for the A\+D\+X\+L345 accelerometer.
+
+\section*{Datasheet}
+
+\href{http://www.analog.com/media/en/technical-documentation/data-sheets/ADXL345.pdf}{\tt http\+://www.\+analog.\+com/media/en/technical-\/documentation/data-\/sheets/\+A\+D\+X\+L345.\+pdf}
+
+\section*{Usage}
+
+This test application will initialize the A\+D\+X\+L345 sensor with the following parameters\+:
+\begin{DoxyItemize}
+\item I2C device address set to 0x53
+\item full scale parameter set to +/-\/16 g
+\item 200 Hz output data-\/rate
+\end{DoxyItemize}
+
+See R\+I\+O\+T/drivers/adxl345\+\_\+params.\+h for the default configuration.
+
+After initialization, the sensor reads the x-\/, y-\/, z-\/axis values every 100ms and prints them to S\+T\+D\+O\+UT. 

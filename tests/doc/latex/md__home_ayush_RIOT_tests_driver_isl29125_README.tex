@@ -1,0 +1,14 @@
+This is a manual test application for the I\+S\+L29125 light sensor driver.
+
+\section*{Usage}
+
+This test application will initialize the list sensor with the following parameters\+:
+\begin{DoxyItemize}
+\item Mode\+: All modes are tested once, then R\+GB mode is used continuously
+\item Range\+: 16000 lux
+\item Resolution\+: 16 bit
+\end{DoxyItemize}
+
+After initialization, the sensor value is read every 250ms and printed to the stdout.
+
+Expose the sensor to varying light sources to see changing readouts. 

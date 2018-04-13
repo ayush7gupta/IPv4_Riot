@@ -1,0 +1,203 @@
+\hypertarget{native_2lwip_2src_2include_2lwip_2tcpip_8h}{}\section{/home/ayush/\+R\+I\+O\+T/tests/lwip/bin/pkg/native/lwip/src/include/lwip/tcpip.h File Reference}
+\label{native_2lwip_2src_2include_2lwip_2tcpip_8h}\index{/home/ayush/\+R\+I\+O\+T/tests/lwip/bin/pkg/native/lwip/src/include/lwip/tcpip.\+h@{/home/ayush/\+R\+I\+O\+T/tests/lwip/bin/pkg/native/lwip/src/include/lwip/tcpip.\+h}}
+{\ttfamily \#include \char`\"{}lwip/opt.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}lwip/err.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}lwip/timeouts.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}lwip/netif.\+h\char`\"{}}\newline
+Include dependency graph for tcpip.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{native_2lwip_2src_2include_2lwip_2tcpip_8h__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{native_2lwip_2src_2include_2lwip_2tcpip_8h_a4700525e737fc025fea4887b172e0c95}{L\+O\+C\+K\+\_\+\+T\+C\+P\+I\+P\+\_\+\+C\+O\+RE}()
+\item 
+\#define \hyperlink{native_2lwip_2src_2include_2lwip_2tcpip_8h_a915effea029b9c4891e1ec635eb1826d}{U\+N\+L\+O\+C\+K\+\_\+\+T\+C\+P\+I\+P\+\_\+\+C\+O\+RE}()
+\item 
+\#define \hyperlink{group__lwip__os_ga7eb868a1215472ec38f3f2a04d442b9f}{tcpip\+\_\+callback}(f,  ctx)~\hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2tcpip_8h_ab1d3ef23817d7703fa75ed67bd45ea1d}{tcpip\+\_\+callback\+\_\+with\+\_\+block}(f, ctx, 1)
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef void($\ast$ \hyperlink{native_2lwip_2src_2include_2lwip_2tcpip_8h_a5fe07216c441e27c3028bcac60fa0992}{tcpip\+\_\+init\+\_\+done\+\_\+fn}) (void $\ast$arg)
+\item 
+typedef void($\ast$ \hyperlink{native_2lwip_2src_2include_2lwip_2tcpip_8h_a35203296bb838f3b493839ffc6e7285d}{tcpip\+\_\+callback\+\_\+fn}) (void $\ast$ctx)
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{group__lwip__os_ga1f3a88b8df6ba3b9ed1c00e0a305e3db}{tcpip\+\_\+init} (\hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2tcpip_8h_a5fe07216c441e27c3028bcac60fa0992}{tcpip\+\_\+init\+\_\+done\+\_\+fn} tcpip\+\_\+init\+\_\+done, void $\ast$arg)
+\item 
+\hyperlink{group__infrastructure__errors_gaf02d9da80fd66b4f986d2c53d7231ddb}{err\+\_\+t} \hyperlink{native_2lwip_2src_2include_2lwip_2tcpip_8h_a93043b3c66dbe4a15a60299c6199d102}{tcpip\+\_\+inpkt} (struct \hyperlink{structpbuf}{pbuf} $\ast$p, struct \hyperlink{structnetif}{netif} $\ast$inp, \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2netif_8h_ab2302b1b64ac7b95f24c6bab754a575e}{netif\+\_\+input\+\_\+fn} input\+\_\+fn)
+\item 
+\hyperlink{group__infrastructure__errors_gaf02d9da80fd66b4f986d2c53d7231ddb}{err\+\_\+t} \hyperlink{group__lwip__os_gae510f195171bed8499ae94e264a92717}{tcpip\+\_\+input} (struct \hyperlink{structpbuf}{pbuf} $\ast$p, struct \hyperlink{structnetif}{netif} $\ast$inp)
+\item 
+\hyperlink{group__infrastructure__errors_gaf02d9da80fd66b4f986d2c53d7231ddb}{err\+\_\+t} \hyperlink{native_2lwip_2src_2include_2lwip_2tcpip_8h_ab1d3ef23817d7703fa75ed67bd45ea1d}{tcpip\+\_\+callback\+\_\+with\+\_\+block} (\hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2tcpip_8h_a35203296bb838f3b493839ffc6e7285d}{tcpip\+\_\+callback\+\_\+fn} function, void $\ast$ctx, \hyperlink{group__compiler__abstraction_ga4caecabca98b43919dd11be1c0d4cd8e}{u8\+\_\+t} block)
+\item 
+struct tcpip\+\_\+callback\+\_\+msg $\ast$ \hyperlink{native_2lwip_2src_2include_2lwip_2tcpip_8h_aee14fa2587a9ba9d23e4c7e16c4526ac}{tcpip\+\_\+callbackmsg\+\_\+new} (\hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2tcpip_8h_a35203296bb838f3b493839ffc6e7285d}{tcpip\+\_\+callback\+\_\+fn} function, void $\ast$ctx)
+\item 
+void \hyperlink{native_2lwip_2src_2include_2lwip_2tcpip_8h_ac5b7a59f4c3f5f721ab9ee81f231c9fd}{tcpip\+\_\+callbackmsg\+\_\+delete} (struct tcpip\+\_\+callback\+\_\+msg $\ast$msg)
+\item 
+\hyperlink{group__infrastructure__errors_gaf02d9da80fd66b4f986d2c53d7231ddb}{err\+\_\+t} \hyperlink{native_2lwip_2src_2include_2lwip_2tcpip_8h_acfc81ad493f68714a22b3b8ea7d04378}{tcpip\+\_\+trycallback} (struct tcpip\+\_\+callback\+\_\+msg $\ast$msg)
+\item 
+\hyperlink{group__infrastructure__errors_gaf02d9da80fd66b4f986d2c53d7231ddb}{err\+\_\+t} \hyperlink{native_2lwip_2src_2include_2lwip_2tcpip_8h_a5cdcb6b784fe0e8736a5b31a5cfbed6c}{pbuf\+\_\+free\+\_\+callback} (struct \hyperlink{structpbuf}{pbuf} $\ast$p)
+\item 
+\hyperlink{group__infrastructure__errors_gaf02d9da80fd66b4f986d2c53d7231ddb}{err\+\_\+t} \hyperlink{native_2lwip_2src_2include_2lwip_2tcpip_8h_a55b4de3765c6a37b3f2b26a11603771c}{mem\+\_\+free\+\_\+callback} (void $\ast$m)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Functions to sync with T\+C\+P\+IP thread 
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{native_2lwip_2src_2include_2lwip_2tcpip_8h_a4700525e737fc025fea4887b172e0c95}\label{native_2lwip_2src_2include_2lwip_2tcpip_8h_a4700525e737fc025fea4887b172e0c95}} 
+\index{native/lwip/src/include/lwip/tcpip.\+h@{native/lwip/src/include/lwip/tcpip.\+h}!L\+O\+C\+K\+\_\+\+T\+C\+P\+I\+P\+\_\+\+C\+O\+RE@{L\+O\+C\+K\+\_\+\+T\+C\+P\+I\+P\+\_\+\+C\+O\+RE}}
+\index{L\+O\+C\+K\+\_\+\+T\+C\+P\+I\+P\+\_\+\+C\+O\+RE@{L\+O\+C\+K\+\_\+\+T\+C\+P\+I\+P\+\_\+\+C\+O\+RE}!native/lwip/src/include/lwip/tcpip.\+h@{native/lwip/src/include/lwip/tcpip.\+h}}
+\subsubsection{\texorpdfstring{L\+O\+C\+K\+\_\+\+T\+C\+P\+I\+P\+\_\+\+C\+O\+RE}{LOCK\_TCPIP\_CORE}}
+{\footnotesize\ttfamily \#define L\+O\+C\+K\+\_\+\+T\+C\+P\+I\+P\+\_\+\+C\+O\+RE(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{native_2lwip_2src_2include_2lwip_2tcpip_8h_a915effea029b9c4891e1ec635eb1826d}\label{native_2lwip_2src_2include_2lwip_2tcpip_8h_a915effea029b9c4891e1ec635eb1826d}} 
+\index{native/lwip/src/include/lwip/tcpip.\+h@{native/lwip/src/include/lwip/tcpip.\+h}!U\+N\+L\+O\+C\+K\+\_\+\+T\+C\+P\+I\+P\+\_\+\+C\+O\+RE@{U\+N\+L\+O\+C\+K\+\_\+\+T\+C\+P\+I\+P\+\_\+\+C\+O\+RE}}
+\index{U\+N\+L\+O\+C\+K\+\_\+\+T\+C\+P\+I\+P\+\_\+\+C\+O\+RE@{U\+N\+L\+O\+C\+K\+\_\+\+T\+C\+P\+I\+P\+\_\+\+C\+O\+RE}!native/lwip/src/include/lwip/tcpip.\+h@{native/lwip/src/include/lwip/tcpip.\+h}}
+\subsubsection{\texorpdfstring{U\+N\+L\+O\+C\+K\+\_\+\+T\+C\+P\+I\+P\+\_\+\+C\+O\+RE}{UNLOCK\_TCPIP\_CORE}}
+{\footnotesize\ttfamily \#define U\+N\+L\+O\+C\+K\+\_\+\+T\+C\+P\+I\+P\+\_\+\+C\+O\+RE(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\subsection{Typedef Documentation}
+\mbox{\Hypertarget{native_2lwip_2src_2include_2lwip_2tcpip_8h_a35203296bb838f3b493839ffc6e7285d}\label{native_2lwip_2src_2include_2lwip_2tcpip_8h_a35203296bb838f3b493839ffc6e7285d}} 
+\index{native/lwip/src/include/lwip/tcpip.\+h@{native/lwip/src/include/lwip/tcpip.\+h}!tcpip\+\_\+callback\+\_\+fn@{tcpip\+\_\+callback\+\_\+fn}}
+\index{tcpip\+\_\+callback\+\_\+fn@{tcpip\+\_\+callback\+\_\+fn}!native/lwip/src/include/lwip/tcpip.\+h@{native/lwip/src/include/lwip/tcpip.\+h}}
+\subsubsection{\texorpdfstring{tcpip\+\_\+callback\+\_\+fn}{tcpip\_callback\_fn}}
+{\footnotesize\ttfamily typedef void($\ast$ tcpip\+\_\+callback\+\_\+fn) (void $\ast$ctx)}
+
+Function prototype for functions passed to \hyperlink{group__lwip__os_ga7eb868a1215472ec38f3f2a04d442b9f}{tcpip\+\_\+callback()} \mbox{\Hypertarget{native_2lwip_2src_2include_2lwip_2tcpip_8h_a5fe07216c441e27c3028bcac60fa0992}\label{native_2lwip_2src_2include_2lwip_2tcpip_8h_a5fe07216c441e27c3028bcac60fa0992}} 
+\index{native/lwip/src/include/lwip/tcpip.\+h@{native/lwip/src/include/lwip/tcpip.\+h}!tcpip\+\_\+init\+\_\+done\+\_\+fn@{tcpip\+\_\+init\+\_\+done\+\_\+fn}}
+\index{tcpip\+\_\+init\+\_\+done\+\_\+fn@{tcpip\+\_\+init\+\_\+done\+\_\+fn}!native/lwip/src/include/lwip/tcpip.\+h@{native/lwip/src/include/lwip/tcpip.\+h}}
+\subsubsection{\texorpdfstring{tcpip\+\_\+init\+\_\+done\+\_\+fn}{tcpip\_init\_done\_fn}}
+{\footnotesize\ttfamily typedef void($\ast$ tcpip\+\_\+init\+\_\+done\+\_\+fn) (void $\ast$arg)}
+
+Function prototype for the init\+\_\+done function passed to tcpip\+\_\+init 
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{native_2lwip_2src_2include_2lwip_2tcpip_8h_a55b4de3765c6a37b3f2b26a11603771c}\label{native_2lwip_2src_2include_2lwip_2tcpip_8h_a55b4de3765c6a37b3f2b26a11603771c}} 
+\index{native/lwip/src/include/lwip/tcpip.\+h@{native/lwip/src/include/lwip/tcpip.\+h}!mem\+\_\+free\+\_\+callback@{mem\+\_\+free\+\_\+callback}}
+\index{mem\+\_\+free\+\_\+callback@{mem\+\_\+free\+\_\+callback}!native/lwip/src/include/lwip/tcpip.\+h@{native/lwip/src/include/lwip/tcpip.\+h}}
+\subsubsection{\texorpdfstring{mem\+\_\+free\+\_\+callback()}{mem\_free\_callback()}}
+{\footnotesize\ttfamily \hyperlink{group__infrastructure__errors_gaf02d9da80fd66b4f986d2c53d7231ddb}{err\+\_\+t} mem\+\_\+free\+\_\+callback (\begin{DoxyParamCaption}\item[{void $\ast$}]{m }\end{DoxyParamCaption})}
+
+A simple wrapper function that allows you to free heap memory from interrupt context.
+
+
+\begin{DoxyParams}{Parameters}
+{\em m} & the heap memory to free \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+E\+R\+R\+\_\+\+OK if callback could be enqueued, an err\+\_\+t if not 
+\end{DoxyReturn}
+\mbox{\Hypertarget{native_2lwip_2src_2include_2lwip_2tcpip_8h_a5cdcb6b784fe0e8736a5b31a5cfbed6c}\label{native_2lwip_2src_2include_2lwip_2tcpip_8h_a5cdcb6b784fe0e8736a5b31a5cfbed6c}} 
+\index{native/lwip/src/include/lwip/tcpip.\+h@{native/lwip/src/include/lwip/tcpip.\+h}!pbuf\+\_\+free\+\_\+callback@{pbuf\+\_\+free\+\_\+callback}}
+\index{pbuf\+\_\+free\+\_\+callback@{pbuf\+\_\+free\+\_\+callback}!native/lwip/src/include/lwip/tcpip.\+h@{native/lwip/src/include/lwip/tcpip.\+h}}
+\subsubsection{\texorpdfstring{pbuf\+\_\+free\+\_\+callback()}{pbuf\_free\_callback()}}
+{\footnotesize\ttfamily \hyperlink{group__infrastructure__errors_gaf02d9da80fd66b4f986d2c53d7231ddb}{err\+\_\+t} pbuf\+\_\+free\+\_\+callback (\begin{DoxyParamCaption}\item[{struct \hyperlink{structpbuf}{pbuf} $\ast$}]{p }\end{DoxyParamCaption})}
+
+A simple wrapper function that allows you to free a pbuf from interrupt context.
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & The pbuf (chain) to be dereferenced. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+E\+R\+R\+\_\+\+OK if callback could be enqueued, an err\+\_\+t if not 
+\end{DoxyReturn}
+\mbox{\Hypertarget{native_2lwip_2src_2include_2lwip_2tcpip_8h_ab1d3ef23817d7703fa75ed67bd45ea1d}\label{native_2lwip_2src_2include_2lwip_2tcpip_8h_ab1d3ef23817d7703fa75ed67bd45ea1d}} 
+\index{native/lwip/src/include/lwip/tcpip.\+h@{native/lwip/src/include/lwip/tcpip.\+h}!tcpip\+\_\+callback\+\_\+with\+\_\+block@{tcpip\+\_\+callback\+\_\+with\+\_\+block}}
+\index{tcpip\+\_\+callback\+\_\+with\+\_\+block@{tcpip\+\_\+callback\+\_\+with\+\_\+block}!native/lwip/src/include/lwip/tcpip.\+h@{native/lwip/src/include/lwip/tcpip.\+h}}
+\subsubsection{\texorpdfstring{tcpip\+\_\+callback\+\_\+with\+\_\+block()}{tcpip\_callback\_with\_block()}}
+{\footnotesize\ttfamily \hyperlink{group__infrastructure__errors_gaf02d9da80fd66b4f986d2c53d7231ddb}{err\+\_\+t} tcpip\+\_\+callback\+\_\+with\+\_\+block (\begin{DoxyParamCaption}\item[{\hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2tcpip_8h_a35203296bb838f3b493839ffc6e7285d}{tcpip\+\_\+callback\+\_\+fn}}]{function,  }\item[{void $\ast$}]{ctx,  }\item[{\hyperlink{group__compiler__abstraction_ga4caecabca98b43919dd11be1c0d4cd8e}{u8\+\_\+t}}]{block }\end{DoxyParamCaption})}
+
+Call a specific function in the thread context of tcpip\+\_\+thread for easy access synchronization. A function called in that way may access lw\+IP core code without fearing concurrent access.
+
+
+\begin{DoxyParams}{Parameters}
+{\em function} & the function to call \\
+\hline
+{\em ctx} & parameter passed to f \\
+\hline
+{\em block} & 1 to block until the request is posted, 0 to non-\/blocking mode \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+E\+R\+R\+\_\+\+OK if the function was called, another err\+\_\+t if not 
+\end{DoxyReturn}
+\mbox{\Hypertarget{native_2lwip_2src_2include_2lwip_2tcpip_8h_ac5b7a59f4c3f5f721ab9ee81f231c9fd}\label{native_2lwip_2src_2include_2lwip_2tcpip_8h_ac5b7a59f4c3f5f721ab9ee81f231c9fd}} 
+\index{native/lwip/src/include/lwip/tcpip.\+h@{native/lwip/src/include/lwip/tcpip.\+h}!tcpip\+\_\+callbackmsg\+\_\+delete@{tcpip\+\_\+callbackmsg\+\_\+delete}}
+\index{tcpip\+\_\+callbackmsg\+\_\+delete@{tcpip\+\_\+callbackmsg\+\_\+delete}!native/lwip/src/include/lwip/tcpip.\+h@{native/lwip/src/include/lwip/tcpip.\+h}}
+\subsubsection{\texorpdfstring{tcpip\+\_\+callbackmsg\+\_\+delete()}{tcpip\_callbackmsg\_delete()}}
+{\footnotesize\ttfamily void tcpip\+\_\+callbackmsg\+\_\+delete (\begin{DoxyParamCaption}\item[{struct tcpip\+\_\+callback\+\_\+msg $\ast$}]{msg }\end{DoxyParamCaption})}
+
+Free a callback message allocated by \hyperlink{native_2lwip_2src_2api_2tcpip_8c_aee14fa2587a9ba9d23e4c7e16c4526ac}{tcpip\+\_\+callbackmsg\+\_\+new()}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em msg} & the message to free \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{native_2lwip_2src_2include_2lwip_2tcpip_8h_aee14fa2587a9ba9d23e4c7e16c4526ac}\label{native_2lwip_2src_2include_2lwip_2tcpip_8h_aee14fa2587a9ba9d23e4c7e16c4526ac}} 
+\index{native/lwip/src/include/lwip/tcpip.\+h@{native/lwip/src/include/lwip/tcpip.\+h}!tcpip\+\_\+callbackmsg\+\_\+new@{tcpip\+\_\+callbackmsg\+\_\+new}}
+\index{tcpip\+\_\+callbackmsg\+\_\+new@{tcpip\+\_\+callbackmsg\+\_\+new}!native/lwip/src/include/lwip/tcpip.\+h@{native/lwip/src/include/lwip/tcpip.\+h}}
+\subsubsection{\texorpdfstring{tcpip\+\_\+callbackmsg\+\_\+new()}{tcpip\_callbackmsg\_new()}}
+{\footnotesize\ttfamily struct tcpip\+\_\+callback\+\_\+msg$\ast$ tcpip\+\_\+callbackmsg\+\_\+new (\begin{DoxyParamCaption}\item[{\hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2tcpip_8h_a35203296bb838f3b493839ffc6e7285d}{tcpip\+\_\+callback\+\_\+fn}}]{function,  }\item[{void $\ast$}]{ctx }\end{DoxyParamCaption})}
+
+Allocate a structure for a static callback message and initialize it. This is intended to be used to send \char`\"{}static\char`\"{} messages from interrupt context.
+
+
+\begin{DoxyParams}{Parameters}
+{\em function} & the function to call \\
+\hline
+{\em ctx} & parameter passed to function \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a struct pointer to pass to \hyperlink{native_2lwip_2src_2api_2tcpip_8c_acfc81ad493f68714a22b3b8ea7d04378}{tcpip\+\_\+trycallback()}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{native_2lwip_2src_2include_2lwip_2tcpip_8h_a93043b3c66dbe4a15a60299c6199d102}\label{native_2lwip_2src_2include_2lwip_2tcpip_8h_a93043b3c66dbe4a15a60299c6199d102}} 
+\index{native/lwip/src/include/lwip/tcpip.\+h@{native/lwip/src/include/lwip/tcpip.\+h}!tcpip\+\_\+inpkt@{tcpip\+\_\+inpkt}}
+\index{tcpip\+\_\+inpkt@{tcpip\+\_\+inpkt}!native/lwip/src/include/lwip/tcpip.\+h@{native/lwip/src/include/lwip/tcpip.\+h}}
+\subsubsection{\texorpdfstring{tcpip\+\_\+inpkt()}{tcpip\_inpkt()}}
+{\footnotesize\ttfamily \hyperlink{group__infrastructure__errors_gaf02d9da80fd66b4f986d2c53d7231ddb}{err\+\_\+t} tcpip\+\_\+inpkt (\begin{DoxyParamCaption}\item[{struct \hyperlink{structpbuf}{pbuf} $\ast$}]{p,  }\item[{struct \hyperlink{structnetif}{netif} $\ast$}]{inp,  }\item[{\hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2netif_8h_ab2302b1b64ac7b95f24c6bab754a575e}{netif\+\_\+input\+\_\+fn}}]{input\+\_\+fn }\end{DoxyParamCaption})}
+
+Pass a received packet to tcpip\+\_\+thread for input processing
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & the received packet \\
+\hline
+{\em inp} & the network interface on which the packet was received \\
+\hline
+{\em input\+\_\+fn} & input function to call \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{native_2lwip_2src_2include_2lwip_2tcpip_8h_acfc81ad493f68714a22b3b8ea7d04378}\label{native_2lwip_2src_2include_2lwip_2tcpip_8h_acfc81ad493f68714a22b3b8ea7d04378}} 
+\index{native/lwip/src/include/lwip/tcpip.\+h@{native/lwip/src/include/lwip/tcpip.\+h}!tcpip\+\_\+trycallback@{tcpip\+\_\+trycallback}}
+\index{tcpip\+\_\+trycallback@{tcpip\+\_\+trycallback}!native/lwip/src/include/lwip/tcpip.\+h@{native/lwip/src/include/lwip/tcpip.\+h}}
+\subsubsection{\texorpdfstring{tcpip\+\_\+trycallback()}{tcpip\_trycallback()}}
+{\footnotesize\ttfamily \hyperlink{group__infrastructure__errors_gaf02d9da80fd66b4f986d2c53d7231ddb}{err\+\_\+t} tcpip\+\_\+trycallback (\begin{DoxyParamCaption}\item[{struct tcpip\+\_\+callback\+\_\+msg $\ast$}]{msg }\end{DoxyParamCaption})}
+
+Try to post a callback-\/message to the tcpip\+\_\+thread mbox This is intended to be used to send \char`\"{}static\char`\"{} messages from interrupt context.
+
+
+\begin{DoxyParams}{Parameters}
+{\em msg} & pointer to the message to post \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{group__sys__mbox_gaa36345e48a49d67cbb0878cd4cbd2195}{sys\+\_\+mbox\+\_\+trypost()} return code 
+\end{DoxyReturn}

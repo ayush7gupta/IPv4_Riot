@@ -1,0 +1,129 @@
+\hypertarget{pthread__rwlock_2main_8c}{}\section{/home/ayush/\+R\+I\+O\+T/tests/pthread\+\_\+rwlock/main.c File Reference}
+\label{pthread__rwlock_2main_8c}\index{/home/ayush/\+R\+I\+O\+T/tests/pthread\+\_\+rwlock/main.\+c@{/home/ayush/\+R\+I\+O\+T/tests/pthread\+\_\+rwlock/main.\+c}}
+
+
+Test rwlock implementation.  
+
+
+{\ttfamily \#include $<$pthread.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}random.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}sched.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}thread.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}xtimer.\+h\char`\"{}}\newline
+Include dependency graph for main.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{pthread__rwlock_2main_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{pthread__rwlock_2main_8c_a7595fdb8aaf44df2256e0813b4e290f1}{N\+U\+M\+\_\+\+R\+E\+A\+D\+E\+R\+S\+\_\+\+H\+I\+GH}~2
+\item 
+\#define \hyperlink{pthread__rwlock_2main_8c_a9c77c6220da883a2ea5148d6e99d2ba7}{N\+U\+M\+\_\+\+R\+E\+A\+D\+E\+R\+S\+\_\+\+L\+OW}~3
+\item 
+\#define \hyperlink{pthread__rwlock_2main_8c_ae03c41a472e68c5553619bb19bce230f}{N\+U\+M\+\_\+\+W\+R\+I\+T\+E\+R\+S\+\_\+\+H\+I\+GH}~1
+\item 
+\#define \hyperlink{pthread__rwlock_2main_8c_a87701cf89a11fb1dd7e63d5f381b39f3}{N\+U\+M\+\_\+\+W\+R\+I\+T\+E\+R\+S\+\_\+\+L\+OW}~2
+\item 
+\#define \hyperlink{pthread__rwlock_2main_8c_a816cfaeef4c1fd8e61f84eff59948369}{N\+U\+M\+\_\+\+R\+E\+A\+D\+E\+RS}~(\hyperlink{pthread__rwlock_2main_8c_a7595fdb8aaf44df2256e0813b4e290f1}{N\+U\+M\+\_\+\+R\+E\+A\+D\+E\+R\+S\+\_\+\+H\+I\+GH} + \hyperlink{pthread__rwlock_2main_8c_a9c77c6220da883a2ea5148d6e99d2ba7}{N\+U\+M\+\_\+\+R\+E\+A\+D\+E\+R\+S\+\_\+\+L\+OW})
+\item 
+\#define \hyperlink{pthread__rwlock_2main_8c_a464de3c0d06dd6538e689adf191d9a9b}{N\+U\+M\+\_\+\+W\+R\+I\+T\+E\+RS}~(\hyperlink{pthread__rwlock_2main_8c_ae03c41a472e68c5553619bb19bce230f}{N\+U\+M\+\_\+\+W\+R\+I\+T\+E\+R\+S\+\_\+\+H\+I\+GH} + \hyperlink{pthread__rwlock_2main_8c_a87701cf89a11fb1dd7e63d5f381b39f3}{N\+U\+M\+\_\+\+W\+R\+I\+T\+E\+R\+S\+\_\+\+L\+OW})
+\item 
+\#define \hyperlink{pthread__rwlock_2main_8c_a5abfca151ab0db98334eff163e9bfc99}{N\+U\+M\+\_\+\+C\+H\+I\+L\+D\+R\+EN}~(\hyperlink{pthread__rwlock_2main_8c_a816cfaeef4c1fd8e61f84eff59948369}{N\+U\+M\+\_\+\+R\+E\+A\+D\+E\+RS} + \hyperlink{pthread__rwlock_2main_8c_a464de3c0d06dd6538e689adf191d9a9b}{N\+U\+M\+\_\+\+W\+R\+I\+T\+E\+RS})
+\item 
+\#define \hyperlink{pthread__rwlock_2main_8c_ab3be0641eb76161a48ed528e6eea2ac3}{N\+U\+M\+\_\+\+I\+T\+E\+R\+A\+T\+I\+O\+NS}~5
+\item 
+\#define \hyperlink{pthread__rwlock_2main_8c_a32ee58f73d9de0d1d41ad46f7bff2719}{R\+A\+N\+D\+\_\+\+S\+E\+ED}~0x\+C0\+F\+F\+EE
+\item 
+\#define \hyperlink{pthread__rwlock_2main_8c_a4d0d86c2a4fa8d31c409fb1228022bc8}{P\+R\+I\+N\+TF}(F\+MT, ...)~printf(\char`\"{}\%c\%\char`\"{} P\+R\+Ikernel\+\_\+pid \char`\"{} (prio=\%u)\+: \char`\"{} F\+MT \char`\"{}\textbackslash{}n\char`\"{}, \+\_\+\+\_\+func\+\_\+\+\_\+\mbox{[}0\mbox{]}, sched\+\_\+active\+\_\+pid, \hyperlink{rmutex_2main_8c_a5aed9d30fb31c14c7ddff73c35f85818}{sched\+\_\+active\+\_\+thread}-\/$>$priority, \+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+)
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{pthread__rwlock_2main_8c_a840291bc02cba5474a4cb46a9b9566fe}{main} (void)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Test rwlock implementation. 
+
+\begin{DoxyAuthor}{Author}
+René Kijewski \href{mailto:rene.kijewski@fu-berlin.de}{\tt rene.\+kijewski@fu-\/berlin.\+de} 
+\end{DoxyAuthor}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{pthread__rwlock_2main_8c_a5abfca151ab0db98334eff163e9bfc99}\label{pthread__rwlock_2main_8c_a5abfca151ab0db98334eff163e9bfc99}} 
+\index{pthread\+\_\+rwlock/main.\+c@{pthread\+\_\+rwlock/main.\+c}!N\+U\+M\+\_\+\+C\+H\+I\+L\+D\+R\+EN@{N\+U\+M\+\_\+\+C\+H\+I\+L\+D\+R\+EN}}
+\index{N\+U\+M\+\_\+\+C\+H\+I\+L\+D\+R\+EN@{N\+U\+M\+\_\+\+C\+H\+I\+L\+D\+R\+EN}!pthread\+\_\+rwlock/main.\+c@{pthread\+\_\+rwlock/main.\+c}}
+\subsubsection{\texorpdfstring{N\+U\+M\+\_\+\+C\+H\+I\+L\+D\+R\+EN}{NUM\_CHILDREN}}
+{\footnotesize\ttfamily \#define N\+U\+M\+\_\+\+C\+H\+I\+L\+D\+R\+EN~(\hyperlink{pthread__rwlock_2main_8c_a816cfaeef4c1fd8e61f84eff59948369}{N\+U\+M\+\_\+\+R\+E\+A\+D\+E\+RS} + \hyperlink{pthread__rwlock_2main_8c_a464de3c0d06dd6538e689adf191d9a9b}{N\+U\+M\+\_\+\+W\+R\+I\+T\+E\+RS})}
+
+\mbox{\Hypertarget{pthread__rwlock_2main_8c_ab3be0641eb76161a48ed528e6eea2ac3}\label{pthread__rwlock_2main_8c_ab3be0641eb76161a48ed528e6eea2ac3}} 
+\index{pthread\+\_\+rwlock/main.\+c@{pthread\+\_\+rwlock/main.\+c}!N\+U\+M\+\_\+\+I\+T\+E\+R\+A\+T\+I\+O\+NS@{N\+U\+M\+\_\+\+I\+T\+E\+R\+A\+T\+I\+O\+NS}}
+\index{N\+U\+M\+\_\+\+I\+T\+E\+R\+A\+T\+I\+O\+NS@{N\+U\+M\+\_\+\+I\+T\+E\+R\+A\+T\+I\+O\+NS}!pthread\+\_\+rwlock/main.\+c@{pthread\+\_\+rwlock/main.\+c}}
+\subsubsection{\texorpdfstring{N\+U\+M\+\_\+\+I\+T\+E\+R\+A\+T\+I\+O\+NS}{NUM\_ITERATIONS}}
+{\footnotesize\ttfamily \#define N\+U\+M\+\_\+\+I\+T\+E\+R\+A\+T\+I\+O\+NS~5}
+
+\mbox{\Hypertarget{pthread__rwlock_2main_8c_a816cfaeef4c1fd8e61f84eff59948369}\label{pthread__rwlock_2main_8c_a816cfaeef4c1fd8e61f84eff59948369}} 
+\index{pthread\+\_\+rwlock/main.\+c@{pthread\+\_\+rwlock/main.\+c}!N\+U\+M\+\_\+\+R\+E\+A\+D\+E\+RS@{N\+U\+M\+\_\+\+R\+E\+A\+D\+E\+RS}}
+\index{N\+U\+M\+\_\+\+R\+E\+A\+D\+E\+RS@{N\+U\+M\+\_\+\+R\+E\+A\+D\+E\+RS}!pthread\+\_\+rwlock/main.\+c@{pthread\+\_\+rwlock/main.\+c}}
+\subsubsection{\texorpdfstring{N\+U\+M\+\_\+\+R\+E\+A\+D\+E\+RS}{NUM\_READERS}}
+{\footnotesize\ttfamily \#define N\+U\+M\+\_\+\+R\+E\+A\+D\+E\+RS~(\hyperlink{pthread__rwlock_2main_8c_a7595fdb8aaf44df2256e0813b4e290f1}{N\+U\+M\+\_\+\+R\+E\+A\+D\+E\+R\+S\+\_\+\+H\+I\+GH} + \hyperlink{pthread__rwlock_2main_8c_a9c77c6220da883a2ea5148d6e99d2ba7}{N\+U\+M\+\_\+\+R\+E\+A\+D\+E\+R\+S\+\_\+\+L\+OW})}
+
+\mbox{\Hypertarget{pthread__rwlock_2main_8c_a7595fdb8aaf44df2256e0813b4e290f1}\label{pthread__rwlock_2main_8c_a7595fdb8aaf44df2256e0813b4e290f1}} 
+\index{pthread\+\_\+rwlock/main.\+c@{pthread\+\_\+rwlock/main.\+c}!N\+U\+M\+\_\+\+R\+E\+A\+D\+E\+R\+S\+\_\+\+H\+I\+GH@{N\+U\+M\+\_\+\+R\+E\+A\+D\+E\+R\+S\+\_\+\+H\+I\+GH}}
+\index{N\+U\+M\+\_\+\+R\+E\+A\+D\+E\+R\+S\+\_\+\+H\+I\+GH@{N\+U\+M\+\_\+\+R\+E\+A\+D\+E\+R\+S\+\_\+\+H\+I\+GH}!pthread\+\_\+rwlock/main.\+c@{pthread\+\_\+rwlock/main.\+c}}
+\subsubsection{\texorpdfstring{N\+U\+M\+\_\+\+R\+E\+A\+D\+E\+R\+S\+\_\+\+H\+I\+GH}{NUM\_READERS\_HIGH}}
+{\footnotesize\ttfamily \#define N\+U\+M\+\_\+\+R\+E\+A\+D\+E\+R\+S\+\_\+\+H\+I\+GH~2}
+
+\mbox{\Hypertarget{pthread__rwlock_2main_8c_a9c77c6220da883a2ea5148d6e99d2ba7}\label{pthread__rwlock_2main_8c_a9c77c6220da883a2ea5148d6e99d2ba7}} 
+\index{pthread\+\_\+rwlock/main.\+c@{pthread\+\_\+rwlock/main.\+c}!N\+U\+M\+\_\+\+R\+E\+A\+D\+E\+R\+S\+\_\+\+L\+OW@{N\+U\+M\+\_\+\+R\+E\+A\+D\+E\+R\+S\+\_\+\+L\+OW}}
+\index{N\+U\+M\+\_\+\+R\+E\+A\+D\+E\+R\+S\+\_\+\+L\+OW@{N\+U\+M\+\_\+\+R\+E\+A\+D\+E\+R\+S\+\_\+\+L\+OW}!pthread\+\_\+rwlock/main.\+c@{pthread\+\_\+rwlock/main.\+c}}
+\subsubsection{\texorpdfstring{N\+U\+M\+\_\+\+R\+E\+A\+D\+E\+R\+S\+\_\+\+L\+OW}{NUM\_READERS\_LOW}}
+{\footnotesize\ttfamily \#define N\+U\+M\+\_\+\+R\+E\+A\+D\+E\+R\+S\+\_\+\+L\+OW~3}
+
+\mbox{\Hypertarget{pthread__rwlock_2main_8c_a464de3c0d06dd6538e689adf191d9a9b}\label{pthread__rwlock_2main_8c_a464de3c0d06dd6538e689adf191d9a9b}} 
+\index{pthread\+\_\+rwlock/main.\+c@{pthread\+\_\+rwlock/main.\+c}!N\+U\+M\+\_\+\+W\+R\+I\+T\+E\+RS@{N\+U\+M\+\_\+\+W\+R\+I\+T\+E\+RS}}
+\index{N\+U\+M\+\_\+\+W\+R\+I\+T\+E\+RS@{N\+U\+M\+\_\+\+W\+R\+I\+T\+E\+RS}!pthread\+\_\+rwlock/main.\+c@{pthread\+\_\+rwlock/main.\+c}}
+\subsubsection{\texorpdfstring{N\+U\+M\+\_\+\+W\+R\+I\+T\+E\+RS}{NUM\_WRITERS}}
+{\footnotesize\ttfamily \#define N\+U\+M\+\_\+\+W\+R\+I\+T\+E\+RS~(\hyperlink{pthread__rwlock_2main_8c_ae03c41a472e68c5553619bb19bce230f}{N\+U\+M\+\_\+\+W\+R\+I\+T\+E\+R\+S\+\_\+\+H\+I\+GH} + \hyperlink{pthread__rwlock_2main_8c_a87701cf89a11fb1dd7e63d5f381b39f3}{N\+U\+M\+\_\+\+W\+R\+I\+T\+E\+R\+S\+\_\+\+L\+OW})}
+
+\mbox{\Hypertarget{pthread__rwlock_2main_8c_ae03c41a472e68c5553619bb19bce230f}\label{pthread__rwlock_2main_8c_ae03c41a472e68c5553619bb19bce230f}} 
+\index{pthread\+\_\+rwlock/main.\+c@{pthread\+\_\+rwlock/main.\+c}!N\+U\+M\+\_\+\+W\+R\+I\+T\+E\+R\+S\+\_\+\+H\+I\+GH@{N\+U\+M\+\_\+\+W\+R\+I\+T\+E\+R\+S\+\_\+\+H\+I\+GH}}
+\index{N\+U\+M\+\_\+\+W\+R\+I\+T\+E\+R\+S\+\_\+\+H\+I\+GH@{N\+U\+M\+\_\+\+W\+R\+I\+T\+E\+R\+S\+\_\+\+H\+I\+GH}!pthread\+\_\+rwlock/main.\+c@{pthread\+\_\+rwlock/main.\+c}}
+\subsubsection{\texorpdfstring{N\+U\+M\+\_\+\+W\+R\+I\+T\+E\+R\+S\+\_\+\+H\+I\+GH}{NUM\_WRITERS\_HIGH}}
+{\footnotesize\ttfamily \#define N\+U\+M\+\_\+\+W\+R\+I\+T\+E\+R\+S\+\_\+\+H\+I\+GH~1}
+
+\mbox{\Hypertarget{pthread__rwlock_2main_8c_a87701cf89a11fb1dd7e63d5f381b39f3}\label{pthread__rwlock_2main_8c_a87701cf89a11fb1dd7e63d5f381b39f3}} 
+\index{pthread\+\_\+rwlock/main.\+c@{pthread\+\_\+rwlock/main.\+c}!N\+U\+M\+\_\+\+W\+R\+I\+T\+E\+R\+S\+\_\+\+L\+OW@{N\+U\+M\+\_\+\+W\+R\+I\+T\+E\+R\+S\+\_\+\+L\+OW}}
+\index{N\+U\+M\+\_\+\+W\+R\+I\+T\+E\+R\+S\+\_\+\+L\+OW@{N\+U\+M\+\_\+\+W\+R\+I\+T\+E\+R\+S\+\_\+\+L\+OW}!pthread\+\_\+rwlock/main.\+c@{pthread\+\_\+rwlock/main.\+c}}
+\subsubsection{\texorpdfstring{N\+U\+M\+\_\+\+W\+R\+I\+T\+E\+R\+S\+\_\+\+L\+OW}{NUM\_WRITERS\_LOW}}
+{\footnotesize\ttfamily \#define N\+U\+M\+\_\+\+W\+R\+I\+T\+E\+R\+S\+\_\+\+L\+OW~2}
+
+\mbox{\Hypertarget{pthread__rwlock_2main_8c_a4d0d86c2a4fa8d31c409fb1228022bc8}\label{pthread__rwlock_2main_8c_a4d0d86c2a4fa8d31c409fb1228022bc8}} 
+\index{pthread\+\_\+rwlock/main.\+c@{pthread\+\_\+rwlock/main.\+c}!P\+R\+I\+N\+TF@{P\+R\+I\+N\+TF}}
+\index{P\+R\+I\+N\+TF@{P\+R\+I\+N\+TF}!pthread\+\_\+rwlock/main.\+c@{pthread\+\_\+rwlock/main.\+c}}
+\subsubsection{\texorpdfstring{P\+R\+I\+N\+TF}{PRINTF}}
+{\footnotesize\ttfamily \#define P\+R\+I\+N\+TF(\begin{DoxyParamCaption}\item[{}]{F\+MT,  }\item[{}]{... }\end{DoxyParamCaption})~printf(\char`\"{}\%c\%\char`\"{} P\+R\+Ikernel\+\_\+pid \char`\"{} (prio=\%u)\+: \char`\"{} F\+MT \char`\"{}\textbackslash{}n\char`\"{}, \+\_\+\+\_\+func\+\_\+\+\_\+\mbox{[}0\mbox{]}, sched\+\_\+active\+\_\+pid, \hyperlink{rmutex_2main_8c_a5aed9d30fb31c14c7ddff73c35f85818}{sched\+\_\+active\+\_\+thread}-\/$>$priority, \+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+)}
+
+\mbox{\Hypertarget{pthread__rwlock_2main_8c_a32ee58f73d9de0d1d41ad46f7bff2719}\label{pthread__rwlock_2main_8c_a32ee58f73d9de0d1d41ad46f7bff2719}} 
+\index{pthread\+\_\+rwlock/main.\+c@{pthread\+\_\+rwlock/main.\+c}!R\+A\+N\+D\+\_\+\+S\+E\+ED@{R\+A\+N\+D\+\_\+\+S\+E\+ED}}
+\index{R\+A\+N\+D\+\_\+\+S\+E\+ED@{R\+A\+N\+D\+\_\+\+S\+E\+ED}!pthread\+\_\+rwlock/main.\+c@{pthread\+\_\+rwlock/main.\+c}}
+\subsubsection{\texorpdfstring{R\+A\+N\+D\+\_\+\+S\+E\+ED}{RAND\_SEED}}
+{\footnotesize\ttfamily \#define R\+A\+N\+D\+\_\+\+S\+E\+ED~0x\+C0\+F\+F\+EE}
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{pthread__rwlock_2main_8c_a840291bc02cba5474a4cb46a9b9566fe}\label{pthread__rwlock_2main_8c_a840291bc02cba5474a4cb46a9b9566fe}} 
+\index{pthread\+\_\+rwlock/main.\+c@{pthread\+\_\+rwlock/main.\+c}!main@{main}}
+\index{main@{main}!pthread\+\_\+rwlock/main.\+c@{pthread\+\_\+rwlock/main.\+c}}
+\subsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+

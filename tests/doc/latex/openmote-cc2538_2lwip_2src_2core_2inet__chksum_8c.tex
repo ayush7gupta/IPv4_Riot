@@ -1,0 +1,101 @@
+\hypertarget{openmote-cc2538_2lwip_2src_2core_2inet__chksum_8c}{}\section{/home/ayush/\+R\+I\+O\+T/tests/lwip/bin/pkg/openmote-\/cc2538/lwip/src/core/inet\+\_\+chksum.c File Reference}
+\label{openmote-cc2538_2lwip_2src_2core_2inet__chksum_8c}\index{/home/ayush/\+R\+I\+O\+T/tests/lwip/bin/pkg/openmote-\/cc2538/lwip/src/core/inet\+\_\+chksum.\+c@{/home/ayush/\+R\+I\+O\+T/tests/lwip/bin/pkg/openmote-\/cc2538/lwip/src/core/inet\+\_\+chksum.\+c}}
+{\ttfamily \#include \char`\"{}lwip/opt.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}lwip/inet\+\_\+chksum.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}lwip/def.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}lwip/ip\+\_\+addr.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+Include dependency graph for inet\+\_\+chksum.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{openmote-cc2538_2lwip_2src_2core_2inet__chksum_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{openmote-cc2538_2lwip_2src_2core_2inet__chksum_8c_adaaa51e3290b80f8f8f8b1d080f54c1e}{L\+W\+I\+P\+\_\+\+C\+H\+K\+S\+UM}~\hyperlink{openmote-cc2538_2lwip_2src_2core_2inet__chksum_8c_a4c8d40559878aa9bf6bfce8d8ab8a72b}{lwip\+\_\+standard\+\_\+chksum}
+\item 
+\#define \hyperlink{openmote-cc2538_2lwip_2src_2core_2inet__chksum_8c_aa0865f14286191bd72fc1a9d9cbe25d4}{L\+W\+I\+P\+\_\+\+C\+H\+K\+S\+U\+M\+\_\+\+A\+L\+G\+O\+R\+I\+T\+HM}~2
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group__compiler__abstraction_ga77570ac4fcab86864fa1916e55676da2}{u16\+\_\+t} \hyperlink{openmote-cc2538_2lwip_2src_2core_2inet__chksum_8c_a4c8d40559878aa9bf6bfce8d8ab8a72b}{lwip\+\_\+standard\+\_\+chksum} (const void $\ast$dataptr, int len)
+\item 
+\hyperlink{group__compiler__abstraction_ga77570ac4fcab86864fa1916e55676da2}{u16\+\_\+t} \hyperlink{openmote-cc2538_2lwip_2src_2core_2inet__chksum_8c_aa13cda42e7c262f5dee243ff6c28422f}{ip\+\_\+chksum\+\_\+pseudo} (struct \hyperlink{structpbuf}{pbuf} $\ast$p, \hyperlink{group__compiler__abstraction_ga4caecabca98b43919dd11be1c0d4cd8e}{u8\+\_\+t} proto, \hyperlink{group__compiler__abstraction_ga77570ac4fcab86864fa1916e55676da2}{u16\+\_\+t} proto\+\_\+len, const \hyperlink{native_2lwip_2src_2include_2lwip_2ip__addr_8h_a88b43639738c4de2d3cd22e3a1fd7696}{ip\+\_\+addr\+\_\+t} $\ast$src, const \hyperlink{native_2lwip_2src_2include_2lwip_2ip__addr_8h_a88b43639738c4de2d3cd22e3a1fd7696}{ip\+\_\+addr\+\_\+t} $\ast$dest)
+\item 
+\hyperlink{group__compiler__abstraction_ga77570ac4fcab86864fa1916e55676da2}{u16\+\_\+t} \hyperlink{openmote-cc2538_2lwip_2src_2core_2inet__chksum_8c_acfe7ab6c63ef998210c66bb4822b03b2}{ip\+\_\+chksum\+\_\+pseudo\+\_\+partial} (struct \hyperlink{structpbuf}{pbuf} $\ast$p, \hyperlink{group__compiler__abstraction_ga4caecabca98b43919dd11be1c0d4cd8e}{u8\+\_\+t} proto, \hyperlink{group__compiler__abstraction_ga77570ac4fcab86864fa1916e55676da2}{u16\+\_\+t} proto\+\_\+len, \hyperlink{group__compiler__abstraction_ga77570ac4fcab86864fa1916e55676da2}{u16\+\_\+t} chksum\+\_\+len, const \hyperlink{native_2lwip_2src_2include_2lwip_2ip__addr_8h_a88b43639738c4de2d3cd22e3a1fd7696}{ip\+\_\+addr\+\_\+t} $\ast$src, const \hyperlink{native_2lwip_2src_2include_2lwip_2ip__addr_8h_a88b43639738c4de2d3cd22e3a1fd7696}{ip\+\_\+addr\+\_\+t} $\ast$dest)
+\item 
+\hyperlink{group__compiler__abstraction_ga77570ac4fcab86864fa1916e55676da2}{u16\+\_\+t} \hyperlink{openmote-cc2538_2lwip_2src_2core_2inet__chksum_8c_a34f1aa1587562a09e11b704b51bab043}{inet\+\_\+chksum} (const void $\ast$dataptr, \hyperlink{group__compiler__abstraction_ga77570ac4fcab86864fa1916e55676da2}{u16\+\_\+t} len)
+\item 
+\hyperlink{group__compiler__abstraction_ga77570ac4fcab86864fa1916e55676da2}{u16\+\_\+t} \hyperlink{openmote-cc2538_2lwip_2src_2core_2inet__chksum_8c_ab35967a50418358e194e8f80fdc3c865}{inet\+\_\+chksum\+\_\+pbuf} (struct \hyperlink{structpbuf}{pbuf} $\ast$p)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Incluse internet checksum functions.~\newline
+ These are some reference implementations of the checksum algorithm, with the aim of being simple, correct and fully portable. Checksumming is the first thing you would want to optimize for your platform. If you create your own version, link it in and in your cc.\+h put\+:
+
+\#define L\+W\+I\+P\+\_\+\+C\+H\+K\+S\+UM your\+\_\+checksum\+\_\+routine
+
+Or you can select from the implementations below by defining L\+W\+I\+P\+\_\+\+C\+H\+K\+S\+U\+M\+\_\+\+A\+L\+G\+O\+R\+I\+T\+HM to 1, 2 or 3. 
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2core_2inet__chksum_8c_adaaa51e3290b80f8f8f8b1d080f54c1e}\label{openmote-cc2538_2lwip_2src_2core_2inet__chksum_8c_adaaa51e3290b80f8f8f8b1d080f54c1e}} 
+\index{openmote-\/cc2538/lwip/src/core/inet\+\_\+chksum.\+c@{openmote-\/cc2538/lwip/src/core/inet\+\_\+chksum.\+c}!L\+W\+I\+P\+\_\+\+C\+H\+K\+S\+UM@{L\+W\+I\+P\+\_\+\+C\+H\+K\+S\+UM}}
+\index{L\+W\+I\+P\+\_\+\+C\+H\+K\+S\+UM@{L\+W\+I\+P\+\_\+\+C\+H\+K\+S\+UM}!openmote-\/cc2538/lwip/src/core/inet\+\_\+chksum.\+c@{openmote-\/cc2538/lwip/src/core/inet\+\_\+chksum.\+c}}
+\subsubsection{\texorpdfstring{L\+W\+I\+P\+\_\+\+C\+H\+K\+S\+UM}{LWIP\_CHKSUM}}
+{\footnotesize\ttfamily \#define L\+W\+I\+P\+\_\+\+C\+H\+K\+S\+UM~\hyperlink{openmote-cc2538_2lwip_2src_2core_2inet__chksum_8c_a4c8d40559878aa9bf6bfce8d8ab8a72b}{lwip\+\_\+standard\+\_\+chksum}}
+
+\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2core_2inet__chksum_8c_aa0865f14286191bd72fc1a9d9cbe25d4}\label{openmote-cc2538_2lwip_2src_2core_2inet__chksum_8c_aa0865f14286191bd72fc1a9d9cbe25d4}} 
+\index{openmote-\/cc2538/lwip/src/core/inet\+\_\+chksum.\+c@{openmote-\/cc2538/lwip/src/core/inet\+\_\+chksum.\+c}!L\+W\+I\+P\+\_\+\+C\+H\+K\+S\+U\+M\+\_\+\+A\+L\+G\+O\+R\+I\+T\+HM@{L\+W\+I\+P\+\_\+\+C\+H\+K\+S\+U\+M\+\_\+\+A\+L\+G\+O\+R\+I\+T\+HM}}
+\index{L\+W\+I\+P\+\_\+\+C\+H\+K\+S\+U\+M\+\_\+\+A\+L\+G\+O\+R\+I\+T\+HM@{L\+W\+I\+P\+\_\+\+C\+H\+K\+S\+U\+M\+\_\+\+A\+L\+G\+O\+R\+I\+T\+HM}!openmote-\/cc2538/lwip/src/core/inet\+\_\+chksum.\+c@{openmote-\/cc2538/lwip/src/core/inet\+\_\+chksum.\+c}}
+\subsubsection{\texorpdfstring{L\+W\+I\+P\+\_\+\+C\+H\+K\+S\+U\+M\+\_\+\+A\+L\+G\+O\+R\+I\+T\+HM}{LWIP\_CHKSUM\_ALGORITHM}}
+{\footnotesize\ttfamily \#define L\+W\+I\+P\+\_\+\+C\+H\+K\+S\+U\+M\+\_\+\+A\+L\+G\+O\+R\+I\+T\+HM~2}
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2core_2inet__chksum_8c_a34f1aa1587562a09e11b704b51bab043}\label{openmote-cc2538_2lwip_2src_2core_2inet__chksum_8c_a34f1aa1587562a09e11b704b51bab043}} 
+\index{openmote-\/cc2538/lwip/src/core/inet\+\_\+chksum.\+c@{openmote-\/cc2538/lwip/src/core/inet\+\_\+chksum.\+c}!inet\+\_\+chksum@{inet\+\_\+chksum}}
+\index{inet\+\_\+chksum@{inet\+\_\+chksum}!openmote-\/cc2538/lwip/src/core/inet\+\_\+chksum.\+c@{openmote-\/cc2538/lwip/src/core/inet\+\_\+chksum.\+c}}
+\subsubsection{\texorpdfstring{inet\+\_\+chksum()}{inet\_chksum()}}
+{\footnotesize\ttfamily \hyperlink{group__compiler__abstraction_ga77570ac4fcab86864fa1916e55676da2}{u16\+\_\+t} inet\+\_\+chksum (\begin{DoxyParamCaption}\item[{const void $\ast$}]{dataptr,  }\item[{\hyperlink{group__compiler__abstraction_ga77570ac4fcab86864fa1916e55676da2}{u16\+\_\+t}}]{len }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2core_2inet__chksum_8c_ab35967a50418358e194e8f80fdc3c865}\label{openmote-cc2538_2lwip_2src_2core_2inet__chksum_8c_ab35967a50418358e194e8f80fdc3c865}} 
+\index{openmote-\/cc2538/lwip/src/core/inet\+\_\+chksum.\+c@{openmote-\/cc2538/lwip/src/core/inet\+\_\+chksum.\+c}!inet\+\_\+chksum\+\_\+pbuf@{inet\+\_\+chksum\+\_\+pbuf}}
+\index{inet\+\_\+chksum\+\_\+pbuf@{inet\+\_\+chksum\+\_\+pbuf}!openmote-\/cc2538/lwip/src/core/inet\+\_\+chksum.\+c@{openmote-\/cc2538/lwip/src/core/inet\+\_\+chksum.\+c}}
+\subsubsection{\texorpdfstring{inet\+\_\+chksum\+\_\+pbuf()}{inet\_chksum\_pbuf()}}
+{\footnotesize\ttfamily \hyperlink{group__compiler__abstraction_ga77570ac4fcab86864fa1916e55676da2}{u16\+\_\+t} inet\+\_\+chksum\+\_\+pbuf (\begin{DoxyParamCaption}\item[{struct \hyperlink{structpbuf}{pbuf} $\ast$}]{p }\end{DoxyParamCaption})}
+
+Calculate a checksum over a chain of pbufs (without pseudo-\/header, much like inet\+\_\+chksum only pbufs are used).
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & pbuf chain over that the checksum should be calculated \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+checksum (as u16\+\_\+t) to be saved directly in the protocol header 
+\end{DoxyReturn}
+\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2core_2inet__chksum_8c_aa13cda42e7c262f5dee243ff6c28422f}\label{openmote-cc2538_2lwip_2src_2core_2inet__chksum_8c_aa13cda42e7c262f5dee243ff6c28422f}} 
+\index{openmote-\/cc2538/lwip/src/core/inet\+\_\+chksum.\+c@{openmote-\/cc2538/lwip/src/core/inet\+\_\+chksum.\+c}!ip\+\_\+chksum\+\_\+pseudo@{ip\+\_\+chksum\+\_\+pseudo}}
+\index{ip\+\_\+chksum\+\_\+pseudo@{ip\+\_\+chksum\+\_\+pseudo}!openmote-\/cc2538/lwip/src/core/inet\+\_\+chksum.\+c@{openmote-\/cc2538/lwip/src/core/inet\+\_\+chksum.\+c}}
+\subsubsection{\texorpdfstring{ip\+\_\+chksum\+\_\+pseudo()}{ip\_chksum\_pseudo()}}
+{\footnotesize\ttfamily \hyperlink{group__compiler__abstraction_ga77570ac4fcab86864fa1916e55676da2}{u16\+\_\+t} ip\+\_\+chksum\+\_\+pseudo (\begin{DoxyParamCaption}\item[{struct \hyperlink{structpbuf}{pbuf} $\ast$}]{p,  }\item[{\hyperlink{group__compiler__abstraction_ga4caecabca98b43919dd11be1c0d4cd8e}{u8\+\_\+t}}]{proto,  }\item[{\hyperlink{group__compiler__abstraction_ga77570ac4fcab86864fa1916e55676da2}{u16\+\_\+t}}]{proto\+\_\+len,  }\item[{const \hyperlink{native_2lwip_2src_2include_2lwip_2ip__addr_8h_a88b43639738c4de2d3cd22e3a1fd7696}{ip\+\_\+addr\+\_\+t} $\ast$}]{src,  }\item[{const \hyperlink{native_2lwip_2src_2include_2lwip_2ip__addr_8h_a88b43639738c4de2d3cd22e3a1fd7696}{ip\+\_\+addr\+\_\+t} $\ast$}]{dest }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2core_2inet__chksum_8c_acfe7ab6c63ef998210c66bb4822b03b2}\label{openmote-cc2538_2lwip_2src_2core_2inet__chksum_8c_acfe7ab6c63ef998210c66bb4822b03b2}} 
+\index{openmote-\/cc2538/lwip/src/core/inet\+\_\+chksum.\+c@{openmote-\/cc2538/lwip/src/core/inet\+\_\+chksum.\+c}!ip\+\_\+chksum\+\_\+pseudo\+\_\+partial@{ip\+\_\+chksum\+\_\+pseudo\+\_\+partial}}
+\index{ip\+\_\+chksum\+\_\+pseudo\+\_\+partial@{ip\+\_\+chksum\+\_\+pseudo\+\_\+partial}!openmote-\/cc2538/lwip/src/core/inet\+\_\+chksum.\+c@{openmote-\/cc2538/lwip/src/core/inet\+\_\+chksum.\+c}}
+\subsubsection{\texorpdfstring{ip\+\_\+chksum\+\_\+pseudo\+\_\+partial()}{ip\_chksum\_pseudo\_partial()}}
+{\footnotesize\ttfamily \hyperlink{group__compiler__abstraction_ga77570ac4fcab86864fa1916e55676da2}{u16\+\_\+t} ip\+\_\+chksum\+\_\+pseudo\+\_\+partial (\begin{DoxyParamCaption}\item[{struct \hyperlink{structpbuf}{pbuf} $\ast$}]{p,  }\item[{\hyperlink{group__compiler__abstraction_ga4caecabca98b43919dd11be1c0d4cd8e}{u8\+\_\+t}}]{proto,  }\item[{\hyperlink{group__compiler__abstraction_ga77570ac4fcab86864fa1916e55676da2}{u16\+\_\+t}}]{proto\+\_\+len,  }\item[{\hyperlink{group__compiler__abstraction_ga77570ac4fcab86864fa1916e55676da2}{u16\+\_\+t}}]{chksum\+\_\+len,  }\item[{const \hyperlink{native_2lwip_2src_2include_2lwip_2ip__addr_8h_a88b43639738c4de2d3cd22e3a1fd7696}{ip\+\_\+addr\+\_\+t} $\ast$}]{src,  }\item[{const \hyperlink{native_2lwip_2src_2include_2lwip_2ip__addr_8h_a88b43639738c4de2d3cd22e3a1fd7696}{ip\+\_\+addr\+\_\+t} $\ast$}]{dest }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2core_2inet__chksum_8c_a4c8d40559878aa9bf6bfce8d8ab8a72b}\label{openmote-cc2538_2lwip_2src_2core_2inet__chksum_8c_a4c8d40559878aa9bf6bfce8d8ab8a72b}} 
+\index{openmote-\/cc2538/lwip/src/core/inet\+\_\+chksum.\+c@{openmote-\/cc2538/lwip/src/core/inet\+\_\+chksum.\+c}!lwip\+\_\+standard\+\_\+chksum@{lwip\+\_\+standard\+\_\+chksum}}
+\index{lwip\+\_\+standard\+\_\+chksum@{lwip\+\_\+standard\+\_\+chksum}!openmote-\/cc2538/lwip/src/core/inet\+\_\+chksum.\+c@{openmote-\/cc2538/lwip/src/core/inet\+\_\+chksum.\+c}}
+\subsubsection{\texorpdfstring{lwip\+\_\+standard\+\_\+chksum()}{lwip\_standard\_chksum()}}
+{\footnotesize\ttfamily \hyperlink{group__compiler__abstraction_ga77570ac4fcab86864fa1916e55676da2}{u16\+\_\+t} lwip\+\_\+standard\+\_\+chksum (\begin{DoxyParamCaption}\item[{const void $\ast$}]{dataptr,  }\item[{int}]{len }\end{DoxyParamCaption})}
+

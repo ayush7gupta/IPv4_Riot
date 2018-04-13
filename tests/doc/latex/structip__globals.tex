@@ -1,0 +1,70 @@
+\hypertarget{structip__globals}{}\section{ip\+\_\+globals Struct Reference}
+\label{structip__globals}\index{ip\+\_\+globals@{ip\+\_\+globals}}
+
+
+{\ttfamily \#include $<$ip.\+h$>$}
+
+
+
+Collaboration diagram for ip\+\_\+globals\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=192pt]{structip__globals__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structnetif}{netif} $\ast$ \hyperlink{structip__globals_ac3ce50b618d04fe2c82e9525b10550ca}{current\+\_\+netif}
+\item 
+struct \hyperlink{structnetif}{netif} $\ast$ \hyperlink{structip__globals_a4099a6d61a3e05d25c573b978d82e4e0}{current\+\_\+input\+\_\+netif}
+\item 
+\hyperlink{group__compiler__abstraction_ga77570ac4fcab86864fa1916e55676da2}{u16\+\_\+t} \hyperlink{structip__globals_a17004526e6f1a164c0bab01aeac5e34a}{current\+\_\+ip\+\_\+header\+\_\+tot\+\_\+len}
+\item 
+\hyperlink{native_2lwip_2src_2include_2lwip_2ip__addr_8h_a88b43639738c4de2d3cd22e3a1fd7696}{ip\+\_\+addr\+\_\+t} \hyperlink{structip__globals_a04d85a3dc2c417050b3e088fa58a74b0}{current\+\_\+iphdr\+\_\+src}
+\item 
+\hyperlink{native_2lwip_2src_2include_2lwip_2ip__addr_8h_a88b43639738c4de2d3cd22e3a1fd7696}{ip\+\_\+addr\+\_\+t} \hyperlink{structip__globals_a0b4e54250c692c638408de54593d2aa1}{current\+\_\+iphdr\+\_\+dest}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Global variables of this module, kept in a struct for efficient access using base+index. 
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{structip__globals_a4099a6d61a3e05d25c573b978d82e4e0}\label{structip__globals_a4099a6d61a3e05d25c573b978d82e4e0}} 
+\index{ip\+\_\+globals@{ip\+\_\+globals}!current\+\_\+input\+\_\+netif@{current\+\_\+input\+\_\+netif}}
+\index{current\+\_\+input\+\_\+netif@{current\+\_\+input\+\_\+netif}!ip\+\_\+globals@{ip\+\_\+globals}}
+\subsubsection{\texorpdfstring{current\+\_\+input\+\_\+netif}{current\_input\_netif}}
+{\footnotesize\ttfamily struct \hyperlink{structnetif}{netif} $\ast$ ip\+\_\+globals\+::current\+\_\+input\+\_\+netif}
+
+The interface that received the packet for the current callback invocation. \mbox{\Hypertarget{structip__globals_a17004526e6f1a164c0bab01aeac5e34a}\label{structip__globals_a17004526e6f1a164c0bab01aeac5e34a}} 
+\index{ip\+\_\+globals@{ip\+\_\+globals}!current\+\_\+ip\+\_\+header\+\_\+tot\+\_\+len@{current\+\_\+ip\+\_\+header\+\_\+tot\+\_\+len}}
+\index{current\+\_\+ip\+\_\+header\+\_\+tot\+\_\+len@{current\+\_\+ip\+\_\+header\+\_\+tot\+\_\+len}!ip\+\_\+globals@{ip\+\_\+globals}}
+\subsubsection{\texorpdfstring{current\+\_\+ip\+\_\+header\+\_\+tot\+\_\+len}{current\_ip\_header\_tot\_len}}
+{\footnotesize\ttfamily \hyperlink{group__compiler__abstraction_ga77570ac4fcab86864fa1916e55676da2}{u16\+\_\+t} ip\+\_\+globals\+::current\+\_\+ip\+\_\+header\+\_\+tot\+\_\+len}
+
+Total header length of current\+\_\+ip4/6\+\_\+header (i.\+e. after this, the U\+D\+P/\+T\+CP header starts) \mbox{\Hypertarget{structip__globals_a0b4e54250c692c638408de54593d2aa1}\label{structip__globals_a0b4e54250c692c638408de54593d2aa1}} 
+\index{ip\+\_\+globals@{ip\+\_\+globals}!current\+\_\+iphdr\+\_\+dest@{current\+\_\+iphdr\+\_\+dest}}
+\index{current\+\_\+iphdr\+\_\+dest@{current\+\_\+iphdr\+\_\+dest}!ip\+\_\+globals@{ip\+\_\+globals}}
+\subsubsection{\texorpdfstring{current\+\_\+iphdr\+\_\+dest}{current\_iphdr\_dest}}
+{\footnotesize\ttfamily \hyperlink{native_2lwip_2src_2include_2lwip_2ip__addr_8h_a88b43639738c4de2d3cd22e3a1fd7696}{ip\+\_\+addr\+\_\+t} ip\+\_\+globals\+::current\+\_\+iphdr\+\_\+dest}
+
+Destination IP address of current\+\_\+header \mbox{\Hypertarget{structip__globals_a04d85a3dc2c417050b3e088fa58a74b0}\label{structip__globals_a04d85a3dc2c417050b3e088fa58a74b0}} 
+\index{ip\+\_\+globals@{ip\+\_\+globals}!current\+\_\+iphdr\+\_\+src@{current\+\_\+iphdr\+\_\+src}}
+\index{current\+\_\+iphdr\+\_\+src@{current\+\_\+iphdr\+\_\+src}!ip\+\_\+globals@{ip\+\_\+globals}}
+\subsubsection{\texorpdfstring{current\+\_\+iphdr\+\_\+src}{current\_iphdr\_src}}
+{\footnotesize\ttfamily \hyperlink{native_2lwip_2src_2include_2lwip_2ip__addr_8h_a88b43639738c4de2d3cd22e3a1fd7696}{ip\+\_\+addr\+\_\+t} ip\+\_\+globals\+::current\+\_\+iphdr\+\_\+src}
+
+Source IP address of current\+\_\+header \mbox{\Hypertarget{structip__globals_ac3ce50b618d04fe2c82e9525b10550ca}\label{structip__globals_ac3ce50b618d04fe2c82e9525b10550ca}} 
+\index{ip\+\_\+globals@{ip\+\_\+globals}!current\+\_\+netif@{current\+\_\+netif}}
+\index{current\+\_\+netif@{current\+\_\+netif}!ip\+\_\+globals@{ip\+\_\+globals}}
+\subsubsection{\texorpdfstring{current\+\_\+netif}{current\_netif}}
+{\footnotesize\ttfamily struct \hyperlink{structnetif}{netif} $\ast$ ip\+\_\+globals\+::current\+\_\+netif}
+
+The interface that accepted the packet for the current callback invocation. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/ayush/\+R\+I\+O\+T/tests/lwip/bin/pkg/native/lwip/src/include/lwip/\hyperlink{native_2lwip_2src_2include_2lwip_2ip_8h}{ip.\+h}\end{DoxyCompactItemize}

@@ -1,0 +1,106 @@
+\hypertarget{driver__adt7310_2main_8c}{}\section{/home/ayush/\+R\+I\+O\+T/tests/driver\+\_\+adt7310/main.c File Reference}
+\label{driver__adt7310_2main_8c}\index{/home/ayush/\+R\+I\+O\+T/tests/driver\+\_\+adt7310/main.\+c@{/home/ayush/\+R\+I\+O\+T/tests/driver\+\_\+adt7310/main.\+c}}
+
+
+Test application for the A\+D\+T7310 accelerometer driver.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$math.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}board.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}xtimer.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}periph/spi.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}adt7310.\+h\char`\"{}}\newline
+Include dependency graph for main.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{driver__adt7310_2main_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{driver__adt7310_2main_8c_ade88291484b6d3fcfcca0bad7acfda89}{S\+P\+I\+\_\+\+C\+O\+NF}~(S\+P\+I\+\_\+\+C\+O\+N\+F\+\_\+\+S\+E\+C\+O\+N\+D\+\_\+\+F\+A\+L\+L\+I\+NG)
+\item 
+\#define \hyperlink{driver__adt7310_2main_8c_af3cfe48f6efdc257518227b43c1bc3df}{S\+P\+I\+\_\+\+C\+LK}~(S\+P\+I\+\_\+\+C\+L\+K\+\_\+10\+M\+HZ)
+\item 
+\#define \hyperlink{driver__adt7310_2main_8c_a622335be743b6000c7722f0032110bc8}{S\+L\+E\+E\+P\+\_\+\+C\+O\+NT}~(100 $\ast$ 1000\+U)
+\item 
+\#define \hyperlink{driver__adt7310_2main_8c_a0abc2fb8913c2c16e745f65e8c14a96e}{S\+L\+E\+E\+P\+\_\+1\+S\+PS}~(1000 $\ast$ 1000\+U)
+\item 
+\#define \hyperlink{driver__adt7310_2main_8c_a2aee73c410a4f23324a01874eedd292a}{R\+E\+A\+D\+I\+N\+G\+S\+\_\+\+C\+O\+NT}~(200)
+\item 
+\#define \hyperlink{driver__adt7310_2main_8c_a4f5ff3473f83031771387ffa3a87481b}{R\+E\+A\+D\+I\+N\+G\+S\+\_\+1\+S\+PS}~(20)
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{driver__adt7310_2main_8c_ac9339389d11e917312785051bb85aed4}{test\+\_\+adt7310\+\_\+sample\+\_\+print} (adt7310\+\_\+t $\ast$\hyperlink{periph__spi_2main_8c_ad55ecfacc43495fef791d8c2eec7a002}{dev})
+\item 
+int \hyperlink{driver__adt7310_2main_8c_a840291bc02cba5474a4cb46a9b9566fe}{main} (void)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Test application for the A\+D\+T7310 accelerometer driver. 
+
+\begin{DoxyAuthor}{Author}
+Joakim Nohlgård $<$\href{mailto:joakim.nohlgard@eistec.se}{\tt joakim.\+nohlgard@eistec.\+se} 
+\end{DoxyAuthor}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{driver__adt7310_2main_8c_a4f5ff3473f83031771387ffa3a87481b}\label{driver__adt7310_2main_8c_a4f5ff3473f83031771387ffa3a87481b}} 
+\index{driver\+\_\+adt7310/main.\+c@{driver\+\_\+adt7310/main.\+c}!R\+E\+A\+D\+I\+N\+G\+S\+\_\+1\+S\+PS@{R\+E\+A\+D\+I\+N\+G\+S\+\_\+1\+S\+PS}}
+\index{R\+E\+A\+D\+I\+N\+G\+S\+\_\+1\+S\+PS@{R\+E\+A\+D\+I\+N\+G\+S\+\_\+1\+S\+PS}!driver\+\_\+adt7310/main.\+c@{driver\+\_\+adt7310/main.\+c}}
+\subsubsection{\texorpdfstring{R\+E\+A\+D\+I\+N\+G\+S\+\_\+1\+S\+PS}{READINGS\_1SPS}}
+{\footnotesize\ttfamily \#define R\+E\+A\+D\+I\+N\+G\+S\+\_\+1\+S\+PS~(20)}
+
+\mbox{\Hypertarget{driver__adt7310_2main_8c_a2aee73c410a4f23324a01874eedd292a}\label{driver__adt7310_2main_8c_a2aee73c410a4f23324a01874eedd292a}} 
+\index{driver\+\_\+adt7310/main.\+c@{driver\+\_\+adt7310/main.\+c}!R\+E\+A\+D\+I\+N\+G\+S\+\_\+\+C\+O\+NT@{R\+E\+A\+D\+I\+N\+G\+S\+\_\+\+C\+O\+NT}}
+\index{R\+E\+A\+D\+I\+N\+G\+S\+\_\+\+C\+O\+NT@{R\+E\+A\+D\+I\+N\+G\+S\+\_\+\+C\+O\+NT}!driver\+\_\+adt7310/main.\+c@{driver\+\_\+adt7310/main.\+c}}
+\subsubsection{\texorpdfstring{R\+E\+A\+D\+I\+N\+G\+S\+\_\+\+C\+O\+NT}{READINGS\_CONT}}
+{\footnotesize\ttfamily \#define R\+E\+A\+D\+I\+N\+G\+S\+\_\+\+C\+O\+NT~(200)}
+
+\mbox{\Hypertarget{driver__adt7310_2main_8c_a0abc2fb8913c2c16e745f65e8c14a96e}\label{driver__adt7310_2main_8c_a0abc2fb8913c2c16e745f65e8c14a96e}} 
+\index{driver\+\_\+adt7310/main.\+c@{driver\+\_\+adt7310/main.\+c}!S\+L\+E\+E\+P\+\_\+1\+S\+PS@{S\+L\+E\+E\+P\+\_\+1\+S\+PS}}
+\index{S\+L\+E\+E\+P\+\_\+1\+S\+PS@{S\+L\+E\+E\+P\+\_\+1\+S\+PS}!driver\+\_\+adt7310/main.\+c@{driver\+\_\+adt7310/main.\+c}}
+\subsubsection{\texorpdfstring{S\+L\+E\+E\+P\+\_\+1\+S\+PS}{SLEEP\_1SPS}}
+{\footnotesize\ttfamily \#define S\+L\+E\+E\+P\+\_\+1\+S\+PS~(1000 $\ast$ 1000\+U)}
+
+\mbox{\Hypertarget{driver__adt7310_2main_8c_a622335be743b6000c7722f0032110bc8}\label{driver__adt7310_2main_8c_a622335be743b6000c7722f0032110bc8}} 
+\index{driver\+\_\+adt7310/main.\+c@{driver\+\_\+adt7310/main.\+c}!S\+L\+E\+E\+P\+\_\+\+C\+O\+NT@{S\+L\+E\+E\+P\+\_\+\+C\+O\+NT}}
+\index{S\+L\+E\+E\+P\+\_\+\+C\+O\+NT@{S\+L\+E\+E\+P\+\_\+\+C\+O\+NT}!driver\+\_\+adt7310/main.\+c@{driver\+\_\+adt7310/main.\+c}}
+\subsubsection{\texorpdfstring{S\+L\+E\+E\+P\+\_\+\+C\+O\+NT}{SLEEP\_CONT}}
+{\footnotesize\ttfamily \#define S\+L\+E\+E\+P\+\_\+\+C\+O\+NT~(100 $\ast$ 1000\+U)}
+
+\mbox{\Hypertarget{driver__adt7310_2main_8c_af3cfe48f6efdc257518227b43c1bc3df}\label{driver__adt7310_2main_8c_af3cfe48f6efdc257518227b43c1bc3df}} 
+\index{driver\+\_\+adt7310/main.\+c@{driver\+\_\+adt7310/main.\+c}!S\+P\+I\+\_\+\+C\+LK@{S\+P\+I\+\_\+\+C\+LK}}
+\index{S\+P\+I\+\_\+\+C\+LK@{S\+P\+I\+\_\+\+C\+LK}!driver\+\_\+adt7310/main.\+c@{driver\+\_\+adt7310/main.\+c}}
+\subsubsection{\texorpdfstring{S\+P\+I\+\_\+\+C\+LK}{SPI\_CLK}}
+{\footnotesize\ttfamily \#define S\+P\+I\+\_\+\+C\+LK~(S\+P\+I\+\_\+\+C\+L\+K\+\_\+10\+M\+HZ)}
+
+\mbox{\Hypertarget{driver__adt7310_2main_8c_ade88291484b6d3fcfcca0bad7acfda89}\label{driver__adt7310_2main_8c_ade88291484b6d3fcfcca0bad7acfda89}} 
+\index{driver\+\_\+adt7310/main.\+c@{driver\+\_\+adt7310/main.\+c}!S\+P\+I\+\_\+\+C\+O\+NF@{S\+P\+I\+\_\+\+C\+O\+NF}}
+\index{S\+P\+I\+\_\+\+C\+O\+NF@{S\+P\+I\+\_\+\+C\+O\+NF}!driver\+\_\+adt7310/main.\+c@{driver\+\_\+adt7310/main.\+c}}
+\subsubsection{\texorpdfstring{S\+P\+I\+\_\+\+C\+O\+NF}{SPI\_CONF}}
+{\footnotesize\ttfamily \#define S\+P\+I\+\_\+\+C\+O\+NF~(S\+P\+I\+\_\+\+C\+O\+N\+F\+\_\+\+S\+E\+C\+O\+N\+D\+\_\+\+F\+A\+L\+L\+I\+NG)}
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{driver__adt7310_2main_8c_a840291bc02cba5474a4cb46a9b9566fe}\label{driver__adt7310_2main_8c_a840291bc02cba5474a4cb46a9b9566fe}} 
+\index{driver\+\_\+adt7310/main.\+c@{driver\+\_\+adt7310/main.\+c}!main@{main}}
+\index{main@{main}!driver\+\_\+adt7310/main.\+c@{driver\+\_\+adt7310/main.\+c}}
+\subsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{driver__adt7310_2main_8c_ac9339389d11e917312785051bb85aed4}\label{driver__adt7310_2main_8c_ac9339389d11e917312785051bb85aed4}} 
+\index{driver\+\_\+adt7310/main.\+c@{driver\+\_\+adt7310/main.\+c}!test\+\_\+adt7310\+\_\+sample\+\_\+print@{test\+\_\+adt7310\+\_\+sample\+\_\+print}}
+\index{test\+\_\+adt7310\+\_\+sample\+\_\+print@{test\+\_\+adt7310\+\_\+sample\+\_\+print}!driver\+\_\+adt7310/main.\+c@{driver\+\_\+adt7310/main.\+c}}
+\subsubsection{\texorpdfstring{test\+\_\+adt7310\+\_\+sample\+\_\+print()}{test\_adt7310\_sample\_print()}}
+{\footnotesize\ttfamily int test\+\_\+adt7310\+\_\+sample\+\_\+print (\begin{DoxyParamCaption}\item[{adt7310\+\_\+t $\ast$}]{dev }\end{DoxyParamCaption})}
+

@@ -1,0 +1,9 @@
+<map id="01&#45;run.Strategy" name="01&#45;run.Strategy">
+<area shape="rect" id="node3" href="$class01-run_1_1ApplicationStrategy.html" title="01&#45;run.ApplicationStrategy" alt="" coords="269,31,444,57"/>
+<area shape="rect" id="node5" href="$class01-run_1_1BoardStrategy.html" title="01&#45;run.BoardStrategy" alt="" coords="284,107,429,133"/>
+<area shape="rect" id="node4" href="$class01-run_1_1TestStrategy.html" title="01&#45;run.TestStrategy" alt="" coords="497,5,634,32"/>
+<area shape="rect" id="node6" href="$class01-run_1_1BuildStrategy.html" title="01&#45;run.BuildStrategy" alt="" coords="495,56,635,83"/>
+<area shape="rect" id="node7" href="$class01-run_1_1CleanStrategy.html" title="01&#45;run.CleanStrategy" alt="" coords="493,107,638,133"/>
+<area shape="rect" id="node8" href="$class01-run_1_1FlashStrategy.html" title="01&#45;run.FlashStrategy" alt="" coords="494,157,637,184"/>
+<area shape="rect" id="node9" href="$class01-run_1_1ResetStrategy.html" title="01&#45;run.ResetStrategy" alt="" coords="492,208,639,235"/>
+</map>

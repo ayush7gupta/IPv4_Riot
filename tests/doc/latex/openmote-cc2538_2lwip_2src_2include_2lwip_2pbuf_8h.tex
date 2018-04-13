@@ -1,0 +1,309 @@
+\hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2pbuf_8h}{}\section{/home/ayush/\+R\+I\+O\+T/tests/lwip/bin/pkg/openmote-\/cc2538/lwip/src/include/lwip/pbuf.h File Reference}
+\label{openmote-cc2538_2lwip_2src_2include_2lwip_2pbuf_8h}\index{/home/ayush/\+R\+I\+O\+T/tests/lwip/bin/pkg/openmote-\/cc2538/lwip/src/include/lwip/pbuf.\+h@{/home/ayush/\+R\+I\+O\+T/tests/lwip/bin/pkg/openmote-\/cc2538/lwip/src/include/lwip/pbuf.\+h}}
+{\ttfamily \#include \char`\"{}lwip/opt.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}lwip/err.\+h\char`\"{}}\newline
+Include dependency graph for pbuf.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=214pt]{openmote-cc2538_2lwip_2src_2include_2lwip_2pbuf_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{openmote-cc2538_2lwip_2src_2include_2lwip_2pbuf_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structpbuf}{pbuf}
+\item 
+struct \hyperlink{structpbuf__rom}{pbuf\+\_\+rom}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2pbuf_8h_a64174c5169b48dc17674324afd9c63b9}{L\+W\+I\+P\+\_\+\+S\+U\+P\+P\+O\+R\+T\+\_\+\+C\+U\+S\+T\+O\+M\+\_\+\+P\+B\+UF}~((\hyperlink{group__lwip__opts__ipv4_gaf85c8bdd5035b6cada790b4cc2a209a4}{I\+P\+\_\+\+F\+R\+AG} \&\& !\hyperlink{group__lwip__opts__netif_gabafb9f64a80e51b56c0abbcfc1f7e04e}{L\+W\+I\+P\+\_\+\+N\+E\+T\+I\+F\+\_\+\+T\+X\+\_\+\+S\+I\+N\+G\+L\+E\+\_\+\+P\+B\+UF}) $\vert$$\vert$ (\hyperlink{openmote-cc2538_2lwip_2test_2fuzz_2lwipopts_8h_a872e3bb3fe2212156d66b18fccc9643f}{L\+W\+I\+P\+\_\+\+I\+P\+V6} \&\& \hyperlink{group__lwip__opts__ipv6_ga9ab6269f3087f6d9f7b2c7181ef043c3}{L\+W\+I\+P\+\_\+\+I\+P\+V6\+\_\+\+F\+R\+AG}))
+\item 
+\#define \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2pbuf_8h_af9da2e1ca60dc0c584938ccc5d662307}{P\+B\+U\+F\+\_\+\+T\+R\+A\+N\+S\+P\+O\+R\+T\+\_\+\+H\+L\+EN}~20
+\item 
+\#define \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2pbuf_8h_aae0fea237167bb06ea4dc5333df5b0a7}{P\+B\+U\+F\+\_\+\+I\+P\+\_\+\+H\+L\+EN}~20
+\item 
+\#define \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2pbuf_8h_a018a6499e357f8a1373321f802a82930}{P\+B\+U\+F\+\_\+\+F\+L\+A\+G\+\_\+\+P\+U\+SH}~0x01U
+\item 
+\#define \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2pbuf_8h_af78a7e1815dc0e31884d095b666d997f}{P\+B\+U\+F\+\_\+\+F\+L\+A\+G\+\_\+\+I\+S\+\_\+\+C\+U\+S\+T\+OM}~0x02U
+\item 
+\#define \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2pbuf_8h_ab8ad153151a8c157335d9c0cedc007e6}{P\+B\+U\+F\+\_\+\+F\+L\+A\+G\+\_\+\+M\+C\+A\+S\+T\+L\+O\+OP}~0x04U
+\item 
+\#define \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2pbuf_8h_a6772c16662bbb78597399add086500c0}{P\+B\+U\+F\+\_\+\+F\+L\+A\+G\+\_\+\+L\+L\+B\+C\+A\+ST}~0x08U
+\item 
+\#define \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2pbuf_8h_ac0d56cde47aca24ef410d730d7c89887}{P\+B\+U\+F\+\_\+\+F\+L\+A\+G\+\_\+\+L\+L\+M\+C\+A\+ST}~0x10U
+\item 
+\#define \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2pbuf_8h_a36a915aa2f6a188baa2862881407971e}{P\+B\+U\+F\+\_\+\+F\+L\+A\+G\+\_\+\+T\+C\+P\+\_\+\+F\+IN}~0x20U
+\item 
+\#define \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2pbuf_8h_ac54b0f161128a32c7419c33b893a5106}{P\+B\+U\+F\+\_\+\+P\+O\+O\+L\+\_\+\+F\+R\+E\+E\+\_\+\+O\+O\+S\+EQ}~1
+\item 
+\#define \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2pbuf_8h_a1f31e5e7b39e90b9b52654f543bb8fc5}{P\+B\+U\+F\+\_\+\+C\+H\+E\+C\+K\+\_\+\+F\+R\+E\+E\+\_\+\+O\+O\+S\+EQ}()
+\item 
+\#define \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2pbuf_8h_a0c9b6a35471ebe1628ffe74bbc67f0b4}{pbuf\+\_\+init}()
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{group__pbuf_gaee1baa59bb2f85ba575b5a8619ac1ebf}{pbuf\+\_\+layer} \{ \newline
+\hyperlink{group__pbuf_ggaee1baa59bb2f85ba575b5a8619ac1ebfa2ded3594a3977f8bf9cf09552be327b5}{P\+B\+U\+F\+\_\+\+T\+R\+A\+N\+S\+P\+O\+RT}, 
+\hyperlink{group__pbuf_ggaee1baa59bb2f85ba575b5a8619ac1ebfafcc1e506061ba69dfa142eb6b3da5f13}{P\+B\+U\+F\+\_\+\+IP}, 
+\hyperlink{group__pbuf_ggaee1baa59bb2f85ba575b5a8619ac1ebfab4de441e737330558b609a990cd17346}{P\+B\+U\+F\+\_\+\+L\+I\+NK}, 
+\hyperlink{group__pbuf_ggaee1baa59bb2f85ba575b5a8619ac1ebfa0ff039585f05f9208bcb66c2d37783e2}{P\+B\+U\+F\+\_\+\+R\+A\+W\+\_\+\+TX}, 
+\newline
+\hyperlink{group__pbuf_ggaee1baa59bb2f85ba575b5a8619ac1ebfa21116654fbab6d5a4dfeb87a1bb8f0ba}{P\+B\+U\+F\+\_\+\+R\+AW}, 
+\hyperlink{group__pbuf_ggaee1baa59bb2f85ba575b5a8619ac1ebfa2ded3594a3977f8bf9cf09552be327b5}{P\+B\+U\+F\+\_\+\+T\+R\+A\+N\+S\+P\+O\+RT}, 
+\hyperlink{group__pbuf_ggaee1baa59bb2f85ba575b5a8619ac1ebfafcc1e506061ba69dfa142eb6b3da5f13}{P\+B\+U\+F\+\_\+\+IP}, 
+\hyperlink{group__pbuf_ggaee1baa59bb2f85ba575b5a8619ac1ebfab4de441e737330558b609a990cd17346}{P\+B\+U\+F\+\_\+\+L\+I\+NK}, 
+\newline
+\hyperlink{group__pbuf_ggaee1baa59bb2f85ba575b5a8619ac1ebfa0ff039585f05f9208bcb66c2d37783e2}{P\+B\+U\+F\+\_\+\+R\+A\+W\+\_\+\+TX}, 
+\hyperlink{group__pbuf_ggaee1baa59bb2f85ba575b5a8619ac1ebfa21116654fbab6d5a4dfeb87a1bb8f0ba}{P\+B\+U\+F\+\_\+\+R\+AW}
+ \}
+\item 
+enum \hyperlink{group__pbuf_gab7e0e32fcc292c0d7107721766ed92fb}{pbuf\+\_\+type} \{ \newline
+\hyperlink{group__pbuf_ggab7e0e32fcc292c0d7107721766ed92fbac5e9f28455bca98944a030d4b84ecfab}{P\+B\+U\+F\+\_\+\+R\+AM}, 
+\hyperlink{group__pbuf_ggab7e0e32fcc292c0d7107721766ed92fbac120b0fe39efe35bb682e4aa3b82e2c9}{P\+B\+U\+F\+\_\+\+R\+OM}, 
+\hyperlink{group__pbuf_ggab7e0e32fcc292c0d7107721766ed92fbac9b6ba960fdea6f2e8f35c8313b77e4e}{P\+B\+U\+F\+\_\+\+R\+EF}, 
+\hyperlink{group__pbuf_ggab7e0e32fcc292c0d7107721766ed92fbae969347127387b9b59a23ccd24b76d21}{P\+B\+U\+F\+\_\+\+P\+O\+OL}, 
+\newline
+\hyperlink{group__pbuf_ggab7e0e32fcc292c0d7107721766ed92fbac5e9f28455bca98944a030d4b84ecfab}{P\+B\+U\+F\+\_\+\+R\+AM}, 
+\hyperlink{group__pbuf_ggab7e0e32fcc292c0d7107721766ed92fbac120b0fe39efe35bb682e4aa3b82e2c9}{P\+B\+U\+F\+\_\+\+R\+OM}, 
+\hyperlink{group__pbuf_ggab7e0e32fcc292c0d7107721766ed92fbac9b6ba960fdea6f2e8f35c8313b77e4e}{P\+B\+U\+F\+\_\+\+R\+EF}, 
+\hyperlink{group__pbuf_ggab7e0e32fcc292c0d7107721766ed92fbae969347127387b9b59a23ccd24b76d21}{P\+B\+U\+F\+\_\+\+P\+O\+OL}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structpbuf}{pbuf} $\ast$ \hyperlink{group__pbuf_ga8bb9c5d54a06995b1c67ce695ead9969}{pbuf\+\_\+alloc} (\hyperlink{group__pbuf_gaee1baa59bb2f85ba575b5a8619ac1ebf}{pbuf\+\_\+layer} l, \hyperlink{group__compiler__abstraction_ga77570ac4fcab86864fa1916e55676da2}{u16\+\_\+t} length, \hyperlink{group__pbuf_gab7e0e32fcc292c0d7107721766ed92fb}{pbuf\+\_\+type} type)
+\item 
+void \hyperlink{group__pbuf_ga50abfe830a33a1a47a562febee66015d}{pbuf\+\_\+realloc} (struct \hyperlink{structpbuf}{pbuf} $\ast$p, \hyperlink{group__compiler__abstraction_ga77570ac4fcab86864fa1916e55676da2}{u16\+\_\+t} size)
+\item 
+\hyperlink{group__compiler__abstraction_ga4caecabca98b43919dd11be1c0d4cd8e}{u8\+\_\+t} \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2pbuf_8h_aaa17c1951cf2d207b6adfd3947d91f00}{pbuf\+\_\+header} (struct \hyperlink{structpbuf}{pbuf} $\ast$p, \hyperlink{group__compiler__abstraction_gacf46f4df0ebab84edebcb69967fdf86b}{s16\+\_\+t} header\+\_\+size)
+\item 
+\hyperlink{group__compiler__abstraction_ga4caecabca98b43919dd11be1c0d4cd8e}{u8\+\_\+t} \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2pbuf_8h_a27480c41c34021d4417691d327163626}{pbuf\+\_\+header\+\_\+force} (struct \hyperlink{structpbuf}{pbuf} $\ast$p, \hyperlink{group__compiler__abstraction_gacf46f4df0ebab84edebcb69967fdf86b}{s16\+\_\+t} header\+\_\+size)
+\item 
+void \hyperlink{group__pbuf_ga77f6bbd69e45e542014d9c547c7da74e}{pbuf\+\_\+ref} (struct \hyperlink{structpbuf}{pbuf} $\ast$p)
+\item 
+\hyperlink{group__compiler__abstraction_ga4caecabca98b43919dd11be1c0d4cd8e}{u8\+\_\+t} \hyperlink{group__pbuf_gab0dd696fb4b6bc65e548944584f1738b}{pbuf\+\_\+free} (struct \hyperlink{structpbuf}{pbuf} $\ast$p)
+\item 
+\hyperlink{group__compiler__abstraction_ga77570ac4fcab86864fa1916e55676da2}{u16\+\_\+t} \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2pbuf_8h_a5df7ac5ae59012fe9aeddba375a72190}{pbuf\+\_\+clen} (const struct \hyperlink{structpbuf}{pbuf} $\ast$p)
+\item 
+void \hyperlink{group__pbuf_ga82429084fe29015509c9b4a072707cd4}{pbuf\+\_\+cat} (struct \hyperlink{structpbuf}{pbuf} $\ast$head, struct \hyperlink{structpbuf}{pbuf} $\ast$tail)
+\item 
+void \hyperlink{group__pbuf_ga831c9a72bda1d3bd4c7b96f5a0e3b891}{pbuf\+\_\+chain} (struct \hyperlink{structpbuf}{pbuf} $\ast$head, struct \hyperlink{structpbuf}{pbuf} $\ast$tail)
+\item 
+struct \hyperlink{structpbuf}{pbuf} $\ast$ \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2pbuf_8h_abf3d29c4f43986b4cb5eb314d5b9729d}{pbuf\+\_\+dechain} (struct \hyperlink{structpbuf}{pbuf} $\ast$p)
+\item 
+\hyperlink{group__infrastructure__errors_gaf02d9da80fd66b4f986d2c53d7231ddb}{err\+\_\+t} \hyperlink{group__pbuf_gaba88511dee3df4b631fde691f421320d}{pbuf\+\_\+copy} (struct \hyperlink{structpbuf}{pbuf} $\ast$p\+\_\+to, const struct \hyperlink{structpbuf}{pbuf} $\ast$p\+\_\+from)
+\item 
+\hyperlink{group__compiler__abstraction_ga77570ac4fcab86864fa1916e55676da2}{u16\+\_\+t} \hyperlink{group__pbuf_gac2f1f58fd36042e82af46f5015720899}{pbuf\+\_\+copy\+\_\+partial} (const struct \hyperlink{structpbuf}{pbuf} $\ast$p, void $\ast$dataptr, \hyperlink{group__compiler__abstraction_ga77570ac4fcab86864fa1916e55676da2}{u16\+\_\+t} len, \hyperlink{group__compiler__abstraction_ga77570ac4fcab86864fa1916e55676da2}{u16\+\_\+t} offset)
+\item 
+\hyperlink{group__infrastructure__errors_gaf02d9da80fd66b4f986d2c53d7231ddb}{err\+\_\+t} \hyperlink{group__pbuf_gad1e31e370271335b197272af2724ca85}{pbuf\+\_\+take} (struct \hyperlink{structpbuf}{pbuf} $\ast$buf, const void $\ast$dataptr, \hyperlink{group__compiler__abstraction_ga77570ac4fcab86864fa1916e55676da2}{u16\+\_\+t} len)
+\item 
+\hyperlink{group__infrastructure__errors_gaf02d9da80fd66b4f986d2c53d7231ddb}{err\+\_\+t} \hyperlink{group__pbuf_gae1cf2bf7454ff87ff377b0b2262f9b44}{pbuf\+\_\+take\+\_\+at} (struct \hyperlink{structpbuf}{pbuf} $\ast$buf, const void $\ast$dataptr, \hyperlink{group__compiler__abstraction_ga77570ac4fcab86864fa1916e55676da2}{u16\+\_\+t} len, \hyperlink{group__compiler__abstraction_ga77570ac4fcab86864fa1916e55676da2}{u16\+\_\+t} offset)
+\item 
+struct \hyperlink{structpbuf}{pbuf} $\ast$ \hyperlink{group__pbuf_gabe4dfb2409c87a7c52c9a22a779f92e9}{pbuf\+\_\+skip} (struct \hyperlink{structpbuf}{pbuf} $\ast$in, \hyperlink{group__compiler__abstraction_ga77570ac4fcab86864fa1916e55676da2}{u16\+\_\+t} in\+\_\+offset, \hyperlink{group__compiler__abstraction_ga77570ac4fcab86864fa1916e55676da2}{u16\+\_\+t} $\ast$out\+\_\+offset)
+\item 
+struct \hyperlink{structpbuf}{pbuf} $\ast$ \hyperlink{group__pbuf_ga031469589fa95ece3bf1c136d1509eac}{pbuf\+\_\+coalesce} (struct \hyperlink{structpbuf}{pbuf} $\ast$p, \hyperlink{group__pbuf_gaee1baa59bb2f85ba575b5a8619ac1ebf}{pbuf\+\_\+layer} layer)
+\item 
+\hyperlink{group__compiler__abstraction_ga4caecabca98b43919dd11be1c0d4cd8e}{u8\+\_\+t} \hyperlink{group__pbuf_ga6d803d9945bffb7ad97743f2fa503da6}{pbuf\+\_\+get\+\_\+at} (const struct \hyperlink{structpbuf}{pbuf} $\ast$p, \hyperlink{group__compiler__abstraction_ga77570ac4fcab86864fa1916e55676da2}{u16\+\_\+t} offset)
+\item 
+int \hyperlink{group__pbuf_ga839f342803b0cf89049744124c5a98ad}{pbuf\+\_\+try\+\_\+get\+\_\+at} (const struct \hyperlink{structpbuf}{pbuf} $\ast$p, \hyperlink{group__compiler__abstraction_ga77570ac4fcab86864fa1916e55676da2}{u16\+\_\+t} offset)
+\item 
+void \hyperlink{group__pbuf_gaf76863707dc02993eae116574b1ea03f}{pbuf\+\_\+put\+\_\+at} (struct \hyperlink{structpbuf}{pbuf} $\ast$p, \hyperlink{group__compiler__abstraction_ga77570ac4fcab86864fa1916e55676da2}{u16\+\_\+t} offset, \hyperlink{group__compiler__abstraction_ga4caecabca98b43919dd11be1c0d4cd8e}{u8\+\_\+t} data)
+\item 
+\hyperlink{group__compiler__abstraction_ga77570ac4fcab86864fa1916e55676da2}{u16\+\_\+t} \hyperlink{group__pbuf_ga2170ccbbb13238380dbb203ee1b85974}{pbuf\+\_\+memcmp} (const struct \hyperlink{structpbuf}{pbuf} $\ast$p, \hyperlink{group__compiler__abstraction_ga77570ac4fcab86864fa1916e55676da2}{u16\+\_\+t} offset, const void $\ast$s2, \hyperlink{group__compiler__abstraction_ga77570ac4fcab86864fa1916e55676da2}{u16\+\_\+t} n)
+\item 
+\hyperlink{group__compiler__abstraction_ga77570ac4fcab86864fa1916e55676da2}{u16\+\_\+t} \hyperlink{group__pbuf_ga18c164a6e4a24d89ea9eb7571a886448}{pbuf\+\_\+memfind} (const struct \hyperlink{structpbuf}{pbuf} $\ast$p, const void $\ast$\hyperlink{structmem}{mem}, \hyperlink{group__compiler__abstraction_ga77570ac4fcab86864fa1916e55676da2}{u16\+\_\+t} mem\+\_\+len, \hyperlink{group__compiler__abstraction_ga77570ac4fcab86864fa1916e55676da2}{u16\+\_\+t} start\+\_\+offset)
+\item 
+\hyperlink{group__compiler__abstraction_ga77570ac4fcab86864fa1916e55676da2}{u16\+\_\+t} \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2pbuf_8h_a9ba3f7b705309ceadb147692fd5a1c7d}{pbuf\+\_\+strstr} (const struct \hyperlink{structpbuf}{pbuf} $\ast$p, const char $\ast$substr)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+pbuf A\+PI 
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2pbuf_8h_a64174c5169b48dc17674324afd9c63b9}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2pbuf_8h_a64174c5169b48dc17674324afd9c63b9}} 
+\index{openmote-\/cc2538/lwip/src/include/lwip/pbuf.\+h@{openmote-\/cc2538/lwip/src/include/lwip/pbuf.\+h}!L\+W\+I\+P\+\_\+\+S\+U\+P\+P\+O\+R\+T\+\_\+\+C\+U\+S\+T\+O\+M\+\_\+\+P\+B\+UF@{L\+W\+I\+P\+\_\+\+S\+U\+P\+P\+O\+R\+T\+\_\+\+C\+U\+S\+T\+O\+M\+\_\+\+P\+B\+UF}}
+\index{L\+W\+I\+P\+\_\+\+S\+U\+P\+P\+O\+R\+T\+\_\+\+C\+U\+S\+T\+O\+M\+\_\+\+P\+B\+UF@{L\+W\+I\+P\+\_\+\+S\+U\+P\+P\+O\+R\+T\+\_\+\+C\+U\+S\+T\+O\+M\+\_\+\+P\+B\+UF}!openmote-\/cc2538/lwip/src/include/lwip/pbuf.\+h@{openmote-\/cc2538/lwip/src/include/lwip/pbuf.\+h}}
+\subsubsection{\texorpdfstring{L\+W\+I\+P\+\_\+\+S\+U\+P\+P\+O\+R\+T\+\_\+\+C\+U\+S\+T\+O\+M\+\_\+\+P\+B\+UF}{LWIP\_SUPPORT\_CUSTOM\_PBUF}}
+{\footnotesize\ttfamily \#define L\+W\+I\+P\+\_\+\+S\+U\+P\+P\+O\+R\+T\+\_\+\+C\+U\+S\+T\+O\+M\+\_\+\+P\+B\+UF~((\hyperlink{group__lwip__opts__ipv4_gaf85c8bdd5035b6cada790b4cc2a209a4}{I\+P\+\_\+\+F\+R\+AG} \&\& !\hyperlink{group__lwip__opts__netif_gabafb9f64a80e51b56c0abbcfc1f7e04e}{L\+W\+I\+P\+\_\+\+N\+E\+T\+I\+F\+\_\+\+T\+X\+\_\+\+S\+I\+N\+G\+L\+E\+\_\+\+P\+B\+UF}) $\vert$$\vert$ (\hyperlink{openmote-cc2538_2lwip_2test_2fuzz_2lwipopts_8h_a872e3bb3fe2212156d66b18fccc9643f}{L\+W\+I\+P\+\_\+\+I\+P\+V6} \&\& \hyperlink{group__lwip__opts__ipv6_ga9ab6269f3087f6d9f7b2c7181ef043c3}{L\+W\+I\+P\+\_\+\+I\+P\+V6\+\_\+\+F\+R\+AG}))}
+
+L\+W\+I\+P\+\_\+\+S\+U\+P\+P\+O\+R\+T\+\_\+\+C\+U\+S\+T\+O\+M\+\_\+\+P\+B\+UF==1\+: Custom pbufs behave much like their pbuf type but they are allocated by external code (initialised by calling pbuf\+\_\+alloced\+\_\+custom()) and when pbuf\+\_\+free gives up their last reference, they are freed by calling pbuf\+\_\+custom-\/$>$custom\+\_\+free\+\_\+function(). Currently, the pbuf\+\_\+custom code is only needed for one specific configuration of I\+P\+\_\+\+F\+R\+AG, unless required by external driver/application code. \mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2pbuf_8h_a1f31e5e7b39e90b9b52654f543bb8fc5}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2pbuf_8h_a1f31e5e7b39e90b9b52654f543bb8fc5}} 
+\index{openmote-\/cc2538/lwip/src/include/lwip/pbuf.\+h@{openmote-\/cc2538/lwip/src/include/lwip/pbuf.\+h}!P\+B\+U\+F\+\_\+\+C\+H\+E\+C\+K\+\_\+\+F\+R\+E\+E\+\_\+\+O\+O\+S\+EQ@{P\+B\+U\+F\+\_\+\+C\+H\+E\+C\+K\+\_\+\+F\+R\+E\+E\+\_\+\+O\+O\+S\+EQ}}
+\index{P\+B\+U\+F\+\_\+\+C\+H\+E\+C\+K\+\_\+\+F\+R\+E\+E\+\_\+\+O\+O\+S\+EQ@{P\+B\+U\+F\+\_\+\+C\+H\+E\+C\+K\+\_\+\+F\+R\+E\+E\+\_\+\+O\+O\+S\+EQ}!openmote-\/cc2538/lwip/src/include/lwip/pbuf.\+h@{openmote-\/cc2538/lwip/src/include/lwip/pbuf.\+h}}
+\subsubsection{\texorpdfstring{P\+B\+U\+F\+\_\+\+C\+H\+E\+C\+K\+\_\+\+F\+R\+E\+E\+\_\+\+O\+O\+S\+EQ}{PBUF\_CHECK\_FREE\_OOSEQ}}
+{\footnotesize\ttfamily \#define P\+B\+U\+F\+\_\+\+C\+H\+E\+C\+K\+\_\+\+F\+R\+E\+E\+\_\+\+O\+O\+S\+EQ(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2pbuf_8h_af78a7e1815dc0e31884d095b666d997f}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2pbuf_8h_af78a7e1815dc0e31884d095b666d997f}} 
+\index{openmote-\/cc2538/lwip/src/include/lwip/pbuf.\+h@{openmote-\/cc2538/lwip/src/include/lwip/pbuf.\+h}!P\+B\+U\+F\+\_\+\+F\+L\+A\+G\+\_\+\+I\+S\+\_\+\+C\+U\+S\+T\+OM@{P\+B\+U\+F\+\_\+\+F\+L\+A\+G\+\_\+\+I\+S\+\_\+\+C\+U\+S\+T\+OM}}
+\index{P\+B\+U\+F\+\_\+\+F\+L\+A\+G\+\_\+\+I\+S\+\_\+\+C\+U\+S\+T\+OM@{P\+B\+U\+F\+\_\+\+F\+L\+A\+G\+\_\+\+I\+S\+\_\+\+C\+U\+S\+T\+OM}!openmote-\/cc2538/lwip/src/include/lwip/pbuf.\+h@{openmote-\/cc2538/lwip/src/include/lwip/pbuf.\+h}}
+\subsubsection{\texorpdfstring{P\+B\+U\+F\+\_\+\+F\+L\+A\+G\+\_\+\+I\+S\+\_\+\+C\+U\+S\+T\+OM}{PBUF\_FLAG\_IS\_CUSTOM}}
+{\footnotesize\ttfamily \#define P\+B\+U\+F\+\_\+\+F\+L\+A\+G\+\_\+\+I\+S\+\_\+\+C\+U\+S\+T\+OM~0x02U}
+
+indicates this is a custom pbuf\+: pbuf\+\_\+free calls pbuf\+\_\+custom-\/$>$custom\+\_\+free\+\_\+function() when the last reference is released (plus custom P\+B\+U\+F\+\_\+\+R\+AM cannot be trimmed) \mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2pbuf_8h_a6772c16662bbb78597399add086500c0}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2pbuf_8h_a6772c16662bbb78597399add086500c0}} 
+\index{openmote-\/cc2538/lwip/src/include/lwip/pbuf.\+h@{openmote-\/cc2538/lwip/src/include/lwip/pbuf.\+h}!P\+B\+U\+F\+\_\+\+F\+L\+A\+G\+\_\+\+L\+L\+B\+C\+A\+ST@{P\+B\+U\+F\+\_\+\+F\+L\+A\+G\+\_\+\+L\+L\+B\+C\+A\+ST}}
+\index{P\+B\+U\+F\+\_\+\+F\+L\+A\+G\+\_\+\+L\+L\+B\+C\+A\+ST@{P\+B\+U\+F\+\_\+\+F\+L\+A\+G\+\_\+\+L\+L\+B\+C\+A\+ST}!openmote-\/cc2538/lwip/src/include/lwip/pbuf.\+h@{openmote-\/cc2538/lwip/src/include/lwip/pbuf.\+h}}
+\subsubsection{\texorpdfstring{P\+B\+U\+F\+\_\+\+F\+L\+A\+G\+\_\+\+L\+L\+B\+C\+A\+ST}{PBUF\_FLAG\_LLBCAST}}
+{\footnotesize\ttfamily \#define P\+B\+U\+F\+\_\+\+F\+L\+A\+G\+\_\+\+L\+L\+B\+C\+A\+ST~0x08U}
+
+indicates this pbuf was received as link-\/level broadcast \mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2pbuf_8h_ac0d56cde47aca24ef410d730d7c89887}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2pbuf_8h_ac0d56cde47aca24ef410d730d7c89887}} 
+\index{openmote-\/cc2538/lwip/src/include/lwip/pbuf.\+h@{openmote-\/cc2538/lwip/src/include/lwip/pbuf.\+h}!P\+B\+U\+F\+\_\+\+F\+L\+A\+G\+\_\+\+L\+L\+M\+C\+A\+ST@{P\+B\+U\+F\+\_\+\+F\+L\+A\+G\+\_\+\+L\+L\+M\+C\+A\+ST}}
+\index{P\+B\+U\+F\+\_\+\+F\+L\+A\+G\+\_\+\+L\+L\+M\+C\+A\+ST@{P\+B\+U\+F\+\_\+\+F\+L\+A\+G\+\_\+\+L\+L\+M\+C\+A\+ST}!openmote-\/cc2538/lwip/src/include/lwip/pbuf.\+h@{openmote-\/cc2538/lwip/src/include/lwip/pbuf.\+h}}
+\subsubsection{\texorpdfstring{P\+B\+U\+F\+\_\+\+F\+L\+A\+G\+\_\+\+L\+L\+M\+C\+A\+ST}{PBUF\_FLAG\_LLMCAST}}
+{\footnotesize\ttfamily \#define P\+B\+U\+F\+\_\+\+F\+L\+A\+G\+\_\+\+L\+L\+M\+C\+A\+ST~0x10U}
+
+indicates this pbuf was received as link-\/level multicast \mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2pbuf_8h_ab8ad153151a8c157335d9c0cedc007e6}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2pbuf_8h_ab8ad153151a8c157335d9c0cedc007e6}} 
+\index{openmote-\/cc2538/lwip/src/include/lwip/pbuf.\+h@{openmote-\/cc2538/lwip/src/include/lwip/pbuf.\+h}!P\+B\+U\+F\+\_\+\+F\+L\+A\+G\+\_\+\+M\+C\+A\+S\+T\+L\+O\+OP@{P\+B\+U\+F\+\_\+\+F\+L\+A\+G\+\_\+\+M\+C\+A\+S\+T\+L\+O\+OP}}
+\index{P\+B\+U\+F\+\_\+\+F\+L\+A\+G\+\_\+\+M\+C\+A\+S\+T\+L\+O\+OP@{P\+B\+U\+F\+\_\+\+F\+L\+A\+G\+\_\+\+M\+C\+A\+S\+T\+L\+O\+OP}!openmote-\/cc2538/lwip/src/include/lwip/pbuf.\+h@{openmote-\/cc2538/lwip/src/include/lwip/pbuf.\+h}}
+\subsubsection{\texorpdfstring{P\+B\+U\+F\+\_\+\+F\+L\+A\+G\+\_\+\+M\+C\+A\+S\+T\+L\+O\+OP}{PBUF\_FLAG\_MCASTLOOP}}
+{\footnotesize\ttfamily \#define P\+B\+U\+F\+\_\+\+F\+L\+A\+G\+\_\+\+M\+C\+A\+S\+T\+L\+O\+OP~0x04U}
+
+indicates this pbuf is U\+DP multicast to be looped back \mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2pbuf_8h_a018a6499e357f8a1373321f802a82930}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2pbuf_8h_a018a6499e357f8a1373321f802a82930}} 
+\index{openmote-\/cc2538/lwip/src/include/lwip/pbuf.\+h@{openmote-\/cc2538/lwip/src/include/lwip/pbuf.\+h}!P\+B\+U\+F\+\_\+\+F\+L\+A\+G\+\_\+\+P\+U\+SH@{P\+B\+U\+F\+\_\+\+F\+L\+A\+G\+\_\+\+P\+U\+SH}}
+\index{P\+B\+U\+F\+\_\+\+F\+L\+A\+G\+\_\+\+P\+U\+SH@{P\+B\+U\+F\+\_\+\+F\+L\+A\+G\+\_\+\+P\+U\+SH}!openmote-\/cc2538/lwip/src/include/lwip/pbuf.\+h@{openmote-\/cc2538/lwip/src/include/lwip/pbuf.\+h}}
+\subsubsection{\texorpdfstring{P\+B\+U\+F\+\_\+\+F\+L\+A\+G\+\_\+\+P\+U\+SH}{PBUF\_FLAG\_PUSH}}
+{\footnotesize\ttfamily \#define P\+B\+U\+F\+\_\+\+F\+L\+A\+G\+\_\+\+P\+U\+SH~0x01U}
+
+indicates this packet\textquotesingle{}s data should be immediately passed to the application \mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2pbuf_8h_a36a915aa2f6a188baa2862881407971e}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2pbuf_8h_a36a915aa2f6a188baa2862881407971e}} 
+\index{openmote-\/cc2538/lwip/src/include/lwip/pbuf.\+h@{openmote-\/cc2538/lwip/src/include/lwip/pbuf.\+h}!P\+B\+U\+F\+\_\+\+F\+L\+A\+G\+\_\+\+T\+C\+P\+\_\+\+F\+IN@{P\+B\+U\+F\+\_\+\+F\+L\+A\+G\+\_\+\+T\+C\+P\+\_\+\+F\+IN}}
+\index{P\+B\+U\+F\+\_\+\+F\+L\+A\+G\+\_\+\+T\+C\+P\+\_\+\+F\+IN@{P\+B\+U\+F\+\_\+\+F\+L\+A\+G\+\_\+\+T\+C\+P\+\_\+\+F\+IN}!openmote-\/cc2538/lwip/src/include/lwip/pbuf.\+h@{openmote-\/cc2538/lwip/src/include/lwip/pbuf.\+h}}
+\subsubsection{\texorpdfstring{P\+B\+U\+F\+\_\+\+F\+L\+A\+G\+\_\+\+T\+C\+P\+\_\+\+F\+IN}{PBUF\_FLAG\_TCP\_FIN}}
+{\footnotesize\ttfamily \#define P\+B\+U\+F\+\_\+\+F\+L\+A\+G\+\_\+\+T\+C\+P\+\_\+\+F\+IN~0x20U}
+
+indicates this pbuf includes a T\+CP F\+IN flag \mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2pbuf_8h_a0c9b6a35471ebe1628ffe74bbc67f0b4}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2pbuf_8h_a0c9b6a35471ebe1628ffe74bbc67f0b4}} 
+\index{openmote-\/cc2538/lwip/src/include/lwip/pbuf.\+h@{openmote-\/cc2538/lwip/src/include/lwip/pbuf.\+h}!pbuf\+\_\+init@{pbuf\+\_\+init}}
+\index{pbuf\+\_\+init@{pbuf\+\_\+init}!openmote-\/cc2538/lwip/src/include/lwip/pbuf.\+h@{openmote-\/cc2538/lwip/src/include/lwip/pbuf.\+h}}
+\subsubsection{\texorpdfstring{pbuf\+\_\+init}{pbuf\_init}}
+{\footnotesize\ttfamily \#define pbuf\+\_\+init(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2pbuf_8h_aae0fea237167bb06ea4dc5333df5b0a7}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2pbuf_8h_aae0fea237167bb06ea4dc5333df5b0a7}} 
+\index{openmote-\/cc2538/lwip/src/include/lwip/pbuf.\+h@{openmote-\/cc2538/lwip/src/include/lwip/pbuf.\+h}!P\+B\+U\+F\+\_\+\+I\+P\+\_\+\+H\+L\+EN@{P\+B\+U\+F\+\_\+\+I\+P\+\_\+\+H\+L\+EN}}
+\index{P\+B\+U\+F\+\_\+\+I\+P\+\_\+\+H\+L\+EN@{P\+B\+U\+F\+\_\+\+I\+P\+\_\+\+H\+L\+EN}!openmote-\/cc2538/lwip/src/include/lwip/pbuf.\+h@{openmote-\/cc2538/lwip/src/include/lwip/pbuf.\+h}}
+\subsubsection{\texorpdfstring{P\+B\+U\+F\+\_\+\+I\+P\+\_\+\+H\+L\+EN}{PBUF\_IP\_HLEN}}
+{\footnotesize\ttfamily \#define P\+B\+U\+F\+\_\+\+I\+P\+\_\+\+H\+L\+EN~20}
+
+\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2pbuf_8h_ac54b0f161128a32c7419c33b893a5106}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2pbuf_8h_ac54b0f161128a32c7419c33b893a5106}} 
+\index{openmote-\/cc2538/lwip/src/include/lwip/pbuf.\+h@{openmote-\/cc2538/lwip/src/include/lwip/pbuf.\+h}!P\+B\+U\+F\+\_\+\+P\+O\+O\+L\+\_\+\+F\+R\+E\+E\+\_\+\+O\+O\+S\+EQ@{P\+B\+U\+F\+\_\+\+P\+O\+O\+L\+\_\+\+F\+R\+E\+E\+\_\+\+O\+O\+S\+EQ}}
+\index{P\+B\+U\+F\+\_\+\+P\+O\+O\+L\+\_\+\+F\+R\+E\+E\+\_\+\+O\+O\+S\+EQ@{P\+B\+U\+F\+\_\+\+P\+O\+O\+L\+\_\+\+F\+R\+E\+E\+\_\+\+O\+O\+S\+EQ}!openmote-\/cc2538/lwip/src/include/lwip/pbuf.\+h@{openmote-\/cc2538/lwip/src/include/lwip/pbuf.\+h}}
+\subsubsection{\texorpdfstring{P\+B\+U\+F\+\_\+\+P\+O\+O\+L\+\_\+\+F\+R\+E\+E\+\_\+\+O\+O\+S\+EQ}{PBUF\_POOL\_FREE\_OOSEQ}}
+{\footnotesize\ttfamily \#define P\+B\+U\+F\+\_\+\+P\+O\+O\+L\+\_\+\+F\+R\+E\+E\+\_\+\+O\+O\+S\+EQ~1}
+
+Define this to 0 to prevent freeing ooseq pbufs when the P\+B\+U\+F\+\_\+\+P\+O\+OL is empty \mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2pbuf_8h_af9da2e1ca60dc0c584938ccc5d662307}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2pbuf_8h_af9da2e1ca60dc0c584938ccc5d662307}} 
+\index{openmote-\/cc2538/lwip/src/include/lwip/pbuf.\+h@{openmote-\/cc2538/lwip/src/include/lwip/pbuf.\+h}!P\+B\+U\+F\+\_\+\+T\+R\+A\+N\+S\+P\+O\+R\+T\+\_\+\+H\+L\+EN@{P\+B\+U\+F\+\_\+\+T\+R\+A\+N\+S\+P\+O\+R\+T\+\_\+\+H\+L\+EN}}
+\index{P\+B\+U\+F\+\_\+\+T\+R\+A\+N\+S\+P\+O\+R\+T\+\_\+\+H\+L\+EN@{P\+B\+U\+F\+\_\+\+T\+R\+A\+N\+S\+P\+O\+R\+T\+\_\+\+H\+L\+EN}!openmote-\/cc2538/lwip/src/include/lwip/pbuf.\+h@{openmote-\/cc2538/lwip/src/include/lwip/pbuf.\+h}}
+\subsubsection{\texorpdfstring{P\+B\+U\+F\+\_\+\+T\+R\+A\+N\+S\+P\+O\+R\+T\+\_\+\+H\+L\+EN}{PBUF\_TRANSPORT\_HLEN}}
+{\footnotesize\ttfamily \#define P\+B\+U\+F\+\_\+\+T\+R\+A\+N\+S\+P\+O\+R\+T\+\_\+\+H\+L\+EN~20}
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2pbuf_8h_a5df7ac5ae59012fe9aeddba375a72190}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2pbuf_8h_a5df7ac5ae59012fe9aeddba375a72190}} 
+\index{openmote-\/cc2538/lwip/src/include/lwip/pbuf.\+h@{openmote-\/cc2538/lwip/src/include/lwip/pbuf.\+h}!pbuf\+\_\+clen@{pbuf\+\_\+clen}}
+\index{pbuf\+\_\+clen@{pbuf\+\_\+clen}!openmote-\/cc2538/lwip/src/include/lwip/pbuf.\+h@{openmote-\/cc2538/lwip/src/include/lwip/pbuf.\+h}}
+\subsubsection{\texorpdfstring{pbuf\+\_\+clen()}{pbuf\_clen()}}
+{\footnotesize\ttfamily \hyperlink{group__compiler__abstraction_ga77570ac4fcab86864fa1916e55676da2}{u16\+\_\+t} pbuf\+\_\+clen (\begin{DoxyParamCaption}\item[{const struct \hyperlink{structpbuf}{pbuf} $\ast$}]{p }\end{DoxyParamCaption})}
+
+Count number of pbufs in a chain
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & first pbuf of chain \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the number of pbufs in a chain 
+\end{DoxyReturn}
+\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2pbuf_8h_abf3d29c4f43986b4cb5eb314d5b9729d}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2pbuf_8h_abf3d29c4f43986b4cb5eb314d5b9729d}} 
+\index{openmote-\/cc2538/lwip/src/include/lwip/pbuf.\+h@{openmote-\/cc2538/lwip/src/include/lwip/pbuf.\+h}!pbuf\+\_\+dechain@{pbuf\+\_\+dechain}}
+\index{pbuf\+\_\+dechain@{pbuf\+\_\+dechain}!openmote-\/cc2538/lwip/src/include/lwip/pbuf.\+h@{openmote-\/cc2538/lwip/src/include/lwip/pbuf.\+h}}
+\subsubsection{\texorpdfstring{pbuf\+\_\+dechain()}{pbuf\_dechain()}}
+{\footnotesize\ttfamily struct \hyperlink{structpbuf}{pbuf}$\ast$ pbuf\+\_\+dechain (\begin{DoxyParamCaption}\item[{struct \hyperlink{structpbuf}{pbuf} $\ast$}]{p }\end{DoxyParamCaption})}
+
+Dechains the first pbuf from its succeeding pbufs in the chain.
+
+Makes p-\/$>$tot\+\_\+len field equal to p-\/$>$len. 
+\begin{DoxyParams}{Parameters}
+{\em p} & pbuf to dechain \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+remainder of the pbuf chain, or N\+U\+LL if it was de-\/allocated. 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+May not be called on a packet queue. 
+\end{DoxyNote}
+\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2pbuf_8h_aaa17c1951cf2d207b6adfd3947d91f00}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2pbuf_8h_aaa17c1951cf2d207b6adfd3947d91f00}} 
+\index{openmote-\/cc2538/lwip/src/include/lwip/pbuf.\+h@{openmote-\/cc2538/lwip/src/include/lwip/pbuf.\+h}!pbuf\+\_\+header@{pbuf\+\_\+header}}
+\index{pbuf\+\_\+header@{pbuf\+\_\+header}!openmote-\/cc2538/lwip/src/include/lwip/pbuf.\+h@{openmote-\/cc2538/lwip/src/include/lwip/pbuf.\+h}}
+\subsubsection{\texorpdfstring{pbuf\+\_\+header()}{pbuf\_header()}}
+{\footnotesize\ttfamily \hyperlink{group__compiler__abstraction_ga4caecabca98b43919dd11be1c0d4cd8e}{u8\+\_\+t} pbuf\+\_\+header (\begin{DoxyParamCaption}\item[{struct \hyperlink{structpbuf}{pbuf} $\ast$}]{p,  }\item[{\hyperlink{group__compiler__abstraction_gacf46f4df0ebab84edebcb69967fdf86b}{s16\+\_\+t}}]{header\+\_\+size\+\_\+increment }\end{DoxyParamCaption})}
+
+Adjusts the payload pointer to hide or reveal headers in the payload.
+
+Adjusts the -\/$>$payload pointer so that space for a header (dis)appears in the pbuf payload.
+
+The -\/$>$payload, -\/$>$tot\+\_\+len and -\/$>$len fields are adjusted.
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & pbuf to change the header size. \\
+\hline
+{\em header\+\_\+size\+\_\+increment} & Number of bytes to increment header size which increases the size of the pbuf. New space is on the front. (Using a negative value decreases the header size.) If hdr\+\_\+size\+\_\+inc is 0, this function does nothing and returns successful.\\
+\hline
+\end{DoxyParams}
+P\+B\+U\+F\+\_\+\+R\+OM and P\+B\+U\+F\+\_\+\+R\+EF type buffers cannot have their sizes increased, so the call will fail. A check is made that the increase in header size does not move the payload pointer in front of the start of the buffer. \begin{DoxyReturn}{Returns}
+non-\/zero on failure, zero on success. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{openmote-cc2538_2lwip_2src_2include_2lwip_2pbuf_8h_aaa17c1951cf2d207b6adfd3947d91f00_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2pbuf_8h_a27480c41c34021d4417691d327163626}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2pbuf_8h_a27480c41c34021d4417691d327163626}} 
+\index{openmote-\/cc2538/lwip/src/include/lwip/pbuf.\+h@{openmote-\/cc2538/lwip/src/include/lwip/pbuf.\+h}!pbuf\+\_\+header\+\_\+force@{pbuf\+\_\+header\+\_\+force}}
+\index{pbuf\+\_\+header\+\_\+force@{pbuf\+\_\+header\+\_\+force}!openmote-\/cc2538/lwip/src/include/lwip/pbuf.\+h@{openmote-\/cc2538/lwip/src/include/lwip/pbuf.\+h}}
+\subsubsection{\texorpdfstring{pbuf\+\_\+header\+\_\+force()}{pbuf\_header\_force()}}
+{\footnotesize\ttfamily \hyperlink{group__compiler__abstraction_ga4caecabca98b43919dd11be1c0d4cd8e}{u8\+\_\+t} pbuf\+\_\+header\+\_\+force (\begin{DoxyParamCaption}\item[{struct \hyperlink{structpbuf}{pbuf} $\ast$}]{p,  }\item[{\hyperlink{group__compiler__abstraction_gacf46f4df0ebab84edebcb69967fdf86b}{s16\+\_\+t}}]{header\+\_\+size\+\_\+increment }\end{DoxyParamCaption})}
+
+Same as pbuf\+\_\+header but does not check if \textquotesingle{}header\+\_\+size $>$ 0\textquotesingle{} is allowed. This is used internally only, to allow P\+B\+U\+F\+\_\+\+R\+EF for RX. \mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2pbuf_8h_a9ba3f7b705309ceadb147692fd5a1c7d}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2pbuf_8h_a9ba3f7b705309ceadb147692fd5a1c7d}} 
+\index{openmote-\/cc2538/lwip/src/include/lwip/pbuf.\+h@{openmote-\/cc2538/lwip/src/include/lwip/pbuf.\+h}!pbuf\+\_\+strstr@{pbuf\+\_\+strstr}}
+\index{pbuf\+\_\+strstr@{pbuf\+\_\+strstr}!openmote-\/cc2538/lwip/src/include/lwip/pbuf.\+h@{openmote-\/cc2538/lwip/src/include/lwip/pbuf.\+h}}
+\subsubsection{\texorpdfstring{pbuf\+\_\+strstr()}{pbuf\_strstr()}}
+{\footnotesize\ttfamily \hyperlink{group__compiler__abstraction_ga77570ac4fcab86864fa1916e55676da2}{u16\+\_\+t} pbuf\+\_\+strstr (\begin{DoxyParamCaption}\item[{const struct \hyperlink{structpbuf}{pbuf} $\ast$}]{p,  }\item[{const char $\ast$}]{substr }\end{DoxyParamCaption})}
+
+Find occurrence of substr with length substr\+\_\+len in pbuf p, start at offset start\+\_\+offset W\+A\+R\+N\+I\+NG\+: in contrast to strstr(), this one does not stop at the first \textbackslash{}0 in the pbuf/source string!
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & pbuf to search, maximum length is 0x\+F\+F\+FE since 0x\+F\+F\+FF is used as return value \textquotesingle{}not found\textquotesingle{} \\
+\hline
+{\em substr} & string to search for in p, maximum length is 0x\+F\+F\+FE \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0x\+F\+F\+FF if substr was not found in p or the index where it was found 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=257pt]{openmote-cc2538_2lwip_2src_2include_2lwip_2pbuf_8h_a9ba3f7b705309ceadb147692fd5a1c7d_cgraph}
+\end{center}
+\end{figure}

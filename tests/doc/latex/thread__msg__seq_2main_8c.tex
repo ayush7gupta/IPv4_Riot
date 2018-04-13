@@ -1,0 +1,128 @@
+\hypertarget{thread__msg__seq_2main_8c}{}\section{/home/ayush/\+R\+I\+O\+T/tests/thread\+\_\+msg\+\_\+seq/main.c File Reference}
+\label{thread__msg__seq_2main_8c}\index{/home/ayush/\+R\+I\+O\+T/tests/thread\+\_\+msg\+\_\+seq/main.\+c@{/home/ayush/\+R\+I\+O\+T/tests/thread\+\_\+msg\+\_\+seq/main.\+c}}
+
+
+Thread test application.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}thread.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}msg.\+h\char`\"{}}\newline
+Include dependency graph for main.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=258pt]{thread__msg__seq_2main_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void $\ast$ \hyperlink{thread__msg__seq_2main_8c_a208ef95e782525b592bd91f9716c7970}{sub\+\_\+thread} (void $\ast$arg)
+\item 
+int \hyperlink{thread__msg__seq_2main_8c_a840291bc02cba5474a4cb46a9b9566fe}{main} (void)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+char \hyperlink{thread__msg__seq_2main_8c_a52d6dfc7b9523823b2df310120281b9b}{t1\+\_\+stack} \mbox{[}T\+H\+R\+E\+A\+D\+\_\+\+S\+T\+A\+C\+K\+S\+I\+Z\+E\+\_\+\+M\+A\+IN\mbox{]}
+\item 
+char \hyperlink{thread__msg__seq_2main_8c_a11ec22beff4605a3188e1b21620605ba}{t2\+\_\+stack} \mbox{[}T\+H\+R\+E\+A\+D\+\_\+\+S\+T\+A\+C\+K\+S\+I\+Z\+E\+\_\+\+M\+A\+IN\mbox{]}
+\item 
+char \hyperlink{thread__msg__seq_2main_8c_a4c6d0bde307dd71ad6999f437d0766e8}{t3\+\_\+stack} \mbox{[}T\+H\+R\+E\+A\+D\+\_\+\+S\+T\+A\+C\+K\+S\+I\+Z\+E\+\_\+\+M\+A\+IN\mbox{]}
+\item 
+kernel\+\_\+pid\+\_\+t \hyperlink{thread__msg__seq_2main_8c_ab5ed7104a854c58cd13092d3b07f3891}{p\+\_\+main} = K\+E\+R\+N\+E\+L\+\_\+\+P\+I\+D\+\_\+\+U\+N\+D\+EF
+\item 
+kernel\+\_\+pid\+\_\+t \hyperlink{thread__msg__seq_2main_8c_a61b6864b7226411fae33dfd70ed1df65}{p1} = K\+E\+R\+N\+E\+L\+\_\+\+P\+I\+D\+\_\+\+U\+N\+D\+EF
+\item 
+kernel\+\_\+pid\+\_\+t \hyperlink{thread__msg__seq_2main_8c_a36fc3cbc23a49b972bca434ec8adb056}{p2} = K\+E\+R\+N\+E\+L\+\_\+\+P\+I\+D\+\_\+\+U\+N\+D\+EF
+\item 
+kernel\+\_\+pid\+\_\+t \hyperlink{thread__msg__seq_2main_8c_af38fe8235adaeae0a0bea6d054cce077}{p3} = K\+E\+R\+N\+E\+L\+\_\+\+P\+I\+D\+\_\+\+U\+N\+D\+EF
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Thread test application. 
+
+\begin{DoxyAuthor}{Author}
+Christian Mehlis \href{mailto:mehlis@inf.fu-berlin.de}{\tt mehlis@inf.\+fu-\/berlin.\+de} 
+
+Kaspar Schleiser \href{mailto:kaspar@schleiser.de}{\tt kaspar@schleiser.\+de} 
+\end{DoxyAuthor}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{thread__msg__seq_2main_8c_a840291bc02cba5474a4cb46a9b9566fe}\label{thread__msg__seq_2main_8c_a840291bc02cba5474a4cb46a9b9566fe}} 
+\index{thread\+\_\+msg\+\_\+seq/main.\+c@{thread\+\_\+msg\+\_\+seq/main.\+c}!main@{main}}
+\index{main@{main}!thread\+\_\+msg\+\_\+seq/main.\+c@{thread\+\_\+msg\+\_\+seq/main.\+c}}
+\subsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=219pt]{thread__msg__seq_2main_8c_a840291bc02cba5474a4cb46a9b9566fe_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{thread__msg__seq_2main_8c_a208ef95e782525b592bd91f9716c7970}\label{thread__msg__seq_2main_8c_a208ef95e782525b592bd91f9716c7970}} 
+\index{thread\+\_\+msg\+\_\+seq/main.\+c@{thread\+\_\+msg\+\_\+seq/main.\+c}!sub\+\_\+thread@{sub\+\_\+thread}}
+\index{sub\+\_\+thread@{sub\+\_\+thread}!thread\+\_\+msg\+\_\+seq/main.\+c@{thread\+\_\+msg\+\_\+seq/main.\+c}}
+\subsubsection{\texorpdfstring{sub\+\_\+thread()}{sub\_thread()}}
+{\footnotesize\ttfamily void$\ast$ sub\+\_\+thread (\begin{DoxyParamCaption}\item[{void $\ast$}]{arg }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=219pt]{thread__msg__seq_2main_8c_a208ef95e782525b592bd91f9716c7970_icgraph}
+\end{center}
+\end{figure}
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{thread__msg__seq_2main_8c_a61b6864b7226411fae33dfd70ed1df65}\label{thread__msg__seq_2main_8c_a61b6864b7226411fae33dfd70ed1df65}} 
+\index{thread\+\_\+msg\+\_\+seq/main.\+c@{thread\+\_\+msg\+\_\+seq/main.\+c}!p1@{p1}}
+\index{p1@{p1}!thread\+\_\+msg\+\_\+seq/main.\+c@{thread\+\_\+msg\+\_\+seq/main.\+c}}
+\subsubsection{\texorpdfstring{p1}{p1}}
+{\footnotesize\ttfamily kernel\+\_\+pid\+\_\+t p1 = K\+E\+R\+N\+E\+L\+\_\+\+P\+I\+D\+\_\+\+U\+N\+D\+EF}
+
+\mbox{\Hypertarget{thread__msg__seq_2main_8c_a36fc3cbc23a49b972bca434ec8adb056}\label{thread__msg__seq_2main_8c_a36fc3cbc23a49b972bca434ec8adb056}} 
+\index{thread\+\_\+msg\+\_\+seq/main.\+c@{thread\+\_\+msg\+\_\+seq/main.\+c}!p2@{p2}}
+\index{p2@{p2}!thread\+\_\+msg\+\_\+seq/main.\+c@{thread\+\_\+msg\+\_\+seq/main.\+c}}
+\subsubsection{\texorpdfstring{p2}{p2}}
+{\footnotesize\ttfamily kernel\+\_\+pid\+\_\+t p2 = K\+E\+R\+N\+E\+L\+\_\+\+P\+I\+D\+\_\+\+U\+N\+D\+EF}
+
+\mbox{\Hypertarget{thread__msg__seq_2main_8c_af38fe8235adaeae0a0bea6d054cce077}\label{thread__msg__seq_2main_8c_af38fe8235adaeae0a0bea6d054cce077}} 
+\index{thread\+\_\+msg\+\_\+seq/main.\+c@{thread\+\_\+msg\+\_\+seq/main.\+c}!p3@{p3}}
+\index{p3@{p3}!thread\+\_\+msg\+\_\+seq/main.\+c@{thread\+\_\+msg\+\_\+seq/main.\+c}}
+\subsubsection{\texorpdfstring{p3}{p3}}
+{\footnotesize\ttfamily kernel\+\_\+pid\+\_\+t p3 = K\+E\+R\+N\+E\+L\+\_\+\+P\+I\+D\+\_\+\+U\+N\+D\+EF}
+
+\mbox{\Hypertarget{thread__msg__seq_2main_8c_ab5ed7104a854c58cd13092d3b07f3891}\label{thread__msg__seq_2main_8c_ab5ed7104a854c58cd13092d3b07f3891}} 
+\index{thread\+\_\+msg\+\_\+seq/main.\+c@{thread\+\_\+msg\+\_\+seq/main.\+c}!p\+\_\+main@{p\+\_\+main}}
+\index{p\+\_\+main@{p\+\_\+main}!thread\+\_\+msg\+\_\+seq/main.\+c@{thread\+\_\+msg\+\_\+seq/main.\+c}}
+\subsubsection{\texorpdfstring{p\+\_\+main}{p\_main}}
+{\footnotesize\ttfamily kernel\+\_\+pid\+\_\+t p\+\_\+main = K\+E\+R\+N\+E\+L\+\_\+\+P\+I\+D\+\_\+\+U\+N\+D\+EF}
+
+\mbox{\Hypertarget{thread__msg__seq_2main_8c_a52d6dfc7b9523823b2df310120281b9b}\label{thread__msg__seq_2main_8c_a52d6dfc7b9523823b2df310120281b9b}} 
+\index{thread\+\_\+msg\+\_\+seq/main.\+c@{thread\+\_\+msg\+\_\+seq/main.\+c}!t1\+\_\+stack@{t1\+\_\+stack}}
+\index{t1\+\_\+stack@{t1\+\_\+stack}!thread\+\_\+msg\+\_\+seq/main.\+c@{thread\+\_\+msg\+\_\+seq/main.\+c}}
+\subsubsection{\texorpdfstring{t1\+\_\+stack}{t1\_stack}}
+{\footnotesize\ttfamily char t1\+\_\+stack\mbox{[}T\+H\+R\+E\+A\+D\+\_\+\+S\+T\+A\+C\+K\+S\+I\+Z\+E\+\_\+\+M\+A\+IN\mbox{]}}
+
+\mbox{\Hypertarget{thread__msg__seq_2main_8c_a11ec22beff4605a3188e1b21620605ba}\label{thread__msg__seq_2main_8c_a11ec22beff4605a3188e1b21620605ba}} 
+\index{thread\+\_\+msg\+\_\+seq/main.\+c@{thread\+\_\+msg\+\_\+seq/main.\+c}!t2\+\_\+stack@{t2\+\_\+stack}}
+\index{t2\+\_\+stack@{t2\+\_\+stack}!thread\+\_\+msg\+\_\+seq/main.\+c@{thread\+\_\+msg\+\_\+seq/main.\+c}}
+\subsubsection{\texorpdfstring{t2\+\_\+stack}{t2\_stack}}
+{\footnotesize\ttfamily char t2\+\_\+stack\mbox{[}T\+H\+R\+E\+A\+D\+\_\+\+S\+T\+A\+C\+K\+S\+I\+Z\+E\+\_\+\+M\+A\+IN\mbox{]}}
+
+\mbox{\Hypertarget{thread__msg__seq_2main_8c_a4c6d0bde307dd71ad6999f437d0766e8}\label{thread__msg__seq_2main_8c_a4c6d0bde307dd71ad6999f437d0766e8}} 
+\index{thread\+\_\+msg\+\_\+seq/main.\+c@{thread\+\_\+msg\+\_\+seq/main.\+c}!t3\+\_\+stack@{t3\+\_\+stack}}
+\index{t3\+\_\+stack@{t3\+\_\+stack}!thread\+\_\+msg\+\_\+seq/main.\+c@{thread\+\_\+msg\+\_\+seq/main.\+c}}
+\subsubsection{\texorpdfstring{t3\+\_\+stack}{t3\_stack}}
+{\footnotesize\ttfamily char t3\+\_\+stack\mbox{[}T\+H\+R\+E\+A\+D\+\_\+\+S\+T\+A\+C\+K\+S\+I\+Z\+E\+\_\+\+M\+A\+IN\mbox{]}}
+

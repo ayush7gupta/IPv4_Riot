@@ -1,0 +1,194 @@
+\hypertarget{pkg__fatfs_2main_8c}{}\section{/home/ayush/\+R\+I\+O\+T/tests/pkg\+\_\+fatfs/main.c File Reference}
+\label{pkg__fatfs_2main_8c}\index{/home/ayush/\+R\+I\+O\+T/tests/pkg\+\_\+fatfs/main.\+c@{/home/ayush/\+R\+I\+O\+T/tests/pkg\+\_\+fatfs/main.\+c}}
+
+
+Test application for the fatfs package.  
+
+
+{\ttfamily \#include \char`\"{}periph/rtc.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}fatfs\+\_\+diskio\+\_\+common.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}fatfs/ff.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}shell.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$inttypes.\+h$>$}\newline
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+Include dependency graph for main.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{pkg__fatfs_2main_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{pkg__fatfs_2main_8c_a25c4618f7c74f861052b87f9242bcf84}{T\+E\+S\+T\+\_\+\+F\+A\+T\+F\+S\+\_\+\+R\+E\+A\+D\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+I\+ZE}~64
+\item 
+\#define \hyperlink{pkg__fatfs_2main_8c_afa4236019b1fb2d8a32736905b9e91ce}{T\+E\+S\+T\+\_\+\+F\+A\+T\+F\+S\+\_\+\+M\+A\+X\+\_\+\+L\+B\+L\+\_\+\+S\+I\+ZE}~64
+\item 
+\#define \hyperlink{pkg__fatfs_2main_8c_a7d2bedd1ecd198c3f845e926c8b7d4af}{T\+E\+S\+T\+\_\+\+F\+A\+T\+F\+S\+\_\+\+M\+A\+X\+\_\+\+V\+O\+L\+\_\+\+S\+T\+R\+\_\+\+L\+EN}~8
+\item 
+\#define \hyperlink{pkg__fatfs_2main_8c_af7b81efe32a3126748a0d19c98e684c0}{T\+E\+S\+T\+\_\+\+F\+A\+T\+F\+S\+\_\+\+F\+I\+X\+E\+D\+\_\+\+S\+E\+C\+T\+O\+R\+\_\+\+S\+I\+ZE}~512
+\item 
+\#define \hyperlink{pkg__fatfs_2main_8c_a97496274d844805cdf3be744612e5820}{T\+E\+S\+T\+\_\+\+F\+A\+T\+F\+S\+\_\+\+F\+A\+T\+E\+N\+T\+\_\+\+O\+F\+F\+S\+ET}~2
+\item 
+\#define \hyperlink{pkg__fatfs_2main_8c_a556e9f19f2f831c2c461475d9fad2b76}{T\+E\+S\+T\+\_\+\+F\+A\+T\+F\+S\+\_\+\+S\+H\+I\+F\+T\+\_\+\+B\+\_\+\+T\+O\+\_\+\+G\+IB}~30
+\item 
+\#define \hyperlink{pkg__fatfs_2main_8c_a61a31218358e9a1e4297ab21f4634835}{T\+E\+S\+T\+\_\+\+F\+A\+T\+F\+S\+\_\+\+S\+H\+I\+F\+T\+\_\+\+B\+\_\+\+T\+O\+\_\+\+M\+IB}~20
+\item 
+\#define \hyperlink{pkg__fatfs_2main_8c_ab44b35de2a6c42c1878cee4d37490d8a}{T\+E\+S\+T\+\_\+\+F\+A\+T\+F\+S\+\_\+\+R\+T\+C\+\_\+\+M\+O\+N\+\_\+\+O\+F\+F\+S\+ET}~1
+\item 
+\#define \hyperlink{pkg__fatfs_2main_8c_a8f6235f33993caddb0b57b5f81204c0a}{T\+E\+S\+T\+\_\+\+F\+A\+T\+F\+S\+\_\+\+R\+T\+C\+\_\+\+Y\+E\+AR}~2000
+\item 
+\#define \hyperlink{pkg__fatfs_2main_8c_a6be2343368f131986ab87839ee1984dd}{T\+E\+S\+T\+\_\+\+F\+A\+T\+F\+S\+\_\+\+R\+T\+C\+\_\+\+M\+ON}~1
+\item 
+\#define \hyperlink{pkg__fatfs_2main_8c_af591583b76fd406dc64f30d19b3d5627}{T\+E\+S\+T\+\_\+\+F\+A\+T\+F\+S\+\_\+\+R\+T\+C\+\_\+\+D\+AY}~1
+\item 
+\#define \hyperlink{pkg__fatfs_2main_8c_a2857513a578302155d5f02eaa56673ef}{T\+E\+S\+T\+\_\+\+F\+A\+T\+F\+S\+\_\+\+R\+T\+C\+\_\+H}~0
+\item 
+\#define \hyperlink{pkg__fatfs_2main_8c_a8dfad3ac21c4fe0660546300fa2552f4}{T\+E\+S\+T\+\_\+\+F\+A\+T\+F\+S\+\_\+\+R\+T\+C\+\_\+M}~0
+\item 
+\#define \hyperlink{pkg__fatfs_2main_8c_ac0a13bc9c7998b5f061435e0cd6f8283}{T\+E\+S\+T\+\_\+\+F\+A\+T\+F\+S\+\_\+\+R\+T\+C\+\_\+S}~0
+\item 
+\#define \hyperlink{pkg__fatfs_2main_8c_ae57884c12ad27b03c903629813843f68}{I\+E\+C\+\_\+\+K\+I\+BI}~1024
+\item 
+\#define \hyperlink{pkg__fatfs_2main_8c_a6ff7434e8d89373459699b426d85a448}{S\+I\+\_\+\+K\+I\+LO}~1000
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{pkg__fatfs_2main_8c_a840291bc02cba5474a4cb46a9b9566fe}{main} (void)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+F\+A\+T\+FS \hyperlink{pkg__fatfs_2main_8c_a1dc1b6e4dd6d010d6b5c628889e3272e}{fat\+\_\+fs}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Test application for the fatfs package. 
+
+\begin{DoxyAuthor}{Author}
+Michel Rottleuthner \href{mailto:michel.rottleuthner@haw-hamburg.de}{\tt michel.\+rottleuthner@haw-\/hamburg.\+de} 
+\end{DoxyAuthor}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{pkg__fatfs_2main_8c_ae57884c12ad27b03c903629813843f68}\label{pkg__fatfs_2main_8c_ae57884c12ad27b03c903629813843f68}} 
+\index{pkg\+\_\+fatfs/main.\+c@{pkg\+\_\+fatfs/main.\+c}!I\+E\+C\+\_\+\+K\+I\+BI@{I\+E\+C\+\_\+\+K\+I\+BI}}
+\index{I\+E\+C\+\_\+\+K\+I\+BI@{I\+E\+C\+\_\+\+K\+I\+BI}!pkg\+\_\+fatfs/main.\+c@{pkg\+\_\+fatfs/main.\+c}}
+\subsubsection{\texorpdfstring{I\+E\+C\+\_\+\+K\+I\+BI}{IEC\_KIBI}}
+{\footnotesize\ttfamily \#define I\+E\+C\+\_\+\+K\+I\+BI~1024}
+
+\mbox{\Hypertarget{pkg__fatfs_2main_8c_a6ff7434e8d89373459699b426d85a448}\label{pkg__fatfs_2main_8c_a6ff7434e8d89373459699b426d85a448}} 
+\index{pkg\+\_\+fatfs/main.\+c@{pkg\+\_\+fatfs/main.\+c}!S\+I\+\_\+\+K\+I\+LO@{S\+I\+\_\+\+K\+I\+LO}}
+\index{S\+I\+\_\+\+K\+I\+LO@{S\+I\+\_\+\+K\+I\+LO}!pkg\+\_\+fatfs/main.\+c@{pkg\+\_\+fatfs/main.\+c}}
+\subsubsection{\texorpdfstring{S\+I\+\_\+\+K\+I\+LO}{SI\_KILO}}
+{\footnotesize\ttfamily \#define S\+I\+\_\+\+K\+I\+LO~1000}
+
+\mbox{\Hypertarget{pkg__fatfs_2main_8c_a97496274d844805cdf3be744612e5820}\label{pkg__fatfs_2main_8c_a97496274d844805cdf3be744612e5820}} 
+\index{pkg\+\_\+fatfs/main.\+c@{pkg\+\_\+fatfs/main.\+c}!T\+E\+S\+T\+\_\+\+F\+A\+T\+F\+S\+\_\+\+F\+A\+T\+E\+N\+T\+\_\+\+O\+F\+F\+S\+ET@{T\+E\+S\+T\+\_\+\+F\+A\+T\+F\+S\+\_\+\+F\+A\+T\+E\+N\+T\+\_\+\+O\+F\+F\+S\+ET}}
+\index{T\+E\+S\+T\+\_\+\+F\+A\+T\+F\+S\+\_\+\+F\+A\+T\+E\+N\+T\+\_\+\+O\+F\+F\+S\+ET@{T\+E\+S\+T\+\_\+\+F\+A\+T\+F\+S\+\_\+\+F\+A\+T\+E\+N\+T\+\_\+\+O\+F\+F\+S\+ET}!pkg\+\_\+fatfs/main.\+c@{pkg\+\_\+fatfs/main.\+c}}
+\subsubsection{\texorpdfstring{T\+E\+S\+T\+\_\+\+F\+A\+T\+F\+S\+\_\+\+F\+A\+T\+E\+N\+T\+\_\+\+O\+F\+F\+S\+ET}{TEST\_FATFS\_FATENT\_OFFSET}}
+{\footnotesize\ttfamily \#define T\+E\+S\+T\+\_\+\+F\+A\+T\+F\+S\+\_\+\+F\+A\+T\+E\+N\+T\+\_\+\+O\+F\+F\+S\+ET~2}
+
+\mbox{\Hypertarget{pkg__fatfs_2main_8c_af7b81efe32a3126748a0d19c98e684c0}\label{pkg__fatfs_2main_8c_af7b81efe32a3126748a0d19c98e684c0}} 
+\index{pkg\+\_\+fatfs/main.\+c@{pkg\+\_\+fatfs/main.\+c}!T\+E\+S\+T\+\_\+\+F\+A\+T\+F\+S\+\_\+\+F\+I\+X\+E\+D\+\_\+\+S\+E\+C\+T\+O\+R\+\_\+\+S\+I\+ZE@{T\+E\+S\+T\+\_\+\+F\+A\+T\+F\+S\+\_\+\+F\+I\+X\+E\+D\+\_\+\+S\+E\+C\+T\+O\+R\+\_\+\+S\+I\+ZE}}
+\index{T\+E\+S\+T\+\_\+\+F\+A\+T\+F\+S\+\_\+\+F\+I\+X\+E\+D\+\_\+\+S\+E\+C\+T\+O\+R\+\_\+\+S\+I\+ZE@{T\+E\+S\+T\+\_\+\+F\+A\+T\+F\+S\+\_\+\+F\+I\+X\+E\+D\+\_\+\+S\+E\+C\+T\+O\+R\+\_\+\+S\+I\+ZE}!pkg\+\_\+fatfs/main.\+c@{pkg\+\_\+fatfs/main.\+c}}
+\subsubsection{\texorpdfstring{T\+E\+S\+T\+\_\+\+F\+A\+T\+F\+S\+\_\+\+F\+I\+X\+E\+D\+\_\+\+S\+E\+C\+T\+O\+R\+\_\+\+S\+I\+ZE}{TEST\_FATFS\_FIXED\_SECTOR\_SIZE}}
+{\footnotesize\ttfamily \#define T\+E\+S\+T\+\_\+\+F\+A\+T\+F\+S\+\_\+\+F\+I\+X\+E\+D\+\_\+\+S\+E\+C\+T\+O\+R\+\_\+\+S\+I\+ZE~512}
+
+\mbox{\Hypertarget{pkg__fatfs_2main_8c_afa4236019b1fb2d8a32736905b9e91ce}\label{pkg__fatfs_2main_8c_afa4236019b1fb2d8a32736905b9e91ce}} 
+\index{pkg\+\_\+fatfs/main.\+c@{pkg\+\_\+fatfs/main.\+c}!T\+E\+S\+T\+\_\+\+F\+A\+T\+F\+S\+\_\+\+M\+A\+X\+\_\+\+L\+B\+L\+\_\+\+S\+I\+ZE@{T\+E\+S\+T\+\_\+\+F\+A\+T\+F\+S\+\_\+\+M\+A\+X\+\_\+\+L\+B\+L\+\_\+\+S\+I\+ZE}}
+\index{T\+E\+S\+T\+\_\+\+F\+A\+T\+F\+S\+\_\+\+M\+A\+X\+\_\+\+L\+B\+L\+\_\+\+S\+I\+ZE@{T\+E\+S\+T\+\_\+\+F\+A\+T\+F\+S\+\_\+\+M\+A\+X\+\_\+\+L\+B\+L\+\_\+\+S\+I\+ZE}!pkg\+\_\+fatfs/main.\+c@{pkg\+\_\+fatfs/main.\+c}}
+\subsubsection{\texorpdfstring{T\+E\+S\+T\+\_\+\+F\+A\+T\+F\+S\+\_\+\+M\+A\+X\+\_\+\+L\+B\+L\+\_\+\+S\+I\+ZE}{TEST\_FATFS\_MAX\_LBL\_SIZE}}
+{\footnotesize\ttfamily \#define T\+E\+S\+T\+\_\+\+F\+A\+T\+F\+S\+\_\+\+M\+A\+X\+\_\+\+L\+B\+L\+\_\+\+S\+I\+ZE~64}
+
+\mbox{\Hypertarget{pkg__fatfs_2main_8c_a7d2bedd1ecd198c3f845e926c8b7d4af}\label{pkg__fatfs_2main_8c_a7d2bedd1ecd198c3f845e926c8b7d4af}} 
+\index{pkg\+\_\+fatfs/main.\+c@{pkg\+\_\+fatfs/main.\+c}!T\+E\+S\+T\+\_\+\+F\+A\+T\+F\+S\+\_\+\+M\+A\+X\+\_\+\+V\+O\+L\+\_\+\+S\+T\+R\+\_\+\+L\+EN@{T\+E\+S\+T\+\_\+\+F\+A\+T\+F\+S\+\_\+\+M\+A\+X\+\_\+\+V\+O\+L\+\_\+\+S\+T\+R\+\_\+\+L\+EN}}
+\index{T\+E\+S\+T\+\_\+\+F\+A\+T\+F\+S\+\_\+\+M\+A\+X\+\_\+\+V\+O\+L\+\_\+\+S\+T\+R\+\_\+\+L\+EN@{T\+E\+S\+T\+\_\+\+F\+A\+T\+F\+S\+\_\+\+M\+A\+X\+\_\+\+V\+O\+L\+\_\+\+S\+T\+R\+\_\+\+L\+EN}!pkg\+\_\+fatfs/main.\+c@{pkg\+\_\+fatfs/main.\+c}}
+\subsubsection{\texorpdfstring{T\+E\+S\+T\+\_\+\+F\+A\+T\+F\+S\+\_\+\+M\+A\+X\+\_\+\+V\+O\+L\+\_\+\+S\+T\+R\+\_\+\+L\+EN}{TEST\_FATFS\_MAX\_VOL\_STR\_LEN}}
+{\footnotesize\ttfamily \#define T\+E\+S\+T\+\_\+\+F\+A\+T\+F\+S\+\_\+\+M\+A\+X\+\_\+\+V\+O\+L\+\_\+\+S\+T\+R\+\_\+\+L\+EN~8}
+
+\mbox{\Hypertarget{pkg__fatfs_2main_8c_a25c4618f7c74f861052b87f9242bcf84}\label{pkg__fatfs_2main_8c_a25c4618f7c74f861052b87f9242bcf84}} 
+\index{pkg\+\_\+fatfs/main.\+c@{pkg\+\_\+fatfs/main.\+c}!T\+E\+S\+T\+\_\+\+F\+A\+T\+F\+S\+\_\+\+R\+E\+A\+D\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+I\+ZE@{T\+E\+S\+T\+\_\+\+F\+A\+T\+F\+S\+\_\+\+R\+E\+A\+D\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+I\+ZE}}
+\index{T\+E\+S\+T\+\_\+\+F\+A\+T\+F\+S\+\_\+\+R\+E\+A\+D\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+I\+ZE@{T\+E\+S\+T\+\_\+\+F\+A\+T\+F\+S\+\_\+\+R\+E\+A\+D\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+I\+ZE}!pkg\+\_\+fatfs/main.\+c@{pkg\+\_\+fatfs/main.\+c}}
+\subsubsection{\texorpdfstring{T\+E\+S\+T\+\_\+\+F\+A\+T\+F\+S\+\_\+\+R\+E\+A\+D\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+I\+ZE}{TEST\_FATFS\_READ\_BUFFER\_SIZE}}
+{\footnotesize\ttfamily \#define T\+E\+S\+T\+\_\+\+F\+A\+T\+F\+S\+\_\+\+R\+E\+A\+D\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+I\+ZE~64}
+
+\mbox{\Hypertarget{pkg__fatfs_2main_8c_af591583b76fd406dc64f30d19b3d5627}\label{pkg__fatfs_2main_8c_af591583b76fd406dc64f30d19b3d5627}} 
+\index{pkg\+\_\+fatfs/main.\+c@{pkg\+\_\+fatfs/main.\+c}!T\+E\+S\+T\+\_\+\+F\+A\+T\+F\+S\+\_\+\+R\+T\+C\+\_\+\+D\+AY@{T\+E\+S\+T\+\_\+\+F\+A\+T\+F\+S\+\_\+\+R\+T\+C\+\_\+\+D\+AY}}
+\index{T\+E\+S\+T\+\_\+\+F\+A\+T\+F\+S\+\_\+\+R\+T\+C\+\_\+\+D\+AY@{T\+E\+S\+T\+\_\+\+F\+A\+T\+F\+S\+\_\+\+R\+T\+C\+\_\+\+D\+AY}!pkg\+\_\+fatfs/main.\+c@{pkg\+\_\+fatfs/main.\+c}}
+\subsubsection{\texorpdfstring{T\+E\+S\+T\+\_\+\+F\+A\+T\+F\+S\+\_\+\+R\+T\+C\+\_\+\+D\+AY}{TEST\_FATFS\_RTC\_DAY}}
+{\footnotesize\ttfamily \#define T\+E\+S\+T\+\_\+\+F\+A\+T\+F\+S\+\_\+\+R\+T\+C\+\_\+\+D\+AY~1}
+
+\mbox{\Hypertarget{pkg__fatfs_2main_8c_a2857513a578302155d5f02eaa56673ef}\label{pkg__fatfs_2main_8c_a2857513a578302155d5f02eaa56673ef}} 
+\index{pkg\+\_\+fatfs/main.\+c@{pkg\+\_\+fatfs/main.\+c}!T\+E\+S\+T\+\_\+\+F\+A\+T\+F\+S\+\_\+\+R\+T\+C\+\_\+H@{T\+E\+S\+T\+\_\+\+F\+A\+T\+F\+S\+\_\+\+R\+T\+C\+\_\+H}}
+\index{T\+E\+S\+T\+\_\+\+F\+A\+T\+F\+S\+\_\+\+R\+T\+C\+\_\+H@{T\+E\+S\+T\+\_\+\+F\+A\+T\+F\+S\+\_\+\+R\+T\+C\+\_\+H}!pkg\+\_\+fatfs/main.\+c@{pkg\+\_\+fatfs/main.\+c}}
+\subsubsection{\texorpdfstring{T\+E\+S\+T\+\_\+\+F\+A\+T\+F\+S\+\_\+\+R\+T\+C\+\_\+H}{TEST\_FATFS\_RTC\_H}}
+{\footnotesize\ttfamily \#define T\+E\+S\+T\+\_\+\+F\+A\+T\+F\+S\+\_\+\+R\+T\+C\+\_\+H~0}
+
+\mbox{\Hypertarget{pkg__fatfs_2main_8c_a8dfad3ac21c4fe0660546300fa2552f4}\label{pkg__fatfs_2main_8c_a8dfad3ac21c4fe0660546300fa2552f4}} 
+\index{pkg\+\_\+fatfs/main.\+c@{pkg\+\_\+fatfs/main.\+c}!T\+E\+S\+T\+\_\+\+F\+A\+T\+F\+S\+\_\+\+R\+T\+C\+\_\+M@{T\+E\+S\+T\+\_\+\+F\+A\+T\+F\+S\+\_\+\+R\+T\+C\+\_\+M}}
+\index{T\+E\+S\+T\+\_\+\+F\+A\+T\+F\+S\+\_\+\+R\+T\+C\+\_\+M@{T\+E\+S\+T\+\_\+\+F\+A\+T\+F\+S\+\_\+\+R\+T\+C\+\_\+M}!pkg\+\_\+fatfs/main.\+c@{pkg\+\_\+fatfs/main.\+c}}
+\subsubsection{\texorpdfstring{T\+E\+S\+T\+\_\+\+F\+A\+T\+F\+S\+\_\+\+R\+T\+C\+\_\+M}{TEST\_FATFS\_RTC\_M}}
+{\footnotesize\ttfamily \#define T\+E\+S\+T\+\_\+\+F\+A\+T\+F\+S\+\_\+\+R\+T\+C\+\_\+M~0}
+
+\mbox{\Hypertarget{pkg__fatfs_2main_8c_a6be2343368f131986ab87839ee1984dd}\label{pkg__fatfs_2main_8c_a6be2343368f131986ab87839ee1984dd}} 
+\index{pkg\+\_\+fatfs/main.\+c@{pkg\+\_\+fatfs/main.\+c}!T\+E\+S\+T\+\_\+\+F\+A\+T\+F\+S\+\_\+\+R\+T\+C\+\_\+\+M\+ON@{T\+E\+S\+T\+\_\+\+F\+A\+T\+F\+S\+\_\+\+R\+T\+C\+\_\+\+M\+ON}}
+\index{T\+E\+S\+T\+\_\+\+F\+A\+T\+F\+S\+\_\+\+R\+T\+C\+\_\+\+M\+ON@{T\+E\+S\+T\+\_\+\+F\+A\+T\+F\+S\+\_\+\+R\+T\+C\+\_\+\+M\+ON}!pkg\+\_\+fatfs/main.\+c@{pkg\+\_\+fatfs/main.\+c}}
+\subsubsection{\texorpdfstring{T\+E\+S\+T\+\_\+\+F\+A\+T\+F\+S\+\_\+\+R\+T\+C\+\_\+\+M\+ON}{TEST\_FATFS\_RTC\_MON}}
+{\footnotesize\ttfamily \#define T\+E\+S\+T\+\_\+\+F\+A\+T\+F\+S\+\_\+\+R\+T\+C\+\_\+\+M\+ON~1}
+
+\mbox{\Hypertarget{pkg__fatfs_2main_8c_ab44b35de2a6c42c1878cee4d37490d8a}\label{pkg__fatfs_2main_8c_ab44b35de2a6c42c1878cee4d37490d8a}} 
+\index{pkg\+\_\+fatfs/main.\+c@{pkg\+\_\+fatfs/main.\+c}!T\+E\+S\+T\+\_\+\+F\+A\+T\+F\+S\+\_\+\+R\+T\+C\+\_\+\+M\+O\+N\+\_\+\+O\+F\+F\+S\+ET@{T\+E\+S\+T\+\_\+\+F\+A\+T\+F\+S\+\_\+\+R\+T\+C\+\_\+\+M\+O\+N\+\_\+\+O\+F\+F\+S\+ET}}
+\index{T\+E\+S\+T\+\_\+\+F\+A\+T\+F\+S\+\_\+\+R\+T\+C\+\_\+\+M\+O\+N\+\_\+\+O\+F\+F\+S\+ET@{T\+E\+S\+T\+\_\+\+F\+A\+T\+F\+S\+\_\+\+R\+T\+C\+\_\+\+M\+O\+N\+\_\+\+O\+F\+F\+S\+ET}!pkg\+\_\+fatfs/main.\+c@{pkg\+\_\+fatfs/main.\+c}}
+\subsubsection{\texorpdfstring{T\+E\+S\+T\+\_\+\+F\+A\+T\+F\+S\+\_\+\+R\+T\+C\+\_\+\+M\+O\+N\+\_\+\+O\+F\+F\+S\+ET}{TEST\_FATFS\_RTC\_MON\_OFFSET}}
+{\footnotesize\ttfamily \#define T\+E\+S\+T\+\_\+\+F\+A\+T\+F\+S\+\_\+\+R\+T\+C\+\_\+\+M\+O\+N\+\_\+\+O\+F\+F\+S\+ET~1}
+
+\mbox{\Hypertarget{pkg__fatfs_2main_8c_ac0a13bc9c7998b5f061435e0cd6f8283}\label{pkg__fatfs_2main_8c_ac0a13bc9c7998b5f061435e0cd6f8283}} 
+\index{pkg\+\_\+fatfs/main.\+c@{pkg\+\_\+fatfs/main.\+c}!T\+E\+S\+T\+\_\+\+F\+A\+T\+F\+S\+\_\+\+R\+T\+C\+\_\+S@{T\+E\+S\+T\+\_\+\+F\+A\+T\+F\+S\+\_\+\+R\+T\+C\+\_\+S}}
+\index{T\+E\+S\+T\+\_\+\+F\+A\+T\+F\+S\+\_\+\+R\+T\+C\+\_\+S@{T\+E\+S\+T\+\_\+\+F\+A\+T\+F\+S\+\_\+\+R\+T\+C\+\_\+S}!pkg\+\_\+fatfs/main.\+c@{pkg\+\_\+fatfs/main.\+c}}
+\subsubsection{\texorpdfstring{T\+E\+S\+T\+\_\+\+F\+A\+T\+F\+S\+\_\+\+R\+T\+C\+\_\+S}{TEST\_FATFS\_RTC\_S}}
+{\footnotesize\ttfamily \#define T\+E\+S\+T\+\_\+\+F\+A\+T\+F\+S\+\_\+\+R\+T\+C\+\_\+S~0}
+
+\mbox{\Hypertarget{pkg__fatfs_2main_8c_a8f6235f33993caddb0b57b5f81204c0a}\label{pkg__fatfs_2main_8c_a8f6235f33993caddb0b57b5f81204c0a}} 
+\index{pkg\+\_\+fatfs/main.\+c@{pkg\+\_\+fatfs/main.\+c}!T\+E\+S\+T\+\_\+\+F\+A\+T\+F\+S\+\_\+\+R\+T\+C\+\_\+\+Y\+E\+AR@{T\+E\+S\+T\+\_\+\+F\+A\+T\+F\+S\+\_\+\+R\+T\+C\+\_\+\+Y\+E\+AR}}
+\index{T\+E\+S\+T\+\_\+\+F\+A\+T\+F\+S\+\_\+\+R\+T\+C\+\_\+\+Y\+E\+AR@{T\+E\+S\+T\+\_\+\+F\+A\+T\+F\+S\+\_\+\+R\+T\+C\+\_\+\+Y\+E\+AR}!pkg\+\_\+fatfs/main.\+c@{pkg\+\_\+fatfs/main.\+c}}
+\subsubsection{\texorpdfstring{T\+E\+S\+T\+\_\+\+F\+A\+T\+F\+S\+\_\+\+R\+T\+C\+\_\+\+Y\+E\+AR}{TEST\_FATFS\_RTC\_YEAR}}
+{\footnotesize\ttfamily \#define T\+E\+S\+T\+\_\+\+F\+A\+T\+F\+S\+\_\+\+R\+T\+C\+\_\+\+Y\+E\+AR~2000}
+
+\mbox{\Hypertarget{pkg__fatfs_2main_8c_a556e9f19f2f831c2c461475d9fad2b76}\label{pkg__fatfs_2main_8c_a556e9f19f2f831c2c461475d9fad2b76}} 
+\index{pkg\+\_\+fatfs/main.\+c@{pkg\+\_\+fatfs/main.\+c}!T\+E\+S\+T\+\_\+\+F\+A\+T\+F\+S\+\_\+\+S\+H\+I\+F\+T\+\_\+\+B\+\_\+\+T\+O\+\_\+\+G\+IB@{T\+E\+S\+T\+\_\+\+F\+A\+T\+F\+S\+\_\+\+S\+H\+I\+F\+T\+\_\+\+B\+\_\+\+T\+O\+\_\+\+G\+IB}}
+\index{T\+E\+S\+T\+\_\+\+F\+A\+T\+F\+S\+\_\+\+S\+H\+I\+F\+T\+\_\+\+B\+\_\+\+T\+O\+\_\+\+G\+IB@{T\+E\+S\+T\+\_\+\+F\+A\+T\+F\+S\+\_\+\+S\+H\+I\+F\+T\+\_\+\+B\+\_\+\+T\+O\+\_\+\+G\+IB}!pkg\+\_\+fatfs/main.\+c@{pkg\+\_\+fatfs/main.\+c}}
+\subsubsection{\texorpdfstring{T\+E\+S\+T\+\_\+\+F\+A\+T\+F\+S\+\_\+\+S\+H\+I\+F\+T\+\_\+\+B\+\_\+\+T\+O\+\_\+\+G\+IB}{TEST\_FATFS\_SHIFT\_B\_TO\_GIB}}
+{\footnotesize\ttfamily \#define T\+E\+S\+T\+\_\+\+F\+A\+T\+F\+S\+\_\+\+S\+H\+I\+F\+T\+\_\+\+B\+\_\+\+T\+O\+\_\+\+G\+IB~30}
+
+\mbox{\Hypertarget{pkg__fatfs_2main_8c_a61a31218358e9a1e4297ab21f4634835}\label{pkg__fatfs_2main_8c_a61a31218358e9a1e4297ab21f4634835}} 
+\index{pkg\+\_\+fatfs/main.\+c@{pkg\+\_\+fatfs/main.\+c}!T\+E\+S\+T\+\_\+\+F\+A\+T\+F\+S\+\_\+\+S\+H\+I\+F\+T\+\_\+\+B\+\_\+\+T\+O\+\_\+\+M\+IB@{T\+E\+S\+T\+\_\+\+F\+A\+T\+F\+S\+\_\+\+S\+H\+I\+F\+T\+\_\+\+B\+\_\+\+T\+O\+\_\+\+M\+IB}}
+\index{T\+E\+S\+T\+\_\+\+F\+A\+T\+F\+S\+\_\+\+S\+H\+I\+F\+T\+\_\+\+B\+\_\+\+T\+O\+\_\+\+M\+IB@{T\+E\+S\+T\+\_\+\+F\+A\+T\+F\+S\+\_\+\+S\+H\+I\+F\+T\+\_\+\+B\+\_\+\+T\+O\+\_\+\+M\+IB}!pkg\+\_\+fatfs/main.\+c@{pkg\+\_\+fatfs/main.\+c}}
+\subsubsection{\texorpdfstring{T\+E\+S\+T\+\_\+\+F\+A\+T\+F\+S\+\_\+\+S\+H\+I\+F\+T\+\_\+\+B\+\_\+\+T\+O\+\_\+\+M\+IB}{TEST\_FATFS\_SHIFT\_B\_TO\_MIB}}
+{\footnotesize\ttfamily \#define T\+E\+S\+T\+\_\+\+F\+A\+T\+F\+S\+\_\+\+S\+H\+I\+F\+T\+\_\+\+B\+\_\+\+T\+O\+\_\+\+M\+IB~20}
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{pkg__fatfs_2main_8c_a840291bc02cba5474a4cb46a9b9566fe}\label{pkg__fatfs_2main_8c_a840291bc02cba5474a4cb46a9b9566fe}} 
+\index{pkg\+\_\+fatfs/main.\+c@{pkg\+\_\+fatfs/main.\+c}!main@{main}}
+\index{main@{main}!pkg\+\_\+fatfs/main.\+c@{pkg\+\_\+fatfs/main.\+c}}
+\subsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{pkg__fatfs_2main_8c_a1dc1b6e4dd6d010d6b5c628889e3272e}\label{pkg__fatfs_2main_8c_a1dc1b6e4dd6d010d6b5c628889e3272e}} 
+\index{pkg\+\_\+fatfs/main.\+c@{pkg\+\_\+fatfs/main.\+c}!fat\+\_\+fs@{fat\+\_\+fs}}
+\index{fat\+\_\+fs@{fat\+\_\+fs}!pkg\+\_\+fatfs/main.\+c@{pkg\+\_\+fatfs/main.\+c}}
+\subsubsection{\texorpdfstring{fat\+\_\+fs}{fat\_fs}}
+{\footnotesize\ttfamily F\+A\+T\+FS fat\+\_\+fs}
+

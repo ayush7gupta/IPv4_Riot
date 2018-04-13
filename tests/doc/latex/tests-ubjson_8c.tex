@@ -1,0 +1,54 @@
+\hypertarget{tests-ubjson_8c}{}\section{/home/ayush/\+R\+I\+O\+T/tests/unittests/tests-\/ubjson/tests-\/ubjson.c File Reference}
+\label{tests-ubjson_8c}\index{/home/ayush/\+R\+I\+O\+T/tests/unittests/tests-\/ubjson/tests-\/ubjson.\+c@{/home/ayush/\+R\+I\+O\+T/tests/unittests/tests-\/ubjson/tests-\/ubjson.\+c}}
+{\ttfamily \#include \char`\"{}tests-\/ubjson.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}thread.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}sched.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}msg.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}mutex.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}pipe.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}irq.\+h\char`\"{}}\newline
+Include dependency graph for tests-\/ubjson.c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{tests-ubjson_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structtest__ubjson__receiver__data__t}{test\+\_\+ubjson\+\_\+receiver\+\_\+data\+\_\+t}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+ssize\+\_\+t \hyperlink{tests-ubjson_8c_a57b0ab9d48deda7e0dc60098e6eafa18}{test\+\_\+ubjson\+\_\+write\+\_\+fun} (ubjson\+\_\+cookie\+\_\+t $\ast$restrict cookie, const void $\ast$buf, size\+\_\+t len)
+\item 
+ssize\+\_\+t \hyperlink{tests-ubjson_8c_a2158fa817423e9164e2d91fcbd1d8f84}{test\+\_\+ubjson\+\_\+read\+\_\+fun} (ubjson\+\_\+cookie\+\_\+t $\ast$restrict cookie, void $\ast$buf, size\+\_\+t len)
+\item 
+void \hyperlink{group__unittests_gac5fe0b001cb96b33aaf4f1b52f7d38e9}{test\+\_\+ubjson\+\_\+test} (void($\ast$sender\+\_\+fun)(void), void($\ast$receiver\+\_\+fun)(void))
+\item 
+void \hyperlink{tests-ubjson_8c_a33c2a66c85c974b9b38c3edff503b11b}{tests\+\_\+ubjson} (void)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{tests-ubjson_8c_a2158fa817423e9164e2d91fcbd1d8f84}\label{tests-ubjson_8c_a2158fa817423e9164e2d91fcbd1d8f84}} 
+\index{tests-\/ubjson.\+c@{tests-\/ubjson.\+c}!test\+\_\+ubjson\+\_\+read\+\_\+fun@{test\+\_\+ubjson\+\_\+read\+\_\+fun}}
+\index{test\+\_\+ubjson\+\_\+read\+\_\+fun@{test\+\_\+ubjson\+\_\+read\+\_\+fun}!tests-\/ubjson.\+c@{tests-\/ubjson.\+c}}
+\subsubsection{\texorpdfstring{test\+\_\+ubjson\+\_\+read\+\_\+fun()}{test\_ubjson\_read\_fun()}}
+{\footnotesize\ttfamily ssize\+\_\+t test\+\_\+ubjson\+\_\+read\+\_\+fun (\begin{DoxyParamCaption}\item[{ubjson\+\_\+cookie\+\_\+t $\ast$restrict}]{cookie,  }\item[{void $\ast$}]{buf,  }\item[{size\+\_\+t}]{len }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{tests-ubjson_8c_a57b0ab9d48deda7e0dc60098e6eafa18}\label{tests-ubjson_8c_a57b0ab9d48deda7e0dc60098e6eafa18}} 
+\index{tests-\/ubjson.\+c@{tests-\/ubjson.\+c}!test\+\_\+ubjson\+\_\+write\+\_\+fun@{test\+\_\+ubjson\+\_\+write\+\_\+fun}}
+\index{test\+\_\+ubjson\+\_\+write\+\_\+fun@{test\+\_\+ubjson\+\_\+write\+\_\+fun}!tests-\/ubjson.\+c@{tests-\/ubjson.\+c}}
+\subsubsection{\texorpdfstring{test\+\_\+ubjson\+\_\+write\+\_\+fun()}{test\_ubjson\_write\_fun()}}
+{\footnotesize\ttfamily ssize\+\_\+t test\+\_\+ubjson\+\_\+write\+\_\+fun (\begin{DoxyParamCaption}\item[{ubjson\+\_\+cookie\+\_\+t $\ast$restrict}]{cookie,  }\item[{const void $\ast$}]{buf,  }\item[{size\+\_\+t}]{len }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{tests-ubjson_8c_a33c2a66c85c974b9b38c3edff503b11b}\label{tests-ubjson_8c_a33c2a66c85c974b9b38c3edff503b11b}} 
+\index{tests-\/ubjson.\+c@{tests-\/ubjson.\+c}!tests\+\_\+ubjson@{tests\+\_\+ubjson}}
+\index{tests\+\_\+ubjson@{tests\+\_\+ubjson}!tests-\/ubjson.\+c@{tests-\/ubjson.\+c}}
+\subsubsection{\texorpdfstring{tests\+\_\+ubjson()}{tests\_ubjson()}}
+{\footnotesize\ttfamily void tests\+\_\+ubjson (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+

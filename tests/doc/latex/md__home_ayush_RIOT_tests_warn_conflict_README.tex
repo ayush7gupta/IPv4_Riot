@@ -1,0 +1,28 @@
+Using conflicting features provided by boards was invisible for the user until the used features resulted in a traceable problem or the user was aware of the conflict in advance from documentation ect. Now, existing and known conflicts can be recorded into {\ttfamily F\+E\+A\+T\+U\+R\+E\+S\+\_\+\+C\+O\+N\+F\+L\+I\+CT} for each board to inform the user on a conflict situation during compile time.
+
+This test requires conflicting features in its {\ttfamily Makefile}, i.\+e. {\ttfamily F\+E\+A\+T\+U\+R\+E\+S\+\_\+\+R\+E\+Q\+U\+I\+R\+ED = periph\+\_\+dac periph\+\_\+spi}. It is expected to be presented with a warning on the conflicts with a short description message during compile time for the \href{https://github.com/RIOT-OS/RIOT/wiki/Board%3A-STM32F4discovery}{\tt stm32f4discovery} by now, i.\+e. \+:
+
+
+\begin{DoxyCode}
+$ make BOARD=stm32f4discovery
+The following features may conflict: periph\_dac periph\_spi
+Rationale: On stm32f4discovery boards there are the same pins for the DAC and/or SPI\_DEV(0).
+
+EXPECT undesired behaviour!
+\end{DoxyCode}
+ The warning presents the conflicting features derived from {\ttfamily F\+E\+A\+T\+U\+R\+E\+S\+\_\+\+C\+O\+N\+F\+L\+I\+CT} and an optional message derived from {\ttfamily F\+E\+A\+T\+U\+R\+E\+S\+\_\+\+C\+O\+N\+F\+L\+I\+C\+T\+\_\+\+M\+SG} provided int the {\ttfamily ./\+R\+I\+O\+T/board/stm32f4discovery/\+Makefile.features}.
+
+Whenever an application, such as this test, requires board features that match a {\itshape conflict group}, e.\+g. {\ttfamily F\+E\+A\+T\+U\+R\+E\+S\+\_\+\+R\+E\+Q\+U\+I\+R\+ED = periph\+\_\+dac periph\+\_\+spi}, a similar warning to the above will be displayed during compile time.
+
+
+
+ \subsubsection*{Usage of {\itshape conflict groups}\+:}
+
+
+\begin{DoxyItemize}
+\item Conflicting features are described in groups separated by a {\ttfamily \+:} (doublecolon) for each feature, e.\+g.\+: {\ttfamily F\+E\+A\+T\+U\+R\+E\+S\+\_\+\+C\+O\+N\+F\+L\+I\+CT = periph\+\_\+spi\+:periph\+\_\+dac}, which states that {\ttfamily periph\+\_\+spi} conflicts with {\ttfamily periph\+\_\+dac}. As seen above, this is the conflict of {\ttfamily S\+P\+I\+\_\+\+D\+E\+V(0)} pinout is shared with {\ttfamily D\+AC} on the \href{https://github.com/RIOT-OS/RIOT/wiki/Board%3A-STM32F4discovery}{\tt stm32f4discovery} board.
+\item Distinct groups of conflicts are whitespace separated, e.\+g.\+: {\ttfamily featureA\+:featureB featureC\+:featureD}, which states that {\ttfamily featureA} conflicts with {\ttfamily featureB}, and {\ttfamily featureC} conflicts with {\ttfamily featureD}. This also means, that e.\+g. {\ttfamily F\+E\+A\+T\+U\+R\+E\+S\+\_\+\+R\+E\+Q\+U\+I\+R\+ED = featureA featureD} would {\bfseries not} produce a warning.
+\item The groups can have an arbitrary number of conflicting features, e.\+g.\+: {\ttfamily feature\+A\+:feature\+B\+:feature\+C\+:feature\+X\+:featureY\+:featureZ}
+\item An optional information can be given using the {\ttfamily F\+E\+A\+T\+U\+R\+E\+S\+\_\+\+C\+O\+N\+F\+L\+I\+C\+T\+\_\+\+M\+SG}, e.\+g.\+: {\ttfamily F\+E\+A\+T\+U\+R\+E\+S\+\_\+\+C\+O\+N\+F\+L\+I\+C\+T\+\_\+\+M\+SG = \char`\"{}feature\+A uses the same pins as feature\+B\char`\"{}}
+\item If the required features match multiple conflict groups, {\bfseries A\+LL} conflicting features are provided to the user, e.\+g.\+: {\ttfamily F\+E\+A\+T\+U\+R\+E\+S\+\_\+\+C\+O\+N\+F\+L\+I\+CT = featureA\+:featureB featureC\+:featureD} and {\ttfamily F\+E\+A\+T\+U\+R\+E\+S\+\_\+\+R\+E\+Q\+U\+I\+R\+ED = featureA featureB featureC featureD} would result in\+: {\ttfamily The following features may conflict\+: featureA featureB featureC featureD} 
+\end{DoxyItemize}

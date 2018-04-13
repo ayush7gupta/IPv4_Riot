@@ -1,0 +1,107 @@
+\hypertarget{native_2lwip_2src_2include_2lwip_2apps_2sntp_8h}{}\section{/home/ayush/\+R\+I\+O\+T/tests/lwip/bin/pkg/native/lwip/src/include/lwip/apps/sntp.h File Reference}
+\label{native_2lwip_2src_2include_2lwip_2apps_2sntp_8h}\index{/home/ayush/\+R\+I\+O\+T/tests/lwip/bin/pkg/native/lwip/src/include/lwip/apps/sntp.\+h@{/home/ayush/\+R\+I\+O\+T/tests/lwip/bin/pkg/native/lwip/src/include/lwip/apps/sntp.\+h}}
+{\ttfamily \#include \char`\"{}lwip/apps/sntp\+\_\+opts.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}lwip/ip\+\_\+addr.\+h\char`\"{}}\newline
+Include dependency graph for sntp.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=288pt]{native_2lwip_2src_2include_2lwip_2apps_2sntp_8h__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{native_2lwip_2src_2include_2lwip_2apps_2sntp_8h_a3fb5749307bfe9d99a97f80fc49c2720}{S\+N\+T\+P\+\_\+\+O\+P\+M\+O\+D\+E\+\_\+\+P\+O\+LL}~0
+\item 
+\#define \hyperlink{native_2lwip_2src_2include_2lwip_2apps_2sntp_8h_a55c14213293bd91ff0a55760bd77bb06}{S\+N\+T\+P\+\_\+\+O\+P\+M\+O\+D\+E\+\_\+\+L\+I\+S\+T\+E\+N\+O\+N\+LY}~1
+\item 
+\#define \hyperlink{native_2lwip_2src_2include_2lwip_2apps_2sntp_8h_afe7b6eae76f608a87fadc3940c5ee4f9}{sntp\+\_\+servermode\+\_\+dhcp}(x)
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{native_2lwip_2src_2include_2lwip_2apps_2sntp_8h_aae94fb2adadbf9667e9597f8a45bf120}{sntp\+\_\+setoperatingmode} (\hyperlink{group__compiler__abstraction_ga4caecabca98b43919dd11be1c0d4cd8e}{u8\+\_\+t} operating\+\_\+mode)
+\item 
+\hyperlink{group__compiler__abstraction_ga4caecabca98b43919dd11be1c0d4cd8e}{u8\+\_\+t} \hyperlink{native_2lwip_2src_2include_2lwip_2apps_2sntp_8h_ae66404a551d5cef420cf844a71356fae}{sntp\+\_\+getoperatingmode} (void)
+\item 
+void \hyperlink{native_2lwip_2src_2include_2lwip_2apps_2sntp_8h_a9b300c6616de60524c85ea40bf70e2ba}{sntp\+\_\+init} (void)
+\item 
+void \hyperlink{native_2lwip_2src_2include_2lwip_2apps_2sntp_8h_a8119fc2d1ff7ff6eba511cc9c7167488}{sntp\+\_\+stop} (void)
+\item 
+\hyperlink{group__compiler__abstraction_ga4caecabca98b43919dd11be1c0d4cd8e}{u8\+\_\+t} \hyperlink{native_2lwip_2src_2include_2lwip_2apps_2sntp_8h_a3fe5254e5a056fca80802d9f26b9c3c5}{sntp\+\_\+enabled} (void)
+\item 
+void \hyperlink{native_2lwip_2src_2include_2lwip_2apps_2sntp_8h_ab653cfecd7e9826634fbea1b839c6554}{sntp\+\_\+setserver} (\hyperlink{group__compiler__abstraction_ga4caecabca98b43919dd11be1c0d4cd8e}{u8\+\_\+t} idx, const \hyperlink{native_2lwip_2src_2include_2lwip_2ip__addr_8h_a88b43639738c4de2d3cd22e3a1fd7696}{ip\+\_\+addr\+\_\+t} $\ast$addr)
+\item 
+const \hyperlink{native_2lwip_2src_2include_2lwip_2ip__addr_8h_a88b43639738c4de2d3cd22e3a1fd7696}{ip\+\_\+addr\+\_\+t} $\ast$ \hyperlink{native_2lwip_2src_2include_2lwip_2apps_2sntp_8h_a2a28523cb9f2b5b025a4818bc2c1afc1}{sntp\+\_\+getserver} (\hyperlink{group__compiler__abstraction_ga4caecabca98b43919dd11be1c0d4cd8e}{u8\+\_\+t} idx)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+S\+N\+TP client A\+PI 
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{native_2lwip_2src_2include_2lwip_2apps_2sntp_8h_a55c14213293bd91ff0a55760bd77bb06}\label{native_2lwip_2src_2include_2lwip_2apps_2sntp_8h_a55c14213293bd91ff0a55760bd77bb06}} 
+\index{native/lwip/src/include/lwip/apps/sntp.\+h@{native/lwip/src/include/lwip/apps/sntp.\+h}!S\+N\+T\+P\+\_\+\+O\+P\+M\+O\+D\+E\+\_\+\+L\+I\+S\+T\+E\+N\+O\+N\+LY@{S\+N\+T\+P\+\_\+\+O\+P\+M\+O\+D\+E\+\_\+\+L\+I\+S\+T\+E\+N\+O\+N\+LY}}
+\index{S\+N\+T\+P\+\_\+\+O\+P\+M\+O\+D\+E\+\_\+\+L\+I\+S\+T\+E\+N\+O\+N\+LY@{S\+N\+T\+P\+\_\+\+O\+P\+M\+O\+D\+E\+\_\+\+L\+I\+S\+T\+E\+N\+O\+N\+LY}!native/lwip/src/include/lwip/apps/sntp.\+h@{native/lwip/src/include/lwip/apps/sntp.\+h}}
+\subsubsection{\texorpdfstring{S\+N\+T\+P\+\_\+\+O\+P\+M\+O\+D\+E\+\_\+\+L\+I\+S\+T\+E\+N\+O\+N\+LY}{SNTP\_OPMODE\_LISTENONLY}}
+{\footnotesize\ttfamily \#define S\+N\+T\+P\+\_\+\+O\+P\+M\+O\+D\+E\+\_\+\+L\+I\+S\+T\+E\+N\+O\+N\+LY~1}
+
+\mbox{\Hypertarget{native_2lwip_2src_2include_2lwip_2apps_2sntp_8h_a3fb5749307bfe9d99a97f80fc49c2720}\label{native_2lwip_2src_2include_2lwip_2apps_2sntp_8h_a3fb5749307bfe9d99a97f80fc49c2720}} 
+\index{native/lwip/src/include/lwip/apps/sntp.\+h@{native/lwip/src/include/lwip/apps/sntp.\+h}!S\+N\+T\+P\+\_\+\+O\+P\+M\+O\+D\+E\+\_\+\+P\+O\+LL@{S\+N\+T\+P\+\_\+\+O\+P\+M\+O\+D\+E\+\_\+\+P\+O\+LL}}
+\index{S\+N\+T\+P\+\_\+\+O\+P\+M\+O\+D\+E\+\_\+\+P\+O\+LL@{S\+N\+T\+P\+\_\+\+O\+P\+M\+O\+D\+E\+\_\+\+P\+O\+LL}!native/lwip/src/include/lwip/apps/sntp.\+h@{native/lwip/src/include/lwip/apps/sntp.\+h}}
+\subsubsection{\texorpdfstring{S\+N\+T\+P\+\_\+\+O\+P\+M\+O\+D\+E\+\_\+\+P\+O\+LL}{SNTP\_OPMODE\_POLL}}
+{\footnotesize\ttfamily \#define S\+N\+T\+P\+\_\+\+O\+P\+M\+O\+D\+E\+\_\+\+P\+O\+LL~0}
+
+\mbox{\Hypertarget{native_2lwip_2src_2include_2lwip_2apps_2sntp_8h_afe7b6eae76f608a87fadc3940c5ee4f9}\label{native_2lwip_2src_2include_2lwip_2apps_2sntp_8h_afe7b6eae76f608a87fadc3940c5ee4f9}} 
+\index{native/lwip/src/include/lwip/apps/sntp.\+h@{native/lwip/src/include/lwip/apps/sntp.\+h}!sntp\+\_\+servermode\+\_\+dhcp@{sntp\+\_\+servermode\+\_\+dhcp}}
+\index{sntp\+\_\+servermode\+\_\+dhcp@{sntp\+\_\+servermode\+\_\+dhcp}!native/lwip/src/include/lwip/apps/sntp.\+h@{native/lwip/src/include/lwip/apps/sntp.\+h}}
+\subsubsection{\texorpdfstring{sntp\+\_\+servermode\+\_\+dhcp}{sntp\_servermode\_dhcp}}
+{\footnotesize\ttfamily \#define sntp\+\_\+servermode\+\_\+dhcp(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})}
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{native_2lwip_2src_2include_2lwip_2apps_2sntp_8h_a3fe5254e5a056fca80802d9f26b9c3c5}\label{native_2lwip_2src_2include_2lwip_2apps_2sntp_8h_a3fe5254e5a056fca80802d9f26b9c3c5}} 
+\index{native/lwip/src/include/lwip/apps/sntp.\+h@{native/lwip/src/include/lwip/apps/sntp.\+h}!sntp\+\_\+enabled@{sntp\+\_\+enabled}}
+\index{sntp\+\_\+enabled@{sntp\+\_\+enabled}!native/lwip/src/include/lwip/apps/sntp.\+h@{native/lwip/src/include/lwip/apps/sntp.\+h}}
+\subsubsection{\texorpdfstring{sntp\+\_\+enabled()}{sntp\_enabled()}}
+{\footnotesize\ttfamily \hyperlink{group__compiler__abstraction_ga4caecabca98b43919dd11be1c0d4cd8e}{u8\+\_\+t} sntp\+\_\+enabled (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{native_2lwip_2src_2include_2lwip_2apps_2sntp_8h_ae66404a551d5cef420cf844a71356fae}\label{native_2lwip_2src_2include_2lwip_2apps_2sntp_8h_ae66404a551d5cef420cf844a71356fae}} 
+\index{native/lwip/src/include/lwip/apps/sntp.\+h@{native/lwip/src/include/lwip/apps/sntp.\+h}!sntp\+\_\+getoperatingmode@{sntp\+\_\+getoperatingmode}}
+\index{sntp\+\_\+getoperatingmode@{sntp\+\_\+getoperatingmode}!native/lwip/src/include/lwip/apps/sntp.\+h@{native/lwip/src/include/lwip/apps/sntp.\+h}}
+\subsubsection{\texorpdfstring{sntp\+\_\+getoperatingmode()}{sntp\_getoperatingmode()}}
+{\footnotesize\ttfamily \hyperlink{group__compiler__abstraction_ga4caecabca98b43919dd11be1c0d4cd8e}{u8\+\_\+t} sntp\+\_\+getoperatingmode (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{native_2lwip_2src_2include_2lwip_2apps_2sntp_8h_a2a28523cb9f2b5b025a4818bc2c1afc1}\label{native_2lwip_2src_2include_2lwip_2apps_2sntp_8h_a2a28523cb9f2b5b025a4818bc2c1afc1}} 
+\index{native/lwip/src/include/lwip/apps/sntp.\+h@{native/lwip/src/include/lwip/apps/sntp.\+h}!sntp\+\_\+getserver@{sntp\+\_\+getserver}}
+\index{sntp\+\_\+getserver@{sntp\+\_\+getserver}!native/lwip/src/include/lwip/apps/sntp.\+h@{native/lwip/src/include/lwip/apps/sntp.\+h}}
+\subsubsection{\texorpdfstring{sntp\+\_\+getserver()}{sntp\_getserver()}}
+{\footnotesize\ttfamily const \hyperlink{native_2lwip_2src_2include_2lwip_2ip__addr_8h_a88b43639738c4de2d3cd22e3a1fd7696}{ip\+\_\+addr\+\_\+t}$\ast$ sntp\+\_\+getserver (\begin{DoxyParamCaption}\item[{\hyperlink{group__compiler__abstraction_ga4caecabca98b43919dd11be1c0d4cd8e}{u8\+\_\+t}}]{idx }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{native_2lwip_2src_2include_2lwip_2apps_2sntp_8h_a9b300c6616de60524c85ea40bf70e2ba}\label{native_2lwip_2src_2include_2lwip_2apps_2sntp_8h_a9b300c6616de60524c85ea40bf70e2ba}} 
+\index{native/lwip/src/include/lwip/apps/sntp.\+h@{native/lwip/src/include/lwip/apps/sntp.\+h}!sntp\+\_\+init@{sntp\+\_\+init}}
+\index{sntp\+\_\+init@{sntp\+\_\+init}!native/lwip/src/include/lwip/apps/sntp.\+h@{native/lwip/src/include/lwip/apps/sntp.\+h}}
+\subsubsection{\texorpdfstring{sntp\+\_\+init()}{sntp\_init()}}
+{\footnotesize\ttfamily void sntp\+\_\+init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{native_2lwip_2src_2include_2lwip_2apps_2sntp_8h_aae94fb2adadbf9667e9597f8a45bf120}\label{native_2lwip_2src_2include_2lwip_2apps_2sntp_8h_aae94fb2adadbf9667e9597f8a45bf120}} 
+\index{native/lwip/src/include/lwip/apps/sntp.\+h@{native/lwip/src/include/lwip/apps/sntp.\+h}!sntp\+\_\+setoperatingmode@{sntp\+\_\+setoperatingmode}}
+\index{sntp\+\_\+setoperatingmode@{sntp\+\_\+setoperatingmode}!native/lwip/src/include/lwip/apps/sntp.\+h@{native/lwip/src/include/lwip/apps/sntp.\+h}}
+\subsubsection{\texorpdfstring{sntp\+\_\+setoperatingmode()}{sntp\_setoperatingmode()}}
+{\footnotesize\ttfamily void sntp\+\_\+setoperatingmode (\begin{DoxyParamCaption}\item[{\hyperlink{group__compiler__abstraction_ga4caecabca98b43919dd11be1c0d4cd8e}{u8\+\_\+t}}]{operating\+\_\+mode }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{native_2lwip_2src_2include_2lwip_2apps_2sntp_8h_ab653cfecd7e9826634fbea1b839c6554}\label{native_2lwip_2src_2include_2lwip_2apps_2sntp_8h_ab653cfecd7e9826634fbea1b839c6554}} 
+\index{native/lwip/src/include/lwip/apps/sntp.\+h@{native/lwip/src/include/lwip/apps/sntp.\+h}!sntp\+\_\+setserver@{sntp\+\_\+setserver}}
+\index{sntp\+\_\+setserver@{sntp\+\_\+setserver}!native/lwip/src/include/lwip/apps/sntp.\+h@{native/lwip/src/include/lwip/apps/sntp.\+h}}
+\subsubsection{\texorpdfstring{sntp\+\_\+setserver()}{sntp\_setserver()}}
+{\footnotesize\ttfamily void sntp\+\_\+setserver (\begin{DoxyParamCaption}\item[{\hyperlink{group__compiler__abstraction_ga4caecabca98b43919dd11be1c0d4cd8e}{u8\+\_\+t}}]{idx,  }\item[{const \hyperlink{native_2lwip_2src_2include_2lwip_2ip__addr_8h_a88b43639738c4de2d3cd22e3a1fd7696}{ip\+\_\+addr\+\_\+t} $\ast$}]{addr }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{native_2lwip_2src_2include_2lwip_2apps_2sntp_8h_a8119fc2d1ff7ff6eba511cc9c7167488}\label{native_2lwip_2src_2include_2lwip_2apps_2sntp_8h_a8119fc2d1ff7ff6eba511cc9c7167488}} 
+\index{native/lwip/src/include/lwip/apps/sntp.\+h@{native/lwip/src/include/lwip/apps/sntp.\+h}!sntp\+\_\+stop@{sntp\+\_\+stop}}
+\index{sntp\+\_\+stop@{sntp\+\_\+stop}!native/lwip/src/include/lwip/apps/sntp.\+h@{native/lwip/src/include/lwip/apps/sntp.\+h}}
+\subsubsection{\texorpdfstring{sntp\+\_\+stop()}{sntp\_stop()}}
+{\footnotesize\ttfamily void sntp\+\_\+stop (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+

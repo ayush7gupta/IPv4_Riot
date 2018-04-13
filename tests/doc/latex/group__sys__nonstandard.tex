@@ -1,0 +1,52 @@
+\hypertarget{group__sys__nonstandard}{}\section{Non-\/standard functions}
+\label{group__sys__nonstandard}\index{Non-\/standard functions@{Non-\/standard functions}}
+Collaboration diagram for Non-\/standard functions\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{group__sys__nonstandard}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+char $\ast$ \hyperlink{group__sys__nonstandard_gaa2ba4b4e2dd7e1c856fedc6a6069813e}{lwip\+\_\+strnstr} (const char $\ast$\hyperlink{driver__sdcard__spi_2main_8c_a1870d2717147e1356f2eb4e5d5fa4a1c}{buffer}, const char $\ast$token, size\+\_\+t n)
+\item 
+int \hyperlink{group__sys__nonstandard_ga263cbafcb697eff964139a9998a6668a}{lwip\+\_\+stricmp} (const char $\ast$str1, const char $\ast$str2)
+\item 
+int \hyperlink{group__sys__nonstandard_ga997dcc49451121d4ed755b33bc7bd26a}{lwip\+\_\+strnicmp} (const char $\ast$str1, const char $\ast$str2, size\+\_\+t len)
+\item 
+void \hyperlink{group__sys__nonstandard_gaf15b4fbaaae5bb7f6da4301f3f979284}{lwip\+\_\+itoa} (char $\ast$result, size\+\_\+t bufsize, int number)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+lw\+IP provides default implementations for non-\/standard functions. These can be mapped to OS functions to reduce code footprint if desired. All defines related to this section must not be placed in lwipopts.\+h, but in arch/cc.\+h! These options cannot be \#defined in lwipopts.\+h since they are not options of lw\+IP itself, but options of the lw\+IP port to your system. 
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{group__sys__nonstandard_gaf15b4fbaaae5bb7f6da4301f3f979284}\label{group__sys__nonstandard_gaf15b4fbaaae5bb7f6da4301f3f979284}} 
+\index{Non-\/standard functions@{Non-\/standard functions}!lwip\+\_\+itoa@{lwip\+\_\+itoa}}
+\index{lwip\+\_\+itoa@{lwip\+\_\+itoa}!Non-\/standard functions@{Non-\/standard functions}}
+\subsubsection{\texorpdfstring{lwip\+\_\+itoa()}{lwip\_itoa()}}
+{\footnotesize\ttfamily void lwip\+\_\+itoa (\begin{DoxyParamCaption}\item[{char $\ast$}]{result,  }\item[{size\+\_\+t}]{bufsize,  }\item[{int}]{number }\end{DoxyParamCaption})}
+
+lw\+IP default implementation for itoa() non-\/standard function. This can be \#defined to itoa() or snprintf(result, bufsize, \char`\"{}\%d\char`\"{}, number) depending on your platform port. \mbox{\Hypertarget{group__sys__nonstandard_ga263cbafcb697eff964139a9998a6668a}\label{group__sys__nonstandard_ga263cbafcb697eff964139a9998a6668a}} 
+\index{Non-\/standard functions@{Non-\/standard functions}!lwip\+\_\+stricmp@{lwip\+\_\+stricmp}}
+\index{lwip\+\_\+stricmp@{lwip\+\_\+stricmp}!Non-\/standard functions@{Non-\/standard functions}}
+\subsubsection{\texorpdfstring{lwip\+\_\+stricmp()}{lwip\_stricmp()}}
+{\footnotesize\ttfamily int lwip\+\_\+stricmp (\begin{DoxyParamCaption}\item[{const char $\ast$}]{str1,  }\item[{const char $\ast$}]{str2 }\end{DoxyParamCaption})}
+
+lw\+IP default implementation for stricmp() non-\/standard function. This can be \#defined to stricmp() depending on your platform port. \mbox{\Hypertarget{group__sys__nonstandard_ga997dcc49451121d4ed755b33bc7bd26a}\label{group__sys__nonstandard_ga997dcc49451121d4ed755b33bc7bd26a}} 
+\index{Non-\/standard functions@{Non-\/standard functions}!lwip\+\_\+strnicmp@{lwip\+\_\+strnicmp}}
+\index{lwip\+\_\+strnicmp@{lwip\+\_\+strnicmp}!Non-\/standard functions@{Non-\/standard functions}}
+\subsubsection{\texorpdfstring{lwip\+\_\+strnicmp()}{lwip\_strnicmp()}}
+{\footnotesize\ttfamily int lwip\+\_\+strnicmp (\begin{DoxyParamCaption}\item[{const char $\ast$}]{str1,  }\item[{const char $\ast$}]{str2,  }\item[{size\+\_\+t}]{len }\end{DoxyParamCaption})}
+
+lw\+IP default implementation for strnicmp() non-\/standard function. This can be \#defined to strnicmp() depending on your platform port. \mbox{\Hypertarget{group__sys__nonstandard_gaa2ba4b4e2dd7e1c856fedc6a6069813e}\label{group__sys__nonstandard_gaa2ba4b4e2dd7e1c856fedc6a6069813e}} 
+\index{Non-\/standard functions@{Non-\/standard functions}!lwip\+\_\+strnstr@{lwip\+\_\+strnstr}}
+\index{lwip\+\_\+strnstr@{lwip\+\_\+strnstr}!Non-\/standard functions@{Non-\/standard functions}}
+\subsubsection{\texorpdfstring{lwip\+\_\+strnstr()}{lwip\_strnstr()}}
+{\footnotesize\ttfamily char $\ast$ lwip\+\_\+strnstr (\begin{DoxyParamCaption}\item[{const char $\ast$}]{buffer,  }\item[{const char $\ast$}]{token,  }\item[{size\+\_\+t}]{n }\end{DoxyParamCaption})}
+
+lw\+IP default implementation for strnstr() non-\/standard function. This can be \#defined to strnstr() depending on your platform port. 

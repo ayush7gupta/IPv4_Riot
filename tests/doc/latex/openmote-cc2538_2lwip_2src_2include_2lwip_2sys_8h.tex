@@ -1,0 +1,285 @@
+\hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2sys_8h}{}\section{/home/ayush/\+R\+I\+O\+T/tests/lwip/bin/pkg/openmote-\/cc2538/lwip/src/include/lwip/sys.h File Reference}
+\label{openmote-cc2538_2lwip_2src_2include_2lwip_2sys_8h}\index{/home/ayush/\+R\+I\+O\+T/tests/lwip/bin/pkg/openmote-\/cc2538/lwip/src/include/lwip/sys.\+h@{/home/ayush/\+R\+I\+O\+T/tests/lwip/bin/pkg/openmote-\/cc2538/lwip/src/include/lwip/sys.\+h}}
+{\ttfamily \#include \char`\"{}lwip/opt.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}lwip/err.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}arch/sys\+\_\+arch.\+h\char`\"{}}\newline
+Include dependency graph for sys.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=318pt]{openmote-cc2538_2lwip_2src_2include_2lwip_2sys_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{openmote-cc2538_2lwip_2src_2include_2lwip_2sys_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2sys_8h_ac1495030a8ab5e1f3c89e42ced527c5b}{S\+Y\+S\+\_\+\+A\+R\+C\+H\+\_\+\+T\+I\+M\+E\+O\+UT}~0xffffffff\+UL
+\item 
+\#define \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2sys_8h_ab0571e67edca0132b144106e9b319ef9}{S\+Y\+S\+\_\+\+M\+B\+O\+X\+\_\+\+E\+M\+P\+TY}~\hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2sys_8h_ac1495030a8ab5e1f3c89e42ced527c5b}{S\+Y\+S\+\_\+\+A\+R\+C\+H\+\_\+\+T\+I\+M\+E\+O\+UT}
+\item 
+\#define \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2sys_8h_a7bada49634cd3b28b28bdcedd763a1e6}{L\+W\+I\+P\+\_\+\+C\+O\+M\+P\+A\+T\+\_\+\+M\+U\+T\+EX}~0
+\item 
+\#define \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2sys_8h_a84e7e4bc00255aee84e6e7289a985703}{sys\+\_\+sem\+\_\+wait}(sem)~\hyperlink{group__sys__sem_ga8d364c5037778acb21c3df675db81b4f}{sys\+\_\+arch\+\_\+sem\+\_\+wait}(sem, 0)
+\item 
+\#define \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2sys_8h_a9e8ad541356786936f23ab83b8f550cc}{sys\+\_\+sem\+\_\+valid\+\_\+val}(sem)~\hyperlink{group__sys__sem_ga09a6c052ddaf799139efc56adfa087e4}{sys\+\_\+sem\+\_\+valid}(\&(sem))
+\item 
+\#define \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2sys_8h_a2556e570f6973a6f4d57d0e76ef190d8}{sys\+\_\+sem\+\_\+set\+\_\+invalid\+\_\+val}(sem)~\hyperlink{group__sys__sem_ga42a2ab32afbf41a4146a9d135224ef33}{sys\+\_\+sem\+\_\+set\+\_\+invalid}(\&(sem))
+\item 
+\#define \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2sys_8h_ab7841780b31ba9c0a39a440aad1fca13}{sys\+\_\+mbox\+\_\+tryfetch}(mbox,  msg)~\hyperlink{group__sys__mbox_gafab441b130b4ec417012835dbe1e497c}{sys\+\_\+arch\+\_\+mbox\+\_\+tryfetch}(mbox, msg)
+\item 
+\#define \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2sys_8h_a5bae9efa9c945dc810665dc4a7e60117}{sys\+\_\+mbox\+\_\+fetch}(mbox,  msg)~\hyperlink{group__sys__mbox_ga6464cd77cf6799bd8b3d6c840166a2e8}{sys\+\_\+arch\+\_\+mbox\+\_\+fetch}(mbox, msg, 0)
+\item 
+\#define \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2sys_8h_aae82640d0bdbeec7b9b6511b3f8d99cb}{sys\+\_\+mbox\+\_\+valid\+\_\+val}(mbox)~\hyperlink{group__sys__mbox_ga8bcfab4bd791dd33f69a778e7585275d}{sys\+\_\+mbox\+\_\+valid}(\&(mbox))
+\item 
+\#define \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2sys_8h_ae293feebb61d36f2db99be53702b8203}{sys\+\_\+mbox\+\_\+set\+\_\+invalid\+\_\+val}(mbox)~\hyperlink{group__sys__mbox_ga53ddec9d7f5500c5b1d982cd17493172}{sys\+\_\+mbox\+\_\+set\+\_\+invalid}(\&(mbox))
+\item 
+\#define \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2sys_8h_a945395fa326214fc9736487242710a90}{S\+Y\+S\+\_\+\+A\+R\+C\+H\+\_\+\+D\+E\+C\+L\+\_\+\+P\+R\+O\+T\+E\+CT}(lev)
+\item 
+\#define \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2sys_8h_a3d0e48feafd378e9c26c64567ecd8bab}{S\+Y\+S\+\_\+\+A\+R\+C\+H\+\_\+\+P\+R\+O\+T\+E\+CT}(lev)
+\item 
+\#define \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2sys_8h_a2f48e97047945642ddeb27e65bf4ffe2}{S\+Y\+S\+\_\+\+A\+R\+C\+H\+\_\+\+U\+N\+P\+R\+O\+T\+E\+CT}(lev)
+\item 
+\#define \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2sys_8h_acc5f7f8cbd020de628d1e9a0443da4c7}{S\+Y\+S\+\_\+\+A\+R\+C\+H\+\_\+\+I\+NC}(var,  val)
+\item 
+\#define \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2sys_8h_aa9a585faa63acdd5d59ac5e7759a07c5}{S\+Y\+S\+\_\+\+A\+R\+C\+H\+\_\+\+D\+EC}(var,  val)
+\item 
+\#define \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2sys_8h_a0da95147531964d619be7744c7169986}{S\+Y\+S\+\_\+\+A\+R\+C\+H\+\_\+\+G\+ET}(var,  ret)
+\item 
+\#define \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2sys_8h_a24ff55288a4d9fa28100c78b2f4612f6}{S\+Y\+S\+\_\+\+A\+R\+C\+H\+\_\+\+S\+ET}(var,  val)
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef void($\ast$ \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2sys_8h_ae30a77bf6bd69bfcc5f235eaad54f2b9}{lwip\+\_\+thread\+\_\+fn}) (void $\ast$arg)
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group__infrastructure__errors_gaf02d9da80fd66b4f986d2c53d7231ddb}{err\+\_\+t} \hyperlink{group__sys__mutex_ga38e7dae1fd88b338eb1cd97f110f3897}{sys\+\_\+mutex\+\_\+new} (sys\+\_\+mutex\+\_\+t $\ast$mutex)
+\item 
+void \hyperlink{group__sys__mutex_ga4d4eb9afe5965fa2661dd54ff55d616a}{sys\+\_\+mutex\+\_\+lock} (sys\+\_\+mutex\+\_\+t $\ast$mutex)
+\item 
+void \hyperlink{group__sys__mutex_ga5568f68898fe9d5735f9ce2f665624fb}{sys\+\_\+mutex\+\_\+unlock} (sys\+\_\+mutex\+\_\+t $\ast$mutex)
+\item 
+void \hyperlink{group__sys__mutex_ga16336ce68b741e98204102ca4bc84dd9}{sys\+\_\+mutex\+\_\+free} (sys\+\_\+mutex\+\_\+t $\ast$mutex)
+\item 
+int \hyperlink{group__sys__mutex_gaebe83ba90a6d9c23cdb3eb5d49562c4a}{sys\+\_\+mutex\+\_\+valid} (sys\+\_\+mutex\+\_\+t $\ast$mutex)
+\item 
+void \hyperlink{group__sys__mutex_ga3f392725971dc837aa56dd7e45fa7ca8}{sys\+\_\+mutex\+\_\+set\+\_\+invalid} (sys\+\_\+mutex\+\_\+t $\ast$mutex)
+\item 
+\hyperlink{group__infrastructure__errors_gaf02d9da80fd66b4f986d2c53d7231ddb}{err\+\_\+t} \hyperlink{group__sys__sem_gaf99da9e34a71855285c535183133dfde}{sys\+\_\+sem\+\_\+new} (sys\+\_\+sem\+\_\+t $\ast$sem, \hyperlink{group__compiler__abstraction_ga4caecabca98b43919dd11be1c0d4cd8e}{u8\+\_\+t} count)
+\item 
+void \hyperlink{group__sys__sem_gaaf800273061fcc3f8200fd4e1b9ca875}{sys\+\_\+sem\+\_\+signal} (sys\+\_\+sem\+\_\+t $\ast$sem)
+\item 
+\hyperlink{group__compiler__abstraction_ga4c14294869aceba3ef9d4c0c302d0f33}{u32\+\_\+t} \hyperlink{group__sys__sem_ga8d364c5037778acb21c3df675db81b4f}{sys\+\_\+arch\+\_\+sem\+\_\+wait} (sys\+\_\+sem\+\_\+t $\ast$sem, \hyperlink{group__compiler__abstraction_ga4c14294869aceba3ef9d4c0c302d0f33}{u32\+\_\+t} timeout)
+\item 
+void \hyperlink{group__sys__sem_ga83b781f96c30e915c752065a757da283}{sys\+\_\+sem\+\_\+free} (sys\+\_\+sem\+\_\+t $\ast$sem)
+\item 
+int \hyperlink{group__sys__sem_ga09a6c052ddaf799139efc56adfa087e4}{sys\+\_\+sem\+\_\+valid} (sys\+\_\+sem\+\_\+t $\ast$sem)
+\item 
+void \hyperlink{group__sys__sem_ga42a2ab32afbf41a4146a9d135224ef33}{sys\+\_\+sem\+\_\+set\+\_\+invalid} (sys\+\_\+sem\+\_\+t $\ast$sem)
+\item 
+void \hyperlink{group__sys__misc_ga6b8786f43e779953e8b74e983c88682e}{sys\+\_\+msleep} (\hyperlink{group__compiler__abstraction_ga4c14294869aceba3ef9d4c0c302d0f33}{u32\+\_\+t} ms)
+\item 
+\hyperlink{group__infrastructure__errors_gaf02d9da80fd66b4f986d2c53d7231ddb}{err\+\_\+t} \hyperlink{group__sys__mbox_gab9793f30642de06ce87827e9adbe30cc}{sys\+\_\+mbox\+\_\+new} (sys\+\_\+mbox\+\_\+t $\ast$mbox, int size)
+\item 
+void \hyperlink{group__sys__mbox_ga9d068386a3c53dd01b8af99c3ef77555}{sys\+\_\+mbox\+\_\+post} (sys\+\_\+mbox\+\_\+t $\ast$mbox, void $\ast$msg)
+\item 
+\hyperlink{group__infrastructure__errors_gaf02d9da80fd66b4f986d2c53d7231ddb}{err\+\_\+t} \hyperlink{group__sys__mbox_gaa36345e48a49d67cbb0878cd4cbd2195}{sys\+\_\+mbox\+\_\+trypost} (sys\+\_\+mbox\+\_\+t $\ast$mbox, void $\ast$msg)
+\item 
+\hyperlink{group__compiler__abstraction_ga4c14294869aceba3ef9d4c0c302d0f33}{u32\+\_\+t} \hyperlink{group__sys__mbox_ga6464cd77cf6799bd8b3d6c840166a2e8}{sys\+\_\+arch\+\_\+mbox\+\_\+fetch} (sys\+\_\+mbox\+\_\+t $\ast$mbox, void $\ast$$\ast$msg, \hyperlink{group__compiler__abstraction_ga4c14294869aceba3ef9d4c0c302d0f33}{u32\+\_\+t} timeout)
+\item 
+\hyperlink{group__compiler__abstraction_ga4c14294869aceba3ef9d4c0c302d0f33}{u32\+\_\+t} \hyperlink{group__sys__mbox_gafab441b130b4ec417012835dbe1e497c}{sys\+\_\+arch\+\_\+mbox\+\_\+tryfetch} (sys\+\_\+mbox\+\_\+t $\ast$mbox, void $\ast$$\ast$msg)
+\item 
+void \hyperlink{group__sys__mbox_gac641a45812155d2234ef80dd6412882f}{sys\+\_\+mbox\+\_\+free} (sys\+\_\+mbox\+\_\+t $\ast$mbox)
+\item 
+int \hyperlink{group__sys__mbox_ga8bcfab4bd791dd33f69a778e7585275d}{sys\+\_\+mbox\+\_\+valid} (sys\+\_\+mbox\+\_\+t $\ast$mbox)
+\item 
+void \hyperlink{group__sys__mbox_ga53ddec9d7f5500c5b1d982cd17493172}{sys\+\_\+mbox\+\_\+set\+\_\+invalid} (sys\+\_\+mbox\+\_\+t $\ast$mbox)
+\item 
+sys\+\_\+thread\+\_\+t \hyperlink{group__sys__misc_ga0d596afdd8dbcfad320172d39b0f607a}{sys\+\_\+thread\+\_\+new} (const char $\ast$name, \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2sys_8h_ae30a77bf6bd69bfcc5f235eaad54f2b9}{lwip\+\_\+thread\+\_\+fn} thread, void $\ast$arg, int stacksize, int prio)
+\item 
+void \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2sys_8h_af411a8bc6b7ed4b0af9114e10c959448}{sys\+\_\+init} (void)
+\item 
+\hyperlink{group__compiler__abstraction_ga4c14294869aceba3ef9d4c0c302d0f33}{u32\+\_\+t} \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2sys_8h_ac89f307e8b360eaf821b461a4f26753a}{sys\+\_\+jiffies} (void)
+\item 
+\hyperlink{group__compiler__abstraction_ga4c14294869aceba3ef9d4c0c302d0f33}{u32\+\_\+t} \hyperlink{group__sys__time_ga11316ac1e77418c6fa4ab8869e3fa199}{sys\+\_\+now} (void)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+OS abstraction layer 
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2sys_8h_a7bada49634cd3b28b28bdcedd763a1e6}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2sys_8h_a7bada49634cd3b28b28bdcedd763a1e6}} 
+\index{openmote-\/cc2538/lwip/src/include/lwip/sys.\+h@{openmote-\/cc2538/lwip/src/include/lwip/sys.\+h}!L\+W\+I\+P\+\_\+\+C\+O\+M\+P\+A\+T\+\_\+\+M\+U\+T\+EX@{L\+W\+I\+P\+\_\+\+C\+O\+M\+P\+A\+T\+\_\+\+M\+U\+T\+EX}}
+\index{L\+W\+I\+P\+\_\+\+C\+O\+M\+P\+A\+T\+\_\+\+M\+U\+T\+EX@{L\+W\+I\+P\+\_\+\+C\+O\+M\+P\+A\+T\+\_\+\+M\+U\+T\+EX}!openmote-\/cc2538/lwip/src/include/lwip/sys.\+h@{openmote-\/cc2538/lwip/src/include/lwip/sys.\+h}}
+\subsubsection{\texorpdfstring{L\+W\+I\+P\+\_\+\+C\+O\+M\+P\+A\+T\+\_\+\+M\+U\+T\+EX}{LWIP\_COMPAT\_MUTEX}}
+{\footnotesize\ttfamily \#define L\+W\+I\+P\+\_\+\+C\+O\+M\+P\+A\+T\+\_\+\+M\+U\+T\+EX~0}
+
+Define L\+W\+I\+P\+\_\+\+C\+O\+M\+P\+A\+T\+\_\+\+M\+U\+T\+EX if the port has no mutexes and binary semaphores should be used instead \mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2sys_8h_aa9a585faa63acdd5d59ac5e7759a07c5}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2sys_8h_aa9a585faa63acdd5d59ac5e7759a07c5}} 
+\index{openmote-\/cc2538/lwip/src/include/lwip/sys.\+h@{openmote-\/cc2538/lwip/src/include/lwip/sys.\+h}!S\+Y\+S\+\_\+\+A\+R\+C\+H\+\_\+\+D\+EC@{S\+Y\+S\+\_\+\+A\+R\+C\+H\+\_\+\+D\+EC}}
+\index{S\+Y\+S\+\_\+\+A\+R\+C\+H\+\_\+\+D\+EC@{S\+Y\+S\+\_\+\+A\+R\+C\+H\+\_\+\+D\+EC}!openmote-\/cc2538/lwip/src/include/lwip/sys.\+h@{openmote-\/cc2538/lwip/src/include/lwip/sys.\+h}}
+\subsubsection{\texorpdfstring{S\+Y\+S\+\_\+\+A\+R\+C\+H\+\_\+\+D\+EC}{SYS\_ARCH\_DEC}}
+{\footnotesize\ttfamily \#define S\+Y\+S\+\_\+\+A\+R\+C\+H\+\_\+\+D\+EC(\begin{DoxyParamCaption}\item[{}]{var,  }\item[{}]{val }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\textcolor{keywordflow}{do} \{ \(\backslash\)
+                                SYS\_ARCH\_DECL\_PROTECT(old\_level); \(\backslash\)
+                                SYS\_ARCH\_PROTECT(old\_level); \(\backslash\)
+                                var -= val; \(\backslash\)
+                                SYS\_ARCH\_UNPROTECT(old\_level); \(\backslash\)
+                              \} \textcolor{keywordflow}{while}(0)
+\end{DoxyCode}
+\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2sys_8h_a945395fa326214fc9736487242710a90}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2sys_8h_a945395fa326214fc9736487242710a90}} 
+\index{openmote-\/cc2538/lwip/src/include/lwip/sys.\+h@{openmote-\/cc2538/lwip/src/include/lwip/sys.\+h}!S\+Y\+S\+\_\+\+A\+R\+C\+H\+\_\+\+D\+E\+C\+L\+\_\+\+P\+R\+O\+T\+E\+CT@{S\+Y\+S\+\_\+\+A\+R\+C\+H\+\_\+\+D\+E\+C\+L\+\_\+\+P\+R\+O\+T\+E\+CT}}
+\index{S\+Y\+S\+\_\+\+A\+R\+C\+H\+\_\+\+D\+E\+C\+L\+\_\+\+P\+R\+O\+T\+E\+CT@{S\+Y\+S\+\_\+\+A\+R\+C\+H\+\_\+\+D\+E\+C\+L\+\_\+\+P\+R\+O\+T\+E\+CT}!openmote-\/cc2538/lwip/src/include/lwip/sys.\+h@{openmote-\/cc2538/lwip/src/include/lwip/sys.\+h}}
+\subsubsection{\texorpdfstring{S\+Y\+S\+\_\+\+A\+R\+C\+H\+\_\+\+D\+E\+C\+L\+\_\+\+P\+R\+O\+T\+E\+CT}{SYS\_ARCH\_DECL\_PROTECT}}
+{\footnotesize\ttfamily \#define S\+Y\+S\+\_\+\+A\+R\+C\+H\+\_\+\+D\+E\+C\+L\+\_\+\+P\+R\+O\+T\+E\+CT(\begin{DoxyParamCaption}\item[{}]{lev }\end{DoxyParamCaption})}
+
+S\+Y\+S\+\_\+\+L\+I\+G\+H\+T\+W\+E\+I\+G\+H\+T\+\_\+\+P\+R\+OT define S\+Y\+S\+\_\+\+L\+I\+G\+H\+T\+W\+E\+I\+G\+H\+T\+\_\+\+P\+R\+OT in lwipopts.\+h if you want inter-\/task protection for certain critical regions during buffer allocation, deallocation and memory allocation and deallocation. \mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2sys_8h_a0da95147531964d619be7744c7169986}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2sys_8h_a0da95147531964d619be7744c7169986}} 
+\index{openmote-\/cc2538/lwip/src/include/lwip/sys.\+h@{openmote-\/cc2538/lwip/src/include/lwip/sys.\+h}!S\+Y\+S\+\_\+\+A\+R\+C\+H\+\_\+\+G\+ET@{S\+Y\+S\+\_\+\+A\+R\+C\+H\+\_\+\+G\+ET}}
+\index{S\+Y\+S\+\_\+\+A\+R\+C\+H\+\_\+\+G\+ET@{S\+Y\+S\+\_\+\+A\+R\+C\+H\+\_\+\+G\+ET}!openmote-\/cc2538/lwip/src/include/lwip/sys.\+h@{openmote-\/cc2538/lwip/src/include/lwip/sys.\+h}}
+\subsubsection{\texorpdfstring{S\+Y\+S\+\_\+\+A\+R\+C\+H\+\_\+\+G\+ET}{SYS\_ARCH\_GET}}
+{\footnotesize\ttfamily \#define S\+Y\+S\+\_\+\+A\+R\+C\+H\+\_\+\+G\+ET(\begin{DoxyParamCaption}\item[{}]{var,  }\item[{}]{ret }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\textcolor{keywordflow}{do} \{ \(\backslash\)
+                                SYS\_ARCH\_DECL\_PROTECT(old\_level); \(\backslash\)
+                                SYS\_ARCH\_PROTECT(old\_level); \(\backslash\)
+                                ret = var; \(\backslash\)
+                                SYS\_ARCH\_UNPROTECT(old\_level); \(\backslash\)
+                              \} \textcolor{keywordflow}{while}(0)
+\end{DoxyCode}
+\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2sys_8h_acc5f7f8cbd020de628d1e9a0443da4c7}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2sys_8h_acc5f7f8cbd020de628d1e9a0443da4c7}} 
+\index{openmote-\/cc2538/lwip/src/include/lwip/sys.\+h@{openmote-\/cc2538/lwip/src/include/lwip/sys.\+h}!S\+Y\+S\+\_\+\+A\+R\+C\+H\+\_\+\+I\+NC@{S\+Y\+S\+\_\+\+A\+R\+C\+H\+\_\+\+I\+NC}}
+\index{S\+Y\+S\+\_\+\+A\+R\+C\+H\+\_\+\+I\+NC@{S\+Y\+S\+\_\+\+A\+R\+C\+H\+\_\+\+I\+NC}!openmote-\/cc2538/lwip/src/include/lwip/sys.\+h@{openmote-\/cc2538/lwip/src/include/lwip/sys.\+h}}
+\subsubsection{\texorpdfstring{S\+Y\+S\+\_\+\+A\+R\+C\+H\+\_\+\+I\+NC}{SYS\_ARCH\_INC}}
+{\footnotesize\ttfamily \#define S\+Y\+S\+\_\+\+A\+R\+C\+H\+\_\+\+I\+NC(\begin{DoxyParamCaption}\item[{}]{var,  }\item[{}]{val }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\textcolor{keywordflow}{do} \{ \(\backslash\)
+                                SYS\_ARCH\_DECL\_PROTECT(old\_level); \(\backslash\)
+                                SYS\_ARCH\_PROTECT(old\_level); \(\backslash\)
+                                var += val; \(\backslash\)
+                                SYS\_ARCH\_UNPROTECT(old\_level); \(\backslash\)
+                              \} \textcolor{keywordflow}{while}(0)
+\end{DoxyCode}
+\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2sys_8h_a3d0e48feafd378e9c26c64567ecd8bab}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2sys_8h_a3d0e48feafd378e9c26c64567ecd8bab}} 
+\index{openmote-\/cc2538/lwip/src/include/lwip/sys.\+h@{openmote-\/cc2538/lwip/src/include/lwip/sys.\+h}!S\+Y\+S\+\_\+\+A\+R\+C\+H\+\_\+\+P\+R\+O\+T\+E\+CT@{S\+Y\+S\+\_\+\+A\+R\+C\+H\+\_\+\+P\+R\+O\+T\+E\+CT}}
+\index{S\+Y\+S\+\_\+\+A\+R\+C\+H\+\_\+\+P\+R\+O\+T\+E\+CT@{S\+Y\+S\+\_\+\+A\+R\+C\+H\+\_\+\+P\+R\+O\+T\+E\+CT}!openmote-\/cc2538/lwip/src/include/lwip/sys.\+h@{openmote-\/cc2538/lwip/src/include/lwip/sys.\+h}}
+\subsubsection{\texorpdfstring{S\+Y\+S\+\_\+\+A\+R\+C\+H\+\_\+\+P\+R\+O\+T\+E\+CT}{SYS\_ARCH\_PROTECT}}
+{\footnotesize\ttfamily \#define S\+Y\+S\+\_\+\+A\+R\+C\+H\+\_\+\+P\+R\+O\+T\+E\+CT(\begin{DoxyParamCaption}\item[{}]{lev }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2sys_8h_a24ff55288a4d9fa28100c78b2f4612f6}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2sys_8h_a24ff55288a4d9fa28100c78b2f4612f6}} 
+\index{openmote-\/cc2538/lwip/src/include/lwip/sys.\+h@{openmote-\/cc2538/lwip/src/include/lwip/sys.\+h}!S\+Y\+S\+\_\+\+A\+R\+C\+H\+\_\+\+S\+ET@{S\+Y\+S\+\_\+\+A\+R\+C\+H\+\_\+\+S\+ET}}
+\index{S\+Y\+S\+\_\+\+A\+R\+C\+H\+\_\+\+S\+ET@{S\+Y\+S\+\_\+\+A\+R\+C\+H\+\_\+\+S\+ET}!openmote-\/cc2538/lwip/src/include/lwip/sys.\+h@{openmote-\/cc2538/lwip/src/include/lwip/sys.\+h}}
+\subsubsection{\texorpdfstring{S\+Y\+S\+\_\+\+A\+R\+C\+H\+\_\+\+S\+ET}{SYS\_ARCH\_SET}}
+{\footnotesize\ttfamily \#define S\+Y\+S\+\_\+\+A\+R\+C\+H\+\_\+\+S\+ET(\begin{DoxyParamCaption}\item[{}]{var,  }\item[{}]{val }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\textcolor{keywordflow}{do} \{ \(\backslash\)
+                                SYS\_ARCH\_DECL\_PROTECT(old\_level); \(\backslash\)
+                                SYS\_ARCH\_PROTECT(old\_level); \(\backslash\)
+                                var = val; \(\backslash\)
+                                SYS\_ARCH\_UNPROTECT(old\_level); \(\backslash\)
+                              \} \textcolor{keywordflow}{while}(0)
+\end{DoxyCode}
+\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2sys_8h_ac1495030a8ab5e1f3c89e42ced527c5b}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2sys_8h_ac1495030a8ab5e1f3c89e42ced527c5b}} 
+\index{openmote-\/cc2538/lwip/src/include/lwip/sys.\+h@{openmote-\/cc2538/lwip/src/include/lwip/sys.\+h}!S\+Y\+S\+\_\+\+A\+R\+C\+H\+\_\+\+T\+I\+M\+E\+O\+UT@{S\+Y\+S\+\_\+\+A\+R\+C\+H\+\_\+\+T\+I\+M\+E\+O\+UT}}
+\index{S\+Y\+S\+\_\+\+A\+R\+C\+H\+\_\+\+T\+I\+M\+E\+O\+UT@{S\+Y\+S\+\_\+\+A\+R\+C\+H\+\_\+\+T\+I\+M\+E\+O\+UT}!openmote-\/cc2538/lwip/src/include/lwip/sys.\+h@{openmote-\/cc2538/lwip/src/include/lwip/sys.\+h}}
+\subsubsection{\texorpdfstring{S\+Y\+S\+\_\+\+A\+R\+C\+H\+\_\+\+T\+I\+M\+E\+O\+UT}{SYS\_ARCH\_TIMEOUT}}
+{\footnotesize\ttfamily \#define S\+Y\+S\+\_\+\+A\+R\+C\+H\+\_\+\+T\+I\+M\+E\+O\+UT~0xffffffff\+UL}
+
+Return code for timeouts from sys\+\_\+arch\+\_\+mbox\+\_\+fetch and sys\+\_\+arch\+\_\+sem\+\_\+wait \mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2sys_8h_a2f48e97047945642ddeb27e65bf4ffe2}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2sys_8h_a2f48e97047945642ddeb27e65bf4ffe2}} 
+\index{openmote-\/cc2538/lwip/src/include/lwip/sys.\+h@{openmote-\/cc2538/lwip/src/include/lwip/sys.\+h}!S\+Y\+S\+\_\+\+A\+R\+C\+H\+\_\+\+U\+N\+P\+R\+O\+T\+E\+CT@{S\+Y\+S\+\_\+\+A\+R\+C\+H\+\_\+\+U\+N\+P\+R\+O\+T\+E\+CT}}
+\index{S\+Y\+S\+\_\+\+A\+R\+C\+H\+\_\+\+U\+N\+P\+R\+O\+T\+E\+CT@{S\+Y\+S\+\_\+\+A\+R\+C\+H\+\_\+\+U\+N\+P\+R\+O\+T\+E\+CT}!openmote-\/cc2538/lwip/src/include/lwip/sys.\+h@{openmote-\/cc2538/lwip/src/include/lwip/sys.\+h}}
+\subsubsection{\texorpdfstring{S\+Y\+S\+\_\+\+A\+R\+C\+H\+\_\+\+U\+N\+P\+R\+O\+T\+E\+CT}{SYS\_ARCH\_UNPROTECT}}
+{\footnotesize\ttfamily \#define S\+Y\+S\+\_\+\+A\+R\+C\+H\+\_\+\+U\+N\+P\+R\+O\+T\+E\+CT(\begin{DoxyParamCaption}\item[{}]{lev }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2sys_8h_ab0571e67edca0132b144106e9b319ef9}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2sys_8h_ab0571e67edca0132b144106e9b319ef9}} 
+\index{openmote-\/cc2538/lwip/src/include/lwip/sys.\+h@{openmote-\/cc2538/lwip/src/include/lwip/sys.\+h}!S\+Y\+S\+\_\+\+M\+B\+O\+X\+\_\+\+E\+M\+P\+TY@{S\+Y\+S\+\_\+\+M\+B\+O\+X\+\_\+\+E\+M\+P\+TY}}
+\index{S\+Y\+S\+\_\+\+M\+B\+O\+X\+\_\+\+E\+M\+P\+TY@{S\+Y\+S\+\_\+\+M\+B\+O\+X\+\_\+\+E\+M\+P\+TY}!openmote-\/cc2538/lwip/src/include/lwip/sys.\+h@{openmote-\/cc2538/lwip/src/include/lwip/sys.\+h}}
+\subsubsection{\texorpdfstring{S\+Y\+S\+\_\+\+M\+B\+O\+X\+\_\+\+E\+M\+P\+TY}{SYS\_MBOX\_EMPTY}}
+{\footnotesize\ttfamily \#define S\+Y\+S\+\_\+\+M\+B\+O\+X\+\_\+\+E\+M\+P\+TY~\hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2sys_8h_ac1495030a8ab5e1f3c89e42ced527c5b}{S\+Y\+S\+\_\+\+A\+R\+C\+H\+\_\+\+T\+I\+M\+E\+O\+UT}}
+
+\hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2sys_8h_ab7841780b31ba9c0a39a440aad1fca13}{sys\+\_\+mbox\+\_\+tryfetch()} returns S\+Y\+S\+\_\+\+M\+B\+O\+X\+\_\+\+E\+M\+P\+TY if appropriate. For now we use the same magic value, but we allow this to change in future. \mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2sys_8h_a5bae9efa9c945dc810665dc4a7e60117}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2sys_8h_a5bae9efa9c945dc810665dc4a7e60117}} 
+\index{openmote-\/cc2538/lwip/src/include/lwip/sys.\+h@{openmote-\/cc2538/lwip/src/include/lwip/sys.\+h}!sys\+\_\+mbox\+\_\+fetch@{sys\+\_\+mbox\+\_\+fetch}}
+\index{sys\+\_\+mbox\+\_\+fetch@{sys\+\_\+mbox\+\_\+fetch}!openmote-\/cc2538/lwip/src/include/lwip/sys.\+h@{openmote-\/cc2538/lwip/src/include/lwip/sys.\+h}}
+\subsubsection{\texorpdfstring{sys\+\_\+mbox\+\_\+fetch}{sys\_mbox\_fetch}}
+{\footnotesize\ttfamily \#define sys\+\_\+mbox\+\_\+fetch(\begin{DoxyParamCaption}\item[{}]{mbox,  }\item[{}]{msg }\end{DoxyParamCaption})~\hyperlink{group__sys__mbox_ga6464cd77cf6799bd8b3d6c840166a2e8}{sys\+\_\+arch\+\_\+mbox\+\_\+fetch}(mbox, msg, 0)}
+
+\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2sys_8h_ae293feebb61d36f2db99be53702b8203}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2sys_8h_ae293feebb61d36f2db99be53702b8203}} 
+\index{openmote-\/cc2538/lwip/src/include/lwip/sys.\+h@{openmote-\/cc2538/lwip/src/include/lwip/sys.\+h}!sys\+\_\+mbox\+\_\+set\+\_\+invalid\+\_\+val@{sys\+\_\+mbox\+\_\+set\+\_\+invalid\+\_\+val}}
+\index{sys\+\_\+mbox\+\_\+set\+\_\+invalid\+\_\+val@{sys\+\_\+mbox\+\_\+set\+\_\+invalid\+\_\+val}!openmote-\/cc2538/lwip/src/include/lwip/sys.\+h@{openmote-\/cc2538/lwip/src/include/lwip/sys.\+h}}
+\subsubsection{\texorpdfstring{sys\+\_\+mbox\+\_\+set\+\_\+invalid\+\_\+val}{sys\_mbox\_set\_invalid\_val}}
+{\footnotesize\ttfamily \#define sys\+\_\+mbox\+\_\+set\+\_\+invalid\+\_\+val(\begin{DoxyParamCaption}\item[{}]{mbox }\end{DoxyParamCaption})~\hyperlink{group__sys__mbox_ga53ddec9d7f5500c5b1d982cd17493172}{sys\+\_\+mbox\+\_\+set\+\_\+invalid}(\&(mbox))}
+
+Same as \hyperlink{group__sys__mbox_ga53ddec9d7f5500c5b1d982cd17493172}{sys\+\_\+mbox\+\_\+set\+\_\+invalid()} but taking a value, not a pointer \mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2sys_8h_ab7841780b31ba9c0a39a440aad1fca13}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2sys_8h_ab7841780b31ba9c0a39a440aad1fca13}} 
+\index{openmote-\/cc2538/lwip/src/include/lwip/sys.\+h@{openmote-\/cc2538/lwip/src/include/lwip/sys.\+h}!sys\+\_\+mbox\+\_\+tryfetch@{sys\+\_\+mbox\+\_\+tryfetch}}
+\index{sys\+\_\+mbox\+\_\+tryfetch@{sys\+\_\+mbox\+\_\+tryfetch}!openmote-\/cc2538/lwip/src/include/lwip/sys.\+h@{openmote-\/cc2538/lwip/src/include/lwip/sys.\+h}}
+\subsubsection{\texorpdfstring{sys\+\_\+mbox\+\_\+tryfetch}{sys\_mbox\_tryfetch}}
+{\footnotesize\ttfamily \#define sys\+\_\+mbox\+\_\+tryfetch(\begin{DoxyParamCaption}\item[{}]{mbox,  }\item[{}]{msg }\end{DoxyParamCaption})~\hyperlink{group__sys__mbox_gafab441b130b4ec417012835dbe1e497c}{sys\+\_\+arch\+\_\+mbox\+\_\+tryfetch}(mbox, msg)}
+
+For now, we map straight to sys\+\_\+arch implementation. \mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2sys_8h_aae82640d0bdbeec7b9b6511b3f8d99cb}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2sys_8h_aae82640d0bdbeec7b9b6511b3f8d99cb}} 
+\index{openmote-\/cc2538/lwip/src/include/lwip/sys.\+h@{openmote-\/cc2538/lwip/src/include/lwip/sys.\+h}!sys\+\_\+mbox\+\_\+valid\+\_\+val@{sys\+\_\+mbox\+\_\+valid\+\_\+val}}
+\index{sys\+\_\+mbox\+\_\+valid\+\_\+val@{sys\+\_\+mbox\+\_\+valid\+\_\+val}!openmote-\/cc2538/lwip/src/include/lwip/sys.\+h@{openmote-\/cc2538/lwip/src/include/lwip/sys.\+h}}
+\subsubsection{\texorpdfstring{sys\+\_\+mbox\+\_\+valid\+\_\+val}{sys\_mbox\_valid\_val}}
+{\footnotesize\ttfamily \#define sys\+\_\+mbox\+\_\+valid\+\_\+val(\begin{DoxyParamCaption}\item[{}]{mbox }\end{DoxyParamCaption})~\hyperlink{group__sys__mbox_ga8bcfab4bd791dd33f69a778e7585275d}{sys\+\_\+mbox\+\_\+valid}(\&(mbox))}
+
+Same as \hyperlink{group__sys__mbox_ga8bcfab4bd791dd33f69a778e7585275d}{sys\+\_\+mbox\+\_\+valid()} but taking a value, not a pointer \mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2sys_8h_a2556e570f6973a6f4d57d0e76ef190d8}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2sys_8h_a2556e570f6973a6f4d57d0e76ef190d8}} 
+\index{openmote-\/cc2538/lwip/src/include/lwip/sys.\+h@{openmote-\/cc2538/lwip/src/include/lwip/sys.\+h}!sys\+\_\+sem\+\_\+set\+\_\+invalid\+\_\+val@{sys\+\_\+sem\+\_\+set\+\_\+invalid\+\_\+val}}
+\index{sys\+\_\+sem\+\_\+set\+\_\+invalid\+\_\+val@{sys\+\_\+sem\+\_\+set\+\_\+invalid\+\_\+val}!openmote-\/cc2538/lwip/src/include/lwip/sys.\+h@{openmote-\/cc2538/lwip/src/include/lwip/sys.\+h}}
+\subsubsection{\texorpdfstring{sys\+\_\+sem\+\_\+set\+\_\+invalid\+\_\+val}{sys\_sem\_set\_invalid\_val}}
+{\footnotesize\ttfamily \#define sys\+\_\+sem\+\_\+set\+\_\+invalid\+\_\+val(\begin{DoxyParamCaption}\item[{}]{sem }\end{DoxyParamCaption})~\hyperlink{group__sys__sem_ga42a2ab32afbf41a4146a9d135224ef33}{sys\+\_\+sem\+\_\+set\+\_\+invalid}(\&(sem))}
+
+Same as \hyperlink{group__sys__sem_ga42a2ab32afbf41a4146a9d135224ef33}{sys\+\_\+sem\+\_\+set\+\_\+invalid()} but taking a value, not a pointer \mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2sys_8h_a9e8ad541356786936f23ab83b8f550cc}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2sys_8h_a9e8ad541356786936f23ab83b8f550cc}} 
+\index{openmote-\/cc2538/lwip/src/include/lwip/sys.\+h@{openmote-\/cc2538/lwip/src/include/lwip/sys.\+h}!sys\+\_\+sem\+\_\+valid\+\_\+val@{sys\+\_\+sem\+\_\+valid\+\_\+val}}
+\index{sys\+\_\+sem\+\_\+valid\+\_\+val@{sys\+\_\+sem\+\_\+valid\+\_\+val}!openmote-\/cc2538/lwip/src/include/lwip/sys.\+h@{openmote-\/cc2538/lwip/src/include/lwip/sys.\+h}}
+\subsubsection{\texorpdfstring{sys\+\_\+sem\+\_\+valid\+\_\+val}{sys\_sem\_valid\_val}}
+{\footnotesize\ttfamily \#define sys\+\_\+sem\+\_\+valid\+\_\+val(\begin{DoxyParamCaption}\item[{}]{sem }\end{DoxyParamCaption})~\hyperlink{group__sys__sem_ga09a6c052ddaf799139efc56adfa087e4}{sys\+\_\+sem\+\_\+valid}(\&(sem))}
+
+Same as \hyperlink{group__sys__sem_ga09a6c052ddaf799139efc56adfa087e4}{sys\+\_\+sem\+\_\+valid()} but taking a value, not a pointer \mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2sys_8h_a84e7e4bc00255aee84e6e7289a985703}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2sys_8h_a84e7e4bc00255aee84e6e7289a985703}} 
+\index{openmote-\/cc2538/lwip/src/include/lwip/sys.\+h@{openmote-\/cc2538/lwip/src/include/lwip/sys.\+h}!sys\+\_\+sem\+\_\+wait@{sys\+\_\+sem\+\_\+wait}}
+\index{sys\+\_\+sem\+\_\+wait@{sys\+\_\+sem\+\_\+wait}!openmote-\/cc2538/lwip/src/include/lwip/sys.\+h@{openmote-\/cc2538/lwip/src/include/lwip/sys.\+h}}
+\subsubsection{\texorpdfstring{sys\+\_\+sem\+\_\+wait}{sys\_sem\_wait}}
+{\footnotesize\ttfamily \#define sys\+\_\+sem\+\_\+wait(\begin{DoxyParamCaption}\item[{}]{sem }\end{DoxyParamCaption})~\hyperlink{group__sys__sem_ga8d364c5037778acb21c3df675db81b4f}{sys\+\_\+arch\+\_\+sem\+\_\+wait}(sem, 0)}
+
+Wait for a semaphore -\/ forever/no timeout 
+
+\subsection{Typedef Documentation}
+\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2sys_8h_ae30a77bf6bd69bfcc5f235eaad54f2b9}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2sys_8h_ae30a77bf6bd69bfcc5f235eaad54f2b9}} 
+\index{openmote-\/cc2538/lwip/src/include/lwip/sys.\+h@{openmote-\/cc2538/lwip/src/include/lwip/sys.\+h}!lwip\+\_\+thread\+\_\+fn@{lwip\+\_\+thread\+\_\+fn}}
+\index{lwip\+\_\+thread\+\_\+fn@{lwip\+\_\+thread\+\_\+fn}!openmote-\/cc2538/lwip/src/include/lwip/sys.\+h@{openmote-\/cc2538/lwip/src/include/lwip/sys.\+h}}
+\subsubsection{\texorpdfstring{lwip\+\_\+thread\+\_\+fn}{lwip\_thread\_fn}}
+{\footnotesize\ttfamily typedef void($\ast$ lwip\+\_\+thread\+\_\+fn) (void $\ast$arg)}
+
+Function prototype for thread functions 
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2sys_8h_af411a8bc6b7ed4b0af9114e10c959448}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2sys_8h_af411a8bc6b7ed4b0af9114e10c959448}} 
+\index{openmote-\/cc2538/lwip/src/include/lwip/sys.\+h@{openmote-\/cc2538/lwip/src/include/lwip/sys.\+h}!sys\+\_\+init@{sys\+\_\+init}}
+\index{sys\+\_\+init@{sys\+\_\+init}!openmote-\/cc2538/lwip/src/include/lwip/sys.\+h@{openmote-\/cc2538/lwip/src/include/lwip/sys.\+h}}
+\subsubsection{\texorpdfstring{sys\+\_\+init()}{sys\_init()}}
+{\footnotesize\ttfamily void sys\+\_\+init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2sys_8h_ac89f307e8b360eaf821b461a4f26753a}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2sys_8h_ac89f307e8b360eaf821b461a4f26753a}} 
+\index{openmote-\/cc2538/lwip/src/include/lwip/sys.\+h@{openmote-\/cc2538/lwip/src/include/lwip/sys.\+h}!sys\+\_\+jiffies@{sys\+\_\+jiffies}}
+\index{sys\+\_\+jiffies@{sys\+\_\+jiffies}!openmote-\/cc2538/lwip/src/include/lwip/sys.\+h@{openmote-\/cc2538/lwip/src/include/lwip/sys.\+h}}
+\subsubsection{\texorpdfstring{sys\+\_\+jiffies()}{sys\_jiffies()}}
+{\footnotesize\ttfamily \hyperlink{group__compiler__abstraction_ga4c14294869aceba3ef9d4c0c302d0f33}{u32\+\_\+t} sys\+\_\+jiffies (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Ticks/jiffies since power up. 

@@ -1,0 +1,9 @@
+This test application is created for testing/demonstrating the B\+H1750\+F\+VI driver. It uses the default device parameters as specified in {\ttfamily drivers/bh1750fvi/include/bh1750fvi\+\_\+params.\+h}. To override these setting, you can simply do this by defining these parameters as compiler flags while uilding, e.\+g.\+: 
+\begin{DoxyCode}
+$ CFLAGS="-DBH1750FVI\_PARAM\_I2C=I2C\_DEV(1)"" make all
+\end{DoxyCode}
+
+
+\section*{Usage}
+
+Simply flash this example to your board and it will read the sensor value 5 times per second and print the sampled value to S\+T\+D\+IO. You can verify the values by simply covering the sensor or holding it in front of a bright light and see the change in the sensor readings accordingly. 

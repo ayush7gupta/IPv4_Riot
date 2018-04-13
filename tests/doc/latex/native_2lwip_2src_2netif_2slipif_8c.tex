@@ -1,0 +1,160 @@
+\hypertarget{native_2lwip_2src_2netif_2slipif_8c}{}\section{/home/ayush/\+R\+I\+O\+T/tests/lwip/bin/pkg/native/lwip/src/netif/slipif.c File Reference}
+\label{native_2lwip_2src_2netif_2slipif_8c}\index{/home/ayush/\+R\+I\+O\+T/tests/lwip/bin/pkg/native/lwip/src/netif/slipif.\+c@{/home/ayush/\+R\+I\+O\+T/tests/lwip/bin/pkg/native/lwip/src/netif/slipif.\+c}}
+{\ttfamily \#include \char`\"{}netif/slipif.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}lwip/opt.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}lwip/def.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}lwip/pbuf.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}lwip/stats.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}lwip/snmp.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}lwip/sys.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}lwip/sio.\+h\char`\"{}}\newline
+Include dependency graph for slipif.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{native_2lwip_2src_2netif_2slipif_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structslipif__priv}{slipif\+\_\+priv}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{native_2lwip_2src_2netif_2slipif_8c_ac08c4b8e75c6456f5654145f8b001005}{S\+L\+I\+P\+\_\+\+E\+ND}~0x\+C0 /$\ast$ 0300\+: start and end of every packet $\ast$/
+\item 
+\#define \hyperlink{native_2lwip_2src_2netif_2slipif_8c_a379cfa838122508f0e88fbbe8ce80c47}{S\+L\+I\+P\+\_\+\+E\+SC}~0x\+D\+B /$\ast$ 0333\+: escape start (one byte escaped data follows) $\ast$/
+\item 
+\#define \hyperlink{native_2lwip_2src_2netif_2slipif_8c_a660be27a37d4105d47000a333dd26c1a}{S\+L\+I\+P\+\_\+\+E\+S\+C\+\_\+\+E\+ND}~0x\+D\+C /$\ast$ 0334\+: following escape\+: original byte is 0x\+C0 (\+E\+N\+D) $\ast$/
+\item 
+\#define \hyperlink{native_2lwip_2src_2netif_2slipif_8c_a75cd5d5e3cdfa54f2a7c6d137406bb72}{S\+L\+I\+P\+\_\+\+E\+S\+C\+\_\+\+E\+SC}~0x\+D\+D /$\ast$ 0335\+: following escape\+: original byte is 0x\+D\+B (\+E\+S\+C) $\ast$/
+\item 
+\#define \hyperlink{native_2lwip_2src_2netif_2slipif_8c_accf448f9dabb0f33ef46b40355691cab}{S\+L\+I\+P\+\_\+\+M\+A\+X\+\_\+\+S\+I\+ZE}~1500
+\item 
+\#define \hyperlink{native_2lwip_2src_2netif_2slipif_8c_a2a9e9ed81732a6794a9b9a712f75a1cc}{S\+L\+I\+P\+\_\+\+S\+I\+O\+\_\+\+S\+P\+E\+ED}(sio\+\_\+fd)~0
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{native_2lwip_2src_2netif_2slipif_8c_ad55f60b1f38e904fddc564c425f2eade}{slipif\+\_\+recv\+\_\+state} \{ \hyperlink{native_2lwip_2src_2netif_2slipif_8c_ad55f60b1f38e904fddc564c425f2eadea76ffc42dd0ef84fa1a9aabaa8bb8d910}{S\+L\+I\+P\+\_\+\+R\+E\+C\+V\+\_\+\+N\+O\+R\+M\+AL}, 
+\hyperlink{native_2lwip_2src_2netif_2slipif_8c_ad55f60b1f38e904fddc564c425f2eadeadeef6da5e42101930e2dff586a8ad76f}{S\+L\+I\+P\+\_\+\+R\+E\+C\+V\+\_\+\+E\+S\+C\+A\+PE}, 
+\hyperlink{openmote-cc2538_2lwip_2src_2netif_2slipif_8c_ad55f60b1f38e904fddc564c425f2eadea76ffc42dd0ef84fa1a9aabaa8bb8d910}{S\+L\+I\+P\+\_\+\+R\+E\+C\+V\+\_\+\+N\+O\+R\+M\+AL}, 
+\hyperlink{openmote-cc2538_2lwip_2src_2netif_2slipif_8c_ad55f60b1f38e904fddc564c425f2eadeadeef6da5e42101930e2dff586a8ad76f}{S\+L\+I\+P\+\_\+\+R\+E\+C\+V\+\_\+\+E\+S\+C\+A\+PE}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group__infrastructure__errors_gaf02d9da80fd66b4f986d2c53d7231ddb}{err\+\_\+t} \hyperlink{native_2lwip_2src_2netif_2slipif_8c_a687973ba82dab13a5b9d38d7399aeee3}{slipif\+\_\+init} (struct \hyperlink{structnetif}{netif} $\ast$\hyperlink{structnetif}{netif})
+\item 
+void \hyperlink{native_2lwip_2src_2netif_2slipif_8c_a7b036fd1cde9b299139cac62f52d15a6}{slipif\+\_\+poll} (struct \hyperlink{structnetif}{netif} $\ast$\hyperlink{structnetif}{netif})
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+S\+L\+IP Interface 
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{native_2lwip_2src_2netif_2slipif_8c_ac08c4b8e75c6456f5654145f8b001005}\label{native_2lwip_2src_2netif_2slipif_8c_ac08c4b8e75c6456f5654145f8b001005}} 
+\index{native/lwip/src/netif/slipif.\+c@{native/lwip/src/netif/slipif.\+c}!S\+L\+I\+P\+\_\+\+E\+ND@{S\+L\+I\+P\+\_\+\+E\+ND}}
+\index{S\+L\+I\+P\+\_\+\+E\+ND@{S\+L\+I\+P\+\_\+\+E\+ND}!native/lwip/src/netif/slipif.\+c@{native/lwip/src/netif/slipif.\+c}}
+\subsubsection{\texorpdfstring{S\+L\+I\+P\+\_\+\+E\+ND}{SLIP\_END}}
+{\footnotesize\ttfamily \#define S\+L\+I\+P\+\_\+\+E\+ND~0x\+C0 /$\ast$ 0300\+: start and end of every packet $\ast$/}
+
+\mbox{\Hypertarget{native_2lwip_2src_2netif_2slipif_8c_a379cfa838122508f0e88fbbe8ce80c47}\label{native_2lwip_2src_2netif_2slipif_8c_a379cfa838122508f0e88fbbe8ce80c47}} 
+\index{native/lwip/src/netif/slipif.\+c@{native/lwip/src/netif/slipif.\+c}!S\+L\+I\+P\+\_\+\+E\+SC@{S\+L\+I\+P\+\_\+\+E\+SC}}
+\index{S\+L\+I\+P\+\_\+\+E\+SC@{S\+L\+I\+P\+\_\+\+E\+SC}!native/lwip/src/netif/slipif.\+c@{native/lwip/src/netif/slipif.\+c}}
+\subsubsection{\texorpdfstring{S\+L\+I\+P\+\_\+\+E\+SC}{SLIP\_ESC}}
+{\footnotesize\ttfamily \#define S\+L\+I\+P\+\_\+\+E\+SC~0x\+D\+B /$\ast$ 0333\+: escape start (one byte escaped data follows) $\ast$/}
+
+\mbox{\Hypertarget{native_2lwip_2src_2netif_2slipif_8c_a660be27a37d4105d47000a333dd26c1a}\label{native_2lwip_2src_2netif_2slipif_8c_a660be27a37d4105d47000a333dd26c1a}} 
+\index{native/lwip/src/netif/slipif.\+c@{native/lwip/src/netif/slipif.\+c}!S\+L\+I\+P\+\_\+\+E\+S\+C\+\_\+\+E\+ND@{S\+L\+I\+P\+\_\+\+E\+S\+C\+\_\+\+E\+ND}}
+\index{S\+L\+I\+P\+\_\+\+E\+S\+C\+\_\+\+E\+ND@{S\+L\+I\+P\+\_\+\+E\+S\+C\+\_\+\+E\+ND}!native/lwip/src/netif/slipif.\+c@{native/lwip/src/netif/slipif.\+c}}
+\subsubsection{\texorpdfstring{S\+L\+I\+P\+\_\+\+E\+S\+C\+\_\+\+E\+ND}{SLIP\_ESC\_END}}
+{\footnotesize\ttfamily \#define S\+L\+I\+P\+\_\+\+E\+S\+C\+\_\+\+E\+ND~0x\+D\+C /$\ast$ 0334\+: following escape\+: original byte is 0x\+C0 (\+E\+N\+D) $\ast$/}
+
+\mbox{\Hypertarget{native_2lwip_2src_2netif_2slipif_8c_a75cd5d5e3cdfa54f2a7c6d137406bb72}\label{native_2lwip_2src_2netif_2slipif_8c_a75cd5d5e3cdfa54f2a7c6d137406bb72}} 
+\index{native/lwip/src/netif/slipif.\+c@{native/lwip/src/netif/slipif.\+c}!S\+L\+I\+P\+\_\+\+E\+S\+C\+\_\+\+E\+SC@{S\+L\+I\+P\+\_\+\+E\+S\+C\+\_\+\+E\+SC}}
+\index{S\+L\+I\+P\+\_\+\+E\+S\+C\+\_\+\+E\+SC@{S\+L\+I\+P\+\_\+\+E\+S\+C\+\_\+\+E\+SC}!native/lwip/src/netif/slipif.\+c@{native/lwip/src/netif/slipif.\+c}}
+\subsubsection{\texorpdfstring{S\+L\+I\+P\+\_\+\+E\+S\+C\+\_\+\+E\+SC}{SLIP\_ESC\_ESC}}
+{\footnotesize\ttfamily \#define S\+L\+I\+P\+\_\+\+E\+S\+C\+\_\+\+E\+SC~0x\+D\+D /$\ast$ 0335\+: following escape\+: original byte is 0x\+D\+B (\+E\+S\+C) $\ast$/}
+
+\mbox{\Hypertarget{native_2lwip_2src_2netif_2slipif_8c_accf448f9dabb0f33ef46b40355691cab}\label{native_2lwip_2src_2netif_2slipif_8c_accf448f9dabb0f33ef46b40355691cab}} 
+\index{native/lwip/src/netif/slipif.\+c@{native/lwip/src/netif/slipif.\+c}!S\+L\+I\+P\+\_\+\+M\+A\+X\+\_\+\+S\+I\+ZE@{S\+L\+I\+P\+\_\+\+M\+A\+X\+\_\+\+S\+I\+ZE}}
+\index{S\+L\+I\+P\+\_\+\+M\+A\+X\+\_\+\+S\+I\+ZE@{S\+L\+I\+P\+\_\+\+M\+A\+X\+\_\+\+S\+I\+ZE}!native/lwip/src/netif/slipif.\+c@{native/lwip/src/netif/slipif.\+c}}
+\subsubsection{\texorpdfstring{S\+L\+I\+P\+\_\+\+M\+A\+X\+\_\+\+S\+I\+ZE}{SLIP\_MAX\_SIZE}}
+{\footnotesize\ttfamily \#define S\+L\+I\+P\+\_\+\+M\+A\+X\+\_\+\+S\+I\+ZE~1500}
+
+Maximum packet size that is received by this netif \mbox{\Hypertarget{native_2lwip_2src_2netif_2slipif_8c_a2a9e9ed81732a6794a9b9a712f75a1cc}\label{native_2lwip_2src_2netif_2slipif_8c_a2a9e9ed81732a6794a9b9a712f75a1cc}} 
+\index{native/lwip/src/netif/slipif.\+c@{native/lwip/src/netif/slipif.\+c}!S\+L\+I\+P\+\_\+\+S\+I\+O\+\_\+\+S\+P\+E\+ED@{S\+L\+I\+P\+\_\+\+S\+I\+O\+\_\+\+S\+P\+E\+ED}}
+\index{S\+L\+I\+P\+\_\+\+S\+I\+O\+\_\+\+S\+P\+E\+ED@{S\+L\+I\+P\+\_\+\+S\+I\+O\+\_\+\+S\+P\+E\+ED}!native/lwip/src/netif/slipif.\+c@{native/lwip/src/netif/slipif.\+c}}
+\subsubsection{\texorpdfstring{S\+L\+I\+P\+\_\+\+S\+I\+O\+\_\+\+S\+P\+E\+ED}{SLIP\_SIO\_SPEED}}
+{\footnotesize\ttfamily \#define S\+L\+I\+P\+\_\+\+S\+I\+O\+\_\+\+S\+P\+E\+ED(\begin{DoxyParamCaption}\item[{}]{sio\+\_\+fd }\end{DoxyParamCaption})~0}
+
+Define this to the interface speed for S\+N\+MP (sio\+\_\+fd is the sio\+\_\+fd\+\_\+t returned by sio\+\_\+open). The default value of zero means \textquotesingle{}unknown\textquotesingle{}. 
+
+\subsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{native_2lwip_2src_2netif_2slipif_8c_ad55f60b1f38e904fddc564c425f2eade}\label{native_2lwip_2src_2netif_2slipif_8c_ad55f60b1f38e904fddc564c425f2eade}} 
+\index{native/lwip/src/netif/slipif.\+c@{native/lwip/src/netif/slipif.\+c}!slipif\+\_\+recv\+\_\+state@{slipif\+\_\+recv\+\_\+state}}
+\index{slipif\+\_\+recv\+\_\+state@{slipif\+\_\+recv\+\_\+state}!native/lwip/src/netif/slipif.\+c@{native/lwip/src/netif/slipif.\+c}}
+\subsubsection{\texorpdfstring{slipif\+\_\+recv\+\_\+state}{slipif\_recv\_state}}
+{\footnotesize\ttfamily enum \hyperlink{native_2lwip_2src_2netif_2slipif_8c_ad55f60b1f38e904fddc564c425f2eade}{slipif\+\_\+recv\+\_\+state}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+L\+I\+P\+\_\+\+R\+E\+C\+V\+\_\+\+N\+O\+R\+M\+AL@{S\+L\+I\+P\+\_\+\+R\+E\+C\+V\+\_\+\+N\+O\+R\+M\+AL}!native/lwip/src/netif/slipif.\+c@{native/lwip/src/netif/slipif.\+c}}\index{native/lwip/src/netif/slipif.\+c@{native/lwip/src/netif/slipif.\+c}!S\+L\+I\+P\+\_\+\+R\+E\+C\+V\+\_\+\+N\+O\+R\+M\+AL@{S\+L\+I\+P\+\_\+\+R\+E\+C\+V\+\_\+\+N\+O\+R\+M\+AL}}}\mbox{\Hypertarget{native_2lwip_2src_2netif_2slipif_8c_ad55f60b1f38e904fddc564c425f2eadea76ffc42dd0ef84fa1a9aabaa8bb8d910}\label{native_2lwip_2src_2netif_2slipif_8c_ad55f60b1f38e904fddc564c425f2eadea76ffc42dd0ef84fa1a9aabaa8bb8d910}} 
+S\+L\+I\+P\+\_\+\+R\+E\+C\+V\+\_\+\+N\+O\+R\+M\+AL&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+L\+I\+P\+\_\+\+R\+E\+C\+V\+\_\+\+E\+S\+C\+A\+PE@{S\+L\+I\+P\+\_\+\+R\+E\+C\+V\+\_\+\+E\+S\+C\+A\+PE}!native/lwip/src/netif/slipif.\+c@{native/lwip/src/netif/slipif.\+c}}\index{native/lwip/src/netif/slipif.\+c@{native/lwip/src/netif/slipif.\+c}!S\+L\+I\+P\+\_\+\+R\+E\+C\+V\+\_\+\+E\+S\+C\+A\+PE@{S\+L\+I\+P\+\_\+\+R\+E\+C\+V\+\_\+\+E\+S\+C\+A\+PE}}}\mbox{\Hypertarget{native_2lwip_2src_2netif_2slipif_8c_ad55f60b1f38e904fddc564c425f2eadeadeef6da5e42101930e2dff586a8ad76f}\label{native_2lwip_2src_2netif_2slipif_8c_ad55f60b1f38e904fddc564c425f2eadeadeef6da5e42101930e2dff586a8ad76f}} 
+S\+L\+I\+P\+\_\+\+R\+E\+C\+V\+\_\+\+E\+S\+C\+A\+PE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+L\+I\+P\+\_\+\+R\+E\+C\+V\+\_\+\+N\+O\+R\+M\+AL@{S\+L\+I\+P\+\_\+\+R\+E\+C\+V\+\_\+\+N\+O\+R\+M\+AL}!native/lwip/src/netif/slipif.\+c@{native/lwip/src/netif/slipif.\+c}}\index{native/lwip/src/netif/slipif.\+c@{native/lwip/src/netif/slipif.\+c}!S\+L\+I\+P\+\_\+\+R\+E\+C\+V\+\_\+\+N\+O\+R\+M\+AL@{S\+L\+I\+P\+\_\+\+R\+E\+C\+V\+\_\+\+N\+O\+R\+M\+AL}}}\mbox{\Hypertarget{native_2lwip_2src_2netif_2slipif_8c_ad55f60b1f38e904fddc564c425f2eadea76ffc42dd0ef84fa1a9aabaa8bb8d910}\label{native_2lwip_2src_2netif_2slipif_8c_ad55f60b1f38e904fddc564c425f2eadea76ffc42dd0ef84fa1a9aabaa8bb8d910}} 
+S\+L\+I\+P\+\_\+\+R\+E\+C\+V\+\_\+\+N\+O\+R\+M\+AL&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+L\+I\+P\+\_\+\+R\+E\+C\+V\+\_\+\+E\+S\+C\+A\+PE@{S\+L\+I\+P\+\_\+\+R\+E\+C\+V\+\_\+\+E\+S\+C\+A\+PE}!native/lwip/src/netif/slipif.\+c@{native/lwip/src/netif/slipif.\+c}}\index{native/lwip/src/netif/slipif.\+c@{native/lwip/src/netif/slipif.\+c}!S\+L\+I\+P\+\_\+\+R\+E\+C\+V\+\_\+\+E\+S\+C\+A\+PE@{S\+L\+I\+P\+\_\+\+R\+E\+C\+V\+\_\+\+E\+S\+C\+A\+PE}}}\mbox{\Hypertarget{native_2lwip_2src_2netif_2slipif_8c_ad55f60b1f38e904fddc564c425f2eadeadeef6da5e42101930e2dff586a8ad76f}\label{native_2lwip_2src_2netif_2slipif_8c_ad55f60b1f38e904fddc564c425f2eadeadeef6da5e42101930e2dff586a8ad76f}} 
+S\+L\+I\+P\+\_\+\+R\+E\+C\+V\+\_\+\+E\+S\+C\+A\+PE&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{native_2lwip_2src_2netif_2slipif_8c_a687973ba82dab13a5b9d38d7399aeee3}\label{native_2lwip_2src_2netif_2slipif_8c_a687973ba82dab13a5b9d38d7399aeee3}} 
+\index{native/lwip/src/netif/slipif.\+c@{native/lwip/src/netif/slipif.\+c}!slipif\+\_\+init@{slipif\+\_\+init}}
+\index{slipif\+\_\+init@{slipif\+\_\+init}!native/lwip/src/netif/slipif.\+c@{native/lwip/src/netif/slipif.\+c}}
+\subsubsection{\texorpdfstring{slipif\+\_\+init()}{slipif\_init()}}
+{\footnotesize\ttfamily \hyperlink{group__infrastructure__errors_gaf02d9da80fd66b4f986d2c53d7231ddb}{err\+\_\+t} slipif\+\_\+init (\begin{DoxyParamCaption}\item[{struct \hyperlink{structnetif}{netif} $\ast$}]{netif }\end{DoxyParamCaption})}
+
+S\+L\+IP netif initialization
+
+Call the arch specific sio\+\_\+open and remember the opened device in the state field of the netif.
+
+
+\begin{DoxyParams}{Parameters}
+{\em netif} & the lwip network interface structure for this slipif \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+E\+R\+R\+\_\+\+OK if serial line could be opened, E\+R\+R\+\_\+\+M\+EM if no memory could be allocated, E\+R\+R\+\_\+\+IF is serial line couldn\textquotesingle{}t be opened
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+netif-\/$>$num must contain the number of the serial port to open (0 by default). If netif-\/$>$state is != N\+U\+LL, it is interpreted as an u8\+\_\+t pointer pointing to the serial port number instead of netif-\/$>$num. 
+\end{DoxyNote}
+\mbox{\Hypertarget{native_2lwip_2src_2netif_2slipif_8c_a7b036fd1cde9b299139cac62f52d15a6}\label{native_2lwip_2src_2netif_2slipif_8c_a7b036fd1cde9b299139cac62f52d15a6}} 
+\index{native/lwip/src/netif/slipif.\+c@{native/lwip/src/netif/slipif.\+c}!slipif\+\_\+poll@{slipif\+\_\+poll}}
+\index{slipif\+\_\+poll@{slipif\+\_\+poll}!native/lwip/src/netif/slipif.\+c@{native/lwip/src/netif/slipif.\+c}}
+\subsubsection{\texorpdfstring{slipif\+\_\+poll()}{slipif\_poll()}}
+{\footnotesize\ttfamily void slipif\+\_\+poll (\begin{DoxyParamCaption}\item[{struct \hyperlink{structnetif}{netif} $\ast$}]{netif }\end{DoxyParamCaption})}
+
+Polls the serial device and feeds the IP layer with incoming packets.
+
+
+\begin{DoxyParams}{Parameters}
+{\em netif} & The lwip network interface structure for this slipif \\
+\hline
+\end{DoxyParams}

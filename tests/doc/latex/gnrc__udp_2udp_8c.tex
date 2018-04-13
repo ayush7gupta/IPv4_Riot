@@ -1,0 +1,77 @@
+\hypertarget{gnrc__udp_2udp_8c}{}\section{/home/ayush/\+R\+I\+O\+T/tests/gnrc\+\_\+udp/udp.c File Reference}
+\label{gnrc__udp_2udp_8c}\index{/home/ayush/\+R\+I\+O\+T/tests/gnrc\+\_\+udp/udp.\+c@{/home/ayush/\+R\+I\+O\+T/tests/gnrc\+\_\+udp/udp.\+c}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$inttypes.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}msg.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}net/gnrc.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}net/gnrc/ipv6.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}net/gnrc/udp.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}net/gnrc/pktdump.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}timex.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}xtimer.\+h\char`\"{}}\newline
+Include dependency graph for udp.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{gnrc__udp_2udp_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{gnrc__udp_2udp_8c_a86d5c8dd36c31389fc7ba39c0b1707c7}{S\+E\+R\+V\+E\+R\+\_\+\+M\+S\+G\+\_\+\+Q\+U\+E\+U\+E\+\_\+\+S\+I\+ZE}~(8\+U)
+\item 
+\#define \hyperlink{gnrc__udp_2udp_8c_a50c4f57bc236c1c823135235494f18df}{S\+E\+R\+V\+E\+R\+\_\+\+P\+R\+IO}~(T\+H\+R\+E\+A\+D\+\_\+\+P\+R\+I\+O\+R\+I\+T\+Y\+\_\+\+M\+A\+IN -\/ 1)
+\item 
+\#define \hyperlink{gnrc__udp_2udp_8c_af12aecf974b0131b223bbc78ad8e8b9d}{S\+E\+R\+V\+E\+R\+\_\+\+S\+T\+A\+C\+K\+S\+I\+ZE}~(T\+H\+R\+E\+A\+D\+\_\+\+S\+T\+A\+C\+K\+S\+I\+Z\+E\+\_\+\+M\+A\+IN)
+\item 
+\#define \hyperlink{gnrc__udp_2udp_8c_a371aa57ca4b3f5e3308776e9568ce41f}{S\+E\+R\+V\+E\+R\+\_\+\+R\+E\+S\+ET}~(0x8fae)
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{gnrc__udp_2udp_8c_a526e7b8a93ad3b78d914a8d30caf3ad2}{udp\+\_\+cmd} (int argc, char $\ast$$\ast$argv)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyAuthor}{Author}
+Martine Lenders \href{mailto:m.lenders@fu-berlin.de}{\tt m.\+lenders@fu-\/berlin.\+de} 
+\end{DoxyAuthor}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{gnrc__udp_2udp_8c_a86d5c8dd36c31389fc7ba39c0b1707c7}\label{gnrc__udp_2udp_8c_a86d5c8dd36c31389fc7ba39c0b1707c7}} 
+\index{gnrc\+\_\+udp/udp.\+c@{gnrc\+\_\+udp/udp.\+c}!S\+E\+R\+V\+E\+R\+\_\+\+M\+S\+G\+\_\+\+Q\+U\+E\+U\+E\+\_\+\+S\+I\+ZE@{S\+E\+R\+V\+E\+R\+\_\+\+M\+S\+G\+\_\+\+Q\+U\+E\+U\+E\+\_\+\+S\+I\+ZE}}
+\index{S\+E\+R\+V\+E\+R\+\_\+\+M\+S\+G\+\_\+\+Q\+U\+E\+U\+E\+\_\+\+S\+I\+ZE@{S\+E\+R\+V\+E\+R\+\_\+\+M\+S\+G\+\_\+\+Q\+U\+E\+U\+E\+\_\+\+S\+I\+ZE}!gnrc\+\_\+udp/udp.\+c@{gnrc\+\_\+udp/udp.\+c}}
+\subsubsection{\texorpdfstring{S\+E\+R\+V\+E\+R\+\_\+\+M\+S\+G\+\_\+\+Q\+U\+E\+U\+E\+\_\+\+S\+I\+ZE}{SERVER\_MSG\_QUEUE\_SIZE}}
+{\footnotesize\ttfamily \#define S\+E\+R\+V\+E\+R\+\_\+\+M\+S\+G\+\_\+\+Q\+U\+E\+U\+E\+\_\+\+S\+I\+ZE~(8\+U)}
+
+\mbox{\Hypertarget{gnrc__udp_2udp_8c_a50c4f57bc236c1c823135235494f18df}\label{gnrc__udp_2udp_8c_a50c4f57bc236c1c823135235494f18df}} 
+\index{gnrc\+\_\+udp/udp.\+c@{gnrc\+\_\+udp/udp.\+c}!S\+E\+R\+V\+E\+R\+\_\+\+P\+R\+IO@{S\+E\+R\+V\+E\+R\+\_\+\+P\+R\+IO}}
+\index{S\+E\+R\+V\+E\+R\+\_\+\+P\+R\+IO@{S\+E\+R\+V\+E\+R\+\_\+\+P\+R\+IO}!gnrc\+\_\+udp/udp.\+c@{gnrc\+\_\+udp/udp.\+c}}
+\subsubsection{\texorpdfstring{S\+E\+R\+V\+E\+R\+\_\+\+P\+R\+IO}{SERVER\_PRIO}}
+{\footnotesize\ttfamily \#define S\+E\+R\+V\+E\+R\+\_\+\+P\+R\+IO~(T\+H\+R\+E\+A\+D\+\_\+\+P\+R\+I\+O\+R\+I\+T\+Y\+\_\+\+M\+A\+IN -\/ 1)}
+
+\mbox{\Hypertarget{gnrc__udp_2udp_8c_a371aa57ca4b3f5e3308776e9568ce41f}\label{gnrc__udp_2udp_8c_a371aa57ca4b3f5e3308776e9568ce41f}} 
+\index{gnrc\+\_\+udp/udp.\+c@{gnrc\+\_\+udp/udp.\+c}!S\+E\+R\+V\+E\+R\+\_\+\+R\+E\+S\+ET@{S\+E\+R\+V\+E\+R\+\_\+\+R\+E\+S\+ET}}
+\index{S\+E\+R\+V\+E\+R\+\_\+\+R\+E\+S\+ET@{S\+E\+R\+V\+E\+R\+\_\+\+R\+E\+S\+ET}!gnrc\+\_\+udp/udp.\+c@{gnrc\+\_\+udp/udp.\+c}}
+\subsubsection{\texorpdfstring{S\+E\+R\+V\+E\+R\+\_\+\+R\+E\+S\+ET}{SERVER\_RESET}}
+{\footnotesize\ttfamily \#define S\+E\+R\+V\+E\+R\+\_\+\+R\+E\+S\+ET~(0x8fae)}
+
+\mbox{\Hypertarget{gnrc__udp_2udp_8c_af12aecf974b0131b223bbc78ad8e8b9d}\label{gnrc__udp_2udp_8c_af12aecf974b0131b223bbc78ad8e8b9d}} 
+\index{gnrc\+\_\+udp/udp.\+c@{gnrc\+\_\+udp/udp.\+c}!S\+E\+R\+V\+E\+R\+\_\+\+S\+T\+A\+C\+K\+S\+I\+ZE@{S\+E\+R\+V\+E\+R\+\_\+\+S\+T\+A\+C\+K\+S\+I\+ZE}}
+\index{S\+E\+R\+V\+E\+R\+\_\+\+S\+T\+A\+C\+K\+S\+I\+ZE@{S\+E\+R\+V\+E\+R\+\_\+\+S\+T\+A\+C\+K\+S\+I\+ZE}!gnrc\+\_\+udp/udp.\+c@{gnrc\+\_\+udp/udp.\+c}}
+\subsubsection{\texorpdfstring{S\+E\+R\+V\+E\+R\+\_\+\+S\+T\+A\+C\+K\+S\+I\+ZE}{SERVER\_STACKSIZE}}
+{\footnotesize\ttfamily \#define S\+E\+R\+V\+E\+R\+\_\+\+S\+T\+A\+C\+K\+S\+I\+ZE~(T\+H\+R\+E\+A\+D\+\_\+\+S\+T\+A\+C\+K\+S\+I\+Z\+E\+\_\+\+M\+A\+IN)}
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{gnrc__udp_2udp_8c_a526e7b8a93ad3b78d914a8d30caf3ad2}\label{gnrc__udp_2udp_8c_a526e7b8a93ad3b78d914a8d30caf3ad2}} 
+\index{gnrc\+\_\+udp/udp.\+c@{gnrc\+\_\+udp/udp.\+c}!udp\+\_\+cmd@{udp\+\_\+cmd}}
+\index{udp\+\_\+cmd@{udp\+\_\+cmd}!gnrc\+\_\+udp/udp.\+c@{gnrc\+\_\+udp/udp.\+c}}
+\subsubsection{\texorpdfstring{udp\+\_\+cmd()}{udp\_cmd()}}
+{\footnotesize\ttfamily int udp\+\_\+cmd (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$$\ast$}]{argv }\end{DoxyParamCaption})}
+

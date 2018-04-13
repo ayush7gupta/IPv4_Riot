@@ -1,0 +1,108 @@
+\subsection*{About}
+
+This is a small test application to see how the lowlevel-\/driver functions of the proprietary nrf24l01p-\/transceiver work. These functions consist of general S\+PI and G\+P\+IO commands, which abstract the driver-\/functions from the used board.
+
+\subsection*{Predefined pin mapping}
+
+Please compare the {\ttfamily tests/driver\+\_\+nrf24l01p\+\_\+lowlevel/\+Makefile} for predefined pin-\/mappings on different boards. (In addition, you also need to connect to 3V and G\+ND)
+
+\subsection*{Usage}
+
+You should be presented with the R\+I\+OT shell, providing you with commands to initialize the transceiver (command\+: {\ttfamily it}), sending one packet (command\+: {\ttfamily send}) or read out and print all registers of the transceiver as binary values (command\+: {\ttfamily prgs}).
+
+\subsubsection*{Procedure}
+
+
+\begin{DoxyItemize}
+\item take two boards and connect a transceiver to each (it should be also possible to use one board with different S\+P\+I-\/ports)
+\item depending on your board, you\textquotesingle{}ll maybe also need to connect a U\+A\+R\+T/tty converter
+\item build and flash the test-\/program to each
+\item open a terminal (e.\+g. pyterm) for each
+\item if possible, reset the board by using the reset-\/button. You\textquotesingle{}ll see \char`\"{}\+\_\+\+Welcome to R\+I\+O\+T\+\_\+\char`\"{} etc.
+\item type {\ttfamily help} to see the description of the commands
+\item initialize both with {\ttfamily it}
+\item with one board, send a packet by typing {\ttfamily send}
+\item in the next step you can also use {\ttfamily send} to send data in the other direction
+\item now you can use send on both boards/transceivers to send messages between them
+\end{DoxyItemize}
+
+\subsection*{Expected Results}
+
+After you did all steps described above, you should see that a 32 Byte sequence (numbers from 32...1) has been transferred from one device to the other. This sequence is printed out from the receiver after the receive interrupt occurred and the receive-\/procedure has been made.
+
+After initialization ({\ttfamily it}) you should see the following output\+:
+
+
+\begin{DoxyCode}
+ > it
+
+Init Transceiver
+
+Registering nrf24l01p\_rx\_handler thread...
+################## Print Registers ###################
+REG\_CONFIG:
+0x0 returned: 00111111
+
+REG\_EN\_AA:
+0x1 returned: 00000001
+
+REG\_EN\_RXADDR:
+0x2 returned: 00000011
+
+REG\_SETUP\_AW:
+0x3 returned: 00000011
+
+REG\_SETUP\_RETR:
+0x4 returned: 00101111
+
+REG\_RF\_CH:
+0x5 returned: 00000101
+
+REG\_RF\_SETUP:
+0x6 returned: 00100111
+
+REG\_STATUS:
+0x7 returned: 00001110
+
+REG\_OBSERVE\_TX:
+0x8 returned: 00000000
+
+REG\_RPD:
+0x9 returned: 00000000
+
+REG\_RX\_ADDR\_P0:
+0xa returned: e7 e7 e7 e7 e7
+
+REG\_TX\_ADDR:
+0x10 returned: e7 e7 e7 e7 e7
+
+REG\_RX\_PW\_P0:
+0x11 returned: 00100000
+
+REG\_FIFO\_STATUS:
+0x17 returned: 00010001
+
+REG\_DYNPD:
+0x1c returned: 00000000
+
+REG\_FEATURE:
+0x1d returned: 00000000
+\end{DoxyCode}
+
+
+After the data has been sent ({\ttfamily send}), you should see the following output on the receiver terminal\+: 
+\begin{DoxyCode}
+In HW cb
+nrf24l01p\_rx\_handler got a message: Received packet.
+32 31 30 29 28 27 26 25 24 23 22 21 20 19 18 17 16 15 14 13 12 11 10 9 8 7 6 5 4 3 2 1
+\end{DoxyCode}
+
+
+\subsection*{Compatibility with S\+I24\+R1 or other N\+R\+F24l01p clones}
+
+C\+RC and Auto-\/\+A\+CK should be disabled. Use 
+\begin{DoxyCode}
+nrf24l01p\_disable\_all\_auto\_ack(&nrf24l01p\_0);
+nrf24l01p\_disable\_crc(&nrf24l01p\_0);
+\end{DoxyCode}
+ after {\ttfamily nrf24l01p\+\_\+init(\&nrf24l01p\+\_\+0, S\+P\+I\+\_\+\+P\+O\+R\+T, C\+E\+\_\+\+P\+I\+N, C\+S\+\_\+\+P\+I\+N, I\+R\+Q\+\_\+\+P\+I\+N) $<$ 0)} 

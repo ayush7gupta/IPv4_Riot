@@ -1,0 +1,172 @@
+\hypertarget{xtimer__drift_2main_8c}{}\section{/home/ayush/\+R\+I\+O\+T/tests/xtimer\+\_\+drift/main.c File Reference}
+\label{xtimer__drift_2main_8c}\index{/home/ayush/\+R\+I\+O\+T/tests/xtimer\+\_\+drift/main.\+c@{/home/ayush/\+R\+I\+O\+T/tests/xtimer\+\_\+drift/main.\+c}}
+
+
+xtimer\+\_\+drift test application  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$time.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}xtimer.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}thread.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}msg.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}log.\+h\char`\"{}}\newline
+Include dependency graph for main.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{xtimer__drift_2main_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structtimer__msg}{timer\+\_\+msg}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{xtimer__drift_2main_8c_a9ad89effdf637ba9a314550f2b9b8d82}{T\+E\+S\+T\+\_\+\+HZ}~(64\+L\+U)
+\item 
+\#define \hyperlink{xtimer__drift_2main_8c_a867ff7532d21a50198a88b603e668c05}{T\+E\+S\+T\+\_\+\+I\+N\+T\+E\+R\+V\+AL}~(1000000\+L\+U / T\+E\+S\+T\+\_\+\+H\+Z)
+\item 
+\#define \hyperlink{xtimer__drift_2main_8c_acc5913e1c998ee08b674193a0934f742}{T\+E\+S\+T\+\_\+\+M\+S\+G\+\_\+\+R\+X\+\_\+\+U\+S\+L\+E\+EP}~(200\+L\+U)
+\item 
+\#define \hyperlink{xtimer__drift_2main_8c_a6b989e8a9d7146a027a7d181adc59605}{T\+E\+S\+T\+\_\+\+M\+S\+G\+\_\+\+Q\+U\+E\+U\+E\+\_\+\+S\+I\+ZE}~(4\+U)
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void $\ast$ \hyperlink{xtimer__drift_2main_8c_a6d4f76897ac69fff80ae5868edf70165}{slacker\+\_\+thread} (void $\ast$arg)
+\item 
+void $\ast$ \hyperlink{xtimer__drift_2main_8c_a39b4d7ca2619ae96920c437df5ab9ece}{worker\+\_\+thread} (void $\ast$arg)
+\item 
+int \hyperlink{xtimer__drift_2main_8c_a840291bc02cba5474a4cb46a9b9566fe}{main} (void)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+char \hyperlink{xtimer__drift_2main_8c_a3721335fc5c775392d940cddef300920}{slacker\+\_\+stack1} \mbox{[}T\+H\+R\+E\+A\+D\+\_\+\+S\+T\+A\+C\+K\+S\+I\+Z\+E\+\_\+\+D\+E\+F\+A\+U\+LT\mbox{]}
+\item 
+char \hyperlink{xtimer__drift_2main_8c_a8cbc1feea8088bc906e0a3f5725623dc}{slacker\+\_\+stack2} \mbox{[}T\+H\+R\+E\+A\+D\+\_\+\+S\+T\+A\+C\+K\+S\+I\+Z\+E\+\_\+\+D\+E\+F\+A\+U\+LT\mbox{]}
+\item 
+char \hyperlink{xtimer__drift_2main_8c_af7d2e38d5bf72cf645666f1493cb58fa}{worker\+\_\+stack} \mbox{[}T\+H\+R\+E\+A\+D\+\_\+\+S\+T\+A\+C\+K\+S\+I\+Z\+E\+\_\+\+M\+A\+IN\mbox{]}
+\item 
+struct \hyperlink{structtimer__msg}{timer\+\_\+msg} \hyperlink{xtimer__drift_2main_8c_a366800a48d3c5aa379ecec9c7a73cb4d}{msg\+\_\+a} = \{ .interval = (\hyperlink{xtimer__hang_2main_8c_a867ff7532d21a50198a88b603e668c05}{T\+E\+S\+T\+\_\+\+I\+N\+T\+E\+R\+V\+AL} / 2) \}
+\item 
+struct \hyperlink{structtimer__msg}{timer\+\_\+msg} \hyperlink{xtimer__drift_2main_8c_adb745ebe153defab12a235099b3f8a8d}{msg\+\_\+b} = \{ .interval = (\hyperlink{xtimer__hang_2main_8c_a867ff7532d21a50198a88b603e668c05}{T\+E\+S\+T\+\_\+\+I\+N\+T\+E\+R\+V\+AL} / 3) \}
+\item 
+struct \hyperlink{structtimer__msg}{timer\+\_\+msg} \hyperlink{xtimer__drift_2main_8c_a67760ee7f01e48f312895173ac2fad3f}{msg\+\_\+c} = \{ .interval = (\hyperlink{xtimer__hang_2main_8c_a867ff7532d21a50198a88b603e668c05}{T\+E\+S\+T\+\_\+\+I\+N\+T\+E\+R\+V\+AL} $\ast$ 5) \}
+\item 
+struct \hyperlink{structtimer__msg}{timer\+\_\+msg} \hyperlink{xtimer__drift_2main_8c_adc8a3c60c34dd4e37f8fbb4945095ab8}{msg\+\_\+d} = \{ .interval = (\hyperlink{xtimer__hang_2main_8c_a867ff7532d21a50198a88b603e668c05}{T\+E\+S\+T\+\_\+\+I\+N\+T\+E\+R\+V\+AL} $\ast$ 2) \}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+xtimer\+\_\+drift test application 
+
+\begin{DoxyAuthor}{Author}
+Kaspar Schleiser \href{mailto:kaspar@schleiser.de}{\tt kaspar@schleiser.\+de} 
+
+Oliver Hahm \href{mailto:oliver.hahm@inria.fr}{\tt oliver.\+hahm@inria.\+fr} 
+
+Christian Mehlis \href{mailto:mehlis@inf.fu-berlin.de}{\tt mehlis@inf.\+fu-\/berlin.\+de} 
+
+Joakim Nohlgård \href{mailto:joakim.nohlgard@eistec.se}{\tt joakim.\+nohlgard@eistec.\+se} 
+
+Sebastian Meiling \href{mailto:s@mlng.net}{\tt s@mlng.\+net} 
+\end{DoxyAuthor}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{xtimer__drift_2main_8c_a9ad89effdf637ba9a314550f2b9b8d82}\label{xtimer__drift_2main_8c_a9ad89effdf637ba9a314550f2b9b8d82}} 
+\index{xtimer\+\_\+drift/main.\+c@{xtimer\+\_\+drift/main.\+c}!T\+E\+S\+T\+\_\+\+HZ@{T\+E\+S\+T\+\_\+\+HZ}}
+\index{T\+E\+S\+T\+\_\+\+HZ@{T\+E\+S\+T\+\_\+\+HZ}!xtimer\+\_\+drift/main.\+c@{xtimer\+\_\+drift/main.\+c}}
+\subsubsection{\texorpdfstring{T\+E\+S\+T\+\_\+\+HZ}{TEST\_HZ}}
+{\footnotesize\ttfamily \#define T\+E\+S\+T\+\_\+\+HZ~(64\+L\+U)}
+
+\mbox{\Hypertarget{xtimer__drift_2main_8c_a867ff7532d21a50198a88b603e668c05}\label{xtimer__drift_2main_8c_a867ff7532d21a50198a88b603e668c05}} 
+\index{xtimer\+\_\+drift/main.\+c@{xtimer\+\_\+drift/main.\+c}!T\+E\+S\+T\+\_\+\+I\+N\+T\+E\+R\+V\+AL@{T\+E\+S\+T\+\_\+\+I\+N\+T\+E\+R\+V\+AL}}
+\index{T\+E\+S\+T\+\_\+\+I\+N\+T\+E\+R\+V\+AL@{T\+E\+S\+T\+\_\+\+I\+N\+T\+E\+R\+V\+AL}!xtimer\+\_\+drift/main.\+c@{xtimer\+\_\+drift/main.\+c}}
+\subsubsection{\texorpdfstring{T\+E\+S\+T\+\_\+\+I\+N\+T\+E\+R\+V\+AL}{TEST\_INTERVAL}}
+{\footnotesize\ttfamily \#define T\+E\+S\+T\+\_\+\+I\+N\+T\+E\+R\+V\+AL~(1000000\+L\+U / T\+E\+S\+T\+\_\+\+H\+Z)}
+
+\mbox{\Hypertarget{xtimer__drift_2main_8c_a6b989e8a9d7146a027a7d181adc59605}\label{xtimer__drift_2main_8c_a6b989e8a9d7146a027a7d181adc59605}} 
+\index{xtimer\+\_\+drift/main.\+c@{xtimer\+\_\+drift/main.\+c}!T\+E\+S\+T\+\_\+\+M\+S\+G\+\_\+\+Q\+U\+E\+U\+E\+\_\+\+S\+I\+ZE@{T\+E\+S\+T\+\_\+\+M\+S\+G\+\_\+\+Q\+U\+E\+U\+E\+\_\+\+S\+I\+ZE}}
+\index{T\+E\+S\+T\+\_\+\+M\+S\+G\+\_\+\+Q\+U\+E\+U\+E\+\_\+\+S\+I\+ZE@{T\+E\+S\+T\+\_\+\+M\+S\+G\+\_\+\+Q\+U\+E\+U\+E\+\_\+\+S\+I\+ZE}!xtimer\+\_\+drift/main.\+c@{xtimer\+\_\+drift/main.\+c}}
+\subsubsection{\texorpdfstring{T\+E\+S\+T\+\_\+\+M\+S\+G\+\_\+\+Q\+U\+E\+U\+E\+\_\+\+S\+I\+ZE}{TEST\_MSG\_QUEUE\_SIZE}}
+{\footnotesize\ttfamily \#define T\+E\+S\+T\+\_\+\+M\+S\+G\+\_\+\+Q\+U\+E\+U\+E\+\_\+\+S\+I\+ZE~(4\+U)}
+
+\mbox{\Hypertarget{xtimer__drift_2main_8c_acc5913e1c998ee08b674193a0934f742}\label{xtimer__drift_2main_8c_acc5913e1c998ee08b674193a0934f742}} 
+\index{xtimer\+\_\+drift/main.\+c@{xtimer\+\_\+drift/main.\+c}!T\+E\+S\+T\+\_\+\+M\+S\+G\+\_\+\+R\+X\+\_\+\+U\+S\+L\+E\+EP@{T\+E\+S\+T\+\_\+\+M\+S\+G\+\_\+\+R\+X\+\_\+\+U\+S\+L\+E\+EP}}
+\index{T\+E\+S\+T\+\_\+\+M\+S\+G\+\_\+\+R\+X\+\_\+\+U\+S\+L\+E\+EP@{T\+E\+S\+T\+\_\+\+M\+S\+G\+\_\+\+R\+X\+\_\+\+U\+S\+L\+E\+EP}!xtimer\+\_\+drift/main.\+c@{xtimer\+\_\+drift/main.\+c}}
+\subsubsection{\texorpdfstring{T\+E\+S\+T\+\_\+\+M\+S\+G\+\_\+\+R\+X\+\_\+\+U\+S\+L\+E\+EP}{TEST\_MSG\_RX\_USLEEP}}
+{\footnotesize\ttfamily \#define T\+E\+S\+T\+\_\+\+M\+S\+G\+\_\+\+R\+X\+\_\+\+U\+S\+L\+E\+EP~(200\+L\+U)}
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{xtimer__drift_2main_8c_a840291bc02cba5474a4cb46a9b9566fe}\label{xtimer__drift_2main_8c_a840291bc02cba5474a4cb46a9b9566fe}} 
+\index{xtimer\+\_\+drift/main.\+c@{xtimer\+\_\+drift/main.\+c}!main@{main}}
+\index{main@{main}!xtimer\+\_\+drift/main.\+c@{xtimer\+\_\+drift/main.\+c}}
+\subsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{xtimer__drift_2main_8c_a6d4f76897ac69fff80ae5868edf70165}\label{xtimer__drift_2main_8c_a6d4f76897ac69fff80ae5868edf70165}} 
+\index{xtimer\+\_\+drift/main.\+c@{xtimer\+\_\+drift/main.\+c}!slacker\+\_\+thread@{slacker\+\_\+thread}}
+\index{slacker\+\_\+thread@{slacker\+\_\+thread}!xtimer\+\_\+drift/main.\+c@{xtimer\+\_\+drift/main.\+c}}
+\subsubsection{\texorpdfstring{slacker\+\_\+thread()}{slacker\_thread()}}
+{\footnotesize\ttfamily void$\ast$ slacker\+\_\+thread (\begin{DoxyParamCaption}\item[{void $\ast$}]{arg }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{xtimer__drift_2main_8c_a39b4d7ca2619ae96920c437df5ab9ece}\label{xtimer__drift_2main_8c_a39b4d7ca2619ae96920c437df5ab9ece}} 
+\index{xtimer\+\_\+drift/main.\+c@{xtimer\+\_\+drift/main.\+c}!worker\+\_\+thread@{worker\+\_\+thread}}
+\index{worker\+\_\+thread@{worker\+\_\+thread}!xtimer\+\_\+drift/main.\+c@{xtimer\+\_\+drift/main.\+c}}
+\subsubsection{\texorpdfstring{worker\+\_\+thread()}{worker\_thread()}}
+{\footnotesize\ttfamily void$\ast$ worker\+\_\+thread (\begin{DoxyParamCaption}\item[{void $\ast$}]{arg }\end{DoxyParamCaption})}
+
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{xtimer__drift_2main_8c_a366800a48d3c5aa379ecec9c7a73cb4d}\label{xtimer__drift_2main_8c_a366800a48d3c5aa379ecec9c7a73cb4d}} 
+\index{xtimer\+\_\+drift/main.\+c@{xtimer\+\_\+drift/main.\+c}!msg\+\_\+a@{msg\+\_\+a}}
+\index{msg\+\_\+a@{msg\+\_\+a}!xtimer\+\_\+drift/main.\+c@{xtimer\+\_\+drift/main.\+c}}
+\subsubsection{\texorpdfstring{msg\+\_\+a}{msg\_a}}
+{\footnotesize\ttfamily struct \hyperlink{structtimer__msg}{timer\+\_\+msg} msg\+\_\+a = \{ .interval = (\hyperlink{xtimer__hang_2main_8c_a867ff7532d21a50198a88b603e668c05}{T\+E\+S\+T\+\_\+\+I\+N\+T\+E\+R\+V\+AL} / 2) \}}
+
+\mbox{\Hypertarget{xtimer__drift_2main_8c_adb745ebe153defab12a235099b3f8a8d}\label{xtimer__drift_2main_8c_adb745ebe153defab12a235099b3f8a8d}} 
+\index{xtimer\+\_\+drift/main.\+c@{xtimer\+\_\+drift/main.\+c}!msg\+\_\+b@{msg\+\_\+b}}
+\index{msg\+\_\+b@{msg\+\_\+b}!xtimer\+\_\+drift/main.\+c@{xtimer\+\_\+drift/main.\+c}}
+\subsubsection{\texorpdfstring{msg\+\_\+b}{msg\_b}}
+{\footnotesize\ttfamily struct \hyperlink{structtimer__msg}{timer\+\_\+msg} msg\+\_\+b = \{ .interval = (\hyperlink{xtimer__hang_2main_8c_a867ff7532d21a50198a88b603e668c05}{T\+E\+S\+T\+\_\+\+I\+N\+T\+E\+R\+V\+AL} / 3) \}}
+
+\mbox{\Hypertarget{xtimer__drift_2main_8c_a67760ee7f01e48f312895173ac2fad3f}\label{xtimer__drift_2main_8c_a67760ee7f01e48f312895173ac2fad3f}} 
+\index{xtimer\+\_\+drift/main.\+c@{xtimer\+\_\+drift/main.\+c}!msg\+\_\+c@{msg\+\_\+c}}
+\index{msg\+\_\+c@{msg\+\_\+c}!xtimer\+\_\+drift/main.\+c@{xtimer\+\_\+drift/main.\+c}}
+\subsubsection{\texorpdfstring{msg\+\_\+c}{msg\_c}}
+{\footnotesize\ttfamily struct \hyperlink{structtimer__msg}{timer\+\_\+msg} msg\+\_\+c = \{ .interval = (\hyperlink{xtimer__hang_2main_8c_a867ff7532d21a50198a88b603e668c05}{T\+E\+S\+T\+\_\+\+I\+N\+T\+E\+R\+V\+AL} $\ast$ 5) \}}
+
+\mbox{\Hypertarget{xtimer__drift_2main_8c_adc8a3c60c34dd4e37f8fbb4945095ab8}\label{xtimer__drift_2main_8c_adc8a3c60c34dd4e37f8fbb4945095ab8}} 
+\index{xtimer\+\_\+drift/main.\+c@{xtimer\+\_\+drift/main.\+c}!msg\+\_\+d@{msg\+\_\+d}}
+\index{msg\+\_\+d@{msg\+\_\+d}!xtimer\+\_\+drift/main.\+c@{xtimer\+\_\+drift/main.\+c}}
+\subsubsection{\texorpdfstring{msg\+\_\+d}{msg\_d}}
+{\footnotesize\ttfamily struct \hyperlink{structtimer__msg}{timer\+\_\+msg} msg\+\_\+d = \{ .interval = (\hyperlink{xtimer__hang_2main_8c_a867ff7532d21a50198a88b603e668c05}{T\+E\+S\+T\+\_\+\+I\+N\+T\+E\+R\+V\+AL} $\ast$ 2) \}}
+
+\mbox{\Hypertarget{xtimer__drift_2main_8c_a3721335fc5c775392d940cddef300920}\label{xtimer__drift_2main_8c_a3721335fc5c775392d940cddef300920}} 
+\index{xtimer\+\_\+drift/main.\+c@{xtimer\+\_\+drift/main.\+c}!slacker\+\_\+stack1@{slacker\+\_\+stack1}}
+\index{slacker\+\_\+stack1@{slacker\+\_\+stack1}!xtimer\+\_\+drift/main.\+c@{xtimer\+\_\+drift/main.\+c}}
+\subsubsection{\texorpdfstring{slacker\+\_\+stack1}{slacker\_stack1}}
+{\footnotesize\ttfamily char slacker\+\_\+stack1\mbox{[}T\+H\+R\+E\+A\+D\+\_\+\+S\+T\+A\+C\+K\+S\+I\+Z\+E\+\_\+\+D\+E\+F\+A\+U\+LT\mbox{]}}
+
+\mbox{\Hypertarget{xtimer__drift_2main_8c_a8cbc1feea8088bc906e0a3f5725623dc}\label{xtimer__drift_2main_8c_a8cbc1feea8088bc906e0a3f5725623dc}} 
+\index{xtimer\+\_\+drift/main.\+c@{xtimer\+\_\+drift/main.\+c}!slacker\+\_\+stack2@{slacker\+\_\+stack2}}
+\index{slacker\+\_\+stack2@{slacker\+\_\+stack2}!xtimer\+\_\+drift/main.\+c@{xtimer\+\_\+drift/main.\+c}}
+\subsubsection{\texorpdfstring{slacker\+\_\+stack2}{slacker\_stack2}}
+{\footnotesize\ttfamily char slacker\+\_\+stack2\mbox{[}T\+H\+R\+E\+A\+D\+\_\+\+S\+T\+A\+C\+K\+S\+I\+Z\+E\+\_\+\+D\+E\+F\+A\+U\+LT\mbox{]}}
+
+\mbox{\Hypertarget{xtimer__drift_2main_8c_af7d2e38d5bf72cf645666f1493cb58fa}\label{xtimer__drift_2main_8c_af7d2e38d5bf72cf645666f1493cb58fa}} 
+\index{xtimer\+\_\+drift/main.\+c@{xtimer\+\_\+drift/main.\+c}!worker\+\_\+stack@{worker\+\_\+stack}}
+\index{worker\+\_\+stack@{worker\+\_\+stack}!xtimer\+\_\+drift/main.\+c@{xtimer\+\_\+drift/main.\+c}}
+\subsubsection{\texorpdfstring{worker\+\_\+stack}{worker\_stack}}
+{\footnotesize\ttfamily char worker\+\_\+stack\mbox{[}T\+H\+R\+E\+A\+D\+\_\+\+S\+T\+A\+C\+K\+S\+I\+Z\+E\+\_\+\+M\+A\+IN\mbox{]}}
+

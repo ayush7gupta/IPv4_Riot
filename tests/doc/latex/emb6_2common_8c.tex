@@ -1,0 +1,48 @@
+\hypertarget{emb6_2common_8c}{}\section{/home/ayush/\+R\+I\+O\+T/tests/emb6/common.c File Reference}
+\label{emb6_2common_8c}\index{/home/ayush/\+R\+I\+O\+T/tests/emb6/common.\+c@{/home/ayush/\+R\+I\+O\+T/tests/emb6/common.\+c}}
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}common.\+h\char`\"{}}\newline
+Include dependency graph for common.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=257pt]{emb6_2common_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\textbf{ }\par
+\begin{DoxyCompactItemize}
+\item 
+size\+\_\+t \hyperlink{emb6_2common_8c_a328f2e45985b192ee5917d7351ec6226}{hex2ints} (uint8\+\_\+t $\ast$out, const char $\ast$in)
+\begin{DoxyCompactList}\small\item\em Converts hex string to byte array. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+
+\subsection{Detailed Description}
+\begin{DoxyAuthor}{Author}
+Martine Lenders \href{mailto:mlenders@inf.fu-berlin.de}{\tt mlenders@inf.\+fu-\/berlin.\+de} 
+\end{DoxyAuthor}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{emb6_2common_8c_a328f2e45985b192ee5917d7351ec6226}\label{emb6_2common_8c_a328f2e45985b192ee5917d7351ec6226}} 
+\index{emb6/common.\+c@{emb6/common.\+c}!hex2ints@{hex2ints}}
+\index{hex2ints@{hex2ints}!emb6/common.\+c@{emb6/common.\+c}}
+\subsubsection{\texorpdfstring{hex2ints()}{hex2ints()}}
+{\footnotesize\ttfamily size\+\_\+t hex2ints (\begin{DoxyParamCaption}\item[{uint8\+\_\+t $\ast$}]{out,  }\item[{const char $\ast$}]{in }\end{DoxyParamCaption})}
+
+
+
+Converts hex string to byte array. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt out}  & {\em out} & Resulting byte array \\
+\hline
+\mbox{\tt in}  & {\em in} & {\ttfamily \textbackslash{}0} terminated string. Non-\/hex characters (all except 0-\/9, a-\/f, A-\/F) will be ignored.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Length of {\ttfamily out}. 
+\end{DoxyReturn}

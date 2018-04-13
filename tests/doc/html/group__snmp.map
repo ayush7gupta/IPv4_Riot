@@ -1,0 +1,7 @@
+<map id="SNMPv2c agent" name="SNMPv2c agent">
+<area shape="rect" id="node1" href="$group__apps.html" title="Applications" alt="" coords="5,81,99,108"/>
+<area shape="rect" id="node2" href="$group__snmp__core.html" title="Core" alt="" coords="321,5,372,32"/>
+<area shape="rect" id="node4" href="$group__snmp__traps.html" title="Traps" alt="" coords="319,56,374,83"/>
+<area shape="rect" id="node5" href="$group__snmp__mib2.html" title="MIB2" alt="" coords="320,107,373,133"/>
+<area shape="rect" id="node6" href="$group__snmp__opts.html" title="Options" alt="" coords="313,157,380,184"/>
+</map>

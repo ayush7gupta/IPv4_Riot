@@ -1,0 +1,8 @@
+<map id="Porting (system abstraction layer)" name="Porting (system abstraction layer)">
+<area shape="rect" id="node1" href="$group__sys__nonstandard.html" title="Non&#45;standard functions" alt="" coords="350,5,507,32"/>
+<area shape="rect" id="node2" href="$group__compiler__abstraction.html" title="Compiler/platform abstraction" alt="" coords="332,56,525,83"/>
+<area shape="rect" id="node3" href="$group__lwip.html" title="lwIP" alt="" coords="5,107,53,133"/>
+<area shape="rect" id="node4" href="$group__sys__prot.html" title="Critical sections" alt="" coords="371,107,487,133"/>
+<area shape="rect" id="node6" href="$group__sys__os.html" title="OS abstraction layer" alt="" coords="358,157,499,184"/>
+<area shape="rect" id="node7" href="$group__sys__time.html" title="Time" alt="" coords="403,208,454,235"/>
+</map>

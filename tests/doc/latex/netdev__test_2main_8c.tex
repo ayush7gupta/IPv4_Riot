@@ -1,0 +1,119 @@
+\hypertarget{netdev__test_2main_8c}{}\section{/home/ayush/\+R\+I\+O\+T/tests/netdev\+\_\+test/main.c File Reference}
+\label{netdev__test_2main_8c}\index{/home/ayush/\+R\+I\+O\+T/tests/netdev\+\_\+test/main.\+c@{/home/ayush/\+R\+I\+O\+T/tests/netdev\+\_\+test/main.\+c}}
+
+
+Show case application for netdev\+\_\+test.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}msg.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}net/ethernet.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}net/gnrc.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}net/gnrc/netdev/eth.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}net/netdev\+\_\+test.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}od.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}thread.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}utlist.\+h\char`\"{}}\newline
+Include dependency graph for main.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{netdev__test_2main_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{netdev__test_2main_8c_a381e1fb679b82e462ee801f885525cf7}{\+\_\+\+E\+X\+P\+\_\+\+L\+E\+N\+G\+TH}~(64)
+\item 
+\#define \hyperlink{netdev__test_2main_8c_a1600cb2e978c06be4e37d16d081222f7}{\+\_\+\+M\+A\+C\+\_\+\+S\+T\+A\+C\+K\+S\+I\+ZE}~(T\+H\+R\+E\+A\+D\+\_\+\+S\+T\+A\+C\+K\+S\+I\+Z\+E\+\_\+\+D\+E\+F\+A\+U\+LT + T\+H\+R\+E\+A\+D\+\_\+\+E\+X\+T\+R\+A\+\_\+\+S\+T\+A\+C\+K\+S\+I\+Z\+E\+\_\+\+P\+R\+I\+N\+TF)
+\item 
+\#define \hyperlink{netdev__test_2main_8c_a783a7dc588726983b34b22e0c779eedc}{\+\_\+\+M\+A\+C\+\_\+\+P\+R\+IO}~(T\+H\+R\+E\+A\+D\+\_\+\+P\+R\+I\+O\+R\+I\+T\+Y\+\_\+\+M\+A\+IN -\/ 4)
+\item 
+\#define \hyperlink{netdev__test_2main_8c_aab6ca128bef5c55a48bea4a111bbb33b}{\+\_\+\+M\+A\+I\+N\+\_\+\+M\+S\+G\+\_\+\+Q\+U\+E\+U\+E\+\_\+\+S\+I\+ZE}~(2)
+\item 
+\#define \hyperlink{netdev__test_2main_8c_a196ff2d95245d965e54df3b96c7f0cdd}{\+\_\+\+T\+E\+S\+T\+\_\+\+P\+A\+Y\+L\+O\+A\+D1}~\char`\"{}g\+O3\+Xt,fP)6$\ast$ M\+R161\+Auk?W$^\wedge$m\+Tb\textbackslash{}\char`\"{}LmY$^\wedge$Qc5w1h\+:C$<$+n($\ast$/@4k(\char`\"{}
+\item 
+\#define \hyperlink{netdev__test_2main_8c_ae15bd64c485f28dbe6837046719312f7}{\+\_\+\+T\+E\+S\+T\+\_\+\+P\+A\+Y\+L\+O\+A\+D2}~\char`\"{}$\ast$b/\textquotesingle{}X\+Kkra\+E\+Bexa\+U\textbackslash{}\textbackslash{}O-\/X\&$<$Bl\textquotesingle{}n\%35\+Ll+n\+Dy,j\+Q+\mbox{[}\+Oe4\+:9( 4c\+I\char`\"{}
+\item 
+\#define \hyperlink{netdev__test_2main_8c_a1827ce581d35b71a740544d07381f6c2}{E\+X\+E\+C\+U\+TE}(test)
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{netdev__test_2main_8c_a840291bc02cba5474a4cb46a9b9566fe}{main} (void)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Show case application for netdev\+\_\+test. 
+
+\begin{DoxyAuthor}{Author}
+Martine Lenders \href{mailto:mlenders@inf.fu-berlin.de}{\tt mlenders@inf.\+fu-\/berlin.\+de} 
+\end{DoxyAuthor}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{netdev__test_2main_8c_a381e1fb679b82e462ee801f885525cf7}\label{netdev__test_2main_8c_a381e1fb679b82e462ee801f885525cf7}} 
+\index{netdev\+\_\+test/main.\+c@{netdev\+\_\+test/main.\+c}!\+\_\+\+E\+X\+P\+\_\+\+L\+E\+N\+G\+TH@{\+\_\+\+E\+X\+P\+\_\+\+L\+E\+N\+G\+TH}}
+\index{\+\_\+\+E\+X\+P\+\_\+\+L\+E\+N\+G\+TH@{\+\_\+\+E\+X\+P\+\_\+\+L\+E\+N\+G\+TH}!netdev\+\_\+test/main.\+c@{netdev\+\_\+test/main.\+c}}
+\subsubsection{\texorpdfstring{\+\_\+\+E\+X\+P\+\_\+\+L\+E\+N\+G\+TH}{\_EXP\_LENGTH}}
+{\footnotesize\ttfamily \#define \+\_\+\+E\+X\+P\+\_\+\+L\+E\+N\+G\+TH~(64)}
+
+\mbox{\Hypertarget{netdev__test_2main_8c_a783a7dc588726983b34b22e0c779eedc}\label{netdev__test_2main_8c_a783a7dc588726983b34b22e0c779eedc}} 
+\index{netdev\+\_\+test/main.\+c@{netdev\+\_\+test/main.\+c}!\+\_\+\+M\+A\+C\+\_\+\+P\+R\+IO@{\+\_\+\+M\+A\+C\+\_\+\+P\+R\+IO}}
+\index{\+\_\+\+M\+A\+C\+\_\+\+P\+R\+IO@{\+\_\+\+M\+A\+C\+\_\+\+P\+R\+IO}!netdev\+\_\+test/main.\+c@{netdev\+\_\+test/main.\+c}}
+\subsubsection{\texorpdfstring{\+\_\+\+M\+A\+C\+\_\+\+P\+R\+IO}{\_MAC\_PRIO}}
+{\footnotesize\ttfamily \#define \+\_\+\+M\+A\+C\+\_\+\+P\+R\+IO~(T\+H\+R\+E\+A\+D\+\_\+\+P\+R\+I\+O\+R\+I\+T\+Y\+\_\+\+M\+A\+IN -\/ 4)}
+
+\mbox{\Hypertarget{netdev__test_2main_8c_a1600cb2e978c06be4e37d16d081222f7}\label{netdev__test_2main_8c_a1600cb2e978c06be4e37d16d081222f7}} 
+\index{netdev\+\_\+test/main.\+c@{netdev\+\_\+test/main.\+c}!\+\_\+\+M\+A\+C\+\_\+\+S\+T\+A\+C\+K\+S\+I\+ZE@{\+\_\+\+M\+A\+C\+\_\+\+S\+T\+A\+C\+K\+S\+I\+ZE}}
+\index{\+\_\+\+M\+A\+C\+\_\+\+S\+T\+A\+C\+K\+S\+I\+ZE@{\+\_\+\+M\+A\+C\+\_\+\+S\+T\+A\+C\+K\+S\+I\+ZE}!netdev\+\_\+test/main.\+c@{netdev\+\_\+test/main.\+c}}
+\subsubsection{\texorpdfstring{\+\_\+\+M\+A\+C\+\_\+\+S\+T\+A\+C\+K\+S\+I\+ZE}{\_MAC\_STACKSIZE}}
+{\footnotesize\ttfamily \#define \+\_\+\+M\+A\+C\+\_\+\+S\+T\+A\+C\+K\+S\+I\+ZE~(T\+H\+R\+E\+A\+D\+\_\+\+S\+T\+A\+C\+K\+S\+I\+Z\+E\+\_\+\+D\+E\+F\+A\+U\+LT + T\+H\+R\+E\+A\+D\+\_\+\+E\+X\+T\+R\+A\+\_\+\+S\+T\+A\+C\+K\+S\+I\+Z\+E\+\_\+\+P\+R\+I\+N\+TF)}
+
+\mbox{\Hypertarget{netdev__test_2main_8c_aab6ca128bef5c55a48bea4a111bbb33b}\label{netdev__test_2main_8c_aab6ca128bef5c55a48bea4a111bbb33b}} 
+\index{netdev\+\_\+test/main.\+c@{netdev\+\_\+test/main.\+c}!\+\_\+\+M\+A\+I\+N\+\_\+\+M\+S\+G\+\_\+\+Q\+U\+E\+U\+E\+\_\+\+S\+I\+ZE@{\+\_\+\+M\+A\+I\+N\+\_\+\+M\+S\+G\+\_\+\+Q\+U\+E\+U\+E\+\_\+\+S\+I\+ZE}}
+\index{\+\_\+\+M\+A\+I\+N\+\_\+\+M\+S\+G\+\_\+\+Q\+U\+E\+U\+E\+\_\+\+S\+I\+ZE@{\+\_\+\+M\+A\+I\+N\+\_\+\+M\+S\+G\+\_\+\+Q\+U\+E\+U\+E\+\_\+\+S\+I\+ZE}!netdev\+\_\+test/main.\+c@{netdev\+\_\+test/main.\+c}}
+\subsubsection{\texorpdfstring{\+\_\+\+M\+A\+I\+N\+\_\+\+M\+S\+G\+\_\+\+Q\+U\+E\+U\+E\+\_\+\+S\+I\+ZE}{\_MAIN\_MSG\_QUEUE\_SIZE}}
+{\footnotesize\ttfamily \#define \+\_\+\+M\+A\+I\+N\+\_\+\+M\+S\+G\+\_\+\+Q\+U\+E\+U\+E\+\_\+\+S\+I\+ZE~(2)}
+
+\mbox{\Hypertarget{netdev__test_2main_8c_a196ff2d95245d965e54df3b96c7f0cdd}\label{netdev__test_2main_8c_a196ff2d95245d965e54df3b96c7f0cdd}} 
+\index{netdev\+\_\+test/main.\+c@{netdev\+\_\+test/main.\+c}!\+\_\+\+T\+E\+S\+T\+\_\+\+P\+A\+Y\+L\+O\+A\+D1@{\+\_\+\+T\+E\+S\+T\+\_\+\+P\+A\+Y\+L\+O\+A\+D1}}
+\index{\+\_\+\+T\+E\+S\+T\+\_\+\+P\+A\+Y\+L\+O\+A\+D1@{\+\_\+\+T\+E\+S\+T\+\_\+\+P\+A\+Y\+L\+O\+A\+D1}!netdev\+\_\+test/main.\+c@{netdev\+\_\+test/main.\+c}}
+\subsubsection{\texorpdfstring{\+\_\+\+T\+E\+S\+T\+\_\+\+P\+A\+Y\+L\+O\+A\+D1}{\_TEST\_PAYLOAD1}}
+{\footnotesize\ttfamily \#define \+\_\+\+T\+E\+S\+T\+\_\+\+P\+A\+Y\+L\+O\+A\+D1~\char`\"{}g\+O3\+Xt,fP)6$\ast$ M\+R161\+Auk?W$^\wedge$m\+Tb\textbackslash{}\char`\"{}LmY$^\wedge$Qc5w1h\+:C$<$+n($\ast$/@4k(\char`\"{}}
+
+\mbox{\Hypertarget{netdev__test_2main_8c_ae15bd64c485f28dbe6837046719312f7}\label{netdev__test_2main_8c_ae15bd64c485f28dbe6837046719312f7}} 
+\index{netdev\+\_\+test/main.\+c@{netdev\+\_\+test/main.\+c}!\+\_\+\+T\+E\+S\+T\+\_\+\+P\+A\+Y\+L\+O\+A\+D2@{\+\_\+\+T\+E\+S\+T\+\_\+\+P\+A\+Y\+L\+O\+A\+D2}}
+\index{\+\_\+\+T\+E\+S\+T\+\_\+\+P\+A\+Y\+L\+O\+A\+D2@{\+\_\+\+T\+E\+S\+T\+\_\+\+P\+A\+Y\+L\+O\+A\+D2}!netdev\+\_\+test/main.\+c@{netdev\+\_\+test/main.\+c}}
+\subsubsection{\texorpdfstring{\+\_\+\+T\+E\+S\+T\+\_\+\+P\+A\+Y\+L\+O\+A\+D2}{\_TEST\_PAYLOAD2}}
+{\footnotesize\ttfamily \#define \+\_\+\+T\+E\+S\+T\+\_\+\+P\+A\+Y\+L\+O\+A\+D2~\char`\"{}$\ast$b/\textquotesingle{}X\+Kkra\+E\+Bexa\+U\textbackslash{}\textbackslash{}O-\/X\&$<$Bl\textquotesingle{}n\%35\+Ll+n\+Dy,j\+Q+\mbox{[}\+Oe4\+:9( 4c\+I\char`\"{}}
+
+\mbox{\Hypertarget{netdev__test_2main_8c_a1827ce581d35b71a740544d07381f6c2}\label{netdev__test_2main_8c_a1827ce581d35b71a740544d07381f6c2}} 
+\index{netdev\+\_\+test/main.\+c@{netdev\+\_\+test/main.\+c}!E\+X\+E\+C\+U\+TE@{E\+X\+E\+C\+U\+TE}}
+\index{E\+X\+E\+C\+U\+TE@{E\+X\+E\+C\+U\+TE}!netdev\+\_\+test/main.\+c@{netdev\+\_\+test/main.\+c}}
+\subsubsection{\texorpdfstring{E\+X\+E\+C\+U\+TE}{EXECUTE}}
+{\footnotesize\ttfamily \#define E\+X\+E\+C\+U\+TE(\begin{DoxyParamCaption}\item[{}]{test }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+puts(\textcolor{stringliteral}{"Executing "} # \hyperlink{namespacetest}{test} \textcolor{stringliteral}{"()"}); \(\backslash\)
+    if (!\hyperlink{namespacetest}{test}()) \{ \(\backslash\)
+        puts(\textcolor{stringliteral}{" + failed."}); \(\backslash\)
+        return 1; \(\backslash\)
+    \} \(\backslash\)
+    else \{ \(\backslash\)
+        puts(\textcolor{stringliteral}{" + succeeded."}); \(\backslash\)
+    \}
+\end{DoxyCode}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{netdev__test_2main_8c_a840291bc02cba5474a4cb46a9b9566fe}\label{netdev__test_2main_8c_a840291bc02cba5474a4cb46a9b9566fe}} 
+\index{netdev\+\_\+test/main.\+c@{netdev\+\_\+test/main.\+c}!main@{main}}
+\index{main@{main}!netdev\+\_\+test/main.\+c@{netdev\+\_\+test/main.\+c}}
+\subsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+

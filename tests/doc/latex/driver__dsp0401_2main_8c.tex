@@ -1,0 +1,80 @@
+\hypertarget{driver__dsp0401_2main_8c}{}\section{/home/ayush/\+R\+I\+O\+T/tests/driver\+\_\+dsp0401/main.c File Reference}
+\label{driver__dsp0401_2main_8c}\index{/home/ayush/\+R\+I\+O\+T/tests/driver\+\_\+dsp0401/main.\+c@{/home/ayush/\+R\+I\+O\+T/tests/driver\+\_\+dsp0401/main.\+c}}
+
+
+Test application for the D\+S\+P0401 4 digit display.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$inttypes.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}dsp0401\+\_\+params.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}dsp0401.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}xtimer.\+h\char`\"{}}\newline
+Include dependency graph for main.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{driver__dsp0401_2main_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{driver__dsp0401_2main_8c_a6510a37ab99e1dda17845e59a6489f17}{T\+E\+S\+T\+\_\+\+D\+E\+L\+AY}~(2\+U)               /$\ast$ 2 seconds delay between each test $\ast$/
+\item 
+\#define \hyperlink{driver__dsp0401_2main_8c_ae92040bb92099b8e67d07b20f1f2f153}{W\+O\+R\+D\+\_\+\+D\+E\+L\+AY}~(750\+U)             /$\ast$ 750 milliseconds delay between each word $\ast$/
+\item 
+\#define \hyperlink{driver__dsp0401_2main_8c_ad900718582e0f61372e9266c9fde78f2}{S\+C\+R\+O\+L\+L\+\_\+\+D\+E\+L\+AY}~(200\+U)             /$\ast$ 200 milliseconds delay between character shift $\ast$/
+\item 
+\#define \hyperlink{driver__dsp0401_2main_8c_ae19e6a1d58535ea21627dc23272ed3cf}{L\+O\+O\+PS}~(3\+U)               /$\ast$ Number of display loops before exit $\ast$/
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{driver__dsp0401_2main_8c_a840291bc02cba5474a4cb46a9b9566fe}{main} (void)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Test application for the D\+S\+P0401 4 digit display. 
+
+\begin{DoxyAuthor}{Author}
+Alexandre Abadie \href{mailto:alexandre.abadie@inria.fr}{\tt alexandre.\+abadie@inria.\+fr} 
+\end{DoxyAuthor}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{driver__dsp0401_2main_8c_ae19e6a1d58535ea21627dc23272ed3cf}\label{driver__dsp0401_2main_8c_ae19e6a1d58535ea21627dc23272ed3cf}} 
+\index{driver\+\_\+dsp0401/main.\+c@{driver\+\_\+dsp0401/main.\+c}!L\+O\+O\+PS@{L\+O\+O\+PS}}
+\index{L\+O\+O\+PS@{L\+O\+O\+PS}!driver\+\_\+dsp0401/main.\+c@{driver\+\_\+dsp0401/main.\+c}}
+\subsubsection{\texorpdfstring{L\+O\+O\+PS}{LOOPS}}
+{\footnotesize\ttfamily \#define L\+O\+O\+PS~(3\+U)               /$\ast$ Number of display loops before exit $\ast$/}
+
+\mbox{\Hypertarget{driver__dsp0401_2main_8c_ad900718582e0f61372e9266c9fde78f2}\label{driver__dsp0401_2main_8c_ad900718582e0f61372e9266c9fde78f2}} 
+\index{driver\+\_\+dsp0401/main.\+c@{driver\+\_\+dsp0401/main.\+c}!S\+C\+R\+O\+L\+L\+\_\+\+D\+E\+L\+AY@{S\+C\+R\+O\+L\+L\+\_\+\+D\+E\+L\+AY}}
+\index{S\+C\+R\+O\+L\+L\+\_\+\+D\+E\+L\+AY@{S\+C\+R\+O\+L\+L\+\_\+\+D\+E\+L\+AY}!driver\+\_\+dsp0401/main.\+c@{driver\+\_\+dsp0401/main.\+c}}
+\subsubsection{\texorpdfstring{S\+C\+R\+O\+L\+L\+\_\+\+D\+E\+L\+AY}{SCROLL\_DELAY}}
+{\footnotesize\ttfamily \#define S\+C\+R\+O\+L\+L\+\_\+\+D\+E\+L\+AY~(200\+U)             /$\ast$ 200 milliseconds delay between character shift $\ast$/}
+
+\mbox{\Hypertarget{driver__dsp0401_2main_8c_a6510a37ab99e1dda17845e59a6489f17}\label{driver__dsp0401_2main_8c_a6510a37ab99e1dda17845e59a6489f17}} 
+\index{driver\+\_\+dsp0401/main.\+c@{driver\+\_\+dsp0401/main.\+c}!T\+E\+S\+T\+\_\+\+D\+E\+L\+AY@{T\+E\+S\+T\+\_\+\+D\+E\+L\+AY}}
+\index{T\+E\+S\+T\+\_\+\+D\+E\+L\+AY@{T\+E\+S\+T\+\_\+\+D\+E\+L\+AY}!driver\+\_\+dsp0401/main.\+c@{driver\+\_\+dsp0401/main.\+c}}
+\subsubsection{\texorpdfstring{T\+E\+S\+T\+\_\+\+D\+E\+L\+AY}{TEST\_DELAY}}
+{\footnotesize\ttfamily \#define T\+E\+S\+T\+\_\+\+D\+E\+L\+AY~(2\+U)               /$\ast$ 2 seconds delay between each test $\ast$/}
+
+\mbox{\Hypertarget{driver__dsp0401_2main_8c_ae92040bb92099b8e67d07b20f1f2f153}\label{driver__dsp0401_2main_8c_ae92040bb92099b8e67d07b20f1f2f153}} 
+\index{driver\+\_\+dsp0401/main.\+c@{driver\+\_\+dsp0401/main.\+c}!W\+O\+R\+D\+\_\+\+D\+E\+L\+AY@{W\+O\+R\+D\+\_\+\+D\+E\+L\+AY}}
+\index{W\+O\+R\+D\+\_\+\+D\+E\+L\+AY@{W\+O\+R\+D\+\_\+\+D\+E\+L\+AY}!driver\+\_\+dsp0401/main.\+c@{driver\+\_\+dsp0401/main.\+c}}
+\subsubsection{\texorpdfstring{W\+O\+R\+D\+\_\+\+D\+E\+L\+AY}{WORD\_DELAY}}
+{\footnotesize\ttfamily \#define W\+O\+R\+D\+\_\+\+D\+E\+L\+AY~(750\+U)             /$\ast$ 750 milliseconds delay between each word $\ast$/}
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{driver__dsp0401_2main_8c_a840291bc02cba5474a4cb46a9b9566fe}\label{driver__dsp0401_2main_8c_a840291bc02cba5474a4cb46a9b9566fe}} 
+\index{driver\+\_\+dsp0401/main.\+c@{driver\+\_\+dsp0401/main.\+c}!main@{main}}
+\index{main@{main}!driver\+\_\+dsp0401/main.\+c@{driver\+\_\+dsp0401/main.\+c}}
+\subsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+

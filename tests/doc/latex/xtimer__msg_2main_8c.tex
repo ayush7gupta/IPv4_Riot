@@ -1,0 +1,105 @@
+\hypertarget{xtimer__msg_2main_8c}{}\section{/home/ayush/\+R\+I\+O\+T/tests/xtimer\+\_\+msg/main.c File Reference}
+\label{xtimer__msg_2main_8c}\index{/home/ayush/\+R\+I\+O\+T/tests/xtimer\+\_\+msg/main.\+c@{/home/ayush/\+R\+I\+O\+T/tests/xtimer\+\_\+msg/main.\+c}}
+
+
+xtimer\+\_\+msg test application  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$time.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}xtimer.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}thread.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}msg.\+h\char`\"{}}\newline
+Include dependency graph for main.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{xtimer__msg_2main_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structtimer__msg}{timer\+\_\+msg}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void $\ast$ \hyperlink{xtimer__msg_2main_8c_af415f1da579ff5cae63f743199c42898}{timer\+\_\+thread} (void $\ast$arg)
+\item 
+void $\ast$ \hyperlink{xtimer__msg_2main_8c_ae66db2dc225c0c6166236a2e2d2fadb6}{timer\+\_\+thread\+\_\+local} (void $\ast$arg)
+\item 
+int \hyperlink{xtimer__msg_2main_8c_a840291bc02cba5474a4cb46a9b9566fe}{main} (void)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+char \hyperlink{xtimer__msg_2main_8c_ab0c3a31ab93f1bf648a7e976c79319da}{timer\+\_\+stack} \mbox{[}T\+H\+R\+E\+A\+D\+\_\+\+S\+T\+A\+C\+K\+S\+I\+Z\+E\+\_\+\+M\+A\+IN\mbox{]}
+\item 
+char \hyperlink{xtimer__msg_2main_8c_a61ff5ce23c6a4a87fb6b6be31faa6b3c}{timer\+\_\+stack\+\_\+local} \mbox{[}T\+H\+R\+E\+A\+D\+\_\+\+S\+T\+A\+C\+K\+S\+I\+Z\+E\+\_\+\+M\+A\+IN\mbox{]}
+\item 
+struct \hyperlink{structtimer__msg}{timer\+\_\+msg} \hyperlink{xtimer__msg_2main_8c_a366800a48d3c5aa379ecec9c7a73cb4d}{msg\+\_\+a} = \{ .interval = 2$\ast$(1000000), .text = \char`\"{}Hello World\char`\"{}, \}
+\item 
+struct \hyperlink{structtimer__msg}{timer\+\_\+msg} \hyperlink{xtimer__msg_2main_8c_adb745ebe153defab12a235099b3f8a8d}{msg\+\_\+b} = \{ .interval = 5$\ast$(1000000), .text = \char`\"{}This is a Test\char`\"{} \}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+xtimer\+\_\+msg test application 
+
+\begin{DoxyAuthor}{Author}
+Kaspar Schleiser \href{mailto:kaspar@schleiser.de}{\tt kaspar@schleiser.\+de} 
+
+Oliver Hahm \href{mailto:oliver.hahm@inria.fr}{\tt oliver.\+hahm@inria.\+fr} 
+
+Christian Mehlis \href{mailto:mehlis@inf.fu-berlin.de}{\tt mehlis@inf.\+fu-\/berlin.\+de} 
+\end{DoxyAuthor}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{xtimer__msg_2main_8c_a840291bc02cba5474a4cb46a9b9566fe}\label{xtimer__msg_2main_8c_a840291bc02cba5474a4cb46a9b9566fe}} 
+\index{xtimer\+\_\+msg/main.\+c@{xtimer\+\_\+msg/main.\+c}!main@{main}}
+\index{main@{main}!xtimer\+\_\+msg/main.\+c@{xtimer\+\_\+msg/main.\+c}}
+\subsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{xtimer__msg_2main_8c_af415f1da579ff5cae63f743199c42898}\label{xtimer__msg_2main_8c_af415f1da579ff5cae63f743199c42898}} 
+\index{xtimer\+\_\+msg/main.\+c@{xtimer\+\_\+msg/main.\+c}!timer\+\_\+thread@{timer\+\_\+thread}}
+\index{timer\+\_\+thread@{timer\+\_\+thread}!xtimer\+\_\+msg/main.\+c@{xtimer\+\_\+msg/main.\+c}}
+\subsubsection{\texorpdfstring{timer\+\_\+thread()}{timer\_thread()}}
+{\footnotesize\ttfamily void$\ast$ timer\+\_\+thread (\begin{DoxyParamCaption}\item[{void $\ast$}]{arg }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{xtimer__msg_2main_8c_ae66db2dc225c0c6166236a2e2d2fadb6}\label{xtimer__msg_2main_8c_ae66db2dc225c0c6166236a2e2d2fadb6}} 
+\index{xtimer\+\_\+msg/main.\+c@{xtimer\+\_\+msg/main.\+c}!timer\+\_\+thread\+\_\+local@{timer\+\_\+thread\+\_\+local}}
+\index{timer\+\_\+thread\+\_\+local@{timer\+\_\+thread\+\_\+local}!xtimer\+\_\+msg/main.\+c@{xtimer\+\_\+msg/main.\+c}}
+\subsubsection{\texorpdfstring{timer\+\_\+thread\+\_\+local()}{timer\_thread\_local()}}
+{\footnotesize\ttfamily void$\ast$ timer\+\_\+thread\+\_\+local (\begin{DoxyParamCaption}\item[{void $\ast$}]{arg }\end{DoxyParamCaption})}
+
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{xtimer__msg_2main_8c_a366800a48d3c5aa379ecec9c7a73cb4d}\label{xtimer__msg_2main_8c_a366800a48d3c5aa379ecec9c7a73cb4d}} 
+\index{xtimer\+\_\+msg/main.\+c@{xtimer\+\_\+msg/main.\+c}!msg\+\_\+a@{msg\+\_\+a}}
+\index{msg\+\_\+a@{msg\+\_\+a}!xtimer\+\_\+msg/main.\+c@{xtimer\+\_\+msg/main.\+c}}
+\subsubsection{\texorpdfstring{msg\+\_\+a}{msg\_a}}
+{\footnotesize\ttfamily struct \hyperlink{structtimer__msg}{timer\+\_\+msg} msg\+\_\+a = \{ .interval = 2$\ast$(1000000), .text = \char`\"{}Hello World\char`\"{}, \}}
+
+\mbox{\Hypertarget{xtimer__msg_2main_8c_adb745ebe153defab12a235099b3f8a8d}\label{xtimer__msg_2main_8c_adb745ebe153defab12a235099b3f8a8d}} 
+\index{xtimer\+\_\+msg/main.\+c@{xtimer\+\_\+msg/main.\+c}!msg\+\_\+b@{msg\+\_\+b}}
+\index{msg\+\_\+b@{msg\+\_\+b}!xtimer\+\_\+msg/main.\+c@{xtimer\+\_\+msg/main.\+c}}
+\subsubsection{\texorpdfstring{msg\+\_\+b}{msg\_b}}
+{\footnotesize\ttfamily struct \hyperlink{structtimer__msg}{timer\+\_\+msg} msg\+\_\+b = \{ .interval = 5$\ast$(1000000), .text = \char`\"{}This is a Test\char`\"{} \}}
+
+\mbox{\Hypertarget{xtimer__msg_2main_8c_ab0c3a31ab93f1bf648a7e976c79319da}\label{xtimer__msg_2main_8c_ab0c3a31ab93f1bf648a7e976c79319da}} 
+\index{xtimer\+\_\+msg/main.\+c@{xtimer\+\_\+msg/main.\+c}!timer\+\_\+stack@{timer\+\_\+stack}}
+\index{timer\+\_\+stack@{timer\+\_\+stack}!xtimer\+\_\+msg/main.\+c@{xtimer\+\_\+msg/main.\+c}}
+\subsubsection{\texorpdfstring{timer\+\_\+stack}{timer\_stack}}
+{\footnotesize\ttfamily char timer\+\_\+stack\mbox{[}T\+H\+R\+E\+A\+D\+\_\+\+S\+T\+A\+C\+K\+S\+I\+Z\+E\+\_\+\+M\+A\+IN\mbox{]}}
+
+\mbox{\Hypertarget{xtimer__msg_2main_8c_a61ff5ce23c6a4a87fb6b6be31faa6b3c}\label{xtimer__msg_2main_8c_a61ff5ce23c6a4a87fb6b6be31faa6b3c}} 
+\index{xtimer\+\_\+msg/main.\+c@{xtimer\+\_\+msg/main.\+c}!timer\+\_\+stack\+\_\+local@{timer\+\_\+stack\+\_\+local}}
+\index{timer\+\_\+stack\+\_\+local@{timer\+\_\+stack\+\_\+local}!xtimer\+\_\+msg/main.\+c@{xtimer\+\_\+msg/main.\+c}}
+\subsubsection{\texorpdfstring{timer\+\_\+stack\+\_\+local}{timer\_stack\_local}}
+{\footnotesize\ttfamily char timer\+\_\+stack\+\_\+local\mbox{[}T\+H\+R\+E\+A\+D\+\_\+\+S\+T\+A\+C\+K\+S\+I\+Z\+E\+\_\+\+M\+A\+IN\mbox{]}}
+

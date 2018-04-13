@@ -1,0 +1,196 @@
+\hypertarget{tests-cbor_8c}{}\section{/home/ayush/\+R\+I\+O\+T/tests/unittests/tests-\/cbor/tests-\/cbor.c File Reference}
+\label{tests-cbor_8c}\index{/home/ayush/\+R\+I\+O\+T/tests/unittests/tests-\/cbor/tests-\/cbor.\+c@{/home/ayush/\+R\+I\+O\+T/tests/unittests/tests-\/cbor/tests-\/cbor.\+c}}
+{\ttfamily \#include \char`\"{}emb\+Unit.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}bitarithm.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}cbor.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$float.\+h$>$}\newline
+{\ttfamily \#include $<$math.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$inttypes.\+h$>$}\newline
+Include dependency graph for tests-\/cbor.c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{tests-cbor_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{tests-cbor_8c_aee25eb17d0e99fde14dda9e45fb6d111}{C\+B\+O\+R\+\_\+\+C\+H\+E\+C\+K\+\_\+\+S\+E\+R\+I\+A\+L\+I\+Z\+ED}(stream,  expected\+\_\+value,  expected\+\_\+value\+\_\+size)
+\item 
+\#define \hyperlink{tests-cbor_8c_aea260b48d92bb28a55f49063acec08f5}{C\+B\+O\+R\+\_\+\+C\+H\+E\+C\+K\+\_\+\+D\+E\+S\+E\+R\+I\+A\+L\+I\+Z\+ED}(expected\+\_\+value,  actual\+\_\+value,  comparator\+\_\+function)
+\item 
+\#define \hyperlink{tests-cbor_8c_a65f1a265d0f7b6ec1a55c2784f6da274}{C\+B\+O\+R\+\_\+\+C\+H\+E\+CK}(type,  function\+\_\+suffix,  stream,  input,  expected\+\_\+value,  comparator)
+\item 
+\#define \hyperlink{tests-cbor_8c_a98761d72bdb308a72bd430b2cd3dce69}{H\+E\+X\+\_\+\+L\+I\+T\+E\+R\+AL}(...)~\{\+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+\}
+\item 
+\#define \hyperlink{tests-cbor_8c_a28b1e4b13c7e8e9675db35a07f326587}{E\+Q\+U\+A\+L\+\_\+\+I\+NT}(a,  b)~(a == b)
+\item 
+\#define \hyperlink{tests-cbor_8c_a23cd433698bdb7a2cf5adf6c7a1a0f5c}{E\+Q\+U\+A\+L\+\_\+\+F\+L\+O\+AT}(a,  b)
+\item 
+\#define \hyperlink{tests-cbor_8c_aa0920f7f70175036c6ef8f6b52ebbf95}{E\+Q\+U\+A\+L\+\_\+\+S\+T\+R\+I\+NG}(a,  b)~(strcmp(a, b) == 0)
+\item 
+\#define \hyperlink{tests-cbor_8c_a2bf61b15c14a09a99cd2fe190cddb01c}{E\+Q\+U\+A\+L\+\_\+\+D\+A\+T\+E\+\_\+\+T\+I\+ME}(a,  b)
+\item 
+\#define \hyperlink{tests-cbor_8c_a956e2723d559858d08644ac99146e910}{I\+N\+F\+I\+N\+I\+TY}~(1.\+0/0.\+0)
+\item 
+\#define \hyperlink{tests-cbor_8c_a8abfcc76130f3f991d124dd22d7e69bc}{N\+AN}~(0.\+0/0.\+0)
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+Test\+Ref \hyperlink{tests-cbor_8c_a24bf196efee7f18a547beae07f47b7f4}{tests\+\_\+cbor\+\_\+all} (void)
+\item 
+void \hyperlink{tests-cbor_8c_a24c307f8691c7f8d3bb6e03cf3925134}{tests\+\_\+cbor} (void)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{tests-cbor_8c_a65f1a265d0f7b6ec1a55c2784f6da274}\label{tests-cbor_8c_a65f1a265d0f7b6ec1a55c2784f6da274}} 
+\index{tests-\/cbor.\+c@{tests-\/cbor.\+c}!C\+B\+O\+R\+\_\+\+C\+H\+E\+CK@{C\+B\+O\+R\+\_\+\+C\+H\+E\+CK}}
+\index{C\+B\+O\+R\+\_\+\+C\+H\+E\+CK@{C\+B\+O\+R\+\_\+\+C\+H\+E\+CK}!tests-\/cbor.\+c@{tests-\/cbor.\+c}}
+\subsubsection{\texorpdfstring{C\+B\+O\+R\+\_\+\+C\+H\+E\+CK}{CBOR\_CHECK}}
+{\footnotesize\ttfamily \#define C\+B\+O\+R\+\_\+\+C\+H\+E\+CK(\begin{DoxyParamCaption}\item[{}]{type,  }\item[{}]{function\+\_\+suffix,  }\item[{}]{stream,  }\item[{}]{input,  }\item[{}]{expected\+\_\+value,  }\item[{}]{comparator }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\textcolor{keywordflow}{do} \{ \(\backslash\)
+    type \hyperlink{driver__sdcard__spi_2main_8c_a1870d2717147e1356f2eb4e5d5fa4a1c}{buffer}; \(\backslash\)
+    unsigned \textcolor{keywordtype}{char} data[] = expected\_value; \(\backslash\)
+    cbor\_clear(&stream); \(\backslash\)
+    TEST\_ASSERT(cbor\_serialize\_##function\_suffix(&stream, input)); \(\backslash\)
+    CBOR\_CHECK\_SERIALIZED(stream, data, \textcolor{keyword}{sizeof}(data)); \(\backslash\)
+    cbor\_stream\_t tmp = \{data, \textcolor{keyword}{sizeof}(data), \textcolor{keyword}{sizeof}(data)\}; \(\backslash\)
+    TEST\_ASSERT\_EQUAL\_INT(\textcolor{keyword}{sizeof}(data), cbor\_deserialize\_##function\_suffix(&tmp, 0, &
+      \hyperlink{driver__sdcard__spi_2main_8c_a1870d2717147e1356f2eb4e5d5fa4a1c}{buffer})); \(\backslash\)
+    CBOR\_CHECK\_DESERIALIZED(input, \hyperlink{driver__sdcard__spi_2main_8c_a1870d2717147e1356f2eb4e5d5fa4a1c}{buffer}, comparator); \(\backslash\)
+\} \textcolor{keywordflow}{while} (0)
+\end{DoxyCode}
+\mbox{\Hypertarget{tests-cbor_8c_aea260b48d92bb28a55f49063acec08f5}\label{tests-cbor_8c_aea260b48d92bb28a55f49063acec08f5}} 
+\index{tests-\/cbor.\+c@{tests-\/cbor.\+c}!C\+B\+O\+R\+\_\+\+C\+H\+E\+C\+K\+\_\+\+D\+E\+S\+E\+R\+I\+A\+L\+I\+Z\+ED@{C\+B\+O\+R\+\_\+\+C\+H\+E\+C\+K\+\_\+\+D\+E\+S\+E\+R\+I\+A\+L\+I\+Z\+ED}}
+\index{C\+B\+O\+R\+\_\+\+C\+H\+E\+C\+K\+\_\+\+D\+E\+S\+E\+R\+I\+A\+L\+I\+Z\+ED@{C\+B\+O\+R\+\_\+\+C\+H\+E\+C\+K\+\_\+\+D\+E\+S\+E\+R\+I\+A\+L\+I\+Z\+ED}!tests-\/cbor.\+c@{tests-\/cbor.\+c}}
+\subsubsection{\texorpdfstring{C\+B\+O\+R\+\_\+\+C\+H\+E\+C\+K\+\_\+\+D\+E\+S\+E\+R\+I\+A\+L\+I\+Z\+ED}{CBOR\_CHECK\_DESERIALIZED}}
+{\footnotesize\ttfamily \#define C\+B\+O\+R\+\_\+\+C\+H\+E\+C\+K\+\_\+\+D\+E\+S\+E\+R\+I\+A\+L\+I\+Z\+ED(\begin{DoxyParamCaption}\item[{}]{expected\+\_\+value,  }\item[{}]{actual\+\_\+value,  }\item[{}]{comparator\+\_\+function }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\textcolor{keywordflow}{do} \{ \(\backslash\)
+    TEST\_ASSERT(comparator\_function(expected\_value, actual\_value)); \(\backslash\)
+\} \textcolor{keywordflow}{while} (0)
+\end{DoxyCode}
+\mbox{\Hypertarget{tests-cbor_8c_aee25eb17d0e99fde14dda9e45fb6d111}\label{tests-cbor_8c_aee25eb17d0e99fde14dda9e45fb6d111}} 
+\index{tests-\/cbor.\+c@{tests-\/cbor.\+c}!C\+B\+O\+R\+\_\+\+C\+H\+E\+C\+K\+\_\+\+S\+E\+R\+I\+A\+L\+I\+Z\+ED@{C\+B\+O\+R\+\_\+\+C\+H\+E\+C\+K\+\_\+\+S\+E\+R\+I\+A\+L\+I\+Z\+ED}}
+\index{C\+B\+O\+R\+\_\+\+C\+H\+E\+C\+K\+\_\+\+S\+E\+R\+I\+A\+L\+I\+Z\+ED@{C\+B\+O\+R\+\_\+\+C\+H\+E\+C\+K\+\_\+\+S\+E\+R\+I\+A\+L\+I\+Z\+ED}!tests-\/cbor.\+c@{tests-\/cbor.\+c}}
+\subsubsection{\texorpdfstring{C\+B\+O\+R\+\_\+\+C\+H\+E\+C\+K\+\_\+\+S\+E\+R\+I\+A\+L\+I\+Z\+ED}{CBOR\_CHECK\_SERIALIZED}}
+{\footnotesize\ttfamily \#define C\+B\+O\+R\+\_\+\+C\+H\+E\+C\+K\+\_\+\+S\+E\+R\+I\+A\+L\+I\+Z\+ED(\begin{DoxyParamCaption}\item[{}]{stream,  }\item[{}]{expected\+\_\+value,  }\item[{}]{expected\+\_\+value\+\_\+size }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\textcolor{keywordflow}{do} \{ \(\backslash\)
+    if (memcmp(stream.data, expected\_value, expected\_value\_size) != 0) \{ \(\backslash\)
+        printf(\textcolor{stringliteral}{"\(\backslash\)n"}); \(\backslash\)
+        printf(\textcolor{stringliteral}{"  CBOR encoded data: "}); my\_cbor\_print(&stream); printf(\textcolor{stringliteral}{"\(\backslash\)n"}); \(\backslash\)
+        cbor\_stream\_t tmp = \{expected\_value, expected\_value\_size, expected\_value\_size\}; \(\backslash\)
+        printf(\textcolor{stringliteral}{"  Expected data    : "}); my\_cbor\_print(&tmp); printf(\textcolor{stringliteral}{"\(\backslash\)n"}); \(\backslash\)
+        TEST\_FAIL(\textcolor{stringliteral}{"Test failed"}); \(\backslash\)
+    \} \(\backslash\)
+\} \textcolor{keywordflow}{while} (0)
+\end{DoxyCode}
+\mbox{\Hypertarget{tests-cbor_8c_a2bf61b15c14a09a99cd2fe190cddb01c}\label{tests-cbor_8c_a2bf61b15c14a09a99cd2fe190cddb01c}} 
+\index{tests-\/cbor.\+c@{tests-\/cbor.\+c}!E\+Q\+U\+A\+L\+\_\+\+D\+A\+T\+E\+\_\+\+T\+I\+ME@{E\+Q\+U\+A\+L\+\_\+\+D\+A\+T\+E\+\_\+\+T\+I\+ME}}
+\index{E\+Q\+U\+A\+L\+\_\+\+D\+A\+T\+E\+\_\+\+T\+I\+ME@{E\+Q\+U\+A\+L\+\_\+\+D\+A\+T\+E\+\_\+\+T\+I\+ME}!tests-\/cbor.\+c@{tests-\/cbor.\+c}}
+\subsubsection{\texorpdfstring{E\+Q\+U\+A\+L\+\_\+\+D\+A\+T\+E\+\_\+\+T\+I\+ME}{EQUAL\_DATE\_TIME}}
+{\footnotesize\ttfamily \#define E\+Q\+U\+A\+L\+\_\+\+D\+A\+T\+E\+\_\+\+T\+I\+ME(\begin{DoxyParamCaption}\item[{}]{a,  }\item[{}]{b }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+( \(\backslash\)
+    (a.tm\_isdst == b.tm\_isdst) && \(\backslash\)
+    (a.tm\_yday == b.tm\_yday) && \(\backslash\)
+    (a.tm\_wday == b.tm\_wday) && \(\backslash\)
+    (a.tm\_year == b.tm\_year) && \(\backslash\)
+    (a.tm\_mon == b.tm\_mon) && \(\backslash\)
+    (a.tm\_mday == b.tm\_mday) && \(\backslash\)
+    (a.tm\_hour == b.tm\_hour) && \(\backslash\)
+    (a.tm\_min == b.tm\_min) && \(\backslash\)
+    (a.tm\_sec == b.tm\_sec))
+\end{DoxyCode}
+\mbox{\Hypertarget{tests-cbor_8c_a23cd433698bdb7a2cf5adf6c7a1a0f5c}\label{tests-cbor_8c_a23cd433698bdb7a2cf5adf6c7a1a0f5c}} 
+\index{tests-\/cbor.\+c@{tests-\/cbor.\+c}!E\+Q\+U\+A\+L\+\_\+\+F\+L\+O\+AT@{E\+Q\+U\+A\+L\+\_\+\+F\+L\+O\+AT}}
+\index{E\+Q\+U\+A\+L\+\_\+\+F\+L\+O\+AT@{E\+Q\+U\+A\+L\+\_\+\+F\+L\+O\+AT}!tests-\/cbor.\+c@{tests-\/cbor.\+c}}
+\subsubsection{\texorpdfstring{E\+Q\+U\+A\+L\+\_\+\+F\+L\+O\+AT}{EQUAL\_FLOAT}}
+{\footnotesize\ttfamily \#define E\+Q\+U\+A\+L\+\_\+\+F\+L\+O\+AT(\begin{DoxyParamCaption}\item[{}]{a,  }\item[{}]{b }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+( \(\backslash\)
+    (isinf(a) && isinf(b)) || \(\backslash\)
+    (isnan(a) && isnan(b)) || \(\backslash\)
+    (fabs(a - b) < 0.00001))
+\end{DoxyCode}
+\mbox{\Hypertarget{tests-cbor_8c_a28b1e4b13c7e8e9675db35a07f326587}\label{tests-cbor_8c_a28b1e4b13c7e8e9675db35a07f326587}} 
+\index{tests-\/cbor.\+c@{tests-\/cbor.\+c}!E\+Q\+U\+A\+L\+\_\+\+I\+NT@{E\+Q\+U\+A\+L\+\_\+\+I\+NT}}
+\index{E\+Q\+U\+A\+L\+\_\+\+I\+NT@{E\+Q\+U\+A\+L\+\_\+\+I\+NT}!tests-\/cbor.\+c@{tests-\/cbor.\+c}}
+\subsubsection{\texorpdfstring{E\+Q\+U\+A\+L\+\_\+\+I\+NT}{EQUAL\_INT}}
+{\footnotesize\ttfamily \#define E\+Q\+U\+A\+L\+\_\+\+I\+NT(\begin{DoxyParamCaption}\item[{}]{a,  }\item[{}]{b }\end{DoxyParamCaption})~(a == b)}
+
+\mbox{\Hypertarget{tests-cbor_8c_aa0920f7f70175036c6ef8f6b52ebbf95}\label{tests-cbor_8c_aa0920f7f70175036c6ef8f6b52ebbf95}} 
+\index{tests-\/cbor.\+c@{tests-\/cbor.\+c}!E\+Q\+U\+A\+L\+\_\+\+S\+T\+R\+I\+NG@{E\+Q\+U\+A\+L\+\_\+\+S\+T\+R\+I\+NG}}
+\index{E\+Q\+U\+A\+L\+\_\+\+S\+T\+R\+I\+NG@{E\+Q\+U\+A\+L\+\_\+\+S\+T\+R\+I\+NG}!tests-\/cbor.\+c@{tests-\/cbor.\+c}}
+\subsubsection{\texorpdfstring{E\+Q\+U\+A\+L\+\_\+\+S\+T\+R\+I\+NG}{EQUAL\_STRING}}
+{\footnotesize\ttfamily \#define E\+Q\+U\+A\+L\+\_\+\+S\+T\+R\+I\+NG(\begin{DoxyParamCaption}\item[{}]{a,  }\item[{}]{b }\end{DoxyParamCaption})~(strcmp(a, b) == 0)}
+
+\mbox{\Hypertarget{tests-cbor_8c_a98761d72bdb308a72bd430b2cd3dce69}\label{tests-cbor_8c_a98761d72bdb308a72bd430b2cd3dce69}} 
+\index{tests-\/cbor.\+c@{tests-\/cbor.\+c}!H\+E\+X\+\_\+\+L\+I\+T\+E\+R\+AL@{H\+E\+X\+\_\+\+L\+I\+T\+E\+R\+AL}}
+\index{H\+E\+X\+\_\+\+L\+I\+T\+E\+R\+AL@{H\+E\+X\+\_\+\+L\+I\+T\+E\+R\+AL}!tests-\/cbor.\+c@{tests-\/cbor.\+c}}
+\subsubsection{\texorpdfstring{H\+E\+X\+\_\+\+L\+I\+T\+E\+R\+AL}{HEX\_LITERAL}}
+{\footnotesize\ttfamily \#define H\+E\+X\+\_\+\+L\+I\+T\+E\+R\+AL(\begin{DoxyParamCaption}\item[{}]{... }\end{DoxyParamCaption})~\{\+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+\}}
+
+\mbox{\Hypertarget{tests-cbor_8c_a956e2723d559858d08644ac99146e910}\label{tests-cbor_8c_a956e2723d559858d08644ac99146e910}} 
+\index{tests-\/cbor.\+c@{tests-\/cbor.\+c}!I\+N\+F\+I\+N\+I\+TY@{I\+N\+F\+I\+N\+I\+TY}}
+\index{I\+N\+F\+I\+N\+I\+TY@{I\+N\+F\+I\+N\+I\+TY}!tests-\/cbor.\+c@{tests-\/cbor.\+c}}
+\subsubsection{\texorpdfstring{I\+N\+F\+I\+N\+I\+TY}{INFINITY}}
+{\footnotesize\ttfamily \#define I\+N\+F\+I\+N\+I\+TY~(1.\+0/0.\+0)}
+
+\mbox{\Hypertarget{tests-cbor_8c_a8abfcc76130f3f991d124dd22d7e69bc}\label{tests-cbor_8c_a8abfcc76130f3f991d124dd22d7e69bc}} 
+\index{tests-\/cbor.\+c@{tests-\/cbor.\+c}!N\+AN@{N\+AN}}
+\index{N\+AN@{N\+AN}!tests-\/cbor.\+c@{tests-\/cbor.\+c}}
+\subsubsection{\texorpdfstring{N\+AN}{NAN}}
+{\footnotesize\ttfamily \#define N\+AN~(0.\+0/0.\+0)}
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{tests-cbor_8c_a24c307f8691c7f8d3bb6e03cf3925134}\label{tests-cbor_8c_a24c307f8691c7f8d3bb6e03cf3925134}} 
+\index{tests-\/cbor.\+c@{tests-\/cbor.\+c}!tests\+\_\+cbor@{tests\+\_\+cbor}}
+\index{tests\+\_\+cbor@{tests\+\_\+cbor}!tests-\/cbor.\+c@{tests-\/cbor.\+c}}
+\subsubsection{\texorpdfstring{tests\+\_\+cbor()}{tests\_cbor()}}
+{\footnotesize\ttfamily void tests\+\_\+cbor (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=255pt]{tests-cbor_8c_a24c307f8691c7f8d3bb6e03cf3925134_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{tests-cbor_8c_a24bf196efee7f18a547beae07f47b7f4}\label{tests-cbor_8c_a24bf196efee7f18a547beae07f47b7f4}} 
+\index{tests-\/cbor.\+c@{tests-\/cbor.\+c}!tests\+\_\+cbor\+\_\+all@{tests\+\_\+cbor\+\_\+all}}
+\index{tests\+\_\+cbor\+\_\+all@{tests\+\_\+cbor\+\_\+all}!tests-\/cbor.\+c@{tests-\/cbor.\+c}}
+\subsubsection{\texorpdfstring{tests\+\_\+cbor\+\_\+all()}{tests\_cbor\_all()}}
+{\footnotesize\ttfamily Test\+Ref tests\+\_\+cbor\+\_\+all (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+See examples from C\+B\+OR R\+FC (cf. Appendix A. Examples) Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=255pt]{tests-cbor_8c_a24bf196efee7f18a547beae07f47b7f4_icgraph}
+\end{center}
+\end{figure}

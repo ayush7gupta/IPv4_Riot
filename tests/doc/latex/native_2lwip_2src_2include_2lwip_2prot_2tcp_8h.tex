@@ -1,0 +1,175 @@
+\hypertarget{native_2lwip_2src_2include_2lwip_2prot_2tcp_8h}{}\section{/home/ayush/\+R\+I\+O\+T/tests/lwip/bin/pkg/native/lwip/src/include/lwip/prot/tcp.h File Reference}
+\label{native_2lwip_2src_2include_2lwip_2prot_2tcp_8h}\index{/home/ayush/\+R\+I\+O\+T/tests/lwip/bin/pkg/native/lwip/src/include/lwip/prot/tcp.\+h@{/home/ayush/\+R\+I\+O\+T/tests/lwip/bin/pkg/native/lwip/src/include/lwip/prot/tcp.\+h}}
+{\ttfamily \#include \char`\"{}lwip/arch.\+h\char`\"{}}\newline
+Include dependency graph for tcp.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=211pt]{native_2lwip_2src_2include_2lwip_2prot_2tcp_8h__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structtcp__hdr}{tcp\+\_\+hdr}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{native_2lwip_2src_2include_2lwip_2prot_2tcp_8h_a5758db371d6daa394d178429b7c94c2a}{T\+C\+P\+\_\+\+H\+L\+EN}~20
+\item 
+\#define \hyperlink{native_2lwip_2src_2include_2lwip_2prot_2tcp_8h_a88e60aa2cf23e1c65d630701db08c743}{T\+C\+P\+\_\+\+F\+IN}~0x01U
+\item 
+\#define \hyperlink{native_2lwip_2src_2include_2lwip_2prot_2tcp_8h_a6020613f5062417d9811cfa837215c83}{T\+C\+P\+\_\+\+S\+YN}~0x02U
+\item 
+\#define \hyperlink{native_2lwip_2src_2include_2lwip_2prot_2tcp_8h_a5ca559def464ef20d8b1f7d32f2f160d}{T\+C\+P\+\_\+\+R\+ST}~0x04U
+\item 
+\#define \hyperlink{native_2lwip_2src_2include_2lwip_2prot_2tcp_8h_a1320fd0006a2f70138bc2d0018dda829}{T\+C\+P\+\_\+\+P\+SH}~0x08U
+\item 
+\#define \hyperlink{native_2lwip_2src_2include_2lwip_2prot_2tcp_8h_a44b3b1ab31a403ba28ec135adfcbefef}{T\+C\+P\+\_\+\+A\+CK}~0x10U
+\item 
+\#define \hyperlink{native_2lwip_2src_2include_2lwip_2prot_2tcp_8h_ac84f499cba8a02fc0e306c10b2acabf0}{T\+C\+P\+\_\+\+U\+RG}~0x20U
+\item 
+\#define \hyperlink{native_2lwip_2src_2include_2lwip_2prot_2tcp_8h_ae6ba06711820fc4365ad0d78f70171dd}{T\+C\+P\+\_\+\+E\+CE}~0x40U
+\item 
+\#define \hyperlink{native_2lwip_2src_2include_2lwip_2prot_2tcp_8h_a6f441228e74f83c026c48360667beb48}{T\+C\+P\+\_\+\+C\+WR}~0x80U
+\item 
+\#define \hyperlink{native_2lwip_2src_2include_2lwip_2prot_2tcp_8h_a75dbc3ac2d65c23a60dbe2f96a874501}{T\+C\+P\+\_\+\+F\+L\+A\+GS}~0x3fU
+\item 
+\#define \hyperlink{native_2lwip_2src_2include_2lwip_2prot_2tcp_8h_a5b97d3b7e68c20eb3eab87a61d779223}{T\+C\+P\+H\+\_\+\+H\+D\+R\+L\+EN}(phdr)~((\hyperlink{group__compiler__abstraction_ga77570ac4fcab86864fa1916e55676da2}{u16\+\_\+t})(\hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2def_8h_ac642bf6057869696d7807564d8309ffc}{lwip\+\_\+ntohs}((phdr)-\/$>$\+\_\+hdrlen\+\_\+rsvd\+\_\+flags) $>$$>$ 12))
+\item 
+\#define \hyperlink{native_2lwip_2src_2include_2lwip_2prot_2tcp_8h_ad5de3cf876b2c7f6835f44132fe0e9d5}{T\+C\+P\+H\+\_\+\+F\+L\+A\+GS}(phdr)~((\hyperlink{group__compiler__abstraction_ga77570ac4fcab86864fa1916e55676da2}{u16\+\_\+t})(\hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2def_8h_ac642bf6057869696d7807564d8309ffc}{lwip\+\_\+ntohs}((phdr)-\/$>$\+\_\+hdrlen\+\_\+rsvd\+\_\+flags) \& \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2tcp_8h_a75dbc3ac2d65c23a60dbe2f96a874501}{T\+C\+P\+\_\+\+F\+L\+A\+GS}))
+\item 
+\#define \hyperlink{native_2lwip_2src_2include_2lwip_2prot_2tcp_8h_a8c29d17957680854699ac2e5dab9aca4}{T\+C\+P\+H\+\_\+\+H\+D\+R\+L\+E\+N\+\_\+\+S\+ET}(phdr,  len)~(phdr)-\/$>$\+\_\+hdrlen\+\_\+rsvd\+\_\+flags = \hyperlink{openmote-cc2538_2lwip_2src_2core_2def_8c_ad637280639de4066392e6b5614fa3e56}{lwip\+\_\+htons}(((len) $<$$<$ 12) $\vert$ \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2tcp_8h_ad5de3cf876b2c7f6835f44132fe0e9d5}{T\+C\+P\+H\+\_\+\+F\+L\+A\+GS}(phdr))
+\item 
+\#define \hyperlink{native_2lwip_2src_2include_2lwip_2prot_2tcp_8h_afe7c917080459557c65071c4b13c8e12}{T\+C\+P\+H\+\_\+\+F\+L\+A\+G\+S\+\_\+\+S\+ET}(phdr,  flags)~(phdr)-\/$>$\+\_\+hdrlen\+\_\+rsvd\+\_\+flags = (((phdr)-\/$>$\+\_\+hdrlen\+\_\+rsvd\+\_\+flags \& \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2def_8h_a0dfd02d7c09f9c698a5a7ecc0b7287ad}{P\+P\+\_\+\+H\+T\+O\+NS}($\sim$\hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2tcp_8h_a75dbc3ac2d65c23a60dbe2f96a874501}{T\+C\+P\+\_\+\+F\+L\+A\+GS})) $\vert$ \hyperlink{openmote-cc2538_2lwip_2src_2core_2def_8c_ad637280639de4066392e6b5614fa3e56}{lwip\+\_\+htons}(flags))
+\item 
+\#define \hyperlink{native_2lwip_2src_2include_2lwip_2prot_2tcp_8h_a57fb29aed8df21ccff4481612ee40407}{T\+C\+P\+H\+\_\+\+H\+D\+R\+L\+E\+N\+\_\+\+F\+L\+A\+G\+S\+\_\+\+S\+ET}(phdr,  len,  flags)~(phdr)-\/$>$\+\_\+hdrlen\+\_\+rsvd\+\_\+flags = (\hyperlink{group__compiler__abstraction_ga77570ac4fcab86864fa1916e55676da2}{u16\+\_\+t})(\hyperlink{openmote-cc2538_2lwip_2src_2core_2def_8c_ad637280639de4066392e6b5614fa3e56}{lwip\+\_\+htons}((\hyperlink{group__compiler__abstraction_ga77570ac4fcab86864fa1916e55676da2}{u16\+\_\+t})((len) $<$$<$ 12) $\vert$ (flags)))
+\item 
+\#define \hyperlink{native_2lwip_2src_2include_2lwip_2prot_2tcp_8h_a42432f2dde6716ecb0087ccbc47cc75b}{T\+C\+P\+H\+\_\+\+S\+E\+T\+\_\+\+F\+L\+AG}(phdr,  flags)~(phdr)-\/$>$\+\_\+hdrlen\+\_\+rsvd\+\_\+flags = ((phdr)-\/$>$\+\_\+hdrlen\+\_\+rsvd\+\_\+flags $\vert$ \hyperlink{openmote-cc2538_2lwip_2src_2core_2def_8c_ad637280639de4066392e6b5614fa3e56}{lwip\+\_\+htons}(flags))
+\item 
+\#define \hyperlink{native_2lwip_2src_2include_2lwip_2prot_2tcp_8h_adc07c9186474e45d2fc40e9efc76d2ba}{T\+C\+P\+H\+\_\+\+U\+N\+S\+E\+T\+\_\+\+F\+L\+AG}(phdr,  flags)~(phdr)-\/$>$\+\_\+hdrlen\+\_\+rsvd\+\_\+flags = ((phdr)-\/$>$\+\_\+hdrlen\+\_\+rsvd\+\_\+flags \& $\sim$\hyperlink{openmote-cc2538_2lwip_2src_2core_2def_8c_ad637280639de4066392e6b5614fa3e56}{lwip\+\_\+htons}(flags))
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group__compiler__abstraction_ga73199061891adf1b912d20835c7d5e96}{P\+A\+C\+K\+\_\+\+S\+T\+R\+U\+C\+T\+\_\+\+B\+E\+G\+IN} struct \hyperlink{structtcp__hdr}{tcp\+\_\+hdr} \hyperlink{native_2lwip_2src_2include_2lwip_2prot_2tcp_8h_a29212dd70e32fb34e4db4ea46fe8cfdb}{P\+A\+C\+K\+\_\+\+S\+T\+R\+U\+C\+T\+\_\+\+S\+T\+R\+U\+CT}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+T\+CP protocol definitions 
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{native_2lwip_2src_2include_2lwip_2prot_2tcp_8h_a44b3b1ab31a403ba28ec135adfcbefef}\label{native_2lwip_2src_2include_2lwip_2prot_2tcp_8h_a44b3b1ab31a403ba28ec135adfcbefef}} 
+\index{native/lwip/src/include/lwip/prot/tcp.\+h@{native/lwip/src/include/lwip/prot/tcp.\+h}!T\+C\+P\+\_\+\+A\+CK@{T\+C\+P\+\_\+\+A\+CK}}
+\index{T\+C\+P\+\_\+\+A\+CK@{T\+C\+P\+\_\+\+A\+CK}!native/lwip/src/include/lwip/prot/tcp.\+h@{native/lwip/src/include/lwip/prot/tcp.\+h}}
+\subsubsection{\texorpdfstring{T\+C\+P\+\_\+\+A\+CK}{TCP\_ACK}}
+{\footnotesize\ttfamily \#define T\+C\+P\+\_\+\+A\+CK~0x10U}
+
+\mbox{\Hypertarget{native_2lwip_2src_2include_2lwip_2prot_2tcp_8h_a6f441228e74f83c026c48360667beb48}\label{native_2lwip_2src_2include_2lwip_2prot_2tcp_8h_a6f441228e74f83c026c48360667beb48}} 
+\index{native/lwip/src/include/lwip/prot/tcp.\+h@{native/lwip/src/include/lwip/prot/tcp.\+h}!T\+C\+P\+\_\+\+C\+WR@{T\+C\+P\+\_\+\+C\+WR}}
+\index{T\+C\+P\+\_\+\+C\+WR@{T\+C\+P\+\_\+\+C\+WR}!native/lwip/src/include/lwip/prot/tcp.\+h@{native/lwip/src/include/lwip/prot/tcp.\+h}}
+\subsubsection{\texorpdfstring{T\+C\+P\+\_\+\+C\+WR}{TCP\_CWR}}
+{\footnotesize\ttfamily \#define T\+C\+P\+\_\+\+C\+WR~0x80U}
+
+\mbox{\Hypertarget{native_2lwip_2src_2include_2lwip_2prot_2tcp_8h_ae6ba06711820fc4365ad0d78f70171dd}\label{native_2lwip_2src_2include_2lwip_2prot_2tcp_8h_ae6ba06711820fc4365ad0d78f70171dd}} 
+\index{native/lwip/src/include/lwip/prot/tcp.\+h@{native/lwip/src/include/lwip/prot/tcp.\+h}!T\+C\+P\+\_\+\+E\+CE@{T\+C\+P\+\_\+\+E\+CE}}
+\index{T\+C\+P\+\_\+\+E\+CE@{T\+C\+P\+\_\+\+E\+CE}!native/lwip/src/include/lwip/prot/tcp.\+h@{native/lwip/src/include/lwip/prot/tcp.\+h}}
+\subsubsection{\texorpdfstring{T\+C\+P\+\_\+\+E\+CE}{TCP\_ECE}}
+{\footnotesize\ttfamily \#define T\+C\+P\+\_\+\+E\+CE~0x40U}
+
+\mbox{\Hypertarget{native_2lwip_2src_2include_2lwip_2prot_2tcp_8h_a88e60aa2cf23e1c65d630701db08c743}\label{native_2lwip_2src_2include_2lwip_2prot_2tcp_8h_a88e60aa2cf23e1c65d630701db08c743}} 
+\index{native/lwip/src/include/lwip/prot/tcp.\+h@{native/lwip/src/include/lwip/prot/tcp.\+h}!T\+C\+P\+\_\+\+F\+IN@{T\+C\+P\+\_\+\+F\+IN}}
+\index{T\+C\+P\+\_\+\+F\+IN@{T\+C\+P\+\_\+\+F\+IN}!native/lwip/src/include/lwip/prot/tcp.\+h@{native/lwip/src/include/lwip/prot/tcp.\+h}}
+\subsubsection{\texorpdfstring{T\+C\+P\+\_\+\+F\+IN}{TCP\_FIN}}
+{\footnotesize\ttfamily \#define T\+C\+P\+\_\+\+F\+IN~0x01U}
+
+\mbox{\Hypertarget{native_2lwip_2src_2include_2lwip_2prot_2tcp_8h_a75dbc3ac2d65c23a60dbe2f96a874501}\label{native_2lwip_2src_2include_2lwip_2prot_2tcp_8h_a75dbc3ac2d65c23a60dbe2f96a874501}} 
+\index{native/lwip/src/include/lwip/prot/tcp.\+h@{native/lwip/src/include/lwip/prot/tcp.\+h}!T\+C\+P\+\_\+\+F\+L\+A\+GS@{T\+C\+P\+\_\+\+F\+L\+A\+GS}}
+\index{T\+C\+P\+\_\+\+F\+L\+A\+GS@{T\+C\+P\+\_\+\+F\+L\+A\+GS}!native/lwip/src/include/lwip/prot/tcp.\+h@{native/lwip/src/include/lwip/prot/tcp.\+h}}
+\subsubsection{\texorpdfstring{T\+C\+P\+\_\+\+F\+L\+A\+GS}{TCP\_FLAGS}}
+{\footnotesize\ttfamily \#define T\+C\+P\+\_\+\+F\+L\+A\+GS~0x3fU}
+
+\mbox{\Hypertarget{native_2lwip_2src_2include_2lwip_2prot_2tcp_8h_a5758db371d6daa394d178429b7c94c2a}\label{native_2lwip_2src_2include_2lwip_2prot_2tcp_8h_a5758db371d6daa394d178429b7c94c2a}} 
+\index{native/lwip/src/include/lwip/prot/tcp.\+h@{native/lwip/src/include/lwip/prot/tcp.\+h}!T\+C\+P\+\_\+\+H\+L\+EN@{T\+C\+P\+\_\+\+H\+L\+EN}}
+\index{T\+C\+P\+\_\+\+H\+L\+EN@{T\+C\+P\+\_\+\+H\+L\+EN}!native/lwip/src/include/lwip/prot/tcp.\+h@{native/lwip/src/include/lwip/prot/tcp.\+h}}
+\subsubsection{\texorpdfstring{T\+C\+P\+\_\+\+H\+L\+EN}{TCP\_HLEN}}
+{\footnotesize\ttfamily \#define T\+C\+P\+\_\+\+H\+L\+EN~20}
+
+\mbox{\Hypertarget{native_2lwip_2src_2include_2lwip_2prot_2tcp_8h_a1320fd0006a2f70138bc2d0018dda829}\label{native_2lwip_2src_2include_2lwip_2prot_2tcp_8h_a1320fd0006a2f70138bc2d0018dda829}} 
+\index{native/lwip/src/include/lwip/prot/tcp.\+h@{native/lwip/src/include/lwip/prot/tcp.\+h}!T\+C\+P\+\_\+\+P\+SH@{T\+C\+P\+\_\+\+P\+SH}}
+\index{T\+C\+P\+\_\+\+P\+SH@{T\+C\+P\+\_\+\+P\+SH}!native/lwip/src/include/lwip/prot/tcp.\+h@{native/lwip/src/include/lwip/prot/tcp.\+h}}
+\subsubsection{\texorpdfstring{T\+C\+P\+\_\+\+P\+SH}{TCP\_PSH}}
+{\footnotesize\ttfamily \#define T\+C\+P\+\_\+\+P\+SH~0x08U}
+
+\mbox{\Hypertarget{native_2lwip_2src_2include_2lwip_2prot_2tcp_8h_a5ca559def464ef20d8b1f7d32f2f160d}\label{native_2lwip_2src_2include_2lwip_2prot_2tcp_8h_a5ca559def464ef20d8b1f7d32f2f160d}} 
+\index{native/lwip/src/include/lwip/prot/tcp.\+h@{native/lwip/src/include/lwip/prot/tcp.\+h}!T\+C\+P\+\_\+\+R\+ST@{T\+C\+P\+\_\+\+R\+ST}}
+\index{T\+C\+P\+\_\+\+R\+ST@{T\+C\+P\+\_\+\+R\+ST}!native/lwip/src/include/lwip/prot/tcp.\+h@{native/lwip/src/include/lwip/prot/tcp.\+h}}
+\subsubsection{\texorpdfstring{T\+C\+P\+\_\+\+R\+ST}{TCP\_RST}}
+{\footnotesize\ttfamily \#define T\+C\+P\+\_\+\+R\+ST~0x04U}
+
+\mbox{\Hypertarget{native_2lwip_2src_2include_2lwip_2prot_2tcp_8h_a6020613f5062417d9811cfa837215c83}\label{native_2lwip_2src_2include_2lwip_2prot_2tcp_8h_a6020613f5062417d9811cfa837215c83}} 
+\index{native/lwip/src/include/lwip/prot/tcp.\+h@{native/lwip/src/include/lwip/prot/tcp.\+h}!T\+C\+P\+\_\+\+S\+YN@{T\+C\+P\+\_\+\+S\+YN}}
+\index{T\+C\+P\+\_\+\+S\+YN@{T\+C\+P\+\_\+\+S\+YN}!native/lwip/src/include/lwip/prot/tcp.\+h@{native/lwip/src/include/lwip/prot/tcp.\+h}}
+\subsubsection{\texorpdfstring{T\+C\+P\+\_\+\+S\+YN}{TCP\_SYN}}
+{\footnotesize\ttfamily \#define T\+C\+P\+\_\+\+S\+YN~0x02U}
+
+\mbox{\Hypertarget{native_2lwip_2src_2include_2lwip_2prot_2tcp_8h_ac84f499cba8a02fc0e306c10b2acabf0}\label{native_2lwip_2src_2include_2lwip_2prot_2tcp_8h_ac84f499cba8a02fc0e306c10b2acabf0}} 
+\index{native/lwip/src/include/lwip/prot/tcp.\+h@{native/lwip/src/include/lwip/prot/tcp.\+h}!T\+C\+P\+\_\+\+U\+RG@{T\+C\+P\+\_\+\+U\+RG}}
+\index{T\+C\+P\+\_\+\+U\+RG@{T\+C\+P\+\_\+\+U\+RG}!native/lwip/src/include/lwip/prot/tcp.\+h@{native/lwip/src/include/lwip/prot/tcp.\+h}}
+\subsubsection{\texorpdfstring{T\+C\+P\+\_\+\+U\+RG}{TCP\_URG}}
+{\footnotesize\ttfamily \#define T\+C\+P\+\_\+\+U\+RG~0x20U}
+
+\mbox{\Hypertarget{native_2lwip_2src_2include_2lwip_2prot_2tcp_8h_ad5de3cf876b2c7f6835f44132fe0e9d5}\label{native_2lwip_2src_2include_2lwip_2prot_2tcp_8h_ad5de3cf876b2c7f6835f44132fe0e9d5}} 
+\index{native/lwip/src/include/lwip/prot/tcp.\+h@{native/lwip/src/include/lwip/prot/tcp.\+h}!T\+C\+P\+H\+\_\+\+F\+L\+A\+GS@{T\+C\+P\+H\+\_\+\+F\+L\+A\+GS}}
+\index{T\+C\+P\+H\+\_\+\+F\+L\+A\+GS@{T\+C\+P\+H\+\_\+\+F\+L\+A\+GS}!native/lwip/src/include/lwip/prot/tcp.\+h@{native/lwip/src/include/lwip/prot/tcp.\+h}}
+\subsubsection{\texorpdfstring{T\+C\+P\+H\+\_\+\+F\+L\+A\+GS}{TCPH\_FLAGS}}
+{\footnotesize\ttfamily \#define T\+C\+P\+H\+\_\+\+F\+L\+A\+GS(\begin{DoxyParamCaption}\item[{}]{phdr }\end{DoxyParamCaption})~((\hyperlink{group__compiler__abstraction_ga77570ac4fcab86864fa1916e55676da2}{u16\+\_\+t})(\hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2def_8h_ac642bf6057869696d7807564d8309ffc}{lwip\+\_\+ntohs}((phdr)-\/$>$\+\_\+hdrlen\+\_\+rsvd\+\_\+flags) \& \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2tcp_8h_a75dbc3ac2d65c23a60dbe2f96a874501}{T\+C\+P\+\_\+\+F\+L\+A\+GS}))}
+
+\mbox{\Hypertarget{native_2lwip_2src_2include_2lwip_2prot_2tcp_8h_afe7c917080459557c65071c4b13c8e12}\label{native_2lwip_2src_2include_2lwip_2prot_2tcp_8h_afe7c917080459557c65071c4b13c8e12}} 
+\index{native/lwip/src/include/lwip/prot/tcp.\+h@{native/lwip/src/include/lwip/prot/tcp.\+h}!T\+C\+P\+H\+\_\+\+F\+L\+A\+G\+S\+\_\+\+S\+ET@{T\+C\+P\+H\+\_\+\+F\+L\+A\+G\+S\+\_\+\+S\+ET}}
+\index{T\+C\+P\+H\+\_\+\+F\+L\+A\+G\+S\+\_\+\+S\+ET@{T\+C\+P\+H\+\_\+\+F\+L\+A\+G\+S\+\_\+\+S\+ET}!native/lwip/src/include/lwip/prot/tcp.\+h@{native/lwip/src/include/lwip/prot/tcp.\+h}}
+\subsubsection{\texorpdfstring{T\+C\+P\+H\+\_\+\+F\+L\+A\+G\+S\+\_\+\+S\+ET}{TCPH\_FLAGS\_SET}}
+{\footnotesize\ttfamily \#define T\+C\+P\+H\+\_\+\+F\+L\+A\+G\+S\+\_\+\+S\+ET(\begin{DoxyParamCaption}\item[{}]{phdr,  }\item[{}]{flags }\end{DoxyParamCaption})~(phdr)-\/$>$\+\_\+hdrlen\+\_\+rsvd\+\_\+flags = (((phdr)-\/$>$\+\_\+hdrlen\+\_\+rsvd\+\_\+flags \& \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2def_8h_a0dfd02d7c09f9c698a5a7ecc0b7287ad}{P\+P\+\_\+\+H\+T\+O\+NS}($\sim$\hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2tcp_8h_a75dbc3ac2d65c23a60dbe2f96a874501}{T\+C\+P\+\_\+\+F\+L\+A\+GS})) $\vert$ \hyperlink{openmote-cc2538_2lwip_2src_2core_2def_8c_ad637280639de4066392e6b5614fa3e56}{lwip\+\_\+htons}(flags))}
+
+\mbox{\Hypertarget{native_2lwip_2src_2include_2lwip_2prot_2tcp_8h_a5b97d3b7e68c20eb3eab87a61d779223}\label{native_2lwip_2src_2include_2lwip_2prot_2tcp_8h_a5b97d3b7e68c20eb3eab87a61d779223}} 
+\index{native/lwip/src/include/lwip/prot/tcp.\+h@{native/lwip/src/include/lwip/prot/tcp.\+h}!T\+C\+P\+H\+\_\+\+H\+D\+R\+L\+EN@{T\+C\+P\+H\+\_\+\+H\+D\+R\+L\+EN}}
+\index{T\+C\+P\+H\+\_\+\+H\+D\+R\+L\+EN@{T\+C\+P\+H\+\_\+\+H\+D\+R\+L\+EN}!native/lwip/src/include/lwip/prot/tcp.\+h@{native/lwip/src/include/lwip/prot/tcp.\+h}}
+\subsubsection{\texorpdfstring{T\+C\+P\+H\+\_\+\+H\+D\+R\+L\+EN}{TCPH\_HDRLEN}}
+{\footnotesize\ttfamily \#define T\+C\+P\+H\+\_\+\+H\+D\+R\+L\+EN(\begin{DoxyParamCaption}\item[{}]{phdr }\end{DoxyParamCaption})~((\hyperlink{group__compiler__abstraction_ga77570ac4fcab86864fa1916e55676da2}{u16\+\_\+t})(\hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2def_8h_ac642bf6057869696d7807564d8309ffc}{lwip\+\_\+ntohs}((phdr)-\/$>$\+\_\+hdrlen\+\_\+rsvd\+\_\+flags) $>$$>$ 12))}
+
+\mbox{\Hypertarget{native_2lwip_2src_2include_2lwip_2prot_2tcp_8h_a57fb29aed8df21ccff4481612ee40407}\label{native_2lwip_2src_2include_2lwip_2prot_2tcp_8h_a57fb29aed8df21ccff4481612ee40407}} 
+\index{native/lwip/src/include/lwip/prot/tcp.\+h@{native/lwip/src/include/lwip/prot/tcp.\+h}!T\+C\+P\+H\+\_\+\+H\+D\+R\+L\+E\+N\+\_\+\+F\+L\+A\+G\+S\+\_\+\+S\+ET@{T\+C\+P\+H\+\_\+\+H\+D\+R\+L\+E\+N\+\_\+\+F\+L\+A\+G\+S\+\_\+\+S\+ET}}
+\index{T\+C\+P\+H\+\_\+\+H\+D\+R\+L\+E\+N\+\_\+\+F\+L\+A\+G\+S\+\_\+\+S\+ET@{T\+C\+P\+H\+\_\+\+H\+D\+R\+L\+E\+N\+\_\+\+F\+L\+A\+G\+S\+\_\+\+S\+ET}!native/lwip/src/include/lwip/prot/tcp.\+h@{native/lwip/src/include/lwip/prot/tcp.\+h}}
+\subsubsection{\texorpdfstring{T\+C\+P\+H\+\_\+\+H\+D\+R\+L\+E\+N\+\_\+\+F\+L\+A\+G\+S\+\_\+\+S\+ET}{TCPH\_HDRLEN\_FLAGS\_SET}}
+{\footnotesize\ttfamily \#define T\+C\+P\+H\+\_\+\+H\+D\+R\+L\+E\+N\+\_\+\+F\+L\+A\+G\+S\+\_\+\+S\+ET(\begin{DoxyParamCaption}\item[{}]{phdr,  }\item[{}]{len,  }\item[{}]{flags }\end{DoxyParamCaption})~(phdr)-\/$>$\+\_\+hdrlen\+\_\+rsvd\+\_\+flags = (\hyperlink{group__compiler__abstraction_ga77570ac4fcab86864fa1916e55676da2}{u16\+\_\+t})(\hyperlink{openmote-cc2538_2lwip_2src_2core_2def_8c_ad637280639de4066392e6b5614fa3e56}{lwip\+\_\+htons}((\hyperlink{group__compiler__abstraction_ga77570ac4fcab86864fa1916e55676da2}{u16\+\_\+t})((len) $<$$<$ 12) $\vert$ (flags)))}
+
+\mbox{\Hypertarget{native_2lwip_2src_2include_2lwip_2prot_2tcp_8h_a8c29d17957680854699ac2e5dab9aca4}\label{native_2lwip_2src_2include_2lwip_2prot_2tcp_8h_a8c29d17957680854699ac2e5dab9aca4}} 
+\index{native/lwip/src/include/lwip/prot/tcp.\+h@{native/lwip/src/include/lwip/prot/tcp.\+h}!T\+C\+P\+H\+\_\+\+H\+D\+R\+L\+E\+N\+\_\+\+S\+ET@{T\+C\+P\+H\+\_\+\+H\+D\+R\+L\+E\+N\+\_\+\+S\+ET}}
+\index{T\+C\+P\+H\+\_\+\+H\+D\+R\+L\+E\+N\+\_\+\+S\+ET@{T\+C\+P\+H\+\_\+\+H\+D\+R\+L\+E\+N\+\_\+\+S\+ET}!native/lwip/src/include/lwip/prot/tcp.\+h@{native/lwip/src/include/lwip/prot/tcp.\+h}}
+\subsubsection{\texorpdfstring{T\+C\+P\+H\+\_\+\+H\+D\+R\+L\+E\+N\+\_\+\+S\+ET}{TCPH\_HDRLEN\_SET}}
+{\footnotesize\ttfamily \#define T\+C\+P\+H\+\_\+\+H\+D\+R\+L\+E\+N\+\_\+\+S\+ET(\begin{DoxyParamCaption}\item[{}]{phdr,  }\item[{}]{len }\end{DoxyParamCaption})~(phdr)-\/$>$\+\_\+hdrlen\+\_\+rsvd\+\_\+flags = \hyperlink{openmote-cc2538_2lwip_2src_2core_2def_8c_ad637280639de4066392e6b5614fa3e56}{lwip\+\_\+htons}(((len) $<$$<$ 12) $\vert$ \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2tcp_8h_ad5de3cf876b2c7f6835f44132fe0e9d5}{T\+C\+P\+H\+\_\+\+F\+L\+A\+GS}(phdr))}
+
+\mbox{\Hypertarget{native_2lwip_2src_2include_2lwip_2prot_2tcp_8h_a42432f2dde6716ecb0087ccbc47cc75b}\label{native_2lwip_2src_2include_2lwip_2prot_2tcp_8h_a42432f2dde6716ecb0087ccbc47cc75b}} 
+\index{native/lwip/src/include/lwip/prot/tcp.\+h@{native/lwip/src/include/lwip/prot/tcp.\+h}!T\+C\+P\+H\+\_\+\+S\+E\+T\+\_\+\+F\+L\+AG@{T\+C\+P\+H\+\_\+\+S\+E\+T\+\_\+\+F\+L\+AG}}
+\index{T\+C\+P\+H\+\_\+\+S\+E\+T\+\_\+\+F\+L\+AG@{T\+C\+P\+H\+\_\+\+S\+E\+T\+\_\+\+F\+L\+AG}!native/lwip/src/include/lwip/prot/tcp.\+h@{native/lwip/src/include/lwip/prot/tcp.\+h}}
+\subsubsection{\texorpdfstring{T\+C\+P\+H\+\_\+\+S\+E\+T\+\_\+\+F\+L\+AG}{TCPH\_SET\_FLAG}}
+{\footnotesize\ttfamily \#define T\+C\+P\+H\+\_\+\+S\+E\+T\+\_\+\+F\+L\+AG(\begin{DoxyParamCaption}\item[{}]{phdr,  }\item[{}]{flags }\end{DoxyParamCaption})~(phdr)-\/$>$\+\_\+hdrlen\+\_\+rsvd\+\_\+flags = ((phdr)-\/$>$\+\_\+hdrlen\+\_\+rsvd\+\_\+flags $\vert$ \hyperlink{openmote-cc2538_2lwip_2src_2core_2def_8c_ad637280639de4066392e6b5614fa3e56}{lwip\+\_\+htons}(flags))}
+
+\mbox{\Hypertarget{native_2lwip_2src_2include_2lwip_2prot_2tcp_8h_adc07c9186474e45d2fc40e9efc76d2ba}\label{native_2lwip_2src_2include_2lwip_2prot_2tcp_8h_adc07c9186474e45d2fc40e9efc76d2ba}} 
+\index{native/lwip/src/include/lwip/prot/tcp.\+h@{native/lwip/src/include/lwip/prot/tcp.\+h}!T\+C\+P\+H\+\_\+\+U\+N\+S\+E\+T\+\_\+\+F\+L\+AG@{T\+C\+P\+H\+\_\+\+U\+N\+S\+E\+T\+\_\+\+F\+L\+AG}}
+\index{T\+C\+P\+H\+\_\+\+U\+N\+S\+E\+T\+\_\+\+F\+L\+AG@{T\+C\+P\+H\+\_\+\+U\+N\+S\+E\+T\+\_\+\+F\+L\+AG}!native/lwip/src/include/lwip/prot/tcp.\+h@{native/lwip/src/include/lwip/prot/tcp.\+h}}
+\subsubsection{\texorpdfstring{T\+C\+P\+H\+\_\+\+U\+N\+S\+E\+T\+\_\+\+F\+L\+AG}{TCPH\_UNSET\_FLAG}}
+{\footnotesize\ttfamily \#define T\+C\+P\+H\+\_\+\+U\+N\+S\+E\+T\+\_\+\+F\+L\+AG(\begin{DoxyParamCaption}\item[{}]{phdr,  }\item[{}]{flags }\end{DoxyParamCaption})~(phdr)-\/$>$\+\_\+hdrlen\+\_\+rsvd\+\_\+flags = ((phdr)-\/$>$\+\_\+hdrlen\+\_\+rsvd\+\_\+flags \& $\sim$\hyperlink{openmote-cc2538_2lwip_2src_2core_2def_8c_ad637280639de4066392e6b5614fa3e56}{lwip\+\_\+htons}(flags))}
+
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{native_2lwip_2src_2include_2lwip_2prot_2tcp_8h_a29212dd70e32fb34e4db4ea46fe8cfdb}\label{native_2lwip_2src_2include_2lwip_2prot_2tcp_8h_a29212dd70e32fb34e4db4ea46fe8cfdb}} 
+\index{native/lwip/src/include/lwip/prot/tcp.\+h@{native/lwip/src/include/lwip/prot/tcp.\+h}!P\+A\+C\+K\+\_\+\+S\+T\+R\+U\+C\+T\+\_\+\+S\+T\+R\+U\+CT@{P\+A\+C\+K\+\_\+\+S\+T\+R\+U\+C\+T\+\_\+\+S\+T\+R\+U\+CT}}
+\index{P\+A\+C\+K\+\_\+\+S\+T\+R\+U\+C\+T\+\_\+\+S\+T\+R\+U\+CT@{P\+A\+C\+K\+\_\+\+S\+T\+R\+U\+C\+T\+\_\+\+S\+T\+R\+U\+CT}!native/lwip/src/include/lwip/prot/tcp.\+h@{native/lwip/src/include/lwip/prot/tcp.\+h}}
+\subsubsection{\texorpdfstring{P\+A\+C\+K\+\_\+\+S\+T\+R\+U\+C\+T\+\_\+\+S\+T\+R\+U\+CT}{PACK\_STRUCT\_STRUCT}}
+{\footnotesize\ttfamily \hyperlink{group__compiler__abstraction_ga73199061891adf1b912d20835c7d5e96}{P\+A\+C\+K\+\_\+\+S\+T\+R\+U\+C\+T\+\_\+\+B\+E\+G\+IN} struct \hyperlink{structtcp__hdr}{tcp\+\_\+hdr}  P\+A\+C\+K\+\_\+\+S\+T\+R\+U\+C\+T\+\_\+\+S\+T\+R\+U\+CT}
+

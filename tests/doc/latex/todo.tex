@@ -1,0 +1,69 @@
+
+\begin{DoxyRefList}
+\item[\label{todo__todo000009}%
+\Hypertarget{todo__todo000009}%
+Module \hyperlink{group__dhcp4}{dhcp4} ]\+:
+\begin{DoxyItemize}
+\item Support for interfaces other than Ethernet (S\+L\+IP, P\+PP, ...)
+\end{DoxyItemize}
+
+\+:
+\begin{DoxyItemize}
+\item Support for interfaces other than Ethernet (S\+L\+IP, P\+PP, ...) 
+\end{DoxyItemize}
+\item[\label{todo__todo000002}%
+\Hypertarget{todo__todo000002}%
+Module \hyperlink{group__iperf}{iperf} ]\+: implement U\+DP mode and I\+Pv6 
+
+\+: implement U\+DP mode and I\+Pv6  
+\item[\label{todo__todo000011}%
+\Hypertarget{todo__todo000011}%
+Member \hyperlink{group__lwip__opts__netif_gabafb9f64a80e51b56c0abbcfc1f7e04e}{L\+W\+I\+P\+\_\+\+N\+E\+T\+I\+F\+\_\+\+T\+X\+\_\+\+S\+I\+N\+G\+L\+E\+\_\+\+P\+B\+UF} ]\+: T\+CP and I\+P-\/frag do not work with this, yet\+: 
+
+\+: T\+CP and I\+P-\/frag do not work with this, yet\+:  
+\item[\label{todo__todo000001}%
+\Hypertarget{todo__todo000001}%
+Member \hyperlink{native_2lwip_2src_2apps_2httpd_2makefsdata_2makefsdata_8c_a9876b64c23e0e5cec59f0c72305b6695}{M\+A\+K\+E\+F\+S\+\_\+\+S\+U\+P\+P\+O\+R\+T\+\_\+\+D\+E\+F\+L\+A\+TE} ]\+:
+\begin{DoxyItemize}
+\item take T\+C\+P\+\_\+\+M\+SS, L\+W\+I\+P\+\_\+\+T\+C\+P\+\_\+\+T\+I\+M\+E\+S\+T\+A\+M\+PS and P\+A\+Y\+L\+O\+A\+D\+\_\+\+A\+L\+I\+G\+N\+\_\+\+T\+Y\+P\+E/\+P\+A\+Y\+L\+O\+A\+D\+\_\+\+A\+L\+I\+G\+N\+M\+E\+NT as arguments 
+\end{DoxyItemize}
+
+\+:
+\begin{DoxyItemize}
+\item take T\+C\+P\+\_\+\+M\+SS, L\+W\+I\+P\+\_\+\+T\+C\+P\+\_\+\+T\+I\+M\+E\+S\+T\+A\+M\+PS and P\+A\+Y\+L\+O\+A\+D\+\_\+\+A\+L\+I\+G\+N\+\_\+\+T\+Y\+P\+E/\+P\+A\+Y\+L\+O\+A\+D\+\_\+\+A\+L\+I\+G\+N\+M\+E\+NT as arguments  
+\end{DoxyItemize}
+\item[\label{todo__todo000014}%
+\Hypertarget{todo__todo000014}%
+File \hyperlink{openmote-cc2538_2lwip_2src_2apps_2snmp_2snmp__asn1_8c}{snmp\+\_\+asn1.c} ]not optimised (yet), favor correctness over speed, favor speed over size  
+\item[\label{todo__todo000003}%
+\Hypertarget{todo__todo000003}%
+File \hyperlink{native_2lwip_2src_2apps_2snmp_2snmp__asn1_8c}{snmp\+\_\+asn1.c} ]not optimised (yet), favor correctness over speed, favor speed over size  
+\item[\label{todo__todo000004}%
+\Hypertarget{todo__todo000004}%
+Module \hyperlink{group__sntp}{sntp} ]\+:
+\begin{DoxyItemize}
+\item set/change servers at runtime
+\item complete S\+N\+T\+P\+\_\+\+C\+H\+E\+C\+K\+\_\+\+R\+E\+S\+P\+O\+N\+SE checks 3 and 4 
+\end{DoxyItemize}
+
+\+:
+\begin{DoxyItemize}
+\item set/change servers at runtime
+\item complete S\+N\+T\+P\+\_\+\+C\+H\+E\+C\+K\+\_\+\+R\+E\+S\+P\+O\+N\+SE checks 3 and 4  
+\end{DoxyItemize}
+\item[\label{todo__todo000010}%
+\Hypertarget{todo__todo000010}%
+Member \hyperlink{group__sntp__opts_ga7d4e12d90912d486e64f289d7f3ca446}{S\+N\+T\+P\+\_\+\+C\+H\+E\+C\+K\+\_\+\+R\+E\+S\+P\+O\+N\+SE} ]\+: discard reply if any of the LI, Stratum, or Transmit Timestamp fields is 0 or the Mode field is not 4 (unicast) or 5 (broadcast).
+\begin{DoxyItemize}
+\item $>$= 4 
+\end{DoxyItemize}
+
+\+: to check that the Root Delay and Root Dispersion fields are each greater than or equal to 0 and less than infinity, where infinity is currently a cozy number like one second. This check avoids using a server whose synchronization source has expired for a very long time. 
+
+\+: discard reply if any of the LI, Stratum, or Transmit Timestamp fields is 0 or the Mode field is not 4 (unicast) or 5 (broadcast).
+\begin{DoxyItemize}
+\item $>$= 4 
+\end{DoxyItemize}
+
+\+: to check that the Root Delay and Root Dispersion fields are each greater than or equal to 0 and less than infinity, where infinity is currently a cozy number like one second. This check avoids using a server whose synchronization source has expired for a very long time. 
+\end{DoxyRefList}

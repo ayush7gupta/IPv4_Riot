@@ -1,0 +1,25 @@
+This folder contains a test application for R\+I\+OT\textquotesingle{}s sock-\/based D\+NS client.
+
+\section*{How to test with native}
+
+Setup up a tap interface\+: \begin{DoxyVerb}$ sudo ip tuntap add dev tap0 mode tap user $(id -u -n)
+$ sudo ip a a 2001:db8::1/64 dev tap0
+$ sudo ip link set up dev tap0
+\end{DoxyVerb}
+
+
+Start dnsmasq (in another console)\+: \begin{DoxyVerb}$ sudo dnsmasq -d -2 -z -i tap0 -q --no-resolv \
+    --dhcp-range=::1,constructor:tap0,ra-only \
+    --listen-address 2001:db8::1 \
+    --host-record=example.org,10.0.0.1,2001:db8::1
+\end{DoxyVerb}
+
+
+(Network\+Manager is known to start an interfering dnsmasq instance. It needs to be stopped before this test.)
+
+Then run the test application \begin{DoxyVerb}$ make term
+\end{DoxyVerb}
+
+
+The application will take a little while to auto-\/configure it\textquotesingle{}s IP address. Then you should see something like \begin{DoxyVerb}example.org resolves to 2001:db8::1\end{DoxyVerb}
+ 

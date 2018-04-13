@@ -1,0 +1,53 @@
+This is a manual test application for the P\+IR motion sensor driver.
+
+In order to build this application, you need to add the board to the Makefile\textquotesingle{}s {\ttfamily W\+H\+I\+T\+E\+L\+I\+ST} first and define a pin mapping (see below).
+
+\section*{Usage}
+
+There are two ways to test this. You can either actively poll the sensor state, or you can register a thread which receives messages for state changes.
+
+\subsection*{Interrupt driven}
+
+Connect the sensor\textquotesingle{}s \char`\"{}out\char`\"{} pin to a G\+P\+IO of your board that can be configured to create interrupts. Compile and flash this test application like\+: \begin{DoxyVerb}export BOARD=your_board
+export PIR_GPIO=name_of_your_pin
+make clean
+make all-interrupt
+make flash
+\end{DoxyVerb}
+
+
+The output should look like\+: \begin{DoxyVerb}kernel_init(): jumping into first task...
+
+PIR motion sensor test application
+
+Initializing PIR sensor at GPIO_8... [OK]
+
+Registering PIR handler thread...     [OK]
+PIR handler got a message: the movement has ceased.
+PIR handler got a message: something started moving.
+PIR handler got a message: the movement has ceased.
+\end{DoxyVerb}
+
+
+\subsection*{Polling Mode}
+
+Connect the sensor\textquotesingle{}s \char`\"{}out\char`\"{} pin to any G\+P\+IO pin of you board. Compile and flash this test application like\+: \begin{DoxyVerb}export BOARD=your_board
+export PIR_GPIO=name_of_your_pin
+make clean
+make all-polling
+make flash
+\end{DoxyVerb}
+
+
+The output should look like this\+: \begin{DoxyVerb}kernel_init(): jumping into first task...
+PIR motion sensor test application
+
+Initializing PIR sensor at GPIO_10... [OK]
+
+Printing sensor state every second.
+Status: lo
+...
+Status: lo
+Status: hi
+...\end{DoxyVerb}
+ 

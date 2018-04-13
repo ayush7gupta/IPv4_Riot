@@ -1,0 +1,103 @@
+\hypertarget{gnrc__sock__dns_2main_8c}{}\section{/home/ayush/\+R\+I\+O\+T/tests/gnrc\+\_\+sock\+\_\+dns/main.c File Reference}
+\label{gnrc__sock__dns_2main_8c}\index{/home/ayush/\+R\+I\+O\+T/tests/gnrc\+\_\+sock\+\_\+dns/main.\+c@{/home/ayush/\+R\+I\+O\+T/tests/gnrc\+\_\+sock\+\_\+dns/main.\+c}}
+
+
+sock D\+NS client test application  
+
+
+{\ttfamily \#include $<$stddef.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$arpa/inet.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}net/sock/dns.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}net/sock/util.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}xtimer.\+h\char`\"{}}\newline
+Include dependency graph for main.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{gnrc__sock__dns_2main_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{gnrc__sock__dns_2main_8c_a57564a6694319222956aabe9936b2942}{T\+E\+S\+T\+\_\+\+N\+A\+ME}~\char`\"{}example.\+org\char`\"{}
+\item 
+\#define \hyperlink{gnrc__sock__dns_2main_8c_aecb97e431c2c80838638ccfa0319c1fc}{D\+N\+S\+\_\+\+S\+E\+R\+V\+ER}~\char`\"{}\mbox{[}2001\+:db8\+::1\mbox{]}\+:53\char`\"{}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{gnrc__sock__dns_2main_8c_a15adfec4f4e1ffea6c8fdeeeecad85fa}{\+\_\+netif\+\_\+config} (int argc, char $\ast$$\ast$argv)
+\item 
+int \hyperlink{gnrc__sock__dns_2main_8c_a840291bc02cba5474a4cb46a9b9566fe}{main} (void)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+sock\+\_\+udp\+\_\+ep\+\_\+t \hyperlink{gnrc__sock__dns_2main_8c_a99ea302f97897ac95d47f1cb83b2ac91}{sock\+\_\+dns\+\_\+server}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+sock D\+NS client test application 
+
+\begin{DoxyAuthor}{Author}
+Kaspar Schleiser \href{mailto:kaspar@schleiser.de}{\tt kaspar@schleiser.\+de} 
+\end{DoxyAuthor}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{gnrc__sock__dns_2main_8c_aecb97e431c2c80838638ccfa0319c1fc}\label{gnrc__sock__dns_2main_8c_aecb97e431c2c80838638ccfa0319c1fc}} 
+\index{gnrc\+\_\+sock\+\_\+dns/main.\+c@{gnrc\+\_\+sock\+\_\+dns/main.\+c}!D\+N\+S\+\_\+\+S\+E\+R\+V\+ER@{D\+N\+S\+\_\+\+S\+E\+R\+V\+ER}}
+\index{D\+N\+S\+\_\+\+S\+E\+R\+V\+ER@{D\+N\+S\+\_\+\+S\+E\+R\+V\+ER}!gnrc\+\_\+sock\+\_\+dns/main.\+c@{gnrc\+\_\+sock\+\_\+dns/main.\+c}}
+\subsubsection{\texorpdfstring{D\+N\+S\+\_\+\+S\+E\+R\+V\+ER}{DNS\_SERVER}}
+{\footnotesize\ttfamily \#define D\+N\+S\+\_\+\+S\+E\+R\+V\+ER~\char`\"{}\mbox{[}2001\+:db8\+::1\mbox{]}\+:53\char`\"{}}
+
+\mbox{\Hypertarget{gnrc__sock__dns_2main_8c_a57564a6694319222956aabe9936b2942}\label{gnrc__sock__dns_2main_8c_a57564a6694319222956aabe9936b2942}} 
+\index{gnrc\+\_\+sock\+\_\+dns/main.\+c@{gnrc\+\_\+sock\+\_\+dns/main.\+c}!T\+E\+S\+T\+\_\+\+N\+A\+ME@{T\+E\+S\+T\+\_\+\+N\+A\+ME}}
+\index{T\+E\+S\+T\+\_\+\+N\+A\+ME@{T\+E\+S\+T\+\_\+\+N\+A\+ME}!gnrc\+\_\+sock\+\_\+dns/main.\+c@{gnrc\+\_\+sock\+\_\+dns/main.\+c}}
+\subsubsection{\texorpdfstring{T\+E\+S\+T\+\_\+\+N\+A\+ME}{TEST\_NAME}}
+{\footnotesize\ttfamily \#define T\+E\+S\+T\+\_\+\+N\+A\+ME~\char`\"{}example.\+org\char`\"{}}
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{gnrc__sock__dns_2main_8c_a15adfec4f4e1ffea6c8fdeeeecad85fa}\label{gnrc__sock__dns_2main_8c_a15adfec4f4e1ffea6c8fdeeeecad85fa}} 
+\index{gnrc\+\_\+sock\+\_\+dns/main.\+c@{gnrc\+\_\+sock\+\_\+dns/main.\+c}!\+\_\+netif\+\_\+config@{\+\_\+netif\+\_\+config}}
+\index{\+\_\+netif\+\_\+config@{\+\_\+netif\+\_\+config}!gnrc\+\_\+sock\+\_\+dns/main.\+c@{gnrc\+\_\+sock\+\_\+dns/main.\+c}}
+\subsubsection{\texorpdfstring{\+\_\+netif\+\_\+config()}{\_netif\_config()}}
+{\footnotesize\ttfamily int \+\_\+netif\+\_\+config (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$$\ast$}]{argv }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=226pt]{gnrc__sock__dns_2main_8c_a15adfec4f4e1ffea6c8fdeeeecad85fa_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{gnrc__sock__dns_2main_8c_a840291bc02cba5474a4cb46a9b9566fe}\label{gnrc__sock__dns_2main_8c_a840291bc02cba5474a4cb46a9b9566fe}} 
+\index{gnrc\+\_\+sock\+\_\+dns/main.\+c@{gnrc\+\_\+sock\+\_\+dns/main.\+c}!main@{main}}
+\index{main@{main}!gnrc\+\_\+sock\+\_\+dns/main.\+c@{gnrc\+\_\+sock\+\_\+dns/main.\+c}}
+\subsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=226pt]{gnrc__sock__dns_2main_8c_a840291bc02cba5474a4cb46a9b9566fe_cgraph}
+\end{center}
+\end{figure}
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{gnrc__sock__dns_2main_8c_a99ea302f97897ac95d47f1cb83b2ac91}\label{gnrc__sock__dns_2main_8c_a99ea302f97897ac95d47f1cb83b2ac91}} 
+\index{gnrc\+\_\+sock\+\_\+dns/main.\+c@{gnrc\+\_\+sock\+\_\+dns/main.\+c}!sock\+\_\+dns\+\_\+server@{sock\+\_\+dns\+\_\+server}}
+\index{sock\+\_\+dns\+\_\+server@{sock\+\_\+dns\+\_\+server}!gnrc\+\_\+sock\+\_\+dns/main.\+c@{gnrc\+\_\+sock\+\_\+dns/main.\+c}}
+\subsubsection{\texorpdfstring{sock\+\_\+dns\+\_\+server}{sock\_dns\_server}}
+{\footnotesize\ttfamily sock\+\_\+udp\+\_\+ep\+\_\+t sock\+\_\+dns\+\_\+server}
+

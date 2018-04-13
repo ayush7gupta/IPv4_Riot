@@ -1,0 +1,88 @@
+\hypertarget{structpbuf}{}\section{pbuf Struct Reference}
+\label{structpbuf}\index{pbuf@{pbuf}}
+
+
+{\ttfamily \#include $<$pbuf.\+h$>$}
+
+
+
+Collaboration diagram for pbuf\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=155pt]{structpbuf__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structpbuf}{pbuf} $\ast$ \hyperlink{structpbuf_a41ea0f0854e54c5b8492aebf096b9247}{next}
+\item 
+void $\ast$ \hyperlink{structpbuf_a11fb0edc141d71761d1f928c63c72c7e}{payload}
+\item 
+\hyperlink{group__compiler__abstraction_ga77570ac4fcab86864fa1916e55676da2}{u16\+\_\+t} \hyperlink{structpbuf_a5259e7ec29bab9c0999b64f2e86b411f}{tot\+\_\+len}
+\item 
+\hyperlink{group__compiler__abstraction_ga77570ac4fcab86864fa1916e55676da2}{u16\+\_\+t} \hyperlink{structpbuf_a6f82449625e36e294f5d210268c0703f}{len}
+\item 
+\hyperlink{group__compiler__abstraction_ga4caecabca98b43919dd11be1c0d4cd8e}{u8\+\_\+t} \hyperlink{structpbuf_afd7bff5210a022424caa97d2f25fe8e6}{type}
+\item 
+\hyperlink{group__compiler__abstraction_ga4caecabca98b43919dd11be1c0d4cd8e}{u8\+\_\+t} \hyperlink{structpbuf_aa4d1af2cab3d9280d29212095b5b872a}{flags}
+\item 
+\hyperlink{group__compiler__abstraction_ga77570ac4fcab86864fa1916e55676da2}{u16\+\_\+t} \hyperlink{structpbuf_a18e2c02942feb1baa3756fcd585b6731}{ref}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Main packet buffer struct 
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{structpbuf_aa4d1af2cab3d9280d29212095b5b872a}\label{structpbuf_aa4d1af2cab3d9280d29212095b5b872a}} 
+\index{pbuf@{pbuf}!flags@{flags}}
+\index{flags@{flags}!pbuf@{pbuf}}
+\subsubsection{\texorpdfstring{flags}{flags}}
+{\footnotesize\ttfamily \hyperlink{group__compiler__abstraction_ga4caecabca98b43919dd11be1c0d4cd8e}{u8\+\_\+t} pbuf\+::flags}
+
+misc flags \mbox{\Hypertarget{structpbuf_a6f82449625e36e294f5d210268c0703f}\label{structpbuf_a6f82449625e36e294f5d210268c0703f}} 
+\index{pbuf@{pbuf}!len@{len}}
+\index{len@{len}!pbuf@{pbuf}}
+\subsubsection{\texorpdfstring{len}{len}}
+{\footnotesize\ttfamily \hyperlink{group__compiler__abstraction_ga77570ac4fcab86864fa1916e55676da2}{u16\+\_\+t} pbuf\+::len}
+
+length of this buffer \mbox{\Hypertarget{structpbuf_a41ea0f0854e54c5b8492aebf096b9247}\label{structpbuf_a41ea0f0854e54c5b8492aebf096b9247}} 
+\index{pbuf@{pbuf}!next@{next}}
+\index{next@{next}!pbuf@{pbuf}}
+\subsubsection{\texorpdfstring{next}{next}}
+{\footnotesize\ttfamily struct \hyperlink{structpbuf}{pbuf} $\ast$ pbuf\+::next}
+
+next pbuf in singly linked pbuf chain \mbox{\Hypertarget{structpbuf_a11fb0edc141d71761d1f928c63c72c7e}\label{structpbuf_a11fb0edc141d71761d1f928c63c72c7e}} 
+\index{pbuf@{pbuf}!payload@{payload}}
+\index{payload@{payload}!pbuf@{pbuf}}
+\subsubsection{\texorpdfstring{payload}{payload}}
+{\footnotesize\ttfamily void $\ast$ pbuf\+::payload}
+
+pointer to the actual data in the buffer \mbox{\Hypertarget{structpbuf_a18e2c02942feb1baa3756fcd585b6731}\label{structpbuf_a18e2c02942feb1baa3756fcd585b6731}} 
+\index{pbuf@{pbuf}!ref@{ref}}
+\index{ref@{ref}!pbuf@{pbuf}}
+\subsubsection{\texorpdfstring{ref}{ref}}
+{\footnotesize\ttfamily \hyperlink{group__compiler__abstraction_ga77570ac4fcab86864fa1916e55676da2}{u16\+\_\+t} pbuf\+::ref}
+
+the reference count always equals the number of pointers that refer to this pbuf. This can be pointers from an application, the stack itself, or pbuf-\/$>$next pointers from a chain. \mbox{\Hypertarget{structpbuf_a5259e7ec29bab9c0999b64f2e86b411f}\label{structpbuf_a5259e7ec29bab9c0999b64f2e86b411f}} 
+\index{pbuf@{pbuf}!tot\+\_\+len@{tot\+\_\+len}}
+\index{tot\+\_\+len@{tot\+\_\+len}!pbuf@{pbuf}}
+\subsubsection{\texorpdfstring{tot\+\_\+len}{tot\_len}}
+{\footnotesize\ttfamily \hyperlink{group__compiler__abstraction_ga77570ac4fcab86864fa1916e55676da2}{u16\+\_\+t} pbuf\+::tot\+\_\+len}
+
+total length of this buffer and all next buffers in chain belonging to the same packet.
+
+For non-\/queue packet chains this is the invariant\+: p-\/$>$tot\+\_\+len == p-\/$>$len + (p-\/$>$next? p-\/$>$next-\/$>$tot\+\_\+len\+: 0) \mbox{\Hypertarget{structpbuf_afd7bff5210a022424caa97d2f25fe8e6}\label{structpbuf_afd7bff5210a022424caa97d2f25fe8e6}} 
+\index{pbuf@{pbuf}!type@{type}}
+\index{type@{type}!pbuf@{pbuf}}
+\subsubsection{\texorpdfstring{type}{type}}
+{\footnotesize\ttfamily \hyperlink{group__compiler__abstraction_ga4caecabca98b43919dd11be1c0d4cd8e}{u8\+\_\+t} pbuf\+::type}
+
+pbuf\+\_\+type as u8\+\_\+t instead of enum to save space 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/ayush/\+R\+I\+O\+T/tests/lwip/bin/pkg/native/lwip/src/include/lwip/\hyperlink{native_2lwip_2src_2include_2lwip_2pbuf_8h}{pbuf.\+h}\end{DoxyCompactItemize}

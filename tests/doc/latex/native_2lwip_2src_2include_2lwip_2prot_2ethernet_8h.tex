@@ -1,0 +1,184 @@
+\hypertarget{native_2lwip_2src_2include_2lwip_2prot_2ethernet_8h}{}\section{/home/ayush/\+R\+I\+O\+T/tests/lwip/bin/pkg/native/lwip/src/include/lwip/prot/ethernet.h File Reference}
+\label{native_2lwip_2src_2include_2lwip_2prot_2ethernet_8h}\index{/home/ayush/\+R\+I\+O\+T/tests/lwip/bin/pkg/native/lwip/src/include/lwip/prot/ethernet.\+h@{/home/ayush/\+R\+I\+O\+T/tests/lwip/bin/pkg/native/lwip/src/include/lwip/prot/ethernet.\+h}}
+{\ttfamily \#include \char`\"{}lwip/arch.\+h\char`\"{}}\newline
+Include dependency graph for ethernet.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=233pt]{native_2lwip_2src_2include_2lwip_2prot_2ethernet_8h__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structeth__addr}{eth\+\_\+addr}
+\item 
+struct \hyperlink{structeth__hdr}{eth\+\_\+hdr}
+\item 
+struct \hyperlink{structeth__vlan__hdr}{eth\+\_\+vlan\+\_\+hdr}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{native_2lwip_2src_2include_2lwip_2prot_2ethernet_8h_ac9426049770b40fcd9556ffbd7e56907}{E\+T\+H\+\_\+\+H\+W\+A\+D\+D\+R\+\_\+\+L\+EN}~6
+\item 
+\#define \hyperlink{native_2lwip_2src_2include_2lwip_2prot_2ethernet_8h_a85d254d78726c038270fe87905845e75}{S\+I\+Z\+E\+O\+F\+\_\+\+E\+T\+H\+\_\+\+H\+DR}~(14 + \hyperlink{group__lwip__opts__arp_gad7fa3b356ca7e603e848b069c4cc6276}{E\+T\+H\+\_\+\+P\+A\+D\+\_\+\+S\+I\+ZE})
+\item 
+\#define \hyperlink{native_2lwip_2src_2include_2lwip_2prot_2ethernet_8h_a2443b91084b01e4f22423d74d3ae19fe}{S\+I\+Z\+E\+O\+F\+\_\+\+V\+L\+A\+N\+\_\+\+H\+DR}~4
+\item 
+\#define \hyperlink{native_2lwip_2src_2include_2lwip_2prot_2ethernet_8h_aa36e5e552e17cea1828f0a6792eb29d4}{V\+L\+A\+N\+\_\+\+ID}(vlan\+\_\+hdr)~(\hyperlink{openmote-cc2538_2lwip_2src_2core_2def_8c_ad637280639de4066392e6b5614fa3e56}{lwip\+\_\+htons}((vlan\+\_\+hdr)-\/$>$prio\+\_\+vid) \& 0x\+F\+F\+F)
+\item 
+\#define \hyperlink{native_2lwip_2src_2include_2lwip_2prot_2ethernet_8h_afaf6cbccf9477c3505660e3a17860e07}{L\+L\+\_\+\+I\+P4\+\_\+\+M\+U\+L\+T\+I\+C\+A\+S\+T\+\_\+\+A\+D\+D\+R\+\_\+0}~0x01
+\item 
+\#define \hyperlink{native_2lwip_2src_2include_2lwip_2prot_2ethernet_8h_ac08b2a99f6ff9cbafaa1cb5a6405d225}{L\+L\+\_\+\+I\+P4\+\_\+\+M\+U\+L\+T\+I\+C\+A\+S\+T\+\_\+\+A\+D\+D\+R\+\_\+1}~0x00
+\item 
+\#define \hyperlink{native_2lwip_2src_2include_2lwip_2prot_2ethernet_8h_a98285b6f76c2eb6b6c738da62176bce0}{L\+L\+\_\+\+I\+P4\+\_\+\+M\+U\+L\+T\+I\+C\+A\+S\+T\+\_\+\+A\+D\+D\+R\+\_\+2}~0x5e
+\item 
+\#define \hyperlink{native_2lwip_2src_2include_2lwip_2prot_2ethernet_8h_a8ebe93c6ad2d743e6c952539257679b6}{L\+L\+\_\+\+I\+P6\+\_\+\+M\+U\+L\+T\+I\+C\+A\+S\+T\+\_\+\+A\+D\+D\+R\+\_\+0}~0x33
+\item 
+\#define \hyperlink{native_2lwip_2src_2include_2lwip_2prot_2ethernet_8h_acf77751aed309653aaa33032732dd243}{L\+L\+\_\+\+I\+P6\+\_\+\+M\+U\+L\+T\+I\+C\+A\+S\+T\+\_\+\+A\+D\+D\+R\+\_\+1}~0x33
+\item 
+\#define \hyperlink{native_2lwip_2src_2include_2lwip_2prot_2ethernet_8h_a0622da8fb6eb72cd4cd7c3ea4f5a5b79}{E\+T\+H\+A\+D\+D\+R32\+\_\+\+C\+O\+PY}(dst,  src)~\hyperlink{group__lwip__opts__memcpy_ga8c6e3c1e4f74acb16376188dbf8909ec}{S\+M\+E\+M\+C\+PY}(dst, src, \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2ethernet_8h_ac9426049770b40fcd9556ffbd7e56907}{E\+T\+H\+\_\+\+H\+W\+A\+D\+D\+R\+\_\+\+L\+EN})
+\item 
+\#define \hyperlink{native_2lwip_2src_2include_2lwip_2prot_2ethernet_8h_a10cbd9cd91e7e0ebed3a1159e385c037}{E\+T\+H\+A\+D\+D\+R16\+\_\+\+C\+O\+PY}(dst,  src)~\hyperlink{group__lwip__opts__memcpy_ga8c6e3c1e4f74acb16376188dbf8909ec}{S\+M\+E\+M\+C\+PY}(dst, src, \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2ethernet_8h_ac9426049770b40fcd9556ffbd7e56907}{E\+T\+H\+\_\+\+H\+W\+A\+D\+D\+R\+\_\+\+L\+EN})
+\item 
+\#define \hyperlink{native_2lwip_2src_2include_2lwip_2prot_2ethernet_8h_aa19e3e4c174d49c6062f463dfa68bbbc}{eth\+\_\+addr\+\_\+cmp}(addr1,  addr2)~(memcmp((addr1)-\/$>$addr, (addr2)-\/$>$addr, \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2ethernet_8h_ac9426049770b40fcd9556ffbd7e56907}{E\+T\+H\+\_\+\+H\+W\+A\+D\+D\+R\+\_\+\+L\+EN}) == 0)
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{group__ethernet_ga4f8559808037803168499a3803900339}{eth\+\_\+type} \{ \newline
+\hyperlink{group__ethernet_gga4f8559808037803168499a3803900339ac95756b20fde70b868ef4185dd221c79}{E\+T\+H\+T\+Y\+P\+E\+\_\+\+IP} = 0x0800U, 
+\hyperlink{group__ethernet_gga4f8559808037803168499a3803900339a41217db03576ea59c44b28b248c39be5}{E\+T\+H\+T\+Y\+P\+E\+\_\+\+A\+RP} = 0x0806U, 
+\hyperlink{group__ethernet_gga4f8559808037803168499a3803900339a530a30feb9b87fd993da2bf83776cf9b}{E\+T\+H\+T\+Y\+P\+E\+\_\+\+W\+OL} = 0x0842U, 
+\hyperlink{group__ethernet_gga4f8559808037803168499a3803900339a14292184cb41b279249319896d0e2b1f}{E\+T\+H\+T\+Y\+P\+E\+\_\+\+R\+A\+RP} = 0x8035U, 
+\newline
+\hyperlink{group__ethernet_gga4f8559808037803168499a3803900339ad8f84826d52d92ac24a477d1f03e7903}{E\+T\+H\+T\+Y\+P\+E\+\_\+\+V\+L\+AN} = 0x8100U, 
+\hyperlink{group__ethernet_gga4f8559808037803168499a3803900339aab26004eed559217be5dd466a79b1383}{E\+T\+H\+T\+Y\+P\+E\+\_\+\+I\+P\+V6} = 0x86\+D\+DU, 
+\hyperlink{group__ethernet_gga4f8559808037803168499a3803900339a58c6f40d7cc3edb9455762938f3f6569}{E\+T\+H\+T\+Y\+P\+E\+\_\+\+P\+P\+P\+O\+E\+D\+I\+SC} = 0x8863U, 
+\hyperlink{group__ethernet_gga4f8559808037803168499a3803900339a8c0e8f68b90134eb4f1f17d3d2eb6f8c}{E\+T\+H\+T\+Y\+P\+E\+\_\+\+P\+P\+P\+OE} = 0x8864U, 
+\newline
+\hyperlink{group__ethernet_gga4f8559808037803168499a3803900339a2511e8a31961bd742363b11b274b9dd1}{E\+T\+H\+T\+Y\+P\+E\+\_\+\+J\+U\+M\+BO} = 0x8870U, 
+\hyperlink{group__ethernet_gga4f8559808037803168499a3803900339a889eb8f716238d16ee3408f16a5cf19d}{E\+T\+H\+T\+Y\+P\+E\+\_\+\+P\+R\+O\+F\+I\+N\+ET} = 0x8892U, 
+\hyperlink{group__ethernet_gga4f8559808037803168499a3803900339a5085a5fd5f9c9506124e93ea43ad2d7c}{E\+T\+H\+T\+Y\+P\+E\+\_\+\+E\+T\+H\+E\+R\+C\+AT} = 0x88\+A4U, 
+\hyperlink{group__ethernet_gga4f8559808037803168499a3803900339a02eab0dd87f222a2d555ca38b1b8afcc}{E\+T\+H\+T\+Y\+P\+E\+\_\+\+L\+L\+DP} = 0x88\+C\+CU, 
+\newline
+\hyperlink{group__ethernet_gga4f8559808037803168499a3803900339ab93419f8edf5692e91629ab92fce8a14}{E\+T\+H\+T\+Y\+P\+E\+\_\+\+S\+E\+R\+C\+OS} = 0x88\+C\+DU, 
+\hyperlink{group__ethernet_gga4f8559808037803168499a3803900339ad36caec44d8db59ff433a8bd3e92ad3e}{E\+T\+H\+T\+Y\+P\+E\+\_\+\+M\+RP} = 0x88\+E3U, 
+\hyperlink{group__ethernet_gga4f8559808037803168499a3803900339aa3e9e834eef932d073028e28eb8793dc}{E\+T\+H\+T\+Y\+P\+E\+\_\+\+P\+TP} = 0x88\+F7U, 
+\hyperlink{group__ethernet_gga4f8559808037803168499a3803900339a39a18006412cbb57536535bd9d378394}{E\+T\+H\+T\+Y\+P\+E\+\_\+\+Q\+I\+NQ} = 0x9100U, 
+\newline
+\hyperlink{group__ethernet_gga4f8559808037803168499a3803900339ac95756b20fde70b868ef4185dd221c79}{E\+T\+H\+T\+Y\+P\+E\+\_\+\+IP} = 0x0800U, 
+\hyperlink{group__ethernet_gga4f8559808037803168499a3803900339a41217db03576ea59c44b28b248c39be5}{E\+T\+H\+T\+Y\+P\+E\+\_\+\+A\+RP} = 0x0806U, 
+\hyperlink{group__ethernet_gga4f8559808037803168499a3803900339a530a30feb9b87fd993da2bf83776cf9b}{E\+T\+H\+T\+Y\+P\+E\+\_\+\+W\+OL} = 0x0842U, 
+\hyperlink{group__ethernet_gga4f8559808037803168499a3803900339a14292184cb41b279249319896d0e2b1f}{E\+T\+H\+T\+Y\+P\+E\+\_\+\+R\+A\+RP} = 0x8035U, 
+\newline
+\hyperlink{group__ethernet_gga4f8559808037803168499a3803900339ad8f84826d52d92ac24a477d1f03e7903}{E\+T\+H\+T\+Y\+P\+E\+\_\+\+V\+L\+AN} = 0x8100U, 
+\hyperlink{group__ethernet_gga4f8559808037803168499a3803900339aab26004eed559217be5dd466a79b1383}{E\+T\+H\+T\+Y\+P\+E\+\_\+\+I\+P\+V6} = 0x86\+D\+DU, 
+\hyperlink{group__ethernet_gga4f8559808037803168499a3803900339a58c6f40d7cc3edb9455762938f3f6569}{E\+T\+H\+T\+Y\+P\+E\+\_\+\+P\+P\+P\+O\+E\+D\+I\+SC} = 0x8863U, 
+\hyperlink{group__ethernet_gga4f8559808037803168499a3803900339a8c0e8f68b90134eb4f1f17d3d2eb6f8c}{E\+T\+H\+T\+Y\+P\+E\+\_\+\+P\+P\+P\+OE} = 0x8864U, 
+\newline
+\hyperlink{group__ethernet_gga4f8559808037803168499a3803900339a2511e8a31961bd742363b11b274b9dd1}{E\+T\+H\+T\+Y\+P\+E\+\_\+\+J\+U\+M\+BO} = 0x8870U, 
+\hyperlink{group__ethernet_gga4f8559808037803168499a3803900339a889eb8f716238d16ee3408f16a5cf19d}{E\+T\+H\+T\+Y\+P\+E\+\_\+\+P\+R\+O\+F\+I\+N\+ET} = 0x8892U, 
+\hyperlink{group__ethernet_gga4f8559808037803168499a3803900339a5085a5fd5f9c9506124e93ea43ad2d7c}{E\+T\+H\+T\+Y\+P\+E\+\_\+\+E\+T\+H\+E\+R\+C\+AT} = 0x88\+A4U, 
+\hyperlink{group__ethernet_gga4f8559808037803168499a3803900339a02eab0dd87f222a2d555ca38b1b8afcc}{E\+T\+H\+T\+Y\+P\+E\+\_\+\+L\+L\+DP} = 0x88\+C\+CU, 
+\newline
+\hyperlink{group__ethernet_gga4f8559808037803168499a3803900339ab93419f8edf5692e91629ab92fce8a14}{E\+T\+H\+T\+Y\+P\+E\+\_\+\+S\+E\+R\+C\+OS} = 0x88\+C\+DU, 
+\hyperlink{group__ethernet_gga4f8559808037803168499a3803900339ad36caec44d8db59ff433a8bd3e92ad3e}{E\+T\+H\+T\+Y\+P\+E\+\_\+\+M\+RP} = 0x88\+E3U, 
+\hyperlink{group__ethernet_gga4f8559808037803168499a3803900339aa3e9e834eef932d073028e28eb8793dc}{E\+T\+H\+T\+Y\+P\+E\+\_\+\+P\+TP} = 0x88\+F7U, 
+\hyperlink{group__ethernet_gga4f8559808037803168499a3803900339a39a18006412cbb57536535bd9d378394}{E\+T\+H\+T\+Y\+P\+E\+\_\+\+Q\+I\+NQ} = 0x9100U
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group__compiler__abstraction_ga73199061891adf1b912d20835c7d5e96}{P\+A\+C\+K\+\_\+\+S\+T\+R\+U\+C\+T\+\_\+\+B\+E\+G\+IN} struct \hyperlink{structeth__addr}{eth\+\_\+addr} \hyperlink{native_2lwip_2src_2include_2lwip_2prot_2ethernet_8h_aafd4aa713559fd4dfdeaa60f9c7b6c2d}{P\+A\+C\+K\+\_\+\+S\+T\+R\+U\+C\+T\+\_\+\+S\+T\+R\+U\+CT}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Ethernet protocol definitions 
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{native_2lwip_2src_2include_2lwip_2prot_2ethernet_8h_aa19e3e4c174d49c6062f463dfa68bbbc}\label{native_2lwip_2src_2include_2lwip_2prot_2ethernet_8h_aa19e3e4c174d49c6062f463dfa68bbbc}} 
+\index{native/lwip/src/include/lwip/prot/ethernet.\+h@{native/lwip/src/include/lwip/prot/ethernet.\+h}!eth\+\_\+addr\+\_\+cmp@{eth\+\_\+addr\+\_\+cmp}}
+\index{eth\+\_\+addr\+\_\+cmp@{eth\+\_\+addr\+\_\+cmp}!native/lwip/src/include/lwip/prot/ethernet.\+h@{native/lwip/src/include/lwip/prot/ethernet.\+h}}
+\subsubsection{\texorpdfstring{eth\+\_\+addr\+\_\+cmp}{eth\_addr\_cmp}}
+{\footnotesize\ttfamily \#define eth\+\_\+addr\+\_\+cmp(\begin{DoxyParamCaption}\item[{}]{addr1,  }\item[{}]{addr2 }\end{DoxyParamCaption})~(memcmp((addr1)-\/$>$addr, (addr2)-\/$>$addr, \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2ethernet_8h_ac9426049770b40fcd9556ffbd7e56907}{E\+T\+H\+\_\+\+H\+W\+A\+D\+D\+R\+\_\+\+L\+EN}) == 0)}
+
+\mbox{\Hypertarget{native_2lwip_2src_2include_2lwip_2prot_2ethernet_8h_ac9426049770b40fcd9556ffbd7e56907}\label{native_2lwip_2src_2include_2lwip_2prot_2ethernet_8h_ac9426049770b40fcd9556ffbd7e56907}} 
+\index{native/lwip/src/include/lwip/prot/ethernet.\+h@{native/lwip/src/include/lwip/prot/ethernet.\+h}!E\+T\+H\+\_\+\+H\+W\+A\+D\+D\+R\+\_\+\+L\+EN@{E\+T\+H\+\_\+\+H\+W\+A\+D\+D\+R\+\_\+\+L\+EN}}
+\index{E\+T\+H\+\_\+\+H\+W\+A\+D\+D\+R\+\_\+\+L\+EN@{E\+T\+H\+\_\+\+H\+W\+A\+D\+D\+R\+\_\+\+L\+EN}!native/lwip/src/include/lwip/prot/ethernet.\+h@{native/lwip/src/include/lwip/prot/ethernet.\+h}}
+\subsubsection{\texorpdfstring{E\+T\+H\+\_\+\+H\+W\+A\+D\+D\+R\+\_\+\+L\+EN}{ETH\_HWADDR\_LEN}}
+{\footnotesize\ttfamily \#define E\+T\+H\+\_\+\+H\+W\+A\+D\+D\+R\+\_\+\+L\+EN~6}
+
+\mbox{\Hypertarget{native_2lwip_2src_2include_2lwip_2prot_2ethernet_8h_a10cbd9cd91e7e0ebed3a1159e385c037}\label{native_2lwip_2src_2include_2lwip_2prot_2ethernet_8h_a10cbd9cd91e7e0ebed3a1159e385c037}} 
+\index{native/lwip/src/include/lwip/prot/ethernet.\+h@{native/lwip/src/include/lwip/prot/ethernet.\+h}!E\+T\+H\+A\+D\+D\+R16\+\_\+\+C\+O\+PY@{E\+T\+H\+A\+D\+D\+R16\+\_\+\+C\+O\+PY}}
+\index{E\+T\+H\+A\+D\+D\+R16\+\_\+\+C\+O\+PY@{E\+T\+H\+A\+D\+D\+R16\+\_\+\+C\+O\+PY}!native/lwip/src/include/lwip/prot/ethernet.\+h@{native/lwip/src/include/lwip/prot/ethernet.\+h}}
+\subsubsection{\texorpdfstring{E\+T\+H\+A\+D\+D\+R16\+\_\+\+C\+O\+PY}{ETHADDR16\_COPY}}
+{\footnotesize\ttfamily \#define E\+T\+H\+A\+D\+D\+R16\+\_\+\+C\+O\+PY(\begin{DoxyParamCaption}\item[{}]{dst,  }\item[{}]{src }\end{DoxyParamCaption})~\hyperlink{group__lwip__opts__memcpy_ga8c6e3c1e4f74acb16376188dbf8909ec}{S\+M\+E\+M\+C\+PY}(dst, src, \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2ethernet_8h_ac9426049770b40fcd9556ffbd7e56907}{E\+T\+H\+\_\+\+H\+W\+A\+D\+D\+R\+\_\+\+L\+EN})}
+
+M\+E\+M\+C\+P\+Y-\/like macro to copy to/from struct \hyperlink{structeth__addr}{eth\+\_\+addr}\textquotesingle{}s that are no local variables and known to be 16-\/bit aligned within the protocol header. \mbox{\Hypertarget{native_2lwip_2src_2include_2lwip_2prot_2ethernet_8h_a0622da8fb6eb72cd4cd7c3ea4f5a5b79}\label{native_2lwip_2src_2include_2lwip_2prot_2ethernet_8h_a0622da8fb6eb72cd4cd7c3ea4f5a5b79}} 
+\index{native/lwip/src/include/lwip/prot/ethernet.\+h@{native/lwip/src/include/lwip/prot/ethernet.\+h}!E\+T\+H\+A\+D\+D\+R32\+\_\+\+C\+O\+PY@{E\+T\+H\+A\+D\+D\+R32\+\_\+\+C\+O\+PY}}
+\index{E\+T\+H\+A\+D\+D\+R32\+\_\+\+C\+O\+PY@{E\+T\+H\+A\+D\+D\+R32\+\_\+\+C\+O\+PY}!native/lwip/src/include/lwip/prot/ethernet.\+h@{native/lwip/src/include/lwip/prot/ethernet.\+h}}
+\subsubsection{\texorpdfstring{E\+T\+H\+A\+D\+D\+R32\+\_\+\+C\+O\+PY}{ETHADDR32\_COPY}}
+{\footnotesize\ttfamily \#define E\+T\+H\+A\+D\+D\+R32\+\_\+\+C\+O\+PY(\begin{DoxyParamCaption}\item[{}]{dst,  }\item[{}]{src }\end{DoxyParamCaption})~\hyperlink{group__lwip__opts__memcpy_ga8c6e3c1e4f74acb16376188dbf8909ec}{S\+M\+E\+M\+C\+PY}(dst, src, \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2prot_2ethernet_8h_ac9426049770b40fcd9556ffbd7e56907}{E\+T\+H\+\_\+\+H\+W\+A\+D\+D\+R\+\_\+\+L\+EN})}
+
+M\+E\+M\+C\+P\+Y-\/like macro to copy to/from struct \hyperlink{structeth__addr}{eth\+\_\+addr}\textquotesingle{}s that are local variables or known to be 32-\/bit aligned within the protocol header. \mbox{\Hypertarget{native_2lwip_2src_2include_2lwip_2prot_2ethernet_8h_afaf6cbccf9477c3505660e3a17860e07}\label{native_2lwip_2src_2include_2lwip_2prot_2ethernet_8h_afaf6cbccf9477c3505660e3a17860e07}} 
+\index{native/lwip/src/include/lwip/prot/ethernet.\+h@{native/lwip/src/include/lwip/prot/ethernet.\+h}!L\+L\+\_\+\+I\+P4\+\_\+\+M\+U\+L\+T\+I\+C\+A\+S\+T\+\_\+\+A\+D\+D\+R\+\_\+0@{L\+L\+\_\+\+I\+P4\+\_\+\+M\+U\+L\+T\+I\+C\+A\+S\+T\+\_\+\+A\+D\+D\+R\+\_\+0}}
+\index{L\+L\+\_\+\+I\+P4\+\_\+\+M\+U\+L\+T\+I\+C\+A\+S\+T\+\_\+\+A\+D\+D\+R\+\_\+0@{L\+L\+\_\+\+I\+P4\+\_\+\+M\+U\+L\+T\+I\+C\+A\+S\+T\+\_\+\+A\+D\+D\+R\+\_\+0}!native/lwip/src/include/lwip/prot/ethernet.\+h@{native/lwip/src/include/lwip/prot/ethernet.\+h}}
+\subsubsection{\texorpdfstring{L\+L\+\_\+\+I\+P4\+\_\+\+M\+U\+L\+T\+I\+C\+A\+S\+T\+\_\+\+A\+D\+D\+R\+\_\+0}{LL\_IP4\_MULTICAST\_ADDR\_0}}
+{\footnotesize\ttfamily \#define L\+L\+\_\+\+I\+P4\+\_\+\+M\+U\+L\+T\+I\+C\+A\+S\+T\+\_\+\+A\+D\+D\+R\+\_\+0~0x01}
+
+The 24-\/bit I\+A\+NA I\+Pv4-\/multicast O\+UI is 01-\/00-\/5e\+: \mbox{\Hypertarget{native_2lwip_2src_2include_2lwip_2prot_2ethernet_8h_ac08b2a99f6ff9cbafaa1cb5a6405d225}\label{native_2lwip_2src_2include_2lwip_2prot_2ethernet_8h_ac08b2a99f6ff9cbafaa1cb5a6405d225}} 
+\index{native/lwip/src/include/lwip/prot/ethernet.\+h@{native/lwip/src/include/lwip/prot/ethernet.\+h}!L\+L\+\_\+\+I\+P4\+\_\+\+M\+U\+L\+T\+I\+C\+A\+S\+T\+\_\+\+A\+D\+D\+R\+\_\+1@{L\+L\+\_\+\+I\+P4\+\_\+\+M\+U\+L\+T\+I\+C\+A\+S\+T\+\_\+\+A\+D\+D\+R\+\_\+1}}
+\index{L\+L\+\_\+\+I\+P4\+\_\+\+M\+U\+L\+T\+I\+C\+A\+S\+T\+\_\+\+A\+D\+D\+R\+\_\+1@{L\+L\+\_\+\+I\+P4\+\_\+\+M\+U\+L\+T\+I\+C\+A\+S\+T\+\_\+\+A\+D\+D\+R\+\_\+1}!native/lwip/src/include/lwip/prot/ethernet.\+h@{native/lwip/src/include/lwip/prot/ethernet.\+h}}
+\subsubsection{\texorpdfstring{L\+L\+\_\+\+I\+P4\+\_\+\+M\+U\+L\+T\+I\+C\+A\+S\+T\+\_\+\+A\+D\+D\+R\+\_\+1}{LL\_IP4\_MULTICAST\_ADDR\_1}}
+{\footnotesize\ttfamily \#define L\+L\+\_\+\+I\+P4\+\_\+\+M\+U\+L\+T\+I\+C\+A\+S\+T\+\_\+\+A\+D\+D\+R\+\_\+1~0x00}
+
+\mbox{\Hypertarget{native_2lwip_2src_2include_2lwip_2prot_2ethernet_8h_a98285b6f76c2eb6b6c738da62176bce0}\label{native_2lwip_2src_2include_2lwip_2prot_2ethernet_8h_a98285b6f76c2eb6b6c738da62176bce0}} 
+\index{native/lwip/src/include/lwip/prot/ethernet.\+h@{native/lwip/src/include/lwip/prot/ethernet.\+h}!L\+L\+\_\+\+I\+P4\+\_\+\+M\+U\+L\+T\+I\+C\+A\+S\+T\+\_\+\+A\+D\+D\+R\+\_\+2@{L\+L\+\_\+\+I\+P4\+\_\+\+M\+U\+L\+T\+I\+C\+A\+S\+T\+\_\+\+A\+D\+D\+R\+\_\+2}}
+\index{L\+L\+\_\+\+I\+P4\+\_\+\+M\+U\+L\+T\+I\+C\+A\+S\+T\+\_\+\+A\+D\+D\+R\+\_\+2@{L\+L\+\_\+\+I\+P4\+\_\+\+M\+U\+L\+T\+I\+C\+A\+S\+T\+\_\+\+A\+D\+D\+R\+\_\+2}!native/lwip/src/include/lwip/prot/ethernet.\+h@{native/lwip/src/include/lwip/prot/ethernet.\+h}}
+\subsubsection{\texorpdfstring{L\+L\+\_\+\+I\+P4\+\_\+\+M\+U\+L\+T\+I\+C\+A\+S\+T\+\_\+\+A\+D\+D\+R\+\_\+2}{LL\_IP4\_MULTICAST\_ADDR\_2}}
+{\footnotesize\ttfamily \#define L\+L\+\_\+\+I\+P4\+\_\+\+M\+U\+L\+T\+I\+C\+A\+S\+T\+\_\+\+A\+D\+D\+R\+\_\+2~0x5e}
+
+\mbox{\Hypertarget{native_2lwip_2src_2include_2lwip_2prot_2ethernet_8h_a8ebe93c6ad2d743e6c952539257679b6}\label{native_2lwip_2src_2include_2lwip_2prot_2ethernet_8h_a8ebe93c6ad2d743e6c952539257679b6}} 
+\index{native/lwip/src/include/lwip/prot/ethernet.\+h@{native/lwip/src/include/lwip/prot/ethernet.\+h}!L\+L\+\_\+\+I\+P6\+\_\+\+M\+U\+L\+T\+I\+C\+A\+S\+T\+\_\+\+A\+D\+D\+R\+\_\+0@{L\+L\+\_\+\+I\+P6\+\_\+\+M\+U\+L\+T\+I\+C\+A\+S\+T\+\_\+\+A\+D\+D\+R\+\_\+0}}
+\index{L\+L\+\_\+\+I\+P6\+\_\+\+M\+U\+L\+T\+I\+C\+A\+S\+T\+\_\+\+A\+D\+D\+R\+\_\+0@{L\+L\+\_\+\+I\+P6\+\_\+\+M\+U\+L\+T\+I\+C\+A\+S\+T\+\_\+\+A\+D\+D\+R\+\_\+0}!native/lwip/src/include/lwip/prot/ethernet.\+h@{native/lwip/src/include/lwip/prot/ethernet.\+h}}
+\subsubsection{\texorpdfstring{L\+L\+\_\+\+I\+P6\+\_\+\+M\+U\+L\+T\+I\+C\+A\+S\+T\+\_\+\+A\+D\+D\+R\+\_\+0}{LL\_IP6\_MULTICAST\_ADDR\_0}}
+{\footnotesize\ttfamily \#define L\+L\+\_\+\+I\+P6\+\_\+\+M\+U\+L\+T\+I\+C\+A\+S\+T\+\_\+\+A\+D\+D\+R\+\_\+0~0x33}
+
+I\+Pv6 multicast uses this prefix \mbox{\Hypertarget{native_2lwip_2src_2include_2lwip_2prot_2ethernet_8h_acf77751aed309653aaa33032732dd243}\label{native_2lwip_2src_2include_2lwip_2prot_2ethernet_8h_acf77751aed309653aaa33032732dd243}} 
+\index{native/lwip/src/include/lwip/prot/ethernet.\+h@{native/lwip/src/include/lwip/prot/ethernet.\+h}!L\+L\+\_\+\+I\+P6\+\_\+\+M\+U\+L\+T\+I\+C\+A\+S\+T\+\_\+\+A\+D\+D\+R\+\_\+1@{L\+L\+\_\+\+I\+P6\+\_\+\+M\+U\+L\+T\+I\+C\+A\+S\+T\+\_\+\+A\+D\+D\+R\+\_\+1}}
+\index{L\+L\+\_\+\+I\+P6\+\_\+\+M\+U\+L\+T\+I\+C\+A\+S\+T\+\_\+\+A\+D\+D\+R\+\_\+1@{L\+L\+\_\+\+I\+P6\+\_\+\+M\+U\+L\+T\+I\+C\+A\+S\+T\+\_\+\+A\+D\+D\+R\+\_\+1}!native/lwip/src/include/lwip/prot/ethernet.\+h@{native/lwip/src/include/lwip/prot/ethernet.\+h}}
+\subsubsection{\texorpdfstring{L\+L\+\_\+\+I\+P6\+\_\+\+M\+U\+L\+T\+I\+C\+A\+S\+T\+\_\+\+A\+D\+D\+R\+\_\+1}{LL\_IP6\_MULTICAST\_ADDR\_1}}
+{\footnotesize\ttfamily \#define L\+L\+\_\+\+I\+P6\+\_\+\+M\+U\+L\+T\+I\+C\+A\+S\+T\+\_\+\+A\+D\+D\+R\+\_\+1~0x33}
+
+\mbox{\Hypertarget{native_2lwip_2src_2include_2lwip_2prot_2ethernet_8h_a85d254d78726c038270fe87905845e75}\label{native_2lwip_2src_2include_2lwip_2prot_2ethernet_8h_a85d254d78726c038270fe87905845e75}} 
+\index{native/lwip/src/include/lwip/prot/ethernet.\+h@{native/lwip/src/include/lwip/prot/ethernet.\+h}!S\+I\+Z\+E\+O\+F\+\_\+\+E\+T\+H\+\_\+\+H\+DR@{S\+I\+Z\+E\+O\+F\+\_\+\+E\+T\+H\+\_\+\+H\+DR}}
+\index{S\+I\+Z\+E\+O\+F\+\_\+\+E\+T\+H\+\_\+\+H\+DR@{S\+I\+Z\+E\+O\+F\+\_\+\+E\+T\+H\+\_\+\+H\+DR}!native/lwip/src/include/lwip/prot/ethernet.\+h@{native/lwip/src/include/lwip/prot/ethernet.\+h}}
+\subsubsection{\texorpdfstring{S\+I\+Z\+E\+O\+F\+\_\+\+E\+T\+H\+\_\+\+H\+DR}{SIZEOF\_ETH\_HDR}}
+{\footnotesize\ttfamily \#define S\+I\+Z\+E\+O\+F\+\_\+\+E\+T\+H\+\_\+\+H\+DR~(14 + \hyperlink{group__lwip__opts__arp_gad7fa3b356ca7e603e848b069c4cc6276}{E\+T\+H\+\_\+\+P\+A\+D\+\_\+\+S\+I\+ZE})}
+
+\mbox{\Hypertarget{native_2lwip_2src_2include_2lwip_2prot_2ethernet_8h_a2443b91084b01e4f22423d74d3ae19fe}\label{native_2lwip_2src_2include_2lwip_2prot_2ethernet_8h_a2443b91084b01e4f22423d74d3ae19fe}} 
+\index{native/lwip/src/include/lwip/prot/ethernet.\+h@{native/lwip/src/include/lwip/prot/ethernet.\+h}!S\+I\+Z\+E\+O\+F\+\_\+\+V\+L\+A\+N\+\_\+\+H\+DR@{S\+I\+Z\+E\+O\+F\+\_\+\+V\+L\+A\+N\+\_\+\+H\+DR}}
+\index{S\+I\+Z\+E\+O\+F\+\_\+\+V\+L\+A\+N\+\_\+\+H\+DR@{S\+I\+Z\+E\+O\+F\+\_\+\+V\+L\+A\+N\+\_\+\+H\+DR}!native/lwip/src/include/lwip/prot/ethernet.\+h@{native/lwip/src/include/lwip/prot/ethernet.\+h}}
+\subsubsection{\texorpdfstring{S\+I\+Z\+E\+O\+F\+\_\+\+V\+L\+A\+N\+\_\+\+H\+DR}{SIZEOF\_VLAN\_HDR}}
+{\footnotesize\ttfamily \#define S\+I\+Z\+E\+O\+F\+\_\+\+V\+L\+A\+N\+\_\+\+H\+DR~4}
+
+\mbox{\Hypertarget{native_2lwip_2src_2include_2lwip_2prot_2ethernet_8h_aa36e5e552e17cea1828f0a6792eb29d4}\label{native_2lwip_2src_2include_2lwip_2prot_2ethernet_8h_aa36e5e552e17cea1828f0a6792eb29d4}} 
+\index{native/lwip/src/include/lwip/prot/ethernet.\+h@{native/lwip/src/include/lwip/prot/ethernet.\+h}!V\+L\+A\+N\+\_\+\+ID@{V\+L\+A\+N\+\_\+\+ID}}
+\index{V\+L\+A\+N\+\_\+\+ID@{V\+L\+A\+N\+\_\+\+ID}!native/lwip/src/include/lwip/prot/ethernet.\+h@{native/lwip/src/include/lwip/prot/ethernet.\+h}}
+\subsubsection{\texorpdfstring{V\+L\+A\+N\+\_\+\+ID}{VLAN\_ID}}
+{\footnotesize\ttfamily \#define V\+L\+A\+N\+\_\+\+ID(\begin{DoxyParamCaption}\item[{}]{vlan\+\_\+hdr }\end{DoxyParamCaption})~(\hyperlink{openmote-cc2538_2lwip_2src_2core_2def_8c_ad637280639de4066392e6b5614fa3e56}{lwip\+\_\+htons}((vlan\+\_\+hdr)-\/$>$prio\+\_\+vid) \& 0x\+F\+F\+F)}
+
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{native_2lwip_2src_2include_2lwip_2prot_2ethernet_8h_aafd4aa713559fd4dfdeaa60f9c7b6c2d}\label{native_2lwip_2src_2include_2lwip_2prot_2ethernet_8h_aafd4aa713559fd4dfdeaa60f9c7b6c2d}} 
+\index{native/lwip/src/include/lwip/prot/ethernet.\+h@{native/lwip/src/include/lwip/prot/ethernet.\+h}!P\+A\+C\+K\+\_\+\+S\+T\+R\+U\+C\+T\+\_\+\+S\+T\+R\+U\+CT@{P\+A\+C\+K\+\_\+\+S\+T\+R\+U\+C\+T\+\_\+\+S\+T\+R\+U\+CT}}
+\index{P\+A\+C\+K\+\_\+\+S\+T\+R\+U\+C\+T\+\_\+\+S\+T\+R\+U\+CT@{P\+A\+C\+K\+\_\+\+S\+T\+R\+U\+C\+T\+\_\+\+S\+T\+R\+U\+CT}!native/lwip/src/include/lwip/prot/ethernet.\+h@{native/lwip/src/include/lwip/prot/ethernet.\+h}}
+\subsubsection{\texorpdfstring{P\+A\+C\+K\+\_\+\+S\+T\+R\+U\+C\+T\+\_\+\+S\+T\+R\+U\+CT}{PACK\_STRUCT\_STRUCT}}
+{\footnotesize\ttfamily \hyperlink{group__compiler__abstraction_ga73199061891adf1b912d20835c7d5e96}{P\+A\+C\+K\+\_\+\+S\+T\+R\+U\+C\+T\+\_\+\+B\+E\+G\+IN} struct \hyperlink{structeth__vlan__hdr}{eth\+\_\+vlan\+\_\+hdr}  P\+A\+C\+K\+\_\+\+S\+T\+R\+U\+C\+T\+\_\+\+S\+T\+R\+U\+CT}
+

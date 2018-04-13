@@ -1,0 +1,197 @@
+\hypertarget{structtcpip__msg}{}\section{tcpip\+\_\+msg Struct Reference}
+\label{structtcpip__msg}\index{tcpip\+\_\+msg@{tcpip\+\_\+msg}}
+
+
+{\ttfamily \#include $<$tcpip\+\_\+priv.\+h$>$}
+
+
+
+Collaboration diagram for tcpip\+\_\+msg\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structtcpip__msg__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{native_2lwip_2src_2include_2lwip_2priv_2tcpip__priv_8h_a1e0cb5032a61055e3f4a3426ed548937}{tcpip\+\_\+msg\+\_\+type} \hyperlink{structtcpip__msg_a5b992b509c516199c800c913993574c1}{type}
+\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+union \{\\
+\>struct \{\\
+\>\>\hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2tcpip_8h_a35203296bb838f3b493839ffc6e7285d}{tcpip\_callback\_fn} \hyperlink{structtcpip__msg_ad294175efea90f55493a9465a65c8e4c}{function}\\
+\>\>void $\ast$ \hyperlink{structtcpip__msg_a18c49fcbcfeb09f203a6fb84e74e367b}{msg}\\
+\>\} \hyperlink{structtcpip__msg_a4260e8402260eb7ff6e6ea39fb410846}{api\_msg}\\
+\>struct \{\\
+\>\>\hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2priv_2tcpip__priv_8h_aa7ecde8c8d8012fe5c498f7ee58f9458}{tcpip\_api\_call\_fn} \hyperlink{structtcpip__msg_a3c72cc53894cab34a142a1ec56b7b59d}{function}\\
+\>\>struct \hyperlink{structtcpip__api__call__data}{tcpip\_api\_call\_data} $\ast$ \hyperlink{structtcpip__msg_a080f04f9cdfa4533fab6608cde6a4649}{arg}\\
+\>\>sys\_sem\_t $\ast$ \hyperlink{structtcpip__msg_a68b745804255e3b227ec2f5ef0f8e136}{sem}\\
+\>\} \hyperlink{structtcpip__msg_ae977af1c34a11d2a7fbbcc90ec0122da}{api\_call}\\
+\>struct \{\\
+\>\>struct \hyperlink{structpbuf}{pbuf} $\ast$ \hyperlink{structtcpip__msg_a9298bc5d6d92c5efd478dac92c09459b}{p}\\
+\>\>struct \hyperlink{structnetif}{netif} $\ast$ \hyperlink{structtcpip__msg_a6d19f55f8a96b18f2d6ab5bc9733f81b}{netif}\\
+\>\>\hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2netif_8h_ab2302b1b64ac7b95f24c6bab754a575e}{netif\_input\_fn} \hyperlink{structtcpip__msg_a44fe1469e2472890fe71ebbc1427a19b}{input\_fn}\\
+\>\} \hyperlink{structtcpip__msg_ae107a36f3c94f132b7302e029da1220d}{inp}\\
+\>struct \{\\
+\>\>\hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2tcpip_8h_a35203296bb838f3b493839ffc6e7285d}{tcpip\_callback\_fn} \hyperlink{structtcpip__msg_ad294175efea90f55493a9465a65c8e4c}{function}\\
+\>\>void $\ast$ \hyperlink{structtcpip__msg_a7edb4f4e181f9cffbef13dc7a7d41d8b}{ctx}\\
+\>\} \hyperlink{structtcpip__msg_a17e5a3253761d4e93516b9ee7a259c27}{cb}\\
+\} \hyperlink{structtcpip__msg_a72dd6ff0a64ed4c840c8ded7d24ca5f2}{msg}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+union \{\\
+\>struct \{\\
+\>\>\hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2tcpip_8h_a35203296bb838f3b493839ffc6e7285d}{tcpip\_callback\_fn} \hyperlink{structtcpip__msg_ad294175efea90f55493a9465a65c8e4c}{function}\\
+\>\>void $\ast$ \hyperlink{structtcpip__msg_a18c49fcbcfeb09f203a6fb84e74e367b}{msg}\\
+\>\} \hyperlink{structtcpip__msg_a3880d4582c8fe2f21a721c7554197609}{api\_msg}\\
+\>struct \{\\
+\>\>\hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2priv_2tcpip__priv_8h_aa7ecde8c8d8012fe5c498f7ee58f9458}{tcpip\_api\_call\_fn} \hyperlink{structtcpip__msg_a3c72cc53894cab34a142a1ec56b7b59d}{function}\\
+\>\>struct \hyperlink{structtcpip__api__call__data}{tcpip\_api\_call\_data} $\ast$ \hyperlink{structtcpip__msg_a080f04f9cdfa4533fab6608cde6a4649}{arg}\\
+\>\>sys\_sem\_t $\ast$ \hyperlink{structtcpip__msg_a68b745804255e3b227ec2f5ef0f8e136}{sem}\\
+\>\} \hyperlink{structtcpip__msg_ab7720d6d46b764343efef8ae65f0afe9}{api\_call}\\
+\>struct \{\\
+\>\>struct \hyperlink{structpbuf}{pbuf} $\ast$ \hyperlink{structtcpip__msg_a9298bc5d6d92c5efd478dac92c09459b}{p}\\
+\>\>struct \hyperlink{structnetif}{netif} $\ast$ \hyperlink{structtcpip__msg_a6d19f55f8a96b18f2d6ab5bc9733f81b}{netif}\\
+\>\>\hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2netif_8h_ab2302b1b64ac7b95f24c6bab754a575e}{netif\_input\_fn} \hyperlink{structtcpip__msg_a44fe1469e2472890fe71ebbc1427a19b}{input\_fn}\\
+\>\} \hyperlink{structtcpip__msg_af7f9b9f211bf2892eae44bb9bf47c30c}{inp}\\
+\>struct \{\\
+\>\>\hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2tcpip_8h_a35203296bb838f3b493839ffc6e7285d}{tcpip\_callback\_fn} \hyperlink{structtcpip__msg_ad294175efea90f55493a9465a65c8e4c}{function}\\
+\>\>void $\ast$ \hyperlink{structtcpip__msg_a7edb4f4e181f9cffbef13dc7a7d41d8b}{ctx}\\
+\>\} \hyperlink{structtcpip__msg_a829133523fb191f0336dba26fca6d9fe}{cb}\\
+\} \hyperlink{structtcpip__msg_a89ebc2527511a6cf3434ae2be61e3c8e}{msg}\\
+
+\end{tabbing}\end{DoxyCompactItemize}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{structtcpip__msg_ae977af1c34a11d2a7fbbcc90ec0122da}\label{structtcpip__msg_ae977af1c34a11d2a7fbbcc90ec0122da}} 
+\index{tcpip\+\_\+msg@{tcpip\+\_\+msg}!api\+\_\+call@{api\+\_\+call}}
+\index{api\+\_\+call@{api\+\_\+call}!tcpip\+\_\+msg@{tcpip\+\_\+msg}}
+\subsubsection{\texorpdfstring{api\+\_\+call}{api\_call}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily struct \{ ... \}   tcpip\+\_\+msg\+::api\+\_\+call}
+
+\mbox{\Hypertarget{structtcpip__msg_ab7720d6d46b764343efef8ae65f0afe9}\label{structtcpip__msg_ab7720d6d46b764343efef8ae65f0afe9}} 
+\index{tcpip\+\_\+msg@{tcpip\+\_\+msg}!api\+\_\+call@{api\+\_\+call}}
+\index{api\+\_\+call@{api\+\_\+call}!tcpip\+\_\+msg@{tcpip\+\_\+msg}}
+\subsubsection{\texorpdfstring{api\+\_\+call}{api\_call}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily struct \{ ... \}   tcpip\+\_\+msg\+::api\+\_\+call}
+
+\mbox{\Hypertarget{structtcpip__msg_a4260e8402260eb7ff6e6ea39fb410846}\label{structtcpip__msg_a4260e8402260eb7ff6e6ea39fb410846}} 
+\index{tcpip\+\_\+msg@{tcpip\+\_\+msg}!api\+\_\+msg@{api\+\_\+msg}}
+\index{api\+\_\+msg@{api\+\_\+msg}!tcpip\+\_\+msg@{tcpip\+\_\+msg}}
+\subsubsection{\texorpdfstring{api\+\_\+msg}{api\_msg}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily struct \{ ... \}   tcpip\+\_\+msg\+::api\+\_\+msg}
+
+\mbox{\Hypertarget{structtcpip__msg_a3880d4582c8fe2f21a721c7554197609}\label{structtcpip__msg_a3880d4582c8fe2f21a721c7554197609}} 
+\index{tcpip\+\_\+msg@{tcpip\+\_\+msg}!api\+\_\+msg@{api\+\_\+msg}}
+\index{api\+\_\+msg@{api\+\_\+msg}!tcpip\+\_\+msg@{tcpip\+\_\+msg}}
+\subsubsection{\texorpdfstring{api\+\_\+msg}{api\_msg}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily struct \{ ... \}   tcpip\+\_\+msg\+::api\+\_\+msg}
+
+\mbox{\Hypertarget{structtcpip__msg_a080f04f9cdfa4533fab6608cde6a4649}\label{structtcpip__msg_a080f04f9cdfa4533fab6608cde6a4649}} 
+\index{tcpip\+\_\+msg@{tcpip\+\_\+msg}!arg@{arg}}
+\index{arg@{arg}!tcpip\+\_\+msg@{tcpip\+\_\+msg}}
+\subsubsection{\texorpdfstring{arg}{arg}}
+{\footnotesize\ttfamily struct \hyperlink{structtcpip__api__call__data}{tcpip\+\_\+api\+\_\+call\+\_\+data}$\ast$ tcpip\+\_\+msg\+::arg}
+
+\mbox{\Hypertarget{structtcpip__msg_a829133523fb191f0336dba26fca6d9fe}\label{structtcpip__msg_a829133523fb191f0336dba26fca6d9fe}} 
+\index{tcpip\+\_\+msg@{tcpip\+\_\+msg}!cb@{cb}}
+\index{cb@{cb}!tcpip\+\_\+msg@{tcpip\+\_\+msg}}
+\subsubsection{\texorpdfstring{cb}{cb}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily struct \{ ... \}   tcpip\+\_\+msg\+::cb}
+
+\mbox{\Hypertarget{structtcpip__msg_a17e5a3253761d4e93516b9ee7a259c27}\label{structtcpip__msg_a17e5a3253761d4e93516b9ee7a259c27}} 
+\index{tcpip\+\_\+msg@{tcpip\+\_\+msg}!cb@{cb}}
+\index{cb@{cb}!tcpip\+\_\+msg@{tcpip\+\_\+msg}}
+\subsubsection{\texorpdfstring{cb}{cb}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily struct \{ ... \}   tcpip\+\_\+msg\+::cb}
+
+\mbox{\Hypertarget{structtcpip__msg_a7edb4f4e181f9cffbef13dc7a7d41d8b}\label{structtcpip__msg_a7edb4f4e181f9cffbef13dc7a7d41d8b}} 
+\index{tcpip\+\_\+msg@{tcpip\+\_\+msg}!ctx@{ctx}}
+\index{ctx@{ctx}!tcpip\+\_\+msg@{tcpip\+\_\+msg}}
+\subsubsection{\texorpdfstring{ctx}{ctx}}
+{\footnotesize\ttfamily void$\ast$ tcpip\+\_\+msg\+::ctx}
+
+\mbox{\Hypertarget{structtcpip__msg_ad294175efea90f55493a9465a65c8e4c}\label{structtcpip__msg_ad294175efea90f55493a9465a65c8e4c}} 
+\index{tcpip\+\_\+msg@{tcpip\+\_\+msg}!function@{function}}
+\index{function@{function}!tcpip\+\_\+msg@{tcpip\+\_\+msg}}
+\subsubsection{\texorpdfstring{function}{function}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2tcpip_8h_a35203296bb838f3b493839ffc6e7285d}{tcpip\+\_\+callback\+\_\+fn} tcpip\+\_\+msg\+::function}
+
+\mbox{\Hypertarget{structtcpip__msg_a3c72cc53894cab34a142a1ec56b7b59d}\label{structtcpip__msg_a3c72cc53894cab34a142a1ec56b7b59d}} 
+\index{tcpip\+\_\+msg@{tcpip\+\_\+msg}!function@{function}}
+\index{function@{function}!tcpip\+\_\+msg@{tcpip\+\_\+msg}}
+\subsubsection{\texorpdfstring{function}{function}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2priv_2tcpip__priv_8h_aa7ecde8c8d8012fe5c498f7ee58f9458}{tcpip\+\_\+api\+\_\+call\+\_\+fn} tcpip\+\_\+msg\+::function}
+
+\mbox{\Hypertarget{structtcpip__msg_af7f9b9f211bf2892eae44bb9bf47c30c}\label{structtcpip__msg_af7f9b9f211bf2892eae44bb9bf47c30c}} 
+\index{tcpip\+\_\+msg@{tcpip\+\_\+msg}!inp@{inp}}
+\index{inp@{inp}!tcpip\+\_\+msg@{tcpip\+\_\+msg}}
+\subsubsection{\texorpdfstring{inp}{inp}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily struct \{ ... \}   tcpip\+\_\+msg\+::inp}
+
+\mbox{\Hypertarget{structtcpip__msg_ae107a36f3c94f132b7302e029da1220d}\label{structtcpip__msg_ae107a36f3c94f132b7302e029da1220d}} 
+\index{tcpip\+\_\+msg@{tcpip\+\_\+msg}!inp@{inp}}
+\index{inp@{inp}!tcpip\+\_\+msg@{tcpip\+\_\+msg}}
+\subsubsection{\texorpdfstring{inp}{inp}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily struct \{ ... \}   tcpip\+\_\+msg\+::inp}
+
+\mbox{\Hypertarget{structtcpip__msg_a44fe1469e2472890fe71ebbc1427a19b}\label{structtcpip__msg_a44fe1469e2472890fe71ebbc1427a19b}} 
+\index{tcpip\+\_\+msg@{tcpip\+\_\+msg}!input\+\_\+fn@{input\+\_\+fn}}
+\index{input\+\_\+fn@{input\+\_\+fn}!tcpip\+\_\+msg@{tcpip\+\_\+msg}}
+\subsubsection{\texorpdfstring{input\+\_\+fn}{input\_fn}}
+{\footnotesize\ttfamily \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2netif_8h_ab2302b1b64ac7b95f24c6bab754a575e}{netif\+\_\+input\+\_\+fn} tcpip\+\_\+msg\+::input\+\_\+fn}
+
+\mbox{\Hypertarget{structtcpip__msg_a18c49fcbcfeb09f203a6fb84e74e367b}\label{structtcpip__msg_a18c49fcbcfeb09f203a6fb84e74e367b}} 
+\index{tcpip\+\_\+msg@{tcpip\+\_\+msg}!msg@{msg}}
+\index{msg@{msg}!tcpip\+\_\+msg@{tcpip\+\_\+msg}}
+\subsubsection{\texorpdfstring{msg}{msg}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily void$\ast$ tcpip\+\_\+msg\+::msg}
+
+\mbox{\Hypertarget{structtcpip__msg_a89ebc2527511a6cf3434ae2be61e3c8e}\label{structtcpip__msg_a89ebc2527511a6cf3434ae2be61e3c8e}} 
+\index{tcpip\+\_\+msg@{tcpip\+\_\+msg}!msg@{msg}}
+\index{msg@{msg}!tcpip\+\_\+msg@{tcpip\+\_\+msg}}
+\subsubsection{\texorpdfstring{msg}{msg}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily union \{ ... \}   tcpip\+\_\+msg\+::msg}
+
+\mbox{\Hypertarget{structtcpip__msg_a72dd6ff0a64ed4c840c8ded7d24ca5f2}\label{structtcpip__msg_a72dd6ff0a64ed4c840c8ded7d24ca5f2}} 
+\index{tcpip\+\_\+msg@{tcpip\+\_\+msg}!msg@{msg}}
+\index{msg@{msg}!tcpip\+\_\+msg@{tcpip\+\_\+msg}}
+\subsubsection{\texorpdfstring{msg}{msg}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily union \{ ... \}   tcpip\+\_\+msg\+::msg}
+
+\mbox{\Hypertarget{structtcpip__msg_a6d19f55f8a96b18f2d6ab5bc9733f81b}\label{structtcpip__msg_a6d19f55f8a96b18f2d6ab5bc9733f81b}} 
+\index{tcpip\+\_\+msg@{tcpip\+\_\+msg}!netif@{netif}}
+\index{netif@{netif}!tcpip\+\_\+msg@{tcpip\+\_\+msg}}
+\subsubsection{\texorpdfstring{netif}{netif}}
+{\footnotesize\ttfamily struct \hyperlink{structnetif}{netif}$\ast$ tcpip\+\_\+msg\+::netif}
+
+\mbox{\Hypertarget{structtcpip__msg_a9298bc5d6d92c5efd478dac92c09459b}\label{structtcpip__msg_a9298bc5d6d92c5efd478dac92c09459b}} 
+\index{tcpip\+\_\+msg@{tcpip\+\_\+msg}!p@{p}}
+\index{p@{p}!tcpip\+\_\+msg@{tcpip\+\_\+msg}}
+\subsubsection{\texorpdfstring{p}{p}}
+{\footnotesize\ttfamily struct \hyperlink{structpbuf}{pbuf}$\ast$ tcpip\+\_\+msg\+::p}
+
+\mbox{\Hypertarget{structtcpip__msg_a68b745804255e3b227ec2f5ef0f8e136}\label{structtcpip__msg_a68b745804255e3b227ec2f5ef0f8e136}} 
+\index{tcpip\+\_\+msg@{tcpip\+\_\+msg}!sem@{sem}}
+\index{sem@{sem}!tcpip\+\_\+msg@{tcpip\+\_\+msg}}
+\subsubsection{\texorpdfstring{sem}{sem}}
+{\footnotesize\ttfamily sys\+\_\+sem\+\_\+t$\ast$ tcpip\+\_\+msg\+::sem}
+
+\mbox{\Hypertarget{structtcpip__msg_a5b992b509c516199c800c913993574c1}\label{structtcpip__msg_a5b992b509c516199c800c913993574c1}} 
+\index{tcpip\+\_\+msg@{tcpip\+\_\+msg}!type@{type}}
+\index{type@{type}!tcpip\+\_\+msg@{tcpip\+\_\+msg}}
+\subsubsection{\texorpdfstring{type}{type}}
+{\footnotesize\ttfamily enum \hyperlink{native_2lwip_2src_2include_2lwip_2priv_2tcpip__priv_8h_a1e0cb5032a61055e3f4a3426ed548937}{tcpip\+\_\+msg\+\_\+type} tcpip\+\_\+msg\+::type}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/ayush/\+R\+I\+O\+T/tests/lwip/bin/pkg/native/lwip/src/include/lwip/priv/\hyperlink{native_2lwip_2src_2include_2lwip_2priv_2tcpip__priv_8h}{tcpip\+\_\+priv.\+h}\end{DoxyCompactItemize}

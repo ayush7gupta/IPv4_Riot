@@ -1,0 +1,91 @@
+\hypertarget{periph__pwm_2main_8c}{}\section{/home/ayush/\+R\+I\+O\+T/tests/periph\+\_\+pwm/main.c File Reference}
+\label{periph__pwm_2main_8c}\index{/home/ayush/\+R\+I\+O\+T/tests/periph\+\_\+pwm/main.\+c@{/home/ayush/\+R\+I\+O\+T/tests/periph\+\_\+pwm/main.\+c}}
+
+
+Test for low-\/level P\+WM drivers.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}xtimer.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}timex.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}periph/pwm.\+h\char`\"{}}\newline
+Include dependency graph for main.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{periph__pwm_2main_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{periph__pwm_2main_8c_ab39fec97d85960796efedec442f38004}{I\+N\+T\+E\+R\+V\+AL}~(10\+L\+U $\ast$ U\+S\+\_\+\+P\+E\+R\+\_\+\+M\+S) /$\ast$ 10 ms $\ast$/
+\item 
+\#define \hyperlink{periph__pwm_2main_8c_a70be2dc5c8bdc85b027ea6118753cca1}{S\+T\+EP}~(10)
+\item 
+\#define \hyperlink{periph__pwm_2main_8c_ab8c52c1b4c021ed3e6b6b677bd2ac019}{M\+O\+DE}~P\+W\+M\+\_\+\+L\+E\+FT
+\item 
+\#define \hyperlink{periph__pwm_2main_8c_a236d28fbc62a5aa5f43c15030cbeaef2}{F\+R\+E\+QU}~(1000\+U)
+\item 
+\#define \hyperlink{periph__pwm_2main_8c_a1ca9f64427b2bc5b538fe2fa2501c639}{S\+T\+E\+PS}~(1000\+U)
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{periph__pwm_2main_8c_a840291bc02cba5474a4cb46a9b9566fe}{main} (void)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Test for low-\/level P\+WM drivers. 
+
+This test initializes the given P\+WM device to run at 1\+K\+Hz with a 1000 step resolution.
+
+The P\+WM is then continuously oscillating it\textquotesingle{}s duty cycle between 0\% to 100\% every 1s on every channel.
+
+\begin{DoxyAuthor}{Author}
+Hauke Petersen \href{mailto:hauke.petersen@fu-berlin.de}{\tt hauke.\+petersen@fu-\/berlin.\+de} 
+\end{DoxyAuthor}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{periph__pwm_2main_8c_a236d28fbc62a5aa5f43c15030cbeaef2}\label{periph__pwm_2main_8c_a236d28fbc62a5aa5f43c15030cbeaef2}} 
+\index{periph\+\_\+pwm/main.\+c@{periph\+\_\+pwm/main.\+c}!F\+R\+E\+QU@{F\+R\+E\+QU}}
+\index{F\+R\+E\+QU@{F\+R\+E\+QU}!periph\+\_\+pwm/main.\+c@{periph\+\_\+pwm/main.\+c}}
+\subsubsection{\texorpdfstring{F\+R\+E\+QU}{FREQU}}
+{\footnotesize\ttfamily \#define F\+R\+E\+QU~(1000\+U)}
+
+\mbox{\Hypertarget{periph__pwm_2main_8c_ab39fec97d85960796efedec442f38004}\label{periph__pwm_2main_8c_ab39fec97d85960796efedec442f38004}} 
+\index{periph\+\_\+pwm/main.\+c@{periph\+\_\+pwm/main.\+c}!I\+N\+T\+E\+R\+V\+AL@{I\+N\+T\+E\+R\+V\+AL}}
+\index{I\+N\+T\+E\+R\+V\+AL@{I\+N\+T\+E\+R\+V\+AL}!periph\+\_\+pwm/main.\+c@{periph\+\_\+pwm/main.\+c}}
+\subsubsection{\texorpdfstring{I\+N\+T\+E\+R\+V\+AL}{INTERVAL}}
+{\footnotesize\ttfamily \#define I\+N\+T\+E\+R\+V\+AL~(10\+L\+U $\ast$ U\+S\+\_\+\+P\+E\+R\+\_\+\+M\+S) /$\ast$ 10 ms $\ast$/}
+
+\mbox{\Hypertarget{periph__pwm_2main_8c_ab8c52c1b4c021ed3e6b6b677bd2ac019}\label{periph__pwm_2main_8c_ab8c52c1b4c021ed3e6b6b677bd2ac019}} 
+\index{periph\+\_\+pwm/main.\+c@{periph\+\_\+pwm/main.\+c}!M\+O\+DE@{M\+O\+DE}}
+\index{M\+O\+DE@{M\+O\+DE}!periph\+\_\+pwm/main.\+c@{periph\+\_\+pwm/main.\+c}}
+\subsubsection{\texorpdfstring{M\+O\+DE}{MODE}}
+{\footnotesize\ttfamily \#define M\+O\+DE~P\+W\+M\+\_\+\+L\+E\+FT}
+
+\mbox{\Hypertarget{periph__pwm_2main_8c_a70be2dc5c8bdc85b027ea6118753cca1}\label{periph__pwm_2main_8c_a70be2dc5c8bdc85b027ea6118753cca1}} 
+\index{periph\+\_\+pwm/main.\+c@{periph\+\_\+pwm/main.\+c}!S\+T\+EP@{S\+T\+EP}}
+\index{S\+T\+EP@{S\+T\+EP}!periph\+\_\+pwm/main.\+c@{periph\+\_\+pwm/main.\+c}}
+\subsubsection{\texorpdfstring{S\+T\+EP}{STEP}}
+{\footnotesize\ttfamily \#define S\+T\+EP~(10)}
+
+\mbox{\Hypertarget{periph__pwm_2main_8c_a1ca9f64427b2bc5b538fe2fa2501c639}\label{periph__pwm_2main_8c_a1ca9f64427b2bc5b538fe2fa2501c639}} 
+\index{periph\+\_\+pwm/main.\+c@{periph\+\_\+pwm/main.\+c}!S\+T\+E\+PS@{S\+T\+E\+PS}}
+\index{S\+T\+E\+PS@{S\+T\+E\+PS}!periph\+\_\+pwm/main.\+c@{periph\+\_\+pwm/main.\+c}}
+\subsubsection{\texorpdfstring{S\+T\+E\+PS}{STEPS}}
+{\footnotesize\ttfamily \#define S\+T\+E\+PS~(1000\+U)}
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{periph__pwm_2main_8c_a840291bc02cba5474a4cb46a9b9566fe}\label{periph__pwm_2main_8c_a840291bc02cba5474a4cb46a9b9566fe}} 
+\index{periph\+\_\+pwm/main.\+c@{periph\+\_\+pwm/main.\+c}!main@{main}}
+\index{main@{main}!periph\+\_\+pwm/main.\+c@{periph\+\_\+pwm/main.\+c}}
+\subsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+

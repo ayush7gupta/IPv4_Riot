@@ -1,0 +1,18 @@
+\subsection*{Introduction}
+
+This test will test if the jc42 compatible temperature sensor is working.
+
+\subsection*{Configuration}
+
+There are three parameters to configure\+:
+
+
+\begin{DoxyItemize}
+\item {\ttfamily T\+E\+S\+T\+\_\+\+I2C} --- I2C device to use.
+\item {\ttfamily T\+E\+S\+T\+\_\+\+I2\+C\+\_\+\+A\+D\+DR} --- The sensor address (usually 0x18).
+\item {\ttfamily T\+E\+S\+T\+\_\+\+I2\+C\+\_\+\+S\+P\+E\+ED} --- The sensor address (usually I2\+C\+\_\+\+S\+P\+E\+E\+D\+\_\+\+N\+O\+R\+M\+AL).
+\end{DoxyItemize}
+
+\subsection*{Expected result}
+
+The sensor should continuously (every 1 sec) output the temperature. The precision should be two digits. 

@@ -1,0 +1,5 @@
+<map id="eth_mac_irq" name="eth_mac_irq">
+<area shape="rect" id="node2" href="$group__pbuf.html#ga8bb9c5d54a06995b1c67ce695ead9969" title="pbuf_alloc" alt="" coords="147,5,228,32"/>
+<area shape="rect" id="node3" href="$group__pbuf.html#gad1e31e370271335b197272af2724ca85" title="pbuf_take" alt="" coords="148,56,227,83"/>
+<area shape="rect" id="node4" href="$group__pbuf.html#gab0dd696fb4b6bc65e548944584f1738b" title="pbuf_free" alt="" coords="149,107,225,133"/>
+</map>

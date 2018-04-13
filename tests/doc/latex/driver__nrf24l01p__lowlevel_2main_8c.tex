@@ -1,0 +1,111 @@
+\hypertarget{driver__nrf24l01p__lowlevel_2main_8c}{}\section{/home/ayush/\+R\+I\+O\+T/tests/driver\+\_\+nrf24l01p\+\_\+lowlevel/main.c File Reference}
+\label{driver__nrf24l01p__lowlevel_2main_8c}\index{/home/ayush/\+R\+I\+O\+T/tests/driver\+\_\+nrf24l01p\+\_\+lowlevel/main.\+c@{/home/ayush/\+R\+I\+O\+T/tests/driver\+\_\+nrf24l01p\+\_\+lowlevel/main.\+c}}
+
+
+Test application for nrf24l01p lowlevel functions.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include $<$inttypes.\+h$>$}\newline
+{\ttfamily \#include $<$board.\+h$>$}\newline
+{\ttfamily \#include $<$time.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}nrf24l01p.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}nrf24l01p\+\_\+settings.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}periph/spi.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}periph/gpio.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}xtimer.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}shell.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}shell\+\_\+commands.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}thread.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}msg.\+h\char`\"{}}\newline
+Include dependency graph for main.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{driver__nrf24l01p__lowlevel_2main_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{driver__nrf24l01p__lowlevel_2main_8c_a7b4a5ca03f666264246c2023952f6c4d}{T\+E\+S\+T\+\_\+\+R\+X\+\_\+\+M\+SG}~1
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{driver__nrf24l01p__lowlevel_2main_8c_a53f96431e7573c6cf35a3a89aa4fd814}{printbin} (unsigned byte)
+\item 
+void \hyperlink{driver__nrf24l01p__lowlevel_2main_8c_a9a5969213c51e60293abc2c2959e2cdd}{print\+\_\+register} (char reg, int num\+\_\+bytes)
+\item 
+void \hyperlink{driver__nrf24l01p__lowlevel_2main_8c_a4ba3a57804e298caff8818e2b78cf01a}{prtbin} (unsigned byte)
+\item 
+void $\ast$ \hyperlink{driver__nrf24l01p__lowlevel_2main_8c_ac455d86c002f6f8afed3ffe6d963e960}{nrf24l01p\+\_\+rx\+\_\+handler} (void $\ast$arg)
+\item 
+int \hyperlink{driver__nrf24l01p__lowlevel_2main_8c_a840291bc02cba5474a4cb46a9b9566fe}{main} (void)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+char \hyperlink{driver__nrf24l01p__lowlevel_2main_8c_a3d92c567b6c075161e297e1835bb4c4a}{rx\+\_\+handler\+\_\+stack} \mbox{[}T\+H\+R\+E\+A\+D\+\_\+\+S\+T\+A\+C\+K\+S\+I\+Z\+E\+\_\+\+M\+A\+IN\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Test application for nrf24l01p lowlevel functions. 
+
+\begin{DoxyAuthor}{Author}
+Peter Kietzmann \href{mailto:peter.kietzmann@haw-hamburg.de}{\tt peter.\+kietzmann@haw-\/hamburg.\+de} 
+\end{DoxyAuthor}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{driver__nrf24l01p__lowlevel_2main_8c_a7b4a5ca03f666264246c2023952f6c4d}\label{driver__nrf24l01p__lowlevel_2main_8c_a7b4a5ca03f666264246c2023952f6c4d}} 
+\index{driver\+\_\+nrf24l01p\+\_\+lowlevel/main.\+c@{driver\+\_\+nrf24l01p\+\_\+lowlevel/main.\+c}!T\+E\+S\+T\+\_\+\+R\+X\+\_\+\+M\+SG@{T\+E\+S\+T\+\_\+\+R\+X\+\_\+\+M\+SG}}
+\index{T\+E\+S\+T\+\_\+\+R\+X\+\_\+\+M\+SG@{T\+E\+S\+T\+\_\+\+R\+X\+\_\+\+M\+SG}!driver\+\_\+nrf24l01p\+\_\+lowlevel/main.\+c@{driver\+\_\+nrf24l01p\+\_\+lowlevel/main.\+c}}
+\subsubsection{\texorpdfstring{T\+E\+S\+T\+\_\+\+R\+X\+\_\+\+M\+SG}{TEST\_RX\_MSG}}
+{\footnotesize\ttfamily \#define T\+E\+S\+T\+\_\+\+R\+X\+\_\+\+M\+SG~1}
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{driver__nrf24l01p__lowlevel_2main_8c_a840291bc02cba5474a4cb46a9b9566fe}\label{driver__nrf24l01p__lowlevel_2main_8c_a840291bc02cba5474a4cb46a9b9566fe}} 
+\index{driver\+\_\+nrf24l01p\+\_\+lowlevel/main.\+c@{driver\+\_\+nrf24l01p\+\_\+lowlevel/main.\+c}!main@{main}}
+\index{main@{main}!driver\+\_\+nrf24l01p\+\_\+lowlevel/main.\+c@{driver\+\_\+nrf24l01p\+\_\+lowlevel/main.\+c}}
+\subsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{driver__nrf24l01p__lowlevel_2main_8c_ac455d86c002f6f8afed3ffe6d963e960}\label{driver__nrf24l01p__lowlevel_2main_8c_ac455d86c002f6f8afed3ffe6d963e960}} 
+\index{driver\+\_\+nrf24l01p\+\_\+lowlevel/main.\+c@{driver\+\_\+nrf24l01p\+\_\+lowlevel/main.\+c}!nrf24l01p\+\_\+rx\+\_\+handler@{nrf24l01p\+\_\+rx\+\_\+handler}}
+\index{nrf24l01p\+\_\+rx\+\_\+handler@{nrf24l01p\+\_\+rx\+\_\+handler}!driver\+\_\+nrf24l01p\+\_\+lowlevel/main.\+c@{driver\+\_\+nrf24l01p\+\_\+lowlevel/main.\+c}}
+\subsubsection{\texorpdfstring{nrf24l01p\+\_\+rx\+\_\+handler()}{nrf24l01p\_rx\_handler()}}
+{\footnotesize\ttfamily void$\ast$ nrf24l01p\+\_\+rx\+\_\+handler (\begin{DoxyParamCaption}\item[{void $\ast$}]{arg }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{driver__nrf24l01p__lowlevel_2main_8c_a9a5969213c51e60293abc2c2959e2cdd}\label{driver__nrf24l01p__lowlevel_2main_8c_a9a5969213c51e60293abc2c2959e2cdd}} 
+\index{driver\+\_\+nrf24l01p\+\_\+lowlevel/main.\+c@{driver\+\_\+nrf24l01p\+\_\+lowlevel/main.\+c}!print\+\_\+register@{print\+\_\+register}}
+\index{print\+\_\+register@{print\+\_\+register}!driver\+\_\+nrf24l01p\+\_\+lowlevel/main.\+c@{driver\+\_\+nrf24l01p\+\_\+lowlevel/main.\+c}}
+\subsubsection{\texorpdfstring{print\+\_\+register()}{print\_register()}}
+{\footnotesize\ttfamily void print\+\_\+register (\begin{DoxyParamCaption}\item[{char}]{reg,  }\item[{int}]{num\+\_\+bytes }\end{DoxyParamCaption})}
+
+register \mbox{\Hypertarget{driver__nrf24l01p__lowlevel_2main_8c_a53f96431e7573c6cf35a3a89aa4fd814}\label{driver__nrf24l01p__lowlevel_2main_8c_a53f96431e7573c6cf35a3a89aa4fd814}} 
+\index{driver\+\_\+nrf24l01p\+\_\+lowlevel/main.\+c@{driver\+\_\+nrf24l01p\+\_\+lowlevel/main.\+c}!printbin@{printbin}}
+\index{printbin@{printbin}!driver\+\_\+nrf24l01p\+\_\+lowlevel/main.\+c@{driver\+\_\+nrf24l01p\+\_\+lowlevel/main.\+c}}
+\subsubsection{\texorpdfstring{printbin()}{printbin()}}
+{\footnotesize\ttfamily void printbin (\begin{DoxyParamCaption}\item[{unsigned}]{byte }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{driver__nrf24l01p__lowlevel_2main_8c_a4ba3a57804e298caff8818e2b78cf01a}\label{driver__nrf24l01p__lowlevel_2main_8c_a4ba3a57804e298caff8818e2b78cf01a}} 
+\index{driver\+\_\+nrf24l01p\+\_\+lowlevel/main.\+c@{driver\+\_\+nrf24l01p\+\_\+lowlevel/main.\+c}!prtbin@{prtbin}}
+\index{prtbin@{prtbin}!driver\+\_\+nrf24l01p\+\_\+lowlevel/main.\+c@{driver\+\_\+nrf24l01p\+\_\+lowlevel/main.\+c}}
+\subsubsection{\texorpdfstring{prtbin()}{prtbin()}}
+{\footnotesize\ttfamily void prtbin (\begin{DoxyParamCaption}\item[{unsigned}]{byte }\end{DoxyParamCaption})}
+
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{driver__nrf24l01p__lowlevel_2main_8c_a3d92c567b6c075161e297e1835bb4c4a}\label{driver__nrf24l01p__lowlevel_2main_8c_a3d92c567b6c075161e297e1835bb4c4a}} 
+\index{driver\+\_\+nrf24l01p\+\_\+lowlevel/main.\+c@{driver\+\_\+nrf24l01p\+\_\+lowlevel/main.\+c}!rx\+\_\+handler\+\_\+stack@{rx\+\_\+handler\+\_\+stack}}
+\index{rx\+\_\+handler\+\_\+stack@{rx\+\_\+handler\+\_\+stack}!driver\+\_\+nrf24l01p\+\_\+lowlevel/main.\+c@{driver\+\_\+nrf24l01p\+\_\+lowlevel/main.\+c}}
+\subsubsection{\texorpdfstring{rx\+\_\+handler\+\_\+stack}{rx\_handler\_stack}}
+{\footnotesize\ttfamily char rx\+\_\+handler\+\_\+stack\mbox{[}T\+H\+R\+E\+A\+D\+\_\+\+S\+T\+A\+C\+K\+S\+I\+Z\+E\+\_\+\+M\+A\+IN\mbox{]}}
+

@@ -1,0 +1,66 @@
+\hypertarget{tests-pktqueue_8c}{}\section{/home/ayush/\+R\+I\+O\+T/tests/unittests/tests-\/pktqueue/tests-\/pktqueue.c File Reference}
+\label{tests-pktqueue_8c}\index{/home/ayush/\+R\+I\+O\+T/tests/unittests/tests-\/pktqueue/tests-\/pktqueue.\+c@{/home/ayush/\+R\+I\+O\+T/tests/unittests/tests-\/pktqueue/tests-\/pktqueue.\+c}}
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}emb\+Unit.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}net/gnrc/pkt.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}net/gnrc/pktqueue.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}unittests-\/constants.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}tests-\/pktqueue.\+h\char`\"{}}\newline
+Include dependency graph for tests-\/pktqueue.c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{tests-pktqueue_8c__incl}
+\end{center}
+\end{figure}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{tests-pktqueue_8c_ab2531718e1cc1f5064a029bd37d68769}{P\+K\+T\+\_\+\+I\+N\+I\+T\+\_\+\+E\+L\+EM}(len,  data,  next)~\{ 1, (next), (data), (len), G\+N\+R\+C\+\_\+\+N\+E\+T\+T\+Y\+P\+E\+\_\+\+U\+N\+D\+EF \}
+\item 
+\#define \hyperlink{tests-pktqueue_8c_af71505efb36e3b7990db43cf967770a6}{P\+K\+T\+\_\+\+I\+N\+I\+T\+\_\+\+E\+L\+E\+M\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+D\+A\+TA}(data,  next)~\hyperlink{tests-priority__pktqueue_8c_ab2531718e1cc1f5064a029bd37d68769}{P\+K\+T\+\_\+\+I\+N\+I\+T\+\_\+\+E\+L\+EM}(sizeof(data), data, next)
+\item 
+\#define \hyperlink{tests-pktqueue_8c_acaa6b7d25eef99dee1c43fb8e3079312}{P\+K\+T\+Q\+U\+E\+U\+E\+\_\+\+I\+N\+I\+T\+\_\+\+E\+L\+EM}(pkt)~\{ \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2def_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}, pkt \}
+\item 
+Test $\ast$ \hyperlink{tests-pktqueue_8c_a3a1b15024f563f5acb4293527c3b6cf7}{tests\+\_\+pktqueue\+\_\+tests} (void)
+\item 
+void \hyperlink{group__unittests_ga01dc5c2a2dd69c690d952cd6e233cf60}{tests\+\_\+pktqueue} (void)
+\begin{DoxyCompactList}\small\item\em The entry point of this test suite. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{tests-pktqueue_8c_ab2531718e1cc1f5064a029bd37d68769}\label{tests-pktqueue_8c_ab2531718e1cc1f5064a029bd37d68769}} 
+\index{tests-\/pktqueue.\+c@{tests-\/pktqueue.\+c}!P\+K\+T\+\_\+\+I\+N\+I\+T\+\_\+\+E\+L\+EM@{P\+K\+T\+\_\+\+I\+N\+I\+T\+\_\+\+E\+L\+EM}}
+\index{P\+K\+T\+\_\+\+I\+N\+I\+T\+\_\+\+E\+L\+EM@{P\+K\+T\+\_\+\+I\+N\+I\+T\+\_\+\+E\+L\+EM}!tests-\/pktqueue.\+c@{tests-\/pktqueue.\+c}}
+\subsubsection{\texorpdfstring{P\+K\+T\+\_\+\+I\+N\+I\+T\+\_\+\+E\+L\+EM}{PKT\_INIT\_ELEM}}
+{\footnotesize\ttfamily \#define P\+K\+T\+\_\+\+I\+N\+I\+T\+\_\+\+E\+L\+EM(\begin{DoxyParamCaption}\item[{}]{len,  }\item[{}]{data,  }\item[{}]{next }\end{DoxyParamCaption})~\{ 1, (next), (data), (len), G\+N\+R\+C\+\_\+\+N\+E\+T\+T\+Y\+P\+E\+\_\+\+U\+N\+D\+EF \}}
+
+\mbox{\Hypertarget{tests-pktqueue_8c_af71505efb36e3b7990db43cf967770a6}\label{tests-pktqueue_8c_af71505efb36e3b7990db43cf967770a6}} 
+\index{tests-\/pktqueue.\+c@{tests-\/pktqueue.\+c}!P\+K\+T\+\_\+\+I\+N\+I\+T\+\_\+\+E\+L\+E\+M\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+D\+A\+TA@{P\+K\+T\+\_\+\+I\+N\+I\+T\+\_\+\+E\+L\+E\+M\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+D\+A\+TA}}
+\index{P\+K\+T\+\_\+\+I\+N\+I\+T\+\_\+\+E\+L\+E\+M\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+D\+A\+TA@{P\+K\+T\+\_\+\+I\+N\+I\+T\+\_\+\+E\+L\+E\+M\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+D\+A\+TA}!tests-\/pktqueue.\+c@{tests-\/pktqueue.\+c}}
+\subsubsection{\texorpdfstring{P\+K\+T\+\_\+\+I\+N\+I\+T\+\_\+\+E\+L\+E\+M\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+D\+A\+TA}{PKT\_INIT\_ELEM\_STATIC\_DATA}}
+{\footnotesize\ttfamily \#define P\+K\+T\+\_\+\+I\+N\+I\+T\+\_\+\+E\+L\+E\+M\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+D\+A\+TA(\begin{DoxyParamCaption}\item[{}]{data,  }\item[{}]{next }\end{DoxyParamCaption})~\hyperlink{tests-priority__pktqueue_8c_ab2531718e1cc1f5064a029bd37d68769}{P\+K\+T\+\_\+\+I\+N\+I\+T\+\_\+\+E\+L\+EM}(sizeof(data), data, next)}
+
+\mbox{\Hypertarget{tests-pktqueue_8c_acaa6b7d25eef99dee1c43fb8e3079312}\label{tests-pktqueue_8c_acaa6b7d25eef99dee1c43fb8e3079312}} 
+\index{tests-\/pktqueue.\+c@{tests-\/pktqueue.\+c}!P\+K\+T\+Q\+U\+E\+U\+E\+\_\+\+I\+N\+I\+T\+\_\+\+E\+L\+EM@{P\+K\+T\+Q\+U\+E\+U\+E\+\_\+\+I\+N\+I\+T\+\_\+\+E\+L\+EM}}
+\index{P\+K\+T\+Q\+U\+E\+U\+E\+\_\+\+I\+N\+I\+T\+\_\+\+E\+L\+EM@{P\+K\+T\+Q\+U\+E\+U\+E\+\_\+\+I\+N\+I\+T\+\_\+\+E\+L\+EM}!tests-\/pktqueue.\+c@{tests-\/pktqueue.\+c}}
+\subsubsection{\texorpdfstring{P\+K\+T\+Q\+U\+E\+U\+E\+\_\+\+I\+N\+I\+T\+\_\+\+E\+L\+EM}{PKTQUEUE\_INIT\_ELEM}}
+{\footnotesize\ttfamily \#define P\+K\+T\+Q\+U\+E\+U\+E\+\_\+\+I\+N\+I\+T\+\_\+\+E\+L\+EM(\begin{DoxyParamCaption}\item[{}]{pkt }\end{DoxyParamCaption})~\{ \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2def_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}, pkt \}}
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{tests-pktqueue_8c_a3a1b15024f563f5acb4293527c3b6cf7}\label{tests-pktqueue_8c_a3a1b15024f563f5acb4293527c3b6cf7}} 
+\index{tests-\/pktqueue.\+c@{tests-\/pktqueue.\+c}!tests\+\_\+pktqueue\+\_\+tests@{tests\+\_\+pktqueue\+\_\+tests}}
+\index{tests\+\_\+pktqueue\+\_\+tests@{tests\+\_\+pktqueue\+\_\+tests}!tests-\/pktqueue.\+c@{tests-\/pktqueue.\+c}}
+\subsubsection{\texorpdfstring{tests\+\_\+pktqueue\+\_\+tests()}{tests\_pktqueue\_tests()}}
+{\footnotesize\ttfamily Test$\ast$ tests\+\_\+pktqueue\+\_\+tests (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=309pt]{tests-pktqueue_8c_a3a1b15024f563f5acb4293527c3b6cf7_icgraph}
+\end{center}
+\end{figure}

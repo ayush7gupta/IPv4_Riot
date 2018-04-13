@@ -1,0 +1,96 @@
+\hypertarget{periph__i2c_2main_8c}{}\section{/home/ayush/\+R\+I\+O\+T/tests/periph\+\_\+i2c/main.c File Reference}
+\label{periph__i2c_2main_8c}\index{/home/ayush/\+R\+I\+O\+T/tests/periph\+\_\+i2c/main.\+c@{/home/ayush/\+R\+I\+O\+T/tests/periph\+\_\+i2c/main.\+c}}
+
+
+Test application for the low-\/level I2C peripheral driver.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}periph\+\_\+conf.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}periph/i2c.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}shell.\+h\char`\"{}}\newline
+Include dependency graph for main.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{periph__i2c_2main_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{periph__i2c_2main_8c_aeca034f67218340ecb2261a22c2f3dcd}{B\+U\+F\+S\+I\+ZE}~(128\+U)
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{periph__i2c_2main_8c_a8ba2dffa79ccdc0566b572611d64e3f4}{cmd\+\_\+init\+\_\+master} (int argc, char $\ast$$\ast$argv)
+\item 
+int \hyperlink{periph__i2c_2main_8c_a7d0de737fe57c472e941755d4cfe4353}{cmd\+\_\+write} (int argc, char $\ast$$\ast$argv)
+\item 
+int \hyperlink{periph__i2c_2main_8c_a2dc8e4c4302ddb4b12755c376f1df6dd}{cmd\+\_\+write\+\_\+reg} (int argc, char $\ast$$\ast$argv)
+\item 
+int \hyperlink{periph__i2c_2main_8c_a750723ea02564c42e93f20d26bf3a32c}{cmd\+\_\+read} (int argc, char $\ast$$\ast$argv)
+\item 
+int \hyperlink{periph__i2c_2main_8c_a788db2d5abbc81fb6b76a0eec41c553a}{cmd\+\_\+read\+\_\+reg} (int argc, char $\ast$$\ast$argv)
+\item 
+int \hyperlink{periph__i2c_2main_8c_a840291bc02cba5474a4cb46a9b9566fe}{main} (void)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Test application for the low-\/level I2C peripheral driver. 
+
+\begin{DoxyAuthor}{Author}
+Hauke Petersen \href{mailto:hauke.petersen@fu-berlin.de}{\tt hauke.\+petersen@fu-\/berlin.\+de} 
+\end{DoxyAuthor}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{periph__i2c_2main_8c_aeca034f67218340ecb2261a22c2f3dcd}\label{periph__i2c_2main_8c_aeca034f67218340ecb2261a22c2f3dcd}} 
+\index{periph\+\_\+i2c/main.\+c@{periph\+\_\+i2c/main.\+c}!B\+U\+F\+S\+I\+ZE@{B\+U\+F\+S\+I\+ZE}}
+\index{B\+U\+F\+S\+I\+ZE@{B\+U\+F\+S\+I\+ZE}!periph\+\_\+i2c/main.\+c@{periph\+\_\+i2c/main.\+c}}
+\subsubsection{\texorpdfstring{B\+U\+F\+S\+I\+ZE}{BUFSIZE}}
+{\footnotesize\ttfamily \#define B\+U\+F\+S\+I\+ZE~(128\+U)}
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{periph__i2c_2main_8c_a8ba2dffa79ccdc0566b572611d64e3f4}\label{periph__i2c_2main_8c_a8ba2dffa79ccdc0566b572611d64e3f4}} 
+\index{periph\+\_\+i2c/main.\+c@{periph\+\_\+i2c/main.\+c}!cmd\+\_\+init\+\_\+master@{cmd\+\_\+init\+\_\+master}}
+\index{cmd\+\_\+init\+\_\+master@{cmd\+\_\+init\+\_\+master}!periph\+\_\+i2c/main.\+c@{periph\+\_\+i2c/main.\+c}}
+\subsubsection{\texorpdfstring{cmd\+\_\+init\+\_\+master()}{cmd\_init\_master()}}
+{\footnotesize\ttfamily int cmd\+\_\+init\+\_\+master (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$$\ast$}]{argv }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{periph__i2c_2main_8c_a750723ea02564c42e93f20d26bf3a32c}\label{periph__i2c_2main_8c_a750723ea02564c42e93f20d26bf3a32c}} 
+\index{periph\+\_\+i2c/main.\+c@{periph\+\_\+i2c/main.\+c}!cmd\+\_\+read@{cmd\+\_\+read}}
+\index{cmd\+\_\+read@{cmd\+\_\+read}!periph\+\_\+i2c/main.\+c@{periph\+\_\+i2c/main.\+c}}
+\subsubsection{\texorpdfstring{cmd\+\_\+read()}{cmd\_read()}}
+{\footnotesize\ttfamily int cmd\+\_\+read (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$$\ast$}]{argv }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{periph__i2c_2main_8c_a788db2d5abbc81fb6b76a0eec41c553a}\label{periph__i2c_2main_8c_a788db2d5abbc81fb6b76a0eec41c553a}} 
+\index{periph\+\_\+i2c/main.\+c@{periph\+\_\+i2c/main.\+c}!cmd\+\_\+read\+\_\+reg@{cmd\+\_\+read\+\_\+reg}}
+\index{cmd\+\_\+read\+\_\+reg@{cmd\+\_\+read\+\_\+reg}!periph\+\_\+i2c/main.\+c@{periph\+\_\+i2c/main.\+c}}
+\subsubsection{\texorpdfstring{cmd\+\_\+read\+\_\+reg()}{cmd\_read\_reg()}}
+{\footnotesize\ttfamily int cmd\+\_\+read\+\_\+reg (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$$\ast$}]{argv }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{periph__i2c_2main_8c_a7d0de737fe57c472e941755d4cfe4353}\label{periph__i2c_2main_8c_a7d0de737fe57c472e941755d4cfe4353}} 
+\index{periph\+\_\+i2c/main.\+c@{periph\+\_\+i2c/main.\+c}!cmd\+\_\+write@{cmd\+\_\+write}}
+\index{cmd\+\_\+write@{cmd\+\_\+write}!periph\+\_\+i2c/main.\+c@{periph\+\_\+i2c/main.\+c}}
+\subsubsection{\texorpdfstring{cmd\+\_\+write()}{cmd\_write()}}
+{\footnotesize\ttfamily int cmd\+\_\+write (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$$\ast$}]{argv }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{periph__i2c_2main_8c_a2dc8e4c4302ddb4b12755c376f1df6dd}\label{periph__i2c_2main_8c_a2dc8e4c4302ddb4b12755c376f1df6dd}} 
+\index{periph\+\_\+i2c/main.\+c@{periph\+\_\+i2c/main.\+c}!cmd\+\_\+write\+\_\+reg@{cmd\+\_\+write\+\_\+reg}}
+\index{cmd\+\_\+write\+\_\+reg@{cmd\+\_\+write\+\_\+reg}!periph\+\_\+i2c/main.\+c@{periph\+\_\+i2c/main.\+c}}
+\subsubsection{\texorpdfstring{cmd\+\_\+write\+\_\+reg()}{cmd\_write\_reg()}}
+{\footnotesize\ttfamily int cmd\+\_\+write\+\_\+reg (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$$\ast$}]{argv }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{periph__i2c_2main_8c_a840291bc02cba5474a4cb46a9b9566fe}\label{periph__i2c_2main_8c_a840291bc02cba5474a4cb46a9b9566fe}} 
+\index{periph\+\_\+i2c/main.\+c@{periph\+\_\+i2c/main.\+c}!main@{main}}
+\index{main@{main}!periph\+\_\+i2c/main.\+c@{periph\+\_\+i2c/main.\+c}}
+\subsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+

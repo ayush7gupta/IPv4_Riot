@@ -1,0 +1,441 @@
+\hypertarget{group__infrastructure__errors}{}\section{Error codes}
+\label{group__infrastructure__errors}\index{Error codes@{Error codes}}
+Collaboration diagram for Error codes\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=257pt]{group__infrastructure__errors}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group__infrastructure__errors_gac36f9cda08ffce1f67529a432a046248}{E\+R\+R\+\_\+\+I\+S\+\_\+\+F\+A\+T\+AL}(e)~((e) $<$= \hyperlink{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadcaf316b2c5eee4079820f7100849115142}{E\+R\+R\+\_\+\+A\+B\+RT})
+\item 
+\#define \hyperlink{group__infrastructure__errors_gac36f9cda08ffce1f67529a432a046248}{E\+R\+R\+\_\+\+I\+S\+\_\+\+F\+A\+T\+AL}(e)~((e) $<$= \hyperlink{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadcaf316b2c5eee4079820f7100849115142}{E\+R\+R\+\_\+\+A\+B\+RT})
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef \hyperlink{group__compiler__abstraction_ga9cd1d7891fe315de1201e2c6e45f4f57}{s8\+\_\+t} \hyperlink{group__infrastructure__errors_gaf02d9da80fd66b4f986d2c53d7231ddb}{err\+\_\+t}
+\item 
+typedef \hyperlink{group__compiler__abstraction_ga9cd1d7891fe315de1201e2c6e45f4f57}{s8\+\_\+t} \hyperlink{group__infrastructure__errors_gaf02d9da80fd66b4f986d2c53d7231ddb}{err\+\_\+t}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{group__infrastructure__errors_gae2e66c7d13afc90ffecd6151680fbadc}{err\+\_\+enum\+\_\+t} \{ \newline
+\hyperlink{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadcaa26c163b80b1f6786ca81dadc14b00fb}{E\+R\+R\+\_\+\+OK} = 0, 
+\hyperlink{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadcaaaeafdbf3aecc46864daa3cd829c7e05}{E\+R\+R\+\_\+\+M\+EM} = -\/1, 
+\hyperlink{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadca05c91366f1b5203a5db9a241b415cd63}{E\+R\+R\+\_\+\+B\+UF} = -\/2, 
+\hyperlink{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadcac568baeb6407ef5e2630084ccbc34be8}{E\+R\+R\+\_\+\+T\+I\+M\+E\+O\+UT} = -\/3, 
+\newline
+\hyperlink{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadca9448893187313c0c5a502ca9a9ad1c2a}{E\+R\+R\+\_\+\+R\+TE} = -\/4, 
+\hyperlink{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadca13e1dd0edca8a27b6abdf1524bde7929}{E\+R\+R\+\_\+\+I\+N\+P\+R\+O\+G\+R\+E\+SS} = -\/5, 
+\hyperlink{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadcaa9a1c5a6fdeed0aad7fe41d538482bbd}{E\+R\+R\+\_\+\+V\+AL} = -\/6, 
+\hyperlink{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadcab9dcf89d46668b072192278fb907b7ad}{E\+R\+R\+\_\+\+W\+O\+U\+L\+D\+B\+L\+O\+CK} = -\/7, 
+\newline
+\hyperlink{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadca4ebdc2aa1dbd75f927845733a3fb1f8b}{E\+R\+R\+\_\+\+U\+SE} = -\/8, 
+\hyperlink{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadcae6f9c1e4c18ca844f7934307d4cc30e5}{E\+R\+R\+\_\+\+A\+L\+R\+E\+A\+DY} = -\/9, 
+\hyperlink{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadca8543e1d6422fed7b318d97e08dcbaa33}{E\+R\+R\+\_\+\+I\+S\+C\+O\+NN} = -\/10, 
+\hyperlink{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadcab0036c51817b5200bfe8157cc4115b27}{E\+R\+R\+\_\+\+C\+O\+NN} = -\/11, 
+\newline
+\hyperlink{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadca7d61d90449ae6788575e8e46d5d3bbc6}{E\+R\+R\+\_\+\+IF} = -\/12, 
+\hyperlink{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadcaf316b2c5eee4079820f7100849115142}{E\+R\+R\+\_\+\+A\+B\+RT} = -\/13, 
+\hyperlink{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadca759030525f1768a23dc086a5fd45b4e5}{E\+R\+R\+\_\+\+R\+ST} = -\/14, 
+\hyperlink{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadcaa5176d9fecf8ec43d3bc49f4e6c3f7f5}{E\+R\+R\+\_\+\+C\+L\+SD} = -\/15, 
+\newline
+\hyperlink{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadcab508ce0ebdf3ca735208b00a80a45c91}{E\+R\+R\+\_\+\+A\+RG} = -\/16, 
+\hyperlink{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadcaa26c163b80b1f6786ca81dadc14b00fb}{E\+R\+R\+\_\+\+OK} = 0, 
+\hyperlink{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadcaaaeafdbf3aecc46864daa3cd829c7e05}{E\+R\+R\+\_\+\+M\+EM} = -\/1, 
+\hyperlink{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadca05c91366f1b5203a5db9a241b415cd63}{E\+R\+R\+\_\+\+B\+UF} = -\/2, 
+\newline
+\hyperlink{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadcac568baeb6407ef5e2630084ccbc34be8}{E\+R\+R\+\_\+\+T\+I\+M\+E\+O\+UT} = -\/3, 
+\hyperlink{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadca9448893187313c0c5a502ca9a9ad1c2a}{E\+R\+R\+\_\+\+R\+TE} = -\/4, 
+\hyperlink{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadca13e1dd0edca8a27b6abdf1524bde7929}{E\+R\+R\+\_\+\+I\+N\+P\+R\+O\+G\+R\+E\+SS} = -\/5, 
+\hyperlink{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadcaa9a1c5a6fdeed0aad7fe41d538482bbd}{E\+R\+R\+\_\+\+V\+AL} = -\/6, 
+\newline
+\hyperlink{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadcab9dcf89d46668b072192278fb907b7ad}{E\+R\+R\+\_\+\+W\+O\+U\+L\+D\+B\+L\+O\+CK} = -\/7, 
+\hyperlink{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadca4ebdc2aa1dbd75f927845733a3fb1f8b}{E\+R\+R\+\_\+\+U\+SE} = -\/8, 
+\hyperlink{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadcae6f9c1e4c18ca844f7934307d4cc30e5}{E\+R\+R\+\_\+\+A\+L\+R\+E\+A\+DY} = -\/9, 
+\hyperlink{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadca8543e1d6422fed7b318d97e08dcbaa33}{E\+R\+R\+\_\+\+I\+S\+C\+O\+NN} = -\/10, 
+\newline
+\hyperlink{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadcab0036c51817b5200bfe8157cc4115b27}{E\+R\+R\+\_\+\+C\+O\+NN} = -\/11, 
+\hyperlink{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadca7d61d90449ae6788575e8e46d5d3bbc6}{E\+R\+R\+\_\+\+IF} = -\/12, 
+\hyperlink{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadcaf316b2c5eee4079820f7100849115142}{E\+R\+R\+\_\+\+A\+B\+RT} = -\/13, 
+\hyperlink{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadca759030525f1768a23dc086a5fd45b4e5}{E\+R\+R\+\_\+\+R\+ST} = -\/14, 
+\newline
+\hyperlink{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadcaa5176d9fecf8ec43d3bc49f4e6c3f7f5}{E\+R\+R\+\_\+\+C\+L\+SD} = -\/15, 
+\hyperlink{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadcab508ce0ebdf3ca735208b00a80a45c91}{E\+R\+R\+\_\+\+A\+RG} = -\/16
+ \}
+\item 
+enum \hyperlink{group__infrastructure__errors_gae2e66c7d13afc90ffecd6151680fbadc}{err\+\_\+enum\+\_\+t} \{ \newline
+\hyperlink{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadcaa26c163b80b1f6786ca81dadc14b00fb}{E\+R\+R\+\_\+\+OK} = 0, 
+\hyperlink{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadcaaaeafdbf3aecc46864daa3cd829c7e05}{E\+R\+R\+\_\+\+M\+EM} = -\/1, 
+\hyperlink{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadca05c91366f1b5203a5db9a241b415cd63}{E\+R\+R\+\_\+\+B\+UF} = -\/2, 
+\hyperlink{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadcac568baeb6407ef5e2630084ccbc34be8}{E\+R\+R\+\_\+\+T\+I\+M\+E\+O\+UT} = -\/3, 
+\newline
+\hyperlink{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadca9448893187313c0c5a502ca9a9ad1c2a}{E\+R\+R\+\_\+\+R\+TE} = -\/4, 
+\hyperlink{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadca13e1dd0edca8a27b6abdf1524bde7929}{E\+R\+R\+\_\+\+I\+N\+P\+R\+O\+G\+R\+E\+SS} = -\/5, 
+\hyperlink{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadcaa9a1c5a6fdeed0aad7fe41d538482bbd}{E\+R\+R\+\_\+\+V\+AL} = -\/6, 
+\hyperlink{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadcab9dcf89d46668b072192278fb907b7ad}{E\+R\+R\+\_\+\+W\+O\+U\+L\+D\+B\+L\+O\+CK} = -\/7, 
+\newline
+\hyperlink{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadca4ebdc2aa1dbd75f927845733a3fb1f8b}{E\+R\+R\+\_\+\+U\+SE} = -\/8, 
+\hyperlink{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadcae6f9c1e4c18ca844f7934307d4cc30e5}{E\+R\+R\+\_\+\+A\+L\+R\+E\+A\+DY} = -\/9, 
+\hyperlink{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadca8543e1d6422fed7b318d97e08dcbaa33}{E\+R\+R\+\_\+\+I\+S\+C\+O\+NN} = -\/10, 
+\hyperlink{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadcab0036c51817b5200bfe8157cc4115b27}{E\+R\+R\+\_\+\+C\+O\+NN} = -\/11, 
+\newline
+\hyperlink{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadca7d61d90449ae6788575e8e46d5d3bbc6}{E\+R\+R\+\_\+\+IF} = -\/12, 
+\hyperlink{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadcaf316b2c5eee4079820f7100849115142}{E\+R\+R\+\_\+\+A\+B\+RT} = -\/13, 
+\hyperlink{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadca759030525f1768a23dc086a5fd45b4e5}{E\+R\+R\+\_\+\+R\+ST} = -\/14, 
+\hyperlink{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadcaa5176d9fecf8ec43d3bc49f4e6c3f7f5}{E\+R\+R\+\_\+\+C\+L\+SD} = -\/15, 
+\newline
+\hyperlink{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadcab508ce0ebdf3ca735208b00a80a45c91}{E\+R\+R\+\_\+\+A\+RG} = -\/16, 
+\hyperlink{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadcaa26c163b80b1f6786ca81dadc14b00fb}{E\+R\+R\+\_\+\+OK} = 0, 
+\hyperlink{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadcaaaeafdbf3aecc46864daa3cd829c7e05}{E\+R\+R\+\_\+\+M\+EM} = -\/1, 
+\hyperlink{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadca05c91366f1b5203a5db9a241b415cd63}{E\+R\+R\+\_\+\+B\+UF} = -\/2, 
+\newline
+\hyperlink{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadcac568baeb6407ef5e2630084ccbc34be8}{E\+R\+R\+\_\+\+T\+I\+M\+E\+O\+UT} = -\/3, 
+\hyperlink{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadca9448893187313c0c5a502ca9a9ad1c2a}{E\+R\+R\+\_\+\+R\+TE} = -\/4, 
+\hyperlink{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadca13e1dd0edca8a27b6abdf1524bde7929}{E\+R\+R\+\_\+\+I\+N\+P\+R\+O\+G\+R\+E\+SS} = -\/5, 
+\hyperlink{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadcaa9a1c5a6fdeed0aad7fe41d538482bbd}{E\+R\+R\+\_\+\+V\+AL} = -\/6, 
+\newline
+\hyperlink{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadcab9dcf89d46668b072192278fb907b7ad}{E\+R\+R\+\_\+\+W\+O\+U\+L\+D\+B\+L\+O\+CK} = -\/7, 
+\hyperlink{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadca4ebdc2aa1dbd75f927845733a3fb1f8b}{E\+R\+R\+\_\+\+U\+SE} = -\/8, 
+\hyperlink{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadcae6f9c1e4c18ca844f7934307d4cc30e5}{E\+R\+R\+\_\+\+A\+L\+R\+E\+A\+DY} = -\/9, 
+\hyperlink{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadca8543e1d6422fed7b318d97e08dcbaa33}{E\+R\+R\+\_\+\+I\+S\+C\+O\+NN} = -\/10, 
+\newline
+\hyperlink{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadcab0036c51817b5200bfe8157cc4115b27}{E\+R\+R\+\_\+\+C\+O\+NN} = -\/11, 
+\hyperlink{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadca7d61d90449ae6788575e8e46d5d3bbc6}{E\+R\+R\+\_\+\+IF} = -\/12, 
+\hyperlink{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadcaf316b2c5eee4079820f7100849115142}{E\+R\+R\+\_\+\+A\+B\+RT} = -\/13, 
+\hyperlink{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadca759030525f1768a23dc086a5fd45b4e5}{E\+R\+R\+\_\+\+R\+ST} = -\/14, 
+\newline
+\hyperlink{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadcaa5176d9fecf8ec43d3bc49f4e6c3f7f5}{E\+R\+R\+\_\+\+C\+L\+SD} = -\/15, 
+\hyperlink{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadcab508ce0ebdf3ca735208b00a80a45c91}{E\+R\+R\+\_\+\+A\+RG} = -\/16
+ \}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{group__infrastructure__errors_gac36f9cda08ffce1f67529a432a046248}\label{group__infrastructure__errors_gac36f9cda08ffce1f67529a432a046248}} 
+\index{Error codes@{Error codes}!E\+R\+R\+\_\+\+I\+S\+\_\+\+F\+A\+T\+AL@{E\+R\+R\+\_\+\+I\+S\+\_\+\+F\+A\+T\+AL}}
+\index{E\+R\+R\+\_\+\+I\+S\+\_\+\+F\+A\+T\+AL@{E\+R\+R\+\_\+\+I\+S\+\_\+\+F\+A\+T\+AL}!Error codes@{Error codes}}
+\subsubsection{\texorpdfstring{E\+R\+R\+\_\+\+I\+S\+\_\+\+F\+A\+T\+AL}{ERR\_IS\_FATAL}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \#define E\+R\+R\+\_\+\+I\+S\+\_\+\+F\+A\+T\+AL(\begin{DoxyParamCaption}\item[{}]{e }\end{DoxyParamCaption})~((e) $<$= \hyperlink{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadcaf316b2c5eee4079820f7100849115142}{E\+R\+R\+\_\+\+A\+B\+RT})}
+
+\mbox{\Hypertarget{group__infrastructure__errors_gac36f9cda08ffce1f67529a432a046248}\label{group__infrastructure__errors_gac36f9cda08ffce1f67529a432a046248}} 
+\index{Error codes@{Error codes}!E\+R\+R\+\_\+\+I\+S\+\_\+\+F\+A\+T\+AL@{E\+R\+R\+\_\+\+I\+S\+\_\+\+F\+A\+T\+AL}}
+\index{E\+R\+R\+\_\+\+I\+S\+\_\+\+F\+A\+T\+AL@{E\+R\+R\+\_\+\+I\+S\+\_\+\+F\+A\+T\+AL}!Error codes@{Error codes}}
+\subsubsection{\texorpdfstring{E\+R\+R\+\_\+\+I\+S\+\_\+\+F\+A\+T\+AL}{ERR\_IS\_FATAL}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \#define E\+R\+R\+\_\+\+I\+S\+\_\+\+F\+A\+T\+AL(\begin{DoxyParamCaption}\item[{}]{e }\end{DoxyParamCaption})~((e) $<$= \hyperlink{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadcaf316b2c5eee4079820f7100849115142}{E\+R\+R\+\_\+\+A\+B\+RT})}
+
+
+
+\subsection{Typedef Documentation}
+\mbox{\Hypertarget{group__infrastructure__errors_gaf02d9da80fd66b4f986d2c53d7231ddb}\label{group__infrastructure__errors_gaf02d9da80fd66b4f986d2c53d7231ddb}} 
+\index{Error codes@{Error codes}!err\+\_\+t@{err\+\_\+t}}
+\index{err\+\_\+t@{err\+\_\+t}!Error codes@{Error codes}}
+\subsubsection{\texorpdfstring{err\+\_\+t}{err\_t}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily typedef \hyperlink{group__compiler__abstraction_ga9cd1d7891fe315de1201e2c6e45f4f57}{s8\+\_\+t} \hyperlink{group__infrastructure__errors_gaf02d9da80fd66b4f986d2c53d7231ddb}{err\+\_\+t}}
+
+Define L\+W\+I\+P\+\_\+\+E\+R\+R\+\_\+T in cc.\+h if you want to use a different type for your platform (must be signed). \mbox{\Hypertarget{group__infrastructure__errors_gaf02d9da80fd66b4f986d2c53d7231ddb}\label{group__infrastructure__errors_gaf02d9da80fd66b4f986d2c53d7231ddb}} 
+\index{Error codes@{Error codes}!err\+\_\+t@{err\+\_\+t}}
+\index{err\+\_\+t@{err\+\_\+t}!Error codes@{Error codes}}
+\subsubsection{\texorpdfstring{err\+\_\+t}{err\_t}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily typedef \hyperlink{group__compiler__abstraction_ga9cd1d7891fe315de1201e2c6e45f4f57}{s8\+\_\+t} \hyperlink{group__infrastructure__errors_gaf02d9da80fd66b4f986d2c53d7231ddb}{err\+\_\+t}}
+
+Define L\+W\+I\+P\+\_\+\+E\+R\+R\+\_\+T in cc.\+h if you want to use a different type for your platform (must be signed). 
+
+\subsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{group__infrastructure__errors_gae2e66c7d13afc90ffecd6151680fbadc}\label{group__infrastructure__errors_gae2e66c7d13afc90ffecd6151680fbadc}} 
+\index{Error codes@{Error codes}!err\+\_\+enum\+\_\+t@{err\+\_\+enum\+\_\+t}}
+\index{err\+\_\+enum\+\_\+t@{err\+\_\+enum\+\_\+t}!Error codes@{Error codes}}
+\subsubsection{\texorpdfstring{err\+\_\+enum\+\_\+t}{err\_enum\_t}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily enum \hyperlink{group__infrastructure__errors_gae2e66c7d13afc90ffecd6151680fbadc}{err\+\_\+enum\+\_\+t}}
+
+Definitions for error constants. \begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{E\+R\+R\+\_\+\+OK@{E\+R\+R\+\_\+\+OK}!Error codes@{Error codes}}\index{Error codes@{Error codes}!E\+R\+R\+\_\+\+OK@{E\+R\+R\+\_\+\+OK}}}\mbox{\Hypertarget{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadcaa26c163b80b1f6786ca81dadc14b00fb}\label{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadcaa26c163b80b1f6786ca81dadc14b00fb}} 
+E\+R\+R\+\_\+\+OK&No error, everything OK. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{E\+R\+R\+\_\+\+M\+EM@{E\+R\+R\+\_\+\+M\+EM}!Error codes@{Error codes}}\index{Error codes@{Error codes}!E\+R\+R\+\_\+\+M\+EM@{E\+R\+R\+\_\+\+M\+EM}}}\mbox{\Hypertarget{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadcaaaeafdbf3aecc46864daa3cd829c7e05}\label{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadcaaaeafdbf3aecc46864daa3cd829c7e05}} 
+E\+R\+R\+\_\+\+M\+EM&Out of memory error. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{E\+R\+R\+\_\+\+B\+UF@{E\+R\+R\+\_\+\+B\+UF}!Error codes@{Error codes}}\index{Error codes@{Error codes}!E\+R\+R\+\_\+\+B\+UF@{E\+R\+R\+\_\+\+B\+UF}}}\mbox{\Hypertarget{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadca05c91366f1b5203a5db9a241b415cd63}\label{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadca05c91366f1b5203a5db9a241b415cd63}} 
+E\+R\+R\+\_\+\+B\+UF&Buffer error. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{E\+R\+R\+\_\+\+T\+I\+M\+E\+O\+UT@{E\+R\+R\+\_\+\+T\+I\+M\+E\+O\+UT}!Error codes@{Error codes}}\index{Error codes@{Error codes}!E\+R\+R\+\_\+\+T\+I\+M\+E\+O\+UT@{E\+R\+R\+\_\+\+T\+I\+M\+E\+O\+UT}}}\mbox{\Hypertarget{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadcac568baeb6407ef5e2630084ccbc34be8}\label{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadcac568baeb6407ef5e2630084ccbc34be8}} 
+E\+R\+R\+\_\+\+T\+I\+M\+E\+O\+UT&Timeout. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{E\+R\+R\+\_\+\+R\+TE@{E\+R\+R\+\_\+\+R\+TE}!Error codes@{Error codes}}\index{Error codes@{Error codes}!E\+R\+R\+\_\+\+R\+TE@{E\+R\+R\+\_\+\+R\+TE}}}\mbox{\Hypertarget{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadca9448893187313c0c5a502ca9a9ad1c2a}\label{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadca9448893187313c0c5a502ca9a9ad1c2a}} 
+E\+R\+R\+\_\+\+R\+TE&Routing problem. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{E\+R\+R\+\_\+\+I\+N\+P\+R\+O\+G\+R\+E\+SS@{E\+R\+R\+\_\+\+I\+N\+P\+R\+O\+G\+R\+E\+SS}!Error codes@{Error codes}}\index{Error codes@{Error codes}!E\+R\+R\+\_\+\+I\+N\+P\+R\+O\+G\+R\+E\+SS@{E\+R\+R\+\_\+\+I\+N\+P\+R\+O\+G\+R\+E\+SS}}}\mbox{\Hypertarget{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadca13e1dd0edca8a27b6abdf1524bde7929}\label{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadca13e1dd0edca8a27b6abdf1524bde7929}} 
+E\+R\+R\+\_\+\+I\+N\+P\+R\+O\+G\+R\+E\+SS&Operation in progress \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{E\+R\+R\+\_\+\+V\+AL@{E\+R\+R\+\_\+\+V\+AL}!Error codes@{Error codes}}\index{Error codes@{Error codes}!E\+R\+R\+\_\+\+V\+AL@{E\+R\+R\+\_\+\+V\+AL}}}\mbox{\Hypertarget{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadcaa9a1c5a6fdeed0aad7fe41d538482bbd}\label{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadcaa9a1c5a6fdeed0aad7fe41d538482bbd}} 
+E\+R\+R\+\_\+\+V\+AL&Illegal value. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{E\+R\+R\+\_\+\+W\+O\+U\+L\+D\+B\+L\+O\+CK@{E\+R\+R\+\_\+\+W\+O\+U\+L\+D\+B\+L\+O\+CK}!Error codes@{Error codes}}\index{Error codes@{Error codes}!E\+R\+R\+\_\+\+W\+O\+U\+L\+D\+B\+L\+O\+CK@{E\+R\+R\+\_\+\+W\+O\+U\+L\+D\+B\+L\+O\+CK}}}\mbox{\Hypertarget{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadcab9dcf89d46668b072192278fb907b7ad}\label{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadcab9dcf89d46668b072192278fb907b7ad}} 
+E\+R\+R\+\_\+\+W\+O\+U\+L\+D\+B\+L\+O\+CK&Operation would block. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{E\+R\+R\+\_\+\+U\+SE@{E\+R\+R\+\_\+\+U\+SE}!Error codes@{Error codes}}\index{Error codes@{Error codes}!E\+R\+R\+\_\+\+U\+SE@{E\+R\+R\+\_\+\+U\+SE}}}\mbox{\Hypertarget{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadca4ebdc2aa1dbd75f927845733a3fb1f8b}\label{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadca4ebdc2aa1dbd75f927845733a3fb1f8b}} 
+E\+R\+R\+\_\+\+U\+SE&Address in use. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{E\+R\+R\+\_\+\+A\+L\+R\+E\+A\+DY@{E\+R\+R\+\_\+\+A\+L\+R\+E\+A\+DY}!Error codes@{Error codes}}\index{Error codes@{Error codes}!E\+R\+R\+\_\+\+A\+L\+R\+E\+A\+DY@{E\+R\+R\+\_\+\+A\+L\+R\+E\+A\+DY}}}\mbox{\Hypertarget{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadcae6f9c1e4c18ca844f7934307d4cc30e5}\label{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadcae6f9c1e4c18ca844f7934307d4cc30e5}} 
+E\+R\+R\+\_\+\+A\+L\+R\+E\+A\+DY&Already connecting. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{E\+R\+R\+\_\+\+I\+S\+C\+O\+NN@{E\+R\+R\+\_\+\+I\+S\+C\+O\+NN}!Error codes@{Error codes}}\index{Error codes@{Error codes}!E\+R\+R\+\_\+\+I\+S\+C\+O\+NN@{E\+R\+R\+\_\+\+I\+S\+C\+O\+NN}}}\mbox{\Hypertarget{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadca8543e1d6422fed7b318d97e08dcbaa33}\label{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadca8543e1d6422fed7b318d97e08dcbaa33}} 
+E\+R\+R\+\_\+\+I\+S\+C\+O\+NN&Conn already established. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{E\+R\+R\+\_\+\+C\+O\+NN@{E\+R\+R\+\_\+\+C\+O\+NN}!Error codes@{Error codes}}\index{Error codes@{Error codes}!E\+R\+R\+\_\+\+C\+O\+NN@{E\+R\+R\+\_\+\+C\+O\+NN}}}\mbox{\Hypertarget{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadcab0036c51817b5200bfe8157cc4115b27}\label{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadcab0036c51817b5200bfe8157cc4115b27}} 
+E\+R\+R\+\_\+\+C\+O\+NN&Not connected. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{E\+R\+R\+\_\+\+IF@{E\+R\+R\+\_\+\+IF}!Error codes@{Error codes}}\index{Error codes@{Error codes}!E\+R\+R\+\_\+\+IF@{E\+R\+R\+\_\+\+IF}}}\mbox{\Hypertarget{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadca7d61d90449ae6788575e8e46d5d3bbc6}\label{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadca7d61d90449ae6788575e8e46d5d3bbc6}} 
+E\+R\+R\+\_\+\+IF&Low-\/level netif error \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{E\+R\+R\+\_\+\+A\+B\+RT@{E\+R\+R\+\_\+\+A\+B\+RT}!Error codes@{Error codes}}\index{Error codes@{Error codes}!E\+R\+R\+\_\+\+A\+B\+RT@{E\+R\+R\+\_\+\+A\+B\+RT}}}\mbox{\Hypertarget{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadcaf316b2c5eee4079820f7100849115142}\label{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadcaf316b2c5eee4079820f7100849115142}} 
+E\+R\+R\+\_\+\+A\+B\+RT&Connection aborted. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{E\+R\+R\+\_\+\+R\+ST@{E\+R\+R\+\_\+\+R\+ST}!Error codes@{Error codes}}\index{Error codes@{Error codes}!E\+R\+R\+\_\+\+R\+ST@{E\+R\+R\+\_\+\+R\+ST}}}\mbox{\Hypertarget{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadca759030525f1768a23dc086a5fd45b4e5}\label{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadca759030525f1768a23dc086a5fd45b4e5}} 
+E\+R\+R\+\_\+\+R\+ST&Connection reset. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{E\+R\+R\+\_\+\+C\+L\+SD@{E\+R\+R\+\_\+\+C\+L\+SD}!Error codes@{Error codes}}\index{Error codes@{Error codes}!E\+R\+R\+\_\+\+C\+L\+SD@{E\+R\+R\+\_\+\+C\+L\+SD}}}\mbox{\Hypertarget{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadcaa5176d9fecf8ec43d3bc49f4e6c3f7f5}\label{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadcaa5176d9fecf8ec43d3bc49f4e6c3f7f5}} 
+E\+R\+R\+\_\+\+C\+L\+SD&Connection closed. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{E\+R\+R\+\_\+\+A\+RG@{E\+R\+R\+\_\+\+A\+RG}!Error codes@{Error codes}}\index{Error codes@{Error codes}!E\+R\+R\+\_\+\+A\+RG@{E\+R\+R\+\_\+\+A\+RG}}}\mbox{\Hypertarget{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadcab508ce0ebdf3ca735208b00a80a45c91}\label{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadcab508ce0ebdf3ca735208b00a80a45c91}} 
+E\+R\+R\+\_\+\+A\+RG&Illegal argument. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{E\+R\+R\+\_\+\+OK@{E\+R\+R\+\_\+\+OK}!Error codes@{Error codes}}\index{Error codes@{Error codes}!E\+R\+R\+\_\+\+OK@{E\+R\+R\+\_\+\+OK}}}\mbox{\Hypertarget{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadcaa26c163b80b1f6786ca81dadc14b00fb}\label{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadcaa26c163b80b1f6786ca81dadc14b00fb}} 
+E\+R\+R\+\_\+\+OK&No error, everything OK. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{E\+R\+R\+\_\+\+M\+EM@{E\+R\+R\+\_\+\+M\+EM}!Error codes@{Error codes}}\index{Error codes@{Error codes}!E\+R\+R\+\_\+\+M\+EM@{E\+R\+R\+\_\+\+M\+EM}}}\mbox{\Hypertarget{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadcaaaeafdbf3aecc46864daa3cd829c7e05}\label{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadcaaaeafdbf3aecc46864daa3cd829c7e05}} 
+E\+R\+R\+\_\+\+M\+EM&Out of memory error. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{E\+R\+R\+\_\+\+B\+UF@{E\+R\+R\+\_\+\+B\+UF}!Error codes@{Error codes}}\index{Error codes@{Error codes}!E\+R\+R\+\_\+\+B\+UF@{E\+R\+R\+\_\+\+B\+UF}}}\mbox{\Hypertarget{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadca05c91366f1b5203a5db9a241b415cd63}\label{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadca05c91366f1b5203a5db9a241b415cd63}} 
+E\+R\+R\+\_\+\+B\+UF&Buffer error. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{E\+R\+R\+\_\+\+T\+I\+M\+E\+O\+UT@{E\+R\+R\+\_\+\+T\+I\+M\+E\+O\+UT}!Error codes@{Error codes}}\index{Error codes@{Error codes}!E\+R\+R\+\_\+\+T\+I\+M\+E\+O\+UT@{E\+R\+R\+\_\+\+T\+I\+M\+E\+O\+UT}}}\mbox{\Hypertarget{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadcac568baeb6407ef5e2630084ccbc34be8}\label{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadcac568baeb6407ef5e2630084ccbc34be8}} 
+E\+R\+R\+\_\+\+T\+I\+M\+E\+O\+UT&Timeout. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{E\+R\+R\+\_\+\+R\+TE@{E\+R\+R\+\_\+\+R\+TE}!Error codes@{Error codes}}\index{Error codes@{Error codes}!E\+R\+R\+\_\+\+R\+TE@{E\+R\+R\+\_\+\+R\+TE}}}\mbox{\Hypertarget{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadca9448893187313c0c5a502ca9a9ad1c2a}\label{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadca9448893187313c0c5a502ca9a9ad1c2a}} 
+E\+R\+R\+\_\+\+R\+TE&Routing problem. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{E\+R\+R\+\_\+\+I\+N\+P\+R\+O\+G\+R\+E\+SS@{E\+R\+R\+\_\+\+I\+N\+P\+R\+O\+G\+R\+E\+SS}!Error codes@{Error codes}}\index{Error codes@{Error codes}!E\+R\+R\+\_\+\+I\+N\+P\+R\+O\+G\+R\+E\+SS@{E\+R\+R\+\_\+\+I\+N\+P\+R\+O\+G\+R\+E\+SS}}}\mbox{\Hypertarget{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadca13e1dd0edca8a27b6abdf1524bde7929}\label{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadca13e1dd0edca8a27b6abdf1524bde7929}} 
+E\+R\+R\+\_\+\+I\+N\+P\+R\+O\+G\+R\+E\+SS&Operation in progress \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{E\+R\+R\+\_\+\+V\+AL@{E\+R\+R\+\_\+\+V\+AL}!Error codes@{Error codes}}\index{Error codes@{Error codes}!E\+R\+R\+\_\+\+V\+AL@{E\+R\+R\+\_\+\+V\+AL}}}\mbox{\Hypertarget{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadcaa9a1c5a6fdeed0aad7fe41d538482bbd}\label{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadcaa9a1c5a6fdeed0aad7fe41d538482bbd}} 
+E\+R\+R\+\_\+\+V\+AL&Illegal value. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{E\+R\+R\+\_\+\+W\+O\+U\+L\+D\+B\+L\+O\+CK@{E\+R\+R\+\_\+\+W\+O\+U\+L\+D\+B\+L\+O\+CK}!Error codes@{Error codes}}\index{Error codes@{Error codes}!E\+R\+R\+\_\+\+W\+O\+U\+L\+D\+B\+L\+O\+CK@{E\+R\+R\+\_\+\+W\+O\+U\+L\+D\+B\+L\+O\+CK}}}\mbox{\Hypertarget{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadcab9dcf89d46668b072192278fb907b7ad}\label{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadcab9dcf89d46668b072192278fb907b7ad}} 
+E\+R\+R\+\_\+\+W\+O\+U\+L\+D\+B\+L\+O\+CK&Operation would block. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{E\+R\+R\+\_\+\+U\+SE@{E\+R\+R\+\_\+\+U\+SE}!Error codes@{Error codes}}\index{Error codes@{Error codes}!E\+R\+R\+\_\+\+U\+SE@{E\+R\+R\+\_\+\+U\+SE}}}\mbox{\Hypertarget{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadca4ebdc2aa1dbd75f927845733a3fb1f8b}\label{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadca4ebdc2aa1dbd75f927845733a3fb1f8b}} 
+E\+R\+R\+\_\+\+U\+SE&Address in use. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{E\+R\+R\+\_\+\+A\+L\+R\+E\+A\+DY@{E\+R\+R\+\_\+\+A\+L\+R\+E\+A\+DY}!Error codes@{Error codes}}\index{Error codes@{Error codes}!E\+R\+R\+\_\+\+A\+L\+R\+E\+A\+DY@{E\+R\+R\+\_\+\+A\+L\+R\+E\+A\+DY}}}\mbox{\Hypertarget{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadcae6f9c1e4c18ca844f7934307d4cc30e5}\label{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadcae6f9c1e4c18ca844f7934307d4cc30e5}} 
+E\+R\+R\+\_\+\+A\+L\+R\+E\+A\+DY&Already connecting. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{E\+R\+R\+\_\+\+I\+S\+C\+O\+NN@{E\+R\+R\+\_\+\+I\+S\+C\+O\+NN}!Error codes@{Error codes}}\index{Error codes@{Error codes}!E\+R\+R\+\_\+\+I\+S\+C\+O\+NN@{E\+R\+R\+\_\+\+I\+S\+C\+O\+NN}}}\mbox{\Hypertarget{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadca8543e1d6422fed7b318d97e08dcbaa33}\label{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadca8543e1d6422fed7b318d97e08dcbaa33}} 
+E\+R\+R\+\_\+\+I\+S\+C\+O\+NN&Conn already established. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{E\+R\+R\+\_\+\+C\+O\+NN@{E\+R\+R\+\_\+\+C\+O\+NN}!Error codes@{Error codes}}\index{Error codes@{Error codes}!E\+R\+R\+\_\+\+C\+O\+NN@{E\+R\+R\+\_\+\+C\+O\+NN}}}\mbox{\Hypertarget{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadcab0036c51817b5200bfe8157cc4115b27}\label{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadcab0036c51817b5200bfe8157cc4115b27}} 
+E\+R\+R\+\_\+\+C\+O\+NN&Not connected. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{E\+R\+R\+\_\+\+IF@{E\+R\+R\+\_\+\+IF}!Error codes@{Error codes}}\index{Error codes@{Error codes}!E\+R\+R\+\_\+\+IF@{E\+R\+R\+\_\+\+IF}}}\mbox{\Hypertarget{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadca7d61d90449ae6788575e8e46d5d3bbc6}\label{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadca7d61d90449ae6788575e8e46d5d3bbc6}} 
+E\+R\+R\+\_\+\+IF&Low-\/level netif error \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{E\+R\+R\+\_\+\+A\+B\+RT@{E\+R\+R\+\_\+\+A\+B\+RT}!Error codes@{Error codes}}\index{Error codes@{Error codes}!E\+R\+R\+\_\+\+A\+B\+RT@{E\+R\+R\+\_\+\+A\+B\+RT}}}\mbox{\Hypertarget{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadcaf316b2c5eee4079820f7100849115142}\label{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadcaf316b2c5eee4079820f7100849115142}} 
+E\+R\+R\+\_\+\+A\+B\+RT&Connection aborted. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{E\+R\+R\+\_\+\+R\+ST@{E\+R\+R\+\_\+\+R\+ST}!Error codes@{Error codes}}\index{Error codes@{Error codes}!E\+R\+R\+\_\+\+R\+ST@{E\+R\+R\+\_\+\+R\+ST}}}\mbox{\Hypertarget{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadca759030525f1768a23dc086a5fd45b4e5}\label{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadca759030525f1768a23dc086a5fd45b4e5}} 
+E\+R\+R\+\_\+\+R\+ST&Connection reset. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{E\+R\+R\+\_\+\+C\+L\+SD@{E\+R\+R\+\_\+\+C\+L\+SD}!Error codes@{Error codes}}\index{Error codes@{Error codes}!E\+R\+R\+\_\+\+C\+L\+SD@{E\+R\+R\+\_\+\+C\+L\+SD}}}\mbox{\Hypertarget{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadcaa5176d9fecf8ec43d3bc49f4e6c3f7f5}\label{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadcaa5176d9fecf8ec43d3bc49f4e6c3f7f5}} 
+E\+R\+R\+\_\+\+C\+L\+SD&Connection closed. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{E\+R\+R\+\_\+\+A\+RG@{E\+R\+R\+\_\+\+A\+RG}!Error codes@{Error codes}}\index{Error codes@{Error codes}!E\+R\+R\+\_\+\+A\+RG@{E\+R\+R\+\_\+\+A\+RG}}}\mbox{\Hypertarget{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadcab508ce0ebdf3ca735208b00a80a45c91}\label{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadcab508ce0ebdf3ca735208b00a80a45c91}} 
+E\+R\+R\+\_\+\+A\+RG&Illegal argument. \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{group__infrastructure__errors_gae2e66c7d13afc90ffecd6151680fbadc}\label{group__infrastructure__errors_gae2e66c7d13afc90ffecd6151680fbadc}} 
+\index{Error codes@{Error codes}!err\+\_\+enum\+\_\+t@{err\+\_\+enum\+\_\+t}}
+\index{err\+\_\+enum\+\_\+t@{err\+\_\+enum\+\_\+t}!Error codes@{Error codes}}
+\subsubsection{\texorpdfstring{err\+\_\+enum\+\_\+t}{err\_enum\_t}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily enum \hyperlink{group__infrastructure__errors_gae2e66c7d13afc90ffecd6151680fbadc}{err\+\_\+enum\+\_\+t}}
+
+Definitions for error constants. \begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{E\+R\+R\+\_\+\+OK@{E\+R\+R\+\_\+\+OK}!Error codes@{Error codes}}\index{Error codes@{Error codes}!E\+R\+R\+\_\+\+OK@{E\+R\+R\+\_\+\+OK}}}\mbox{\Hypertarget{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadcaa26c163b80b1f6786ca81dadc14b00fb}\label{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadcaa26c163b80b1f6786ca81dadc14b00fb}} 
+E\+R\+R\+\_\+\+OK&No error, everything OK. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{E\+R\+R\+\_\+\+M\+EM@{E\+R\+R\+\_\+\+M\+EM}!Error codes@{Error codes}}\index{Error codes@{Error codes}!E\+R\+R\+\_\+\+M\+EM@{E\+R\+R\+\_\+\+M\+EM}}}\mbox{\Hypertarget{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadcaaaeafdbf3aecc46864daa3cd829c7e05}\label{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadcaaaeafdbf3aecc46864daa3cd829c7e05}} 
+E\+R\+R\+\_\+\+M\+EM&Out of memory error. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{E\+R\+R\+\_\+\+B\+UF@{E\+R\+R\+\_\+\+B\+UF}!Error codes@{Error codes}}\index{Error codes@{Error codes}!E\+R\+R\+\_\+\+B\+UF@{E\+R\+R\+\_\+\+B\+UF}}}\mbox{\Hypertarget{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadca05c91366f1b5203a5db9a241b415cd63}\label{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadca05c91366f1b5203a5db9a241b415cd63}} 
+E\+R\+R\+\_\+\+B\+UF&Buffer error. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{E\+R\+R\+\_\+\+T\+I\+M\+E\+O\+UT@{E\+R\+R\+\_\+\+T\+I\+M\+E\+O\+UT}!Error codes@{Error codes}}\index{Error codes@{Error codes}!E\+R\+R\+\_\+\+T\+I\+M\+E\+O\+UT@{E\+R\+R\+\_\+\+T\+I\+M\+E\+O\+UT}}}\mbox{\Hypertarget{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadcac568baeb6407ef5e2630084ccbc34be8}\label{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadcac568baeb6407ef5e2630084ccbc34be8}} 
+E\+R\+R\+\_\+\+T\+I\+M\+E\+O\+UT&Timeout. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{E\+R\+R\+\_\+\+R\+TE@{E\+R\+R\+\_\+\+R\+TE}!Error codes@{Error codes}}\index{Error codes@{Error codes}!E\+R\+R\+\_\+\+R\+TE@{E\+R\+R\+\_\+\+R\+TE}}}\mbox{\Hypertarget{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadca9448893187313c0c5a502ca9a9ad1c2a}\label{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadca9448893187313c0c5a502ca9a9ad1c2a}} 
+E\+R\+R\+\_\+\+R\+TE&Routing problem. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{E\+R\+R\+\_\+\+I\+N\+P\+R\+O\+G\+R\+E\+SS@{E\+R\+R\+\_\+\+I\+N\+P\+R\+O\+G\+R\+E\+SS}!Error codes@{Error codes}}\index{Error codes@{Error codes}!E\+R\+R\+\_\+\+I\+N\+P\+R\+O\+G\+R\+E\+SS@{E\+R\+R\+\_\+\+I\+N\+P\+R\+O\+G\+R\+E\+SS}}}\mbox{\Hypertarget{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadca13e1dd0edca8a27b6abdf1524bde7929}\label{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadca13e1dd0edca8a27b6abdf1524bde7929}} 
+E\+R\+R\+\_\+\+I\+N\+P\+R\+O\+G\+R\+E\+SS&Operation in progress \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{E\+R\+R\+\_\+\+V\+AL@{E\+R\+R\+\_\+\+V\+AL}!Error codes@{Error codes}}\index{Error codes@{Error codes}!E\+R\+R\+\_\+\+V\+AL@{E\+R\+R\+\_\+\+V\+AL}}}\mbox{\Hypertarget{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadcaa9a1c5a6fdeed0aad7fe41d538482bbd}\label{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadcaa9a1c5a6fdeed0aad7fe41d538482bbd}} 
+E\+R\+R\+\_\+\+V\+AL&Illegal value. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{E\+R\+R\+\_\+\+W\+O\+U\+L\+D\+B\+L\+O\+CK@{E\+R\+R\+\_\+\+W\+O\+U\+L\+D\+B\+L\+O\+CK}!Error codes@{Error codes}}\index{Error codes@{Error codes}!E\+R\+R\+\_\+\+W\+O\+U\+L\+D\+B\+L\+O\+CK@{E\+R\+R\+\_\+\+W\+O\+U\+L\+D\+B\+L\+O\+CK}}}\mbox{\Hypertarget{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadcab9dcf89d46668b072192278fb907b7ad}\label{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadcab9dcf89d46668b072192278fb907b7ad}} 
+E\+R\+R\+\_\+\+W\+O\+U\+L\+D\+B\+L\+O\+CK&Operation would block. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{E\+R\+R\+\_\+\+U\+SE@{E\+R\+R\+\_\+\+U\+SE}!Error codes@{Error codes}}\index{Error codes@{Error codes}!E\+R\+R\+\_\+\+U\+SE@{E\+R\+R\+\_\+\+U\+SE}}}\mbox{\Hypertarget{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadca4ebdc2aa1dbd75f927845733a3fb1f8b}\label{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadca4ebdc2aa1dbd75f927845733a3fb1f8b}} 
+E\+R\+R\+\_\+\+U\+SE&Address in use. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{E\+R\+R\+\_\+\+A\+L\+R\+E\+A\+DY@{E\+R\+R\+\_\+\+A\+L\+R\+E\+A\+DY}!Error codes@{Error codes}}\index{Error codes@{Error codes}!E\+R\+R\+\_\+\+A\+L\+R\+E\+A\+DY@{E\+R\+R\+\_\+\+A\+L\+R\+E\+A\+DY}}}\mbox{\Hypertarget{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadcae6f9c1e4c18ca844f7934307d4cc30e5}\label{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadcae6f9c1e4c18ca844f7934307d4cc30e5}} 
+E\+R\+R\+\_\+\+A\+L\+R\+E\+A\+DY&Already connecting. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{E\+R\+R\+\_\+\+I\+S\+C\+O\+NN@{E\+R\+R\+\_\+\+I\+S\+C\+O\+NN}!Error codes@{Error codes}}\index{Error codes@{Error codes}!E\+R\+R\+\_\+\+I\+S\+C\+O\+NN@{E\+R\+R\+\_\+\+I\+S\+C\+O\+NN}}}\mbox{\Hypertarget{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadca8543e1d6422fed7b318d97e08dcbaa33}\label{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadca8543e1d6422fed7b318d97e08dcbaa33}} 
+E\+R\+R\+\_\+\+I\+S\+C\+O\+NN&Conn already established. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{E\+R\+R\+\_\+\+C\+O\+NN@{E\+R\+R\+\_\+\+C\+O\+NN}!Error codes@{Error codes}}\index{Error codes@{Error codes}!E\+R\+R\+\_\+\+C\+O\+NN@{E\+R\+R\+\_\+\+C\+O\+NN}}}\mbox{\Hypertarget{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadcab0036c51817b5200bfe8157cc4115b27}\label{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadcab0036c51817b5200bfe8157cc4115b27}} 
+E\+R\+R\+\_\+\+C\+O\+NN&Not connected. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{E\+R\+R\+\_\+\+IF@{E\+R\+R\+\_\+\+IF}!Error codes@{Error codes}}\index{Error codes@{Error codes}!E\+R\+R\+\_\+\+IF@{E\+R\+R\+\_\+\+IF}}}\mbox{\Hypertarget{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadca7d61d90449ae6788575e8e46d5d3bbc6}\label{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadca7d61d90449ae6788575e8e46d5d3bbc6}} 
+E\+R\+R\+\_\+\+IF&Low-\/level netif error \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{E\+R\+R\+\_\+\+A\+B\+RT@{E\+R\+R\+\_\+\+A\+B\+RT}!Error codes@{Error codes}}\index{Error codes@{Error codes}!E\+R\+R\+\_\+\+A\+B\+RT@{E\+R\+R\+\_\+\+A\+B\+RT}}}\mbox{\Hypertarget{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadcaf316b2c5eee4079820f7100849115142}\label{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadcaf316b2c5eee4079820f7100849115142}} 
+E\+R\+R\+\_\+\+A\+B\+RT&Connection aborted. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{E\+R\+R\+\_\+\+R\+ST@{E\+R\+R\+\_\+\+R\+ST}!Error codes@{Error codes}}\index{Error codes@{Error codes}!E\+R\+R\+\_\+\+R\+ST@{E\+R\+R\+\_\+\+R\+ST}}}\mbox{\Hypertarget{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadca759030525f1768a23dc086a5fd45b4e5}\label{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadca759030525f1768a23dc086a5fd45b4e5}} 
+E\+R\+R\+\_\+\+R\+ST&Connection reset. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{E\+R\+R\+\_\+\+C\+L\+SD@{E\+R\+R\+\_\+\+C\+L\+SD}!Error codes@{Error codes}}\index{Error codes@{Error codes}!E\+R\+R\+\_\+\+C\+L\+SD@{E\+R\+R\+\_\+\+C\+L\+SD}}}\mbox{\Hypertarget{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadcaa5176d9fecf8ec43d3bc49f4e6c3f7f5}\label{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadcaa5176d9fecf8ec43d3bc49f4e6c3f7f5}} 
+E\+R\+R\+\_\+\+C\+L\+SD&Connection closed. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{E\+R\+R\+\_\+\+A\+RG@{E\+R\+R\+\_\+\+A\+RG}!Error codes@{Error codes}}\index{Error codes@{Error codes}!E\+R\+R\+\_\+\+A\+RG@{E\+R\+R\+\_\+\+A\+RG}}}\mbox{\Hypertarget{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadcab508ce0ebdf3ca735208b00a80a45c91}\label{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadcab508ce0ebdf3ca735208b00a80a45c91}} 
+E\+R\+R\+\_\+\+A\+RG&Illegal argument. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{E\+R\+R\+\_\+\+OK@{E\+R\+R\+\_\+\+OK}!Error codes@{Error codes}}\index{Error codes@{Error codes}!E\+R\+R\+\_\+\+OK@{E\+R\+R\+\_\+\+OK}}}\mbox{\Hypertarget{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadcaa26c163b80b1f6786ca81dadc14b00fb}\label{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadcaa26c163b80b1f6786ca81dadc14b00fb}} 
+E\+R\+R\+\_\+\+OK&No error, everything OK. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{E\+R\+R\+\_\+\+M\+EM@{E\+R\+R\+\_\+\+M\+EM}!Error codes@{Error codes}}\index{Error codes@{Error codes}!E\+R\+R\+\_\+\+M\+EM@{E\+R\+R\+\_\+\+M\+EM}}}\mbox{\Hypertarget{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadcaaaeafdbf3aecc46864daa3cd829c7e05}\label{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadcaaaeafdbf3aecc46864daa3cd829c7e05}} 
+E\+R\+R\+\_\+\+M\+EM&Out of memory error. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{E\+R\+R\+\_\+\+B\+UF@{E\+R\+R\+\_\+\+B\+UF}!Error codes@{Error codes}}\index{Error codes@{Error codes}!E\+R\+R\+\_\+\+B\+UF@{E\+R\+R\+\_\+\+B\+UF}}}\mbox{\Hypertarget{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadca05c91366f1b5203a5db9a241b415cd63}\label{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadca05c91366f1b5203a5db9a241b415cd63}} 
+E\+R\+R\+\_\+\+B\+UF&Buffer error. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{E\+R\+R\+\_\+\+T\+I\+M\+E\+O\+UT@{E\+R\+R\+\_\+\+T\+I\+M\+E\+O\+UT}!Error codes@{Error codes}}\index{Error codes@{Error codes}!E\+R\+R\+\_\+\+T\+I\+M\+E\+O\+UT@{E\+R\+R\+\_\+\+T\+I\+M\+E\+O\+UT}}}\mbox{\Hypertarget{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadcac568baeb6407ef5e2630084ccbc34be8}\label{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadcac568baeb6407ef5e2630084ccbc34be8}} 
+E\+R\+R\+\_\+\+T\+I\+M\+E\+O\+UT&Timeout. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{E\+R\+R\+\_\+\+R\+TE@{E\+R\+R\+\_\+\+R\+TE}!Error codes@{Error codes}}\index{Error codes@{Error codes}!E\+R\+R\+\_\+\+R\+TE@{E\+R\+R\+\_\+\+R\+TE}}}\mbox{\Hypertarget{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadca9448893187313c0c5a502ca9a9ad1c2a}\label{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadca9448893187313c0c5a502ca9a9ad1c2a}} 
+E\+R\+R\+\_\+\+R\+TE&Routing problem. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{E\+R\+R\+\_\+\+I\+N\+P\+R\+O\+G\+R\+E\+SS@{E\+R\+R\+\_\+\+I\+N\+P\+R\+O\+G\+R\+E\+SS}!Error codes@{Error codes}}\index{Error codes@{Error codes}!E\+R\+R\+\_\+\+I\+N\+P\+R\+O\+G\+R\+E\+SS@{E\+R\+R\+\_\+\+I\+N\+P\+R\+O\+G\+R\+E\+SS}}}\mbox{\Hypertarget{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadca13e1dd0edca8a27b6abdf1524bde7929}\label{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadca13e1dd0edca8a27b6abdf1524bde7929}} 
+E\+R\+R\+\_\+\+I\+N\+P\+R\+O\+G\+R\+E\+SS&Operation in progress \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{E\+R\+R\+\_\+\+V\+AL@{E\+R\+R\+\_\+\+V\+AL}!Error codes@{Error codes}}\index{Error codes@{Error codes}!E\+R\+R\+\_\+\+V\+AL@{E\+R\+R\+\_\+\+V\+AL}}}\mbox{\Hypertarget{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadcaa9a1c5a6fdeed0aad7fe41d538482bbd}\label{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadcaa9a1c5a6fdeed0aad7fe41d538482bbd}} 
+E\+R\+R\+\_\+\+V\+AL&Illegal value. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{E\+R\+R\+\_\+\+W\+O\+U\+L\+D\+B\+L\+O\+CK@{E\+R\+R\+\_\+\+W\+O\+U\+L\+D\+B\+L\+O\+CK}!Error codes@{Error codes}}\index{Error codes@{Error codes}!E\+R\+R\+\_\+\+W\+O\+U\+L\+D\+B\+L\+O\+CK@{E\+R\+R\+\_\+\+W\+O\+U\+L\+D\+B\+L\+O\+CK}}}\mbox{\Hypertarget{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadcab9dcf89d46668b072192278fb907b7ad}\label{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadcab9dcf89d46668b072192278fb907b7ad}} 
+E\+R\+R\+\_\+\+W\+O\+U\+L\+D\+B\+L\+O\+CK&Operation would block. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{E\+R\+R\+\_\+\+U\+SE@{E\+R\+R\+\_\+\+U\+SE}!Error codes@{Error codes}}\index{Error codes@{Error codes}!E\+R\+R\+\_\+\+U\+SE@{E\+R\+R\+\_\+\+U\+SE}}}\mbox{\Hypertarget{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadca4ebdc2aa1dbd75f927845733a3fb1f8b}\label{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadca4ebdc2aa1dbd75f927845733a3fb1f8b}} 
+E\+R\+R\+\_\+\+U\+SE&Address in use. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{E\+R\+R\+\_\+\+A\+L\+R\+E\+A\+DY@{E\+R\+R\+\_\+\+A\+L\+R\+E\+A\+DY}!Error codes@{Error codes}}\index{Error codes@{Error codes}!E\+R\+R\+\_\+\+A\+L\+R\+E\+A\+DY@{E\+R\+R\+\_\+\+A\+L\+R\+E\+A\+DY}}}\mbox{\Hypertarget{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadcae6f9c1e4c18ca844f7934307d4cc30e5}\label{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadcae6f9c1e4c18ca844f7934307d4cc30e5}} 
+E\+R\+R\+\_\+\+A\+L\+R\+E\+A\+DY&Already connecting. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{E\+R\+R\+\_\+\+I\+S\+C\+O\+NN@{E\+R\+R\+\_\+\+I\+S\+C\+O\+NN}!Error codes@{Error codes}}\index{Error codes@{Error codes}!E\+R\+R\+\_\+\+I\+S\+C\+O\+NN@{E\+R\+R\+\_\+\+I\+S\+C\+O\+NN}}}\mbox{\Hypertarget{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadca8543e1d6422fed7b318d97e08dcbaa33}\label{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadca8543e1d6422fed7b318d97e08dcbaa33}} 
+E\+R\+R\+\_\+\+I\+S\+C\+O\+NN&Conn already established. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{E\+R\+R\+\_\+\+C\+O\+NN@{E\+R\+R\+\_\+\+C\+O\+NN}!Error codes@{Error codes}}\index{Error codes@{Error codes}!E\+R\+R\+\_\+\+C\+O\+NN@{E\+R\+R\+\_\+\+C\+O\+NN}}}\mbox{\Hypertarget{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadcab0036c51817b5200bfe8157cc4115b27}\label{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadcab0036c51817b5200bfe8157cc4115b27}} 
+E\+R\+R\+\_\+\+C\+O\+NN&Not connected. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{E\+R\+R\+\_\+\+IF@{E\+R\+R\+\_\+\+IF}!Error codes@{Error codes}}\index{Error codes@{Error codes}!E\+R\+R\+\_\+\+IF@{E\+R\+R\+\_\+\+IF}}}\mbox{\Hypertarget{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadca7d61d90449ae6788575e8e46d5d3bbc6}\label{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadca7d61d90449ae6788575e8e46d5d3bbc6}} 
+E\+R\+R\+\_\+\+IF&Low-\/level netif error \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{E\+R\+R\+\_\+\+A\+B\+RT@{E\+R\+R\+\_\+\+A\+B\+RT}!Error codes@{Error codes}}\index{Error codes@{Error codes}!E\+R\+R\+\_\+\+A\+B\+RT@{E\+R\+R\+\_\+\+A\+B\+RT}}}\mbox{\Hypertarget{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadcaf316b2c5eee4079820f7100849115142}\label{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadcaf316b2c5eee4079820f7100849115142}} 
+E\+R\+R\+\_\+\+A\+B\+RT&Connection aborted. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{E\+R\+R\+\_\+\+R\+ST@{E\+R\+R\+\_\+\+R\+ST}!Error codes@{Error codes}}\index{Error codes@{Error codes}!E\+R\+R\+\_\+\+R\+ST@{E\+R\+R\+\_\+\+R\+ST}}}\mbox{\Hypertarget{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadca759030525f1768a23dc086a5fd45b4e5}\label{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadca759030525f1768a23dc086a5fd45b4e5}} 
+E\+R\+R\+\_\+\+R\+ST&Connection reset. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{E\+R\+R\+\_\+\+C\+L\+SD@{E\+R\+R\+\_\+\+C\+L\+SD}!Error codes@{Error codes}}\index{Error codes@{Error codes}!E\+R\+R\+\_\+\+C\+L\+SD@{E\+R\+R\+\_\+\+C\+L\+SD}}}\mbox{\Hypertarget{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadcaa5176d9fecf8ec43d3bc49f4e6c3f7f5}\label{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadcaa5176d9fecf8ec43d3bc49f4e6c3f7f5}} 
+E\+R\+R\+\_\+\+C\+L\+SD&Connection closed. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{E\+R\+R\+\_\+\+A\+RG@{E\+R\+R\+\_\+\+A\+RG}!Error codes@{Error codes}}\index{Error codes@{Error codes}!E\+R\+R\+\_\+\+A\+RG@{E\+R\+R\+\_\+\+A\+RG}}}\mbox{\Hypertarget{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadcab508ce0ebdf3ca735208b00a80a45c91}\label{group__infrastructure__errors_ggae2e66c7d13afc90ffecd6151680fbadcab508ce0ebdf3ca735208b00a80a45c91}} 
+E\+R\+R\+\_\+\+A\+RG&Illegal argument. \\
+\hline
+
+\end{DoxyEnumFields}

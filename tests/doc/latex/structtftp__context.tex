@@ -1,0 +1,91 @@
+\hypertarget{structtftp__context}{}\section{tftp\+\_\+context Struct Reference}
+\label{structtftp__context}\index{tftp\+\_\+context@{tftp\+\_\+context}}
+
+
+{\ttfamily \#include $<$tftp\+\_\+server.\+h$>$}
+
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+void $\ast$($\ast$ \hyperlink{structtftp__context_a1115a1fb54634b3e65fe01bb2838daec}{open} )(const char $\ast$fname, const char $\ast$\hyperlink{periph__spi_2main_8c_a500c16f7901299002158783745bc1ab0}{mode}, \hyperlink{group__compiler__abstraction_ga4caecabca98b43919dd11be1c0d4cd8e}{u8\+\_\+t} \hyperlink{structtftp__context_a8e3e7dfc49eb654a57bd465206bd0564}{write})
+\item 
+void($\ast$ \hyperlink{structtftp__context_a14b36e5bff9ab9fe7a5a5a12894c9f9b}{close} )(void $\ast$handle)
+\item 
+int($\ast$ \hyperlink{structtftp__context_a8e134df1967ff227a4ec7dde30343b06}{read} )(void $\ast$handle, void $\ast$buf, int bytes)
+\item 
+int($\ast$ \hyperlink{structtftp__context_a8e3e7dfc49eb654a57bd465206bd0564}{write} )(void $\ast$handle, struct \hyperlink{structpbuf}{pbuf} $\ast$p)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+T\+F\+TP context containing callback functions for T\+F\+TP transfers 
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{structtftp__context_a14b36e5bff9ab9fe7a5a5a12894c9f9b}\label{structtftp__context_a14b36e5bff9ab9fe7a5a5a12894c9f9b}} 
+\index{tftp\+\_\+context@{tftp\+\_\+context}!close@{close}}
+\index{close@{close}!tftp\+\_\+context@{tftp\+\_\+context}}
+\subsubsection{\texorpdfstring{close}{close}}
+{\footnotesize\ttfamily void($\ast$ tftp\+\_\+context\+::close)(void $\ast$handle)}
+
+Close file handle 
+\begin{DoxyParams}{Parameters}
+{\em handle} & File handle returned by \hyperlink{structtftp__context_a1115a1fb54634b3e65fe01bb2838daec}{open()} \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{structtftp__context_a1115a1fb54634b3e65fe01bb2838daec}\label{structtftp__context_a1115a1fb54634b3e65fe01bb2838daec}} 
+\index{tftp\+\_\+context@{tftp\+\_\+context}!open@{open}}
+\index{open@{open}!tftp\+\_\+context@{tftp\+\_\+context}}
+\subsubsection{\texorpdfstring{open}{open}}
+{\footnotesize\ttfamily void $\ast$($\ast$ tftp\+\_\+context\+::open)(const char $\ast$fname, const char $\ast$\hyperlink{periph__spi_2main_8c_a500c16f7901299002158783745bc1ab0}{mode}, \hyperlink{group__compiler__abstraction_ga4caecabca98b43919dd11be1c0d4cd8e}{u8\+\_\+t} \hyperlink{structtftp__context_a8e3e7dfc49eb654a57bd465206bd0564}{write})}
+
+Open file for read/write. 
+\begin{DoxyParams}{Parameters}
+{\em fname} & Filename \\
+\hline
+{\em mode} & Mode string from T\+F\+TP R\+FC 1350 (netascii, octet, mail) \\
+\hline
+{\em write} & Flag indicating read (0) or write (!= 0) access \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+File handle supplied to other functions 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structtftp__context_a8e134df1967ff227a4ec7dde30343b06}\label{structtftp__context_a8e134df1967ff227a4ec7dde30343b06}} 
+\index{tftp\+\_\+context@{tftp\+\_\+context}!read@{read}}
+\index{read@{read}!tftp\+\_\+context@{tftp\+\_\+context}}
+\subsubsection{\texorpdfstring{read}{read}}
+{\footnotesize\ttfamily int($\ast$ tftp\+\_\+context\+::read)(void $\ast$handle, void $\ast$buf, int bytes)}
+
+Read from file 
+\begin{DoxyParams}{Parameters}
+{\em handle} & File handle returned by \hyperlink{structtftp__context_a1115a1fb54634b3e65fe01bb2838daec}{open()} \\
+\hline
+{\em buf} & Target buffer to copy read data to \\
+\hline
+{\em bytes} & Number of bytes to copy to buf \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+$>$= 0\+: Success; $<$ 0\+: Error 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structtftp__context_a8e3e7dfc49eb654a57bd465206bd0564}\label{structtftp__context_a8e3e7dfc49eb654a57bd465206bd0564}} 
+\index{tftp\+\_\+context@{tftp\+\_\+context}!write@{write}}
+\index{write@{write}!tftp\+\_\+context@{tftp\+\_\+context}}
+\subsubsection{\texorpdfstring{write}{write}}
+{\footnotesize\ttfamily int($\ast$ tftp\+\_\+context\+::write)(void $\ast$handle, struct \hyperlink{structpbuf}{pbuf} $\ast$p)}
+
+Write to file 
+\begin{DoxyParams}{Parameters}
+{\em handle} & File handle returned by \hyperlink{structtftp__context_a1115a1fb54634b3e65fe01bb2838daec}{open()} \\
+\hline
+{\em pbuf} & P\+B\+UF adjusted such that payload pointer points to the beginning of write data. In other words, T\+F\+TP headers are stripped off. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+$>$= 0\+: Success; $<$ 0\+: Error 
+\end{DoxyReturn}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/ayush/\+R\+I\+O\+T/tests/lwip/bin/pkg/native/lwip/src/include/lwip/apps/\hyperlink{native_2lwip_2src_2include_2lwip_2apps_2tftp__server_8h}{tftp\+\_\+server.\+h}\end{DoxyCompactItemize}

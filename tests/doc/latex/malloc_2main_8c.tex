@@ -1,0 +1,113 @@
+\hypertarget{malloc_2main_8c}{}\section{/home/ayush/\+R\+I\+O\+T/tests/malloc/main.c File Reference}
+\label{malloc_2main_8c}\index{/home/ayush/\+R\+I\+O\+T/tests/malloc/main.\+c@{/home/ayush/\+R\+I\+O\+T/tests/malloc/main.\+c}}
+
+
+Simple malloc/free test.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+Include dependency graph for main.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=260pt]{malloc_2main_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structnode}{node}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{malloc_2main_8c_aea3cfda4f3a9f978ec759f206cf186fe}{C\+H\+U\+N\+K\+\_\+\+S\+I\+ZE}~1024
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{malloc_2main_8c_ad447f72a468710a5d93bf111b25dc853}{fill\+\_\+memory} (struct \hyperlink{structnode}{node} $\ast$head)
+\item 
+void \hyperlink{malloc_2main_8c_ae39c0dc5abe2902bcedaa3f545918fa3}{free\+\_\+memory} (struct \hyperlink{structnode}{node} $\ast$head)
+\item 
+int \hyperlink{malloc_2main_8c_a840291bc02cba5474a4cb46a9b9566fe}{main} (void)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{malloc_2main_8c_ac7af894858cf396a219d632f40afdc8d}{total} = 0
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Simple malloc/free test. 
+
+\begin{DoxyAuthor}{Author}
+Benjamin Valentin \href{mailto:benpicco@zedat.fu-berlin.de}{\tt benpicco@zedat.\+fu-\/berlin.\+de} 
+\end{DoxyAuthor}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{malloc_2main_8c_aea3cfda4f3a9f978ec759f206cf186fe}\label{malloc_2main_8c_aea3cfda4f3a9f978ec759f206cf186fe}} 
+\index{malloc/main.\+c@{malloc/main.\+c}!C\+H\+U\+N\+K\+\_\+\+S\+I\+ZE@{C\+H\+U\+N\+K\+\_\+\+S\+I\+ZE}}
+\index{C\+H\+U\+N\+K\+\_\+\+S\+I\+ZE@{C\+H\+U\+N\+K\+\_\+\+S\+I\+ZE}!malloc/main.\+c@{malloc/main.\+c}}
+\subsubsection{\texorpdfstring{C\+H\+U\+N\+K\+\_\+\+S\+I\+ZE}{CHUNK\_SIZE}}
+{\footnotesize\ttfamily \#define C\+H\+U\+N\+K\+\_\+\+S\+I\+ZE~1024}
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{malloc_2main_8c_ad447f72a468710a5d93bf111b25dc853}\label{malloc_2main_8c_ad447f72a468710a5d93bf111b25dc853}} 
+\index{malloc/main.\+c@{malloc/main.\+c}!fill\+\_\+memory@{fill\+\_\+memory}}
+\index{fill\+\_\+memory@{fill\+\_\+memory}!malloc/main.\+c@{malloc/main.\+c}}
+\subsubsection{\texorpdfstring{fill\+\_\+memory()}{fill\_memory()}}
+{\footnotesize\ttfamily void fill\+\_\+memory (\begin{DoxyParamCaption}\item[{struct \hyperlink{structnode}{node} $\ast$}]{head }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=221pt]{malloc_2main_8c_ad447f72a468710a5d93bf111b25dc853_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{malloc_2main_8c_ae39c0dc5abe2902bcedaa3f545918fa3}\label{malloc_2main_8c_ae39c0dc5abe2902bcedaa3f545918fa3}} 
+\index{malloc/main.\+c@{malloc/main.\+c}!free\+\_\+memory@{free\+\_\+memory}}
+\index{free\+\_\+memory@{free\+\_\+memory}!malloc/main.\+c@{malloc/main.\+c}}
+\subsubsection{\texorpdfstring{free\+\_\+memory()}{free\_memory()}}
+{\footnotesize\ttfamily void free\+\_\+memory (\begin{DoxyParamCaption}\item[{struct \hyperlink{structnode}{node} $\ast$}]{head }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=228pt]{malloc_2main_8c_ae39c0dc5abe2902bcedaa3f545918fa3_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{malloc_2main_8c_a840291bc02cba5474a4cb46a9b9566fe}\label{malloc_2main_8c_a840291bc02cba5474a4cb46a9b9566fe}} 
+\index{malloc/main.\+c@{malloc/main.\+c}!main@{main}}
+\index{main@{main}!malloc/main.\+c@{malloc/main.\+c}}
+\subsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=228pt]{malloc_2main_8c_a840291bc02cba5474a4cb46a9b9566fe_cgraph}
+\end{center}
+\end{figure}
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{malloc_2main_8c_ac7af894858cf396a219d632f40afdc8d}\label{malloc_2main_8c_ac7af894858cf396a219d632f40afdc8d}} 
+\index{malloc/main.\+c@{malloc/main.\+c}!total@{total}}
+\index{total@{total}!malloc/main.\+c@{malloc/main.\+c}}
+\subsubsection{\texorpdfstring{total}{total}}
+{\footnotesize\ttfamily int total = 0}
+

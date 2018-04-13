@@ -1,0 +1,200 @@
+\hypertarget{lwip__sock__tcp_2main_8c}{}\section{/home/ayush/\+R\+I\+O\+T/tests/lwip\+\_\+sock\+\_\+tcp/main.c File Reference}
+\label{lwip__sock__tcp_2main_8c}\index{/home/ayush/\+R\+I\+O\+T/tests/lwip\+\_\+sock\+\_\+tcp/main.\+c@{/home/ayush/\+R\+I\+O\+T/tests/lwip\+\_\+sock\+\_\+tcp/main.\+c}}
+
+
+Test for U\+DP socks.  
+
+
+{\ttfamily \#include $<$assert.\+h$>$}\newline
+{\ttfamily \#include $<$errno.\+h$>$}\newline
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$sys/uio.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}net/ipv6/addr.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}net/sock/tcp.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}sched.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}thread.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}xtimer.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}constants.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}stack.\+h\char`\"{}}\newline
+Include dependency graph for main.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{lwip__sock__tcp_2main_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{lwip__sock__tcp_2main_8c_a137a416ce44e3b143039d8c50f4c3d0d}{\+\_\+\+T\+E\+S\+T\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+I\+ZE}~(128)
+\item 
+\#define \hyperlink{lwip__sock__tcp_2main_8c_a7968a95ee6ffce5943496d0185da8087}{\+\_\+\+Q\+U\+E\+U\+E\+\_\+\+S\+I\+ZE}~(1)
+\item 
+\#define \hyperlink{lwip__sock__tcp_2main_8c_aec37fb472076c5cde54dffe0bb7200a1}{\+\_\+\+M\+S\+G\+\_\+\+Q\+U\+E\+U\+E\+\_\+\+S\+I\+ZE}~(4)
+\item 
+\#define \hyperlink{lwip__sock__tcp_2main_8c_a400e52beec097cc17bc5abee59a27026}{\+\_\+\+C\+L\+I\+E\+N\+T\+\_\+\+B\+U\+F\+\_\+\+S\+I\+ZE}~(128)
+\item 
+\#define \hyperlink{lwip__sock__tcp_2main_8c_a88ad1bc53e1893ca379741c269892cf7}{\+\_\+\+S\+E\+R\+V\+E\+R\+\_\+\+B\+U\+F\+\_\+\+S\+I\+ZE}~(128)
+\item 
+\#define \hyperlink{lwip__sock__tcp_2main_8c_ac5f9f7611d7b58b0ed96ba648136b104}{\+\_\+\+S\+E\+R\+V\+E\+R\+\_\+\+Q\+U\+E\+U\+E\+\_\+\+S\+I\+ZE}~(1)
+\item 
+\#define \hyperlink{lwip__sock__tcp_2main_8c_a63a8f9f3fe8de3aa8ee5b61a7e70045f}{\+\_\+\+C\+L\+I\+E\+N\+T\+\_\+\+M\+S\+G\+\_\+\+S\+T\+A\+RT}~(0xe307)
+\item 
+\#define \hyperlink{lwip__sock__tcp_2main_8c_af69408cc42330df474e72aa9768bfe96}{\+\_\+\+C\+L\+I\+E\+N\+T\+\_\+\+M\+S\+G\+\_\+\+R\+E\+AD}~(0xe308)
+\item 
+\#define \hyperlink{lwip__sock__tcp_2main_8c_ace467434fe0617edcf5b947df612dc28}{\+\_\+\+C\+L\+I\+E\+N\+T\+\_\+\+M\+S\+G\+\_\+\+W\+R\+I\+TE}~(0xe309)
+\item 
+\#define \hyperlink{lwip__sock__tcp_2main_8c_a43a35734fdf55d6608fc3be4b1e1c0e8}{\+\_\+\+C\+L\+I\+E\+N\+T\+\_\+\+M\+S\+G\+\_\+\+S\+T\+OP}~(0xe30a)
+\item 
+\#define \hyperlink{lwip__sock__tcp_2main_8c_ab94e56945b3e41f1b4627d9d6fba6dde}{\+\_\+\+S\+E\+R\+V\+E\+R\+\_\+\+M\+S\+G\+\_\+\+S\+T\+A\+RT}~(0xe30b)
+\item 
+\#define \hyperlink{lwip__sock__tcp_2main_8c_a23baccf0bf49239083fa57cf78fb6f3f}{\+\_\+\+S\+E\+R\+V\+E\+R\+\_\+\+M\+S\+G\+\_\+\+A\+C\+C\+E\+PT}~(0xe30c)
+\item 
+\#define \hyperlink{lwip__sock__tcp_2main_8c_a7807b334b3b4d64b6d426b861ac247a6}{\+\_\+\+S\+E\+R\+V\+E\+R\+\_\+\+M\+S\+G\+\_\+\+R\+E\+AD}~(0xe30d)
+\item 
+\#define \hyperlink{lwip__sock__tcp_2main_8c_a2d0f2b4a9ab3d6b8faa6d9dec62e9dbc}{\+\_\+\+S\+E\+R\+V\+E\+R\+\_\+\+M\+S\+G\+\_\+\+W\+R\+I\+TE}~(0xe30e)
+\item 
+\#define \hyperlink{lwip__sock__tcp_2main_8c_a02069c553287310252f5ad1244f65f6d}{\+\_\+\+S\+E\+R\+V\+E\+R\+\_\+\+M\+S\+G\+\_\+\+C\+L\+O\+SE}~(0xe30f)
+\item 
+\#define \hyperlink{lwip__sock__tcp_2main_8c_a74ae1e0b78dd1495f5255e28e11885bc}{\+\_\+\+S\+E\+R\+V\+E\+R\+\_\+\+M\+S\+G\+\_\+\+S\+T\+OP}~(0xe310)
+\item 
+\#define \hyperlink{lwip__sock__tcp_2main_8c_ad3a462ce537647abdb236a2a5d303d76}{C\+A\+LL}(fn)~puts(\char`\"{}Calling \char`\"{} \# fn); fn; tear\+\_\+down()
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{lwip__sock__tcp_2main_8c_a840291bc02cba5474a4cb46a9b9566fe}{main} (void)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Test for U\+DP socks. 
+
+\begin{DoxyAuthor}{Author}
+Martine Lenders \href{mailto:m.lenders@fu-berlin.de}{\tt m.\+lenders@fu-\/berlin.\+de} 
+\end{DoxyAuthor}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{lwip__sock__tcp_2main_8c_a400e52beec097cc17bc5abee59a27026}\label{lwip__sock__tcp_2main_8c_a400e52beec097cc17bc5abee59a27026}} 
+\index{lwip\+\_\+sock\+\_\+tcp/main.\+c@{lwip\+\_\+sock\+\_\+tcp/main.\+c}!\+\_\+\+C\+L\+I\+E\+N\+T\+\_\+\+B\+U\+F\+\_\+\+S\+I\+ZE@{\+\_\+\+C\+L\+I\+E\+N\+T\+\_\+\+B\+U\+F\+\_\+\+S\+I\+ZE}}
+\index{\+\_\+\+C\+L\+I\+E\+N\+T\+\_\+\+B\+U\+F\+\_\+\+S\+I\+ZE@{\+\_\+\+C\+L\+I\+E\+N\+T\+\_\+\+B\+U\+F\+\_\+\+S\+I\+ZE}!lwip\+\_\+sock\+\_\+tcp/main.\+c@{lwip\+\_\+sock\+\_\+tcp/main.\+c}}
+\subsubsection{\texorpdfstring{\+\_\+\+C\+L\+I\+E\+N\+T\+\_\+\+B\+U\+F\+\_\+\+S\+I\+ZE}{\_CLIENT\_BUF\_SIZE}}
+{\footnotesize\ttfamily \#define \+\_\+\+C\+L\+I\+E\+N\+T\+\_\+\+B\+U\+F\+\_\+\+S\+I\+ZE~(128)}
+
+\mbox{\Hypertarget{lwip__sock__tcp_2main_8c_af69408cc42330df474e72aa9768bfe96}\label{lwip__sock__tcp_2main_8c_af69408cc42330df474e72aa9768bfe96}} 
+\index{lwip\+\_\+sock\+\_\+tcp/main.\+c@{lwip\+\_\+sock\+\_\+tcp/main.\+c}!\+\_\+\+C\+L\+I\+E\+N\+T\+\_\+\+M\+S\+G\+\_\+\+R\+E\+AD@{\+\_\+\+C\+L\+I\+E\+N\+T\+\_\+\+M\+S\+G\+\_\+\+R\+E\+AD}}
+\index{\+\_\+\+C\+L\+I\+E\+N\+T\+\_\+\+M\+S\+G\+\_\+\+R\+E\+AD@{\+\_\+\+C\+L\+I\+E\+N\+T\+\_\+\+M\+S\+G\+\_\+\+R\+E\+AD}!lwip\+\_\+sock\+\_\+tcp/main.\+c@{lwip\+\_\+sock\+\_\+tcp/main.\+c}}
+\subsubsection{\texorpdfstring{\+\_\+\+C\+L\+I\+E\+N\+T\+\_\+\+M\+S\+G\+\_\+\+R\+E\+AD}{\_CLIENT\_MSG\_READ}}
+{\footnotesize\ttfamily \#define \+\_\+\+C\+L\+I\+E\+N\+T\+\_\+\+M\+S\+G\+\_\+\+R\+E\+AD~(0xe308)}
+
+\mbox{\Hypertarget{lwip__sock__tcp_2main_8c_a63a8f9f3fe8de3aa8ee5b61a7e70045f}\label{lwip__sock__tcp_2main_8c_a63a8f9f3fe8de3aa8ee5b61a7e70045f}} 
+\index{lwip\+\_\+sock\+\_\+tcp/main.\+c@{lwip\+\_\+sock\+\_\+tcp/main.\+c}!\+\_\+\+C\+L\+I\+E\+N\+T\+\_\+\+M\+S\+G\+\_\+\+S\+T\+A\+RT@{\+\_\+\+C\+L\+I\+E\+N\+T\+\_\+\+M\+S\+G\+\_\+\+S\+T\+A\+RT}}
+\index{\+\_\+\+C\+L\+I\+E\+N\+T\+\_\+\+M\+S\+G\+\_\+\+S\+T\+A\+RT@{\+\_\+\+C\+L\+I\+E\+N\+T\+\_\+\+M\+S\+G\+\_\+\+S\+T\+A\+RT}!lwip\+\_\+sock\+\_\+tcp/main.\+c@{lwip\+\_\+sock\+\_\+tcp/main.\+c}}
+\subsubsection{\texorpdfstring{\+\_\+\+C\+L\+I\+E\+N\+T\+\_\+\+M\+S\+G\+\_\+\+S\+T\+A\+RT}{\_CLIENT\_MSG\_START}}
+{\footnotesize\ttfamily \#define \+\_\+\+C\+L\+I\+E\+N\+T\+\_\+\+M\+S\+G\+\_\+\+S\+T\+A\+RT~(0xe307)}
+
+\mbox{\Hypertarget{lwip__sock__tcp_2main_8c_a43a35734fdf55d6608fc3be4b1e1c0e8}\label{lwip__sock__tcp_2main_8c_a43a35734fdf55d6608fc3be4b1e1c0e8}} 
+\index{lwip\+\_\+sock\+\_\+tcp/main.\+c@{lwip\+\_\+sock\+\_\+tcp/main.\+c}!\+\_\+\+C\+L\+I\+E\+N\+T\+\_\+\+M\+S\+G\+\_\+\+S\+T\+OP@{\+\_\+\+C\+L\+I\+E\+N\+T\+\_\+\+M\+S\+G\+\_\+\+S\+T\+OP}}
+\index{\+\_\+\+C\+L\+I\+E\+N\+T\+\_\+\+M\+S\+G\+\_\+\+S\+T\+OP@{\+\_\+\+C\+L\+I\+E\+N\+T\+\_\+\+M\+S\+G\+\_\+\+S\+T\+OP}!lwip\+\_\+sock\+\_\+tcp/main.\+c@{lwip\+\_\+sock\+\_\+tcp/main.\+c}}
+\subsubsection{\texorpdfstring{\+\_\+\+C\+L\+I\+E\+N\+T\+\_\+\+M\+S\+G\+\_\+\+S\+T\+OP}{\_CLIENT\_MSG\_STOP}}
+{\footnotesize\ttfamily \#define \+\_\+\+C\+L\+I\+E\+N\+T\+\_\+\+M\+S\+G\+\_\+\+S\+T\+OP~(0xe30a)}
+
+\mbox{\Hypertarget{lwip__sock__tcp_2main_8c_ace467434fe0617edcf5b947df612dc28}\label{lwip__sock__tcp_2main_8c_ace467434fe0617edcf5b947df612dc28}} 
+\index{lwip\+\_\+sock\+\_\+tcp/main.\+c@{lwip\+\_\+sock\+\_\+tcp/main.\+c}!\+\_\+\+C\+L\+I\+E\+N\+T\+\_\+\+M\+S\+G\+\_\+\+W\+R\+I\+TE@{\+\_\+\+C\+L\+I\+E\+N\+T\+\_\+\+M\+S\+G\+\_\+\+W\+R\+I\+TE}}
+\index{\+\_\+\+C\+L\+I\+E\+N\+T\+\_\+\+M\+S\+G\+\_\+\+W\+R\+I\+TE@{\+\_\+\+C\+L\+I\+E\+N\+T\+\_\+\+M\+S\+G\+\_\+\+W\+R\+I\+TE}!lwip\+\_\+sock\+\_\+tcp/main.\+c@{lwip\+\_\+sock\+\_\+tcp/main.\+c}}
+\subsubsection{\texorpdfstring{\+\_\+\+C\+L\+I\+E\+N\+T\+\_\+\+M\+S\+G\+\_\+\+W\+R\+I\+TE}{\_CLIENT\_MSG\_WRITE}}
+{\footnotesize\ttfamily \#define \+\_\+\+C\+L\+I\+E\+N\+T\+\_\+\+M\+S\+G\+\_\+\+W\+R\+I\+TE~(0xe309)}
+
+\mbox{\Hypertarget{lwip__sock__tcp_2main_8c_aec37fb472076c5cde54dffe0bb7200a1}\label{lwip__sock__tcp_2main_8c_aec37fb472076c5cde54dffe0bb7200a1}} 
+\index{lwip\+\_\+sock\+\_\+tcp/main.\+c@{lwip\+\_\+sock\+\_\+tcp/main.\+c}!\+\_\+\+M\+S\+G\+\_\+\+Q\+U\+E\+U\+E\+\_\+\+S\+I\+ZE@{\+\_\+\+M\+S\+G\+\_\+\+Q\+U\+E\+U\+E\+\_\+\+S\+I\+ZE}}
+\index{\+\_\+\+M\+S\+G\+\_\+\+Q\+U\+E\+U\+E\+\_\+\+S\+I\+ZE@{\+\_\+\+M\+S\+G\+\_\+\+Q\+U\+E\+U\+E\+\_\+\+S\+I\+ZE}!lwip\+\_\+sock\+\_\+tcp/main.\+c@{lwip\+\_\+sock\+\_\+tcp/main.\+c}}
+\subsubsection{\texorpdfstring{\+\_\+\+M\+S\+G\+\_\+\+Q\+U\+E\+U\+E\+\_\+\+S\+I\+ZE}{\_MSG\_QUEUE\_SIZE}}
+{\footnotesize\ttfamily \#define \+\_\+\+M\+S\+G\+\_\+\+Q\+U\+E\+U\+E\+\_\+\+S\+I\+ZE~(4)}
+
+\mbox{\Hypertarget{lwip__sock__tcp_2main_8c_a7968a95ee6ffce5943496d0185da8087}\label{lwip__sock__tcp_2main_8c_a7968a95ee6ffce5943496d0185da8087}} 
+\index{lwip\+\_\+sock\+\_\+tcp/main.\+c@{lwip\+\_\+sock\+\_\+tcp/main.\+c}!\+\_\+\+Q\+U\+E\+U\+E\+\_\+\+S\+I\+ZE@{\+\_\+\+Q\+U\+E\+U\+E\+\_\+\+S\+I\+ZE}}
+\index{\+\_\+\+Q\+U\+E\+U\+E\+\_\+\+S\+I\+ZE@{\+\_\+\+Q\+U\+E\+U\+E\+\_\+\+S\+I\+ZE}!lwip\+\_\+sock\+\_\+tcp/main.\+c@{lwip\+\_\+sock\+\_\+tcp/main.\+c}}
+\subsubsection{\texorpdfstring{\+\_\+\+Q\+U\+E\+U\+E\+\_\+\+S\+I\+ZE}{\_QUEUE\_SIZE}}
+{\footnotesize\ttfamily \#define \+\_\+\+Q\+U\+E\+U\+E\+\_\+\+S\+I\+ZE~(1)}
+
+\mbox{\Hypertarget{lwip__sock__tcp_2main_8c_a88ad1bc53e1893ca379741c269892cf7}\label{lwip__sock__tcp_2main_8c_a88ad1bc53e1893ca379741c269892cf7}} 
+\index{lwip\+\_\+sock\+\_\+tcp/main.\+c@{lwip\+\_\+sock\+\_\+tcp/main.\+c}!\+\_\+\+S\+E\+R\+V\+E\+R\+\_\+\+B\+U\+F\+\_\+\+S\+I\+ZE@{\+\_\+\+S\+E\+R\+V\+E\+R\+\_\+\+B\+U\+F\+\_\+\+S\+I\+ZE}}
+\index{\+\_\+\+S\+E\+R\+V\+E\+R\+\_\+\+B\+U\+F\+\_\+\+S\+I\+ZE@{\+\_\+\+S\+E\+R\+V\+E\+R\+\_\+\+B\+U\+F\+\_\+\+S\+I\+ZE}!lwip\+\_\+sock\+\_\+tcp/main.\+c@{lwip\+\_\+sock\+\_\+tcp/main.\+c}}
+\subsubsection{\texorpdfstring{\+\_\+\+S\+E\+R\+V\+E\+R\+\_\+\+B\+U\+F\+\_\+\+S\+I\+ZE}{\_SERVER\_BUF\_SIZE}}
+{\footnotesize\ttfamily \#define \+\_\+\+S\+E\+R\+V\+E\+R\+\_\+\+B\+U\+F\+\_\+\+S\+I\+ZE~(128)}
+
+\mbox{\Hypertarget{lwip__sock__tcp_2main_8c_a23baccf0bf49239083fa57cf78fb6f3f}\label{lwip__sock__tcp_2main_8c_a23baccf0bf49239083fa57cf78fb6f3f}} 
+\index{lwip\+\_\+sock\+\_\+tcp/main.\+c@{lwip\+\_\+sock\+\_\+tcp/main.\+c}!\+\_\+\+S\+E\+R\+V\+E\+R\+\_\+\+M\+S\+G\+\_\+\+A\+C\+C\+E\+PT@{\+\_\+\+S\+E\+R\+V\+E\+R\+\_\+\+M\+S\+G\+\_\+\+A\+C\+C\+E\+PT}}
+\index{\+\_\+\+S\+E\+R\+V\+E\+R\+\_\+\+M\+S\+G\+\_\+\+A\+C\+C\+E\+PT@{\+\_\+\+S\+E\+R\+V\+E\+R\+\_\+\+M\+S\+G\+\_\+\+A\+C\+C\+E\+PT}!lwip\+\_\+sock\+\_\+tcp/main.\+c@{lwip\+\_\+sock\+\_\+tcp/main.\+c}}
+\subsubsection{\texorpdfstring{\+\_\+\+S\+E\+R\+V\+E\+R\+\_\+\+M\+S\+G\+\_\+\+A\+C\+C\+E\+PT}{\_SERVER\_MSG\_ACCEPT}}
+{\footnotesize\ttfamily \#define \+\_\+\+S\+E\+R\+V\+E\+R\+\_\+\+M\+S\+G\+\_\+\+A\+C\+C\+E\+PT~(0xe30c)}
+
+\mbox{\Hypertarget{lwip__sock__tcp_2main_8c_a02069c553287310252f5ad1244f65f6d}\label{lwip__sock__tcp_2main_8c_a02069c553287310252f5ad1244f65f6d}} 
+\index{lwip\+\_\+sock\+\_\+tcp/main.\+c@{lwip\+\_\+sock\+\_\+tcp/main.\+c}!\+\_\+\+S\+E\+R\+V\+E\+R\+\_\+\+M\+S\+G\+\_\+\+C\+L\+O\+SE@{\+\_\+\+S\+E\+R\+V\+E\+R\+\_\+\+M\+S\+G\+\_\+\+C\+L\+O\+SE}}
+\index{\+\_\+\+S\+E\+R\+V\+E\+R\+\_\+\+M\+S\+G\+\_\+\+C\+L\+O\+SE@{\+\_\+\+S\+E\+R\+V\+E\+R\+\_\+\+M\+S\+G\+\_\+\+C\+L\+O\+SE}!lwip\+\_\+sock\+\_\+tcp/main.\+c@{lwip\+\_\+sock\+\_\+tcp/main.\+c}}
+\subsubsection{\texorpdfstring{\+\_\+\+S\+E\+R\+V\+E\+R\+\_\+\+M\+S\+G\+\_\+\+C\+L\+O\+SE}{\_SERVER\_MSG\_CLOSE}}
+{\footnotesize\ttfamily \#define \+\_\+\+S\+E\+R\+V\+E\+R\+\_\+\+M\+S\+G\+\_\+\+C\+L\+O\+SE~(0xe30f)}
+
+\mbox{\Hypertarget{lwip__sock__tcp_2main_8c_a7807b334b3b4d64b6d426b861ac247a6}\label{lwip__sock__tcp_2main_8c_a7807b334b3b4d64b6d426b861ac247a6}} 
+\index{lwip\+\_\+sock\+\_\+tcp/main.\+c@{lwip\+\_\+sock\+\_\+tcp/main.\+c}!\+\_\+\+S\+E\+R\+V\+E\+R\+\_\+\+M\+S\+G\+\_\+\+R\+E\+AD@{\+\_\+\+S\+E\+R\+V\+E\+R\+\_\+\+M\+S\+G\+\_\+\+R\+E\+AD}}
+\index{\+\_\+\+S\+E\+R\+V\+E\+R\+\_\+\+M\+S\+G\+\_\+\+R\+E\+AD@{\+\_\+\+S\+E\+R\+V\+E\+R\+\_\+\+M\+S\+G\+\_\+\+R\+E\+AD}!lwip\+\_\+sock\+\_\+tcp/main.\+c@{lwip\+\_\+sock\+\_\+tcp/main.\+c}}
+\subsubsection{\texorpdfstring{\+\_\+\+S\+E\+R\+V\+E\+R\+\_\+\+M\+S\+G\+\_\+\+R\+E\+AD}{\_SERVER\_MSG\_READ}}
+{\footnotesize\ttfamily \#define \+\_\+\+S\+E\+R\+V\+E\+R\+\_\+\+M\+S\+G\+\_\+\+R\+E\+AD~(0xe30d)}
+
+\mbox{\Hypertarget{lwip__sock__tcp_2main_8c_ab94e56945b3e41f1b4627d9d6fba6dde}\label{lwip__sock__tcp_2main_8c_ab94e56945b3e41f1b4627d9d6fba6dde}} 
+\index{lwip\+\_\+sock\+\_\+tcp/main.\+c@{lwip\+\_\+sock\+\_\+tcp/main.\+c}!\+\_\+\+S\+E\+R\+V\+E\+R\+\_\+\+M\+S\+G\+\_\+\+S\+T\+A\+RT@{\+\_\+\+S\+E\+R\+V\+E\+R\+\_\+\+M\+S\+G\+\_\+\+S\+T\+A\+RT}}
+\index{\+\_\+\+S\+E\+R\+V\+E\+R\+\_\+\+M\+S\+G\+\_\+\+S\+T\+A\+RT@{\+\_\+\+S\+E\+R\+V\+E\+R\+\_\+\+M\+S\+G\+\_\+\+S\+T\+A\+RT}!lwip\+\_\+sock\+\_\+tcp/main.\+c@{lwip\+\_\+sock\+\_\+tcp/main.\+c}}
+\subsubsection{\texorpdfstring{\+\_\+\+S\+E\+R\+V\+E\+R\+\_\+\+M\+S\+G\+\_\+\+S\+T\+A\+RT}{\_SERVER\_MSG\_START}}
+{\footnotesize\ttfamily \#define \+\_\+\+S\+E\+R\+V\+E\+R\+\_\+\+M\+S\+G\+\_\+\+S\+T\+A\+RT~(0xe30b)}
+
+\mbox{\Hypertarget{lwip__sock__tcp_2main_8c_a74ae1e0b78dd1495f5255e28e11885bc}\label{lwip__sock__tcp_2main_8c_a74ae1e0b78dd1495f5255e28e11885bc}} 
+\index{lwip\+\_\+sock\+\_\+tcp/main.\+c@{lwip\+\_\+sock\+\_\+tcp/main.\+c}!\+\_\+\+S\+E\+R\+V\+E\+R\+\_\+\+M\+S\+G\+\_\+\+S\+T\+OP@{\+\_\+\+S\+E\+R\+V\+E\+R\+\_\+\+M\+S\+G\+\_\+\+S\+T\+OP}}
+\index{\+\_\+\+S\+E\+R\+V\+E\+R\+\_\+\+M\+S\+G\+\_\+\+S\+T\+OP@{\+\_\+\+S\+E\+R\+V\+E\+R\+\_\+\+M\+S\+G\+\_\+\+S\+T\+OP}!lwip\+\_\+sock\+\_\+tcp/main.\+c@{lwip\+\_\+sock\+\_\+tcp/main.\+c}}
+\subsubsection{\texorpdfstring{\+\_\+\+S\+E\+R\+V\+E\+R\+\_\+\+M\+S\+G\+\_\+\+S\+T\+OP}{\_SERVER\_MSG\_STOP}}
+{\footnotesize\ttfamily \#define \+\_\+\+S\+E\+R\+V\+E\+R\+\_\+\+M\+S\+G\+\_\+\+S\+T\+OP~(0xe310)}
+
+\mbox{\Hypertarget{lwip__sock__tcp_2main_8c_a2d0f2b4a9ab3d6b8faa6d9dec62e9dbc}\label{lwip__sock__tcp_2main_8c_a2d0f2b4a9ab3d6b8faa6d9dec62e9dbc}} 
+\index{lwip\+\_\+sock\+\_\+tcp/main.\+c@{lwip\+\_\+sock\+\_\+tcp/main.\+c}!\+\_\+\+S\+E\+R\+V\+E\+R\+\_\+\+M\+S\+G\+\_\+\+W\+R\+I\+TE@{\+\_\+\+S\+E\+R\+V\+E\+R\+\_\+\+M\+S\+G\+\_\+\+W\+R\+I\+TE}}
+\index{\+\_\+\+S\+E\+R\+V\+E\+R\+\_\+\+M\+S\+G\+\_\+\+W\+R\+I\+TE@{\+\_\+\+S\+E\+R\+V\+E\+R\+\_\+\+M\+S\+G\+\_\+\+W\+R\+I\+TE}!lwip\+\_\+sock\+\_\+tcp/main.\+c@{lwip\+\_\+sock\+\_\+tcp/main.\+c}}
+\subsubsection{\texorpdfstring{\+\_\+\+S\+E\+R\+V\+E\+R\+\_\+\+M\+S\+G\+\_\+\+W\+R\+I\+TE}{\_SERVER\_MSG\_WRITE}}
+{\footnotesize\ttfamily \#define \+\_\+\+S\+E\+R\+V\+E\+R\+\_\+\+M\+S\+G\+\_\+\+W\+R\+I\+TE~(0xe30e)}
+
+\mbox{\Hypertarget{lwip__sock__tcp_2main_8c_ac5f9f7611d7b58b0ed96ba648136b104}\label{lwip__sock__tcp_2main_8c_ac5f9f7611d7b58b0ed96ba648136b104}} 
+\index{lwip\+\_\+sock\+\_\+tcp/main.\+c@{lwip\+\_\+sock\+\_\+tcp/main.\+c}!\+\_\+\+S\+E\+R\+V\+E\+R\+\_\+\+Q\+U\+E\+U\+E\+\_\+\+S\+I\+ZE@{\+\_\+\+S\+E\+R\+V\+E\+R\+\_\+\+Q\+U\+E\+U\+E\+\_\+\+S\+I\+ZE}}
+\index{\+\_\+\+S\+E\+R\+V\+E\+R\+\_\+\+Q\+U\+E\+U\+E\+\_\+\+S\+I\+ZE@{\+\_\+\+S\+E\+R\+V\+E\+R\+\_\+\+Q\+U\+E\+U\+E\+\_\+\+S\+I\+ZE}!lwip\+\_\+sock\+\_\+tcp/main.\+c@{lwip\+\_\+sock\+\_\+tcp/main.\+c}}
+\subsubsection{\texorpdfstring{\+\_\+\+S\+E\+R\+V\+E\+R\+\_\+\+Q\+U\+E\+U\+E\+\_\+\+S\+I\+ZE}{\_SERVER\_QUEUE\_SIZE}}
+{\footnotesize\ttfamily \#define \+\_\+\+S\+E\+R\+V\+E\+R\+\_\+\+Q\+U\+E\+U\+E\+\_\+\+S\+I\+ZE~(1)}
+
+\mbox{\Hypertarget{lwip__sock__tcp_2main_8c_a137a416ce44e3b143039d8c50f4c3d0d}\label{lwip__sock__tcp_2main_8c_a137a416ce44e3b143039d8c50f4c3d0d}} 
+\index{lwip\+\_\+sock\+\_\+tcp/main.\+c@{lwip\+\_\+sock\+\_\+tcp/main.\+c}!\+\_\+\+T\+E\+S\+T\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+I\+ZE@{\+\_\+\+T\+E\+S\+T\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+I\+ZE}}
+\index{\+\_\+\+T\+E\+S\+T\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+I\+ZE@{\+\_\+\+T\+E\+S\+T\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+I\+ZE}!lwip\+\_\+sock\+\_\+tcp/main.\+c@{lwip\+\_\+sock\+\_\+tcp/main.\+c}}
+\subsubsection{\texorpdfstring{\+\_\+\+T\+E\+S\+T\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+I\+ZE}{\_TEST\_BUFFER\_SIZE}}
+{\footnotesize\ttfamily \#define \+\_\+\+T\+E\+S\+T\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+I\+ZE~(128)}
+
+\mbox{\Hypertarget{lwip__sock__tcp_2main_8c_ad3a462ce537647abdb236a2a5d303d76}\label{lwip__sock__tcp_2main_8c_ad3a462ce537647abdb236a2a5d303d76}} 
+\index{lwip\+\_\+sock\+\_\+tcp/main.\+c@{lwip\+\_\+sock\+\_\+tcp/main.\+c}!C\+A\+LL@{C\+A\+LL}}
+\index{C\+A\+LL@{C\+A\+LL}!lwip\+\_\+sock\+\_\+tcp/main.\+c@{lwip\+\_\+sock\+\_\+tcp/main.\+c}}
+\subsubsection{\texorpdfstring{C\+A\+LL}{CALL}}
+{\footnotesize\ttfamily \#define C\+A\+LL(\begin{DoxyParamCaption}\item[{}]{fn }\end{DoxyParamCaption})~puts(\char`\"{}Calling \char`\"{} \# fn); fn; tear\+\_\+down()}
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{lwip__sock__tcp_2main_8c_a840291bc02cba5474a4cb46a9b9566fe}\label{lwip__sock__tcp_2main_8c_a840291bc02cba5474a4cb46a9b9566fe}} 
+\index{lwip\+\_\+sock\+\_\+tcp/main.\+c@{lwip\+\_\+sock\+\_\+tcp/main.\+c}!main@{main}}
+\index{main@{main}!lwip\+\_\+sock\+\_\+tcp/main.\+c@{lwip\+\_\+sock\+\_\+tcp/main.\+c}}
+\subsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=207pt]{lwip__sock__tcp_2main_8c_a840291bc02cba5474a4cb46a9b9566fe_cgraph}
+\end{center}
+\end{figure}

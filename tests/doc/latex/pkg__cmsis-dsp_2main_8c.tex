@@ -1,0 +1,131 @@
+\hypertarget{pkg__cmsis-dsp_2main_8c}{}\section{/home/ayush/\+R\+I\+O\+T/tests/pkg\+\_\+cmsis-\/dsp/main.c File Reference}
+\label{pkg__cmsis-dsp_2main_8c}\index{/home/ayush/\+R\+I\+O\+T/tests/pkg\+\_\+cmsis-\/dsp/main.\+c@{/home/ayush/\+R\+I\+O\+T/tests/pkg\+\_\+cmsis-\/dsp/main.\+c}}
+
+
+A\+RM D\+SP library test application.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include $<$math.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}arm\+\_\+math.\+h\char`\"{}}\newline
+Include dependency graph for main.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=345pt]{pkg__cmsis-dsp_2main_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{pkg__cmsis-dsp_2main_8c_af8a1d2ed31f7c9a00fec46a798edb61b}{M\+A\+X\+\_\+\+B\+L\+O\+C\+K\+S\+I\+ZE}~32
+\item 
+\#define \hyperlink{pkg__cmsis-dsp_2main_8c_a3fd2b1bcd7ddcf506237987ad780f495}{D\+E\+L\+TA}~(0.\+0000001f)
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{pkg__cmsis-dsp_2main_8c_a840291bc02cba5474a4cb46a9b9566fe}{main} (void)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+float32\+\_\+t \hyperlink{pkg__cmsis-dsp_2main_8c_acc43b372d92d5027b9f9cac782c8b3c7}{wire1} \mbox{[}\hyperlink{pkg__cmsis-dsp_2main_8c_af8a1d2ed31f7c9a00fec46a798edb61b}{M\+A\+X\+\_\+\+B\+L\+O\+C\+K\+S\+I\+ZE}\mbox{]}
+\item 
+float32\+\_\+t \hyperlink{pkg__cmsis-dsp_2main_8c_a41a9afab5be5ccd2e6f618b83102f0d1}{wire2} \mbox{[}\hyperlink{pkg__cmsis-dsp_2main_8c_af8a1d2ed31f7c9a00fec46a798edb61b}{M\+A\+X\+\_\+\+B\+L\+O\+C\+K\+S\+I\+ZE}\mbox{]}
+\item 
+float32\+\_\+t \hyperlink{pkg__cmsis-dsp_2main_8c_af61f43ad332a2322e43ced590b6d9768}{wire3} \mbox{[}\hyperlink{pkg__cmsis-dsp_2main_8c_af8a1d2ed31f7c9a00fec46a798edb61b}{M\+A\+X\+\_\+\+B\+L\+O\+C\+K\+S\+I\+ZE}\mbox{]}
+\item 
+float32\+\_\+t \hyperlink{pkg__cmsis-dsp_2main_8c_a9170ec9e681e2b519fe9c46a30455841}{test\+Input\+\_\+f32} \mbox{[}32\mbox{]}
+\item 
+uint32\+\_\+t \hyperlink{pkg__cmsis-dsp_2main_8c_ab6558f40a619c2502fbc24c880fd4fb0}{block\+Size} = 32
+\item 
+float32\+\_\+t \hyperlink{pkg__cmsis-dsp_2main_8c_a26cbbfe2a7905669e8440159465050df}{ref\+Variance\+Out} = 0.\+903941793931839
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A\+RM D\+SP library test application. 
+
+\begin{DoxyAuthor}{Author}
+Joakim Nohlgård \href{mailto:joakim.nohlgard@eistec.se}{\tt joakim.\+nohlgard@eistec.\+se} 
+\end{DoxyAuthor}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{pkg__cmsis-dsp_2main_8c_a3fd2b1bcd7ddcf506237987ad780f495}\label{pkg__cmsis-dsp_2main_8c_a3fd2b1bcd7ddcf506237987ad780f495}} 
+\index{pkg\+\_\+cmsis-\/dsp/main.\+c@{pkg\+\_\+cmsis-\/dsp/main.\+c}!D\+E\+L\+TA@{D\+E\+L\+TA}}
+\index{D\+E\+L\+TA@{D\+E\+L\+TA}!pkg\+\_\+cmsis-\/dsp/main.\+c@{pkg\+\_\+cmsis-\/dsp/main.\+c}}
+\subsubsection{\texorpdfstring{D\+E\+L\+TA}{DELTA}}
+{\footnotesize\ttfamily \#define D\+E\+L\+TA~(0.\+0000001f)}
+
+\mbox{\Hypertarget{pkg__cmsis-dsp_2main_8c_af8a1d2ed31f7c9a00fec46a798edb61b}\label{pkg__cmsis-dsp_2main_8c_af8a1d2ed31f7c9a00fec46a798edb61b}} 
+\index{pkg\+\_\+cmsis-\/dsp/main.\+c@{pkg\+\_\+cmsis-\/dsp/main.\+c}!M\+A\+X\+\_\+\+B\+L\+O\+C\+K\+S\+I\+ZE@{M\+A\+X\+\_\+\+B\+L\+O\+C\+K\+S\+I\+ZE}}
+\index{M\+A\+X\+\_\+\+B\+L\+O\+C\+K\+S\+I\+ZE@{M\+A\+X\+\_\+\+B\+L\+O\+C\+K\+S\+I\+ZE}!pkg\+\_\+cmsis-\/dsp/main.\+c@{pkg\+\_\+cmsis-\/dsp/main.\+c}}
+\subsubsection{\texorpdfstring{M\+A\+X\+\_\+\+B\+L\+O\+C\+K\+S\+I\+ZE}{MAX\_BLOCKSIZE}}
+{\footnotesize\ttfamily \#define M\+A\+X\+\_\+\+B\+L\+O\+C\+K\+S\+I\+ZE~32}
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{pkg__cmsis-dsp_2main_8c_a840291bc02cba5474a4cb46a9b9566fe}\label{pkg__cmsis-dsp_2main_8c_a840291bc02cba5474a4cb46a9b9566fe}} 
+\index{pkg\+\_\+cmsis-\/dsp/main.\+c@{pkg\+\_\+cmsis-\/dsp/main.\+c}!main@{main}}
+\index{main@{main}!pkg\+\_\+cmsis-\/dsp/main.\+c@{pkg\+\_\+cmsis-\/dsp/main.\+c}}
+\subsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{pkg__cmsis-dsp_2main_8c_ab6558f40a619c2502fbc24c880fd4fb0}\label{pkg__cmsis-dsp_2main_8c_ab6558f40a619c2502fbc24c880fd4fb0}} 
+\index{pkg\+\_\+cmsis-\/dsp/main.\+c@{pkg\+\_\+cmsis-\/dsp/main.\+c}!block\+Size@{block\+Size}}
+\index{block\+Size@{block\+Size}!pkg\+\_\+cmsis-\/dsp/main.\+c@{pkg\+\_\+cmsis-\/dsp/main.\+c}}
+\subsubsection{\texorpdfstring{block\+Size}{blockSize}}
+{\footnotesize\ttfamily uint32\+\_\+t block\+Size = 32}
+
+\mbox{\Hypertarget{pkg__cmsis-dsp_2main_8c_a26cbbfe2a7905669e8440159465050df}\label{pkg__cmsis-dsp_2main_8c_a26cbbfe2a7905669e8440159465050df}} 
+\index{pkg\+\_\+cmsis-\/dsp/main.\+c@{pkg\+\_\+cmsis-\/dsp/main.\+c}!ref\+Variance\+Out@{ref\+Variance\+Out}}
+\index{ref\+Variance\+Out@{ref\+Variance\+Out}!pkg\+\_\+cmsis-\/dsp/main.\+c@{pkg\+\_\+cmsis-\/dsp/main.\+c}}
+\subsubsection{\texorpdfstring{ref\+Variance\+Out}{refVarianceOut}}
+{\footnotesize\ttfamily float32\+\_\+t ref\+Variance\+Out = 0.\+903941793931839}
+
+\mbox{\Hypertarget{pkg__cmsis-dsp_2main_8c_a9170ec9e681e2b519fe9c46a30455841}\label{pkg__cmsis-dsp_2main_8c_a9170ec9e681e2b519fe9c46a30455841}} 
+\index{pkg\+\_\+cmsis-\/dsp/main.\+c@{pkg\+\_\+cmsis-\/dsp/main.\+c}!test\+Input\+\_\+f32@{test\+Input\+\_\+f32}}
+\index{test\+Input\+\_\+f32@{test\+Input\+\_\+f32}!pkg\+\_\+cmsis-\/dsp/main.\+c@{pkg\+\_\+cmsis-\/dsp/main.\+c}}
+\subsubsection{\texorpdfstring{test\+Input\+\_\+f32}{testInput\_f32}}
+{\footnotesize\ttfamily float32\+\_\+t test\+Input\+\_\+f32\mbox{[}32\mbox{]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+=
+\{
+  -0.432564811528221,  -1.665584378238097,   0.125332306474831,   0.287676420358549,
+  -1.146471350681464,   1.190915465642999,   1.189164201652103,  -0.037633276593318,
+   0.327292361408654,   0.174639142820925,  -0.186708577681439,   0.725790548293303,
+  -0.588316543014189,   2.183185818197101,  -0.136395883086596,   0.113931313520810,
+   1.066768211359189,   0.059281460523605,  -0.095648405483669,  -0.832349463650022,
+   0.294410816392640,  -1.336181857937804,   0.714324551818952,   1.623562064446271,
+  -0.691775701702287,   0.857996672828263,   1.254001421602532,  -1.593729576447477,
+  -1.440964431901020,   0.571147623658178,  -0.399885577715363,   0.689997375464345
+\}
+\end{DoxyCode}
+\mbox{\Hypertarget{pkg__cmsis-dsp_2main_8c_acc43b372d92d5027b9f9cac782c8b3c7}\label{pkg__cmsis-dsp_2main_8c_acc43b372d92d5027b9f9cac782c8b3c7}} 
+\index{pkg\+\_\+cmsis-\/dsp/main.\+c@{pkg\+\_\+cmsis-\/dsp/main.\+c}!wire1@{wire1}}
+\index{wire1@{wire1}!pkg\+\_\+cmsis-\/dsp/main.\+c@{pkg\+\_\+cmsis-\/dsp/main.\+c}}
+\subsubsection{\texorpdfstring{wire1}{wire1}}
+{\footnotesize\ttfamily float32\+\_\+t wire1\mbox{[}\hyperlink{pkg__cmsis-dsp_2main_8c_af8a1d2ed31f7c9a00fec46a798edb61b}{M\+A\+X\+\_\+\+B\+L\+O\+C\+K\+S\+I\+ZE}\mbox{]}}
+
+\mbox{\Hypertarget{pkg__cmsis-dsp_2main_8c_a41a9afab5be5ccd2e6f618b83102f0d1}\label{pkg__cmsis-dsp_2main_8c_a41a9afab5be5ccd2e6f618b83102f0d1}} 
+\index{pkg\+\_\+cmsis-\/dsp/main.\+c@{pkg\+\_\+cmsis-\/dsp/main.\+c}!wire2@{wire2}}
+\index{wire2@{wire2}!pkg\+\_\+cmsis-\/dsp/main.\+c@{pkg\+\_\+cmsis-\/dsp/main.\+c}}
+\subsubsection{\texorpdfstring{wire2}{wire2}}
+{\footnotesize\ttfamily float32\+\_\+t wire2\mbox{[}\hyperlink{pkg__cmsis-dsp_2main_8c_af8a1d2ed31f7c9a00fec46a798edb61b}{M\+A\+X\+\_\+\+B\+L\+O\+C\+K\+S\+I\+ZE}\mbox{]}}
+
+\mbox{\Hypertarget{pkg__cmsis-dsp_2main_8c_af61f43ad332a2322e43ced590b6d9768}\label{pkg__cmsis-dsp_2main_8c_af61f43ad332a2322e43ced590b6d9768}} 
+\index{pkg\+\_\+cmsis-\/dsp/main.\+c@{pkg\+\_\+cmsis-\/dsp/main.\+c}!wire3@{wire3}}
+\index{wire3@{wire3}!pkg\+\_\+cmsis-\/dsp/main.\+c@{pkg\+\_\+cmsis-\/dsp/main.\+c}}
+\subsubsection{\texorpdfstring{wire3}{wire3}}
+{\footnotesize\ttfamily float32\+\_\+t wire3\mbox{[}\hyperlink{pkg__cmsis-dsp_2main_8c_af8a1d2ed31f7c9a00fec46a798edb61b}{M\+A\+X\+\_\+\+B\+L\+O\+C\+K\+S\+I\+ZE}\mbox{]}}
+

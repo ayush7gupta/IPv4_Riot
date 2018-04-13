@@ -1,0 +1,59 @@
+\hypertarget{hd44780__params_8h}{}\section{/home/ayush/\+R\+I\+O\+T/tests/driver\+\_\+hd44780/hd44780\+\_\+params.h File Reference}
+\label{hd44780__params_8h}\index{/home/ayush/\+R\+I\+O\+T/tests/driver\+\_\+hd44780/hd44780\+\_\+params.\+h@{/home/ayush/\+R\+I\+O\+T/tests/driver\+\_\+hd44780/hd44780\+\_\+params.\+h}}
+
+
+Pinout config for the H\+D44780 display.  
+
+
+{\ttfamily \#include \char`\"{}board.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}periph/gpio.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}hd44780.\+h\char`\"{}}\newline
+Include dependency graph for hd44780\+\_\+params.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=300pt]{hd44780__params_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=205pt]{hd44780__params_8h__dep__incl}
+\end{center}
+\end{figure}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{hd44780__params_8h_a374676a423c2705c8414b0cf9723cba5}{H\+D44780\+\_\+\+P\+A\+R\+A\+M\+S\+\_\+\+A\+R\+D\+U\+I\+NO}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Pinout config for the H\+D44780 display. 
+
+\begin{DoxyAuthor}{Author}
+Sebastian Meiling \href{mailto:s@mlng.net}{\tt s@mlng.\+net} 
+\end{DoxyAuthor}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{hd44780__params_8h_a374676a423c2705c8414b0cf9723cba5}\label{hd44780__params_8h_a374676a423c2705c8414b0cf9723cba5}} 
+\index{hd44780\+\_\+params.\+h@{hd44780\+\_\+params.\+h}!H\+D44780\+\_\+\+P\+A\+R\+A\+M\+S\+\_\+\+A\+R\+D\+U\+I\+NO@{H\+D44780\+\_\+\+P\+A\+R\+A\+M\+S\+\_\+\+A\+R\+D\+U\+I\+NO}}
+\index{H\+D44780\+\_\+\+P\+A\+R\+A\+M\+S\+\_\+\+A\+R\+D\+U\+I\+NO@{H\+D44780\+\_\+\+P\+A\+R\+A\+M\+S\+\_\+\+A\+R\+D\+U\+I\+NO}!hd44780\+\_\+params.\+h@{hd44780\+\_\+params.\+h}}
+\subsubsection{\texorpdfstring{H\+D44780\+\_\+\+P\+A\+R\+A\+M\+S\+\_\+\+A\+R\+D\+U\+I\+NO}{HD44780\_PARAMS\_ARDUINO}}
+{\footnotesize\ttfamily \#define H\+D44780\+\_\+\+P\+A\+R\+A\+M\+S\+\_\+\+A\+R\+D\+U\+I\+NO}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\{    \(\backslash\)
+    .cols   = 16,                   \(\backslash\)
+    .rows   = 2,                    \(\backslash\)
+    .rs     = ARDUINO\_PIN\_2,        \(\backslash\)
+    .rw     = HD44780\_RW\_OFF,       \(\backslash\)
+    .enable = ARDUINO\_PIN\_3,        \(\backslash\)
+    .data   = \{ARDUINO\_PIN\_4, ARDUINO\_PIN\_5, ARDUINO\_PIN\_6, ARDUINO\_PIN\_7,     \(\backslash\)
+               HD44780\_RW\_OFF, HD44780\_RW\_OFF, HD44780\_RW\_OFF, HD44780\_RW\_OFF\} \(\backslash\)
+\}
+\end{DoxyCode}

@@ -1,0 +1,21 @@
+\section*{Multiple Execution Contexts in lw\+IP code }
+
+The most common source of lw\+IP problems is to have multiple execution contexts inside the lw\+IP code.
+
+lw\+IP can be used in two basic modes\+: \hyperlink{group__lwip__nosys}{Mainloop mode (\char`\"{}\+N\+O\+\_\+\+S\+Y\+S\char`\"{})} (no O\+S/\+R\+T\+OS running on target system) or \hyperlink{group__lwip__os}{OS mode (T\+C\+P\+IP thread)} (there is an OS running on the target system).
+
+\subsection*{Mainloop Mode }
+
+In mainloop mode, only \hyperlink{group__callbackstyle__api}{Callback-\/style A\+P\+Is} can be used. The user has two possibilities to ensure there is only one exection context at a time in lw\+IP\+:
+
+1) Deliver RX ethernet packets directly in interrupt context to lw\+IP by calling netif-\/$>$input directly in interrupt. This implies all lw\+IP callback functions are called in I\+RQ context, which may cause further problems in application code\+: I\+RQ is blocked for a long time, multiple execution contexts in application code etc. When the application wants to call lw\+IP, it only needs to disable interrupts during the call. If timers are involved, even more locking code is needed to lock out timer I\+RQ and ethernet I\+RQ from each other, assuming these may be nested.
+
+2) Run lw\+IP in a mainloop. There is example code here\+: \hyperlink{group__lwip__nosys}{Mainloop mode (\char`\"{}\+N\+O\+\_\+\+S\+Y\+S\char`\"{})}. lw\+IP is {\itshape O\+N\+LY} called from mainloop callstacks here. The ethernet I\+RQ has to put received telegrams into a queue which is polled in the mainloop. Ensure lw\+IP is {\itshape N\+E\+V\+ER} called from an interrupt, e.\+g. some S\+PI I\+RQ wants to forward data to udp\+\_\+send() or tcp\+\_\+write()!
+
+\subsection*{OS Mode }
+
+In OS mode, \hyperlink{group__callbackstyle__api}{Callback-\/style A\+P\+Is} A\+ND \hyperlink{group__sequential__api}{Sequential-\/style A\+P\+Is} can be used. \hyperlink{group__sequential__api}{Sequential-\/style A\+P\+Is} are designed to be called from threads other than the T\+C\+P\+IP thread, so there is nothing to consider here. But \hyperlink{group__callbackstyle__api}{Callback-\/style A\+P\+Is} functions must {\itshape O\+N\+LY} be called from T\+C\+P\+IP thread. It is a common error to call these from other threads or from I\+RQ contexts. ​\+Ethernet RX needs to deliver incoming packets in the correct way by sending a message to T\+C\+P\+IP thread, this is implemented in \hyperlink{group__lwip__os_gae510f195171bed8499ae94e264a92717}{tcpip\+\_\+input()}.​​ Again, ensure lw\+IP is {\itshape N\+E\+V\+ER} called from an interrupt, e.\+g. some S\+PI I\+RQ wants to forward data to udp\+\_\+send() or tcp\+\_\+write()!
+
+1) \hyperlink{group__lwip__os_ga7eb868a1215472ec38f3f2a04d442b9f}{tcpip\+\_\+callback()} can be used get called back from T\+C\+P\+IP thread, it is safe to call any \hyperlink{group__callbackstyle__api}{Callback-\/style A\+P\+Is} from there.
+
+2) Use \hyperlink{group__lwip__opts__lock_ga8e46232794349c209e8ed4e9e7e4f011}{L\+W\+I\+P\+\_\+\+T\+C\+P\+I\+P\+\_\+\+C\+O\+R\+E\+\_\+\+L\+O\+C\+K\+I\+NG}. All \hyperlink{group__callbackstyle__api}{Callback-\/style A\+P\+Is} functions can be called when lw\+IP core lock is aquired, see \hyperlink{native_2lwip_2src_2include_2lwip_2tcpip_8h_a4700525e737fc025fea4887b172e0c95}{L\+O\+C\+K\+\_\+\+T\+C\+P\+I\+P\+\_\+\+C\+O\+R\+E()} and \hyperlink{native_2lwip_2src_2include_2lwip_2tcpip_8h_a915effea029b9c4891e1ec635eb1826d}{U\+N\+L\+O\+C\+K\+\_\+\+T\+C\+P\+I\+P\+\_\+\+C\+O\+R\+E()}. These macros cannot be used in an interrupt context! Note the OS must correctly handle priority inversion for this. 

@@ -1,0 +1,106 @@
+\hypertarget{tests-bloom_8c}{}\section{/home/ayush/\+R\+I\+O\+T/tests/unittests/tests-\/bloom/tests-\/bloom.c File Reference}
+\label{tests-bloom_8c}\index{/home/ayush/\+R\+I\+O\+T/tests/unittests/tests-\/bloom/tests-\/bloom.\+c@{/home/ayush/\+R\+I\+O\+T/tests/unittests/tests-\/bloom/tests-\/bloom.\+c}}
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}tests-\/bloom.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}hashes.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}bloom.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}bitfield.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}tests-\/bloom-\/sets.\+h\char`\"{}}\newline
+Include dependency graph for tests-\/bloom.c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{tests-bloom_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{tests-bloom_8c_aac99c3bfab18f44daa9cb459630c15dc}{T\+E\+S\+T\+S\+\_\+\+B\+L\+O\+O\+M\+\_\+\+B\+I\+TS}~(128)
+\item 
+\#define \hyperlink{tests-bloom_8c_a301bba6dcc93225ff24b711b215d5f64}{T\+E\+S\+T\+S\+\_\+\+B\+L\+O\+O\+M\+\_\+\+H\+A\+S\+HF}~(6)
+\item 
+\#define \hyperlink{tests-bloom_8c_a5c31d066a3c945eb3e20fb0a5246a113}{T\+E\+S\+T\+S\+\_\+\+B\+L\+O\+O\+M\+\_\+\+P\+R\+O\+B\+\_\+\+I\+N\+\_\+\+F\+I\+L\+T\+ER}~(4)
+\item 
+\#define \hyperlink{tests-bloom_8c_a1380be67d928d43fdb14902ebf72c208}{T\+E\+S\+T\+S\+\_\+\+B\+L\+O\+O\+M\+\_\+\+N\+O\+T\+\_\+\+I\+N\+\_\+\+F\+I\+L\+T\+ER}~(996)
+\item 
+\#define \hyperlink{tests-bloom_8c_af981a84238d80a4ad901be707c6cf4d8}{T\+E\+S\+T\+S\+\_\+\+B\+L\+O\+O\+M\+\_\+\+F\+A\+L\+S\+E\+\_\+\+P\+O\+S\+\_\+\+R\+A\+T\+E\+\_\+\+T\+HR}~(0.\+005)
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{tests-bloom_8c_a99ae9cb3c09344ed152cd11c8b09d8fe}{B\+I\+T\+F\+I\+E\+LD} (bf, \hyperlink{tests-bloom_8c_aac99c3bfab18f44daa9cb459630c15dc}{T\+E\+S\+T\+S\+\_\+\+B\+L\+O\+O\+M\+\_\+\+B\+I\+TS})
+\item 
+Test $\ast$ \hyperlink{group__unittests_gaaa23c5835dcd15e549fc6bf7227a928e}{tests\+\_\+bloom\+\_\+tests} (void)
+\begin{DoxyCompactList}\small\item\em Generates tests for bloom. \end{DoxyCompactList}\item 
+void \hyperlink{group__unittests_gabad6e976ec47aecf07c700f947206fdb}{tests\+\_\+bloom} (void)
+\begin{DoxyCompactList}\small\item\em The entry point of this test suite. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+hashfp\+\_\+t \hyperlink{tests-bloom_8c_a761cf67777e15fbedba279c9441b9cff}{hashes} \mbox{[}\hyperlink{tests-bloom_8c_a301bba6dcc93225ff24b711b215d5f64}{T\+E\+S\+T\+S\+\_\+\+B\+L\+O\+O\+M\+\_\+\+H\+A\+S\+HF}\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{tests-bloom_8c_aac99c3bfab18f44daa9cb459630c15dc}\label{tests-bloom_8c_aac99c3bfab18f44daa9cb459630c15dc}} 
+\index{tests-\/bloom.\+c@{tests-\/bloom.\+c}!T\+E\+S\+T\+S\+\_\+\+B\+L\+O\+O\+M\+\_\+\+B\+I\+TS@{T\+E\+S\+T\+S\+\_\+\+B\+L\+O\+O\+M\+\_\+\+B\+I\+TS}}
+\index{T\+E\+S\+T\+S\+\_\+\+B\+L\+O\+O\+M\+\_\+\+B\+I\+TS@{T\+E\+S\+T\+S\+\_\+\+B\+L\+O\+O\+M\+\_\+\+B\+I\+TS}!tests-\/bloom.\+c@{tests-\/bloom.\+c}}
+\subsubsection{\texorpdfstring{T\+E\+S\+T\+S\+\_\+\+B\+L\+O\+O\+M\+\_\+\+B\+I\+TS}{TESTS\_BLOOM\_BITS}}
+{\footnotesize\ttfamily \#define T\+E\+S\+T\+S\+\_\+\+B\+L\+O\+O\+M\+\_\+\+B\+I\+TS~(128)}
+
+\mbox{\Hypertarget{tests-bloom_8c_af981a84238d80a4ad901be707c6cf4d8}\label{tests-bloom_8c_af981a84238d80a4ad901be707c6cf4d8}} 
+\index{tests-\/bloom.\+c@{tests-\/bloom.\+c}!T\+E\+S\+T\+S\+\_\+\+B\+L\+O\+O\+M\+\_\+\+F\+A\+L\+S\+E\+\_\+\+P\+O\+S\+\_\+\+R\+A\+T\+E\+\_\+\+T\+HR@{T\+E\+S\+T\+S\+\_\+\+B\+L\+O\+O\+M\+\_\+\+F\+A\+L\+S\+E\+\_\+\+P\+O\+S\+\_\+\+R\+A\+T\+E\+\_\+\+T\+HR}}
+\index{T\+E\+S\+T\+S\+\_\+\+B\+L\+O\+O\+M\+\_\+\+F\+A\+L\+S\+E\+\_\+\+P\+O\+S\+\_\+\+R\+A\+T\+E\+\_\+\+T\+HR@{T\+E\+S\+T\+S\+\_\+\+B\+L\+O\+O\+M\+\_\+\+F\+A\+L\+S\+E\+\_\+\+P\+O\+S\+\_\+\+R\+A\+T\+E\+\_\+\+T\+HR}!tests-\/bloom.\+c@{tests-\/bloom.\+c}}
+\subsubsection{\texorpdfstring{T\+E\+S\+T\+S\+\_\+\+B\+L\+O\+O\+M\+\_\+\+F\+A\+L\+S\+E\+\_\+\+P\+O\+S\+\_\+\+R\+A\+T\+E\+\_\+\+T\+HR}{TESTS\_BLOOM\_FALSE\_POS\_RATE\_THR}}
+{\footnotesize\ttfamily \#define T\+E\+S\+T\+S\+\_\+\+B\+L\+O\+O\+M\+\_\+\+F\+A\+L\+S\+E\+\_\+\+P\+O\+S\+\_\+\+R\+A\+T\+E\+\_\+\+T\+HR~(0.\+005)}
+
+\mbox{\Hypertarget{tests-bloom_8c_a301bba6dcc93225ff24b711b215d5f64}\label{tests-bloom_8c_a301bba6dcc93225ff24b711b215d5f64}} 
+\index{tests-\/bloom.\+c@{tests-\/bloom.\+c}!T\+E\+S\+T\+S\+\_\+\+B\+L\+O\+O\+M\+\_\+\+H\+A\+S\+HF@{T\+E\+S\+T\+S\+\_\+\+B\+L\+O\+O\+M\+\_\+\+H\+A\+S\+HF}}
+\index{T\+E\+S\+T\+S\+\_\+\+B\+L\+O\+O\+M\+\_\+\+H\+A\+S\+HF@{T\+E\+S\+T\+S\+\_\+\+B\+L\+O\+O\+M\+\_\+\+H\+A\+S\+HF}!tests-\/bloom.\+c@{tests-\/bloom.\+c}}
+\subsubsection{\texorpdfstring{T\+E\+S\+T\+S\+\_\+\+B\+L\+O\+O\+M\+\_\+\+H\+A\+S\+HF}{TESTS\_BLOOM\_HASHF}}
+{\footnotesize\ttfamily \#define T\+E\+S\+T\+S\+\_\+\+B\+L\+O\+O\+M\+\_\+\+H\+A\+S\+HF~(6)}
+
+\mbox{\Hypertarget{tests-bloom_8c_a1380be67d928d43fdb14902ebf72c208}\label{tests-bloom_8c_a1380be67d928d43fdb14902ebf72c208}} 
+\index{tests-\/bloom.\+c@{tests-\/bloom.\+c}!T\+E\+S\+T\+S\+\_\+\+B\+L\+O\+O\+M\+\_\+\+N\+O\+T\+\_\+\+I\+N\+\_\+\+F\+I\+L\+T\+ER@{T\+E\+S\+T\+S\+\_\+\+B\+L\+O\+O\+M\+\_\+\+N\+O\+T\+\_\+\+I\+N\+\_\+\+F\+I\+L\+T\+ER}}
+\index{T\+E\+S\+T\+S\+\_\+\+B\+L\+O\+O\+M\+\_\+\+N\+O\+T\+\_\+\+I\+N\+\_\+\+F\+I\+L\+T\+ER@{T\+E\+S\+T\+S\+\_\+\+B\+L\+O\+O\+M\+\_\+\+N\+O\+T\+\_\+\+I\+N\+\_\+\+F\+I\+L\+T\+ER}!tests-\/bloom.\+c@{tests-\/bloom.\+c}}
+\subsubsection{\texorpdfstring{T\+E\+S\+T\+S\+\_\+\+B\+L\+O\+O\+M\+\_\+\+N\+O\+T\+\_\+\+I\+N\+\_\+\+F\+I\+L\+T\+ER}{TESTS\_BLOOM\_NOT\_IN\_FILTER}}
+{\footnotesize\ttfamily \#define T\+E\+S\+T\+S\+\_\+\+B\+L\+O\+O\+M\+\_\+\+N\+O\+T\+\_\+\+I\+N\+\_\+\+F\+I\+L\+T\+ER~(996)}
+
+\mbox{\Hypertarget{tests-bloom_8c_a5c31d066a3c945eb3e20fb0a5246a113}\label{tests-bloom_8c_a5c31d066a3c945eb3e20fb0a5246a113}} 
+\index{tests-\/bloom.\+c@{tests-\/bloom.\+c}!T\+E\+S\+T\+S\+\_\+\+B\+L\+O\+O\+M\+\_\+\+P\+R\+O\+B\+\_\+\+I\+N\+\_\+\+F\+I\+L\+T\+ER@{T\+E\+S\+T\+S\+\_\+\+B\+L\+O\+O\+M\+\_\+\+P\+R\+O\+B\+\_\+\+I\+N\+\_\+\+F\+I\+L\+T\+ER}}
+\index{T\+E\+S\+T\+S\+\_\+\+B\+L\+O\+O\+M\+\_\+\+P\+R\+O\+B\+\_\+\+I\+N\+\_\+\+F\+I\+L\+T\+ER@{T\+E\+S\+T\+S\+\_\+\+B\+L\+O\+O\+M\+\_\+\+P\+R\+O\+B\+\_\+\+I\+N\+\_\+\+F\+I\+L\+T\+ER}!tests-\/bloom.\+c@{tests-\/bloom.\+c}}
+\subsubsection{\texorpdfstring{T\+E\+S\+T\+S\+\_\+\+B\+L\+O\+O\+M\+\_\+\+P\+R\+O\+B\+\_\+\+I\+N\+\_\+\+F\+I\+L\+T\+ER}{TESTS\_BLOOM\_PROB\_IN\_FILTER}}
+{\footnotesize\ttfamily \#define T\+E\+S\+T\+S\+\_\+\+B\+L\+O\+O\+M\+\_\+\+P\+R\+O\+B\+\_\+\+I\+N\+\_\+\+F\+I\+L\+T\+ER~(4)}
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{tests-bloom_8c_a99ae9cb3c09344ed152cd11c8b09d8fe}\label{tests-bloom_8c_a99ae9cb3c09344ed152cd11c8b09d8fe}} 
+\index{tests-\/bloom.\+c@{tests-\/bloom.\+c}!B\+I\+T\+F\+I\+E\+LD@{B\+I\+T\+F\+I\+E\+LD}}
+\index{B\+I\+T\+F\+I\+E\+LD@{B\+I\+T\+F\+I\+E\+LD}!tests-\/bloom.\+c@{tests-\/bloom.\+c}}
+\subsubsection{\texorpdfstring{B\+I\+T\+F\+I\+E\+L\+D()}{BITFIELD()}}
+{\footnotesize\ttfamily B\+I\+T\+F\+I\+E\+LD (\begin{DoxyParamCaption}\item[{bf}]{,  }\item[{\hyperlink{tests-bloom_8c_aac99c3bfab18f44daa9cb459630c15dc}{T\+E\+S\+T\+S\+\_\+\+B\+L\+O\+O\+M\+\_\+\+B\+I\+TS}}]{ }\end{DoxyParamCaption})}
+
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{tests-bloom_8c_a761cf67777e15fbedba279c9441b9cff}\label{tests-bloom_8c_a761cf67777e15fbedba279c9441b9cff}} 
+\index{tests-\/bloom.\+c@{tests-\/bloom.\+c}!hashes@{hashes}}
+\index{hashes@{hashes}!tests-\/bloom.\+c@{tests-\/bloom.\+c}}
+\subsubsection{\texorpdfstring{hashes}{hashes}}
+{\footnotesize\ttfamily hashfp\+\_\+t hashes\mbox{[}\hyperlink{tests-bloom_8c_a301bba6dcc93225ff24b711b215d5f64}{T\+E\+S\+T\+S\+\_\+\+B\+L\+O\+O\+M\+\_\+\+H\+A\+S\+HF}\mbox{]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+= \{
+                     (hashfp\_t) fnv\_hash,
+                     (hashfp\_t) sax\_hash,
+                     (hashfp\_t) sdbm\_hash,
+                     (hashfp\_t) djb2\_hash,
+                     (hashfp\_t) kr\_hash,
+                     (hashfp\_t) dek\_hash,
+                    \}
+\end{DoxyCode}

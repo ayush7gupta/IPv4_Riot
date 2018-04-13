@@ -1,0 +1,78 @@
+\hypertarget{bitarithm__timings_2main_8c}{}\section{/home/ayush/\+R\+I\+O\+T/tests/bitarithm\+\_\+timings/main.c File Reference}
+\label{bitarithm__timings_2main_8c}\index{/home/ayush/\+R\+I\+O\+T/tests/bitarithm\+\_\+timings/main.\+c@{/home/ayush/\+R\+I\+O\+T/tests/bitarithm\+\_\+timings/main.\+c}}
+
+
+Measure the speed of the function in bitarithm.\+c.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}bitarithm.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}xtimer.\+h\char`\"{}}\newline
+Include dependency graph for main.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=276pt]{bitarithm__timings_2main_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{bitarithm__timings_2main_8c_ac5074791bf74db3ed58199d66714869f}{T\+I\+M\+E\+O\+U\+T\+\_\+S}~(5ul)
+\item 
+\#define \hyperlink{bitarithm__timings_2main_8c_a45ba202b05caf39795aeca91b0ae547e}{T\+I\+M\+E\+O\+UT}~(\hyperlink{bitarithm__timings_2main_8c_ac5074791bf74db3ed58199d66714869f}{T\+I\+M\+E\+O\+U\+T\+\_\+S} $\ast$ U\+S\+\_\+\+P\+E\+R\+\_\+\+S\+EC)
+\item 
+\#define \hyperlink{bitarithm__timings_2main_8c_a8c2ce9cd8076328f8cb6b33789a1d374}{P\+E\+R\+\_\+\+I\+T\+E\+R\+A\+T\+I\+ON}~(4)
+\item 
+\#define \hyperlink{bitarithm__timings_2main_8c_a9a349403cd1a1b1689228b3500f9132b}{run\+\_\+test}(test)~run\+\_\+test(\#test, test)
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{bitarithm__timings_2main_8c_a840291bc02cba5474a4cb46a9b9566fe}{main} (void)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Measure the speed of the function in bitarithm.\+c. 
+
+\begin{DoxyAuthor}{Author}
+René Kijewski \href{mailto:rene.kijewski@fu-berlin.de}{\tt rene.\+kijewski@fu-\/berlin.\+de} 
+\end{DoxyAuthor}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{bitarithm__timings_2main_8c_a8c2ce9cd8076328f8cb6b33789a1d374}\label{bitarithm__timings_2main_8c_a8c2ce9cd8076328f8cb6b33789a1d374}} 
+\index{bitarithm\+\_\+timings/main.\+c@{bitarithm\+\_\+timings/main.\+c}!P\+E\+R\+\_\+\+I\+T\+E\+R\+A\+T\+I\+ON@{P\+E\+R\+\_\+\+I\+T\+E\+R\+A\+T\+I\+ON}}
+\index{P\+E\+R\+\_\+\+I\+T\+E\+R\+A\+T\+I\+ON@{P\+E\+R\+\_\+\+I\+T\+E\+R\+A\+T\+I\+ON}!bitarithm\+\_\+timings/main.\+c@{bitarithm\+\_\+timings/main.\+c}}
+\subsubsection{\texorpdfstring{P\+E\+R\+\_\+\+I\+T\+E\+R\+A\+T\+I\+ON}{PER\_ITERATION}}
+{\footnotesize\ttfamily \#define P\+E\+R\+\_\+\+I\+T\+E\+R\+A\+T\+I\+ON~(4)}
+
+\mbox{\Hypertarget{bitarithm__timings_2main_8c_a9a349403cd1a1b1689228b3500f9132b}\label{bitarithm__timings_2main_8c_a9a349403cd1a1b1689228b3500f9132b}} 
+\index{bitarithm\+\_\+timings/main.\+c@{bitarithm\+\_\+timings/main.\+c}!run\+\_\+test@{run\+\_\+test}}
+\index{run\+\_\+test@{run\+\_\+test}!bitarithm\+\_\+timings/main.\+c@{bitarithm\+\_\+timings/main.\+c}}
+\subsubsection{\texorpdfstring{run\+\_\+test}{run\_test}}
+{\footnotesize\ttfamily \#define run\+\_\+test(\begin{DoxyParamCaption}\item[{}]{test }\end{DoxyParamCaption})~run\+\_\+test(\#test, test)}
+
+\mbox{\Hypertarget{bitarithm__timings_2main_8c_a45ba202b05caf39795aeca91b0ae547e}\label{bitarithm__timings_2main_8c_a45ba202b05caf39795aeca91b0ae547e}} 
+\index{bitarithm\+\_\+timings/main.\+c@{bitarithm\+\_\+timings/main.\+c}!T\+I\+M\+E\+O\+UT@{T\+I\+M\+E\+O\+UT}}
+\index{T\+I\+M\+E\+O\+UT@{T\+I\+M\+E\+O\+UT}!bitarithm\+\_\+timings/main.\+c@{bitarithm\+\_\+timings/main.\+c}}
+\subsubsection{\texorpdfstring{T\+I\+M\+E\+O\+UT}{TIMEOUT}}
+{\footnotesize\ttfamily \#define T\+I\+M\+E\+O\+UT~(\hyperlink{bitarithm__timings_2main_8c_ac5074791bf74db3ed58199d66714869f}{T\+I\+M\+E\+O\+U\+T\+\_\+S} $\ast$ U\+S\+\_\+\+P\+E\+R\+\_\+\+S\+EC)}
+
+\mbox{\Hypertarget{bitarithm__timings_2main_8c_ac5074791bf74db3ed58199d66714869f}\label{bitarithm__timings_2main_8c_ac5074791bf74db3ed58199d66714869f}} 
+\index{bitarithm\+\_\+timings/main.\+c@{bitarithm\+\_\+timings/main.\+c}!T\+I\+M\+E\+O\+U\+T\+\_\+S@{T\+I\+M\+E\+O\+U\+T\+\_\+S}}
+\index{T\+I\+M\+E\+O\+U\+T\+\_\+S@{T\+I\+M\+E\+O\+U\+T\+\_\+S}!bitarithm\+\_\+timings/main.\+c@{bitarithm\+\_\+timings/main.\+c}}
+\subsubsection{\texorpdfstring{T\+I\+M\+E\+O\+U\+T\+\_\+S}{TIMEOUT\_S}}
+{\footnotesize\ttfamily \#define T\+I\+M\+E\+O\+U\+T\+\_\+S~(5ul)}
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{bitarithm__timings_2main_8c_a840291bc02cba5474a4cb46a9b9566fe}\label{bitarithm__timings_2main_8c_a840291bc02cba5474a4cb46a9b9566fe}} 
+\index{bitarithm\+\_\+timings/main.\+c@{bitarithm\+\_\+timings/main.\+c}!main@{main}}
+\index{main@{main}!bitarithm\+\_\+timings/main.\+c@{bitarithm\+\_\+timings/main.\+c}}
+\subsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+

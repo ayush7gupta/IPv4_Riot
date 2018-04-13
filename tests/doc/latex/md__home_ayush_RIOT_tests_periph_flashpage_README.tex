@@ -1,0 +1,34 @@
+Use the provided shell commands, to read and write pages from/to the M\+CU\textquotesingle{}s internal flash memory. For altering the data in a flash page, use a sequence similar to this\+:
+\begin{DoxyItemize}
+\item read some page from the flash, this will load this page into a local buffer 
+\begin{DoxyCode}
+read 100
+\end{DoxyCode}
+
+\item edit the contents of the local buffer, here we write \textquotesingle{}Hello\+\_\+\+R\+I\+OT\textquotesingle{} to position 100 
+\begin{DoxyCode}
+edit 100 Hello\_RIOT
+\end{DoxyCode}
+
+\item write the local buffer to any target page in the flash. C\+A\+U\+T\+I\+ON\+: if you override any page, that contains program code (or even the interrupt vector), you will most like encounter hard faults and crashes which can only be fixed by re-\/flashing the node... 
+\begin{DoxyCode}
+write 100
+\end{DoxyCode}
+
+\item check if the contents were written 
+\begin{DoxyCode}
+dump 100
+\end{DoxyCode}
+
+\item now power off the node, wait a bit and power it back on. The contents of the page written previously should still be there
+\end{DoxyItemize}
+
+What else to check\+:
+\begin{DoxyItemize}
+\item Erase a page with previously known contents, to make sure the erasing works
+\item also check the pages before and after the targeted page, to see if the page size is correct, and that you are only erasing the actual page and not any parts of the neighboring page.
+\end{DoxyItemize}
+
+\section*{Background }
+
+This test provides you with tools to test implementations of the {\ttfamily flashpage} peripheral driver interface. 

@@ -1,0 +1,98 @@
+\hypertarget{periph__uart_2main_8c}{}\section{/home/ayush/\+R\+I\+O\+T/tests/periph\+\_\+uart/main.c File Reference}
+\label{periph__uart_2main_8c}\index{/home/ayush/\+R\+I\+O\+T/tests/periph\+\_\+uart/main.\+c@{/home/ayush/\+R\+I\+O\+T/tests/periph\+\_\+uart/main.\+c}}
+
+
+Manual test application for U\+A\+RT peripheral drivers.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}board.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}shell.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}thread.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}msg.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}ringbuffer.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}periph/uart.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}uart\+\_\+stdio.\+h\char`\"{}}\newline
+Include dependency graph for main.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{periph__uart_2main_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structuart__ctx__t}{uart\+\_\+ctx\+\_\+t}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{periph__uart_2main_8c_ad23ae1e6c6131f48e6c760b176ebcad6}{S\+H\+E\+L\+L\+\_\+\+B\+U\+F\+S\+I\+ZE}~(128\+U)
+\item 
+\#define \hyperlink{periph__uart_2main_8c_adaf5112feae5d36c62df62ea7f987ac3}{U\+A\+R\+T\+\_\+\+B\+U\+F\+S\+I\+ZE}~(128\+U)
+\item 
+\#define \hyperlink{periph__uart_2main_8c_ac67a330d16f621e9434b4f6d22524288}{P\+R\+I\+N\+T\+E\+R\+\_\+\+P\+R\+IO}~(T\+H\+R\+E\+A\+D\+\_\+\+P\+R\+I\+O\+R\+I\+T\+Y\+\_\+\+M\+A\+IN -\/ 1)
+\item 
+\#define \hyperlink{periph__uart_2main_8c_a2370897ad09a87c976310eb50d2f39fe}{P\+R\+I\+N\+T\+E\+R\+\_\+\+T\+Y\+PE}~(0xabcd)
+\item 
+\#define \hyperlink{periph__uart_2main_8c_a25b691ad2ebe19b9f0bcb723f937927c}{U\+A\+R\+T\+\_\+\+S\+T\+D\+I\+O\+\_\+\+D\+EV}~(U\+A\+R\+T\+\_\+\+U\+N\+D\+EF)
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{periph__uart_2main_8c_a840291bc02cba5474a4cb46a9b9566fe}{main} (void)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Manual test application for U\+A\+RT peripheral drivers. 
+
+\begin{DoxyAuthor}{Author}
+Hauke Petersen \href{mailto:hauke.petersen@fu-berlin.de}{\tt hauke.\+petersen@fu-\/berlin.\+de} 
+\end{DoxyAuthor}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{periph__uart_2main_8c_ac67a330d16f621e9434b4f6d22524288}\label{periph__uart_2main_8c_ac67a330d16f621e9434b4f6d22524288}} 
+\index{periph\+\_\+uart/main.\+c@{periph\+\_\+uart/main.\+c}!P\+R\+I\+N\+T\+E\+R\+\_\+\+P\+R\+IO@{P\+R\+I\+N\+T\+E\+R\+\_\+\+P\+R\+IO}}
+\index{P\+R\+I\+N\+T\+E\+R\+\_\+\+P\+R\+IO@{P\+R\+I\+N\+T\+E\+R\+\_\+\+P\+R\+IO}!periph\+\_\+uart/main.\+c@{periph\+\_\+uart/main.\+c}}
+\subsubsection{\texorpdfstring{P\+R\+I\+N\+T\+E\+R\+\_\+\+P\+R\+IO}{PRINTER\_PRIO}}
+{\footnotesize\ttfamily \#define P\+R\+I\+N\+T\+E\+R\+\_\+\+P\+R\+IO~(T\+H\+R\+E\+A\+D\+\_\+\+P\+R\+I\+O\+R\+I\+T\+Y\+\_\+\+M\+A\+IN -\/ 1)}
+
+\mbox{\Hypertarget{periph__uart_2main_8c_a2370897ad09a87c976310eb50d2f39fe}\label{periph__uart_2main_8c_a2370897ad09a87c976310eb50d2f39fe}} 
+\index{periph\+\_\+uart/main.\+c@{periph\+\_\+uart/main.\+c}!P\+R\+I\+N\+T\+E\+R\+\_\+\+T\+Y\+PE@{P\+R\+I\+N\+T\+E\+R\+\_\+\+T\+Y\+PE}}
+\index{P\+R\+I\+N\+T\+E\+R\+\_\+\+T\+Y\+PE@{P\+R\+I\+N\+T\+E\+R\+\_\+\+T\+Y\+PE}!periph\+\_\+uart/main.\+c@{periph\+\_\+uart/main.\+c}}
+\subsubsection{\texorpdfstring{P\+R\+I\+N\+T\+E\+R\+\_\+\+T\+Y\+PE}{PRINTER\_TYPE}}
+{\footnotesize\ttfamily \#define P\+R\+I\+N\+T\+E\+R\+\_\+\+T\+Y\+PE~(0xabcd)}
+
+\mbox{\Hypertarget{periph__uart_2main_8c_ad23ae1e6c6131f48e6c760b176ebcad6}\label{periph__uart_2main_8c_ad23ae1e6c6131f48e6c760b176ebcad6}} 
+\index{periph\+\_\+uart/main.\+c@{periph\+\_\+uart/main.\+c}!S\+H\+E\+L\+L\+\_\+\+B\+U\+F\+S\+I\+ZE@{S\+H\+E\+L\+L\+\_\+\+B\+U\+F\+S\+I\+ZE}}
+\index{S\+H\+E\+L\+L\+\_\+\+B\+U\+F\+S\+I\+ZE@{S\+H\+E\+L\+L\+\_\+\+B\+U\+F\+S\+I\+ZE}!periph\+\_\+uart/main.\+c@{periph\+\_\+uart/main.\+c}}
+\subsubsection{\texorpdfstring{S\+H\+E\+L\+L\+\_\+\+B\+U\+F\+S\+I\+ZE}{SHELL\_BUFSIZE}}
+{\footnotesize\ttfamily \#define S\+H\+E\+L\+L\+\_\+\+B\+U\+F\+S\+I\+ZE~(128\+U)}
+
+\mbox{\Hypertarget{periph__uart_2main_8c_adaf5112feae5d36c62df62ea7f987ac3}\label{periph__uart_2main_8c_adaf5112feae5d36c62df62ea7f987ac3}} 
+\index{periph\+\_\+uart/main.\+c@{periph\+\_\+uart/main.\+c}!U\+A\+R\+T\+\_\+\+B\+U\+F\+S\+I\+ZE@{U\+A\+R\+T\+\_\+\+B\+U\+F\+S\+I\+ZE}}
+\index{U\+A\+R\+T\+\_\+\+B\+U\+F\+S\+I\+ZE@{U\+A\+R\+T\+\_\+\+B\+U\+F\+S\+I\+ZE}!periph\+\_\+uart/main.\+c@{periph\+\_\+uart/main.\+c}}
+\subsubsection{\texorpdfstring{U\+A\+R\+T\+\_\+\+B\+U\+F\+S\+I\+ZE}{UART\_BUFSIZE}}
+{\footnotesize\ttfamily \#define U\+A\+R\+T\+\_\+\+B\+U\+F\+S\+I\+ZE~(128\+U)}
+
+\mbox{\Hypertarget{periph__uart_2main_8c_a25b691ad2ebe19b9f0bcb723f937927c}\label{periph__uart_2main_8c_a25b691ad2ebe19b9f0bcb723f937927c}} 
+\index{periph\+\_\+uart/main.\+c@{periph\+\_\+uart/main.\+c}!U\+A\+R\+T\+\_\+\+S\+T\+D\+I\+O\+\_\+\+D\+EV@{U\+A\+R\+T\+\_\+\+S\+T\+D\+I\+O\+\_\+\+D\+EV}}
+\index{U\+A\+R\+T\+\_\+\+S\+T\+D\+I\+O\+\_\+\+D\+EV@{U\+A\+R\+T\+\_\+\+S\+T\+D\+I\+O\+\_\+\+D\+EV}!periph\+\_\+uart/main.\+c@{periph\+\_\+uart/main.\+c}}
+\subsubsection{\texorpdfstring{U\+A\+R\+T\+\_\+\+S\+T\+D\+I\+O\+\_\+\+D\+EV}{UART\_STDIO\_DEV}}
+{\footnotesize\ttfamily \#define U\+A\+R\+T\+\_\+\+S\+T\+D\+I\+O\+\_\+\+D\+EV~(U\+A\+R\+T\+\_\+\+U\+N\+D\+EF)}
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{periph__uart_2main_8c_a840291bc02cba5474a4cb46a9b9566fe}\label{periph__uart_2main_8c_a840291bc02cba5474a4cb46a9b9566fe}} 
+\index{periph\+\_\+uart/main.\+c@{periph\+\_\+uart/main.\+c}!main@{main}}
+\index{main@{main}!periph\+\_\+uart/main.\+c@{periph\+\_\+uart/main.\+c}}
+\subsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+

@@ -1,0 +1,75 @@
+\hypertarget{periph__timer_2main_8c}{}\section{/home/ayush/\+R\+I\+O\+T/tests/periph\+\_\+timer/main.c File Reference}
+\label{periph__timer_2main_8c}\index{/home/ayush/\+R\+I\+O\+T/tests/periph\+\_\+timer/main.\+c@{/home/ayush/\+R\+I\+O\+T/tests/periph\+\_\+timer/main.\+c}}
+
+
+Peripheral timer test application.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}periph/timer.\+h\char`\"{}}\newline
+Include dependency graph for main.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{periph__timer_2main_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{periph__timer_2main_8c_ac69ee46f4a51ed14f0d68628c2dec71d}{M\+A\+X\+\_\+\+C\+H\+A\+N\+N\+E\+LS}~(10\+U)
+\begin{DoxyCompactList}\small\item\em Make sure, the maximum number of timers is defined. \end{DoxyCompactList}\item 
+\#define \hyperlink{periph__timer_2main_8c_a0868d770de3cb52044e8795ab4534939}{T\+I\+M\+\_\+\+S\+P\+E\+ED}~(1000000ul) /$\ast$ try to run with 1\+M\+Hz $\ast$/
+\item 
+\#define \hyperlink{periph__timer_2main_8c_a170c8ddcd0b3c3cb95267394fd1b7df5}{C\+H\+A\+N\+\_\+\+O\+F\+F\+S\+ET}~(5000\+U)     /$\ast$ fire every 5ms $\ast$/
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{periph__timer_2main_8c_a840291bc02cba5474a4cb46a9b9566fe}{main} (void)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Peripheral timer test application. 
+
+\begin{DoxyAuthor}{Author}
+Hauke Petersen \href{mailto:hauke.petersen@fu-berlin.de}{\tt hauke.\+petersen@fu-\/berlin.\+de} 
+\end{DoxyAuthor}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{periph__timer_2main_8c_a170c8ddcd0b3c3cb95267394fd1b7df5}\label{periph__timer_2main_8c_a170c8ddcd0b3c3cb95267394fd1b7df5}} 
+\index{periph\+\_\+timer/main.\+c@{periph\+\_\+timer/main.\+c}!C\+H\+A\+N\+\_\+\+O\+F\+F\+S\+ET@{C\+H\+A\+N\+\_\+\+O\+F\+F\+S\+ET}}
+\index{C\+H\+A\+N\+\_\+\+O\+F\+F\+S\+ET@{C\+H\+A\+N\+\_\+\+O\+F\+F\+S\+ET}!periph\+\_\+timer/main.\+c@{periph\+\_\+timer/main.\+c}}
+\subsubsection{\texorpdfstring{C\+H\+A\+N\+\_\+\+O\+F\+F\+S\+ET}{CHAN\_OFFSET}}
+{\footnotesize\ttfamily \#define C\+H\+A\+N\+\_\+\+O\+F\+F\+S\+ET~(5000\+U)     /$\ast$ fire every 5ms $\ast$/}
+
+\mbox{\Hypertarget{periph__timer_2main_8c_ac69ee46f4a51ed14f0d68628c2dec71d}\label{periph__timer_2main_8c_ac69ee46f4a51ed14f0d68628c2dec71d}} 
+\index{periph\+\_\+timer/main.\+c@{periph\+\_\+timer/main.\+c}!M\+A\+X\+\_\+\+C\+H\+A\+N\+N\+E\+LS@{M\+A\+X\+\_\+\+C\+H\+A\+N\+N\+E\+LS}}
+\index{M\+A\+X\+\_\+\+C\+H\+A\+N\+N\+E\+LS@{M\+A\+X\+\_\+\+C\+H\+A\+N\+N\+E\+LS}!periph\+\_\+timer/main.\+c@{periph\+\_\+timer/main.\+c}}
+\subsubsection{\texorpdfstring{M\+A\+X\+\_\+\+C\+H\+A\+N\+N\+E\+LS}{MAX\_CHANNELS}}
+{\footnotesize\ttfamily \#define M\+A\+X\+\_\+\+C\+H\+A\+N\+N\+E\+LS~(10\+U)}
+
+
+
+Make sure, the maximum number of timers is defined. 
+
+\mbox{\Hypertarget{periph__timer_2main_8c_a0868d770de3cb52044e8795ab4534939}\label{periph__timer_2main_8c_a0868d770de3cb52044e8795ab4534939}} 
+\index{periph\+\_\+timer/main.\+c@{periph\+\_\+timer/main.\+c}!T\+I\+M\+\_\+\+S\+P\+E\+ED@{T\+I\+M\+\_\+\+S\+P\+E\+ED}}
+\index{T\+I\+M\+\_\+\+S\+P\+E\+ED@{T\+I\+M\+\_\+\+S\+P\+E\+ED}!periph\+\_\+timer/main.\+c@{periph\+\_\+timer/main.\+c}}
+\subsubsection{\texorpdfstring{T\+I\+M\+\_\+\+S\+P\+E\+ED}{TIM\_SPEED}}
+{\footnotesize\ttfamily \#define T\+I\+M\+\_\+\+S\+P\+E\+ED~(1000000ul) /$\ast$ try to run with 1\+M\+Hz $\ast$/}
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{periph__timer_2main_8c_a840291bc02cba5474a4cb46a9b9566fe}\label{periph__timer_2main_8c_a840291bc02cba5474a4cb46a9b9566fe}} 
+\index{periph\+\_\+timer/main.\+c@{periph\+\_\+timer/main.\+c}!main@{main}}
+\index{main@{main}!periph\+\_\+timer/main.\+c@{periph\+\_\+timer/main.\+c}}
+\subsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+

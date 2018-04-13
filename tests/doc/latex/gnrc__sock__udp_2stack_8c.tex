@@ -1,0 +1,151 @@
+\hypertarget{gnrc__sock__udp_2stack_8c}{}\section{/home/ayush/\+R\+I\+O\+T/tests/gnrc\+\_\+sock\+\_\+udp/stack.c File Reference}
+\label{gnrc__sock__udp_2stack_8c}\index{/home/ayush/\+R\+I\+O\+T/tests/gnrc\+\_\+sock\+\_\+udp/stack.\+c@{/home/ayush/\+R\+I\+O\+T/tests/gnrc\+\_\+sock\+\_\+udp/stack.\+c}}
+{\ttfamily \#include \char`\"{}msg.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}net/gnrc/ipv6.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}net/gnrc/netif/hdr.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}net/gnrc/netreg.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}net/gnrc/udp.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}net/sock.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}sched.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}stack.\+h\char`\"{}}\newline
+Include dependency graph for stack.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{gnrc__sock__udp_2stack_8c__incl}
+\end{center}
+\end{figure}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{gnrc__sock__udp_2stack_8c_aec37fb472076c5cde54dffe0bb7200a1}{\+\_\+\+M\+S\+G\+\_\+\+Q\+U\+E\+U\+E\+\_\+\+S\+I\+ZE}~(4)
+\item 
+void \hyperlink{gnrc__sock__udp_2stack_8c_ab79a4a5f6bdb81335f0a7a2314a887b9}{\+\_\+net\+\_\+init} (void)
+\begin{DoxyCompactList}\small\item\em Initializes networking for tests. \end{DoxyCompactList}\item 
+void \hyperlink{gnrc__sock__udp_2stack_8c_aa11d83c74898aabffe8d4b59a69cc50f}{\+\_\+prepare\+\_\+send\+\_\+checks} (void)
+\begin{DoxyCompactList}\small\item\em Does what ever preparations are needed to check the packets sent. \end{DoxyCompactList}\item 
+bool \hyperlink{gnrc__sock__udp_2stack_8c_adc256c4a03c8a52252a4d643e47fe790}{\+\_\+inject\+\_\+packet} (const ipv6\+\_\+addr\+\_\+t $\ast$src, const ipv6\+\_\+addr\+\_\+t $\ast$dst, uint16\+\_\+t src\+\_\+port, uint16\+\_\+t dst\+\_\+port, void $\ast$data, size\+\_\+t data\+\_\+len, uint16\+\_\+t \hyperlink{structnetif}{netif})
+\begin{DoxyCompactList}\small\item\em Injects a received U\+DP packet into the stack. \end{DoxyCompactList}\item 
+bool \hyperlink{gnrc__sock__udp_2stack_8c_a529203be83b35a3482a705540d7fab52}{\+\_\+check\+\_\+net} (void)
+\begin{DoxyCompactList}\small\item\em Checks networking state (e.\+g. packet buffer state) \end{DoxyCompactList}\item 
+bool \hyperlink{gnrc__sock__udp_2stack_8c_a6291a711ce8693fbe4d8641b60208fc9}{\+\_\+check\+\_\+packet} (const ipv6\+\_\+addr\+\_\+t $\ast$src, const ipv6\+\_\+addr\+\_\+t $\ast$dst, uint16\+\_\+t src\+\_\+port, uint16\+\_\+t dst\+\_\+port, void $\ast$data, size\+\_\+t data\+\_\+len, uint16\+\_\+t iface, bool random\+\_\+src\+\_\+port)
+\begin{DoxyCompactList}\small\item\em Checks if a U\+DP packet was sent by the networking component. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyAuthor}{Author}
+Martine Lenders \href{mailto:mlenders@inf.fu-berlin.de}{\tt mlenders@inf.\+fu-\/berlin.\+de} 
+\end{DoxyAuthor}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{gnrc__sock__udp_2stack_8c_aec37fb472076c5cde54dffe0bb7200a1}\label{gnrc__sock__udp_2stack_8c_aec37fb472076c5cde54dffe0bb7200a1}} 
+\index{gnrc\+\_\+sock\+\_\+udp/stack.\+c@{gnrc\+\_\+sock\+\_\+udp/stack.\+c}!\+\_\+\+M\+S\+G\+\_\+\+Q\+U\+E\+U\+E\+\_\+\+S\+I\+ZE@{\+\_\+\+M\+S\+G\+\_\+\+Q\+U\+E\+U\+E\+\_\+\+S\+I\+ZE}}
+\index{\+\_\+\+M\+S\+G\+\_\+\+Q\+U\+E\+U\+E\+\_\+\+S\+I\+ZE@{\+\_\+\+M\+S\+G\+\_\+\+Q\+U\+E\+U\+E\+\_\+\+S\+I\+ZE}!gnrc\+\_\+sock\+\_\+udp/stack.\+c@{gnrc\+\_\+sock\+\_\+udp/stack.\+c}}
+\subsubsection{\texorpdfstring{\+\_\+\+M\+S\+G\+\_\+\+Q\+U\+E\+U\+E\+\_\+\+S\+I\+ZE}{\_MSG\_QUEUE\_SIZE}}
+{\footnotesize\ttfamily \#define \+\_\+\+M\+S\+G\+\_\+\+Q\+U\+E\+U\+E\+\_\+\+S\+I\+ZE~(4)}
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{gnrc__sock__udp_2stack_8c_a529203be83b35a3482a705540d7fab52}\label{gnrc__sock__udp_2stack_8c_a529203be83b35a3482a705540d7fab52}} 
+\index{gnrc\+\_\+sock\+\_\+udp/stack.\+c@{gnrc\+\_\+sock\+\_\+udp/stack.\+c}!\+\_\+check\+\_\+net@{\+\_\+check\+\_\+net}}
+\index{\+\_\+check\+\_\+net@{\+\_\+check\+\_\+net}!gnrc\+\_\+sock\+\_\+udp/stack.\+c@{gnrc\+\_\+sock\+\_\+udp/stack.\+c}}
+\subsubsection{\texorpdfstring{\+\_\+check\+\_\+net()}{\_check\_net()}}
+{\footnotesize\ttfamily bool \+\_\+check\+\_\+net (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Checks networking state (e.\+g. packet buffer state) 
+
+\begin{DoxyReturn}{Returns}
+true, if networking component is still in valid state 
+
+false, if networking component is in an invalid state 
+\end{DoxyReturn}
+\mbox{\Hypertarget{gnrc__sock__udp_2stack_8c_a6291a711ce8693fbe4d8641b60208fc9}\label{gnrc__sock__udp_2stack_8c_a6291a711ce8693fbe4d8641b60208fc9}} 
+\index{gnrc\+\_\+sock\+\_\+udp/stack.\+c@{gnrc\+\_\+sock\+\_\+udp/stack.\+c}!\+\_\+check\+\_\+packet@{\+\_\+check\+\_\+packet}}
+\index{\+\_\+check\+\_\+packet@{\+\_\+check\+\_\+packet}!gnrc\+\_\+sock\+\_\+udp/stack.\+c@{gnrc\+\_\+sock\+\_\+udp/stack.\+c}}
+\subsubsection{\texorpdfstring{\+\_\+check\+\_\+packet()}{\_check\_packet()}}
+{\footnotesize\ttfamily bool \+\_\+check\+\_\+packet (\begin{DoxyParamCaption}\item[{const ipv6\+\_\+addr\+\_\+t $\ast$}]{src,  }\item[{const ipv6\+\_\+addr\+\_\+t $\ast$}]{dst,  }\item[{uint16\+\_\+t}]{src\+\_\+port,  }\item[{uint16\+\_\+t}]{dst\+\_\+port,  }\item[{void $\ast$}]{data,  }\item[{size\+\_\+t}]{data\+\_\+len,  }\item[{uint16\+\_\+t}]{netif,  }\item[{bool}]{random\+\_\+src\+\_\+port }\end{DoxyParamCaption})}
+
+
+
+Checks if a U\+DP packet was sent by the networking component. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em src} & Expected source address of the U\+DP packet \\
+\hline
+\mbox{\tt in}  & {\em dst} & Expected destination address of the U\+DP packet \\
+\hline
+\mbox{\tt in}  & {\em src\+\_\+port} & Expected source port of the U\+DP packet \\
+\hline
+\mbox{\tt in}  & {\em dst\+\_\+port} & Expected destination port of the U\+DP packet \\
+\hline
+\mbox{\tt in}  & {\em data} & Expected payload of the U\+DP packet \\
+\hline
+\mbox{\tt in}  & {\em data\+\_\+len} & Expected payload length of the U\+DP packet \\
+\hline
+\mbox{\tt in}  & {\em netif} & Expected interface the packet is supposed to be send over \\
+\hline
+\mbox{\tt in}  & {\em random\+\_\+src\+\_\+port} & Do not check source port, it might be random\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true, if all parameters match as expected 
+
+false, if not. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{gnrc__sock__udp_2stack_8c_adc256c4a03c8a52252a4d643e47fe790}\label{gnrc__sock__udp_2stack_8c_adc256c4a03c8a52252a4d643e47fe790}} 
+\index{gnrc\+\_\+sock\+\_\+udp/stack.\+c@{gnrc\+\_\+sock\+\_\+udp/stack.\+c}!\+\_\+inject\+\_\+packet@{\+\_\+inject\+\_\+packet}}
+\index{\+\_\+inject\+\_\+packet@{\+\_\+inject\+\_\+packet}!gnrc\+\_\+sock\+\_\+udp/stack.\+c@{gnrc\+\_\+sock\+\_\+udp/stack.\+c}}
+\subsubsection{\texorpdfstring{\+\_\+inject\+\_\+packet()}{\_inject\_packet()}}
+{\footnotesize\ttfamily bool \+\_\+inject\+\_\+packet (\begin{DoxyParamCaption}\item[{const ipv6\+\_\+addr\+\_\+t $\ast$}]{src,  }\item[{const ipv6\+\_\+addr\+\_\+t $\ast$}]{dst,  }\item[{uint16\+\_\+t}]{src\+\_\+port,  }\item[{uint16\+\_\+t}]{dst\+\_\+port,  }\item[{void $\ast$}]{data,  }\item[{size\+\_\+t}]{data\+\_\+len,  }\item[{uint16\+\_\+t}]{netif }\end{DoxyParamCaption})}
+
+
+
+Injects a received U\+DP packet into the stack. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em src} & The source address of the U\+DP packet \\
+\hline
+\mbox{\tt in}  & {\em dst} & The destination address of the U\+DP packet \\
+\hline
+\mbox{\tt in}  & {\em src\+\_\+port} & The source port of the U\+DP packet \\
+\hline
+\mbox{\tt in}  & {\em dst\+\_\+port} & The destination port of the U\+DP packet \\
+\hline
+\mbox{\tt in}  & {\em data} & The payload of the U\+DP packet \\
+\hline
+\mbox{\tt in}  & {\em data\+\_\+len} & The payload length of the U\+DP packet \\
+\hline
+\mbox{\tt in}  & {\em netif} & The interface the packet came over\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true, if packet was successfully injected 
+
+false, if an error occured during injection 
+\end{DoxyReturn}
+\mbox{\Hypertarget{gnrc__sock__udp_2stack_8c_ab79a4a5f6bdb81335f0a7a2314a887b9}\label{gnrc__sock__udp_2stack_8c_ab79a4a5f6bdb81335f0a7a2314a887b9}} 
+\index{gnrc\+\_\+sock\+\_\+udp/stack.\+c@{gnrc\+\_\+sock\+\_\+udp/stack.\+c}!\+\_\+net\+\_\+init@{\+\_\+net\+\_\+init}}
+\index{\+\_\+net\+\_\+init@{\+\_\+net\+\_\+init}!gnrc\+\_\+sock\+\_\+udp/stack.\+c@{gnrc\+\_\+sock\+\_\+udp/stack.\+c}}
+\subsubsection{\texorpdfstring{\+\_\+net\+\_\+init()}{\_net\_init()}}
+{\footnotesize\ttfamily void \+\_\+net\+\_\+init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Initializes networking for tests. 
+
+\mbox{\Hypertarget{gnrc__sock__udp_2stack_8c_aa11d83c74898aabffe8d4b59a69cc50f}\label{gnrc__sock__udp_2stack_8c_aa11d83c74898aabffe8d4b59a69cc50f}} 
+\index{gnrc\+\_\+sock\+\_\+udp/stack.\+c@{gnrc\+\_\+sock\+\_\+udp/stack.\+c}!\+\_\+prepare\+\_\+send\+\_\+checks@{\+\_\+prepare\+\_\+send\+\_\+checks}}
+\index{\+\_\+prepare\+\_\+send\+\_\+checks@{\+\_\+prepare\+\_\+send\+\_\+checks}!gnrc\+\_\+sock\+\_\+udp/stack.\+c@{gnrc\+\_\+sock\+\_\+udp/stack.\+c}}
+\subsubsection{\texorpdfstring{\+\_\+prepare\+\_\+send\+\_\+checks()}{\_prepare\_send\_checks()}}
+{\footnotesize\ttfamily void \+\_\+prepare\+\_\+send\+\_\+checks (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Does what ever preparations are needed to check the packets sent. 
+

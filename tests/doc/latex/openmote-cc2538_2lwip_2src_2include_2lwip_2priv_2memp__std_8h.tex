@@ -1,0 +1,51 @@
+\hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2priv_2memp__std_8h}{}\section{/home/ayush/\+R\+I\+O\+T/tests/lwip/bin/pkg/openmote-\/cc2538/lwip/src/include/lwip/priv/memp\+\_\+std.h File Reference}
+\label{openmote-cc2538_2lwip_2src_2include_2lwip_2priv_2memp__std_8h}\index{/home/ayush/\+R\+I\+O\+T/tests/lwip/bin/pkg/openmote-\/cc2538/lwip/src/include/lwip/priv/memp\+\_\+std.\+h@{/home/ayush/\+R\+I\+O\+T/tests/lwip/bin/pkg/openmote-\/cc2538/lwip/src/include/lwip/priv/memp\+\_\+std.\+h}}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{openmote-cc2538_2lwip_2src_2include_2lwip_2priv_2memp__std_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2priv_2memp__std_8h_a2a2ee070ed2e841bdf67f9379780e03d}{L\+W\+I\+P\+\_\+\+M\+A\+L\+L\+O\+C\+\_\+\+M\+E\+M\+P\+O\+OL}(num,  size)~\hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2memp_8h_a5f75b6e9cf0c6df9e70b08b8e05a1835}{L\+W\+I\+P\+\_\+\+M\+E\+M\+P\+O\+OL}(P\+O\+O\+L\+\_\+\#\#size, num, (size + \hyperlink{group__compiler__abstraction_gaef204be511fd32f681b55abc08e9ae18}{L\+W\+I\+P\+\_\+\+M\+E\+M\+\_\+\+A\+L\+I\+G\+N\+\_\+\+S\+I\+ZE}(sizeof(struct memp\+\_\+malloc\+\_\+helper))), \char`\"{}M\+A\+L\+L\+O\+C\+\_\+\char`\"{}\#size)
+\item 
+\#define \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2priv_2memp__std_8h_a0bc6a0d68500481012310ae5e44f4735}{L\+W\+I\+P\+\_\+\+M\+A\+L\+L\+O\+C\+\_\+\+M\+E\+M\+P\+O\+O\+L\+\_\+\+S\+T\+A\+RT}
+\item 
+\#define \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2priv_2memp__std_8h_aa28365e96383d5262b08f8113b7f7c6d}{L\+W\+I\+P\+\_\+\+M\+A\+L\+L\+O\+C\+\_\+\+M\+E\+M\+P\+O\+O\+L\+\_\+\+E\+ND}
+\item 
+\#define \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2priv_2memp__std_8h_a4ed41263feeda39be71d3aa9440494ad}{L\+W\+I\+P\+\_\+\+P\+B\+U\+F\+\_\+\+M\+E\+M\+P\+O\+OL}(name,  num,  payload,  desc)~\hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2memp_8h_a5f75b6e9cf0c6df9e70b08b8e05a1835}{L\+W\+I\+P\+\_\+\+M\+E\+M\+P\+O\+OL}(name, num, (\hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2priv_2memp__priv_8h_a12e0cfbac9c8263e5a1fb319b92338e7}{M\+E\+M\+P\+\_\+\+A\+L\+I\+G\+N\+\_\+\+S\+I\+ZE}(sizeof(struct \hyperlink{structpbuf}{pbuf})) + \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2priv_2memp__priv_8h_a12e0cfbac9c8263e5a1fb319b92338e7}{M\+E\+M\+P\+\_\+\+A\+L\+I\+G\+N\+\_\+\+S\+I\+ZE}(payload)), desc)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+lw\+IP internal memory pools (do not use in application code) This file is deliberately included multiple times\+: once with empty definition of \hyperlink{native_2lwip_2src_2core_2memp_8c_a5f75b6e9cf0c6df9e70b08b8e05a1835}{L\+W\+I\+P\+\_\+\+M\+E\+M\+P\+O\+O\+L()} to handle all includes and multiple times to build up various lists of mem pools. 
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2priv_2memp__std_8h_a2a2ee070ed2e841bdf67f9379780e03d}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2priv_2memp__std_8h_a2a2ee070ed2e841bdf67f9379780e03d}} 
+\index{openmote-\/cc2538/lwip/src/include/lwip/priv/memp\+\_\+std.\+h@{openmote-\/cc2538/lwip/src/include/lwip/priv/memp\+\_\+std.\+h}!L\+W\+I\+P\+\_\+\+M\+A\+L\+L\+O\+C\+\_\+\+M\+E\+M\+P\+O\+OL@{L\+W\+I\+P\+\_\+\+M\+A\+L\+L\+O\+C\+\_\+\+M\+E\+M\+P\+O\+OL}}
+\index{L\+W\+I\+P\+\_\+\+M\+A\+L\+L\+O\+C\+\_\+\+M\+E\+M\+P\+O\+OL@{L\+W\+I\+P\+\_\+\+M\+A\+L\+L\+O\+C\+\_\+\+M\+E\+M\+P\+O\+OL}!openmote-\/cc2538/lwip/src/include/lwip/priv/memp\+\_\+std.\+h@{openmote-\/cc2538/lwip/src/include/lwip/priv/memp\+\_\+std.\+h}}
+\subsubsection{\texorpdfstring{L\+W\+I\+P\+\_\+\+M\+A\+L\+L\+O\+C\+\_\+\+M\+E\+M\+P\+O\+OL}{LWIP\_MALLOC\_MEMPOOL}}
+{\footnotesize\ttfamily \#define L\+W\+I\+P\+\_\+\+M\+A\+L\+L\+O\+C\+\_\+\+M\+E\+M\+P\+O\+OL(\begin{DoxyParamCaption}\item[{}]{num,  }\item[{}]{size }\end{DoxyParamCaption})~\hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2memp_8h_a5f75b6e9cf0c6df9e70b08b8e05a1835}{L\+W\+I\+P\+\_\+\+M\+E\+M\+P\+O\+OL}(P\+O\+O\+L\+\_\+\#\#size, num, (size + \hyperlink{group__compiler__abstraction_gaef204be511fd32f681b55abc08e9ae18}{L\+W\+I\+P\+\_\+\+M\+E\+M\+\_\+\+A\+L\+I\+G\+N\+\_\+\+S\+I\+ZE}(sizeof(struct memp\+\_\+malloc\+\_\+helper))), \char`\"{}M\+A\+L\+L\+O\+C\+\_\+\char`\"{}\#size)}
+
+\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2priv_2memp__std_8h_aa28365e96383d5262b08f8113b7f7c6d}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2priv_2memp__std_8h_aa28365e96383d5262b08f8113b7f7c6d}} 
+\index{openmote-\/cc2538/lwip/src/include/lwip/priv/memp\+\_\+std.\+h@{openmote-\/cc2538/lwip/src/include/lwip/priv/memp\+\_\+std.\+h}!L\+W\+I\+P\+\_\+\+M\+A\+L\+L\+O\+C\+\_\+\+M\+E\+M\+P\+O\+O\+L\+\_\+\+E\+ND@{L\+W\+I\+P\+\_\+\+M\+A\+L\+L\+O\+C\+\_\+\+M\+E\+M\+P\+O\+O\+L\+\_\+\+E\+ND}}
+\index{L\+W\+I\+P\+\_\+\+M\+A\+L\+L\+O\+C\+\_\+\+M\+E\+M\+P\+O\+O\+L\+\_\+\+E\+ND@{L\+W\+I\+P\+\_\+\+M\+A\+L\+L\+O\+C\+\_\+\+M\+E\+M\+P\+O\+O\+L\+\_\+\+E\+ND}!openmote-\/cc2538/lwip/src/include/lwip/priv/memp\+\_\+std.\+h@{openmote-\/cc2538/lwip/src/include/lwip/priv/memp\+\_\+std.\+h}}
+\subsubsection{\texorpdfstring{L\+W\+I\+P\+\_\+\+M\+A\+L\+L\+O\+C\+\_\+\+M\+E\+M\+P\+O\+O\+L\+\_\+\+E\+ND}{LWIP\_MALLOC\_MEMPOOL\_END}}
+{\footnotesize\ttfamily \#define L\+W\+I\+P\+\_\+\+M\+A\+L\+L\+O\+C\+\_\+\+M\+E\+M\+P\+O\+O\+L\+\_\+\+E\+ND}
+
+\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2priv_2memp__std_8h_a0bc6a0d68500481012310ae5e44f4735}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2priv_2memp__std_8h_a0bc6a0d68500481012310ae5e44f4735}} 
+\index{openmote-\/cc2538/lwip/src/include/lwip/priv/memp\+\_\+std.\+h@{openmote-\/cc2538/lwip/src/include/lwip/priv/memp\+\_\+std.\+h}!L\+W\+I\+P\+\_\+\+M\+A\+L\+L\+O\+C\+\_\+\+M\+E\+M\+P\+O\+O\+L\+\_\+\+S\+T\+A\+RT@{L\+W\+I\+P\+\_\+\+M\+A\+L\+L\+O\+C\+\_\+\+M\+E\+M\+P\+O\+O\+L\+\_\+\+S\+T\+A\+RT}}
+\index{L\+W\+I\+P\+\_\+\+M\+A\+L\+L\+O\+C\+\_\+\+M\+E\+M\+P\+O\+O\+L\+\_\+\+S\+T\+A\+RT@{L\+W\+I\+P\+\_\+\+M\+A\+L\+L\+O\+C\+\_\+\+M\+E\+M\+P\+O\+O\+L\+\_\+\+S\+T\+A\+RT}!openmote-\/cc2538/lwip/src/include/lwip/priv/memp\+\_\+std.\+h@{openmote-\/cc2538/lwip/src/include/lwip/priv/memp\+\_\+std.\+h}}
+\subsubsection{\texorpdfstring{L\+W\+I\+P\+\_\+\+M\+A\+L\+L\+O\+C\+\_\+\+M\+E\+M\+P\+O\+O\+L\+\_\+\+S\+T\+A\+RT}{LWIP\_MALLOC\_MEMPOOL\_START}}
+{\footnotesize\ttfamily \#define L\+W\+I\+P\+\_\+\+M\+A\+L\+L\+O\+C\+\_\+\+M\+E\+M\+P\+O\+O\+L\+\_\+\+S\+T\+A\+RT}
+
+\mbox{\Hypertarget{openmote-cc2538_2lwip_2src_2include_2lwip_2priv_2memp__std_8h_a4ed41263feeda39be71d3aa9440494ad}\label{openmote-cc2538_2lwip_2src_2include_2lwip_2priv_2memp__std_8h_a4ed41263feeda39be71d3aa9440494ad}} 
+\index{openmote-\/cc2538/lwip/src/include/lwip/priv/memp\+\_\+std.\+h@{openmote-\/cc2538/lwip/src/include/lwip/priv/memp\+\_\+std.\+h}!L\+W\+I\+P\+\_\+\+P\+B\+U\+F\+\_\+\+M\+E\+M\+P\+O\+OL@{L\+W\+I\+P\+\_\+\+P\+B\+U\+F\+\_\+\+M\+E\+M\+P\+O\+OL}}
+\index{L\+W\+I\+P\+\_\+\+P\+B\+U\+F\+\_\+\+M\+E\+M\+P\+O\+OL@{L\+W\+I\+P\+\_\+\+P\+B\+U\+F\+\_\+\+M\+E\+M\+P\+O\+OL}!openmote-\/cc2538/lwip/src/include/lwip/priv/memp\+\_\+std.\+h@{openmote-\/cc2538/lwip/src/include/lwip/priv/memp\+\_\+std.\+h}}
+\subsubsection{\texorpdfstring{L\+W\+I\+P\+\_\+\+P\+B\+U\+F\+\_\+\+M\+E\+M\+P\+O\+OL}{LWIP\_PBUF\_MEMPOOL}}
+{\footnotesize\ttfamily \#define L\+W\+I\+P\+\_\+\+P\+B\+U\+F\+\_\+\+M\+E\+M\+P\+O\+OL(\begin{DoxyParamCaption}\item[{}]{name,  }\item[{}]{num,  }\item[{}]{payload,  }\item[{}]{desc }\end{DoxyParamCaption})~\hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2memp_8h_a5f75b6e9cf0c6df9e70b08b8e05a1835}{L\+W\+I\+P\+\_\+\+M\+E\+M\+P\+O\+OL}(name, num, (\hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2priv_2memp__priv_8h_a12e0cfbac9c8263e5a1fb319b92338e7}{M\+E\+M\+P\+\_\+\+A\+L\+I\+G\+N\+\_\+\+S\+I\+ZE}(sizeof(struct \hyperlink{structpbuf}{pbuf})) + \hyperlink{openmote-cc2538_2lwip_2src_2include_2lwip_2priv_2memp__priv_8h_a12e0cfbac9c8263e5a1fb319b92338e7}{M\+E\+M\+P\+\_\+\+A\+L\+I\+G\+N\+\_\+\+S\+I\+ZE}(payload)), desc)}
+

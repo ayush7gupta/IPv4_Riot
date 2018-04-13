@@ -1,0 +1,52 @@
+\hypertarget{group__lwip__opts__memcpy}{}\section{memcpy}
+\label{group__lwip__opts__memcpy}\index{memcpy@{memcpy}}
+Collaboration diagram for memcpy\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=244pt]{group__lwip__opts__memcpy}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group__lwip__opts__memcpy_gaa1dd57a66b6de8c0593e9e3e8d1411f6}{M\+E\+M\+C\+PY}(dst,  src,  len)~memcpy(dst,src,len)
+\item 
+\#define \hyperlink{group__lwip__opts__memcpy_ga8c6e3c1e4f74acb16376188dbf8909ec}{S\+M\+E\+M\+C\+PY}(dst,  src,  len)~memcpy(dst,src,len)
+\item 
+\#define \hyperlink{group__lwip__opts__memcpy_gaa1dd57a66b6de8c0593e9e3e8d1411f6}{M\+E\+M\+C\+PY}(dst,  src,  len)~memcpy(dst,src,len)
+\item 
+\#define \hyperlink{group__lwip__opts__memcpy_ga8c6e3c1e4f74acb16376188dbf8909ec}{S\+M\+E\+M\+C\+PY}(dst,  src,  len)~memcpy(dst,src,len)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{group__lwip__opts__memcpy_gaa1dd57a66b6de8c0593e9e3e8d1411f6}\label{group__lwip__opts__memcpy_gaa1dd57a66b6de8c0593e9e3e8d1411f6}} 
+\index{memcpy@{memcpy}!M\+E\+M\+C\+PY@{M\+E\+M\+C\+PY}}
+\index{M\+E\+M\+C\+PY@{M\+E\+M\+C\+PY}!memcpy@{memcpy}}
+\subsubsection{\texorpdfstring{M\+E\+M\+C\+PY}{MEMCPY}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \#define M\+E\+M\+C\+PY(\begin{DoxyParamCaption}\item[{}]{dst,  }\item[{}]{src,  }\item[{}]{len }\end{DoxyParamCaption})~memcpy(dst,src,len)}
+
+M\+E\+M\+C\+PY\+: override this if you have a faster implementation at hand than the one included in your C library \mbox{\Hypertarget{group__lwip__opts__memcpy_gaa1dd57a66b6de8c0593e9e3e8d1411f6}\label{group__lwip__opts__memcpy_gaa1dd57a66b6de8c0593e9e3e8d1411f6}} 
+\index{memcpy@{memcpy}!M\+E\+M\+C\+PY@{M\+E\+M\+C\+PY}}
+\index{M\+E\+M\+C\+PY@{M\+E\+M\+C\+PY}!memcpy@{memcpy}}
+\subsubsection{\texorpdfstring{M\+E\+M\+C\+PY}{MEMCPY}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \#define M\+E\+M\+C\+PY(\begin{DoxyParamCaption}\item[{}]{dst,  }\item[{}]{src,  }\item[{}]{len }\end{DoxyParamCaption})~memcpy(dst,src,len)}
+
+M\+E\+M\+C\+PY\+: override this if you have a faster implementation at hand than the one included in your C library \mbox{\Hypertarget{group__lwip__opts__memcpy_ga8c6e3c1e4f74acb16376188dbf8909ec}\label{group__lwip__opts__memcpy_ga8c6e3c1e4f74acb16376188dbf8909ec}} 
+\index{memcpy@{memcpy}!S\+M\+E\+M\+C\+PY@{S\+M\+E\+M\+C\+PY}}
+\index{S\+M\+E\+M\+C\+PY@{S\+M\+E\+M\+C\+PY}!memcpy@{memcpy}}
+\subsubsection{\texorpdfstring{S\+M\+E\+M\+C\+PY}{SMEMCPY}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \#define S\+M\+E\+M\+C\+PY(\begin{DoxyParamCaption}\item[{}]{dst,  }\item[{}]{src,  }\item[{}]{len }\end{DoxyParamCaption})~memcpy(dst,src,len)}
+
+S\+M\+E\+M\+C\+PY\+: override this with care! Some compilers (e.\+g. gcc) can inline a call to memcpy() if the length is known at compile time and is small. \mbox{\Hypertarget{group__lwip__opts__memcpy_ga8c6e3c1e4f74acb16376188dbf8909ec}\label{group__lwip__opts__memcpy_ga8c6e3c1e4f74acb16376188dbf8909ec}} 
+\index{memcpy@{memcpy}!S\+M\+E\+M\+C\+PY@{S\+M\+E\+M\+C\+PY}}
+\index{S\+M\+E\+M\+C\+PY@{S\+M\+E\+M\+C\+PY}!memcpy@{memcpy}}
+\subsubsection{\texorpdfstring{S\+M\+E\+M\+C\+PY}{SMEMCPY}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \#define S\+M\+E\+M\+C\+PY(\begin{DoxyParamCaption}\item[{}]{dst,  }\item[{}]{src,  }\item[{}]{len }\end{DoxyParamCaption})~memcpy(dst,src,len)}
+
+S\+M\+E\+M\+C\+PY\+: override this with care! Some compilers (e.\+g. gcc) can inline a call to memcpy() if the length is known at compile time and is small. 

@@ -1,0 +1,77 @@
+\hypertarget{fault__handler_2main_8c}{}\section{/home/ayush/\+R\+I\+O\+T/tests/fault\+\_\+handler/main.c File Reference}
+\label{fault__handler_2main_8c}\index{/home/ayush/\+R\+I\+O\+T/tests/fault\+\_\+handler/main.\+c@{/home/ayush/\+R\+I\+O\+T/tests/fault\+\_\+handler/main.\+c}}
+
+
+Minimal test application for triggering a hard fault or equivalent.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$xtimer.\+h$>$}\newline
+Include dependency graph for main.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=205pt]{fault__handler_2main_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{fault__handler_2main_8c_a9f4f01d4251055630a782ade447fae68}{F\+O\+R\+B\+I\+D\+D\+E\+N\+\_\+\+A\+D\+D\+R\+E\+SS}~(0x00000000)
+\item 
+\#define \hyperlink{fault__handler_2main_8c_a67b420a6dc06313451b1e2878e21aa70}{I\+N\+V\+A\+L\+I\+D\+\_\+\+I\+N\+S\+T\+R\+U\+C\+T\+I\+ON}~\+\_\+\+\_\+asm\+\_\+\+\_\+ volatile (\char`\"{}.short 0xdead, 0xbeef, 0xcafe, 0xbabe\textbackslash{}n\char`\"{})
+\item 
+\#define \hyperlink{fault__handler_2main_8c_aad2f0f5f5c07e76896de8eccba0af871}{P\+R\+I\+N\+T\+\_\+\+M\+A\+C\+RO}(a)~\hyperlink{fault__handler_2main_8c_a8ae69e49d4f9cfb7b00325ba358b07c9}{P\+R\+I\+N\+T\+\_\+\+M\+A\+C\+R\+O2}(a)
+\item 
+\#define \hyperlink{fault__handler_2main_8c_a8ae69e49d4f9cfb7b00325ba358b07c9}{P\+R\+I\+N\+T\+\_\+\+M\+A\+C\+R\+O2}(a)~\#a
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{fault__handler_2main_8c_a840291bc02cba5474a4cb46a9b9566fe}{main} (void)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Minimal test application for triggering a hard fault or equivalent. 
+
+\begin{DoxyAuthor}{Author}
+Joakim Gebart \href{mailto:joakim.gebart@eistec.se}{\tt joakim.\+gebart@eistec.\+se} 
+\end{DoxyAuthor}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{fault__handler_2main_8c_a9f4f01d4251055630a782ade447fae68}\label{fault__handler_2main_8c_a9f4f01d4251055630a782ade447fae68}} 
+\index{fault\+\_\+handler/main.\+c@{fault\+\_\+handler/main.\+c}!F\+O\+R\+B\+I\+D\+D\+E\+N\+\_\+\+A\+D\+D\+R\+E\+SS@{F\+O\+R\+B\+I\+D\+D\+E\+N\+\_\+\+A\+D\+D\+R\+E\+SS}}
+\index{F\+O\+R\+B\+I\+D\+D\+E\+N\+\_\+\+A\+D\+D\+R\+E\+SS@{F\+O\+R\+B\+I\+D\+D\+E\+N\+\_\+\+A\+D\+D\+R\+E\+SS}!fault\+\_\+handler/main.\+c@{fault\+\_\+handler/main.\+c}}
+\subsubsection{\texorpdfstring{F\+O\+R\+B\+I\+D\+D\+E\+N\+\_\+\+A\+D\+D\+R\+E\+SS}{FORBIDDEN\_ADDRESS}}
+{\footnotesize\ttfamily \#define F\+O\+R\+B\+I\+D\+D\+E\+N\+\_\+\+A\+D\+D\+R\+E\+SS~(0x00000000)}
+
+\mbox{\Hypertarget{fault__handler_2main_8c_a67b420a6dc06313451b1e2878e21aa70}\label{fault__handler_2main_8c_a67b420a6dc06313451b1e2878e21aa70}} 
+\index{fault\+\_\+handler/main.\+c@{fault\+\_\+handler/main.\+c}!I\+N\+V\+A\+L\+I\+D\+\_\+\+I\+N\+S\+T\+R\+U\+C\+T\+I\+ON@{I\+N\+V\+A\+L\+I\+D\+\_\+\+I\+N\+S\+T\+R\+U\+C\+T\+I\+ON}}
+\index{I\+N\+V\+A\+L\+I\+D\+\_\+\+I\+N\+S\+T\+R\+U\+C\+T\+I\+ON@{I\+N\+V\+A\+L\+I\+D\+\_\+\+I\+N\+S\+T\+R\+U\+C\+T\+I\+ON}!fault\+\_\+handler/main.\+c@{fault\+\_\+handler/main.\+c}}
+\subsubsection{\texorpdfstring{I\+N\+V\+A\+L\+I\+D\+\_\+\+I\+N\+S\+T\+R\+U\+C\+T\+I\+ON}{INVALID\_INSTRUCTION}}
+{\footnotesize\ttfamily \#define I\+N\+V\+A\+L\+I\+D\+\_\+\+I\+N\+S\+T\+R\+U\+C\+T\+I\+ON~\+\_\+\+\_\+asm\+\_\+\+\_\+ volatile (\char`\"{}.short 0xdead, 0xbeef, 0xcafe, 0xbabe\textbackslash{}n\char`\"{})}
+
+\mbox{\Hypertarget{fault__handler_2main_8c_aad2f0f5f5c07e76896de8eccba0af871}\label{fault__handler_2main_8c_aad2f0f5f5c07e76896de8eccba0af871}} 
+\index{fault\+\_\+handler/main.\+c@{fault\+\_\+handler/main.\+c}!P\+R\+I\+N\+T\+\_\+\+M\+A\+C\+RO@{P\+R\+I\+N\+T\+\_\+\+M\+A\+C\+RO}}
+\index{P\+R\+I\+N\+T\+\_\+\+M\+A\+C\+RO@{P\+R\+I\+N\+T\+\_\+\+M\+A\+C\+RO}!fault\+\_\+handler/main.\+c@{fault\+\_\+handler/main.\+c}}
+\subsubsection{\texorpdfstring{P\+R\+I\+N\+T\+\_\+\+M\+A\+C\+RO}{PRINT\_MACRO}}
+{\footnotesize\ttfamily \#define P\+R\+I\+N\+T\+\_\+\+M\+A\+C\+RO(\begin{DoxyParamCaption}\item[{}]{a }\end{DoxyParamCaption})~\hyperlink{fault__handler_2main_8c_a8ae69e49d4f9cfb7b00325ba358b07c9}{P\+R\+I\+N\+T\+\_\+\+M\+A\+C\+R\+O2}(a)}
+
+\mbox{\Hypertarget{fault__handler_2main_8c_a8ae69e49d4f9cfb7b00325ba358b07c9}\label{fault__handler_2main_8c_a8ae69e49d4f9cfb7b00325ba358b07c9}} 
+\index{fault\+\_\+handler/main.\+c@{fault\+\_\+handler/main.\+c}!P\+R\+I\+N\+T\+\_\+\+M\+A\+C\+R\+O2@{P\+R\+I\+N\+T\+\_\+\+M\+A\+C\+R\+O2}}
+\index{P\+R\+I\+N\+T\+\_\+\+M\+A\+C\+R\+O2@{P\+R\+I\+N\+T\+\_\+\+M\+A\+C\+R\+O2}!fault\+\_\+handler/main.\+c@{fault\+\_\+handler/main.\+c}}
+\subsubsection{\texorpdfstring{P\+R\+I\+N\+T\+\_\+\+M\+A\+C\+R\+O2}{PRINT\_MACRO2}}
+{\footnotesize\ttfamily \#define P\+R\+I\+N\+T\+\_\+\+M\+A\+C\+R\+O2(\begin{DoxyParamCaption}\item[{}]{a }\end{DoxyParamCaption})~\#a}
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{fault__handler_2main_8c_a840291bc02cba5474a4cb46a9b9566fe}\label{fault__handler_2main_8c_a840291bc02cba5474a4cb46a9b9566fe}} 
+\index{fault\+\_\+handler/main.\+c@{fault\+\_\+handler/main.\+c}!main@{main}}
+\index{main@{main}!fault\+\_\+handler/main.\+c@{fault\+\_\+handler/main.\+c}}
+\subsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+

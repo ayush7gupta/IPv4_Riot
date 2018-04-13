@@ -1,0 +1,89 @@
+\hypertarget{native_2lwip_2src_2include_2netif_2slipif_8h}{}\section{/home/ayush/\+R\+I\+O\+T/tests/lwip/bin/pkg/native/lwip/src/include/netif/slipif.h File Reference}
+\label{native_2lwip_2src_2include_2netif_2slipif_8h}\index{/home/ayush/\+R\+I\+O\+T/tests/lwip/bin/pkg/native/lwip/src/include/netif/slipif.\+h@{/home/ayush/\+R\+I\+O\+T/tests/lwip/bin/pkg/native/lwip/src/include/netif/slipif.\+h}}
+{\ttfamily \#include \char`\"{}lwip/opt.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}lwip/netif.\+h\char`\"{}}\newline
+Include dependency graph for slipif.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=222pt]{native_2lwip_2src_2include_2netif_2slipif_8h__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{native_2lwip_2src_2include_2netif_2slipif_8h_a198967c11f79cffc32192710294e8826}{S\+L\+I\+P\+\_\+\+U\+S\+E\+\_\+\+R\+X\+\_\+\+T\+H\+R\+E\+AD}~!\hyperlink{openmote-cc2538_2lwip_2test_2unit_2lwipopts_8h_ae00ba99de94a5bf84d832be8976df59b}{N\+O\+\_\+\+S\+YS}
+\item 
+\#define \hyperlink{native_2lwip_2src_2include_2netif_2slipif_8h_a832eb1b9634b21aa0b91f78abfd852ea}{S\+L\+I\+P\+\_\+\+R\+X\+\_\+\+F\+R\+O\+M\+\_\+\+I\+SR}~0
+\item 
+\#define \hyperlink{native_2lwip_2src_2include_2netif_2slipif_8h_a37ce8613535232db02bfd9ae9b51c668}{S\+L\+I\+P\+\_\+\+R\+X\+\_\+\+Q\+U\+E\+UE}~\hyperlink{openmote-cc2538_2lwip_2src_2include_2netif_2slipif_8h_a832eb1b9634b21aa0b91f78abfd852ea}{S\+L\+I\+P\+\_\+\+R\+X\+\_\+\+F\+R\+O\+M\+\_\+\+I\+SR}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group__infrastructure__errors_gaf02d9da80fd66b4f986d2c53d7231ddb}{err\+\_\+t} \hyperlink{native_2lwip_2src_2include_2netif_2slipif_8h_a687973ba82dab13a5b9d38d7399aeee3}{slipif\+\_\+init} (struct \hyperlink{structnetif}{netif} $\ast$\hyperlink{structnetif}{netif})
+\item 
+void \hyperlink{native_2lwip_2src_2include_2netif_2slipif_8h_a7b036fd1cde9b299139cac62f52d15a6}{slipif\+\_\+poll} (struct \hyperlink{structnetif}{netif} $\ast$\hyperlink{structnetif}{netif})
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+S\+L\+IP netif A\+PI 
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{native_2lwip_2src_2include_2netif_2slipif_8h_a832eb1b9634b21aa0b91f78abfd852ea}\label{native_2lwip_2src_2include_2netif_2slipif_8h_a832eb1b9634b21aa0b91f78abfd852ea}} 
+\index{native/lwip/src/include/netif/slipif.\+h@{native/lwip/src/include/netif/slipif.\+h}!S\+L\+I\+P\+\_\+\+R\+X\+\_\+\+F\+R\+O\+M\+\_\+\+I\+SR@{S\+L\+I\+P\+\_\+\+R\+X\+\_\+\+F\+R\+O\+M\+\_\+\+I\+SR}}
+\index{S\+L\+I\+P\+\_\+\+R\+X\+\_\+\+F\+R\+O\+M\+\_\+\+I\+SR@{S\+L\+I\+P\+\_\+\+R\+X\+\_\+\+F\+R\+O\+M\+\_\+\+I\+SR}!native/lwip/src/include/netif/slipif.\+h@{native/lwip/src/include/netif/slipif.\+h}}
+\subsubsection{\texorpdfstring{S\+L\+I\+P\+\_\+\+R\+X\+\_\+\+F\+R\+O\+M\+\_\+\+I\+SR}{SLIP\_RX\_FROM\_ISR}}
+{\footnotesize\ttfamily \#define S\+L\+I\+P\+\_\+\+R\+X\+\_\+\+F\+R\+O\+M\+\_\+\+I\+SR~0}
+
+Set this to 1 to enable functions to pass in RX bytes from I\+SR context. If enabled, slipif\+\_\+received\+\_\+byte\mbox{[}s\mbox{]}() process incoming bytes and put assembled packets on a queue, which is fed into lw\+IP from \hyperlink{native_2lwip_2src_2include_2netif_2slipif_8h_a7b036fd1cde9b299139cac62f52d15a6}{slipif\+\_\+poll()}. If disabled, \hyperlink{native_2lwip_2src_2include_2netif_2slipif_8h_a7b036fd1cde9b299139cac62f52d15a6}{slipif\+\_\+poll()} polls the serial line (using \hyperlink{native_2lwip_2src_2include_2lwip_2sio_8h_a3780ab1928702f82974ee66988220040}{sio\+\_\+tryread()}). \mbox{\Hypertarget{native_2lwip_2src_2include_2netif_2slipif_8h_a37ce8613535232db02bfd9ae9b51c668}\label{native_2lwip_2src_2include_2netif_2slipif_8h_a37ce8613535232db02bfd9ae9b51c668}} 
+\index{native/lwip/src/include/netif/slipif.\+h@{native/lwip/src/include/netif/slipif.\+h}!S\+L\+I\+P\+\_\+\+R\+X\+\_\+\+Q\+U\+E\+UE@{S\+L\+I\+P\+\_\+\+R\+X\+\_\+\+Q\+U\+E\+UE}}
+\index{S\+L\+I\+P\+\_\+\+R\+X\+\_\+\+Q\+U\+E\+UE@{S\+L\+I\+P\+\_\+\+R\+X\+\_\+\+Q\+U\+E\+UE}!native/lwip/src/include/netif/slipif.\+h@{native/lwip/src/include/netif/slipif.\+h}}
+\subsubsection{\texorpdfstring{S\+L\+I\+P\+\_\+\+R\+X\+\_\+\+Q\+U\+E\+UE}{SLIP\_RX\_QUEUE}}
+{\footnotesize\ttfamily \#define S\+L\+I\+P\+\_\+\+R\+X\+\_\+\+Q\+U\+E\+UE~\hyperlink{openmote-cc2538_2lwip_2src_2include_2netif_2slipif_8h_a832eb1b9634b21aa0b91f78abfd852ea}{S\+L\+I\+P\+\_\+\+R\+X\+\_\+\+F\+R\+O\+M\+\_\+\+I\+SR}}
+
+Set this to 1 (default for S\+L\+I\+P\+\_\+\+R\+X\+\_\+\+F\+R\+O\+M\+\_\+\+I\+SR) to queue incoming packets received by slipif\+\_\+received\+\_\+byte\mbox{[}s\mbox{]}() as long as P\+B\+U\+F\+\_\+\+P\+O\+OL pbufs are available. If disabled, packets will be dropped if more than one packet is received. \mbox{\Hypertarget{native_2lwip_2src_2include_2netif_2slipif_8h_a198967c11f79cffc32192710294e8826}\label{native_2lwip_2src_2include_2netif_2slipif_8h_a198967c11f79cffc32192710294e8826}} 
+\index{native/lwip/src/include/netif/slipif.\+h@{native/lwip/src/include/netif/slipif.\+h}!S\+L\+I\+P\+\_\+\+U\+S\+E\+\_\+\+R\+X\+\_\+\+T\+H\+R\+E\+AD@{S\+L\+I\+P\+\_\+\+U\+S\+E\+\_\+\+R\+X\+\_\+\+T\+H\+R\+E\+AD}}
+\index{S\+L\+I\+P\+\_\+\+U\+S\+E\+\_\+\+R\+X\+\_\+\+T\+H\+R\+E\+AD@{S\+L\+I\+P\+\_\+\+U\+S\+E\+\_\+\+R\+X\+\_\+\+T\+H\+R\+E\+AD}!native/lwip/src/include/netif/slipif.\+h@{native/lwip/src/include/netif/slipif.\+h}}
+\subsubsection{\texorpdfstring{S\+L\+I\+P\+\_\+\+U\+S\+E\+\_\+\+R\+X\+\_\+\+T\+H\+R\+E\+AD}{SLIP\_USE\_RX\_THREAD}}
+{\footnotesize\ttfamily \#define S\+L\+I\+P\+\_\+\+U\+S\+E\+\_\+\+R\+X\+\_\+\+T\+H\+R\+E\+AD~!\hyperlink{openmote-cc2538_2lwip_2test_2unit_2lwipopts_8h_ae00ba99de94a5bf84d832be8976df59b}{N\+O\+\_\+\+S\+YS}}
+
+Set this to 1 to start a thread that blocks reading on the serial line (using \hyperlink{native_2lwip_2src_2include_2lwip_2sio_8h_ac5a6563ee5f12459451010139a04a03b}{sio\+\_\+read()}). 
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{native_2lwip_2src_2include_2netif_2slipif_8h_a687973ba82dab13a5b9d38d7399aeee3}\label{native_2lwip_2src_2include_2netif_2slipif_8h_a687973ba82dab13a5b9d38d7399aeee3}} 
+\index{native/lwip/src/include/netif/slipif.\+h@{native/lwip/src/include/netif/slipif.\+h}!slipif\+\_\+init@{slipif\+\_\+init}}
+\index{slipif\+\_\+init@{slipif\+\_\+init}!native/lwip/src/include/netif/slipif.\+h@{native/lwip/src/include/netif/slipif.\+h}}
+\subsubsection{\texorpdfstring{slipif\+\_\+init()}{slipif\_init()}}
+{\footnotesize\ttfamily \hyperlink{group__infrastructure__errors_gaf02d9da80fd66b4f986d2c53d7231ddb}{err\+\_\+t} slipif\+\_\+init (\begin{DoxyParamCaption}\item[{struct \hyperlink{structnetif}{netif} $\ast$}]{netif }\end{DoxyParamCaption})}
+
+S\+L\+IP netif initialization
+
+Call the arch specific sio\+\_\+open and remember the opened device in the state field of the netif.
+
+
+\begin{DoxyParams}{Parameters}
+{\em netif} & the lwip network interface structure for this slipif \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+E\+R\+R\+\_\+\+OK if serial line could be opened, E\+R\+R\+\_\+\+M\+EM if no memory could be allocated, E\+R\+R\+\_\+\+IF is serial line couldn\textquotesingle{}t be opened
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+netif-\/$>$num must contain the number of the serial port to open (0 by default). If netif-\/$>$state is != N\+U\+LL, it is interpreted as an u8\+\_\+t pointer pointing to the serial port number instead of netif-\/$>$num. 
+\end{DoxyNote}
+\mbox{\Hypertarget{native_2lwip_2src_2include_2netif_2slipif_8h_a7b036fd1cde9b299139cac62f52d15a6}\label{native_2lwip_2src_2include_2netif_2slipif_8h_a7b036fd1cde9b299139cac62f52d15a6}} 
+\index{native/lwip/src/include/netif/slipif.\+h@{native/lwip/src/include/netif/slipif.\+h}!slipif\+\_\+poll@{slipif\+\_\+poll}}
+\index{slipif\+\_\+poll@{slipif\+\_\+poll}!native/lwip/src/include/netif/slipif.\+h@{native/lwip/src/include/netif/slipif.\+h}}
+\subsubsection{\texorpdfstring{slipif\+\_\+poll()}{slipif\_poll()}}
+{\footnotesize\ttfamily void slipif\+\_\+poll (\begin{DoxyParamCaption}\item[{struct \hyperlink{structnetif}{netif} $\ast$}]{netif }\end{DoxyParamCaption})}
+
+Polls the serial device and feeds the IP layer with incoming packets.
+
+
+\begin{DoxyParams}{Parameters}
+{\em netif} & The lwip network interface structure for this slipif \\
+\hline
+\end{DoxyParams}

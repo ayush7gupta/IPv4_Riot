@@ -1,0 +1,202 @@
+\hypertarget{lwip__sock__ip_2stack_8h}{}\section{/home/ayush/\+R\+I\+O\+T/tests/lwip\+\_\+sock\+\_\+ip/stack.h File Reference}
+\label{lwip__sock__ip_2stack_8h}\index{/home/ayush/\+R\+I\+O\+T/tests/lwip\+\_\+sock\+\_\+ip/stack.\+h@{/home/ayush/\+R\+I\+O\+T/tests/lwip\+\_\+sock\+\_\+ip/stack.\+h}}
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}net/ipv6/addr.\+h\char`\"{}}\newline
+Include dependency graph for stack.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=303pt]{lwip__sock__ip_2stack_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=348pt]{lwip__sock__ip_2stack_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{lwip__sock__ip_2stack_8h_ab79a4a5f6bdb81335f0a7a2314a887b9}{\+\_\+net\+\_\+init} (void)
+\begin{DoxyCompactList}\small\item\em Initializes networking for tests. \end{DoxyCompactList}\item 
+void \hyperlink{lwip__sock__ip_2stack_8h_aa11d83c74898aabffe8d4b59a69cc50f}{\+\_\+prepare\+\_\+send\+\_\+checks} (void)
+\begin{DoxyCompactList}\small\item\em Does what ever preparations are needed to check the packets sent. \end{DoxyCompactList}\item 
+bool \hyperlink{lwip__sock__ip_2stack_8h_afa8d379b23331cfdc86fdd3b3628177f}{\+\_\+inject\+\_\+4packet} (uint32\+\_\+t src, uint32\+\_\+t dst, uint8\+\_\+t proto, void $\ast$data, size\+\_\+t data\+\_\+len, uint16\+\_\+t \hyperlink{structnetif}{netif})
+\begin{DoxyCompactList}\small\item\em Injects a received I\+Pv4 packet into the stack. \end{DoxyCompactList}\item 
+bool \hyperlink{lwip__sock__ip_2stack_8h_a411e0fca2d5028f8afbf7fae265faecb}{\+\_\+inject\+\_\+6packet} (const ipv6\+\_\+addr\+\_\+t $\ast$src, const ipv6\+\_\+addr\+\_\+t $\ast$dst, uint8\+\_\+t proto, void $\ast$data, size\+\_\+t data\+\_\+len, uint16\+\_\+t \hyperlink{structnetif}{netif})
+\begin{DoxyCompactList}\small\item\em Injects a received I\+Pv6 packet into the stack. \end{DoxyCompactList}\item 
+bool \hyperlink{lwip__sock__ip_2stack_8h_a529203be83b35a3482a705540d7fab52}{\+\_\+check\+\_\+net} (void)
+\begin{DoxyCompactList}\small\item\em Checks networking state (e.\+g. packet buffer state) \end{DoxyCompactList}\item 
+bool \hyperlink{lwip__sock__ip_2stack_8h_abc9ddc4a15ed14b7c5e017007d59ca67}{\+\_\+check\+\_\+4packet} (uint32\+\_\+t src, uint32\+\_\+t dst, uint8\+\_\+t proto, void $\ast$data, size\+\_\+t data\+\_\+len, uint16\+\_\+t \hyperlink{structnetif}{netif})
+\begin{DoxyCompactList}\small\item\em Checks if a I\+Pv4 packet was sent by the networking component. \end{DoxyCompactList}\item 
+bool \hyperlink{lwip__sock__ip_2stack_8h_a7c8c71086ec866148d60b411fde8f6f4}{\+\_\+check\+\_\+6packet} (const ipv6\+\_\+addr\+\_\+t $\ast$src, const ipv6\+\_\+addr\+\_\+t $\ast$dst, uint8\+\_\+t proto, void $\ast$data, size\+\_\+t data\+\_\+len, uint16\+\_\+t \hyperlink{structnetif}{netif})
+\begin{DoxyCompactList}\small\item\em Checks if a I\+Pv6 packet was sent by the networking component. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyAuthor}{Author}
+Martine Lenders \href{mailto:mlenders@inf.fu-berlin.de}{\tt mlenders@inf.\+fu-\/berlin.\+de} 
+\end{DoxyAuthor}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{lwip__sock__ip_2stack_8h_abc9ddc4a15ed14b7c5e017007d59ca67}\label{lwip__sock__ip_2stack_8h_abc9ddc4a15ed14b7c5e017007d59ca67}} 
+\index{lwip\+\_\+sock\+\_\+ip/stack.\+h@{lwip\+\_\+sock\+\_\+ip/stack.\+h}!\+\_\+check\+\_\+4packet@{\+\_\+check\+\_\+4packet}}
+\index{\+\_\+check\+\_\+4packet@{\+\_\+check\+\_\+4packet}!lwip\+\_\+sock\+\_\+ip/stack.\+h@{lwip\+\_\+sock\+\_\+ip/stack.\+h}}
+\subsubsection{\texorpdfstring{\+\_\+check\+\_\+4packet()}{\_check\_4packet()}}
+{\footnotesize\ttfamily bool \+\_\+check\+\_\+4packet (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{src,  }\item[{uint32\+\_\+t}]{dst,  }\item[{uint8\+\_\+t}]{proto,  }\item[{void $\ast$}]{data,  }\item[{size\+\_\+t}]{data\+\_\+len,  }\item[{uint16\+\_\+t}]{netif }\end{DoxyParamCaption})}
+
+
+
+Checks if a I\+Pv4 packet was sent by the networking component. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em src} & Expected source address of the I\+Pv4 packet \\
+\hline
+\mbox{\tt in}  & {\em dst} & Expected destination address of the I\+Pv4 packet \\
+\hline
+\mbox{\tt in}  & {\em proto} & Expected next header field of the I\+Pv4 packet \\
+\hline
+\mbox{\tt in}  & {\em data} & Expected payload of the I\+Pv4 packet \\
+\hline
+\mbox{\tt in}  & {\em data\+\_\+len} & Expected payload length of the I\+Pv4 packet \\
+\hline
+\mbox{\tt in}  & {\em netif} & Expected interface the packet is supposed to be send over\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true, if all parameters match as expected 
+
+false, if not. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{lwip__sock__ip_2stack_8h_a7c8c71086ec866148d60b411fde8f6f4}\label{lwip__sock__ip_2stack_8h_a7c8c71086ec866148d60b411fde8f6f4}} 
+\index{lwip\+\_\+sock\+\_\+ip/stack.\+h@{lwip\+\_\+sock\+\_\+ip/stack.\+h}!\+\_\+check\+\_\+6packet@{\+\_\+check\+\_\+6packet}}
+\index{\+\_\+check\+\_\+6packet@{\+\_\+check\+\_\+6packet}!lwip\+\_\+sock\+\_\+ip/stack.\+h@{lwip\+\_\+sock\+\_\+ip/stack.\+h}}
+\subsubsection{\texorpdfstring{\+\_\+check\+\_\+6packet()}{\_check\_6packet()}}
+{\footnotesize\ttfamily bool \+\_\+check\+\_\+6packet (\begin{DoxyParamCaption}\item[{const ipv6\+\_\+addr\+\_\+t $\ast$}]{src,  }\item[{const ipv6\+\_\+addr\+\_\+t $\ast$}]{dst,  }\item[{uint8\+\_\+t}]{proto,  }\item[{void $\ast$}]{data,  }\item[{size\+\_\+t}]{data\+\_\+len,  }\item[{uint16\+\_\+t}]{netif }\end{DoxyParamCaption})}
+
+
+
+Checks if a I\+Pv6 packet was sent by the networking component. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em src} & Expected source address of the I\+Pv6 packet \\
+\hline
+\mbox{\tt in}  & {\em dst} & Expected destination address of the I\+Pv6 packet \\
+\hline
+\mbox{\tt in}  & {\em proto} & Expected next header field of the I\+Pv6 packet \\
+\hline
+\mbox{\tt in}  & {\em data} & Expected payload of the I\+Pv6 packet \\
+\hline
+\mbox{\tt in}  & {\em data\+\_\+len} & Expected payload length of the I\+Pv6 packet \\
+\hline
+\mbox{\tt in}  & {\em netif} & Expected interface the packet is supposed to be send over\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true, if all parameters match as expected 
+
+false, if not. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{lwip__sock__ip_2stack_8h_a529203be83b35a3482a705540d7fab52}\label{lwip__sock__ip_2stack_8h_a529203be83b35a3482a705540d7fab52}} 
+\index{lwip\+\_\+sock\+\_\+ip/stack.\+h@{lwip\+\_\+sock\+\_\+ip/stack.\+h}!\+\_\+check\+\_\+net@{\+\_\+check\+\_\+net}}
+\index{\+\_\+check\+\_\+net@{\+\_\+check\+\_\+net}!lwip\+\_\+sock\+\_\+ip/stack.\+h@{lwip\+\_\+sock\+\_\+ip/stack.\+h}}
+\subsubsection{\texorpdfstring{\+\_\+check\+\_\+net()}{\_check\_net()}}
+{\footnotesize\ttfamily bool \+\_\+check\+\_\+net (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Checks networking state (e.\+g. packet buffer state) 
+
+\begin{DoxyReturn}{Returns}
+true, if networking component is still in valid state 
+
+false, if networking component is in an invalid state 
+\end{DoxyReturn}
+\mbox{\Hypertarget{lwip__sock__ip_2stack_8h_afa8d379b23331cfdc86fdd3b3628177f}\label{lwip__sock__ip_2stack_8h_afa8d379b23331cfdc86fdd3b3628177f}} 
+\index{lwip\+\_\+sock\+\_\+ip/stack.\+h@{lwip\+\_\+sock\+\_\+ip/stack.\+h}!\+\_\+inject\+\_\+4packet@{\+\_\+inject\+\_\+4packet}}
+\index{\+\_\+inject\+\_\+4packet@{\+\_\+inject\+\_\+4packet}!lwip\+\_\+sock\+\_\+ip/stack.\+h@{lwip\+\_\+sock\+\_\+ip/stack.\+h}}
+\subsubsection{\texorpdfstring{\+\_\+inject\+\_\+4packet()}{\_inject\_4packet()}}
+{\footnotesize\ttfamily bool \+\_\+inject\+\_\+4packet (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{src,  }\item[{uint32\+\_\+t}]{dst,  }\item[{uint8\+\_\+t}]{proto,  }\item[{void $\ast$}]{data,  }\item[{size\+\_\+t}]{data\+\_\+len,  }\item[{uint16\+\_\+t}]{netif }\end{DoxyParamCaption})}
+
+
+
+Injects a received I\+Pv4 packet into the stack. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em src} & The source address of the I\+Pv4 packet \\
+\hline
+\mbox{\tt in}  & {\em dst} & The destination address of the I\+Pv4 packet \\
+\hline
+\mbox{\tt in}  & {\em proto} & The protocol field of the I\+Pv4 packet \\
+\hline
+\mbox{\tt in}  & {\em data} & The payload of the I\+Pv4 packet \\
+\hline
+\mbox{\tt in}  & {\em data\+\_\+len} & The payload length of the I\+Pv4 packet \\
+\hline
+\mbox{\tt in}  & {\em netif} & The interface the packet came over\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true, if packet was successfully injected 
+
+false, if an error occurred during injection 
+\end{DoxyReturn}
+\mbox{\Hypertarget{lwip__sock__ip_2stack_8h_a411e0fca2d5028f8afbf7fae265faecb}\label{lwip__sock__ip_2stack_8h_a411e0fca2d5028f8afbf7fae265faecb}} 
+\index{lwip\+\_\+sock\+\_\+ip/stack.\+h@{lwip\+\_\+sock\+\_\+ip/stack.\+h}!\+\_\+inject\+\_\+6packet@{\+\_\+inject\+\_\+6packet}}
+\index{\+\_\+inject\+\_\+6packet@{\+\_\+inject\+\_\+6packet}!lwip\+\_\+sock\+\_\+ip/stack.\+h@{lwip\+\_\+sock\+\_\+ip/stack.\+h}}
+\subsubsection{\texorpdfstring{\+\_\+inject\+\_\+6packet()}{\_inject\_6packet()}}
+{\footnotesize\ttfamily bool \+\_\+inject\+\_\+6packet (\begin{DoxyParamCaption}\item[{const ipv6\+\_\+addr\+\_\+t $\ast$}]{src,  }\item[{const ipv6\+\_\+addr\+\_\+t $\ast$}]{dst,  }\item[{uint8\+\_\+t}]{proto,  }\item[{void $\ast$}]{data,  }\item[{size\+\_\+t}]{data\+\_\+len,  }\item[{uint16\+\_\+t}]{netif }\end{DoxyParamCaption})}
+
+
+
+Injects a received I\+Pv6 packet into the stack. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em src} & The source address of the I\+Pv6 packet \\
+\hline
+\mbox{\tt in}  & {\em dst} & The destination address of the I\+Pv6 packet \\
+\hline
+\mbox{\tt in}  & {\em proto} & The next header field of the I\+Pv6 packet \\
+\hline
+\mbox{\tt in}  & {\em data} & The payload of the I\+Pv6 packet \\
+\hline
+\mbox{\tt in}  & {\em data\+\_\+len} & The payload length of the I\+Pv6 packet \\
+\hline
+\mbox{\tt in}  & {\em netif} & The interface the packet came over\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true, if packet was successfully injected 
+
+false, if an error occurred during injection 
+\end{DoxyReturn}
+\mbox{\Hypertarget{lwip__sock__ip_2stack_8h_ab79a4a5f6bdb81335f0a7a2314a887b9}\label{lwip__sock__ip_2stack_8h_ab79a4a5f6bdb81335f0a7a2314a887b9}} 
+\index{lwip\+\_\+sock\+\_\+ip/stack.\+h@{lwip\+\_\+sock\+\_\+ip/stack.\+h}!\+\_\+net\+\_\+init@{\+\_\+net\+\_\+init}}
+\index{\+\_\+net\+\_\+init@{\+\_\+net\+\_\+init}!lwip\+\_\+sock\+\_\+ip/stack.\+h@{lwip\+\_\+sock\+\_\+ip/stack.\+h}}
+\subsubsection{\texorpdfstring{\+\_\+net\+\_\+init()}{\_net\_init()}}
+{\footnotesize\ttfamily void \+\_\+net\+\_\+init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Initializes networking for tests. 
+
+\mbox{\Hypertarget{lwip__sock__ip_2stack_8h_aa11d83c74898aabffe8d4b59a69cc50f}\label{lwip__sock__ip_2stack_8h_aa11d83c74898aabffe8d4b59a69cc50f}} 
+\index{lwip\+\_\+sock\+\_\+ip/stack.\+h@{lwip\+\_\+sock\+\_\+ip/stack.\+h}!\+\_\+prepare\+\_\+send\+\_\+checks@{\+\_\+prepare\+\_\+send\+\_\+checks}}
+\index{\+\_\+prepare\+\_\+send\+\_\+checks@{\+\_\+prepare\+\_\+send\+\_\+checks}!lwip\+\_\+sock\+\_\+ip/stack.\+h@{lwip\+\_\+sock\+\_\+ip/stack.\+h}}
+\subsubsection{\texorpdfstring{\+\_\+prepare\+\_\+send\+\_\+checks()}{\_prepare\_send\_checks()}}
+{\footnotesize\ttfamily void \+\_\+prepare\+\_\+send\+\_\+checks (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Does what ever preparations are needed to check the packets sent. 
+

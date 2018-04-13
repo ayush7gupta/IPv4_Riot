@@ -1,0 +1,88 @@
+\hypertarget{driver__at86rf2xx_2main_8c}{}\section{/home/ayush/\+R\+I\+O\+T/tests/driver\+\_\+at86rf2xx/main.c File Reference}
+\label{driver__at86rf2xx_2main_8c}\index{/home/ayush/\+R\+I\+O\+T/tests/driver\+\_\+at86rf2xx/main.\+c@{/home/ayush/\+R\+I\+O\+T/tests/driver\+\_\+at86rf2xx/main.\+c}}
+
+
+Test application for A\+T86\+R\+F2xx network device driver.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}net/netdev.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}shell.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}shell\+\_\+commands.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}thread.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}xtimer.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}common.\+h\char`\"{}}\newline
+Include dependency graph for main.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{driver__at86rf2xx_2main_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{driver__at86rf2xx_2main_8c_af4850708f8125768e5bf39d29a33cd84}{\+\_\+\+S\+T\+A\+C\+K\+S\+I\+ZE}~(T\+H\+R\+E\+A\+D\+\_\+\+S\+T\+A\+C\+K\+S\+I\+Z\+E\+\_\+\+D\+E\+F\+A\+U\+LT + T\+H\+R\+E\+A\+D\+\_\+\+E\+X\+T\+R\+A\+\_\+\+S\+T\+A\+C\+K\+S\+I\+Z\+E\+\_\+\+P\+R\+I\+N\+TF)
+\item 
+\#define \hyperlink{driver__at86rf2xx_2main_8c_a87488dc6198d5fb672131845b958850a}{M\+S\+G\+\_\+\+T\+Y\+P\+E\+\_\+\+I\+SR}~(0x3456)
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void $\ast$ \hyperlink{driver__at86rf2xx_2main_8c_a7a15716e3f6e0a115c8f3beabf4f3c49}{\+\_\+recv\+\_\+thread} (void $\ast$arg)
+\item 
+int \hyperlink{driver__at86rf2xx_2main_8c_a840291bc02cba5474a4cb46a9b9566fe}{main} (void)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+at86rf2xx\+\_\+t \hyperlink{driver__at86rf2xx_2main_8c_a2d0ac37e3cf6c0fde2bbacf0d57759d0}{devs} \mbox{[}\hyperlink{driver__at86rf2xx_2common_8h_a7289817d00e4398ab5a655eceacd0bbe}{A\+T86\+R\+F2\+X\+X\+\_\+\+N\+UM}\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Test application for A\+T86\+R\+F2xx network device driver. 
+
+\begin{DoxyAuthor}{Author}
+Hauke Petersen \href{mailto:hauke.petersen@fu-berlin.de}{\tt hauke.\+petersen@fu-\/berlin.\+de} 
+\end{DoxyAuthor}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{driver__at86rf2xx_2main_8c_af4850708f8125768e5bf39d29a33cd84}\label{driver__at86rf2xx_2main_8c_af4850708f8125768e5bf39d29a33cd84}} 
+\index{driver\+\_\+at86rf2xx/main.\+c@{driver\+\_\+at86rf2xx/main.\+c}!\+\_\+\+S\+T\+A\+C\+K\+S\+I\+ZE@{\+\_\+\+S\+T\+A\+C\+K\+S\+I\+ZE}}
+\index{\+\_\+\+S\+T\+A\+C\+K\+S\+I\+ZE@{\+\_\+\+S\+T\+A\+C\+K\+S\+I\+ZE}!driver\+\_\+at86rf2xx/main.\+c@{driver\+\_\+at86rf2xx/main.\+c}}
+\subsubsection{\texorpdfstring{\+\_\+\+S\+T\+A\+C\+K\+S\+I\+ZE}{\_STACKSIZE}}
+{\footnotesize\ttfamily \#define \+\_\+\+S\+T\+A\+C\+K\+S\+I\+ZE~(T\+H\+R\+E\+A\+D\+\_\+\+S\+T\+A\+C\+K\+S\+I\+Z\+E\+\_\+\+D\+E\+F\+A\+U\+LT + T\+H\+R\+E\+A\+D\+\_\+\+E\+X\+T\+R\+A\+\_\+\+S\+T\+A\+C\+K\+S\+I\+Z\+E\+\_\+\+P\+R\+I\+N\+TF)}
+
+\mbox{\Hypertarget{driver__at86rf2xx_2main_8c_a87488dc6198d5fb672131845b958850a}\label{driver__at86rf2xx_2main_8c_a87488dc6198d5fb672131845b958850a}} 
+\index{driver\+\_\+at86rf2xx/main.\+c@{driver\+\_\+at86rf2xx/main.\+c}!M\+S\+G\+\_\+\+T\+Y\+P\+E\+\_\+\+I\+SR@{M\+S\+G\+\_\+\+T\+Y\+P\+E\+\_\+\+I\+SR}}
+\index{M\+S\+G\+\_\+\+T\+Y\+P\+E\+\_\+\+I\+SR@{M\+S\+G\+\_\+\+T\+Y\+P\+E\+\_\+\+I\+SR}!driver\+\_\+at86rf2xx/main.\+c@{driver\+\_\+at86rf2xx/main.\+c}}
+\subsubsection{\texorpdfstring{M\+S\+G\+\_\+\+T\+Y\+P\+E\+\_\+\+I\+SR}{MSG\_TYPE\_ISR}}
+{\footnotesize\ttfamily \#define M\+S\+G\+\_\+\+T\+Y\+P\+E\+\_\+\+I\+SR~(0x3456)}
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{driver__at86rf2xx_2main_8c_a7a15716e3f6e0a115c8f3beabf4f3c49}\label{driver__at86rf2xx_2main_8c_a7a15716e3f6e0a115c8f3beabf4f3c49}} 
+\index{driver\+\_\+at86rf2xx/main.\+c@{driver\+\_\+at86rf2xx/main.\+c}!\+\_\+recv\+\_\+thread@{\+\_\+recv\+\_\+thread}}
+\index{\+\_\+recv\+\_\+thread@{\+\_\+recv\+\_\+thread}!driver\+\_\+at86rf2xx/main.\+c@{driver\+\_\+at86rf2xx/main.\+c}}
+\subsubsection{\texorpdfstring{\+\_\+recv\+\_\+thread()}{\_recv\_thread()}}
+{\footnotesize\ttfamily void$\ast$ \+\_\+recv\+\_\+thread (\begin{DoxyParamCaption}\item[{void $\ast$}]{arg }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{driver__at86rf2xx_2main_8c_a840291bc02cba5474a4cb46a9b9566fe}\label{driver__at86rf2xx_2main_8c_a840291bc02cba5474a4cb46a9b9566fe}} 
+\index{driver\+\_\+at86rf2xx/main.\+c@{driver\+\_\+at86rf2xx/main.\+c}!main@{main}}
+\index{main@{main}!driver\+\_\+at86rf2xx/main.\+c@{driver\+\_\+at86rf2xx/main.\+c}}
+\subsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{driver__at86rf2xx_2main_8c_a2d0ac37e3cf6c0fde2bbacf0d57759d0}\label{driver__at86rf2xx_2main_8c_a2d0ac37e3cf6c0fde2bbacf0d57759d0}} 
+\index{driver\+\_\+at86rf2xx/main.\+c@{driver\+\_\+at86rf2xx/main.\+c}!devs@{devs}}
+\index{devs@{devs}!driver\+\_\+at86rf2xx/main.\+c@{driver\+\_\+at86rf2xx/main.\+c}}
+\subsubsection{\texorpdfstring{devs}{devs}}
+{\footnotesize\ttfamily at86rf2xx\+\_\+t devs\mbox{[}\hyperlink{driver__at86rf2xx_2common_8h_a7289817d00e4398ab5a655eceacd0bbe}{A\+T86\+R\+F2\+X\+X\+\_\+\+N\+UM}\mbox{]}}
+

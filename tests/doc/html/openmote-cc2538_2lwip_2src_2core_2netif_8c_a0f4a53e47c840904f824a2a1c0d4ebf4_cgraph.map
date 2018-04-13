@@ -1,0 +1,7 @@
+<map id="netif_init" name="netif_init">
+<area shape="rect" id="node2" href="$group__netif.html#gabde72af134ae7047a46ad7719d2a1ee9" title="netif_add" alt="" coords="147,5,221,32"/>
+<area shape="rect" id="node3" href="$group__lwip__os.html#gae510f195171bed8499ae94e264a92717" title="tcpip_input" alt="" coords="141,56,227,83"/>
+<area shape="rect" id="node5" href="$group__netif.html#gae0d2975f189277990e9d5276fdd9e9ea" title="netif_set_link_up" alt="" coords="124,107,244,133"/>
+<area shape="rect" id="node6" href="$group__netif.html#gaf19693be401a265a52d2a56c65753121" title="netif_set_up" alt="" coords="137,157,231,184"/>
+<area shape="rect" id="node4" href="$native_2lwip_2src_2api_2tcpip_8c.html#a93043b3c66dbe4a15a60299c6199d102" title="tcpip_inpkt" alt="" coords="292,56,377,83"/>
+</map>

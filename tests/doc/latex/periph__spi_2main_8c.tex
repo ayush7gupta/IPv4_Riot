@@ -1,0 +1,162 @@
+\hypertarget{periph__spi_2main_8c}{}\section{/home/ayush/\+R\+I\+O\+T/tests/periph\+\_\+spi/main.c File Reference}
+\label{periph__spi_2main_8c}\index{/home/ayush/\+R\+I\+O\+T/tests/periph\+\_\+spi/main.\+c@{/home/ayush/\+R\+I\+O\+T/tests/periph\+\_\+spi/main.\+c}}
+
+
+Application for testing low-\/level S\+PI driver implementations.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}xtimer.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}shell.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}periph/spi.\+h\char`\"{}}\newline
+Include dependency graph for main.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{periph__spi_2main_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{periph__spi_2main_8c_a766631f1c87acd20785eac75de33140e}{B\+E\+N\+C\+H\+\_\+\+R\+E\+D\+OS}~(1000)
+\begin{DoxyCompactList}\small\item\em Some parameters used for benchmarking. \end{DoxyCompactList}\item 
+\#define \hyperlink{periph__spi_2main_8c_ac614aca62981c81a34f742d958ada007}{B\+E\+N\+C\+H\+\_\+\+S\+M\+A\+LL}~(2)
+\item 
+\#define \hyperlink{periph__spi_2main_8c_a5db52f9a8a3cdf26575354e92b9ed13d}{B\+E\+N\+C\+H\+\_\+\+L\+A\+R\+GE}~(100)
+\item 
+\#define \hyperlink{periph__spi_2main_8c_aedb7f56dddc34085feafd843d4ab9344}{B\+E\+N\+C\+H\+\_\+\+P\+A\+Y\+L\+O\+AD}~(\textquotesingle{}b\textquotesingle{})
+\item 
+\#define \hyperlink{periph__spi_2main_8c_a32b663513f60ebb514036ab4971bd0e5}{B\+E\+N\+C\+H\+\_\+\+R\+E\+G\+A\+D\+DR}~(0x23)
+\item 
+\#define \hyperlink{periph__spi_2main_8c_a6821bafc3c88dfb2e433a095df9940c6}{B\+U\+F\+\_\+\+S\+I\+ZE}~(512\+U)
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{periph__spi_2main_8c_a629c2c8521d698daf45efff979415588}{print\+\_\+bytes} (char $\ast$title, uint8\+\_\+t $\ast$data, size\+\_\+t len)
+\item 
+int \hyperlink{periph__spi_2main_8c_a04da004924c770884fd71f6e8f37e378}{cmd\+\_\+init} (int argc, char $\ast$$\ast$argv)
+\item 
+int \hyperlink{periph__spi_2main_8c_a80445a08d57b27e93a75cf435edb44b5}{cmd\+\_\+transfer} (int argc, char $\ast$$\ast$argv)
+\item 
+int \hyperlink{periph__spi_2main_8c_a2d8e42ccc69d50940550871612c30826}{cmd\+\_\+bench} (int argc, char $\ast$$\ast$argv)
+\item 
+int \hyperlink{periph__spi_2main_8c_a840291bc02cba5474a4cb46a9b9566fe}{main} (void)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Application for testing low-\/level S\+PI driver implementations. 
+
+This implementation covers both, master and slave configurations.
+
+\begin{DoxyAuthor}{Author}
+Hauke Petersen \href{mailto:hauke.petersen@fu-berlin.de}{\tt hauke.\+petersen@fu-\/berlin.\+de} 
+\end{DoxyAuthor}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{periph__spi_2main_8c_a5db52f9a8a3cdf26575354e92b9ed13d}\label{periph__spi_2main_8c_a5db52f9a8a3cdf26575354e92b9ed13d}} 
+\index{periph\+\_\+spi/main.\+c@{periph\+\_\+spi/main.\+c}!B\+E\+N\+C\+H\+\_\+\+L\+A\+R\+GE@{B\+E\+N\+C\+H\+\_\+\+L\+A\+R\+GE}}
+\index{B\+E\+N\+C\+H\+\_\+\+L\+A\+R\+GE@{B\+E\+N\+C\+H\+\_\+\+L\+A\+R\+GE}!periph\+\_\+spi/main.\+c@{periph\+\_\+spi/main.\+c}}
+\subsubsection{\texorpdfstring{B\+E\+N\+C\+H\+\_\+\+L\+A\+R\+GE}{BENCH\_LARGE}}
+{\footnotesize\ttfamily \#define B\+E\+N\+C\+H\+\_\+\+L\+A\+R\+GE~(100)}
+
+\mbox{\Hypertarget{periph__spi_2main_8c_aedb7f56dddc34085feafd843d4ab9344}\label{periph__spi_2main_8c_aedb7f56dddc34085feafd843d4ab9344}} 
+\index{periph\+\_\+spi/main.\+c@{periph\+\_\+spi/main.\+c}!B\+E\+N\+C\+H\+\_\+\+P\+A\+Y\+L\+O\+AD@{B\+E\+N\+C\+H\+\_\+\+P\+A\+Y\+L\+O\+AD}}
+\index{B\+E\+N\+C\+H\+\_\+\+P\+A\+Y\+L\+O\+AD@{B\+E\+N\+C\+H\+\_\+\+P\+A\+Y\+L\+O\+AD}!periph\+\_\+spi/main.\+c@{periph\+\_\+spi/main.\+c}}
+\subsubsection{\texorpdfstring{B\+E\+N\+C\+H\+\_\+\+P\+A\+Y\+L\+O\+AD}{BENCH\_PAYLOAD}}
+{\footnotesize\ttfamily \#define B\+E\+N\+C\+H\+\_\+\+P\+A\+Y\+L\+O\+AD~(\textquotesingle{}b\textquotesingle{})}
+
+\mbox{\Hypertarget{periph__spi_2main_8c_a766631f1c87acd20785eac75de33140e}\label{periph__spi_2main_8c_a766631f1c87acd20785eac75de33140e}} 
+\index{periph\+\_\+spi/main.\+c@{periph\+\_\+spi/main.\+c}!B\+E\+N\+C\+H\+\_\+\+R\+E\+D\+OS@{B\+E\+N\+C\+H\+\_\+\+R\+E\+D\+OS}}
+\index{B\+E\+N\+C\+H\+\_\+\+R\+E\+D\+OS@{B\+E\+N\+C\+H\+\_\+\+R\+E\+D\+OS}!periph\+\_\+spi/main.\+c@{periph\+\_\+spi/main.\+c}}
+\subsubsection{\texorpdfstring{B\+E\+N\+C\+H\+\_\+\+R\+E\+D\+OS}{BENCH\_REDOS}}
+{\footnotesize\ttfamily \#define B\+E\+N\+C\+H\+\_\+\+R\+E\+D\+OS~(1000)}
+
+
+
+Some parameters used for benchmarking. 
+
+\mbox{\Hypertarget{periph__spi_2main_8c_a32b663513f60ebb514036ab4971bd0e5}\label{periph__spi_2main_8c_a32b663513f60ebb514036ab4971bd0e5}} 
+\index{periph\+\_\+spi/main.\+c@{periph\+\_\+spi/main.\+c}!B\+E\+N\+C\+H\+\_\+\+R\+E\+G\+A\+D\+DR@{B\+E\+N\+C\+H\+\_\+\+R\+E\+G\+A\+D\+DR}}
+\index{B\+E\+N\+C\+H\+\_\+\+R\+E\+G\+A\+D\+DR@{B\+E\+N\+C\+H\+\_\+\+R\+E\+G\+A\+D\+DR}!periph\+\_\+spi/main.\+c@{periph\+\_\+spi/main.\+c}}
+\subsubsection{\texorpdfstring{B\+E\+N\+C\+H\+\_\+\+R\+E\+G\+A\+D\+DR}{BENCH\_REGADDR}}
+{\footnotesize\ttfamily \#define B\+E\+N\+C\+H\+\_\+\+R\+E\+G\+A\+D\+DR~(0x23)}
+
+\mbox{\Hypertarget{periph__spi_2main_8c_ac614aca62981c81a34f742d958ada007}\label{periph__spi_2main_8c_ac614aca62981c81a34f742d958ada007}} 
+\index{periph\+\_\+spi/main.\+c@{periph\+\_\+spi/main.\+c}!B\+E\+N\+C\+H\+\_\+\+S\+M\+A\+LL@{B\+E\+N\+C\+H\+\_\+\+S\+M\+A\+LL}}
+\index{B\+E\+N\+C\+H\+\_\+\+S\+M\+A\+LL@{B\+E\+N\+C\+H\+\_\+\+S\+M\+A\+LL}!periph\+\_\+spi/main.\+c@{periph\+\_\+spi/main.\+c}}
+\subsubsection{\texorpdfstring{B\+E\+N\+C\+H\+\_\+\+S\+M\+A\+LL}{BENCH\_SMALL}}
+{\footnotesize\ttfamily \#define B\+E\+N\+C\+H\+\_\+\+S\+M\+A\+LL~(2)}
+
+\mbox{\Hypertarget{periph__spi_2main_8c_a6821bafc3c88dfb2e433a095df9940c6}\label{periph__spi_2main_8c_a6821bafc3c88dfb2e433a095df9940c6}} 
+\index{periph\+\_\+spi/main.\+c@{periph\+\_\+spi/main.\+c}!B\+U\+F\+\_\+\+S\+I\+ZE@{B\+U\+F\+\_\+\+S\+I\+ZE}}
+\index{B\+U\+F\+\_\+\+S\+I\+ZE@{B\+U\+F\+\_\+\+S\+I\+ZE}!periph\+\_\+spi/main.\+c@{periph\+\_\+spi/main.\+c}}
+\subsubsection{\texorpdfstring{B\+U\+F\+\_\+\+S\+I\+ZE}{BUF\_SIZE}}
+{\footnotesize\ttfamily \#define B\+U\+F\+\_\+\+S\+I\+ZE~(512\+U)}
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{periph__spi_2main_8c_a2d8e42ccc69d50940550871612c30826}\label{periph__spi_2main_8c_a2d8e42ccc69d50940550871612c30826}} 
+\index{periph\+\_\+spi/main.\+c@{periph\+\_\+spi/main.\+c}!cmd\+\_\+bench@{cmd\+\_\+bench}}
+\index{cmd\+\_\+bench@{cmd\+\_\+bench}!periph\+\_\+spi/main.\+c@{periph\+\_\+spi/main.\+c}}
+\subsubsection{\texorpdfstring{cmd\+\_\+bench()}{cmd\_bench()}}
+{\footnotesize\ttfamily int cmd\+\_\+bench (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$$\ast$}]{argv }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{periph__spi_2main_8c_a04da004924c770884fd71f6e8f37e378}\label{periph__spi_2main_8c_a04da004924c770884fd71f6e8f37e378}} 
+\index{periph\+\_\+spi/main.\+c@{periph\+\_\+spi/main.\+c}!cmd\+\_\+init@{cmd\+\_\+init}}
+\index{cmd\+\_\+init@{cmd\+\_\+init}!periph\+\_\+spi/main.\+c@{periph\+\_\+spi/main.\+c}}
+\subsubsection{\texorpdfstring{cmd\+\_\+init()}{cmd\_init()}}
+{\footnotesize\ttfamily int cmd\+\_\+init (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$$\ast$}]{argv }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{periph__spi_2main_8c_a80445a08d57b27e93a75cf435edb44b5}\label{periph__spi_2main_8c_a80445a08d57b27e93a75cf435edb44b5}} 
+\index{periph\+\_\+spi/main.\+c@{periph\+\_\+spi/main.\+c}!cmd\+\_\+transfer@{cmd\+\_\+transfer}}
+\index{cmd\+\_\+transfer@{cmd\+\_\+transfer}!periph\+\_\+spi/main.\+c@{periph\+\_\+spi/main.\+c}}
+\subsubsection{\texorpdfstring{cmd\+\_\+transfer()}{cmd\_transfer()}}
+{\footnotesize\ttfamily int cmd\+\_\+transfer (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$$\ast$}]{argv }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{periph__spi_2main_8c_a840291bc02cba5474a4cb46a9b9566fe}\label{periph__spi_2main_8c_a840291bc02cba5474a4cb46a9b9566fe}} 
+\index{periph\+\_\+spi/main.\+c@{periph\+\_\+spi/main.\+c}!main@{main}}
+\index{main@{main}!periph\+\_\+spi/main.\+c@{periph\+\_\+spi/main.\+c}}
+\subsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{periph__spi_2main_8c_a629c2c8521d698daf45efff979415588}\label{periph__spi_2main_8c_a629c2c8521d698daf45efff979415588}} 
+\index{periph\+\_\+spi/main.\+c@{periph\+\_\+spi/main.\+c}!print\+\_\+bytes@{print\+\_\+bytes}}
+\index{print\+\_\+bytes@{print\+\_\+bytes}!periph\+\_\+spi/main.\+c@{periph\+\_\+spi/main.\+c}}
+\subsubsection{\texorpdfstring{print\+\_\+bytes()}{print\_bytes()}}
+{\footnotesize\ttfamily void print\+\_\+bytes (\begin{DoxyParamCaption}\item[{char $\ast$}]{title,  }\item[{uint8\+\_\+t $\ast$}]{data,  }\item[{size\+\_\+t}]{len }\end{DoxyParamCaption})}
+
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{periph__spi_2main_8c_a11085b3743b1fb46e187102fb893221e}\label{periph__spi_2main_8c_a11085b3743b1fb46e187102fb893221e}} 
+\index{periph\+\_\+spi/main.\+c@{periph\+\_\+spi/main.\+c}!clk@{clk}}
+\index{clk@{clk}!periph\+\_\+spi/main.\+c@{periph\+\_\+spi/main.\+c}}
+\subsubsection{\texorpdfstring{clk}{clk}}
+{\footnotesize\ttfamily spi\+\_\+clk\+\_\+t clk}
+
+\mbox{\Hypertarget{periph__spi_2main_8c_aef0e3ffb7981e8ed47ce233b929ea219}\label{periph__spi_2main_8c_aef0e3ffb7981e8ed47ce233b929ea219}} 
+\index{periph\+\_\+spi/main.\+c@{periph\+\_\+spi/main.\+c}!cs@{cs}}
+\index{cs@{cs}!periph\+\_\+spi/main.\+c@{periph\+\_\+spi/main.\+c}}
+\subsubsection{\texorpdfstring{cs}{cs}}
+{\footnotesize\ttfamily spi\+\_\+cs\+\_\+t cs}
+
+\mbox{\Hypertarget{periph__spi_2main_8c_ad55ecfacc43495fef791d8c2eec7a002}\label{periph__spi_2main_8c_ad55ecfacc43495fef791d8c2eec7a002}} 
+\index{periph\+\_\+spi/main.\+c@{periph\+\_\+spi/main.\+c}!dev@{dev}}
+\index{dev@{dev}!periph\+\_\+spi/main.\+c@{periph\+\_\+spi/main.\+c}}
+\subsubsection{\texorpdfstring{dev}{dev}}
+{\footnotesize\ttfamily spi\+\_\+t dev}
+
+\mbox{\Hypertarget{periph__spi_2main_8c_a500c16f7901299002158783745bc1ab0}\label{periph__spi_2main_8c_a500c16f7901299002158783745bc1ab0}} 
+\index{periph\+\_\+spi/main.\+c@{periph\+\_\+spi/main.\+c}!mode@{mode}}
+\index{mode@{mode}!periph\+\_\+spi/main.\+c@{periph\+\_\+spi/main.\+c}}
+\subsubsection{\texorpdfstring{mode}{mode}}
+{\footnotesize\ttfamily spi\+\_\+mode\+\_\+t mode}
+

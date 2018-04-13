@@ -1,0 +1,84 @@
+\hypertarget{structmqtt__connect__client__info__t}{}\section{mqtt\+\_\+connect\+\_\+client\+\_\+info\+\_\+t Struct Reference}
+\label{structmqtt__connect__client__info__t}\index{mqtt\+\_\+connect\+\_\+client\+\_\+info\+\_\+t@{mqtt\+\_\+connect\+\_\+client\+\_\+info\+\_\+t}}
+
+
+{\ttfamily \#include $<$mqtt.\+h$>$}
+
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const char $\ast$ \hyperlink{structmqtt__connect__client__info__t_a6144f835d04295d5b3f8b1ca8045fdc7}{client\+\_\+id}
+\item 
+const char $\ast$ \hyperlink{structmqtt__connect__client__info__t_ab596ae8452515fea0fc1f357a48ef817}{client\+\_\+user}
+\item 
+const char $\ast$ \hyperlink{structmqtt__connect__client__info__t_a83a2bc816eda26f4b4c3e62cb6250e41}{client\+\_\+pass}
+\item 
+\hyperlink{group__compiler__abstraction_ga77570ac4fcab86864fa1916e55676da2}{u16\+\_\+t} \hyperlink{structmqtt__connect__client__info__t_ac80262a7456812e9eefffd8c3b9ac21a}{keep\+\_\+alive}
+\item 
+const char $\ast$ \hyperlink{structmqtt__connect__client__info__t_a1d79a9dd71c372543f0e0a68ebe2ca31}{will\+\_\+topic}
+\item 
+const char $\ast$ \hyperlink{structmqtt__connect__client__info__t_aac915378a41fa78906300285d88137f2}{will\+\_\+msg}
+\item 
+\hyperlink{group__compiler__abstraction_ga4caecabca98b43919dd11be1c0d4cd8e}{u8\+\_\+t} \hyperlink{structmqtt__connect__client__info__t_a07954934f4fecf54fa190997848229d9}{will\+\_\+qos}
+\item 
+\hyperlink{group__compiler__abstraction_ga4caecabca98b43919dd11be1c0d4cd8e}{u8\+\_\+t} \hyperlink{structmqtt__connect__client__info__t_a49c10873f44d7534140a63eef2a6a4e3}{will\+\_\+retain}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Client information and connection parameters 
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{structmqtt__connect__client__info__t_a6144f835d04295d5b3f8b1ca8045fdc7}\label{structmqtt__connect__client__info__t_a6144f835d04295d5b3f8b1ca8045fdc7}} 
+\index{mqtt\+\_\+connect\+\_\+client\+\_\+info\+\_\+t@{mqtt\+\_\+connect\+\_\+client\+\_\+info\+\_\+t}!client\+\_\+id@{client\+\_\+id}}
+\index{client\+\_\+id@{client\+\_\+id}!mqtt\+\_\+connect\+\_\+client\+\_\+info\+\_\+t@{mqtt\+\_\+connect\+\_\+client\+\_\+info\+\_\+t}}
+\subsubsection{\texorpdfstring{client\+\_\+id}{client\_id}}
+{\footnotesize\ttfamily const char $\ast$ mqtt\+\_\+connect\+\_\+client\+\_\+info\+\_\+t\+::client\+\_\+id}
+
+Client identifier, must be set by caller \mbox{\Hypertarget{structmqtt__connect__client__info__t_a83a2bc816eda26f4b4c3e62cb6250e41}\label{structmqtt__connect__client__info__t_a83a2bc816eda26f4b4c3e62cb6250e41}} 
+\index{mqtt\+\_\+connect\+\_\+client\+\_\+info\+\_\+t@{mqtt\+\_\+connect\+\_\+client\+\_\+info\+\_\+t}!client\+\_\+pass@{client\+\_\+pass}}
+\index{client\+\_\+pass@{client\+\_\+pass}!mqtt\+\_\+connect\+\_\+client\+\_\+info\+\_\+t@{mqtt\+\_\+connect\+\_\+client\+\_\+info\+\_\+t}}
+\subsubsection{\texorpdfstring{client\+\_\+pass}{client\_pass}}
+{\footnotesize\ttfamily const char $\ast$ mqtt\+\_\+connect\+\_\+client\+\_\+info\+\_\+t\+::client\+\_\+pass}
+
+\mbox{\Hypertarget{structmqtt__connect__client__info__t_ab596ae8452515fea0fc1f357a48ef817}\label{structmqtt__connect__client__info__t_ab596ae8452515fea0fc1f357a48ef817}} 
+\index{mqtt\+\_\+connect\+\_\+client\+\_\+info\+\_\+t@{mqtt\+\_\+connect\+\_\+client\+\_\+info\+\_\+t}!client\+\_\+user@{client\+\_\+user}}
+\index{client\+\_\+user@{client\+\_\+user}!mqtt\+\_\+connect\+\_\+client\+\_\+info\+\_\+t@{mqtt\+\_\+connect\+\_\+client\+\_\+info\+\_\+t}}
+\subsubsection{\texorpdfstring{client\+\_\+user}{client\_user}}
+{\footnotesize\ttfamily const char $\ast$ mqtt\+\_\+connect\+\_\+client\+\_\+info\+\_\+t\+::client\+\_\+user}
+
+User name and password, set to N\+U\+LL if not used \mbox{\Hypertarget{structmqtt__connect__client__info__t_ac80262a7456812e9eefffd8c3b9ac21a}\label{structmqtt__connect__client__info__t_ac80262a7456812e9eefffd8c3b9ac21a}} 
+\index{mqtt\+\_\+connect\+\_\+client\+\_\+info\+\_\+t@{mqtt\+\_\+connect\+\_\+client\+\_\+info\+\_\+t}!keep\+\_\+alive@{keep\+\_\+alive}}
+\index{keep\+\_\+alive@{keep\+\_\+alive}!mqtt\+\_\+connect\+\_\+client\+\_\+info\+\_\+t@{mqtt\+\_\+connect\+\_\+client\+\_\+info\+\_\+t}}
+\subsubsection{\texorpdfstring{keep\+\_\+alive}{keep\_alive}}
+{\footnotesize\ttfamily \hyperlink{group__compiler__abstraction_ga77570ac4fcab86864fa1916e55676da2}{u16\+\_\+t} mqtt\+\_\+connect\+\_\+client\+\_\+info\+\_\+t\+::keep\+\_\+alive}
+
+keep alive time in seconds, 0 to disable keep alive functionality \mbox{\Hypertarget{structmqtt__connect__client__info__t_aac915378a41fa78906300285d88137f2}\label{structmqtt__connect__client__info__t_aac915378a41fa78906300285d88137f2}} 
+\index{mqtt\+\_\+connect\+\_\+client\+\_\+info\+\_\+t@{mqtt\+\_\+connect\+\_\+client\+\_\+info\+\_\+t}!will\+\_\+msg@{will\+\_\+msg}}
+\index{will\+\_\+msg@{will\+\_\+msg}!mqtt\+\_\+connect\+\_\+client\+\_\+info\+\_\+t@{mqtt\+\_\+connect\+\_\+client\+\_\+info\+\_\+t}}
+\subsubsection{\texorpdfstring{will\+\_\+msg}{will\_msg}}
+{\footnotesize\ttfamily const char $\ast$ mqtt\+\_\+connect\+\_\+client\+\_\+info\+\_\+t\+::will\+\_\+msg}
+
+\mbox{\Hypertarget{structmqtt__connect__client__info__t_a07954934f4fecf54fa190997848229d9}\label{structmqtt__connect__client__info__t_a07954934f4fecf54fa190997848229d9}} 
+\index{mqtt\+\_\+connect\+\_\+client\+\_\+info\+\_\+t@{mqtt\+\_\+connect\+\_\+client\+\_\+info\+\_\+t}!will\+\_\+qos@{will\+\_\+qos}}
+\index{will\+\_\+qos@{will\+\_\+qos}!mqtt\+\_\+connect\+\_\+client\+\_\+info\+\_\+t@{mqtt\+\_\+connect\+\_\+client\+\_\+info\+\_\+t}}
+\subsubsection{\texorpdfstring{will\+\_\+qos}{will\_qos}}
+{\footnotesize\ttfamily \hyperlink{group__compiler__abstraction_ga4caecabca98b43919dd11be1c0d4cd8e}{u8\+\_\+t} mqtt\+\_\+connect\+\_\+client\+\_\+info\+\_\+t\+::will\+\_\+qos}
+
+\mbox{\Hypertarget{structmqtt__connect__client__info__t_a49c10873f44d7534140a63eef2a6a4e3}\label{structmqtt__connect__client__info__t_a49c10873f44d7534140a63eef2a6a4e3}} 
+\index{mqtt\+\_\+connect\+\_\+client\+\_\+info\+\_\+t@{mqtt\+\_\+connect\+\_\+client\+\_\+info\+\_\+t}!will\+\_\+retain@{will\+\_\+retain}}
+\index{will\+\_\+retain@{will\+\_\+retain}!mqtt\+\_\+connect\+\_\+client\+\_\+info\+\_\+t@{mqtt\+\_\+connect\+\_\+client\+\_\+info\+\_\+t}}
+\subsubsection{\texorpdfstring{will\+\_\+retain}{will\_retain}}
+{\footnotesize\ttfamily \hyperlink{group__compiler__abstraction_ga4caecabca98b43919dd11be1c0d4cd8e}{u8\+\_\+t} mqtt\+\_\+connect\+\_\+client\+\_\+info\+\_\+t\+::will\+\_\+retain}
+
+\mbox{\Hypertarget{structmqtt__connect__client__info__t_a1d79a9dd71c372543f0e0a68ebe2ca31}\label{structmqtt__connect__client__info__t_a1d79a9dd71c372543f0e0a68ebe2ca31}} 
+\index{mqtt\+\_\+connect\+\_\+client\+\_\+info\+\_\+t@{mqtt\+\_\+connect\+\_\+client\+\_\+info\+\_\+t}!will\+\_\+topic@{will\+\_\+topic}}
+\index{will\+\_\+topic@{will\+\_\+topic}!mqtt\+\_\+connect\+\_\+client\+\_\+info\+\_\+t@{mqtt\+\_\+connect\+\_\+client\+\_\+info\+\_\+t}}
+\subsubsection{\texorpdfstring{will\+\_\+topic}{will\_topic}}
+{\footnotesize\ttfamily const char $\ast$ mqtt\+\_\+connect\+\_\+client\+\_\+info\+\_\+t\+::will\+\_\+topic}
+
+will topic, set to N\+U\+LL if will is not to be used, will\+\_\+msg, will\+\_\+qos and will retain are then ignored 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/ayush/\+R\+I\+O\+T/tests/lwip/bin/pkg/native/lwip/src/include/lwip/apps/\hyperlink{native_2lwip_2src_2include_2lwip_2apps_2mqtt_8h}{mqtt.\+h}\end{DoxyCompactItemize}

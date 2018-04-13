@@ -1,0 +1,145 @@
+\hypertarget{bloom__bytes_2main_8c}{}\section{/home/ayush/\+R\+I\+O\+T/tests/bloom\+\_\+bytes/main.c File Reference}
+\label{bloom__bytes_2main_8c}\index{/home/ayush/\+R\+I\+O\+T/tests/bloom\+\_\+bytes/main.\+c@{/home/ayush/\+R\+I\+O\+T/tests/bloom\+\_\+bytes/main.\+c}}
+
+
+Bloom filter test application.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$inttypes.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}xtimer.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}hashes.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}bloom.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}random.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}bitfield.\+h\char`\"{}}\newline
+Include dependency graph for main.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{bloom__bytes_2main_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{bloom__bytes_2main_8c_ae7b7f4fe7127817cff48836b1192c62e}{B\+L\+O\+O\+M\+\_\+\+B\+I\+TS}~(1\+U\+L $<$$<$ 12)
+\item 
+\#define \hyperlink{bloom__bytes_2main_8c_a119c9655647b38f140e7f3118d1a4f7b}{B\+L\+O\+O\+M\+\_\+\+H\+A\+S\+HF}~(8)
+\item 
+\#define \hyperlink{bloom__bytes_2main_8c_a3f71cd4b8c192df24e679f870b3026de}{lenB}~512
+\item 
+\#define \hyperlink{bloom__bytes_2main_8c_ac4a1022fd484591a343f252202124a90}{lenA}~(10 $\ast$ 1000)
+\item 
+\#define \hyperlink{bloom__bytes_2main_8c_a2e568a50b49fa78d7e9cbedf509c3a56}{M\+A\+G\+I\+C\+\_\+A}~0xafafafaf
+\item 
+\#define \hyperlink{bloom__bytes_2main_8c_a8a1d16f8b610183325191b13eb9a5807}{M\+A\+G\+I\+C\+\_\+B}~0x0c0c0c0c
+\item 
+\#define \hyperlink{bloom__bytes_2main_8c_ae85829853a0884d85a31d9a6f28ec702}{myseed}~0x83d385c0 /$\ast$ random number $\ast$/
+\item 
+\#define \hyperlink{bloom__bytes_2main_8c_a6821bafc3c88dfb2e433a095df9940c6}{B\+U\+F\+\_\+\+S\+I\+ZE}~50
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{bloom__bytes_2main_8c_a4474320450df14a39556e7d57715eeb3}{B\+I\+T\+F\+I\+E\+LD} (bf, \hyperlink{bloom__bytes_2main_8c_ae7b7f4fe7127817cff48836b1192c62e}{B\+L\+O\+O\+M\+\_\+\+B\+I\+TS})
+\item 
+int \hyperlink{bloom__bytes_2main_8c_a840291bc02cba5474a4cb46a9b9566fe}{main} (void)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+hashfp\+\_\+t \hyperlink{bloom__bytes_2main_8c_a51bb3893003e0bf6ac3f218445619cb3}{hashes} \mbox{[}\hyperlink{bloom__bytes_2main_8c_a119c9655647b38f140e7f3118d1a4f7b}{B\+L\+O\+O\+M\+\_\+\+H\+A\+S\+HF}\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Bloom filter test application. 
+
+\begin{DoxyAuthor}{Author}
+Christian Mehlis \href{mailto:mehlis@inf.fu-berlin.de}{\tt mehlis@inf.\+fu-\/berlin.\+de} 
+\end{DoxyAuthor}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{bloom__bytes_2main_8c_ae7b7f4fe7127817cff48836b1192c62e}\label{bloom__bytes_2main_8c_ae7b7f4fe7127817cff48836b1192c62e}} 
+\index{bloom\+\_\+bytes/main.\+c@{bloom\+\_\+bytes/main.\+c}!B\+L\+O\+O\+M\+\_\+\+B\+I\+TS@{B\+L\+O\+O\+M\+\_\+\+B\+I\+TS}}
+\index{B\+L\+O\+O\+M\+\_\+\+B\+I\+TS@{B\+L\+O\+O\+M\+\_\+\+B\+I\+TS}!bloom\+\_\+bytes/main.\+c@{bloom\+\_\+bytes/main.\+c}}
+\subsubsection{\texorpdfstring{B\+L\+O\+O\+M\+\_\+\+B\+I\+TS}{BLOOM\_BITS}}
+{\footnotesize\ttfamily \#define B\+L\+O\+O\+M\+\_\+\+B\+I\+TS~(1\+U\+L $<$$<$ 12)}
+
+\mbox{\Hypertarget{bloom__bytes_2main_8c_a119c9655647b38f140e7f3118d1a4f7b}\label{bloom__bytes_2main_8c_a119c9655647b38f140e7f3118d1a4f7b}} 
+\index{bloom\+\_\+bytes/main.\+c@{bloom\+\_\+bytes/main.\+c}!B\+L\+O\+O\+M\+\_\+\+H\+A\+S\+HF@{B\+L\+O\+O\+M\+\_\+\+H\+A\+S\+HF}}
+\index{B\+L\+O\+O\+M\+\_\+\+H\+A\+S\+HF@{B\+L\+O\+O\+M\+\_\+\+H\+A\+S\+HF}!bloom\+\_\+bytes/main.\+c@{bloom\+\_\+bytes/main.\+c}}
+\subsubsection{\texorpdfstring{B\+L\+O\+O\+M\+\_\+\+H\+A\+S\+HF}{BLOOM\_HASHF}}
+{\footnotesize\ttfamily \#define B\+L\+O\+O\+M\+\_\+\+H\+A\+S\+HF~(8)}
+
+\mbox{\Hypertarget{bloom__bytes_2main_8c_a6821bafc3c88dfb2e433a095df9940c6}\label{bloom__bytes_2main_8c_a6821bafc3c88dfb2e433a095df9940c6}} 
+\index{bloom\+\_\+bytes/main.\+c@{bloom\+\_\+bytes/main.\+c}!B\+U\+F\+\_\+\+S\+I\+ZE@{B\+U\+F\+\_\+\+S\+I\+ZE}}
+\index{B\+U\+F\+\_\+\+S\+I\+ZE@{B\+U\+F\+\_\+\+S\+I\+ZE}!bloom\+\_\+bytes/main.\+c@{bloom\+\_\+bytes/main.\+c}}
+\subsubsection{\texorpdfstring{B\+U\+F\+\_\+\+S\+I\+ZE}{BUF\_SIZE}}
+{\footnotesize\ttfamily \#define B\+U\+F\+\_\+\+S\+I\+ZE~50}
+
+\mbox{\Hypertarget{bloom__bytes_2main_8c_ac4a1022fd484591a343f252202124a90}\label{bloom__bytes_2main_8c_ac4a1022fd484591a343f252202124a90}} 
+\index{bloom\+\_\+bytes/main.\+c@{bloom\+\_\+bytes/main.\+c}!lenA@{lenA}}
+\index{lenA@{lenA}!bloom\+\_\+bytes/main.\+c@{bloom\+\_\+bytes/main.\+c}}
+\subsubsection{\texorpdfstring{lenA}{lenA}}
+{\footnotesize\ttfamily \#define lenA~(10 $\ast$ 1000)}
+
+\mbox{\Hypertarget{bloom__bytes_2main_8c_a3f71cd4b8c192df24e679f870b3026de}\label{bloom__bytes_2main_8c_a3f71cd4b8c192df24e679f870b3026de}} 
+\index{bloom\+\_\+bytes/main.\+c@{bloom\+\_\+bytes/main.\+c}!lenB@{lenB}}
+\index{lenB@{lenB}!bloom\+\_\+bytes/main.\+c@{bloom\+\_\+bytes/main.\+c}}
+\subsubsection{\texorpdfstring{lenB}{lenB}}
+{\footnotesize\ttfamily \#define lenB~512}
+
+\mbox{\Hypertarget{bloom__bytes_2main_8c_a2e568a50b49fa78d7e9cbedf509c3a56}\label{bloom__bytes_2main_8c_a2e568a50b49fa78d7e9cbedf509c3a56}} 
+\index{bloom\+\_\+bytes/main.\+c@{bloom\+\_\+bytes/main.\+c}!M\+A\+G\+I\+C\+\_\+A@{M\+A\+G\+I\+C\+\_\+A}}
+\index{M\+A\+G\+I\+C\+\_\+A@{M\+A\+G\+I\+C\+\_\+A}!bloom\+\_\+bytes/main.\+c@{bloom\+\_\+bytes/main.\+c}}
+\subsubsection{\texorpdfstring{M\+A\+G\+I\+C\+\_\+A}{MAGIC\_A}}
+{\footnotesize\ttfamily \#define M\+A\+G\+I\+C\+\_\+A~0xafafafaf}
+
+\mbox{\Hypertarget{bloom__bytes_2main_8c_a8a1d16f8b610183325191b13eb9a5807}\label{bloom__bytes_2main_8c_a8a1d16f8b610183325191b13eb9a5807}} 
+\index{bloom\+\_\+bytes/main.\+c@{bloom\+\_\+bytes/main.\+c}!M\+A\+G\+I\+C\+\_\+B@{M\+A\+G\+I\+C\+\_\+B}}
+\index{M\+A\+G\+I\+C\+\_\+B@{M\+A\+G\+I\+C\+\_\+B}!bloom\+\_\+bytes/main.\+c@{bloom\+\_\+bytes/main.\+c}}
+\subsubsection{\texorpdfstring{M\+A\+G\+I\+C\+\_\+B}{MAGIC\_B}}
+{\footnotesize\ttfamily \#define M\+A\+G\+I\+C\+\_\+B~0x0c0c0c0c}
+
+\mbox{\Hypertarget{bloom__bytes_2main_8c_ae85829853a0884d85a31d9a6f28ec702}\label{bloom__bytes_2main_8c_ae85829853a0884d85a31d9a6f28ec702}} 
+\index{bloom\+\_\+bytes/main.\+c@{bloom\+\_\+bytes/main.\+c}!myseed@{myseed}}
+\index{myseed@{myseed}!bloom\+\_\+bytes/main.\+c@{bloom\+\_\+bytes/main.\+c}}
+\subsubsection{\texorpdfstring{myseed}{myseed}}
+{\footnotesize\ttfamily \#define myseed~0x83d385c0 /$\ast$ random number $\ast$/}
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{bloom__bytes_2main_8c_a4474320450df14a39556e7d57715eeb3}\label{bloom__bytes_2main_8c_a4474320450df14a39556e7d57715eeb3}} 
+\index{bloom\+\_\+bytes/main.\+c@{bloom\+\_\+bytes/main.\+c}!B\+I\+T\+F\+I\+E\+LD@{B\+I\+T\+F\+I\+E\+LD}}
+\index{B\+I\+T\+F\+I\+E\+LD@{B\+I\+T\+F\+I\+E\+LD}!bloom\+\_\+bytes/main.\+c@{bloom\+\_\+bytes/main.\+c}}
+\subsubsection{\texorpdfstring{B\+I\+T\+F\+I\+E\+L\+D()}{BITFIELD()}}
+{\footnotesize\ttfamily B\+I\+T\+F\+I\+E\+LD (\begin{DoxyParamCaption}\item[{bf}]{,  }\item[{\hyperlink{bloom__bytes_2main_8c_ae7b7f4fe7127817cff48836b1192c62e}{B\+L\+O\+O\+M\+\_\+\+B\+I\+TS}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{bloom__bytes_2main_8c_a840291bc02cba5474a4cb46a9b9566fe}\label{bloom__bytes_2main_8c_a840291bc02cba5474a4cb46a9b9566fe}} 
+\index{bloom\+\_\+bytes/main.\+c@{bloom\+\_\+bytes/main.\+c}!main@{main}}
+\index{main@{main}!bloom\+\_\+bytes/main.\+c@{bloom\+\_\+bytes/main.\+c}}
+\subsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{bloom__bytes_2main_8c_a51bb3893003e0bf6ac3f218445619cb3}\label{bloom__bytes_2main_8c_a51bb3893003e0bf6ac3f218445619cb3}} 
+\index{bloom\+\_\+bytes/main.\+c@{bloom\+\_\+bytes/main.\+c}!hashes@{hashes}}
+\index{hashes@{hashes}!bloom\+\_\+bytes/main.\+c@{bloom\+\_\+bytes/main.\+c}}
+\subsubsection{\texorpdfstring{hashes}{hashes}}
+{\footnotesize\ttfamily hashfp\+\_\+t hashes\mbox{[}\hyperlink{bloom__bytes_2main_8c_a119c9655647b38f140e7f3118d1a4f7b}{B\+L\+O\+O\+M\+\_\+\+H\+A\+S\+HF}\mbox{]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+= \{
+    (hashfp\_t) fnv\_hash, (hashfp\_t) sax\_hash, (hashfp\_t) sdbm\_hash,
+    (hashfp\_t) djb2\_hash, (hashfp\_t) kr\_hash, (hashfp\_t) dek\_hash,
+    (hashfp\_t) rotating\_hash, (hashfp\_t) one\_at\_a\_time\_hash,
+\}
+\end{DoxyCode}
